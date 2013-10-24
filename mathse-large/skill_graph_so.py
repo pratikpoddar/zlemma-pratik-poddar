@@ -188,6 +188,9 @@ for comb in itertools.permutations(skills2,2):
 print outputdict
 printMatrix(skills, outputdict)
 
+execfile("../floyd-warshall.py")
+completematrix=floydwarshall(outputdict, skills)
+print completematrix
 
 
 
