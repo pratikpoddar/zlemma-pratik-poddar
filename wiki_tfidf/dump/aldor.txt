@@ -1,0 +1,58 @@
+Aldor is a programming language. It is the successor of A# as the extension language of the Axiom computer algebra system.
+
+The Aldor language combines imperative, functional, and object-oriented features. It has an elaborate type system, allowing types to be used as first-class values. Aldor's syntax is heavily influenced by Pascal, but it is optionally indentation-sensitive, like Python. In its current implementation, it is compiled, but an interactive listener is provided.
+
+Aldor is Free software, available under the Apache License.
+
+== Examples ==
+
+The Hello world program looks like this:
+
+#include "aldor"
+#include "aldorio"
+
+stdout << "Hello, world!" << newline;
+
+;99 Bottles of Beer
+
+#include "aldor"
+#include "aldorio"
+
+import from Integer, String;
+
+bob(n: Integer): String == {
+    b: String := " bottle";
+
+if n ~= 1 then b := b + "s";
+    b + " of beer";
+}
+
+main(): () == {
+    n: Integer := 99;
+    otw: String := " on the wall";
+
+-- refrain
+    while n > 0 repeat {
+        stdout << n << bob(n) << otw << ", " << n << bob(n) << "." << newline;
+        stdout << "Take one down and pass it around, ";
+        n := n - 1;
+        if n > 0 then stdout << n;
+        else stdout << "no more";
+        stdout << bob(n) << otw << "." << newline;
+        stdout << newline;
+    }
+
+-- last verse
+    stdout << "No more" << bob(n) << otw << ", no more" << bob(n) << "." << newline;
+    stdout << "Go to the store and buy some more, ";
+    n: Integer := 99;
+    stdout << n << bob(n) << otw << "." << newline;
+}
+
+main();
+
+== External links ==
+
+* Aldor homepage
+* Open Source Development
+* Aldor User Guide

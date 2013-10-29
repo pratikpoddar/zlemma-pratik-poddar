@@ -1,0 +1,102 @@
+Gambas is the name of an object-oriented dialect of the BASIC programming language as well as the integrated development environment that accompanies it. Designed to run on Linux and other Unix-like computer operating systems, its name is a recursive acronym for Gambas Almost Means Basic. Gambas is also the word for prawns in the Spanish language, from which the project's logos are derived.
+
+Gambas is included in a number of Linux distributions' repositories, such as Debian's, Fedora's, Mandriva Linux's and Ubuntu's. There is a Windows version of Gambas which can run under the Cygwin environment, although this version is significantly less tested than its Linux counterparts and is command line only; coLinux and derivatives have also been used.
+Gambas from version 3.2 can run on Raspberry Pi but offers no JIT there.
+
+== History ==
+
+Gambas was developed by the French programmer Benoît Minisini with its first release coming in 1999. Benoît had grown up with the BASIC language, and decided to make a free software development environment that could quickly and easily make programs with user interfaces.
+
+The Gambas 1.x versions featured an interface made up of several different separate windows for forms and IDE dialogues in a similar fashion to the interface of the GIMP. It could also only develop applications using Qt and was more oriented towards the development of applications for KDE.  The last release of the 1.x versions was Gambas 1.0.19.
+
+The first of the 2.x versions was released on January 2, 2008 after three to four years of development. It featured a major redesign of the interface, now with all forms and functions embedded in a single window, as well as some changes to the Gambas syntax, although for the most part code compatibility was kept. It featured major updates to existing Gambas components as well as the addition of some news ones, such as new components that could use GTK+ or SDL for drawing or utilize OpenGL acceleration. Gambas 2.x versions can load up and run Gambas 1.x projects, with occasional incompatibilities.
+
+The next major iteration of Gambas, the 3.x versions, was released on December 31, 2011. Early benchmarks of the Gambas 3 development versions showed its Gambas scripting being significantly faster than Perl and Python equivalents. An independent contributor, François Gallo, has also ported Gambas 3.x to Mac OS X and says he will release packages for it.
+
+== Features ==
+
+Gambas is designed to build graphical applications programs using the Qt or the GTK+ toolkit; the Gambas IDE is written in Gambas itself. Gambas includes a GUI designer to aid in creating user interfaces, but can also make command line applications. The Gambas runtime environment is needed to run executables.
+
+Functionality is provided by a variety of components, each of which can be selected to provide additional features. Drawing can be provided either through Qt and GTK+ toolkits, with an additional component which is designed to switch between them. Drawing can also be provided through the Simple DirectMedia Layer, which can also be utilized for audio playback through a separate sound component. GPU acceleration support is available through an OpenGL component, as well as other hardware functionally provided by various other components. There are also components for handling other specialized tasks.
+
+With Gambas, developers can also use databases such as MySQL or PostgreSQL, build KDE (Qt) and GNOME GTK+ applications with DCOP, translate Visual Basic programs to Gambas and run them under Linux, build network solutions, and create CGI web applications.
+
+Gambas since version 3.2 IDE has integrated profiler and it started to use Just-in-time compilation technology.
+
+=== Differences from Visual Basic ===
+Gambas is intended to provide a similar experience as developing in Microsoft Visual Basic, but it is not a free software clone of the popular proprietary program. The author of Gambas makes it clear that there are similarities to Visual Basic, such as syntax for BASIC programs and the integrated development environment; Gambas was written from the start to be a development environment of its own and seeks to improve on the formula.
+
+Its object model and each class being represented in a file, the archiver to package the program is inspired by the Java programming language. Gambas is intended to be an alternative for former Visual Basic developers who have decided to migrate to Linux. There are also other important distinctions between the Gambas and Visual Basic. One notable example is that in Gambas array indexes always start with 0, whereas Visual Basic indexes can start with 0 or 1.
+
+== Adoption ==
+Image:DONKEY-GB.png|thumb|right|150px|DONKEY.GB
+
+Several programs and many forms of example code have been written using and for Gambas. , Freshmeat listed 23 applications that were developed using Gambas, while the Gambas wiki listed 70; several other specialized sites list Gambas applications and code. There is even a Gambas written application, named Gambas3 ShowCase, that acts as a software center to download or install Gambas 3 applications. Several community sites, including community forums and mailing lists, also exist for Gambas. White Island Software offers project hosting, program listing, forums and more for Gambas users.
+
+== Example code ==
+
+Hello world program with GUI.
+
+Public Sub Main()
+
+Message("Hello World!")
+
+End
+
+Program that computes a 100-term polynomial 500000 times, and repeats it ten times (used for benchmarking).
+
+Private Sub Test(X As Float) As Float
+
+Dim Mu As Float = 10.0
+  Dim Pu, Su As Float
+  Dim I, J, N As Integer
+  Dim aPoly As New Float[100]
+
+N = 500000
+
+For I = 0 To N - 1
+    For J = 0 To 99
+      Mu =  (Mu + 2.0) / 2.0
+      aPoly[J] = Mu
+    Next
+    Su = 0.0
+    For J = 0 To 99
+      Su = X * Su + aPoly[J]
+    Next
+    Pu += Su
+  Next
+
+Return Pu
+
+End
+
+Public Sub Main()
+
+Dim I as Integer
+
+For I = 1 To 10
+     Print Test(0.2)
+   Next
+
+End
+
+== See also ==
+
+* List of BASIC dialects
+* GNAVI
+
+== References ==
+
+== Further reading ==
+* Mark Alexander Bain (Apr 28, 2006) An Introduction to Gambas, Linux Journal, issue 146, June 2006 (in print)
+* Mark Alexander Bain (Dec 3, 2004) Gambas speeds database development, Linux.com
+* Mark Alexander Bain (Dec 12, 2007) Creating simple charts with Gambas 2.0, Linux.com
+* Fabián Flores Vadell (Nov, 2010) How to Program with Gambas
+* Free .PDF download of "A Beginner's Guide to Gambas, Revised for Version 3" [http://beginnersguidetogambas.com/], John Rittinghouse and Jon Nicholson
+* Free .PDF download of How To Gambas 3 - Installing Gambas, W.J.L. Raets
+* Free .PDF download of How To Gambas 3 - Building GUI Applications, W.J.L. Raets
+
+== External links ==
+
+* 
+* Gambas Almost Means Basic

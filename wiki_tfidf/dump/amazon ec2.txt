@@ -1,0 +1,145 @@
+Amazon Elastic Compute Cloud (EC2) is a central part of Amazon.com's cloud computing platform, Amazon Web Services (AWS). EC2 allows users to rent virtual computers on which to run their own computer applications. EC2 allows scalable deployment of applications by providing a Web service through which a user can boot an Amazon Machine Image to create a virtual machine, which Amazon calls an "instance", containing any software desired. A user can create, launch, and terminate server instances as needed, paying by the hour for active servers, hence the term "elastic". EC2 provides users with control over the geographical location of instances that allows for latency optimization and high levels of redundancy.
+
+In November 2010, Amazon switched its own retail website to EC2 and AWS.
+
+== History ==
+Amazon announced a limited public beta test of EC2 on August 25, 2006,  offering access on a first come first served basis.
+Amazon added two new instance types (Large and Extra-Large) on October 16, 2007. On May 29, 2008, two more types were added, High-CPU Medium and High-CPU Extra Large. There are twelve types of instances available.
+
+Amazon added three new features on March 27, 2008: static IP addresses, availability zones, and user selectable kernels.
+On August 20, 2008, Amazon added Elastic Block Store (EBS)
+This provides persistent storage, a feature that had been lacking since the service was introduced.
+
+Amazon EC2 went into full production when it dropped the beta label on October 23, 2008. On the same day, Amazon announced the following features:
+a service level agreement for EC2,
+Microsoft Windows in beta form on EC2,
+Microsoft SQL Server in beta form on EC2,
+plans for an AWS management console, and
+plans for load balancing, autoscaling, and cloud monitoring services. These features were subsequently added on May 18, 2009.
+
+Amazon EC2 was developed mostly by a team in Cape Town, South Africa led by Chris Pinkham.
+Pinkham provided the initial architecture guidance for EC2 and then built the team and led the development of the project. Some other members of the early team were Chris Brown, Quinton Hoole, Roland Paterson-Jones and Willem Van Biljon.
+
+==Elastic compute units==
+
+The elastic compute unit (ECU) was introduced by Amazon EC2 as an abstraction of computer resources. Amazon’s Definition of ECU notes “We use several benchmarks and tests to manage the consistency and predictability of the performance of an EC2 Compute Unit. One EC2 Compute Unit provides the equivalent CPU capacity of a 1.0-1.2 GHz
+2007 Opteron or 2007 Xeon processor. This is also the equivalent to an early-2006 1.7 GHz Xeon processor referenced in our original documentation”
+
+==Elastic block storage==
+
+The Amazon Elastic Block Store (EBS) provides raw block devices that can be attached to Amazon EC2 instances. These block devices can then be used like any raw block device. In a typical use case, this would include formatting the device with a filesystem and mounting said filesystem. In addition EBS supports a number of advanced storage features, including snapshotting and cloning. EBS volumes can be up to 1TB in size. EBS volumes are built on replicated storage, so that the failure of a single component will not cause data loss.
+EBS was introduced to the general public by Amazon in August 2008.
+
+==Instance types==
+EC2 uses Xen virtualization. Each virtual machine, called an "instance", functions as a virtual private server. Amazon sizes instances based on "Elastic Compute Units". The performance of otherwise identical virtual machines may vary.
+
+, the following instance types were offered:
+
+* On-demand: pay by hour without commitment
+* Reserved: rent instances with one-time payment receiving discounts on the hourly charge
+* Spot: bid-based service (runs the jobs only if the spot price is below the bid specified by bidder—the spot price is claimed to be supply-demand based, however, research refutes this claim )
+
+===Cost===
+, Amazon charged about $.02/hour ($15/month) for the smallest "Micro Instance" (t1.micro) virtual machine running Linux or Windows. High CPU and memory instances for Compute Clusters cost as much as $4.60/hour. "Reserved" instances can go as low as $6.43/month for a three-year prepaid plan.  The data transfer charge ranges from free to $0.12 per gigabyte, depending on the direction and monthly volume (inbound data transfer is free on all AWS services).
+
+AWS' pricing came under scrutiny due to the complexity of their pricing model.
+
+===Free tier===
+ Amazon offered a bundle of free resource credits to new account holders. The credits are designed to run a "micro" sized server, storage (EBS), and bandwidth for one year. Charges are applied on demand so the credit need not be used in the first month.
+
+===Reserved instances===
+Reserved instances enable EC2 or RDS service users to reserve an instance for one or three years. There is a fee associated with reserving an instance. The corresponding per hour rate charged by Amazon to operate the instance is much less than the rate charged for on-demand instances.
+
+Reserved Instances come in three different utilization levels: Light, Medium and Heavy. Each one has a different upfront cost and a different hourly cost. This makes the break-even points different for each utilisation level and term.
+
+===Comparison Table===
+
+==Features==
+
+=== Persistent storage ===
+
+An EC2 instance may be launched with a choice of two types of storage for its boot disk or "root device." The first option is a local "instance-store" disk as a root device (originally the only choice). The second option is to use an EBS volume as a root device.
+Instance-store volumes are temporary storage, which survive rebooting an EC2 instance, but when the instance is stopped or terminated (e.g., by an API call, or due to a failure), this store is lost.
+
+EBS volumes provide persistent storage independent of the lifetime of the EC2 instance, and act much like hard drives on a real server. More accurately, they appear as block devices to the operating system that are backed by Amazon's disk arrays. The OS is free to use the device however it wants. In the most common case, a file system is loaded and the volume acts as a hard drive. Another possible use is the creation of RAID arrays by combining two or more EBS volumes. RAID allows increases of speed and/or reliability of EBS. Users can set up and manage storage volumes of sizes from 1GB to 1TB. The volumes support snapshots, which can be taken from a GUI tool or the API. EBS volumes can be attached or detached from instances while they are running, and moved from one instance to another.
+
+Simple Storage Service (S3) is a storage system in which data is accessible to EC2 instances, or directly over the network to suitably authenticated callers (all communication is over HTTP). Amazon does not charge for the bandwidth for communications between EC2 instances and S3 storage "in the same region." Accessing S3 data stored in a different region (for example, data stored in Europe from a US East Coast EC2 instance) will be billed at Amazon's normal rates.
+
+S3-based storage is priced per gigabyte per month. Applications access S3 through an API. For example, Apache Hadoop supports a special s3: filesystem to support reading from and writing to S3 storage during a MapReduce job. There are also S3 filesystems for Linux, which mount a remote S3 filestore on an EC2 image, as if it were local storage. As S3 is not a full POSIX filesystem, things may not behave the same as on a local disk (e.g., no locking support).
+
+===Elastic IP addresses===
+Amazon's elastic IP address feature is similar to static IP address in traditional data centers, with one key difference. A user can programmatically map an elastic IP address to any virtual machine instance without a network administrator's help and without having to wait for DNS to propagate the new binding. In this sense an Elastic IP Address belongs to the account and not to a virtual machine instance. It exists until it is explicitly removed, and remains associated with the account even while it is associated with no instance. Partial IPv6 is provided in the US East (Northern Virginia), EU (Ireland) and Asia Pacific (Tokyo & Singapore) regions.
+
+===Amazon CloudWatch===
+
+Amazon CloudWatch is a Web service that provides real-time monitoring to Amazon's EC2 customers on their resource utilization such as CPU, disk and network. Cloudwatch does not provide any memory, disk space, or load average metrics without running additional software on the instance. Amazon provides example scripts for Linux instances. The data is aggregated and provided through AWS management console. It can also be accessed through command line tools and Web API's, if the customer desires to monitor their EC2 resources through their enterprise monitoring software.
+
+The metrics collected by Amazon CloudWatch enables Auto Scaling feature to dynamically add or remove EC2 instances. The customers are charged by the number of monitoring instances.
+
+Since May 2011, Amazon CloudWatch accepts custom metrics that can be submitted programmatically via Web Services API and then monitored the same way as all other internal metrics, including setting up the alarms for them.
+
+===Automated scaling===
+
+Amazon's auto scaling feature of EC2 allows it to automatically adapt computing capacity to site traffic. The schedule-based (e.g. time-of-the-day) and rule-based (e.g. CPU utilization thresholds) auto scaling mechanisms are easy to use and efficient for simple applications. However, one potential problem is that VMs may take up to several minutes to be ready to use, which are not suitable for time critical applications. The VM startup time are dependent on image size, VM type, data center locations, etc.
+
+==Reliability==
+To make EC2 more fault-tolerant, Amazon engineered Availability Zones that are designed to be insulated from failures in other availability zones. Availability zones do not share the same infrastructure. Applications running in more than one availability zone can achieve higher availability.
+
+EC2 provides users with control over the geographical location of instances that allows for latency optimization and high levels of redundancy. For example, to minimize downtime, a user can set up server instances in multiple zones that are insulated from each other for most causes of failure such that one backs up the other.
+
+High availability database services, like Amazon Relational Database Service run on top of EC2 instances.
+
+==Competitors==
+
+Since the launch of EC2, several companies have launched competing solutions, including Google App Engine, Internap's Agile platform, as well as conventional infrastructure providers such as Rackspace. In addition, startups like Slicify use crowd-sourcing to allow users to rent infrastructure from individuals.
+
+==Issues==
+
+In early July 2008 the anti-spam organizations Outblaze and Spamhaus.org began blocking Amazon's EC2 address pool due to problems with the distribution of spam and malware.
+
+On December 1, 2010, Amazon pulled its service to WikiLeaks after coming under political pressure in the USA. The Internet group Anonymous attempted to attack EC2 in revenge; however, Amazon was not affected by the attack.
+
+Amazon's websites were temporarily offline on December 12, 2010, although it was initially unclear if this was due to attacks or a hardware failure. An Amazon official later stated that it was due to a hardware failure.
+
+Shortly before 5 am Eastern on April 21, 2011, an outage started at EC2's northern Virginia data center that brought down several websites, including  Foursquare, Springpad, Reddit, Quora, BigDoor and Hootsuite. Specifically, attempts to use Amazon's elastic-disk and database services hung, failed, or were slow. Service was restored to some parts of the datacenter (three of four "availability zones" in Amazon's terms) by late afternoon Eastern time that day; problems for at least some customers were continuing as of April 25. 0.07% of EBS volumes in one zone have also been lost; EBS failures were a part of normal operation even before this outage and were a risk documented by Amazon, though the number of failures and the number of simultaneous failures may find some EC2 users unprepared.
+
+On Sunday August 6, 2011, Amazon suffered a power outage in one of their Ireland availability zones. Lightning was originally blamed for the outage; however, on August 11, Irish energy supplier ESB Networks dismissed this as a cause, but at time of writing, could not confirm what the cause of the problem was. The power outage raised multiple questions regarding Amazon's EBS infrastructure, which caused several bugs in their software to be exposed. The bugs resulted in some customers' data being deleted when recovering EBS volumes in a mid-write operation during the crash.
+
+August 8, 2011, saw another network connectivity outage of Amazon's Northern Virginia datacenter, knocking out the likes of Reddit, Quora, Netflix and FourSquare. The outage lasted around 25 minutes.
+
+Another Northern Virginia datacenter outage occurred on October 22, 2012, from approximately 10 am to 4 pm PT.  Edmodo, Airbnb, Flipboard, Reddit, and other customers were affected. Anonymous claimed responsibility, however Amazon denied this assertion.
+
+==See also==
+* Amazon S3
+* AppScale
+* Bitnami
+* CopperEgg
+* ElasticHosts
+* Eucalyptus
+* FlexiScale
+* GoGrid
+* Google App Engine
+* Google Compute Engine
+* GreenQloud’s ComputeQloud
+* Internap's Agile Hosting
+* Linode
+* Liquid Web
+* Lunacloud
+* Microsoft Azure
+* Nimbula
+* OpenShift
+* Rackspace Cloud
+* RightScale
+* Savvis
+* TurnKey Linux Virtual Appliance Library
+* Zadara Storage
+
+==References==
+
+==Notes==
+
+==External links==
+* Amazon Elastic Compute Cloud main page
+*Official Amazon Web Services YouTube Channel - Tutorials on using and optimizing services running on EC2
+
+de:Amazon Web Services

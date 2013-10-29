@@ -1,0 +1,244 @@
+OpenGL (Open Graphics Library) is a cross-language, multi-platform application programming interface (API) for rendering 2D and 3D computer graphics. The API is typically used to interact with a Graphics processing unit (GPU), to achieve hardware-accelerated rendering. OpenGL was developed by Silicon Graphics Inc. (SGI) from 1991 and released in January 1992 and is widely used in CAD, virtual reality, scientific visualization, information visualization, flight simulation, and video games. OpenGL is managed by the non-profit technology consortium Khronos Group.
+
+==Design==
+
+The OpenGL specification describes an abstract API for drawing 2D and 3D graphics. Although it's possible for the API to be implemented entirely in software, it's designed to be implemented mostly or entirely in hardware.
+
+The API is defined as a number of functions which may be called by the client program, alongside a number of named integer constants (for example, the constant GL_TEXTURE_2D, which corresponds to the decimal number 3553). Although the function definitions are superficially similar to those of the C programming language, they are language-independent. As such, OpenGL has many language bindings, some of the most noteworthy being the JavaScript binding WebGL (API, based on OpenGL ES 2.0, for 3D rendering from within a web browser); the C bindings WGL, GLX and CGL; the C binding provided by iOS; and the Java and C bindings provided by Android.
+
+In addition to being language-independent, OpenGL is also platform-independent. The specification says nothing on the subject of obtaining, and managing, an OpenGL context, leaving this as a detail of the underlying windowing system. For the same reason, OpenGL is purely concerned with rendering, providing no APIs related to input, audio, or windowing.
+
+===Development===
+OpenGL is an evolving API. New versions of the OpenGL specification are regularly released by the Khronos Group, each of which extends the API to support various new features. The details of each version are decided by consensus between the Group's members, including graphics card manufacturers, operating system designers, and general technology companies such as Mozilla and Google.
+
+In addition to the features required by the core API, GPU vendors may provide additional functionality in the form of extensions. Extensions may introduce new functions and new constants, and may relax or remove restrictions on existing OpenGL functions. Vendors can use extensions to expose custom APIs without needing support from other vendors or the Khronos Group as a whole, which greatly increases the flexibility of OpenGL. All extensions are collected in, and defined by, the OpenGL Registry.
+
+Each extension is associated with a short identifier, based on the name of the company which developed it. For example, Nvidia's identifier is NV, which is part of the extension name GL_NV_half_float, the constant GL_HALF_FLOAT_NV, and the function glVertex2hNV(). If multiple vendors agree to implement the same functionality using the same API, a shared extension may be released, using the identifier EXT. In such cases, it could also happen that the Khronos Group's Architecture Review Board gives the extension their explicit approval, in which case the identifier ARB is used.
+
+The features introduced by each new version of OpenGL are typically formed from the combined features of several widely-implemented extensions, especially extensions of type ARB or EXT.
+
+==Documentation==
+OpenGL's popularity is partially due to the quality of its official documentation. The OpenGL Architecture Review Board released a series of manuals along with the specification which have been updated to track changes in the API. These are almost universally known by the colors of their covers:
+
+;The Red Book
+:OpenGL Programming Guide, 8th Edition. ISBN 0-321-77303-9
+:A tutorial and reference book.
+;The Orange Book
+:OpenGL Shading Language, 3rd edition. ISBN 0-321-63763-1
+:A tutorial and reference book for GLSL.
+
+Historic books (pre-OpenGL 2.0):
+
+;The Green Book
+:OpenGL Programming for the X Window System. ISBN 0-201-47334-5
+:A book about X11 interfacing and GLUT.
+;The Blue Book
+:OpenGL Reference manual, 4th edition. ISBN 0-321-17383-X
+:Essentially a hard-copy printout of the man pages for OpenGL.
+:Includes a poster-sized fold-out diagram showing the structure of an idealised OpenGL implementation.
+;The Alpha Book (white cover)
+:OpenGL Programming for Windows 95 and Windows NT. ISBN 0-201-40709-4
+:A book about interfacing OpenGL with Microsoft Windows.
+
+==Associated libraries==
+The earliest versions of OpenGL were released with a companion library called GLU, the OpenGL Utility Library. It provided simple, useful features which were unlikely to be supported in contemporary hardware, such as mipmap generation, tessellation, and generation of primitive shapes. The GLU specification was last updated in 1998, and the latest version depends on features which were deprecated with the release of OpenGL 3.1 in 2009.
+
+Given that creating an OpenGL context is quite a complex process, and given that it varies between operating systems, automatic OpenGL context creation has become a common feature of several game-development and user-interface libraries, including SDL, Allegro, SFML, FLTK, and Qt.
+
+A few libraries have been designed solely to produce an OpenGL-capable window. The first such library was GLUT (later superseded by freeglut). GLFW is a newer alternative.
+
+Given the high workload involved in identifying and loading OpenGL extensions, a few libraries have been designed which load all available extensions and functions automatically. Examples include GLEE and GLEW. Extensions are also loaded automatically by most language bindings, such as JOGL and PyOpenGL.
+
+Mesa 3D is an open source implementation of OpenGL. It can do pure software rendering, and it may also use hardware acceleration on the Linux platform by taking advantage of the Direct Rendering Infrastructure. As of version 9.0, it implements version 3.1 of the OpenGL standard.
+
+==History==
+In the 1980s, developing software that could function with a wide range of graphics hardware was a real challenge. Software developers wrote custom interfaces and drivers for each piece of hardware. This was expensive and resulted in much duplication of effort.
+
+By the early 1990s, SGI was a leader in 3D graphics for workstations. Their IRIS GL API was considered state-of-the-art and became the de facto industry standard, overshadowing the open standards-based PHIGS. This was because IRIS GL was considered easier to use, and because it supported immediate mode rendering. By contrast, PHIGS was considered difficult to use and outdated in terms of functionality.
+
+SGI's competitors (including Sun Microsystems, Hewlett-Packard and IBM) were also able to bring to market 3D hardware, supported by extensions made to the PHIGS standard. This in turn caused SGI market share to weaken as more 3D graphics hardware suppliers entered the market. In an effort to influence the market, SGI decided to turn the IrisGL API into an open standard - OpenGL.
+
+However, SGI had a large number of software customers for whom the change from IrisGL to OpenGL would require significant investment. Moreover, IrisGL had API functions that were not relevant to 3D graphics. For example, it included a windowing, keyboard and mouse API, in part because it was developed before the X Window System and Sun's NeWS systems were developed. And, IrisGL libraries were unsuitable for opening due to licensing and patent issues. These factors required SGI to continue to support the advanced and proprietary Iris Inventor and Iris Performer programming APIs while market support for OpenGL matured.
+
+One of the restrictions of IrisGL was that it only provided access to features supported by the underlying hardware. If the graphics hardware did not support a feature, then the application could not use it. OpenGL overcame this problem by providing support in software for features unsupported by hardware, allowing applications to use advanced graphics on relatively low-powered systems. OpenGL standardized access to hardware, pushed the development responsibility of hardware interface programs (sometimes called device drivers) to hardware manufacturers, and delegated windowing functions to the underlying operating system. With so many different kinds of graphics hardware, getting them all to speak the same language in this way had a remarkable impact by giving software developers a higher level platform for 3D-software development.
+
+In 1992, SGI led the creation of the OpenGL architectural review board (OpenGL ARB), the group of companies that would maintain and expand the OpenGL specification in the future.
+
+In 1994, SGI played with the idea of releasing something called "OpenGL++" which included elements such as a scene-graph API (presumably based on their Performer technology). The specification was circulated among a few interested parties – but never turned into a product.
+
+Microsoft released Direct3D in 1995, which eventually became the main competitor of OpenGL. On December 17, 1997, Microsoft and SGI initiated the Fahrenheit project, which was a joint effort with the goal of unifying the OpenGL and Direct3D interfaces (and adding a scene-graph API too). In 1998, Hewlett-Packard joined the project. It initially showed some promise of bringing order to the world of interactive 3D computer graphics APIs, but on account of financial constraints at SGI, strategic reasons at Microsoft, and general lack of industry support, it was abandoned in 1999.
+
+In July 2006 the OpenGL Architecture Review Board voted to transfer control of the OpenGL API standard to the Khronos Group.
+
+==Version History==
+The first version of OpenGL, version 1.0, was released in January 1992 by Mark Segal and Kurt Akeley. Since then, OpenGL has occasionally been extended by releasing a new version of the specification. Such releases define a baseline set of features which all conforming graphics cards must support, and against which new extensions can more easily be written. Each new version of OpenGL tends to incorporate a number of extensions which have widespread support among graphics-card vendors, although the details of those extensions may be changed.
+
+===OpenGL 1.1===
+Release Date: January 1992
+
+===OpenGL 1.2===
+Release Date: March 16, 1998
+
+One notable feature of OpenGL 1.2 was the introduction of the imaging subset. This is a set of features which are very useful to image-processing applications, but which have limited usefulness elsewhere. Implementation of this subset has always been optional; support is indicated by advertising the extension string ARB_imaging.
+
+===OpenGL 1.2===
+Release Date: October 14, 1998
+
+Opengl 1.2.1 was a minor release, appearing only seven months after the release of version 1.2. It introduced the concept of ARB extensions, and defined the extension ARB_multitexture, without yet incorporating it into the OpenGL core specification.
+
+===OpenGL 1.3===
+Release Date: August 14, 2001
+
+===OpenGL 1.4===
+Release date: July 24, 2002
+
+===OpenGL 1.5===
+Release Date: July 29, 2003
+
+Alongside the release of OpenGL 1.5, the ARB released the OpenGL Shading Language specification, and the extensions ARB_shader_objects, ARB_vertex_shader, and ARB_fragment_shader. However, these would not be incorporated into the core specification until the next release.
+
+===OpenGL 2.0===
+Release Date: September 7, 2004
+
+OpenGL 2.0 was originally conceived by 3Dlabs to address concerns that OpenGL was stagnating and lacked a strong direction. 3Dlabs proposed a number of major additions to the standard. Most of these were, at the time, rejected by the ARB or otherwise never came to fruition in the form that 3Dlabs proposed. However, their proposal for a C-style shading language was eventually completed, resulting in the current formulation of GLSL (the OpenGL Shading Language, also slang). Like the assembly-like shading languages that it was replacing, it allowed the programmer to replace the fixed-function vertex and fragment pipe with shaders, though this time written in a C-like high-level language.
+
+The design of GLSL was notable for making relatively few concessions to the limitations of the hardware then available; this hearkened back to the earlier tradition of OpenGL setting an ambitious, forward-looking target for 3D accelerators rather than merely tracking the state of currently available hardware. The final OpenGL 2.0 specification includes support for GLSL.
+
+===OpenGL 2.1===
+Release Date: July 2, 2006
+
+OpenGL 2.1 required implementations to support version 1.20 of the OpenGL Shading Language.
+
+===Longs Peak and OpenGL 3.0 controversy===
+Prior to the release of OpenGL 3.0, the new revision was known as the codename Longs Peak. At the time of its original announcement, Longs Peak was presented as the first major API revision in OpenGL's lifetime. It consisted of an overhaul to the way that OpenGL works, calling for fundamental changes to the API.
+
+The draft introduced a change to object management. The GL 2.1 object model was built upon the state-based design of OpenGL. That is, in order to modify an object or to use it, one needs to bind the object to the state system, then make modifications to the state or perform function calls that use the bound object.
+
+Because of OpenGL's use of a state system, objects must be mutable. That is, the basic structure of an object can change at any time, even if the rendering pipeline is asynchronously using that object. A texture object can be redefined from 2D to 3D. This requires any OpenGL implementations to add a degree of complexity to internal object management.
+
+Under the Longs Peak API, object creation would become atomic, using templates to define the properties of an object which would be created with a single function call. The object could then be used immediately across multiple threads. Objects would also be immutable; however, they could have their contents changed and updated. For example, a texture could change its image, but its size and format could not be changed.
+
+To support backwards compatibility, the old state based API would still be available, but no new functionality would be exposed via the old API in later versions of OpenGL. This would have allowed legacy code bases, such as the majority of CAD products, to continue to run while other software could be written against or ported to the new API.
+
+Longs Peak was initially due to be finalized in September 2007 under the name OpenGL 3.0, but the Khronos Group announced on October 30 that it had run into several issues that it wished to address before releasing the specification. As a result, the spec was delayed, and the Khronos Group went into a media blackout until the release of the final OpenGL 3.0 spec.
+
+The final specification proved far less revolutionary than the Longs Peak proposal. Instead of removing all immediate mode and fixed functionality (non-shader mode), the spec included them as deprecated features. The proposed object model was not included, and no plans have been announced to include it in any future revisions. As a result, the API remained largely the same with a few existing extensions being promoted to core functionality.
+
+Among some developer groups this decision caused something of an uproar, with many developers professing that they would switch to DirectX in protest. Most complaints revolved around the lack of communication by Khronos to the development community and multiple features being discarded that were viewed favorably by many. Other frustrations included the requirement of DirectX 10 level hardware in order to use OpenGL 3.0 and the absence of geometry shaders and instanced rendering as core features.
+
+Other sources reported that the community reaction was not quite as severe as originally presented, with many vendors showing support for the update.
+
+===OpenGL 3.0===
+Release Date: August 11, 2008
+
+OpenGL 3.0 introduced a deprecation mechanism to simplify future revisions of the API. Certain features, marked as deprecated, could be completely disabled by requesting a forward-compatible context from the windowing system. OpenGL 3.0 features could still be accessed alongside these deprecated features, however, by requesting a full context.
+
+Deprecated features include:
+*All fixed-function vertex and fragment processing.
+*Direct-mode rendering, using glBegin and glEnd.
+*Display lists.
+*Indexed-color rendering targets.
+*OpenGL Shading Language versions 1.10 and 1.20.
+
+===OpenGL 3.1===
+Release Date: March 24, 2009
+
+OpenGL 3.1 fully removed all of the features which were deprecated in version 3.0, with the exception of wide lines. From this version onwards, it's not possible to access new features using a full context, nor to access deprecated features using a forward-compatible context. An exception to the former rule is made if the implementation supports the ARB_compatibility extension, but this is not guaranteed.
+
+===OpenGL 3.2===
+Release Date: August 3, 2009
+
+OpenGL 3.2 further built on the deprecation mechanisms introduced by OpenGL 3.0, by dividing the specification into a core profile and compatibility profile. Compatibility contexts include the deprecated fixed-function APIs, equivalent to the ARB_compatibility extension released alongside OpenGL 3.1, while core contexts do not.
+
+===OpenGL 3.3===
+Release Date: March 11, 2010
+
+OpenGL 3.3 was released alongside version 4.0. It was designed to target hardware capable of supporting Direct3D 10.
+
+===OpenGL 4.0===
+Release Date: March 11, 2010
+
+OpenGL 4.0 was released alongside version 3.3. It was designed to target hardware capable of supporting Direct3D 11.
+
+As in OpenGL 3.0, this version of OpenGL contains a high number of fairly inconsequential extensions, designed to thoroughly expose the capabilities of Direct3D 11-class hardware. Only the most influential extensions are listed below.
+
+===OpenGL 4.1===
+Release Date: July 26, 2010
+
+===OpenGL 4.2===
+Released Date: August 8, 2011
+
+Supported video cards: Nvidia GeForce 400 series, Nvidia GeForce 500 series, Nvidia GeForce 600 series, Nvidia GeForce 700 series, ATI Radeon HD 5000 Series, AMD Radeon HD 6000 Series, AMD Radeon HD 7000 Series
+
+* Support for shaders with atomic counters and load/store/atomic read-modify-write operations to a single level of a texture.
+* Capturing GPU-tessellated geometry and drawing multiple instances of the result of a transform feedback to enable complex objects to be efficiently repositioned and replicated.
+* Support for modifying an arbitrary subset of a compressed texture, without having to re-download the whole texture to the GPU for significant performance improvements.
+* Support for packing multiple 8 and 16 bit values into a single 32-bit value for efficient shader processing with significantly reduced memory storage and bandwidth.
+
+===OpenGL 4.3===
+Release Date: August 6, 2012
+
+Supported video cards: Nvidia GeForce 400 series, Nvidia GeForce 500 series, Nvidia GeForce 600 series, Nvidia GeForce 700 series, ATI Radeon HD 5000 Series, AMD Radeon HD 6000 Series, AMD Radeon HD 7000 Series, AMD Radeon HD 8000 Series
+
+* Compute shaders leveraging GPU parallelism within the context of the graphics pipeline
+* Shader storage buffer objects
+* Texture parameter queries
+* High-quality ETC2/EAC texture compression as a standard feature
+* Full compatibility with OpenGL ES 3.0 APIs
+* Debug capabilities to receive debugging messages during application development
+* Texture views for interpreting textures in different ways without data replication
+* Increased memory security
+* A multi-application robustness extension
+
+===OpenGL 4.4===
+Release Date: July 22, 2013
+
+Supported video cards: Nvidia GeForce 400 series, Nvidia GeForce 500 series, Nvidia GeForce 600 series, Nvidia GeForce 700 series
+
+* Buffer Placement Control
+* Efficient Asynchronous Queries
+* Shader Variable Layout
+* Efficient Multiple Object Binding
+* Streamlined Porting of Direct3D applications
+* Bindless Texture Extension
+* Sparse Texture Extension
+
+==Sample renderings==
+
+Image:JOGL Refrection Demo Screenshot.png|Refraction using programmable vertex shaders
+Image:Perl OpenGL fob2.jpg|Animated textures using framebuffer objects and vertex/fragment program extensions
+Image:Synth_video_game_screenshot_C.png|Procedural artwork using display lists
+
+==See also==
+*ARB assembly language – OpenGL's legacy low-level shading language.
+*Comparison of OpenGL and Direct3D.
+*Glide API – A graphics API once used on 3dfx Voodoo cards.
+*List of OpenGL programs
+*OpenAL – Cross-platform audio library, designed to resemble OpenGL.
+*GLM – C++ mathematics toolkit for OpenGL, based on GLSL syntax.
+*OpenSL ES – API for audio on embedded systems, developed by the Khronos Group.
+*OpenVG – API for accelerated 2D graphics, developed by the Khronos Group.
+*RenderMan Interface Specification (RISpec) – Pixar's open API for photorealistic off-line rendering.
+
+==References==
+
+==Books==
+*Dave Shreiner, The Khronos OpenGL ARB Working Group: OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 4.3 (8th Edition), Addison-Wesley, March 30, 2013, ISBN 978-0-321-77303-6
+*Graham Sellers, Richard S. Wright, Nicholas Haemel: OpenGL SuperBible: Comprehensive Tutorial and Reference (6th Edition), Addison-Wesley, July 31 2013, ISBN 978-0-321-90294-8
+*Rost, Randi J.: OpenGL Shading Language (3rd Edition), Addison-Wesley, July 30, 2009, ISBN 978-0-321-63763-5
+*Lengyel, Eric: The OpenGL Extensions Guide, Charles River Media, ISBN 1-58450-294-0
+*OpenGL Architecture Review Board, et al.: OpenGL Reference Manual: The Official Reference Document to OpenGL, Version 1.4, Addison-Wesley, ISBN 0-321-17383-X
+*OpenGL Architecture Review Board, et al.: OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 2, Fifth Edition, Addison-Wesley, ISBN 0-321-33573-2
+
+==Examples==
+*Tutorials for modern OpenGL (3.3+)
+*OpenGL 3.x/4.x examples
+*OpenGL (version 3 and higher) examples
+
+==External links==
+
+*Official website
+*OpenGL.org's Wiki more information on OpenGL Language bindings
+*SGI's OpenGL website
+
+*Khronos Group, Inc.

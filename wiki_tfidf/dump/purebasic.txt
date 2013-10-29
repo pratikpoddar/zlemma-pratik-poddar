@@ -1,0 +1,80 @@
+PureBasic is a commercially distributed procedural computer programming language and integrated development environment based on BASIC and developed by Fantaisie Software for Windows 32/64-bit, Linux 32/64-bit, and Mac OS X. An Amiga version is available, although it has been discontinued and released as open source. The first public release of PureBasic for Windows was on December 17, 2000. It has been continually updated since.
+
+PureBasic has a unique "lifetime license model". As cited on the website, the very first PureBasic user (who registered in 1998) still has free access to new updates and this is not going to change.
+
+PureBasic compiles directly to x86, x86-64, PowerPC or 680x0  instruction sets, generating small standalone executables and DLLs which need no runtime libraries beyond the standard system libraries. Programs developed without using the platform-specific application programming interfaces (APIs) can be built easily from the same source file with little or no modification.
+
+PureBasic supports inline assembly, allowing the developer to include FASM assembler commands within PureBasic source code, while using the variables declared in PureBasic source code, enabling experienced programmers to improve the speed of speed-critical sections of code. PureBasic supports and has integrated the OGRE 3D Environment. Other 3D environments such as the Irrlicht Engine are unofficially supported.
+
+== Programming language ==
+
+=== Characteristics ===
+PureBasic is a native 32 bit and 64 bit machine-code BASIC compiler whose goals are portability (Windows, Linux, MacOS X and AmigaOS are currently supported), the production of very fast and highly optimized executables and, of course, the very simple BASIC syntax. It can compile console applications, gui applications, and dll files.
+
+=== Hello World example ===
+The following single line of PureBasic code will create a standalone executable (3.00 KB (3,072 bytes) on Windows version) that displays a message box with the text "Hello World".
+
+("Message Box", "Hello World")
+
+And the following variant of the same code, which instead uses an inline Windows API call with no need for declarations or other external references, will create an even smaller 2.00 KB (2,048 bytes) standalone executable for Windows.
+
+(0, "Hello World", "Message Box", 0)
+
+The following is a console version of the Hello World example.
+
+()          ; Open a console window. 
+ ("Hello, World!")
+
+=== Procedural programming ===
+PureBasic is a "Second generation BASIC" language, with structured conditionals and loops, and procedure-oriented programming supported. The user is not required to use procedures, so a programmer may opt for a coding style which includes Goto, Gosub Label, and Return.
+
+Below is a sample procedure for sorting an array, although SortArray is now a built-in function of PureBasic.
+
+Procedure bubbleSort(Array a(1))
+   Protected i, itemCount, hasChanged
+  
+   itemCount = ArraySize(a())
+   Repeat
+     hasChanged = #False
+     itemCount - 1
+     For i = 0 To itemCount
+       If a(i) > a(i + 1)
+         Swap a(i), a(i + 1)
+         hasChanged = #True
+       EndIf 
+     Next  
+   Until hasChanged = #False
+ EndProcedure
+
+=== Object-oriented programming ===
+Fred, the developer of PureBasic, has stated that PureBasic will never be object oriented. However, numerous users have created object oriented support systems.
+
+== Form Designer RAD ==
+
+PureBasic has its own form designer to aid in the creation of forms for applications, but other third-party solutions are also available.ProGUI>, DLL library comprising more than 100 well documented commands to quickly incorporate rich, customizable GUI components into your applications. The original non-integrated Visual Designer was replaced with a new integrated Form Designer on 14 Feb, 2013.
+
+== User community ==
+PureBasic provides an online forum for users to ask questions and share knowledge. On 6 May 2013 the English language forum had 4,769 members and contained 44,043 threads comprising 372,200 posts since May 17, 2002.
+
+Numerous code sharing sites show PureBasic is used to create tools and games in a fast and easy way, and share large amounts of open-source code.
+
+== Further reading ==
+* 
+*
+
+== Bibliography ==
+* 
+* 
+* 
+* 
+*
+
+== References ==
+
+== External links ==
+* 
+*
+
+;Libraries and Open Source Code Archives
+*   Gnozal's Purebasic place (IDE Plugins & Libraries)
+*  Andre Beer's Open Source PB code archive

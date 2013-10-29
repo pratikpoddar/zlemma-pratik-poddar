@@ -1,0 +1,671 @@
+MySQL ( "My S-Q-L", officially, but also called  "My Sequel") is (as of July 2013) the world's second most widely used open-source relational database management system (RDBMS). It is named after co-founder Michael Widenius's daughter, My. The SQL phrase stands for Structured Query Language.
+
+The default port of Mysql is 3306. The MySQL development project has made its source code available under the terms of the GNU General Public License, as well as under a variety of proprietary agreements. MySQL was owned and sponsored by a single for-profit firm, the Swedish company MySQL AB, now owned by Oracle Corporation.
+
+MySQL is a popular choice of database for use in web applications, and is a central component of the widely used LAMP open source web application software stack (and other 'AMP' stacks). LAMP is an acronym for "Linux, Apache, MySQL, Perl/PHP/Python." Free-software-open source projects that require a full-featured database management system often use MySQL.
+
+For commercial use, several paid editions are available, and offer additional functionality. Applications which use MySQL databases include: TYPO3, MODx, Joomla, WordPress, phpBB, MyBB, Drupal and other software. MySQL is also used in many high-profile, large-scale websites, including Wikipedia, Google (though not for searches), Facebook, Twitter, Flickr, and YouTube.
+
+==Interfaces==
+
+MySQL is a relational database management system (RDBMS), and ships with no GUI tools to administer MySQL databases or manage data contained within the databases. Users may use the included command line tools, or use MySQL "front-ends", desktop software and web applications that create and manage MySQL databases, build database structures, back up data, inspect status, and work with data records. The official set of MySQL front-end tools, MySQL Workbench is actively developed by Oracle, and is freely available for use.
+
+===Graphical===
+The official MySQL Workbench is a free integrated environment developed by MySQL AB, that enables users to graphically administer MySQL databases and visually design database structures. MySQL Workbench replaces the previous package of software, MySQL GUI Tools. Similar to other third-party packages, but still considered the authoritative MySQL front end, MySQL Workbench lets users manage database design & modeling, SQL development (replacing MySQL Query Browser) and Database administration (replacing MySQL Administrator).
+
+MySQL Workbench is available in two editions, the regular free and open source Community Edition which may be downloaded from the MySQL website, and the proprietary Standard Edition which extends and improves the feature set of the Community Edition.
+
+Third-party proprietary and free graphical administration applications (or "front ends") are available that integrate with MySQL and enable users to work with database structure and data visually. Some well-known front ends, in alphabetical order, are:
+
+* Adminer – a free MySQL front end written in one PHP script, capable of managing multiple databases, with many CSS skins available.
+* DaDaBIK – a customizable CRUD front-end to MySQL. Written in PHP. Commercial.
+* DBEdit – a free front end for MySQL and other databases.
+* dbForge GUI Tools — a set of tools for database management that includes separate applications for schema comparison and synchronization, data comparison and synchronization, and building queries.
+* HeidiSQL – a full featured free front end that runs on Windows, and can connect to local or remote MySQL servers to manage databases, tables, column structure, and individual data records. Also supports specialised GUI features for date/time fields and enumerated multiple-value fields.
+* LibreOffice Base - LibreOffice Base allows the creation and management of databases, preparation of forms and reports that provide end users easy access to data. Like Microsoft Access, it can be used as a front-end for various database systems, including Access databases (JET), ODBC data sources, and MySQL or PostgreSQL.
+* Navicat – a series of proprietary graphical database management applications, developed for Windows, Macintosh and Linux.
+* OpenOffice.org – OpenOffice.org Base can manage MySQL databases if the entire suite is installed. Free and open-source.
+* phpMyAdmin – a free Web-based front end widely installed by web hosts, since it is developed in PHP and is included in the LAMP stack, MAMP, XAMPP and WAMP software bundle installers.
+* SQLBuddy - a free Web-based front end, developed in PHP.
+* SQLyog - commercial, but there is also a free 'community' edition available.
+* Toad for MySQL – a free development and administration front end for MySQL from Quest Software
+Other available proprietary MySQL front ends include dbForge Studio for MySQL, DBStudio, Epictetus, Microsoft Access, Oracle SQL Developer, SchemaBank, SQLPro SQL Client, Toad Data Modeler.
+
+===Command line===
+MySQL ships with many command line tools, from which the main interface is 'mysql' client. Third-parties have also developed tools to manage, optimize, monitor and backup a MySQL server, some listed below. All these tools work on *NIX type operating systems, and some of them also on Windows.
+
+* Maatkit - a cross-platform toolkit for MySQL, PostgreSQL and Memcached, developed in Perl. Maatkit can be used to prove replication is working correctly, fix corrupted data, automate repetitive tasks, and speed up servers. Maatkit is included with several Linux distributions such as CentOS and Debian and packages are available for Fedora and Ubuntu as well. As of late 2011, Maatkit is no longer developed, but Percona has continued development under the Percona Toolkit brand.
+
+* XtraBackup - Open Source MySQL hot backup software. Some notable features include hot, non-locking backups for InnoDB storage, incremental backups, streaming, parallel-compressed backups, throttling based on the number of IO operations per second, etc.
+
+* MySQL::Replication - a replacement for MySQL's built-in replication, developed in Perl. MySQL::Replication can be used to create a peer-to-peer, multi-master MySQL replication network.
+
+===Programming===
+MySQL works on many system platforms, including AIX, BSDi, FreeBSD, HP-UX, eComStation, i5/OS, IRIX, Linux, OS X, Microsoft Windows, NetBSD, Novell NetWare, OpenBSD, OpenSolaris, OS/2 Warp, QNX, Solaris, Symbian, SunOS, SCO OpenServer, SCO UnixWare, Sanos and Tru64. A port of MySQL to OpenVMS also exists.
+
+MySQL is written in C and C++. Its SQL parser is written in yacc, but it uses a home-brewed lexical analyzer. Many programming languages with language-specific APIs include libraries for accessing MySQL databases. These include MySQL Connector/Net for integration with Microsoft's Visual Studio (languages such as C# and VB are most commonly used) and the JDBC driver for Java. In addition, an ODBC interface called MyODBC allows additional programming languages that support the ODBC interface to communicate with a MySQL database, such as ASP or ColdFusion. The HTSQL - URL-based query method also ships with a MySQL adapter, allowing direct interaction between a MySQL database and any web client via structured URLs.
+
+==Features==
+, MySQL offered MySQL 5.1 in two different variants: the open source MySQL Community Server and the commercial Enterprise Server. MySQL 5.5 is offered under the same licences. They have a common code base and include the following features:
+* A broad subset of ANSI SQL 99, as well as extensions
+* Cross-platform support
+* Stored procedures, using a procedural language that closely adheres to SQL/PSM
+* Triggers
+* Cursors
+* Updatable views
+* Information schema
+* Strict mode (ensures MySQL does not truncate or otherwise modify data to conform to an underlying data type, when an incompatible value is inserted into that type)
+* X/Open XA distributed transaction processing (DTP) support; two phase commit as part of this, using Oracle's InnoDB engine
+* Independent storage engines (MyISAM for read speed, InnoDB for transactions and referential integrity, MySQL Archive for storing historical data in little space)
+* Transactions with the InnoDB and NDB Cluster storage engines; savepoints with InnoDB
+* SSL support
+* Query caching
+* Sub-SELECTs (i.e. nested SELECTs)
+* Replication support (i.e. Master-Master Replication & Master-Slave Replication) with one master per slave, many slaves per master. Multi-master replication is provided in MySQL Cluster, and multi-master support can be added to unclustered configurations using Galera Cluster.
+* Full-text indexing and searching using MyISAM engine
+* Embedded database library
+* Unicode support (however prior to 5.5.3 UTF-8 and UCS-2 encoded strings are limited to the BMP, in 5.5.3 and later use utf8mb4 for full unicode support)
+* ACID compliance when using transaction capable storage engines (InnoDB and Cluster)
+* Partitioned tables with pruning of partitions in optimizer
+* Shared-nothing clustering through MySQL Cluster
+* Hot backup (via mysqlhotcopy) under certain conditions
+* Multiple storage engines, allowing one to choose the one that is most effective for each table in the application (in MySQL 5.0, storage engines must be compiled in; in MySQL 5.1, storage engines can be dynamically loaded at run time):
+** Native storage engines (MyISAM, Falcon, Merge, Memory (heap), Federated, Archive, CSV, Blackhole, Cluster, EXAMPLE, Aria, and InnoDB, which was made the default as of 5.5)
+** Partner-developed storage engines (solidDB, Infobright (formerly Brighthouse), Kickfire, XtraDB, IBM DB2). InnoDB used to be a partner-developed storage engine, but with recent acquisitions, Oracle now owns both MySQL core and InnoDB.
+** Community-developed storage engines (memcache engine, httpd, PBXT, Revision Engine)
+** Custom storage engines
+* Commit grouping, gathering multiple transactions from multiple connections together to increase the number of commits per second. (PostgreSQL has an advanced form of this functionality)
+
+The developers release monthly versions of the MySQL Server. The sources can be obtained from MySQL's website or from MySQL's Bazaar repository, both under the GPL license.
+
+===Limitations===
+Like other SQL databases, MySQL does not currently comply with the full SQL standard for some of the implemented functionality, including  foreign key references when using some storage engines other than the 'standard' InnoDB (or third-party engines which supports foreign keys).
+
+Triggers are currently limited to one per action / timing, i.e. maximum one after insert and one before insert on the same table.
+There are no triggers on views.
+
+MySQL, like most other transactional relational databases, is strongly limited by hard disk performance. This is especially true in terms of write latency. Given the recent appearance of very affordable consumer grade SATA interface Solid-state drives that offer zero mechanical latency, a fivefold speedup over even an eight drive RAID array can be had for a smaller investment.
+
+MySQL database's inbuilt functions like UNIX_TIMESTAMP() will return 0 after 03:14:07 UTC on 19 January 2038.
+
+===Deployment===
+LAMP software bundle.svg|thumb|400px|The LAMP software bundle (here additionally with Squid). A high performance and high-availability solution for a hostile environment
+MySQL can be built and installed manually from source code, but this can be tedious so it is more commonly installed from a binary package unless special customizations are required. On most Linux distributions the package management system can download and install MySQL with minimal effort, though further configuration is often required to adjust security and optimization settings.
+
+Though MySQL began as a low-end alternative to more powerful proprietary databases, it has gradually evolved to support higher-scale needs as well. It is still most commonly used in small to medium scale single-server deployments, either as a component in a LAMP-based web application or as a standalone database server. Much of MySQL's appeal originates in its relative simplicity and ease of use, which is enabled by an ecosystem of open source tools such as phpMyAdmin.
+In the medium range, MySQL can be scaled by deploying it on more powerful hardware, such as a multi-processor server with gigabytes of memory.
+
+There are however limits to how far performance can scale on a single server ('scaling up'), so on larger scales, multi-server MySQL ('scaling out') deployments are required to provide improved performance and reliability. A typical high-end configuration can include a powerful master database which handles data write operations and is replicated to multiple slaves that handle all read operations. The master server synchronizes continually with its slaves so in the event of failure a slave can be promoted to become the new master, minimizing downtime. Further improvements in performance can be achieved by caching the results from database queries in memory using memcached, or breaking down a database into smaller chunks called shards which can be spread across a number of distributed server clusters.
+
+===Cloud deployment===
+
+MySQL can also be run on cloud computing platforms such as Amazon EC2. Listed below are some common deployment models for MySQL on the cloud:
+* Virtual Machine Image - cloud users can upload a machine image of their own with MySQL installed, or use a ready-made machine image with an optimized installation of MySQL on it, such as the one provided by Amazon EC2.
+* MySQL as a Service - some cloud platforms offer MySQL "as a service". In this configuration, application owners do not have to install and maintain the MySQL database on their own. Instead, the database service provider takes responsibility for installing and maintaining the database, and application owners pay according to their usage. Notable cloud-based MySQL services are the Amazon Relational Database Service; the Xeround Cloud Database, which runs on EC2; Rackspace; HP Converged Cloud; Heroku and Jelastic.
+* Managed MySQL cloud hosting - the database is not offered as a service, but the cloud provider hosts the database and manages it on the application owner's behalf. As of 2011, of the major cloud providers, only Terremark and Rackspace offer managed hosting for MySQL databases.
+
+==Community==
+The MySQL server software itself and the client libraries use dual-licensing distribution. They are offered under GPL version 2, beginning from 28 June 2000 (which in 2009 has been extended with a FLOSS License Exception) or to use a proprietary license. In 2013, the Linux man pages for MySQL switched to a proprietary license temporarily due to a build system bug.  The original GPL license has since been restored.
+
+Support can be obtained from the official manual. Free support additionally is available in different IRC channels and forums. Oracle offers paid support via its MySQL Enterprise products. They differ in the scope of services and in price. Additionally, a number of third party organisations exist to provide support and services, including SkySQL Ab and Percona.
+
+MySQL has received positive reviews, and reviewers noticed it "performs extremely well in the average case." and that the "developer interfaces are there, and the documentation (not to mention feedback in the real world via Web sites and the like) is very, very good". It has also been tested to be a "fast, stable and true multi-user, multi-threaded sql database server".
+
+===Related projects===
+* Drizzle – a fork targeted at the web-infrastructure and cloud computing markets. The developers of the product describe it as a "smaller, slimmer and (hopefully) faster version of MySQL". As a result, many common MySQL features will be stripped out, including stored procedures, query cache, prepared statements, views, and triggers. This is a partial rewrite of the server that does not maintain compatibility with MySQL.
+* MariaDB – a community-developed fork of the MySQL database source code, the impetus being the community maintenance of its free status under GPL as opposed to any uncertainty of MySQL license status under its current ownership by Oracle. The intent also being to maintain high fidelity with MySQL, ensuring a "drop-in" replacement capability with library binary equivalency and exact matching with MySQL APIs and commands. It includes the XtraDB storage engine as a replacement for InnoDB.
+* Percona Server – a fork that includes the XtraDB storage engine. It is an enhanced version of MySQL that is fully compatible, and deviates as little as possible from it, while still providing beneficial new features, better performance, and improved instrumentation for analysis of performance and usage.
+* OurDelta – No longer maintained. It was a fork compiled with various patches, including patches from MariaDB, Percona, and Google, and a storage engine called OQGRAPH.
+
+==History==
+MySQL was created by a Swedish company, MySQL AB, founded by David Axmark, Allan Larsson and Michael "Monty" Widenius. The first version of MySQL appeared on 23 May 1995. It was initially created for personal usage from mSQL based on the low-level language ISAM, which the creators considered too slow and inflexible. They created a new SQL interface, while keeping the same API as mSQL.
+
+===Legal and acquisition impacts===
+On 15 June 2001, NuSphere sued MySQL AB, TcX DataKonsult AB and its original authors Michael ("Monty") Widenius and David Axmark in U.S District Court in Boston for "breach of contract, tortious interference with third party contracts and relationships and unfair competition".
+
+In 2002, MySQL AB sued Progress NuSphere for copyright and trademark infringement in United States district court. NuSphere had allegedly violated MySQL's copyright by linking MySQL's GPL'ed code with NuSphere Gemini table without being in compliance with the license. After a preliminary hearing before Judge Patti Saris on 27 February 2002, the parties entered settlement talks and eventually settled. After the hearing, FSF commented that "Judge Saris made clear that she sees the GNU GPL to be an enforceable and binding license."
+
+In October 2005, Oracle Corporation acquired Innobase OY, the Finnish company that developed the third-party InnoDB storage engine that allows MySQL to provide such functionality as transactions and foreign keys. After the acquisition, an Oracle press release mentioned that the contracts that make the company's software available to MySQL AB would be due for renewal (and presumably renegotiation) some time in 2006. During the MySQL Users Conference in April 2006, MySQL issued a press release that confirmed that MySQL and Innobase OY agreed to a "multi-year" extension of their licensing agreement.
+
+In February 2006, Oracle Corporation acquired Sleepycat Software, makers of the Berkeley DB, a database engine providing the basis for another MySQL storage engine. This had little effect, as Berkeley DB was not widely used, and was dropped (due to lack of use) in MySQL 5.1.12, a pre-GA release of MySQL 5.1 released in October 2006.
+
+In January 2008, Sun Microsystems bought MySQL for $1 billion.
+
+In April 2009, Oracle Corporation entered into an agreement to purchase Sun Microsystems, then owners of MySQL copyright and trademark. Sun's board of directors unanimously approved the deal, it was also approved by Sun's shareholders, and by the U.S. government on 20 August 2009. On 14 December 2009, Oracle pledged to continue to enhance MySQL as it had done for the previous four years.
+
+A movement against Oracle's acquisition of MySQL, to "Save MySQL" from Oracle was started by one of the MySQL founders, Monty Widenius. The petition of 50,000+ developers and users called upon the European Commission to block approval of the acquisition. At the same time, several Free Software opinion leaders (including Eben Moglen, Pamela Jones of Groklaw, Jan Wildeboer and Carlo Piana, who also acted as co-counsel in the merger regulation procedure) advocated for the unconditional approval of the merger. As part of the negotiations with the European Commission, Oracle committed that MySQL server will continue until at least 2015 to use the dual-licensing strategy long used by MySQL AB, with commercial and GPL versions available. The antitrust of the EU had been "pressuring it to divest MySQL as a condition for approval of the merger". But, as revealed by Wikileaks, the US Department of Justice and Antitrust, at the request of Oracle, pressured the EU to unconditionally approve the merger. The European Commission eventually unconditionally approved Oracle's acquisition of MySQL on 21 January 2010.
+
+In January 2009, prior to Oracle's acquisition of MySQL, Monty Widenius started a GPL-only fork, MariaDB. MariaDB is based on the same code base as MySQL server 5.1 and strives to maintain compatibility with Oracle-provided versions.
+
+In August 2012, TechCrunch's Alex Williams reported that Oracle was holding back MySQL Server test cases, a move that he concluded indicated that Oracle is attempting to kill the product.  Percona also reported that Oracle is no longer synchronizing their changes with the public source repositories. Widenius called this a breach of the agreement that Oracle entered into with the EU as a condition of their acquisition of Sun.
+
+Since the final quarter of 2012, several Linux distributions and some important users (like Wikipedia and Google) started to replace MySQL with MariaDB.
+
+===Milestones===
+Notable milestones in MySQL development include:
+
+* Original development of MySQL by Michael Widenius and David Axmark beginning in 1994
+* First internal release on 23 May 1995
+* Version 3.19: End of 1996, from www.tcx.se
+* Version 3.20: January 1997
+* Windows version was released on 8 January 1998 for Windows 95 and NT
+* Version 3.21: production release 1998, from www.mysql.com
+* Version 3.22: alpha, beta from 1998
+* Version 3.23: beta from June 2000, production release 22 January 2001
+* Version 4.0: beta from August 2002, production release March 2003 (unions)
+* Version 4.01: beta from August 2003, Jyoti adopts MySQL for database tracking
+* Version 4.1: beta from June 2004, production release October 2004 (R-trees and B-trees, subqueries, prepared statements)
+* Version 5.0: beta from March 2005, production release October 2005 (cursors, stored procedures, triggers, views, XA transactions)
+
+:The developer of the Federated Storage Engine states that "The Federated Storage Engine is a proof-of-concept storage engine", but the main distributions of MySQL version 5.0 included it and turned it on by default. Documentation of some of the short-comings appears in "MySQL Federated Tables: The Missing Manual".
+* Sun Microsystems acquired MySQL AB in 2008.
+* Version 5.1: production release 27 November 2008 (event scheduler, partitioning, plugin API, row-based replication, server log tables)
+
+:Version 5.1 contained 20 known crashing and wrong result bugs in addition to the 35 present in version 5.0 (almost all fixed as of release 5.1.51).
+:MySQL 5.1 and 6.0 showed poor performance when used for data warehousing — partly due to its inability to utilize multiple CPU cores for processing a single query.
+* Oracle acquired Sun Microsystems on 27 January 2010.
+*MySQL Server 5.5 is currently generally available (). Enhancements and features include:
+** The default storage engine is InnoDB, which supports transactions and referential integrity constraints.
+** Improved InnoDB I/O subsystem
+** Improved SMP support
+** Semisynchronous replication.
+** SIGNAL and RESIGNAL statement in compliance with the SQL standard.
+** Support for supplementary Unicode character sets utf16, utf32, and utf8mb4.
+** New options for user-defined partitioning.
+
+MySQL Server 6.0.11-alpha was announced on 22 May 2009 as the last release of the 6.0 line. Future MySQL Server development uses a New Release Model. Features developed for 6.0 are being incorporated into future releases.
+
+MySQL 5.6, a development milestone release, was announced at the MySQL users conference 2011. New features include performance improvements to the query optimizer, higher transactional throughput in InnoDB, new NoSQL-style memcached APIs, improvements to partitioning for querying and managing very large tables, improvements to replication and better performance monitoring by expanding the data available through the PERFORMANCE_SCHEMA. In July further previews with a BINLOG API, group commit, and InnoDB full text searching were released.
+
+===Versions===
+
+Define $now = 01/07/2013
+Define $begindate = 01/01/1999
+Define $width = 700
+Define $warning = 380 # $width - 120
+Define $height = 750
+ImageSize  = width:$width height:$height
+PlotArea   = left:40 right:10 bottom:100 top:20
+DateFormat = dd/mm/yyyy
+Period     = from:$begindate till:$now
+TimeAxis   = orientation:ver
+Alignbars  = early
+Legend = orientation:vertical position:bottom columns:1
+
+##################################################
+# Color definitions #
+##################################################
+Colors =
+ id:col5.1 value:rgb(0.4,0.6,1) Legend:Active_Development
+ id:col5.0 value:rgb(1,0.6,0.4) Legend:NO_Active_Development
+ id:col2.0-l1 value:black
+ id:col2.0-l2 value:gray(0.98)
+ id:colbg value:gray(0.98)
+ id:colgrmaj value:gray(0.5)
+ id:colgrmin value:gray(0.8)
+ id:lighttext value:rgb(0.5,0.5,0.5)
+
+ScaleMajor = gridcolor:colgrmaj unit:year increment:1 start:$begindate
+ScaleMinor = gridcolor:colgrmin unit:month increment:3 start:$begindate
+BackgroundColors = canvas:colbg
+
+PlotData=
+ ##################################################
+ # 3.23 filled bar #
+ ##################################################
+ bar:3.23 width:40 from:05/07/1999 till:11/09/2003 color:col5.0 mark:(line,col5.0)
+
+##################################################
+ # 3.23 line for all other versions #
+ ##################################################
+ bar:3.23 mark:(line,col2.0-l2)
+ at: 08/07/1999 shift:(0,-15) # 3.23.1
+ at: 09/08/1999 shift:(0,-15) # 3.23.2
+ at: 13/09/1999 shift:(0,-15) # 3.23.3
+ at: 28/09/1999 shift:(0,-15) # 3.23.4
+ at: 20/10/1999 shift:(0,-15) # 3.23.5
+ at: 15/12/1999 shift:(0,-15) # 3.23.6
+ at: 10/12/1999 shift:(0,-15) # 3.23.7
+ at: 02/01/2000 shift:(0,-15) # 3.23.8
+ at: 29/01/2000 shift:(0,-15) # 3.23.9
+ at: 30/01/2000 shift:(0,-15) # 3.23.10
+ at: 16/02/2000 shift:(0,-15) # 3.23.11
+ at: 07/03/2000 shift:(0,-15) # 3.23.12
+ at: 14/03/2000 shift:(0,-15) # 3.23.13
+ at: 09/04/2000 shift:(0,-15) # 3.23.14
+ at: 08/05/2000 shift:(0,-15) # 3.23.15
+ at: 16/05/2000 shift:(0,-15) # 3.23.16
+ at: 07/06/2000 shift:(0,-15) # 3.23.16
+ at: 11/06/2000 shift:(0,-15) # 3.23.17
+ at: 11/07/2000 shift:(0,-15) # 3.23.18
+ at: 04/07/2000 shift:(0,-15) # 3.23.21
+ at: 31/07/2000 shift:(0,-15) # 3.23.22
+ at: 01/09/2000 shift:(0,-15) # 3.23.23
+ at: 08/09/2000 shift:(0,-15) # 3.23.24
+ at: 29/09/2000 shift:(0,-15) # 3.23.25
+ at: 18/10/2000 shift:(0,-15) # 3.23.26
+ at: 24/10/2000 shift:(0,-15) # 3.23.27
+ at: 06/12/2000 shift:(0,-15) # 3.23.29
+ at: 04/01/2001 shift:(0,-15) # 3.23.30
+ at: 22/01/2001 shift:(0,-15) # 3.23.32
+ at: 09/02/2001 shift:(0,-15) # 3.23.33
+ at: 10/03/2001 shift:(0,-15) # 3.23.34
+ at: 11/03/2001 shift:(0,-15) # 3.23.34a
+ at: 15/03/2001 shift:(0,-15) # 3.23.35
+ at: 27/03/2001 shift:(0,-15) # 3.23.36
+ at: 17/04/2001 shift:(0,-15) # 3.23.37
+ at: 09/05/2001 shift:(0,-15) # 3.23.38
+ at: 12/06/2001 shift:(0,-15) # 3.23.39
+ at: 18/07/2001 shift:(0,-15) # 3.23.40
+ at: 11/08/2001 shift:(0,-15) # 3.23.41
+ at: 08/09/2001 shift:(0,-15) # 3.23.42
+ at: 04/10/2001 shift:(0,-15) # 3.23.43
+ at: 31/10/2001 shift:(0,-15) # 3.23.44
+ at: 22/11/2001 shift:(0,-15) # 3.23.45
+ at: 29/11/2001 shift:(0,-15) # 3.23.46
+ at: 27/12/2001 shift:(0,-15) # 3.23.47
+ at: 14/02/2002 shift:(0,-15) # 3.23.49
+ at: 21/04/2002 shift:(0,-15) # 3.23.50
+ at: 31/05/2002 shift:(0,-15) # 3.23.51
+ at: 14/08/2002 shift:(0,-15) # 3.23.52
+ at: 09/10/2002 shift:(0,-15) # 3.23.53
+ at: 05/12/2002 shift:(0,-15) # 3.23.54
+ at: 23/01/2003 shift:(0,-15) # 3.23.55
+ at: 13/03/2003 shift:(0,-15) # 3.23.56
+ at: 06/06/2003 shift:(0,-15) # 3.23.57
+
+##################################################
+ # 3.23 line & text for first version every year #
+ ##################################################
+ bar:3.23 mark:(line,col2.0-l1) align:center fontsize:S textcolor:red
+ at: 05/07/1999 text:"3.23.0 Alfa" shift:(50,-3)
+ at: 28/06/2000 shift:(54,-3) text:"3.23.20 Beta"
+ at: 22/11/2000 shift:(51,-8) text:"3.23.28 RC"
+ at: 17/01/2001 shift:(54,1) text:"3.23.31 FCS"
+ at: 07/02/2002 shift:(42,-3) text:"3.23.48"
+ at: 11/09/2003 text:"3.23.58" shift:(0,5)
+
+##################################################
+ # 4.0 filled bar #
+ ##################################################
+ bar:4.0 width:40 from:01/10/2001 till:12/02/2007 color:col5.0 mark:(line,col5.0)
+
+##################################################
+ # 4.0 line for all other versions #
+ ##################################################
+ bar:4.0 mark:(line,col2.0-l2)
+ at: 23/12/2001 shift:(0,-15) # 4.0.1
+ at: 01/07/2002 shift:(0,-15) # 4.0.2
+ at: 29/09/2002 shift:(0,-15) # 4.0.4
+ at: 13/11/2002 shift:(0,-15) # 4.0.5
+ at: 20/12/2002 shift:(0,-15) # 4.0.7
+ at: 07/01/2003 shift:(0,-15) # 4.0.8
+ at: 09/01/2003 shift:(0,-15) # 4.0.9
+ at: 29/01/2003 shift:(0,-15) # 4.0.10
+ at: 20/02/2003 shift:(0,-15) # 4.0.11
+ at: 16/05/2003 shift:(0,-15) # 4.0.13
+ at: 18/07/2003 shift:(0,-15) # 4.0.14
+ at: 03/09/2003 shift:(0,-15) # 4.0.15
+ at: 17/10/2003 shift:(0,-15) # 4.0.16
+ at: 14/12/2003 shift:(0,-15) # 4.0.18
+ at: 04/05/2004 shift:(0,-15) # 4.0.19
+ at: 17/05/2004 shift:(0,-15) # 4.0.20
+ at: 06/09/2004 shift:(0,-15) # 4.0.21
+ at: 27/10/2004 shift:(0,-15) # 4.0.22
+ at: 18/12/2004 shift:(0,-15) # 4.0.23
+ at: 05/07/2005 shift:(0,-15) # 4.0.25
+ at: 08/09/2005 shift:(0,-15) # 4.0.26
+ at: 06/05/2006 shift:(0,-15) # 4.0.27
+
+##################################################
+ # 4.0 line & text for first version every year #
+ ##################################################
+ bar:4.0 mark:(line,col2.0-l1) align:center fontsize:S textcolor:red
+ at: 01/10/2001 text:"4.0.0 Alfa" shift:(46,-3)
+ at: 26/08/2002 shift:(48,-3) text:"4.0.3 Beta"
+ at: 14/12/2002 shift:(45,-3) text:"4.0.6 RC"
+ at: 15/03/2003 shift:(51,-2) text:"4.0.12 FCS"
+ at: 12/02/2004 shift:(40,-3) text:"4.0.18"
+ at: 04/03/2005 shift:(40,-3) text:"4.0.24"
+ at: 12/02/2007 text:"4.0.30" shift:(0,5)
+
+##################################################
+ # 4.1 filled bar #
+ ##################################################
+ bar:4.1 width:40 from:03/04/2003 till:01/12/2008 color:col5.0 mark:(line,col5.0)
+
+##################################################
+ # 4.1 line for all other versions #
+ ##################################################
+ bar:4.1 mark:(line,col2.0-l2)
+ at: 01/12/2003 shift:(0,-15) # 4.1.1
+ at: 28/05/2004 shift:(0,-15) # 4.1.2
+ at: 16/09/2004 shift:(0,-15) # 4.1.5
+ at: 10/10/2004 shift:(0,-15) # 4.1.6
+ at: 14/12/2004 shift:(0,-15) # 4.1.8
+ at: 12/02/2005 shift:(0,-15) # 4.1.10
+ at: 01/04/2005 shift:(0,-15) # 4.1.11
+ at: 13/05/2005 shift:(0,-15) # 4.1.12
+ at: 15/07/2005 shift:(0,-15) # 4.1.13
+ at: 17/08/2005 shift:(0,-15) # 4.1.14
+ at: 13/10/2005 shift:(0,-15) # 4.1.15
+ at: 29/11/2005 shift:(0,-15) # 4.1.16
+ at: 29/04/2006 shift:(0,-15) # 4.1.19
+ at: 24/05/2006 shift:(0,-15) # 4.1.20
+ at: 19/07/2006 shift:(0,-15) # 4.1.21
+ at: 02/11/2006 shift:(0,-15) # 4.1.22
+
+##################################################
+ # 4.1 line & text for first version every year #
+ ##################################################
+ bar:4.1 mark:(line,col2.0-l1) align:center fontsize:S textcolor:red
+ at: 03/04/2003 text:"4.1.0 Alfa" shift:(46,-3)
+ at: 28/06/2004 shift:(48,-8) text:"4.1.3 Beta"
+ at: 26/08/2004 shift:(45,-4) text:"4.1.4 RC"
+ at: 23/10/2004 shift:(48,-2) text:"4.1.7 FCS"
+ at: 11/01/2005 shift:(37,1) text:"4.1.9"
+ at: 27/01/2006 shift:(40,-3) text:"4.1.18"
+ at: 12/06/2007 shift:(40,-3) text:"4.1.23"
+ at: 01/03/2008 shift:(40,-3) text:"4.1.24"
+ at: 01/12/2008 text:"4.1.25" shift:(0,5)
+
+##################################################
+ # 5.0 filled bar #
+ ##################################################
+ bar:5.0 width:40 from:22/12/2003 till:21/03/2012 color:col5.0 mark:(line,col5.0)
+
+##################################################
+ # 5.0 line for all other versions #
+ ##################################################
+ bar:5.0 mark:(line,col2.0-l2)
+ at: 01/12/2004 shift:(0,-15) # 5.0.2
+ at: 16/04/2005 shift:(0,-15) # 5.0.4
+ at: 26/05/2005 shift:(0,-15) # 5.0.6
+ at: 10/06/2005 shift:(0,-15) # 5.0.7
+ at: 05/07/2005 shift:(0,-15) # 5.0.9
+ at: 27/07/2005 shift:(0,-15) # 5.0.10
+ at: 06/08/2005 shift:(0,-15) # 5.0.11
+ at: 02/09/2005 shift:(0,-15) # 5.0.12
+ at: 10/11/2005 shift:(0,-15) # 5.0.16
+ at: 14/12/2005 shift:(0,-15) # 5.0.17
+ at: 21/12/2005 shift:(0,-15) # 5.0.18
+ at: 31/03/2006 shift:(0,-15) # 5.0.20
+ at: 18/04/2006 shift:(0,-15) # 5.0.20a
+ at: 02/05/2006 shift:(0,-15) # 5.0.21
+ at: 24/05/2006 shift:(0,-15) # 5.0.22
+ at: 27/07/2006 shift:(0,-15) # 5.0.24
+ at: 25/08/2006 shift:(0,-15) # 5.0.24a
+ at: 12/09/2006 shift:(0,-15) # 5.0.25
+ at: 03/10/2006 shift:(0,-15) # 5.0.26
+ at: 21/10/2006 shift:(0,-15) # 5.0.27
+ at: 24/10/2006 shift:(0,-15) # 5.0.28
+ at: 14/11/2006 shift:(0,-15) # 5.0.30
+ at: 20/12/2006 shift:(0,-15) # 5.0.32
+ at: 09/01/2007 shift:(0,-15) # 5.0.33
+ at: 17/01/2007 shift:(0,-15) # 5.0.34
+ at: 20/02/2007 shift:(0,-15) # 5.0.36
+ at: 12/04/2007 shift:(0,-15) # 5.0.36sp1
+ at: 27/02/2007 shift:(0,-15) # 5.0.37
+ at: 20/03/2007 shift:(0,-15) # 5.0.38
+ at: 17/04/2007 shift:(0,-15) # 5.0.40
+ at: 01/05/2007 shift:(0,-15) # 5.0.41
+ at: 23/05/2007 shift:(0,-15) # 5.0.42
+ at: 21/06/2007 shift:(0,-15) # 5.0.44
+ at: 01/08/2007 shift:(0,-15) # 5.0.44a
+ at: 04/07/2007 shift:(0,-15) # 5.0.45
+ at: 13/07/2007 shift:(0,-15) # 5.0.46
+ at: 27/08/2007 shift:(0,-15) # 5.0.48
+ at: 19/10/2007 shift:(0,-15) # 5.0.50
+ at: 12/12/2007 shift:(0,-15) # 5.0.50sp1
+ at: 15/11/2007 shift:(0,-15) # 5.0.51
+ at: 11/01/2008 shift:(0,-15) # 5.0.51a
+ at: 24/04/2008 shift:(0,-15) # 5.0.51b
+ at: 30/11/2007 shift:(0,-15) # 5.0.52
+ at: 14/12/2007 shift:(0,-15) # 5.0.54
+ at: 11/01/2008 shift:(0,-15) # 5.0.54a
+ at: 06/02/2008 shift:(0,-15) # 5.0.56
+ at: 30/03/2008 shift:(0,-15) # 5.0.56sp1
+ at: 28/04/2008 shift:(0,-15) # 5.0.60
+ at: 27/06/2008 shift:(0,-15) # 5.0.60sp1
+ at: 12/05/2008 shift:(0,-15) # 5.0.62
+ at: 10/06/2008 shift:(0,-15) # 5.0.64
+ at: 09/07/2008 shift:(0,-15) # 5.0.66
+ at: 16/07/2008 shift:(0,-15) # 5.0.66a
+ at: 23/10/2008 shift:(0,-15) # 5.0.66sp1
+ at: 04/08/2008 shift:(0,-15) # 5.0.67
+ at: 13/08/2008 shift:(0,-15) # 5.0.68
+ at: 27/09/2008 shift:(0,-15) # 5.0.70
+ at: 24/10/2008 shift:(0,-15) # 5.0.72
+ at: 13/01/2009 shift:(0,-15) # 5.0.72sp1
+ at: 03/12/2008 shift:(0,-15) # 5.0.74
+ at: 30/04/2009 shift:(0,-15) # 5.0.74sp1
+ at: 17/12/2008 shift:(0,-15) # 5.0.75
+ at: 28/01/2009 shift:(0,-15) # 5.0.77
+ at: 06/02/2009 shift:(0,-15) # 5.0.78
+ at: 09/03/2009 shift:(0,-15) # 5.0.79
+ at: 01/05/2009 shift:(0,-15) # 5.0.80
+ at: 01/05/2009 shift:(0,-15) # 5.0.81
+ at: 20/05/2009 shift:(0,-15) # 5.0.82
+ at: 21/07/2009 shift:(0,-15) # 5.0.82sp1
+ at: 29/05/2009 shift:(0,-15) # 5.0.83
+ at: 07/07/2009 shift:(0,-15) # 5.0.84
+ at: 30/09/2009 shift:(0,-15) # 5.0.84sp1
+ at: 11/08/2009 shift:(0,-15) # 5.0.85
+ at: 09/09/2009 shift:(0,-15) # 5.0.86
+ at: 15/10/2009 shift:(0,-15) # 5.0.87
+ at: 03/02/2010 shift:(0,-15) # 5.0.87sp1
+ at: 04/11/2009 shift:(0,-15) # 5.0.88
+ at: 02/12/2009 shift:(0,-15) # 5.0.89
+ at: 05/05/2010 shift:(0,-15) # 5.0.91
+ at: 05/05/2011 shift:(0,-15) # 5.0.93
+ at: 05/07/2011 shift:(0,-15) # 5.0.94
+
+##################################################
+ # 5.0 line & text for first version every year #
+ ##################################################
+ bar:5.0 mark:(line,col2.0-l1) align:center fontsize:S textcolor:red
+ at: 22/12/2003 text:"5.0.0 Alfa" shift:(46,-3)
+ at: 27/07/2004 shift:(36,-3) text:"5.0.1"
+ at: 23/03/2005 shift:(48,-3) text:"5.0.3 Beta"
+ at: 22/09/2005 shift:(48,-8) text:"5.0.13 RC"
+ at: 19/10/2005 shift:(51,1) text:"5.0.15 FCS"
+ at: 04/03/2006 shift:(40,-3) text:"5.0.19"
+ at: 19/01/2007 shift:(50,-3) text:"5.0.30sp1"
+ at: 11/01/2008 shift:(52,-3) text:"5.0.50sp1a"
+ at: 05/01/2009 shift:(40,-3) text:"5.0.76"
+ at: 15/01/2010 shift:(40,-3) text:"5.0.90"
+ at: 07/02/2011 shift:(40,-3) text:"5.0.92"
+ at: 10/01/2012 shift:(40,-3) text:"5.0.95"
+ at: 21/03/2012 shift:(0,5) text:"5.0.96"
+
+##################################################
+ # 5.1 filled bar #
+ ##################################################
+ bar:5.1 width:40 from:25/11/2005 till:$now color:col5.1 mark:(line,col5.1)
+
+##################################################
+ # 5.1 line for all other versions #
+ ##################################################
+ bar:5.1 mark:(line,col2.0-l2)
+ at: 29/11/2005 shift:(0,-15) # 5.1.3
+ at: 21/12/2005 shift:(0,-15) # 5.1.4
+ at: 10/01/2006 shift:(0,-15) # 5.1.5
+ at: 01/02/2006 shift:(0,-15) # 5.1.6
+ at: 27/02/2006 shift:(0,-15) # 5.1.7
+ at: 12/04/2006 shift:(0,-15) # 5.1.9
+ at: 25/05/2006 shift:(0,-15) # 5.1.11
+ at: 24/10/2006 shift:(0,-15) # 5.1.12
+ at: 05/12/2006 shift:(0,-15) # 5.1.14
+ at: 25/01/2007 shift:(0,-15) # 5.1.15
+ at: 26/02/2007 shift:(0,-15) # 5.1.16
+ at: 04/04/2007 shift:(0,-15) # 5.1.17
+ at: 08/05/2007 shift:(0,-15) # 5.1.18
+ at: 25/05/2007 shift:(0,-15) # 5.1.19
+ at: 25/06/2007 shift:(0,-15) # 5.1.20
+ at: 16/08/2007 shift:(0,-15) # 5.1.21
+ at: 29/01/2008 shift:(0,-15) # 5.1.23
+ at: 08/04/2008 shift:(0,-15) # 5.1.24
+ at: 28/05/2008 shift:(0,-15) # 5.1.25
+ at: 30/06/2008 shift:(0,-15) # 5.1.26
+ at: 28/08/2008 shift:(0,-15) # 5.1.28
+ at: 11/10/2008 shift:(0,-15) # 5.1.29
+ at: 19/03/2009 shift:(0,-15) # 5.1.31sp1
+ at: 12/02/2009 shift:(0,-15) # 5.1.32
+ at: 13/03/2009 shift:(0,-15) # 5.1.33
+ at: 02/04/2009 shift:(0,-15) # 5.1.34
+ at: 25/06/2009 shift:(0,-15) # 5.1.34sp1
+ at: 13/05/2009 shift:(0,-15) # 5.1.35
+ at: 16/06/2009 shift:(0,-15) # 5.1.36
+ at: 13/07/2009 shift:(0,-15) # 5.1.37
+ at: 10/10/2009 shift:(0,-15) # 5.1.37sp1
+ at: 01/09/2009 shift:(0,-15) # 5.1.38
+ at: 04/09/2009 shift:(0,-15) # 5.1.39
+ at: 06/10/2009 shift:(0,-15) # 5.1.40
+ at: 25/11/2009 shift:(0,-15) # 5.1.40sp1
+ at: 05/11/2009 shift:(0,-15) # 5.1.41
+ at: 15/12/2009 shift:(0,-15) # 5.1.42
+ at: 15/01/2010 shift:(0,-15) # 5.1.43
+ at: 25/03/2010 shift:(0,-15) # 5.1.43sp1
+ at: 04/02/2010 shift:(0,-15) # 5.1.44
+ at: 01/03/2010 shift:(0,-15) # 5.1.45
+ at: 06/04/2010 shift:(0,-15) # 5.1.46
+ at: 23/06/2010 shift:(0,-15) # 5.1.46sp1
+ at: 06/05/2010 shift:(0,-15) # 5.1.47
+ at: 02/06/2010 shift:(0,-15) # 5.1.48
+ at: 09/07/2010 shift:(0,-15) # 5.1.49
+ at: 28/09/2010 shift:(0,-15) # 5.1.49sp1
+ at: 03/08/2010 shift:(0,-15) # 5.1.50
+ at: 10/09/2010 shift:(0,-15) # 5.1.51
+ at: 11/10/2010 shift:(0,-15) # 5.1.52
+ at: 21/02/2011 shift:(0,-15) # 5.1.52sp1
+ at: 03/11/2010 shift:(0,-15) # 5.1.53
+ at: 26/11/2010 shift:(0,-15) # 5.1.54
+ at: 01/03/2011 shift:(0,-15) # 5.1.56
+ at: 05/05/2011 shift:(0,-15) # 5.1.57
+ at: 05/07/2011 shift:(0,-15) # 5.1.58
+ at: 15/09/2011 shift:(0,-15) # 5.1.59
+ at: 16/11/2011 shift:(0,-15) # 5.1.60
+ at: 10/01/2012 shift:(0,-15) # 5.1.61
+ at: 21/03/2012 shift:(0,-15) # 5.1.62
+ at: 07/05/2012 shift:(0,-15) # 5.1.63
+ at: 09/08/2012 shift:(0,-15) # 5.1.65
+ at: 28/09/2012 shift:(0,-15) # 5.1.66
+ at: 03/06/2013 shift:(0,-15) # 5.1.70
+
+##################################################
+ # 5.1 line & text for first version every year #
+ ##################################################
+ bar:5.1 mark:(line,col2.0-l1) align:center fontsize:S textcolor:blue
+ at: 25/11/2005 text:"5.1.3" shift:(36,-8)
+ at: 10/01/2006 text:"5.1.5" shift:(36,1)
+ at: 25/01/2007 text:"5.1.15" shift:(40,-3)
+ at: 24/09/2007 text:"5.1.22 RC" shift:(49,-3)
+ at: 29/01/2008 text:"5.1.23" shift:(40,-3)
+ at: 14/11/2008 text:"5.1.30 GA" shift:(49,-5)
+ at: 19/01/2009 text:"5.1.31" shift:(40,0)
+ at: 15/01/2010 text:"5.1.43" shift:(40,-3)
+ at: 07/02/2011 text:"5.1.55" shift:(40,-3)
+ at: 10/01/2012 text:"5.1.61" shift:(40,-3)
+ at: 05/02/2013 text:"5.1.68" shift:(40,-3)
+
+##################################################
+ # 5.5 filled bar #
+ ##################################################
+ bar:5.5 width:40 from:07/12/2009 till:$now color:col5.1 mark:(line,col5.1)
+
+##################################################
+ # 5.5 line for all other versions #
+ ##################################################
+ bar:5.5 mark:(line,col2.0-l2)
+ at: 04/01/2010 shift:(0,-15) # 5.5.1
+ at: 12/02/2010 shift:(0,-15) # 5.5.2
+ at: 24/03/2010 shift:(0,-15) # 5.5.3
+ at: 09/04/2010 shift:(0,-15) # 5.5.4
+ at: 06/07/2010 shift:(0,-15) # 5.5.5
+ at: 13/09/2010 shift:(0,-15) # 5.5.6
+ at: 14/10/2010 shift:(0,-15) # 5.5.7
+ at: 12/03/2010 shift:(0,-15) # 5.5.8
+ at: 07/02/2011 shift:(0,-15) # 5.5.9
+ at: 15/03/2011 shift:(0,-15) # 5.5.10
+ at: 07/04/2011 shift:(0,-15) # 5.5.11
+ at: 05/05/2011 shift:(0,-15) # 5.5.12
+ at: 31/05/2011 shift:(0,-15) # 5.5.13
+ at: 05/07/2011 shift:(0,-15) # 5.5.14
+ at: 28/07/2011 shift:(0,-15) # 5.5.15
+ at: 15/09/2011 shift:(0,-15) # 5.5.16
+ at: 19/10/2011 shift:(0,-15) # 5.5.17
+ at: 16/11/2011 shift:(0,-15) # 5.5.18
+ at: 08/12/2011 shift:(0,-15) # 5.5.19
+ at: 10/01/2012 shift:(0,-15) # 5.5.20
+ at: 17/02/2012 shift:(0,-15) # 5.5.21
+ at: 21/03/2012 shift:(0,-15) # 5.5.22
+ at: 12/04/2012 shift:(0,-15) # 5.5.23
+ at: 07/05/2012 shift:(0,-15) # 5.5.24
+ at: 30/05/2012 shift:(0,-15) # 5.5.25
+ at: 05/07/2012 shift:(0,-15) # 5.5.25a
+ at: 02/08/2012 shift:(0,-15) # 5.5.27
+ at: 28/09/2012 shift:(0,-15) # 5.5.28
+ at: 03/06/2013 shift:(0,-15) # 5.5.32
+
+##################################################
+ # 5.5 line & text for first version every year #
+ ##################################################
+ bar:5.5 mark:(line,col2.0-l1) align:center fontsize:S textcolor:blue
+ at: 07/12/2009 text:"5.5.0 M2" shift:(45,-3)
+ at: 24/03/2010 text:"5.5.3 M3" shift:(45,-3)
+ at: 13/09/2010 text:"5.5.6 RC" shift:(45,-3)
+ at: 03/12/2010 text:"5.5.8 GA" shift:(45,-3)
+ at: 07/02/2011 text:"5.5.9" shift:(36,0)
+ at: 10/01/2012 text:"5.5.20" shift:(40,-3)
+ at: 05/02/2013 text:"5.5.30" shift:(40,-3)
+
+##################################################
+ # 5.6 filled bar #
+ ##################################################
+ bar:5.6 width:40 from:11/04/2011 till:$now color:col5.1 mark:(line,col5.1)
+
+##################################################
+ # 5.6 line for all other versions #
+ ##################################################
+ bar:5.6 mark:(line,col2.0-l2)
+ at: 11/04/2011 shift:(0,-15) # 5.6.2
+ at: 03/10/2011 shift:(0,-15) # 5.6.3
+ at: 20/12/2011 shift:(0,-15) # 5.6.4
+ at: 10/04/2012 shift:(0,-15) # 5.6.5
+ at: 07/08/2012 shift:(0,-15) # 5.6.6
+ at: 29/09/2012 shift:(0,-15) # 5.6.7
+ at: 07/11/2012 shift:(0,-15) # 5.6.8
+ at: 11/12/2012 shift:(0,-15) # 5.6.9
+ at: 05/04/2013 shift:(0,-15) # 5.6.11
+ at: 03/06/2013 shift:(0,-15) # 5.6.12
+
+##################################################
+ # 5.6 line & text for first version every year #
+ ##################################################
+ bar:5.6 mark:(line,col2.0-l1) align:center fontsize:S textcolor:blue
+ at: 11/04/2011 text:"5.6.2 M5" shift:(45,-3)
+ at: 04/10/2012 text:"5.6.5 M8" shift:(45,-3)
+ at: 05/02/2013 text:"5.6.10 GA" shift:(48,-3)
+
+==See also==
+
+*Navicat
+*phpMyAdmin
+*Comparison of database tools
+*Comparison of MySQL database engines
+*Comparison of relational database management systems
+*Firebird (database server)
+*HSQLDB (used by LibreOffice and OpenOffice)
+*Ingres (database)
+*Oracle RDBMS
+
+==Notes==
+
+==References==
+
+==External links==
+
+* 
+* MySQL site at Oracle.com
+* Interview with David Axmark, MySQL co-founder Video
+*

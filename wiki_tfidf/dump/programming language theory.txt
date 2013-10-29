@@ -1,0 +1,112 @@
+Programming language theory (PLT) is a branch of computer science that deals with the design, implementation, analysis, characterization, and classification of programming languages and their individual features.  It falls within the discipline of computer science, both depending on and affecting mathematics, software engineering and linguistics.  It is a well-recognized branch of computer science, and an active research area, with results published in numerous journals dedicated to PLT, as well as in general computer science and engineering publications.
+
+== History ==
+
+In some ways, the history of programming language theory predates even the development of programming languages themselves.  The lambda calculus, developed by Alonzo Church and Stephen Cole Kleene in the 1930s, is considered by some to be the world's first programming language, even though it was intended to model computation rather than being a means for programmers to describe algorithms to a computer system.  Many modern functional programming languages have been described as providing a "thin veneer" over the lambda calculus, and many are easily described in terms of it.
+
+The first programming language to be proposed was Plankalkül, which was designed by Konrad Zuse in the 1940s, but not publicly known until 1972 (and not implemented until 1998).  The first widely known and successful programming language was Fortran, developed from 1954 to 1957 by a team of IBM researchers led by John Backus.  The success of FORTRAN led to the formation of a committee of scientists to develop a "universal" computer language; the result of their effort was ALGOL 58.  Separately, John McCarthy of MIT developed the Lisp programming language (based on the lambda calculus), the first language with origins in academia to be successful.  With the success of these initial efforts, programming languages became an active topic of research in the 1960s and beyond.
+
+Some other key events in the history of programming language theory since then:
+
+=== 1950s ===
+* Noam Chomsky developed the Chomsky hierarchy in the field of linguistics; a discovery which has directly impacted programming language theory and other branches of computer science.
+
+=== 1960s ===
+* The Simula language was developed by Ole-Johan Dahl and Kristen Nygaard; it is widely considered to be the first example of an object-oriented programming language; Simula also introduced the concept of coroutines.
+* In 1964, Peter Landin is the first to realize Church's lambda calculus can be used to model programming languages. He introduces the SECD machine which "interprets" lambda expressions.
+* In 1965, Landin introduces the J operator, essentially a form of continuation.
+* In 1966, Landin introduces ISWIM, an abstract computer programming language in his article The Next 700 Programming Languages. It is influential in the design of languages leading to the Haskell programming language.
+* In 1966, Corrado Böhm introduced the programming language CUCH (Curry-Chruch).
+* In 1967, Christopher Strachey publishes his influential set of lecture notes Fundamental Concepts in Programming Languages, introducing the terminology R-values, L-values, parametric polymorphism, and ad hoc polymorphism.
+* In 1969, J. Roger Hindley publishes The Principal Type-Scheme of an Object in Combinatory Logic, later generalized into the Hindley&ndash;Milner type inference algorithm.
+* In 1969, Tony Hoare introduces the Hoare logic, a form of axiomatic semantics.
+* In 1969, William Alvin Howard observed that a "high-level" proof system, referred to as natural deduction, can be directly interpreted in its intuitionistic version as a typed variant of the model of computation known as lambda calculus. This became known as the Curry–Howard correspondence.
+
+=== 1970s ===
+* In 1970, Dana Scott first publishes his work on denotational semantics.
+* In 1972, Logic programming and Prolog were developed thus allowing computer programs to be expressed as mathematical logic.
+* In 1974, John C. Reynolds discovers System F. It had already been discovered in 1971 by the mathematical logician Jean-Yves Girard.
+* From 1975, Sussman and Steele develop the Scheme programming language, a Lisp dialect incorporating lexical scoping, a unified namespace, and elements from the Actor model including first-class continuations.
+* Backus, at the 1977 ACM Turing Award lecture, assailed the current state of industrial languages and proposed a new class of programming languages now known as function-level programming languages.
+* In 1977, Gordon Plotkin introduces Programming Computable Functions, an abstract typed functional language.
+* In 1978, Robin Milner introduces the Hindley–Milner type inference algorithm for the ML programming language. Type theory became applied as a discipline to programming languages, this application has led to tremendous advances in type theory over the years.
+
+=== 1980s ===
+* In 1981, Gordon Plotkin publishes his paper on structured operational semantics.
+* In 1988, Gilles Kahn published his paper on natural semantics.
+* A team of scientists at Xerox PARC led by Alan Kay develop Smalltalk, an object-oriented language widely known for its innovative development environment.
+* There emerged process calculi, such as the Calculus of Communicating Systems of Robin Milner, and the Communicating sequential processes model of C. A. R. Hoare, as well as similar models of concurrency such as the Actor model of Carl Hewitt.
+* In 1985, The release of Miranda sparks an academic interest in lazy-evaluated pure functional programming languages. A committee was formed to define an open standard resulting in the release of the Haskell 1.0 standard in 1990.
+* Bertrand Meyer created the methodology Design by contract and incorporated it into the Eiffel programming language.
+
+=== 1990s ===
+* Gregor Kiczales, Jim Des Rivieres and Daniel G. Bobrow published the book The Art of the Metaobject Protocol.
+* Eugenio Moggi and Philip Wadler introduced the use of monads for structuring programs written in functional programming languages.
+
+== Sub-disciplines and related fields ==
+
+There are several fields of study which either lie within programming language theory, or which have a profound influence on it; many of these have considerable overlap. In addition, PLT makes use of many other branches of mathematics, including computability theory, category theory, and set theory.
+
+=== Formal semantics ===
+
+Formal semantics is the formal specification of the behaviour of computer programs and programming languages. Three common approaches to describe the semantics or "meaning" of a computer program are denotational semantics, operational semantics and axiomatic semantics.
+
+=== Type theory ===
+
+Type theory is the study of type systems; which are "a tractable syntactic method for proving the absence of certain program behaviors by classifying phrases according to the kinds of values they compute". Many programming languages are distinguished by the characteristics of their type systems.
+
+=== Program analysis and transformation ===
+
+Program analysis is the general problem of examining a program and determining key characteristics (such as the absence of classes of program errors). Program transformation is the process of transforming a program in one form (language) to another form.
+
+=== Comparative programming language analysis ===
+Comparative programming language analysis seeks to classify programming languages into different types based on their characteristics; broad categories of programming languages are often known as programming paradigms.
+
+=== Generic and metaprogramming ===
+Metaprogramming is the generation of higher-order programs which, when executed, produce programs (possibly in a different language, or in a subset of the original language) as a result.
+
+=== Domain-specific languages ===
+Domain-specific languages are languages constructed to efficiently solve problems in a particular problem domain.
+
+=== Compiler construction ===
+
+Compiler theory is the theory of writing compilers (or more generally, translators); programs which translate a program written in one language into another form.  The actions of a compiler are traditionally broken up into syntax analysis (scanning and parsing), semantic analysis (determining what a program should do), optimization (improving the performance of a program as indicated by some metric; typically execution speed) and code generation (generation and output of an equivalent program in some target language; often the instruction set of a CPU).
+
+=== Run-time systems ===
+Runtime systems refers to the development of programming language runtime environments and their components, including virtual machines, garbage collection, and foreign function interfaces.
+
+== Journals, publications, and conferences ==
+
+Conferences are the primary venue for presenting research in programming languages. The most well known conferences include the Symposium on Principles of Programming Languages (POPL), Conference on Programming Language Design and Implementation (PLDI), the International Conference on Functional Programming (ICFP), and the International Conference on Object Oriented Programming, Systems, Languages and Applications (OOPSLA).
+
+Notable journals that publish PLT research include the ACM Transactions on Programming Languages and Systems (TOPLAS), Journal of Functional Programming (JFP), Journal of Functional and Logic Programming, and Higher-Order and Symbolic Computation.
+
+== See also ==
+* SIGPLAN
+* Timeline of programming languages
+* Very high-level programming language
+
+== References ==
+
+== Further reading ==
+
+* Abadi, Martín and Cardelli, Luca. A Theory of Objects. Springer-Verlag.
+* Michael J. C. Gordon. Programming Language Theory and Its Implementation. Prentice Hall.
+* Gunter, Carl and Mitchell, John C. (eds.). Theoretical Aspects of Object Oriented Programming Languages: Types, Semantics, and Language Design. MIT Press.
+* Harper, Robert. Practical Foundations for Programming Languages. Draft version.
+* Knuth, Donald E. (2003). Selected Papers on Computer Languages. Stanford, California: Center for the Study of Language and Information.
+* Mitchell, John C.. Foundations for Programming Languages.
+* Mitchell, John C.. Introduction to Programming Language Theory.
+* O'Hearn, Peter. W. and Tennent, Robert. D. (1997). Algol-like Languages. Progress in Theoretical Computer Science. Birkhauser, Boston.
+* Pierce, Benjamin C. (2002). Types and Programming Languages. MIT Press.
+* Pierce, Benjamin C. Advanced Topics in Types and Programming Languages.
+* Pierce, Benjamin C. et al. (2010). Software Foundations.
+
+== External links ==
+*  Lambda the Ultimate, a community weblog for professional discussion and repository of documents on programming language theory.
+* Great Works in Programming Languages. Collected by Benjamin C. Pierce (University of Pennsylvania).
+* Classic Papers in Programming Languages and Logic. Collected by Karl Crary (Carnegie Mellon University).
+* Programming Language Research. Directory by Mark Leone.
+* Programming Language Theory Texts Online. At Utrecht University.
+* λ-Calculus: Then & Now by Dana S. Scott for the ACM Turing Centenary Celebration
+* Grand Challenges in Programming Languages. Panel session at POPL 2009.

@@ -1,0 +1,207 @@
+A compiler is a computer program (or set of programs) that transforms source code written in a programming language (the source language) into another computer language (the target language, often having a binary form known as object code).   The most common reason for wanting to transform source code is to create an executable program.
+
+The name "compiler" is primarily used for programs that translate source code from a high-level programming language to a lower level language (e.g., assembly language or machine code). If the compiled program can run on a computer whose CPU or operating system is different from the one on which the compiler runs, the compiler is known as a cross-compiler. A program that translates from a low level language to a higher level one is a decompiler.  A program that translates between high-level languages is usually called a language translator, source to source translator, or language converter. A language rewriter is usually a program that translates the form of expressions without a change of language.
+
+A compiler is likely to perform many or all of the following operations: lexical analysis, preprocessing, parsing, semantic analysis (Syntax-directed translation), code generation, and code optimization.
+
+Program faults caused by incorrect compiler behavior can be very difficult to track down and work around; therefore, compiler implementors invest significant effort to ensure compiler correctness.
+
+The term compiler-compiler is sometimes used to refer to a parser generator, a tool often used to help create the lexer and parser.
+
+== History ==
+
+Software for early computers was primarily written in assembly language. Higher level programming languages were not invented until the benefits of being able to reuse software on different kinds of CPUs started to become significantly greater than the costs of writing a compiler.  The limited memory capacity of early computers led to substantial technical challenges when the first compilers were being designed.
+
+Towards the end of the 1950s, machine-independent programming languages were first proposed. Subsequently several experimental compilers were developed. The first compiler was written by Grace Hopper, in 1952, for the A-0 programming language. The FORTRAN team led by John Backus at IBM is generally credited as having introduced the first complete compiler in 1957. COBOL was an early language to be compiled on multiple architectures, in 1960.
+
+In many application domains the idea of using a higher level language quickly caught on.  Because of the expanding functionality supported by newer programming languages and the increasing complexity of computer architectures, compilers have become more complex.
+
+Early compilers were written in assembly language. The first self-hosting compiler &mdash; capable of compiling its own source code in a high-level language &mdash; was created in 1962 for Lisp by Tim Hart and Mike Levin at MIT. Since the 1970s it has become common practice to implement a compiler in the language it compiles, although both Pascal and C have been popular choices for implementation language. Building a self-hosting compiler is a bootstrapping problem—the first such compiler for a language must be compiled either by hand or by a compiler written in a different language, or (as in Hart and Levin's Lisp compiler) compiled by running the compiler in an interpreter.
+
+=== Compilers in education ===
+
+Compiler construction and compiler optimization are taught at universities and schools as part of a computer science curriculum. Such courses are usually supplemented with the implementation of a compiler for an educational programming language. A well-documented example is Niklaus Wirth's PL/0 compiler, which Wirth used to teach compiler construction in the 1970s. In spite of its simplicity, the PL/0 compiler introduced several influential concepts to the field:
+
+# Program development by stepwise refinement (also the title of a 1971 paper by Wirth)
+# The use of a recursive descent parser
+# The use of EBNF to specify the syntax of a language
+# A code generator producing portable P-code
+# The use of T-diagrams in the formal description of the bootstrapping problem
+
+== Compilation ==
+
+Compilers enabled the development of programs that are machine-independent. Before the development of FORTRAN (FORmula TRANslator), the first higher-level language, in the 1950s, machine-dependent assembly language was widely used. While assembly language produces more abstraction than machine code on the same architecture, just as with machine code, it has to be modified or rewritten if the program is to be executed on different computer hardware architecture.
+
+With the advent of high-level programming languages that followed FORTRAN, such as COBOL, C, and BASIC, programmers could write machine-independent source programs. A compiler translates the high-level source programs into target programs in machine languages for the specific hardwares. Once the target program is generated, the user can execute the program.
+
+=== Structure of a compiler ===
+
+Compilers bridge source programs in high-level languages with the underlying hardware. A compiler requires 1) determining the correctness of the syntax of programs, 2) generating correct and efficient object code, 3) run-time organization, and 4) formatting output according to assembler and/or linker conventions. A compiler consists of three main parts: the frontend, the middle-end, and the backend.
+
+The front end checks whether the program is correctly written in terms of the programming language syntax and semantics. Here legal and illegal programs are recognized. Errors are reported, if any, in a useful way. Type checking is also performed by collecting type information. The frontend then generates an intermediate representation or IR of the source code for processing by the middle-end.
+
+The middle end is where optimization takes place. Typical transformations for optimization are removal of useless or unreachable code, discovery and propagation of constant values, relocation of computation to a less frequently executed place (e.g., out of a loop), or specialization of computation based on the context. The middle-end generates another IR for the following backend. Most optimization efforts are focused on this part.
+
+The back end is responsible for translating the IR from the middle-end into assembly code. The target instruction(s) are chosen for each IR instruction. Register allocation assigns processor registers for the program variables where possible. The backend utilizes the hardware by figuring out how to keep parallel execution units busy, filling delay slots, and so on. Although most algorithms for optimization are in NP, heuristic techniques are well-developed.
+
+== Compiler output ==
+
+One classification of compilers is by the platform on which their generated code executes. This is known as the target platform.
+  
+A native or hosted compiler is one which output is intended to directly run on the same type of computer and operating system that the compiler itself runs on. The output of a cross compiler is designed to run on a different platform.  Cross compilers are often used when developing software for embedded systems that are not intended to support a software development environment.
+
+The output of a compiler that produces code for a virtual machine (VM) may or may not be executed on the same platform as the compiler that produced it.  For this reason such compilers are not usually classified as native or cross compilers.
+
+The lower level language that is the target of a compiler may itself be a high-level programming language.
+C, often viewed as some sort of portable assembler, can also be the target language of a compiler.
+E.g.: Cfront, the original compiler for C++ used C as target language. The C created by such a compiler is usually not intended to be read and maintained by humans. So indent style and pretty C intermediate code are irrelevant. Some features of C turn it into a good target language. E.g.: C code with #line directives can be generated to support debugging of the original source.
+
+=== Compiled versus interpreted languages ===
+
+Higher-level programming languages usually appear with a type of translation in mind: either designed as compiled language or interpreted language. However, in practice there is rarely anything about a language that requires it to be exclusively compiled or exclusively interpreted, although it is possible to design languages that rely on re-interpretation at run time. The categorization usually reflects the most popular or widespread implementations of a language &mdash; for instance, BASIC is sometimes called an interpreted language, and C a compiled one, despite the existence of BASIC compilers and C interpreters.
+
+Interpretation does not replace compilation completely. It only hides it from the user and makes it gradual. Even though an interpreter can itself be interpreted, a directly executed program is needed somewhere at the bottom of the stack (see machine language). Modern trends toward just-in-time compilation and bytecode interpretation at times blur the traditional categorizations of compilers and interpreters.
+
+Some language specifications spell out that implementations must include a compilation facility; for example, Common Lisp. However, there is nothing inherent in the definition of Common Lisp that stops it from being interpreted. Other languages have features that are very easy to implement in an interpreter, but make writing a compiler much harder; for example, APL, SNOBOL4, and many scripting languages allow programs to construct arbitrary source code at runtime with regular string operations, and then execute that code by passing it to a special evaluation function. To implement these features in a compiled language, programs must usually be shipped with a runtime library that includes a version of the compiler itself.
+
+=== Hardware compilation ===
+
+The output of some compilers may target computer hardware at a very low level, for example a Field Programmable Gate Array (FPGA) or structured Application-specific integrated circuit (ASIC).   Such compilers are said to be hardware compilers or synthesis tools because the source code they compile effectively controls the final configuration of the hardware and how it operates; the output of the compilation is not instructions that are executed in sequence - only an interconnection of transistors or lookup tables.
+For example, XST is the Xilinx Synthesis Tool used for configuring FPGAs. Similar tools are available from Altera, Synplicity, Synopsys and other vendors.
+
+== Compiler construction ==
+
+In the early days, the approach taken to compiler design used to be directly affected by the complexity of the processing, the experience of the person(s) designing it, and the resources available.
+
+A compiler for a relatively simple language written by one person might be a single, monolithic piece of software.  When the source language is large and complex, and high quality output is required, the design may be split into a number of relatively independent phases.  Having separate phases means development can be parceled up into small parts and given to different people.  It also becomes much easier to replace a single phase by an improved one, or to insert new phases later (e.g., additional optimizations).
+
+The division of the compilation processes into phases was championed by the Production Quality Compiler-Compiler Project (PQCC) at Carnegie Mellon University.  This project introduced the terms front end, middle end, and back end.
+
+All but the smallest of compilers have more than two phases.  However, these phases are usually regarded as being part of the front end or the back end.  The point at which these two ends meet is open to debate.  The front end is generally considered to be where syntactic and semantic processing takes place, along with translation to a lower level of representation (than source code).
+
+The middle end is usually designed to perform optimizations on a form other than the source code or machine code.  This source code/machine code independence is intended to enable generic optimizations to be shared between versions of the compiler supporting different languages and target processors.
+
+The back end takes the output from the middle.  It may perform more analysis, transformations and optimizations that are for a particular computer.  Then, it generates code for a particular processor and OS.
+
+This front-end/middle/back-end approach makes it possible to combine front ends for different languages with back ends for different CPUs.  Practical examples of this approach are the GNU Compiler Collection, LLVM, and the Amsterdam Compiler Kit, which have multiple front-ends, shared analysis and multiple back-ends.
+
+=== One-pass versus multi-pass compilers ===
+
+Classifying compilers by number of passes has its background in the hardware resource limitations of computers.  Compiling involves performing lots of work and early computers did not have enough memory to contain one program that did all of this work.  So compilers were split up into smaller programs which each made a pass over the source (or some representation of it) performing some of the required analysis and translations.
+
+The ability to compile in a single pass has classically been seen as a benefit because it simplifies the job of writing a compiler and one-pass compilers generally perform compilations faster than multi-pass compilers.  Thus, partly driven by the resource limitations of early systems, many early languages were specifically designed so that they could be compiled in a single pass (e.g., Pascal).
+
+In some cases the design of a language feature may require a compiler to perform more than one pass over the source.  For instance, consider a declaration appearing on line 20 of the source which affects the translation of a statement appearing on line 10.  In this case, the first pass needs to gather information about declarations appearing after statements that they affect, with the actual translation happening during a subsequent pass.
+
+The disadvantage of compiling in a single pass is that it is not possible to perform many of the sophisticated optimizations needed to generate high quality code.  It can be difficult to count exactly how many passes an optimizing compiler makes.  For instance, different phases of optimization may analyse one expression many times but only analyse another expression once.
+
+Splitting a compiler up into small programs is a technique used by researchers interested in producing provably correct compilers.  Proving the correctness of a set of small programs often requires less effort than proving the correctness of a larger, single, equivalent program.
+
+While the typical multi-pass compiler outputs machine code from its final pass, there are several other types:
+
+*A "source-to-source compiler" is a type of compiler that takes a high level language as its input and outputs a high level language.  For example, an automatic parallelizing compiler will frequently take in a high level language program as an input and then  transform the code and annotate it with parallel code annotations (e.g. OpenMP) or language constructs (e.g. Fortran's DOALL statements).
+*Stage compiler that compiles to assembly language of a theoretical machine, like some Prolog implementations
+**This Prolog machine is also known as the Warren Abstract Machine (or WAM).
+**Bytecode compilers for Java, Python, and many more are also a subtype of this.
+*Just-in-time compiler, used by Smalltalk and Java systems, and also by Microsoft .NET's Common Intermediate Language (CIL)
+**Applications are delivered in bytecode, which is compiled to native machine code just prior to execution.
+
+=== Front end ===
+
+The compiler frontend analyzes the source code to build an internal representation of the program, called the intermediate representation or IR.  It also manages the symbol table, a data structure mapping each symbol in the source code to associated information such as location, type and scope.  This is done over several phases, which includes some of the following:
+
+# Line reconstruction.  Languages which strop their keywords or allow arbitrary spaces within identifiers require a phase before parsing, which converts the input character sequence to a canonical form ready for the parser.  The top-down, recursive-descent, table-driven parsers used in the 1960s typically read the source one character at a time and did not require a separate tokenizing phase.  Atlas Autocode, and Imp (and some implementations of ALGOL and Coral 66) are examples of stropped languages which compilers would have a Line Reconstruction phase.
+# Lexical analysis breaks the source code text into small pieces called tokens.  Each token is a single atomic unit of the language, for instance a keyword, identifier or symbol name.  The token syntax is typically a regular language, so a finite state automaton constructed from a regular expression can be used to recognize it.  This phase is also called lexing or scanning, and the software doing lexical analysis is called a lexical analyzer or scanner. This may not be a separate step – it can be combined with the parsing step in scannerless parsing, in which case parsing is done at the character level, not the token level.
+# Preprocessing.  Some languages, e.g., C, require a preprocessing phase which supports macro substitution and conditional compilation. Typically the preprocessing phase occurs before syntactic or semantic analysis; e.g. in the case of C, the preprocessor manipulates lexical tokens rather than syntactic forms. However, some languages such as Scheme support macro substitutions based on syntactic forms.
+# Syntax analysis involves parsing the token sequence to identify the syntactic structure of the program. This phase typically builds a parse tree, which replaces the linear sequence of tokens with a tree structure built according to the rules of a formal grammar which define the language's syntax. The parse tree is often analyzed, augmented, and transformed by later phases in the compiler.
+# Semantic analysis is the phase in which the compiler adds semantic information to the parse tree and builds the symbol table. This phase performs semantic checks such as type checking (checking for type errors), or object binding (associating variable and function references with their definitions), or definite assignment (requiring all local variables to be initialized before use), rejecting incorrect programs or issuing warnings. Semantic analysis usually requires a complete parse tree, meaning that this phase logically follows the parsing phase, and logically precedes the code generation phase, though it is often possible to fold multiple phases into one pass over the code in a compiler implementation.
+
+=== Back end ===
+
+The term back end is sometimes confused with code generator because of the overlapped functionality of generating assembly code. Some literature uses middle end to distinguish the generic analysis and optimization phases in the back end from the machine-dependent code generators.
+
+The main phases of the back end include the following:
+
+# Analysis: This is the gathering of program information from the intermediate representation derived from the input. Typical analyses are data flow analysis to build use-define chains, dependence analysis, alias analysis, pointer analysis, escape analysis etc. Accurate analysis is the basis for any compiler optimization. The call graph and control flow graph are usually also built during the analysis phase.
+# Optimization: the intermediate language representation is transformed into functionally equivalent but faster (or smaller) forms. Popular optimizations are inline expansion, dead code elimination, constant propagation, loop transformation, register allocation and even automatic parallelization.
+# Code generation: the transformed intermediate language is translated into the output language, usually the native machine language of the system. This involves resource and storage decisions, such as deciding which variables to fit into registers and memory and the selection and scheduling of appropriate machine instructions along with their associated addressing modes (see also Sethi-Ullman algorithm).  Debug data may also need to be generated to facilitate debugging.
+
+Compiler analysis is the prerequisite for any compiler optimization, and they tightly work together. For example, dependence analysis is crucial for loop transformation.
+
+In addition, the scope of compiler analysis and optimizations vary greatly, from as small as a basic block to the procedure/function level, or even over the whole program (interprocedural optimization). Obviously, a compiler can potentially do a better job using a broader view. But that broad view is not free: large scope analysis and optimizations are very costly in terms of compilation time and memory space; this is especially true for interprocedural analysis and optimizations.
+
+Interprocedural analysis and optimizations are common in modern commercial compilers from HP, IBM, SGI, Intel, Microsoft, and Sun Microsystems. The open source GCC was criticized for a long time for lacking powerful interprocedural optimizations, but it is changing in this respect. Another open source compiler with full analysis and optimization infrastructure is Open64, which is used by many organizations for research and commercial purposes.
+
+Due to the extra time and space needed for compiler analysis and optimizations, some compilers skip them by default. Users have to use compilation options to explicitly tell the compiler which optimizations should be enabled.
+
+== Compiler correctness ==
+
+Compiler correctness is the branch of software engineering that deals with trying to show that a compiler behaves according to its language specification.   Techniques include developing the compiler using formal methods and using rigorous testing (often called compiler validation) on an existing compiler.
+
+== Related techniques ==
+
+Assembly language is a type of low-level language and a program that compiles it is more commonly known as an assembler, with the inverse program known as a disassembler.
+
+A program that translates from a low level language to a higher level one is a decompiler.
+
+A program that translates between high-level languages is usually called a language translator, source to source translator, language converter, or language rewriter. The last term is usually applied to translations that do not involve a change of language.
+
+A program that translates into an object code format that is not supported on the compilation machine is called a cross compiler and is commonly used to prepare code for embedded applications.
+
+== International conferences and organizations ==
+
+A number of conferences in the field of programming languages present advances in compiler construction as one of their main topics.
+
+ACM SIGPLAN supports a number of conferences, including:
+* Programming Language Design and Implementation (PLDI)
+* Principles of Programming Languages (POPL)
+* Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA)
+* International Conference on Functional Programming (ICFP)
+
+The European Joint Conferences on Theory and Practice of Software (ETAPS) sponsors the International Conference on Compiler Construction, with papers from both the academic and industrial sectors.
+
+Asian Symposium on Programming Languages and Systems (APLAS) is organized by the Asian Association for Foundation of Software (AAFS).
+
+== See also ==
+
+* Abstract interpretation
+* Attribute grammar
+* Binary recompiler
+* Bottom-up parsing
+* Byzantine fault tolerance
+* Compile and go loader
+* Compile farm
+* List of compilers
+* List of important publications in computer science#Compilers
+* Metacompilation
+* Overhead code
+* Semantics encoding
+* Transcompiler
+
+== Notes ==
+
+== References ==
+
+* Compiler textbook references A collection of references to mainstream Compiler Construction Textbooks
+* Aho, Alfred V.; Sethi, Ravi; and Ullman, Jeffrey D., Compilers: Principles, Techniques and Tools (ISBN 0-201-10088-6) link to publisher.  Also known as “The Dragon Book.”
+* Allen, Frances E., "A History of Language Processor Technology in IBM", IBM Journal of Research and Development, v.25, no.5, September 1981.
+* Allen, Randy; and Kennedy, Ken, Optimizing Compilers for Modern Architectures, Morgan Kaufmann Publishers, 2001. ISBN 1-55860-286-0
+* Appel, Andrew Wilson
+** Modern Compiler Implementation in Java, 2nd edition. Cambridge University Press, 2002. ISBN 0-521-82060-X
+** Modern Compiler Implementation in ML, Cambridge University Press, 1998. ISBN 0-521-58274-1
+*  Bornat, Richard, Understanding and Writing Compilers: A Do It Yourself Guide, Macmillan Publishing, 1979. ISBN 0-333-21732-2
+* Cooper, Keith D., and Torczon, Linda,  Engineering a Compiler, Morgan Kaufmann, 2004, ISBN 1-55860-699-8.
+* Leverett; Cattel; Hobbs; Newcomer; Reiner; Schatz; Wulf, An Overview of the Production Quality Compiler-Compiler Project, in Computer 13(8):38-49 (August 1980)
+* McKeeman, William Marshall; Horning, James J.; Wortman, David B., A Compiler Generator, Englewood Cliffs, N.J. : Prentice-Hall, 1970. ISBN 0-13-155077-2
+* Muchnick, Steven, Advanced Compiler Design and Implementation, Morgan Kaufmann Publishers, 1997. ISBN 1-55860-320-4
+* Scott, Michael Lee, Programming Language Pragmatics, Morgan Kaufmann, 2005, 2nd edition, 912 pages. ISBN 0-12-633951-1 (The author's site on this book).
+* Srikant, Y. N.; Shankar, Priti, The Compiler Design Handbook: Optimizations and Machine Code Generation, CRC Press, 2003. ISBN 0-8493-1240-X
+* Terry, Patrick D., Compilers and Compiler Generators: An Introduction with C++, International Thomson Computer Press, 1997. ISBN 1-85032-298-8,
+* Wirth, Niklaus, Compiler Construction (ISBN 0-201-40353-6), Addison-Wesley, 1996, 176 pages. Revised November 2005.
+
+== External links ==
+
+*Compile-Howto
+* Basics of Compiler Design by Torben Ægidius Mogensen
+*Short animation explaining the key conceptual difference between compilers and interpreters
+* Analysis & LL1 Parsing : Informative Video on YouTube

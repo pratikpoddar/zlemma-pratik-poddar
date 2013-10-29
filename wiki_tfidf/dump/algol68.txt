@@ -1,0 +1,635 @@
+ALGOL 68 (short for ALGOrithmic Language 1968) is an imperative computer programming language that was conceived as a successor to the ALGOL 60 programming language, designed with the goal of a much wider scope of application and more rigorously defined syntax and semantics.
+
+The contributions of ALGOL 68 to the field of computer science has been deep, wide ranging and enduring, although many of these  contributions were only publicly identified when they had reappeared in subsequently developed programming languages.
+
+==Overview==
+ALGOL 68 features include expression-based syntax, user-declared types and structures/tagged-unions, a reference model of variables and reference parameters, string, array and matrix slicing, and also concurrency.
+
+ALGOL 68 was designed by IFIP Working Group 2.1. On December 20, 1968 the language was formally adopted by Working
+Group 2.1 and subsequently approved for publication by the General Assembly of IFIP.
+
+ALGOL 68 was defined using a two-level grammar formalism invented by Adriaan van Wijngaarden. Van Wijngaarden grammars use a context-free grammar to generate an infinite set of productions that will recognize a particular ALGOL 68 program; notably, they are able to express the kind of requirements that in many other programming language standards are labelled "semantics" and have to be expressed in ambiguity-prone natural language prose, and then implemented in compilers as ad hoc code attached to the formal language parser.
+
+ALGOL 68 has been criticized, most prominently by some members of its design committee such as C. A. R. Hoare and Edsger Dijkstra, for abandoning the simplicity of ALGOL 60, becoming a vehicle for complex or overly general ideas, and doing little to make the compiler writer's task easy, in contrast to deliberately simple contemporaries (and competitors) such as C, S-algol and Pascal.
+
+In 1970, ALGOL 68R became the first working compiler for ALGOL 68.
+
+In the 1973 revision, certain features - such as proceduring, gommas and formal bounds - were omitted. c.f. The language of the unrevised reportr0.
+
+Though European defence agencies (in Britain Royal Signals and Radar Establishment - RSRE) promoted the use of ALGOL 68 for its expected security advantages, the American side of the NATO alliance decided to develop a different project, the Ada programming language, making its use obligatory for U.S. defense contracts.
+
+Steve Bourne, who was on the Algol 68 revision committee, took some of its ideas to his Bourne shell (and thereby, to descendant shells  such as Bash) and to C (and thereby to descendants such as C++).
+
+The complete history of the project can be found in C.H. Lindsey's A History of ALGOL 68.
+
+For a full length treatment of the language, see  Programming Algol 68 Made Easy by Dr. Sian Leitch, or Learning Algol 68 Genie by Dr. Marcel van der Veer which includes the Revised Report.
+
+==Timeline of ALGOL 68==
+
+* "A Shorter History of Algol 68" 
+* ALGOL 68 - 3rd generation ALGOL
+
+=== The Algorithmic Language ALGOL 68 Reports ===
+*Mar. 1968: Draft Report on the Algorithmic Language ALGOL 68  - Edited by: A. van Wijngaarden, B.J. Mailloux, J.E.L. Peck and C.H.A. Koster.
+
+*Oct. 1968: Penultimate Draft Report on the Algorithmic Language ALGOL 68 - Chapters 1-9  Chapters 10-12  - Edited by: A. van Wijngaarden, B.J. Mailloux, J.E.L. Peck and C.H.A. Koster.
+*Dec. 1968: Report on the Algorithmic Language ALGOL 68 - Offprint from Numerische Mathematik, 14, 79-218 (1969); Springer-Verlag. - Edited by: A. van Wijngaarden, B.J. Mailloux, J.E.L. Peck and C.H.A. Koster.
+** WG 2.1 members active in the original design of ALGOL 68:. Friedrich L. Bauer • Hans Bekic • Edsger Dijkstra† • Fraser Duncan† • Jan Garwick† • Gerhard Goos  • Tony Hoare†  • Peter Zilahy Ingerman • Kees Koster • Peter Landin • Charles Lindsey • Barry Mailloux • John McCarthy • Jack Merner • Peter Naur‡ • Manfred Paul • John Peck • Willem van der Poel • Brian Randell† • Doug Ross • Klaus Samelson  • Gerhard Seegmüller† • Michel Sintzoff • Wlad Turski† • Aad van Wijngaarden • Niklaus Wirth‡  • Mike Woodger†  • Nobuo Yoneda; †Signatories to the Minority Report. ‡Resigned after 93.
+*Sep 1973: Revised Report on the Algorithmic Language Algol 68 - Springer-Verlag 1976  - Edited by: A. van Wijngaarden, B.J. Mailloux, J.E.L. Peck, C.H.A. Koster, M. Sintzoff, C.H. Lindsey, L.G.L.T. Meertens and R.G. Fisker.
+
+=== Timeline of Standardization ===
+1968: On December 20, 1968 the "Final Report" (MR 101) was adopted by the Working Group, then subsequently approved by the General Assembly of UNESCO's IFIP for publication. Translations of the standard were made for Russian, German, French and Bulgarian, and then later Japanese and Chinese. The standard was also made available in Braille.
+
+1984: TC97 considered Algol 68 for standardisation as "New Work Item" TC97/N1642[http://www.open-std.org/JTC1/sc22/docs/docs0200.html][ftp://std.dkuug.dk/JTC1/sc22/sc22arc1.txt]. West Germany, Belgium, Netherlands, U.S.S.R. and Czechoslovakia willing to participate in preparing the standard but the U.S.S.R. and Czechoslovakia "were not the right kinds of member of the right ISO committies"[http://archive.computerhistory.org/resources/text/algol/algol_bulletin/A50/P1.HTM] and Algol 68's ISO standardisation stalled.
+
+1988: Subsequently ALGOL 68 became one of the GOST standards in Russia.
+* GOST 27974-88 Programming language ALGOL 68 - Язык программирования АЛГОЛ 68
+* GOST 27975-88 Programming language ALGOL 68 extended - Язык программирования АЛГОЛ 68 расширенный
+
+==Notable language elements==
+
+===Bold symbols and reserved words===
+There are about 60 such reserved words ( some with "brief symbol" equivalents ) in the standard language:
+ mode, op, prio, proc,
+ flex, heap, loc, long, ref, short,
+ bits, bool, bytes, char, compl, int, real, sema, string, void,
+ channel, file, format, struct, union,
+ at "@", eitherr0, is ":=:", isnt  is notr0 ":/=:" ":≠:", of "→"r0, true, false, empty, nil "○", skip "~",
+ co "¢", comment "¢", pr, pragmat,
+ case ~ in ~ ouse ~ in ~ out ~ esac "( ~ | ~ |: ~ | ~ | ~ )",
+ for ~ from ~ to ~ by ~ while ~ do ~ od,
+ if ~ then ~ elif ~ then ~ else ~ fi "( ~ | ~ |: ~ | ~ | ~ )",
+ par begin ~ end "( ~ )", go to, goto, exit "□".
+
+===Units: Expressions===
+The basic language construct is the unit. A unit may be a formula, an enclosed clause, a routine text or one of several technically needed constructs (assignation, jump, skip, nihil). The technical term enclosed clause unifies some of the inherently bracketing constructs known as block, do statement, switch statement in other contemporary languages. When keywords are used, generally the reversed character sequence of the introducing  keyword is used for terminating the enclosure, e.g. ( 'if' ~ then ~ else ~ 'fi', 'case' ~ in ~ out ~ 'esac', for ~ while ~ 'do' ~ 'od'). This feature was reused by Stephen Bourne in the common Unix Bourne shell. An expression may also yield a multiple value, which is constructed from other values by a collateral clause. This construct just looks like the parameter pack of a procedure call.
+
+===mode: Declarations===
+
+The basic data types (called modes in Algol 68 parlance) are real, int, compl (complex number), bool, char, bits and bytes. For example:
+ int n = 2;
+ co n is a fixed as a constant of 2. co
+ int m := 3;
+ co m is a newly created local variable whose value is initially set to 3. co
+ co    This is short for ref int m = loc int := 3; co
+ real avogadro = 6.0221415⏨23; co Avogadro's number co
+ long long real long long pi = 3.14159 26535 89793 23846 26433 83279 50288 41971 69399 37510;
+ compl square root of minus one = 0 ⊥ 1;
+
+However, the declaration real x; is just syntactic sugar for ref real x = loc real;. That is, x is really the constant identifier for a reference to a newly generated local real variable.
+
+Furthermore, instead of defining both float and double, or int and long and short, etc., ALGOL 68 provided modifiers, so that the presently common double would be written as long real or long long real instead, for example. The prelude constants max real and min long int are provided to adapt programs to different implementations.
+
+All variables need to be declared, the declaration does not have to appear prior to the first use.
+
+primitive-declarer: int, real, compl, complexG, bool, char, string, bits, bytes, format, file, pipeG, channel, sema
+* bits - a "packed vector" of bool.
+* bytes - a "packed vector" of char.
+* string - a flexible array of char.
+* sema - a semaphore which can be initialised with the operator level.
+
+Other declaration symbols include:  flex, heap, loc, ref, long, short, eventS
+* flex - declare the array to be flexible, i.e. it can grow in length on demand.
+* heap - allocate variable some free space from the global heap.
+* loc - allocate variable some free space of the local stack.
+* ref - declare the variable to be a pointer, similar to using "&" in a C declaration.
+* long - declare an int, real or compl to be of a longer size.
+* short - declare an int, real or compl to be of a shorter size.
+
+A new mode (type) may be declared using a mode declaration:
+  int max=99;
+  mode newtype = [0:9][0:max]struct (
+      long real a, b, c, short int i, j, k, ref real r
+  );
+This has the similar effect as the following C code:
+
+const int max=99;
+  typedef struct {
+      double a, b, c; short i, j, k; float *r;
+  } newtype[9+1][max+1];
+
+Note that for ALGOL 68 only the newtype mode-indication appears to the left of the equals symbol, and most notably the construction is made - and can be read - from left to right without regard to priorities.
+
+===Coercions: casting===
+The coercions produce a coercend from a coercee according to three criteria: the a priori mode of the coercend before the application of any coercion, the a posteriori mode of the coercee required after those coercions, and the syntactic position or "sort" of the coercee. Coercions may be cascaded.
+
+There are six possible coercions, termed "deproceduring", "dereferencing", "uniting", "widening", "rowing" and "voiding". Each Coercion, except "uniting", prescribes a corresponding dynamic effect on the associated values. Hence, a number of primitive actions can be programmed implicitly by coercions.
+
+Context strength - Allowed coercions:
+* soft - deproceduring
+* weak - dereferencing or deproceduring, yielding a name
+* meek - dereferencing or deproceduring
+* firm - meek, followed by uniting
+* strong - firm, followed by widening, rowing or voiding
+
+===pr & co: Pragmats and Comments===
+Pragmats are directives in the program, typically hints to the compiler; in newer languages these are called "pragmas" (no 't'). e.g.
+ pragmat heap=32 pragmat
+ pr heap=32 pr
+
+Comments can be inserted in variety of ways:
+ ¢ The original way of adding your 2 cents worth to a program ¢
+ comment "bold" comment comment
+ co Style i comment co
+ # Style ii comment #
+ £ This is a hash/pound comment for a UK keyboard £
+
+Normally, comments cannot be nested in ALGOL 68. This restriction can be circumvented by using different comment delimiters (e.g. use hash only for temporary code deletions).
+
+===Expressions and compound statements===
+ALGOL 68 being an expression-oriented programming language, the value returned by an assignment statement is a reference to the destination. Thus, the following is valid ALGOL 68 code:
+  real half pi, one pi; one pi := 2 * ( half pi := 2 * arc tan(1) )
+This notion is present in C and Perl, among others. Note that as in earlier languages such as Algol 60 and FORTRAN, spaces are allowed in identifiers, so that half pi is a single identifier (thus avoiding the underscores versus camel case versus all lower-case issues).
+
+As another example, to express the mathematical idea of a sum of f(i) from i=1 to n, the following ALGOL 68 integer expression suffices:
+  (int sum := 0; for i to n do sum +:= f(i) od; sum)
+Note that, being an integer expression, the former block of code can be used in any context where an integer value can be used. A block of code returns the value of the last expression it evaluated; this idea is present in Lisp, among other languages.
+
+Compound statements are all terminated by distinctive (and somewhat reverent) closing brackets:
+*if choice clauses:
+  if condition then statements else statements  fi
+  "brief" form:  ( condition | statements | statements )
+
+if condition1 then statements elif condition2 then statements else statements  fi
+  "brief" form:  ( condition1 | statements |: condition2 | statements | statements )
+This scheme not only avoids the dangling else problem but also avoids having to use begin and end in embedded statement sequences.
+*case choice clauses:
+  case switch in statements, statements,... out statements  esac
+  "brief" form:  ( switch | statements,statements,... | statements )
+
+case switch1 in statements, statements,... ouse switch2 in statements, statements,... out statements  esac
+  "brief" form of case statement:  ( switch1 | statements,statements,... |: switch2 | statements,statements,... | statements )
+Choice clause example with Brief symbols:
+ proc days in month = (int year, month)int:
+   (month|
+     31,
+     (year÷×4=0 ∧ year÷×100≠0  ∨  year÷×400=0 | 29 | 28 ),
+     31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+   );
+
+Choice clause example with Bold symbols:
+ proc days in month = (int year, month)int:
+   case month in
+     31,
+     if year mod 4 eq 0 and year mod 100 ne 0  or  year mod 400 eq 0 then 29 else 28 fi,
+     31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+   esac;
+
+Choice clause example mixing Bold and Brief symbols:
+ proc days in month = (int year, month)int:
+   case month in
+ ¢Jan¢ 31,
+ ¢Feb¢ ( year mod 4 = 0 and year mod 100 ≠ 0  or  year mod 400 = 0 | 29 | 28 ),
+ ¢Mar¢ 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ¢ to Dec. ¢
+   esac;
+Algol68 allowed the switch to be of either type int or (uniquely) union. The latter allows the enforcing strong typing onto union variables. c.f. union below for example.
+*do loop clause:
+  for index  from first  by increment  to last  while condition  do statements od
+  The minimum form of a "loop clause" is thus: do statements od
+This was considered the "universal" loop, the full syntax is:
+ for i from 1 by 1 to 3 while i≠4 do ~ od
+There are several unusual aspects of the construct:
+* only the do ~ od portion was compulsory, in which case the loop will iterate indefinitely.
+* thus the clause to 100 do ~ od, will iterate only 100 times.
+* the while "syntactic element" allowed a programmer to break from a for loop early. e.g.
+ int sum sq:=0;
+ for i
+ while
+   print(("So far:",i,newline));
+   sum sq≤1000
+ do
+   sum sq+:=i↑2
+ od
+
+Subsequent "extensions" to the standard Algol68 allowed the to syntactic element to be replaced with upto and downto to achieve a small optimisation.  The same compilers also incorporated:
+* until(C) - for late loop termination.
+* foreach(S) - for working on arrays in parallel.
+
+Further examples can be found in the code examples below.
+
+===struct, union & [:]: Structures, unions and arrays===
+ALGOL 68 supports arrays with any number of dimensions, and it allows for the slicing of whole or partial rows or columns.
+  mode vector = [1:3]    real;   # vector mode declaration (typedef)  #
+  mode matrix = [1:3,1:3]real;   # matrix mode declaration (typedef)  #
+  vector v1  := (1,2,3);         # array variable initially (1,2,3)   #
+  []real v2   = (4,5,6);         # constant array, type equivalent to vector, bounds are implied  #
+  op + = (vector a,b) vector:    # binary operator definition         #
+    (vector out; for i from ⌊a to ⌈a do out[i] := a[i]+b[i] od; out);
+  matrix m := (v1, v2, v1+v2);
+  print ((m[,2:]));              # a slice of the 2nd and 3rd columns #
+
+Matrices can be sliced either way, e.g.:
+  ref vector row = m[2,];  # define a ref (pointer) to the 2nd row #
+  ref vector col = m[,2];  # define a ref (pointer) to the 2nd column #
+
+ALGOL 68 supports multiple field structures (struct) and united modes. Reference variables may point to any mode including array slices and structure fields.
+
+For an example of all this, here is the traditional linked list declaration:
+  mode node = union (real, int, compl, string),
+       list = struct (node val, ref list next);
+
+Usage example for union case of node:
+
+===proc: Procedures===
+Procedure (proc) declarations require type specifications for both the parameters and the result (void if none):
+  proc max of real = (real a, b) real:
+     if a > b then a else b fi;
+or, using the "brief" form of the conditional statement:
+  proc max of real = (real a, b) real: (a>b | a | b);
+The return value of a proc is the value of the last expression evaluated in the procedure. References to procedures (ref proc) are also permitted. Call-by-reference parameters are provided by specifying references (such as ref real) in the formal argument list. The following example defines a procedure that applies a function (specified as a parameter) to each element of an array:
+  proc apply = (ref [] real a, proc (real) real f):
+   
+     for i from lwb a to upb a do a[i] := f(a[i]) od
+This simplicity of code was unachievable in ALGOL 68's predecessor ALGOL 60.
+
+===op: Operators===
+The programmer may define new operators and both those and the pre-defined ones may be overloaded and their priorities may be changed by the coder. The following example defines operator max with both dyadic and monadic versions (scanning across the elements of an array).
+  prio max = 9;
+   
+  op max = (int a,b) int: ( a>b | a | b );
+  op max = (real a,b) real: ( a>b | a | b );
+  op max = (compl a,b) compl: ( abs a > abs b | a | b );
+   
+  op max = ([]real a) real:
+     (real out := aa;
+      for i from lwb a + 1 to upb a do ( a[i]>out | out:=a[i] ) od;
+      out)
+
+====Array, Procedure, Dereference and coercion operations====
+
+These are technically not operators, rather they are considered "units associated with names"
+<!-- diag, trnsp, row, col as per S. G. van der Meulen, M. Veldhorst. TORRIX - A programming language for opera-
+tions on vectors and matrices over arbitrary ﬁelds and of variable size. Rijksuniver-
+siteit Utrecht [1977]. -->
+
+====Monadic operators====
+
+<!-- norm, trace, t, det, inv as per S. G. van der Meulen, M. Veldhorst. TORRIX - A programming language for operations on vectors and matrices over arbitrary ﬁelds and of variable size. Rijksuniver-
+siteit Utrecht [1977]. -->
+
+====Dyadic operators with associated priorities====
+
+Note: Tertiaries include names nil and ○.
+
+====Assignation and identity relations etc====
+These are technically not operators, rather they are considered "units associated with names"
+
+Note: Quaternaries include names skip and ~.
+
+“:=:” (alternatively “is”) tests if two pointers are equal; “:/=:” (alternatively “isnt”) tests if they are unequal.
+
+Why :=: and :/=: are needed: Consider trying to compare two pointer values, such as the following variables, declared as pointers-to-integer:
+
+: ref int ip, jp
+
+Now consider how to decide whether these two are pointing to the same location, or whether one of them is pointing to nil. The following expression
+
+: ip = jp
+
+will dereference both pointers down to values of type int, and compare those, since the “=” operator is defined for int, but not ref int. It is not legal to define “=” for operands of type ref int and int at the same time, because then calls become ambiguous, due to the implicit coercions that can be applied: should the operands be left as ref int and that version of the operator called? Or should they be dereferenced further to int and that version used instead? Therefore the following expression can never be made legal:
+
+: ip = nil
+
+Hence the need for separate constructs not subject to the normal coercion rules for operands to operators. But there is a gotcha. The following expressions:
+
+: ip :=: jp 
+: ip :=: nil
+
+while legal, will probably not do what might be expected. They will always return false, because they are comparing the actual addresses of the variables ip and jp, rather than what they point to. To achieve the right effect, one would have to write
+
+: ip :=: ref int(jp) 
+: ip :=: ref int(nil)
+
+Patent application: On 14 May 2003, software patent application No. 20040230959 was filed for the ISNOT operator by employees of Microsoft.  This patent was granted on 18 November 2004.
+
+====Special characters====
+
+Most of Algol's "special" characters (×, ÷, ≤, ≥, ≠, ¬, ⊃, ≡, ∨, ∧, →, ↓, ↑, ⌊, ⌈, ⎩, ⎧, ⊥, ⏨, ¢, ○ and □) can be found on the IBM 2741 keyboard with the APL "golf-ball" print head inserted, these became available in the mid-1960s while ALGOL 68 was being drafted. These characters are also part of the unicode standard and most of them are available in several popular fonts:
+:<!---->
+
+===transput: Input and output===
+Transput is the term used to refer to ALGOL 68's input and output facilities. There are pre-defined procedures for unformatted, formatted and binary transput. Files and other transput devices are handled in a consistent and machine-independent manner. The following example prints out some unformatted output to the standard output device:
+
+print ((newpage, "Title", newline, "Value of i is ",
+    i, "and x[i] is ", x[i], newline))
+
+Note the predefined procedures newpage and newline passed as arguments.
+
+====Books, channels and files====
+The transput is considered to be of books, channels and files:
+* Books are made up of pages, lines and characters, and may be backed up by files.
+** A specific book can be located by name with a call to match.
+* channels correspond to physical devices.  e.g. card punches and printers.
+** There are three standard channels: stand in channel, stand out channel, stand back channel.
+* A file is a means of communicating between a particular program and a book that has been opened via some channel.
+** The mood of a file may be read, write, char, bin, and opened.
+** transput procedures include: establish, create, open, associate, lock, close, scratch.
+** position enquires: char number, line number, page number.
+** layout routines include:
+***space, backspace, newline, newpage.
+***get good line, get good page, get good book, and proc set=(ref file f, int page,line,char)void:
+** A file has event routines. e.g. on logical file end, on physical file end, on page end, on line end, on format end, on value error, on char error.
+
+====formatted transput====
+"Formatted transput" in ALGOL 68's transput has its own syntax and patterns (functions), with formats embedded between two $ characters.
+Examples:
+
+printf (($2l"The sum is:"x, g(0)$, m + n)); ¢ prints the same as: ¢
+ print ((new line, new line, "The sum is:", space, whole (m + n, 0))
+
+===par: Parallel processing===
+ALGOL 68 supports programming of parallel processing. Using the keyword par, a collateral clause is converted to a parallel clause, where the synchronisation of actions is controlled using semaphores. In A68G the parallel actions are mapped to threads when available on the hosting operating system. In A68S a different paradigm of parallel processing was implemented (see below).
+ int initial foot width = 5;
+ mode foot = struct(
+    string name,
+    sema width,
+    bits toe ¢ packed vector of BOOL ¢
+ );
+  
+ foot left foot:= foot("Left", level initial foot width, 2r11111),
+      right foot:= foot("Right", level initial foot width, 2r11111);
+  
+ ¢ 10 round clip in a 1968 Colt Python .357 Magnum ¢
+ sema rounds = level 10;
+  
+ ¢ the Magnum needs more barrels to take full advantage of parallelism ¢
+ sema acquire target = level 1;
+  
+ prio ∧:= = 1;
+ op ∧:= = (ref bits lhs, bits rhs)ref bits: lhs := lhs ∧ rhs;
+  
+ proc shoot = (ref foot foot)void: (
+   ↓acquire target;
+   ↓rounds;
+   print("BANG! ");
+   ↓width → foot;
+   toe → foot ∧:= ¬(bin 1 shl level width → foot);
+   printf(($g": Ouch!! - "5(g)l$, name → foot, []bool(toe → foot)width - initial foot width + 1:));
+   ↑acquire target
+ );
+  
+ ¢ do shooting in parallel to cater for someone hoping to stand on just one foot ¢
+ par (
+   for toe to initial foot width do
+     shoot(left foot)
+   od, ¢ <= a comma is required ¢
+   for toe to initial foot width do
+     shoot(right foot)
+   od
+ )
+
+==Examples of use==
+
+===Code sample===
+This sample program implements the Sieve of Eratosthenes to find all the prime numbers that are less than 100. nil is the ALGOL 68 analogue of the null pointer in other languages. The notation x of y accesses a member x of a struct y.
+
+begin # Algol-68 prime number sieve, functional style #
+   
+   proc error = (string s) void:
+      (print(( newline, " error: ", s, newline)); goto stop);
+   proc one to = (int n) list:
+      (proc f = (int m,n) list: (m>n | nil | cons(m, f(m+1,n))); f(1,n));
+   
+   mode list = ref node;
+   mode node = struct (int h, list t);
+   proc cons = (int n, list l) list: heap node := (n,l);
+   proc hd   = (list l) int: ( l is nil | error("hd nil"); skip | h of l );
+   proc tl   = (list l) list: ( l is nil | error("tl nil"); skip | t of l );
+   proc show = (list l) void: ( l isnt nil | print((" ",whole(hd(l),0))); show(tl(l)));
+   
+   proc filter = (proc (int) bool p, list l) list:
+      if l is nil then nil
+      elif p(hd(l)) then cons(hd(l), filter(p,tl(l)))
+      else filter(p, tl(l))
+      fi;
+   
+   proc sieve = (list l) list:
+      if l is nil then nil
+      else
+         proc not multiple = (int n) bool: n mod hd(l) ≠ 0;
+         cons(hd(l), sieve( filter( not multiple, tl(l) )))
+      fi;
+   
+   proc primes = (int n) list: sieve( tl( one to(n) ));
+   
+   show( primes(100) )
+ end
+
+===Operating Systems written in ALGOL 68===
+
+* Cambridge CAP computer - All procedures constituting the operating system were written in ALGOL 68C, although a number of other closely associated protected procedures  - such as a paginator - are written in BCPL.
+* Eldon 3 - Developed at Leeds University for the ICL 1900 was written in ALGOL 68R.
+* Flex machine - The hardware was custom and microprogrammable, with an operating system, (modular) compiler, editor, garbage collector and filing system all written in ALGOL 68RS. The command shell Curt  was designed to access typed data similar to Algol-68 modes.
+* VME - S3 was the implementation language of the operating system VME. S3 was based on ALGOL 68 but with data types and operators aligned to those offered by the ICL 2900 Series.
+Note: The Soviet Era computers Эльбрус-1 (Elbrus-1) and Эльбрус-2 were created using high-level language uЭль-76 (AL-76), rather than the traditional assembly. uЭль-76 resembles Algol-68, The main difference is the dynamic binding types in uЭль-76 supported at the hardware level. uЭль-76 is used for application, job control, system programming.
+
+===Applications===
+Both ALGOL 68C and ALGOL 68R are written in ALGOL 68, effectively making ALGOL 68 an application of itself.  Other applications include:
+* ELLA - a hardware description language and support toolset. Developed by the Royal Signals and Radar Establishment during the 1980s and 1990s.
+
+===Libraries and APIs===
+* NAG Numerical Libraries - a software library of numerical analysis routines. Supplied in ALGOL 68 during the 1980s.
+* TORRIX - a programming system for operations on vectors and matrices over arbitrary fields and of variable size by S.G. van der Meulen and M. Veldhorst.
+
+==Program representation==
+A feature of ALGOL 68, inherited from the ALGOL tradition, is its different representations. There is a representation language used to describe algorithms in printed work, a strict language (rigorously defined in the Report) and an official reference language intended to be used in actual compiler input. In the examples you will observe bold typeface words, this is the strict language. ALGOL 68's reserved words are effectively in a different namespace from identifiers, and spaces are allowed in identifiers, so this next fragment is legal:
+  int a real int = 3 ;
+The programmer who actually writes code does not always have an option of bold typeface or underlining in the code as this may depend on hardware and cultural issues. So different methods to denote these identifiers have been devised.  This is called a stropping regimes. For example all or some of the following may be available programming representations:
+  int a real int = 3; # the strict language #
+ 'INT'A REAL INT = 3; # QUOTE stropping style #
+ .INT A REAL INT = 3; # POINT stropping style #
+  INT a real int = 3; # UPPER stropping style #
+  int a_real_int = 3; # RES stropping style, there are 61 accepted reserved words #
+All implementations must recognise at least POINT, UPPER and RES inside PRAGMAT sections. Of these, POINT and UPPER stropping are quite common, while RES stropping is in contradiction to the specification (as there are no reserved words). QUOTE (single apostrophe quoting) was the original recommendation, while matched apostrophe quoting, common in ALGOL 60, is not used much in ALGOL 68.
+
+The following characters were recommended for portability, and termed "worthy characters" in the Report on the Standard Hardware Representation of Algol 68:
+* Worthy Characters: ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 "#$%'()*+,-./:;@_|
+This reflected a problem in the 1960s where some hardware didn't support lower-case, nor some other non-ASCII characters, indeed in the 1973 report it was written: "Four worthy characters — "|", "_", "and "" — are often coded differently, even at installations which nominally use the same character set."
+* Base characters: "Worthy characters" are a subset of "base characters".
+
+===Example of different program representations===
+
+ALGOL 68 allows for every natural language to define its own set of keywords Algol-68. As a result, programmers are able to write programs using keywords from their native language.  Below is an example of a simple procedure that calculates "the day following", the code is in two languages: English and German.
+
+# Next day date - English variant #
+  mode date = struct(int day, string month, int year);
+  proc the day following = (date x) date:
+       if day of  x < length of month (month of x, year of x)
+       then (day of x + 1, month of x, year of x)
+       elif month of x = "December"
+       then (1, "January", year of x + 1)
+       else (1, successor of month (month of x), year of x)
+       fi;
+
+# Nachfolgetag - Deutsche Variante #
+  menge datum = tupel(ganz tag, wort monat, ganz jahr);
+  funktion naechster tag nach = (datum x) datum:
+           wenn tag von x < monatslaenge(monat von x, jahr von x)
+           dann (tag von x + 1, monat von x, jahr von x)
+           wennaber monat von x = "Dezember"
+           dann (1, "Januar", jahr von x + 1)
+           ansonsten (1, nachfolgemonat(monat von x), jahr von x)
+           endewenn;
+
+Russian/Soviet example:
+In English Algol68's reverent case statement reads case ~ in ~ out ~ esac, in Cyrillic this reads выб ~ в ~ либо ~ быв.
+
+==Some Vanitas==
+For its technical intricacies, ALGOL 68 needs a cornucopia of methods to deny the existence of something:
+
+skip, "~" or "?"C - an undefined value always syntactically valid,
+ empty - the only value admissible to void, needed for selecting void in a union,
+ void - syntactically like a mode, but not one,
+ nil or "○" - a name not denoting anything, of an unspecified reference mode,
+ () or specifically [1:0]int - a vacuum is an empty array (here specifically of mode []int).
+ undefined - a standards reports procedure raising an exception in the runtime system.
+ ℵ - Used in the standards report to inhibit introspection of certain types. e.g. sema
+
+c.f. below for other examples of ℵ.
+
+The term nil is var always evaluates to true for any variable (but see above for correct use of is :/=:), whereas it is not known to which value a comparison x < skip evaluates for any integer x.
+
+ALGOL 68 leaves intentionally undefined what happens in case of integer overflow, the integer bit representation, and the degree of numerical accuracy for floating point. In contrast, the language Java has been criticized for over-specifying the latter.
+
+Both official reports included some advanced features that were not part of the standard language.  This were indicated with an ℵ and considered effectively private.  Examples include "≮" and "≯" for templates, the  outtype/intype for crude duck typing, and the straightout and straightin operators for "straightening" nested arrays and structures.
+
+Extract from the 1973 report:
+ §10.3.2.2. Transput modes
+ a) mode ℵ simplout = union (≮ℒ int≯, ≮ℒ real≯, ≮ℒ compl≯, bool, ≮ℒ bits≯,
+            char,  char);
+ b) mode ℵ outtype = ¢ an actual - declarer specifying a mode united
+    from a sufficient set of modes none of which is 'void' or contains 'flexible',
+    'reference to', 'procedure' or 'union of' ¢;
+ c) mode ℵ simplin = union (≮ref ℒ int≯, ≮ref ℒ real≯, ≮ref ℒ compl≯, ref bool,
+            ≮ref ℒ bits≯, ref char, ref  char, ref string);
+ d) mode ℵ intype = ¢ ... ¢;
+  
+ §10.3.2.3. Straightening
+ a) op ℵ straightout = (outtype x)  simplout: ¢ the result of "straightening" 'x' ¢;
+ b) op ℵ straightin = (intype x)  simplin: ¢ the result of straightening 'x' ¢;
+
+==Comparisons with other languages==
+* 1973 - Comparative Notes on Algol 68 and PL/I - S. H. Valentine - February 1973
+* 1973 - B. R. Alexander and G. E. Hedrick. A Comparison of PL/1 and ALGOL 68. International Symposium on Computers and Chinese Input/Output Systems. pp. 359–368.
+* 1976 - Evaluation of ALGOL 68, Jovial J3B, Pascal, SIMULA 67, and TACPOL Versus TINMAN - Requirements for a Common High Order Programming Language. 
+* 1976 - A Language Comparison -  A Comparison of the Properties of the Programming Languages ALGOL 68, CAMAC-IML, Coral 66, PAS 1, PEARL, PL/1, PROCOL, RTL/2 in Relation to Real Time Programming - R Roessler; K Schenk - Oct 1976
+* 1977 - Report to the High Order-Language Working Group (HOLWG) - Executive Summary - LANGUAGE EVALUATION COORDINATING COMMITTEE - Evaluation of PL/I, Pascal, ALGOL 68, HAL/S, PEARL, SPL/I, PDL/2, LTR, CS-4, LIS, Euclid, ECL, Moral, RTL/2, FORTRAN, COBOL, ALGOL 60, TACPOL, CMS-2, SIMULA 67, Jovial J3B, Jovial J73 & Coral 66. 
+* 1977 - A comparison of PASCAL and ALGOL 68 - Andrew S. Tanenbaum - June 1977.
+* 1980 - A Critical Comparison of Several Programming - Algol 60, FORTRAN, Pascal and Algol 68.
+* 1993 - Five Little Languages and How They Grew - BLISS, Pascal, Algol 68, BCPL & C - Dennis M. Ritchie - April 1993.
+* 1999 - On Orthogonality: Algol68, Pascal and C
+* 2000 - A Comparison of Arrays  in ALGOL 68 and BLISS - University of Virginia - Michael Walker - Spring 2000
+* 2009 - On Go - oh, go on - How well will Google's Go stand up against Brand X programming language? - David Given - November 2009
+* 2010 - Algol and Pascal from "Concepts in Programming Languages - Block-structured procedural languages" -  by Dr Marcelo Fiore 
+* Comparison of ALGOL 68 and C++.
+
+==Revisions==
+Except where noted (with a superscript), the language described above is that of the "Revised Report(r1)".
+
+===The language of the unrevised report===
+The original language (As per the "Final Report"r0) differs in syntax of the mode cast, and it had the feature of proceduring, i.e. coercing the value of a term into a procedure which evaluates the term. Proceduring would be intended to make evaluations lazy. The most useful application could have been the short-circuited evaluation of boolean operators. In
+ op andf = (bool a,proc bool b)bool:(a | b | false);
+ op orf = (bool a,proc bool b)bool:(a | true | b);
+b is only evaluated if a is true.
+As defined in ALGOL 68, it did not work as expected, for example in the code:
+
+if false andf co proc bool: co ( print ("Should not be executed"); true)
+ then ...
+
+against the programmers naïve expectations the print would be executed as it is only the value of the elaborated enclosed-clause after andf that was procedured. Textual insertion of the commented-out proc bool: makes it work.
+
+Some implementations emulate the expected behaviour for this special case by extension of the language.
+
+Before revision, the programmer could decide to have the arguments of a procedure evaluated serially instead of collaterally by using semicolons instead of commas (gommas).
+
+For example in:
+
+proc test = (real a; real b) :...
+ ...
+ test (x plus 1, x);
+
+The first argument to test is guaranteed to be evaluated before the second, but in the usual:
+
+proc test = (real a, b) :...
+ ...
+ test (x plus 1, x);
+
+then the compiler could evaluate the arguments in whatever order it felt like.
+
+===Extension proposals from IFIP WG 2.1===
+After the revision of the report, some extensions to the language have been proposed to widen the applicability:
+* partial parametrisation (aka Currying): creation of functions (with fewer parameters) by specification of some, but not all parameters for a call, e.g. a function logarithm of two parameters, base and argument, could be specialised to natural, binary or decadic log,
+* module extension: for support of external linkage,  two mechanisms were proposed, bottom-up definition modules, a more powerful version of the facilities from ALGOL 68R and top-down holes, similar to the ENVIRON and USING clauses from ALGOL 68C
+* mode parameters: for implementation of limited parametrical polymorphism (most operations on data structures like lists, trees or other data containers can be specified without touching the pay load).
+So far, only  partial parametrisation has been implemented, in ALGOL68G.
+
+===True ALGOL 68s specification and implementation timeline===
+
+The S3 programming language that was used to write the ICL VME operating system and much other system software on the ICL 2900 Series was a direct derivative of Algol 68. However, it omitted many of the more complex features, and replaced the basic modes with a set of data types that mapped directly to the 2900 Series hardware architecture.
+
+===Implementation specific extensions===
+ALGOL 68R(R) from RRE was the first ALGOL 68 subset implementation,
+running on the ICL 1900.
+Based on the original language, the main subset restrictions were definition before use and no parallel processing.
+This compiler was popular in UK universities in the 1970s, where many computer science students learnt ALGOL 68 as their first programming language; the compiler was renowned for good error messages.
+
+ALGOL 68RS(RS) from RSRE was a portable compiler system written in ALGOL 68RS (bootstrapped from ALGOL 68R), and implemented on a variety of systems including the ICL 2900/Series 39, Multics and
+DEC VAX/VMS.
+The language was based on the Revised Report, but with similar subset restrictions to ALGOL 68R.
+This compiler survives in the form of an Algol68-to-C compiler.
+
+In ALGOL 68S(S) from Carnegie Mellon University the power of parallel processing was improved by adding an orthogonal extension, eventing. Any variable declaration containing keyword event made assignments to this variable eligible for parallel evaluation, i.e. the right hand side was made into a procedure which was moved to one of the processors of the C.mmp multiprocessor system. Accesses to such variables were delayed after termination of the assignment.
+
+Cambridge ALGOL 68C(C) was a portable compiler that implemented a subset of ALGOL 68, restricting operator definitions and omitting garbage collection, flexible rows and formatted transput.
+
+ALGOL 68G(G) by M. van der Veer is an ALGOL 68 implementation for today's computers and operating systems. A minor restriction is that (formatted) transput does not fully conform to the Revised Report.
+
+"Despite good intentions, a programmer may violate portability by inadvertently employing a local extension.  To guard against this, each implementation should provide a PORTCHECK pragmat option.  While this option is in force, the compiler prints a message for each construct that it recognizes as violating some portability constraint."
+
+==Quotes==
+*... The scheme of type composition adopted by C owes considerable debt to Algol 68, although it did not, perhaps, emerge in a form that Algol's adherents would approve of. The central notion I captured from Algol was a type structure based on atomic types (including structures), composed into arrays, pointers (references), and functions (procedures). Algol 68's concept of unions and casts also had an influence that appeared later. Dennis Ritchie Apr 1993.
+* ... C does not descend from Algol 68 is true, yet there was influence, much of it so subtle that it is hard to recover even when I think hard. In particular, the union type (a late addition to C) does owe to A68, not in any details, but in the idea of having such a type at all. More deeply, the type structure in general and even, in some strange way, the declaration syntax (the type-constructor part) was inspired by A68. And yes, of course, "long". Dennis Ritchie, 18 June 1988
+*"Congratulations, your Master has done it" - Niklaus Wirth 
+*The more I see of it, the more unhappy I become - E.W. Dijkstra, 1968 
+* [...] it was said that A68's popularity was inversely proportional to [...] the distance from Amsterdam - Guido van Rossum 
+* [...] The best we could do was to send with it a minority report, stating our considered view that, "... as a tool for the reliable creation of sophisticated programs, the language was a failure." [...]  - C. A. R. Hoare in his Oct 1980 Turing Award Lecture
+** Their actual minority report quote from 1970: "[...] More than ever it will be required from an adequate programming tool that it assists, by structure, the programmer in the most difficult aspects of his job, viz. in the reliable creation of sophisticated programs. In this respect we fail to see how the language proposed here [Algol68] is a significant step forward: on the contrary, we feel that its implicit view of the programmer's task is very much the same as, say, ten years ago. This forces upon us the conclusion that, regarded as a programming tool, the language must be regarded as obsolete. [...]" Signed by: DIJKSTRA, DUNCAN, GARWICK, HOARE, RANDELL, SEEGMUELLER, TURSKI, WOODGER. And then on Dec. 23, 1968, Jan V. Garwick
+
+==See also==
+
+* ALGOL 60
+* ALGOL Y
+* ALGOL N
+* ALGOL 68C
+* ALGOL 68G
+
+* C (programming language)
+* C++
+* Bourne shell
+* Bash
+
+* Steelman language requirements
+* Ada (programming language)
+* Python (programming language)
+
+==References==
+
+* Brailsford, D.F. and Walker, A.N., Introductory ALGOL 68 Programming, Ellis Horwood/Wiley, 1979
+* Lindsey, C.H. and van der Meulen, S.G., Informal Introduction to ALGOL 68, North-Holland, 1971
+* McGettrick, A.D., ALGOL 68, A First and Second Course, Cambridge Univ. Press, 1978
+* Peck, J.E.L., An ALGOL 68 Companion, Univ. of British Columbia, October 1971
+* Tanenbaum, A.S., A Tutorial on ALGOL 68, Computing Surveys 8, 155-190, June 1976 and 9, 255-256, September 1977, http://vestein.arb-phys.uni-dortmund.de/~wb/RR/tanenbaum.pdf
+* Woodward, P.M. and Bond, S.G., ALGOL 68-R Userssic Guide, London, Her Majesty's Stationery Office, 1972
+
+==External links==
+* Revised Report on the Algorithmic Language ALGOL 68 The official reference for users and implementors of the language (large pdf file, scanned from Algol Bulletin)
+* Revised Report on the Algorithmic Language ALGOL 68 Hyperlinked HTML version of the Revised Report
+* A Tutorial on Algol 68, by Andrew S. Tanenbaum, in Computing Surveys, Vol. 8, No. 2, June 1976, with Corrigenda (Vol. 9, No. 3, September 1977)
+* Algol 68 Genie - a GNU GPL Algol 68 compiler-interpreter
+* The Algol 68 project on SourceForge
+* Algol68 Standard Hardware representation (.pdf)
+* Из истории создания компилятора с Алгол 68
+* Algol 68 &ndash; 25 Years in the USSR
+* Система программ динамической поддержки для транслятора с Алгол 68
+* C history with Algol68 heritage
+* McJones, Paul, "Algol 68 implementations and dialects", Software Preservation Group, Computer History Museum, 2011-07-05

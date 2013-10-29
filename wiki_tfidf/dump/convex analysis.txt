@@ -1,0 +1,84 @@
+Convex analysis is the branch of mathematics devoted to the study of properties of convex functions and convex sets, often with applications in convex minimization, a subdomain of optimization theory.
+
+== Convex sets ==
+
+A convex set is a set C ⊆ X, for some vector space X, such that for any x, y ∈ C and λ ∈ 1 then
+:\lambda x + (1 - \lambda)y \in C.
+
+== Convex functions ==
+
+A convex function is any extended real-valued function f : X → R ∪ {±∞} which satisfies Jensen's inequality, i.e. for any x, y ∈ X and any λ ∈ 1 then
+:f(\lambda x + (1 - \lambda)y) \leq \lambda f(x) + (1-\lambda) f(y).
+
+Equivalently, a convex function is any (extended) real valued function such that its epigraph
+:\left\{(x,r) \in X \times \mathbf{R}: f(x) \leq r \right\}
+is a convex set.
+
+== Convex conjugate ==
+
+The convex conjugate of an extended real-valued (not necessarily convex) function f : X → R ∪ {±∞} is f* : X* → R ∪ {±∞} where X* is the dual space of X, and
+
+: f^*(x^*) = \sup_{x \in X} \left \{\langle x^*,x \rangle - f(x) \right \}.
+
+=== Biconjugate ===
+The biconjugate of a function f : X → R ∪ {±∞} is the conjugate of the conjugate, typically written as f** : X → R ∪ {±∞}. The biconjugate is useful for showing when strong or weak duality hold (via the perturbation function).
+
+For any x ∈ X the inequality f**(x) ≤ f(x) follows from the Fenchel–Young inequality.  For proper functions, f = f** if and only if f is convex and lower semi-continuous by Fenchel–Moreau theorem.
+
+== Convex minimization ==
+
+A convex minimization (primal) problem is one of the form
+
+:\inf_{x \in M} f(x)
+
+such that f : X → R ∪ {±∞} is a convex function and M ⊆ X is a convex set.
+
+=== Dual problem ===
+
+In optimization theory, the duality principle states that optimization problems may be viewed from either of two perspectives, the primal problem or the dual problem.
+
+In general given two dual pairs separated locally convex spaces (X, X*) and (Y, Y*). Then given the function f : X → R ∪ {+∞}, we can define the primal problem as finding x such that
+
+:\inf_{x \in X} f(x).
+
+If there are constraint conditions, these can be built into the function f by letting f = f + I_{\mathrm{constraints}} where I is the indicator function.  Then let F : X × Y → R ∪ {±∞} be a perturbation function such that F(x, 0) = f(x).
+
+The dual problem with respect to the chosen perturbation function is given by
+
+:\sup_{y^* \in Y^*} -F^*(0,y^*)
+
+where F* is the convex conjugate in both variables of F.
+
+The duality gap is the difference of the right and left hand sides of the inequality
+
+:\sup_{y^* \in Y^*} -F^*(0,y^*) \le \inf_{x \in X} F(x,0).
+
+This principle is the same as weak duality.  If the two sides are equal to each other then the problem is said to satisfy strong duality.
+
+There are many conditions for strong duality to hold such as:
+*F = F** where F is the perturbation function relating the primal and dual problems and F** is the biconjugate of F;
+* the primal problem is a linear optimization problem;
+* Slater's condition for a convex optimization problem.
+
+==== Lagrange duality ====
+For a convex minimization problem with inequality constraints,
+
+::: minx f(x) subject to gi(x) ≤ 0 for i = 1, ..., m.
+
+the Lagrangian dual problem is
+
+::: supu infx L(x, u) subject to ui(x) ≥ 0 for i = 1, ..., m.
+
+where the objective function L(x, u) is the Lagrange dual function defined as follows:
+
+:L(x,u) = f(x) + \sum_{j=1}^m u_j g_j(x)
+
+== See also ==
+* List of convexity topics
+* Werner Fenchel
+
+== References ==
+
+* 
+* 
+*

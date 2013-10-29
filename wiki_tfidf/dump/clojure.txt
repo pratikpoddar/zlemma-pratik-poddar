@@ -1,0 +1,142 @@
+Clojure (pronounced like "closure") is a dialect of the Lisp programming language created by Rich Hickey. Clojure is a functional general-purpose language, and runs on the Java Virtual Machine, Common Language Runtime, and JavaScript engines. Like other Lisps, Clojure treats code as data and has a sophisticated macro system.
+
+Clojure's focus on programming with immutable values and explicit progression-of-time constructs are intended to facilitate the development of more robust programs, particularly multithreaded ones.
+
+==History==
+
+Rich Hickey is the creator of the Clojure programming language. Before Clojure, he developed dotLisp, a similar project based on the .NET platform. Hickey spent about 2½ years working on Clojure before publicly releasing it, much of that time working exclusively on Clojure without external funding. At the end of this period Hickey sent an email announcing the language to some friends in the Common Lisp community.
+
+==Philosophy==
+Hickey developed Clojure because he wanted a modern Lisp for functional programming, symbiotic with the established Java platform, and designed for concurrency.
+
+Clojure's approach to concurrency is characterized by the concept of identities, which represent a series of immutable states over time. Since states are immutable values, any number of workers can operate on them in parallel, and concurrency becomes a question of managing changes from one state to another. For this purpose, Clojure provides several mutable reference types, each having well-defined semantics for the transition between states.
+
+== Syntax ==
+Like most other Lisps, Clojure's syntax is built on S-expressions that are first parsed into data structures by a reader before being compiled. Clojure's reader supports literal syntax for maps, sets and vectors in addition to lists, and these are given to the compiler as they are. In other words, the Clojure compiler 
+does not compile only list data structures, but supports all of the mentioned types directly.
+Clojure is a Lisp-1, and is not intended to be code-compatible with other dialects of Lisp.
+
+== Macros ==
+Clojure's macro system is very similar to that in Common Lisp with the exception that Clojure's version of the backquote (called "syntax quote") qualifies symbols with their namespace. This helps prevent unintended name capture, as binding to namespace-qualified names is forbidden. It is possible to force a capturing macro expansion, but this must be done explicitly. 
+Clojure also disallows rebinding global names in other namespaces that have been imported into the current namespace.
+
+==Language features==
+*Produces Java Virtual Machine (JVM) bytecode.
+*Tight Java integration: By compiling into JVM Byte code, Clojure applications can be easily packaged and deployed to JVMs and application servers without added complexity. The language also provides macros which make it simple to use existing Java APIs.  Clojure's data structures all implement standard Java Interfaces, making it easy to run code implemented in Clojure from Java.
+*Dynamic development with a read-eval-print loop.
+*Functions as first-class objects.
+*Emphasis on recursion and higher-order functions instead of side-effect-based looping.
+*Lazy sequences.
+*Provides a rich set of immutable, persistent data structures (including hashmaps, sets and lists).
+*Concurrent programming through software transactional memory, an agent system, and a dynamic var system.
+*Multimethods to allow dynamic dispatch on the types and values of any set of arguments (cf. the usual object-oriented polymorphism which dispatches on the type of what is effectively the first method argument).
+
+==Variants==
+Variations on the Clojure language have been developed for platforms other than the JVM:
+* ClojureCLR, a full port of Clojure to the Common Language Runtime, interoperable with .NET libraries
+* ClojureScript, a subset of Clojure, compiled to optimized JavaScript, intended for use in web browsers and mobile devices
+* las3r, a subset of Clojure that runs on the ActionScript Virtual Machine (the Adobe Flash Player platform)
+* clojure-py, an implementation of Clojure in pure Python
+* rouge, an implementation of Clojure on top of YARV in Ruby
+
+==Examples==
+Hello world:
+
+(println "Hello world!")
+
+Defining a function:
+
+(defn square [x]
+  (* x x))
+
+GUI "Hello world" by calling the Java Swing library:
+
+(javax.swing.JOptionPane/showMessageDialog nil "Hello World" )
+
+A thread-safe generator of unique serial numbers (though note that like many other Lisp dialects, Clojure has a built-in gensym function for this purpose):
+
+(let (atom 0)
+  (defn generate-unique-id
+    "Returns a distinct numeric ID for each call."
+    []
+    (swap! i inc)))
+
+An anonymous subclass of java.io.Writer that doesn't write to anything, and a macro using that to silence all prints within it:
+
+(def bit-bucket-writer
+  (proxy [java.io.Writer] []
+    (write [buf] nil)
+    (close []    nil)
+    (flush []    nil)))
+
+(defmacro noprint
+  "Evaluates the given expressions with all printing to *out* silenced."
+  forms
+  `(binding bit-bucket-writer
+     ~@forms))
+
+(noprint
+  (println "Hello, nobody!"))
+
+10 threads manipulating one shared data structure, which consists of 100 vectors each one containing 10 (initially sequential) unique numbers. Each thread then repeatedly selects two random positions in two random vectors and swaps them.
+All changes to the vectors occur in transactions by making use of Clojure's software transactional memory system.
+
+(defn run nitems nthreads niters
+  (let [vec-refs (vec (map (comp ref vec)
+                           (partition nitems (range (* nvecs nitems)))))
+        swap #(let (rand-int nvecs)
+                    v2 (rand-int nvecs)
+                    i1 (rand-int nitems)
+                    i2 (rand-int nitems)
+                (dosync
+                 (let (nth @(vec-refs v1) i1)
+                   (alter (vec-refs v1) assoc i1 (nth @(vec-refs v2) i2))
+                   (alter (vec-refs v2) assoc i2 temp))))
+        report #(do
+                 (prn (map deref vec-refs))
+                 (println "Distinct:"
+                          (count (distinct (apply concat (map deref vec-refs))))))]
+    (report)
+    (dorun (apply pcalls (repeat nthreads #(dotimes niters (swap)))))
+    (report)))
+
+(run 100 10 10 100000)
+
+Output of previous example:
+
+(1 2 3 4 5 6 7 8 9 11 12 13 14 15 16 17 18 19 ...
+ 991 992 993 994 995 996 997 998 999)
+ Distinct: 1000
+ 
+ (318 466 963 619 22 21 273 45 596 639 804 471 394 904 952 75 289 778 ...
+ 216 622 139 651 592 379 228 242 355)
+ Distinct: 1000
+
+==See also==
+* List of JVM languages
+
+== References ==
+
+==Further reading==
+
+* 
+* 
+* 
+* 
+*
+
+==External links==
+
+*GitHub code repository for Clojure
+*A comprehensive overview of Clojure
+*An overview of Clojure 1.2 in reference format
+*Full Disclojure - Screencast
+*Clojure talks on Youtube
+*Clojure talks on Blip.tv
+*clojuredocs.org - Community-powered documentation and examples
+*clojure-doc.org - Community-driven documentation site for the Clojure programming language
+*4clojure.com - Interactive Clojure Problems
+*TryClojure - An online REPL for Clojure
+*Clojure on infoq.com
+*Clojure community and resources on Facebook
+*R.Hickey presentation "Are We There Yet?" where he advocates for the reexamination of basic principles like state, identity, value, time, types, genericity, complexity, as they are used by OOP. 2009

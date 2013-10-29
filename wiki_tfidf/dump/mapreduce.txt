@@ -1,0 +1,231 @@
+MapReduce is a programming model for processing large data sets with a parallel, distributed algorithm on a cluster.
+
+A MapReduce program is composed of a Map() procedure that performs filtering and sorting (such as sorting students by first name into queues, one queue for each name) and a Reduce() procedure that performs a summary operation (such as counting the number of students in each queue, yielding name frequencies). The "MapReduce System" (also called "infrastructure", "framework") orchestrates by marshalling the distributed servers, running the various tasks in parallel, managing all communications and data transfers between the various parts of the system, providing for redundancy and fault tolerance, and overall management of the whole process.
+
+The model is inspired by the map and reduce functions commonly used in functional programming, although their purpose in the MapReduce framework is not the same as their original forms. Furthermore, the key contribution of the MapReduce framework are not the actual map and reduce functions, but the scalability and fault-tolerance achieved for a variety of applications by optimizing the execution engine once.
+
+MapReduce libraries have been written in many programming languages, with different levels of optimization. A popular open-source implementation is Apache Hadoop. The name MapReduce originally referred to the proprietary Google technology and has since been genericized.
+
+==Overview==
+
+'MapReduce' is a framework for processing parallelizable problems across huge datasets using a large number of computers (nodes), collectively referred to as a cluster (if all nodes are on the same local network and use similar hardware) or a grid (if the nodes are shared across geographically and administratively distributed systems, and use more heterogenous hardware). Computational processing can occur on data stored either in a filesystem (unstructured) or in a database (structured).  MapReduce can take advantage of locality of data, processing data on or near the storage assets to decrease transmission of data.
+
+"Map" step: The master node takes the input, divides it into smaller sub-problems, and distributes them to worker nodes. A worker node may do this again in turn, leading to a multi-level tree structure. The worker node processes the smaller problem, and passes the answer back to its master node.
+
+"Reduce" step: The master node then collects the answers to all the sub-problems and combines them in some way to form the output &ndash; the answer to the problem it was originally trying to solve.
+
+MapReduce allows for distributed processing of the map and reduction operations. Provided each mapping operation is independent of the others, all maps can be performed in parallel &ndash; though in practice it is limited by the number of independent data sources and/or the number of CPUs near each source. Similarly, a set of 'reducers' can perform the reduction phase - provided all outputs of the map operation that share the same key are presented to the same reducer at the same time, or if the reduction function is associative.  While this process can often appear inefficient compared to algorithms that are more sequential, MapReduce can be applied to significantly larger datasets than "commodity" servers can handle &ndash; a large server farm can use MapReduce to sort a petabyte of data in only a few hours. The parallelism also offers some possibility of recovering from partial failure of servers or storage during the operation: if one mapper or reducer fails, the work can be rescheduled &ndash; assuming the input data is still available.
+
+Another way to look at MapReduce is as a 5-step parallel and distributed computation:
+
+# Prepare the Map() input – the "MapReduce system" designates Map processors, assigns the K1 input key value each processor would work on, and provides that processor with all the input data associated with that key value.
+# Run the user-provided Map() code – Map() is run exactly once for each K1 key value, generating output organized by key values K2.
+# "Shuffle" the Map output to the Reduce processors – the MapReduce system designates Reduce processors, assigns the K2 key value each processor would work on, and provides that processor with all the Map-generated data associated with that key value.
+# Run the user-provided Reduce() code – Reduce() is run exactly once for each K2 key value produced by the Map step.
+# Produce the final output – the MapReduce system collects all the Reduce output, and sorts it by K2 to produce the final outcome.
+
+Logically these 5 steps can be thought of as running in sequence – each step starts only after the previous step is completed – though in practice, of course, they can be intertwined, as long as the final result is not affected.
+
+In many situations the input data might already be distributed ("sharded") among many different servers, in which case step 1 could sometimes be greatly simplified by assigning Map servers that would process the locally present input data.  Similarly, step 3 could sometimes be sped up by assigning Reduce processors that are as much as possible local to the Map-generated data they need to process.
+
+==Logical view==
+The  Map and Reduce functions of MapReduce are both defined with respect to data structured in (key, value) pairs. Map takes one pair of data with a type in one data domain, and returns a list of pairs in a different domain:
+
+Map(k1,v1) → list(k2,v2)
+
+The Map function is applied in parallel to every pair in the input dataset. This produces a list of pairs for each call.
+After that, the MapReduce framework collects all pairs with the same key from all lists and groups them together, creating one group for each key.
+
+The Reduce function is then applied in parallel to each group, which in turn produces a collection of values in the same domain:
+
+Reduce(k2, list (v2)) → list(v3)
+
+Each Reduce call typically produces either one value v3 or an empty return, though one call is allowed to return more than one value. The returns of all calls are collected as the desired result list.
+
+Thus the MapReduce framework transforms a list of (key, value) pairs into a list of values. This behavior is different from the typical functional programming map and reduce combination, which accepts a list of arbitrary values and returns one single value that combines all the values returned by map.
+
+It is necessary but not sufficient to have implementations of the map and reduce abstractions in order to implement MapReduce. Distributed implementations of MapReduce require a means of connecting the processes performing the Map and Reduce phases. This may be a distributed file system. Other options are possible, such as direct streaming from mappers to reducers, or for the mapping processors to serve up their results to reducers that query them.
+
+===Examples===
+The prototypical MapReduce example counts the appearance of each word in a set of documents:
+
+function map(String name, String document):
+   // name: document name
+   // document: document contents
+   for each word w in document:
+     emit (w, 1)
+ 
+ function reduce(String word, Iterator partialCounts):
+   // word: a word
+   // partialCounts: a list of aggregated partial counts
+   sum = 0
+   for each pc in partialCounts:
+     sum += ParseInt(pc)
+   emit (word, sum)
+
+Here, each document is split into words, and each word is counted by the map function, using the word as the result key. The framework puts together all the pairs with the same key and feeds them to the same call to reduce, thus this function just needs to sum all of its input values to find the total appearances of that word.
+
+As another example, imagine that for a database of 1.1 billion people, one would like to compute the average number of social contacts a person has according to age.  In SQL such a query could be expressed as:
+
+SELECT age, AVG(contacts)
+    FROM social.person
+GROUP BY age
+ORDER BY age
+
+Using MapReduce, the K1 key values could be the integers 1 through 1,100, each representing a batch of 1 million records, the K2 key value could be a person’s age in years, and this computation could be achieved using the following functions:
+
+function Map is
+     input: integer K1 between 1 and 1100, representing a batch of 1 million social.person records
+     for each social.person record in the K1 batch do
+         let Y be the person's age
+         let N be the number of contacts the person has
+         produce one output record 
+     repeat
+ end function
+ 
+ function Reduce is
+     input: age (in years) Y
+     for each input record  do
+         Accumulate in S the sum of N
+         Accumulate in C the count of records so far
+     repeat
+     let A be S/C
+     produce one output record 
+ end function
+
+The MapReduce System would line up the 1,100 Map processors, and would provide each with its corresponding 1 million input records.  The Map step would produce 1.1 billion  records, with Y values ranging between, say, 8 and 103.  The MapReduce System would then line up the 96 Reduce processors by performing shuffling operation of the key/value pairs due to the fact that we need average per age, and provide each with its millions of corresponding input records.  The Reduce step would result in the much reduced set of only 96 output records , which would be put in the final result file, sorted by Y.
+
+==Dataflow==
+The frozen part of the MapReduce framework is a large distributed sort. The hot spots, which the application defines, are:
+* an input reader
+* a Map function
+* a partition function
+* a compare function
+* a Reduce function
+* an output writer
+
+===Input reader===
+The input reader divides the input into appropriate size 'splits' (in practice typically 16 MB to 128 MB) and the framework assigns one split to each Map function. The input reader reads data from stable storage (typically a distributed file system) and generates key/value pairs.
+
+A common example will read a directory full of text files and return each line as a record.
+
+===Map function===
+The Map function takes a series of key/value pairs, processes each, and generates zero or more output key/value pairs. The input and output types of the map can be (and often are) different from each other.
+
+If the application is doing a word count, the map function would break the line into words and output a key/value pair for each word.  Each output pair would contain the word as the key and the number of instances of that word in the line as the value.
+
+===Partition function===
+Each Map function output is allocated to a particular reducer by the application's partition function for sharding purposes. The partition function is given the key and the number of reducers and returns the index of the desired reducer.
+
+A typical default is to hash the key and use the hash value modulo the number of reducers.  It is important to pick a partition function that gives an approximately uniform distribution of data per shard for load-balancing purposes, otherwise the MapReduce operation can be held up waiting for slow reducers 
+(reducers assigned more than their share of data) to finish.
+
+Between the map and reduce stages, the data is shuffled (parallel-sorted / exchanged between nodes) in order to move the data from the map node that produced it to the shard in which it will be reduced.  The shuffle can sometimes take longer than the computation time depending on network bandwidth, CPU speeds, data produced and time taken by map and reduce computations.
+
+===Comparison function===
+The input for each Reduce is pulled from the machine where the Map ran and sorted using the application's comparison function.
+
+===Reduce function===
+The framework calls the application's Reduce function once for each unique key in the sorted order. The Reduce can iterate through the values that are associated with that key and produce zero or more outputs.
+
+In the word count example, the Reduce function takes the input values, sums them and generates a single output of the word and the final sum.
+
+===Output writer===
+The Output Writer writes the output of the Reduce to the stable storage, usually a distributed file system.
+
+==Distribution and reliability==
+MapReduce achieves reliability by parceling out a number of operations on the set of data to each node in the network. Each node is expected to report back periodically with completed work and status updates. If a node falls silent for longer than that interval, the master node (similar to the master server in the Google File System) records the node as dead and sends out the node's assigned work to other nodes. Individual operations use atomic operations for naming file outputs as a check to ensure that there are not parallel conflicting threads running. When files are renamed, it is possible to also copy them to another name in addition to the name of the task (allowing for side-effects).
+
+The reduce operations operate much the same way. Because of their inferior properties with regard to parallel operations, the master node attempts to schedule reduce operations on the same node, or in the same rack as the node holding the data being operated on. This property is desirable as it conserves bandwidth across the backbone network of the datacenter.
+
+Implementations are not necessarily highly reliable. For example, in older versions of Hadoop the NameNode was a single point of failure for the distributed filesystem.  Later versions of Hadoop have high availability with an active/passive failover for the "NameNode."
+
+==Uses==
+MapReduce is useful in a wide range of applications, including distributed pattern-based searching, distributed sorting, web link-graph reversal, term-vector per host, web access log stats, inverted index construction, document clustering, machine learning, and statistical machine translation. Moreover, the MapReduce model has been adapted to several computing environments like multi-core and many-core systems, desktop grids, volunteer computing environments, dynamic cloud environments, and mobile environments.
+
+At Google, MapReduce was used to completely regenerate Google's index of the World Wide Web. It replaced the old ad hoc programs that updated the index and ran the various analyses.
+
+MapReduce's stable inputs and outputs are usually stored in a distributed file system. The transient data is usually stored on local disk and fetched remotely by the reducers.
+
+==Criticism==
+===Lack of novelty===
+David DeWitt and Michael Stonebraker, computer scientists specializing in parallel databases and shared-nothing architectures, have been critical of the breadth of problems that MapReduce can be used for. They called its interface too low-level and questioned whether it really represents the paradigm shift its proponents have claimed it is. They challenged the MapReduce proponents' claims of novelty, citing Teradata as an example of prior art that has existed for over two decades. They also compared MapReduce programmers to Codasyl programmers, noting both are "writing in a low-level language performing low-level record manipulation." MapReduce's use of input files and lack of schema support prevents the performance improvements enabled by common database system features such as B-trees and hash partitioning, though projects such as Pig (or PigLatin), Sawzall, Apache Hive, YSmart, HBase and BigTable are addressing some of these problems.
+
+Greg Jorgensen wrote an article rejecting these views. Jorgensen asserts that DeWitt and Stonebraker's entire analysis is groundless as MapReduce was never designed nor intended to be used as a database.
+
+DeWitt and Stonebraker have subsequently published a detailed benchmark study in 2009 comparing performance of Hadoop's MapReduce and RDBMS approaches on several specific problems. They concluded that relational databases offer real advantages for many kinds of data use, especially on complex processing or where the data is used across an enterprise, but that MapReduce may be easier for users to adopt for simple or one-time processing tasks.
+
+Google has been granted a patent on MapReduce. However, there have been claims that this patent should not have been granted because MapReduce is too similar to existing products. For example, map and reduce functionality can be very easily implemented in Oracle's PL/SQL database oriented language.
+
+===Restricted programming framework===
+MapReduce tasks must be written as acyclic dataflow programs, i.e. a stateless mapper followed by a stateless reducer, that are executed by a batch job scheduler. This paradigm makes repeated querying of datasets difficult and imposes limitations that are felt in fields such as machine learning, where iterative algorithms that revisit a single working set multiple times are the norm.
+
+==Conferences and users groups==
+* The First International Workshop on MapReduce and its Applications (MAPREDUCE'10)  was held  with the HPDC conference and OGF'29 meeting in Chicago, IL.
+* MapReduce Users Groups  around the world.
+
+==See also==
+* Divide and conquer algorithm
+* Cloud computing
+* Big data
+* Data Intensive Computing
+* Algorithmic skeleton - A high-level parallel programming model for parallel and distributed computing
+* Programming with Big Data in R
+* Hadoop, Apache's free and open source implementation of MapReduce.
+* Apache Pig A language and compiler to generate Hadoop programs
+* Pentaho - Open source data integration (Kettle), analytics, reporting, visualization and predictive analytics directly from Hadoop nodes
+* Nutch - An effort to build an open source search engine based on Lucene and Hadoop, also created by Doug Cutting
+* Datameer Analytics Solution (DAS) - data source integration, storage, analytics engine and visualization
+* Apache Accumulo - Secure Big Table
+* HBase - BigTable-model database
+* Hypertable - HBase alternative
+* Apache Cassandra - A column-oriented database that supports access from Hadoop
+* HPCC - LexisNexis Risk Solutions High Performance Computing Cluster
+* Sector/Sphere - Open source distributed storage and processing
+* MongoDB - A scalable, high-performance, open source NoSQL database
+
+==References==
+Specific references:
+
+General references:
+
+* Dean, Jeffrey & Ghemawat, Sanjay (2004). "MapReduce: Simplified Data Processing on Large Clusters". Retrieved Nov. 23, 2011.
+* Matt WIlliams (2009). "Understanding Map-Reduce". Retrieved Apr. 13, 2011.
+
+==External links==
+
+* MapReduce-MPI MapReduce-MPI Library
+
+; Papers
+
+*"CloudSVM: Training an SVM Classifier in Cloud Computing Systems"-paper by F. Ozgur Catak, M. Erdal Balaban, Springer, Lecture Notes in Computer Science,Pervasive Computing and Networked World 2012 from TÜBİTAK and Istanbul University 
+* "A Hierarchical Framework for Cross-Domain MapReduce Execution" — paper by Yuan Luo, Zhenhua Guo, Yiming Sun, Beth Plale, Judy Qiu; from Indiana University and Wilfred Li; from University of California, San Diego
+* "Interpreting the Data: Parallel Analysis with Sawzall" — paper by Rob Pike, Sean Dorward, Robert Griesemer, Sean Quinlan; from Google Labs
+* "Evaluating MapReduce for Multi-core and Multiprocessor Systems" — paper by Colby Ranger, Ramanan Raghuraman, Arun Penmetsa, Gary Bradski, and Christos Kozyrakis; from Stanford University
+* "Why MapReduce Matters to SQL Data Warehousing" — analysis related to the August, 2008 introduction of MapReduce/SQL integration by Aster Data Systems and Greenplum
+* "MapReduce for the Cell B.E. Architecture" — paper by Marc de Kruijf and Karthikeyan Sankaralingam; from University of Wisconsin–Madison
+* "Mars: A MapReduce Framework on Graphics Processors" — paper by Bingsheng He, Wenbin Fang, Qiong Luo, Naga K. Govindaraju, Tuyong Wang; from Hong Kong University of Science and Technology; published in Proc. PACT 2008. It presents the design and implementation of MapReduce on graphics processors.
+* "A Peer-to-Peer Framework for Supporting MapReduce Applications in Dynamic Cloud Environments" — paper by Fabrizio Marozzo, Domenico Talia, Paolo Trunfio; from University of Calabria; published in Cloud Computing: Principles, Systems and Applications, N. Antonopoulos, L. Gillam (Editors), chapt. 7, pp. 113–125, Springer, 2010, ISBN 978-1-84996-240-7.
+* "Map-Reduce-Merge: Simplified Relational Data Processing on Large Clusters" — paper by Hung-Chih Yang, Ali Dasdan, Ruey-Lung Hsiao, and D. Stott Parker; from Yahoo and UCLA; published in Proc. of ACM SIGMOD, pp. 1029–1040, 2007. (This paper shows how to extend MapReduce for relational data processing.)
+* FLuX: the Fault-tolerant, Load Balancing eXchange operator  from UC Berkeley  provides an integration of partitioned parallelism with process pairs.  This results in a more pipelined approach than Google's MapReduce with instantaneous failover, but with additional implementation cost.
+* "A New Computation Model for Rack-Based Computing" — paper by Foto N. Afrati; Jeffrey D. Ullman; from Stanford University; Not published as of Nov 2009. This paper is an attempt to develop a general model in which one can compare algorithms for computing in an environment similar to what map-reduce expects.
+* FPMR: MapReduce framework on FPGA—paper by Yi Shan, Bo Wang, Jing Yan, Yu Wang, Ningyi Xu, Huazhong Yang (2010), in FPGA '10, Proceedings of the 18th annual ACM/SIGDA international symposium on Field programmable gate arrays.
+* "Tiled-MapReduce: Optimizing Resource Usages of Data-parallel Applications on Multicore with Tiling"—paper by Rong Chen, Haibo Chen and Binyu Zang from Fudan University; published in Proc. PACT 2010. It presents the Tiled-MapReduce programming model which optimizes resource usages of MapReduce applications on multicore environment using tiling strategy.
+* "Tiled MapReduce: Efficient and Flexible MapReduce Processing on Multicore with Tiling"—paper by Rong Chen, and Haibo Chen from Shanghai Jiao Tong University; published in ACM TACO, 10(1), 2013. It extends the earlier version of Ostrich to support several usage scenarios such as online and incremental computing on multicore machines.
+* "Scheduling divisible MapReduce computations "—paper by Joanna Berlińska from Adam Mickiewicz University and Maciej Drozdowski from Poznan University of Technology; Journal of Parallel and Distributed Computing 71 (2011) 450-459, . It presents scheduling and performance model of MapReduce.
+* "Nephele/PACTs: A Programming Model and Execution Framework for Web-Scale Analytical Processing"—paper by D. Battré, S. Ewen, F. Hueske, O. Kao, V. Markl, and D. Warneke from TU Berlin published in Proc. of ACM SoCC 2010. The paper introduces the PACT programming model, a generalization of MapReduce, developed in the Stratosphere research project.
+* "MapReduce and PACT - Comparing Data Parallel Programming Models"—paper by A. Alexandrov, S. Ewen, M. Heimel, F. Hueske, O. Kao, V. Markl, E. Nijkamp, and D. Warneke from TU Berlin published in Proc. of BTW 2011.
+
+; Books
+
+* Jimmy Lin and Chris Dyer. "Data-Intensive Text Processing with MapReduce" (manuscript)
+
+;Educational courses
+
+*Cluster Computing and MapReduce course from Google Code University contains video lectures and related course materials from a series of lectures that was taught to Google software engineering interns during the Summer of 2007.
+* MapReduce in a Week course from Google Code University contains a comprehensive introduction to MapReduce including lectures, reading material, and programming assignments.
+* MapReduce course, taught by engineers of Google Boston, part of 2008 Independent Activities Period at MIT.
+
+; Bibliography
+
+* MapReduce bibliography by A. Kamil, 2010

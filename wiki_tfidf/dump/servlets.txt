@@ -1,0 +1,208 @@
+The servlet is a Java programming language class used to extend the capabilities of a server. Although servlets can respond to any types of requests, they are commonly used to extend the applications hosted by web servers, so they can be thought of as Java Applets that run on servers instead of in web browsers. These kinds of servlets are the Java counterpart to other dynamic Web content technologies such as PHP and ASP.NET.
+
+== Introduction ==
+
+Servlets are most often used to:
+* Process or store data that was submitted from an HTML form
+* Provide dynamic content such as the results of a database query
+* Manage state information that does not exist in the stateless HTTP protocol, such as filling the articles into the shopping cart of the appropriate customer
+
+Technically speaking, a "servlet" is a Java class in Java EE that conforms to the Java Servlet API, a protocol by which a Java class may respond to requests. Servlets could in principle communicate over any client–server protocol, but they are most often used with the HTTP protocol. Thus "servlet" is often used as shorthand for "HTTP servlet". Thus, a software developer may use a servlet to add dynamic content to a web server using the Java platform. The generated content is commonly HTML, but may be other data such as XML. Servlets can maintain state in session variables across many server transactions by using HTTP cookies, or URL rewriting.
+
+To deploy and run a servlet, a web container must be used. A web container (also known as a servlet container) is essentially the component of a web server that interacts with the servlets. The web container is responsible for managing the lifecycle of servlets, mapping a URL to a particular servlet and ensuring that the URL requester has the correct access rights.
+
+The Servlet API, contained in the Java package hierarchy , defines the expected interactions of the web container and a servlet.
+
+A  is an object that receives a request and generates a response based on that request. The basic Servlet package defines Java objects to represent servlet requests and responses, as well as objects to reflect the servlet's configuration parameters and execution environment. The package  defines HTTP-specific subclasses of the generic servlet elements, including session management objects that track multiple requests and responses between the web server and a client. Servlets may be packaged in a WAR file as a web application.
+
+Servlets can be generated automatically from Java Server Pages (JSP) by the JavaServer Pages compiler. The difference between servlets and JSP is that servlets typically embed HTML inside Java code, while JSPs embed Java code in HTML. While the direct usage of servlets to generate HTML (as shown in the example below) has become rare, the higher level MVC web framework in Java EE (JSF) still explicitly uses the servlet technology for the low level request/response handling via the FacesServlet. A somewhat older usage is to use servlets in conjunction with JSPs in a pattern called "Model 2", which is a flavor of the model–view–controller pattern.
+
+The current version of Servlet is 3.0.
+
+== History ==
+The Servlet specification was created by Sun Microsystems, with version 1.0 finalized in June 1997. Starting with version 2.3, the specification was developed under the Java Community Process. JSR 53 defined both the Servlet 2.3 and JavaServer Page 1.2 specifications. JSR 154 specifies the Servlet 2.4 and 2.5 specifications. As of March 26, 2010, the current version of the Servlet specification is 3.0.
+
+In his blog on java.net, Sun veteran and GlassFish lead Jim Driscoll details the history of servlet technology. James Gosling first thought of servlets in the early days of Java, but the concept did not become a product until Sun shipped the  product. This was before what is now the Java Platform, Enterprise Edition was made into a specification.
+
+== Compared with other web application models ==
+The advantages of using servlets are their fast performance and ease of use combined with more power over traditional CGI (Common Gateway Interface). Traditional CGI scripts written in Java have a number of disadvantages when it comes to performance:
+* When an HTTP request is made, a new process is created for each call of the CGI script. This overhead of process creation can be very system-intensive, especially when the script does relatively fast operations. Thus, process creation will take more time for CGI script execution. In contrast, for servlets, each request is handled by a separate Java thread within the web server process, omitting separate process forking by the HTTP daemon.
+* Simultaneous CGI request causes the CGI script to be copied and loaded into memory as many times as there are requests. With servlets, there is only one copy that persists across requests and is shared between threads.
+* Only a single instance answers all requests concurrently. This reduces memory usage and makes the management of persistent data easy.
+* A servlet can be run by a servlet container in a restrictive environment, called a sandbox. This is similar to an applet that runs in the sandbox of the web browser. This makes a restrictive use of potentially harmful servlets possible. CGI programs can of course also sandbox themselves, since they are simply OS processes.
+
+Technologies like FastCGI and its derivatives (including SCGI, WSGI) do not exhibit the performance disadvantages of CGI incurred by the constant process spawning. They are, however, roughly as simple as CGI. They are therefore also in contrast with servlets which are substantially more complex.
+
+== Life cycle of a servlet ==
+
+Three methods are central to the life cycle of a servlet. These are init(), service(), and destroy().
+They are implemented by every servlet and are invoked at specific times by the server.
+
+* During initialization stage of the servlet life cycle, the web container initializes the servlet instance by calling the init() method, passing an object implementing the javax.servlet.ServletConfig interface. This configuration object allows the servlet to access name-value initialization parameters from the web application.
+* After initialization, the servlet instance can service client requests. Each request is serviced in its own separate thread. The web container calls the service() method of the servlet for every request. The service() method determines the kind of request being made and dispatches it to an appropriate method to handle the request. The developer of the servlet must provide an implementation for these methods. If a request is made for a method that is not implemented by the servlet, the method of the parent class is called, typically resulting in an error being returned to the requester.
+*  Finally, the web container calls the destroy() method that takes the servlet out of service. The destroy() method, like init(), is called only once in the lifecycle of a servlet.
+
+The following is a typical user scenario of these methods.
+# Assume that a user requests to visit a URL.
+#* The browser then generates an HTTP request for this URL.
+#* This request is then sent to the appropriate server.
+# The HTTP request is received by the web server and forwarded to the servlet container.
+#* The container maps this request to a particular servlet.
+#* The servlet is dynamically retrieved and loaded into the address space of the container.
+# The container invokes the init() method of the servlet.
+#* This method is invoked only when the servlet is first loaded into memory.
+#* It is possible to pass initialization parameters to the servlet so that it may configure itself.
+# The container invokes the service() method of the servlet.
+#* This method is called to process the HTTP request.
+#* The servlet may read data that has been provided in the HTTP request.
+#* The servlet may also formulate an HTTP response for the client.
+# The servlet remains in the container's address space and is available to process any other HTTP requests received from clients.
+#* The service() method is called for each HTTP request.
+# The container may, at some point, decide to unload the servlet from its memory.
+#* The algorithms by which this decision is made are specific to each container.
+# The container calls the servlet's destroy() method to relinquish any resources such as file handles that are allocated for the servlet; important data may be saved to a persistent store.
+# The memory allocated for the servlet and its objects can then be garbage collected.
+
+== Example ==
+
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	throws ServletException, IOException {
+
+String action=request.getParameter("action");
+	EmployeeManager eMgr=new EmployeeManager();
+
+if(action==null) {
+		action="";
+	} else if(action.equals("create")) {
+
+Employee emp=eMgr.Populate(request);
+
+try{
+			eMgr.create(emp);
+		} catch(SQLException e) {
+			System.out.println("Exception="+e);
+		} finally {
+			RequestDispatcher disp=request.getRequestDispatcher("/jsp/confirmation.jsp");
+			disp.forward(request,response);
+		}
+	} else if(action.equals("view")) {
+
+ArrayList empList=new ArrayList();
+		try {
+			empList=eMgr.view();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+
+request.setAttribute("empList1",empList);
+		RequestDispatcher disp=request.getRequestDispatcher("/jsp/view.jsp");
+		disp.forward(request, response);
+
+} else if(action.equals("Update")){
+
+String empId = null;
+		empId = request.getParameter("empRadio");
+		Employee empRecord = new Employee();
+		
+                if(empId==null)	{
+			empId = " ";
+		}
+
+System.out.println(empId);
+		try {
+			empRecord = eMgr.empRecord(empId);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+request.setAttribute("empRecord",empRecord);
+		RequestDispatcher disp = request.getRequestDispatcher("/jsp/update.jsp");
+		disp.forward(request, response);
+	} else if(action.equals("updateAddress")) {
+
+String newContactNo=null;
+		String newAddress=null;
+		String empId=null;
+
+newAddress = request.getParameter("newAddress");
+		newContactNo = request.getParameter("newContactNo");
+		empId=request.getParameter("empId");
+		
+                try {
+		    eMgr.updateAddress(empId,newAddress,newContactNo);
+		} catch (SQLException e) {
+		    e.printStackTrace();
+		}
+
+RequestDispatcher disp = request.getRequestDispatcher("/EmployeeController?action=view");
+		disp.forward(request, response);
+	} else if(action.equals("Delete")) {
+		
+                String empId=null;
+		empId=request.getParameter("empRadio");
+		int flag=0;
+		try {
+			flag = eMgr.delete(empId);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		RequestDispatcher disp = request.getRequestDispatcher("/EmployeeController?action=view");
+		disp.forward(request, response);
+	} else if(action.equals("Search")) {
+
+String empId = null;
+		empId = request.getParameter("search");
+		Employee empRecord = new Employee();
+
+if(empId==null)	{
+			empId = " ";
+		}
+		System.out.println(empId);
+		try {
+			empRecord = eMgr.empRecord(empId);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+request.setAttribute("empRecord2",empRecord);
+		RequestDispatcher disp = request.getRequestDispatcher("/jsp/viewSearch.jsp");
+		disp.forward(request, response);
+	}
+}
+
+==Container servers==
+
+* GlassFish
+* IBM WebSphere Application Server
+* Jetty (web server)
+* Apache Tomcat
+
+== References ==
+
+== External links ==
+* Official servlet tutorials from Sun/Oracle: Java EE 6
+* Beginning and intermediate Servlet and JSP tutorials (with source code)
+* Oracle's Servlet technology overview
+* Servlet specifications download page
+* JSR
+** JSR 315 - Servlet 3.0
+** JSR 154 - Servlet 2.4 and 2.5
+** JSR 53 - Servlet 2.3
+* New features added to Servlet 3.0
+* New features added to Servlet 2.5 at JavaWorld
+
+<!--
+
+Please be cautious adding more external links.
+
+Wikipedia is not a collection of links and should not be used for advertising.
+
+Excessive or inappropriate links will be removed.
+
+See Wikipedia:External links and Wikipedia:Spam for details.
+
+If there are already suitable links, propose additions or replacements on
+the article's talk page, or submit your link to the relevant category at 
+the Open Directory Project (dmoz.org) and link there using .
+
+-->

@@ -1,0 +1,129 @@
+{{Infobox software
+| name                   = jQuery
+| logo                   = 
+| author                 = John Resig
+| developer              = jQuery Team
+| released               = 
+| latest release version = 1.10.2 ()2.0.3 ()
+| latest release date    = 
+| programming language   = JavaScript
+| platform               = See Browser support
+| status                 = Active
+| genre                  = JavaScript library
+| license                = MIT
+| website                = 
+| size                   = { class="wikitable" style="margin:0;"
+-
+ ver  gzip  prod  dev
+-
+ 1.x  31  90.9  266
+-
+ 2.x  27.7  81.6  236
+}
+(KB)
+}}
+jQuery is a multi-browser (cf. cross-browser) JavaScript library designed to simplify the  client-side scripting of HTML. It was released in January 2006 at BarCamp NYC by John Resig. It is currently developed by a team of developers led by Dave Methvin. Used by over 65% of the 10,000 most visited websites, jQuery is the most popular JavaScript library in use today.
+
+jQuery is free, open source software, licensed under the MIT License. jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. jQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library. This enables developers to create abstractions for low-level interaction and animation, advanced effects and high-level, theme-able widgets. The modular approach to the jQuery library allows the creation of powerful dynamic web pages and web applications.
+
+The set of jQuery core features &mdash; DOM element selections, traversal and  manipulation &mdash; enabled by its selector engine (named "Sizzle" from v1.3), created a new "programming style", fusing 
+algorithms and DOM-data-structures; and influenced the architecture of other Javascript frameworks like YUI v3 and Dojo.
+
+Microsoft and Nokia bundle jQuery on their platforms. Microsoft include it with Visual Studio for use within Microsoft's ASP.NET AJAX framework and ASP.NET MVC Framework while Nokia has integrated it into their Web Run-Time widget development platform. jQuery has also been used in MediaWiki since version 1.16.
+
+==Features==
+jQuery includes the following features:
+* DOM element selections using the multi-browser open source selector engine Sizzle, a spin-off of the jQuery project
+* DOM traversal and modification (including support for CSS 1–3)
+* DOM manipulation based on CSS selectors that uses node elements name and node elements attributes (id and class) as criteria to build selectors
+* Events
+* Effects and animations
+* AJAX
+* Extensibility through plug-ins
+* Utilities - such as user agent information, feature detection
+* Compatibility methods that are natively available in modern browsers but need fall backs for older ones - For example the inArray() and each() functions.
+* Multi-browser (not to be confused with cross-browser) support.
+
+===Browser support===
+Both version 1.x and 2.x of jQuery support "current-1 versions" (meaning the current stable version of the browser and the version that preceded it) of Firefox, Google Chrome, Safari, and Opera. The version 1.x also supports Internet Explorer 6 or higher. However, jQuery version 2.x dropped Internet Explorer 6–8 support  (which represents less than 10% of all browsers in use) and can run only with IE 9 or higher.
+
+==Including the library==
+The jQuery library is a single JavaScript file, containing all of its common DOM, event, effects, and Ajax functions. It can be included within a web page by linking to a local copy, or to one of the many copies available from public servers. jQuery has a CDN sponsored by Media Temple (previously at Amazon). Google  and Microsoft host it as well.
+
+It is also possible to include jQuery directly from content delivery networks.
+
+==Usage styles==
+jQuery has two usage styles:
+* Via the $ function, which is a factory method for the jQuery object. These functions, often called commands, are chainable  as they all return jQuery objects.
+* Via $.-prefixed functions. These are utility functions, which do not act upon the jQuery object directly.
+
+Typically, access to and manipulation of multiple DOM nodes begins with the $ function being called with a CSS selector string, which results in a jQuery object referencing matching elements in the HTML page. This node set can be manipulated by calling instance methods on the jQuery object, or on the nodes themselves. For example:
+
+$("div.test").add("p.quote").addClass("blue").slideDown("slow");
+
+This line finds the union of all div tags with class attribute test and all p tags with CSS class attribute quote, adds the class attribute blue to each matched element, and then increases their height with an animation. The $ and add functions affect the matched set, while the addClass and slideDown affect the referenced nodes.
+
+Besides accessing DOM nodes through jQuery object hierarchy, it is also possible to create new DOM elements if a string  passed as the argument to $() looks like HTML. For example, this line finds an HTML SELECT element with ID="carmakes", and adds an OPTION element with value "VAG" and text "Volkswagen":
+
+$('select#carmakes').append($().attr({value:"VAG"}).append("Volkswagen"));
+
+The methods prefixed with $. are convenience methods or affect global properties and behaviour. For example, the following is an example of the iterating function called each in jQuery:
+
+$.each([1,2,3], function() {
+  document.write(this + 1);
+});
+
+This writes "234" to the document.
+
+It is possible to perform browser-independent Ajax queries using $.ajax and associated methods to load and manipulate remote data.
+
+$.ajax({
+  type: "POST",
+  url: "example.php",
+  data: "name=John&location=Boston"
+}).done( function(msg) {
+  alert( "Data Saved: " + msg );
+}).fail( function( xmlHttpRequest, statusText, errorThrown ) {
+  alert(
+    "Your form submission failed.\n\n"
+      + "XML Http Request: " + JSON.stringify( xmlHttpRequest )
+      + ",\nStatus Text: " + statusText
+      + ",\nError Thrown: " + errorThrown );
+});
+
+This example posts the data name=John and location=Boston to example.php on the server. When this request finishes successfully, the success function is called to alert the user. If the request fails, it will alert the user to the failure, the status of the request, and the specific error.
+
+==jQuery plug-ins==
+jQuery's architecture allows developers to create plug-in code to extend its functionality. Currently there are thousands of jQuery plug-ins available on the web that cover a wide range of functionality such as Ajax helpers, web services, datagrids, dynamic lists, XML and XSLT tools, drag and drop, events, cookie handling, modal windows, and even a jQuery-based Commodore 64 emulator.
+
+An important source of jQuery plug-ins is the plugins subdomain of the jQuery Project website. However, in an effort to rid the site of spam, the plugins in this subdomain were accidentally deleted in December 2011. The new site will include a GitHub-hosted repository, which will require developers to resubmit their plugins and to conform to new submission requirements. There are alternative plug-in search engines like jquer.in that take more specialized approaches, such as listing only plug-ins that meet certain criteria (e.g. those that have a public code repository). The tutorials page on the jQuery site has a list of links to jQuery plug-in tutorials under the "Plugin development" section.
+
+==Release history==
+
+==Testing framework==
+
+QUnit is a test automation framework used to test the jQuery project. The jQuery team developed it as an in-house unit testing library. The jQuery team uses it to test its code and plugins but it can test any generic JavaScript code, including server-side JavaScript code.
+
+As of 2011, the jQuery Testing Team uses QUnit with TestSwarm to test each jQuery codebase release.
+
+==See also==
+
+* Comparison of JavaScript frameworks
+* jQuery UI
+* jQuery Mobile
+
+==References==
+
+==Further reading==
+
+* 
+* 
+* 
+*
+
+==External links==
+* 
+* jQuery Beginner's Tutorials
+* Quick API Reference
+* jQuery UI
+* Dmitri Gaskin Google Tech Talk on YouTube, 2008

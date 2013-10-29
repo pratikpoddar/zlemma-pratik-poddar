@@ -1,0 +1,112 @@
+Virtualization, in computing, refers the act of creating a virtual (rather than actual) version of something, including but not limited to a virtual hardware platform, operating system (OS), storage device, or network resources.
+
+The term "virtualization" traces its roots to 1960s mainframes, during which it was a method of logically dividing the mainframes' resources for different applications. Since then, the meaning of the term has evolved to the aforementioned.
+
+==Hardware virtualization==
+
+Hardware virtualization or platform virtualization refers to the creation of a virtual machine that acts like a real computer with an operating system. Software executed on these virtual machines is separated from the underlying hardware resources. For example, a computer that is running Microsoft Windows may host a virtual machine that looks like a computer with the Ubuntu Linux operating system; Ubuntu-based software can be run on the virtual machine.
+
+In hardware virtualization, the host machine is the actual machine on which the virtualization takes place, and the guest machine is the virtual machine. The words host and guest are used to distinguish the software that runs on the physical machine from the software that runs on the virtual machine. The software or firmware that creates a virtual machine on the host hardware is called a hypervisor or Virtual Machine Manager.
+
+Different types of hardware virtualization include:
+# Full virtualization: Almost complete simulation of the actual hardware to allow software, which typically consists of a guest operating system, to run unmodified.
+# Partial virtualization: Some but not all of the target environment is simulated. Some guest programs, therefore, may need modifications to run in this virtual environment.
+# Paravirtualization: A hardware environment is not simulated; however, the guest programs are executed in their own isolated domains, as if they are running on a separate system. Guest programs need to be specifically modified to run in this environment.
+
+Hardware-assisted virtualization is a way of improving the efficiency of hardware virtualization. It involves employing specially designed CPUs and hardware components that help improve the performance of a guest environment.
+
+Hardware virtualization can be viewed as part of an overall trend in enterprise IT that includes autonomic computing, a scenario in which the IT environment will be able to manage itself based on perceived activity, and utility computing, in which computer processing power is seen as a utility that clients can pay for only as needed. The usual goal of virtualization is to centralize administrative tasks while improving scalability and overall hardware-resource utilization. With virtualization, several operating systems can be run in parallel on a single central processing unit (CPU). This parallelism tends to reduce overhead costs and differs from multitasking, which involves running several programs on the same OS. Using virtualization, an enterprise can better manage updates and rapid changes to the operating system and applications without disrupting the user. "Ultimately, virtualization dramatically improves the efficiency and availability of resources and applications in an organization. Instead of relying on the old model of “one server, one application” that leads to under utilized resource, virtual resources are dynamically applied to meet business needs without any excess fat" (ConsonusTech).
+
+Hardware virtualization is not the same as hardware emulation. In hardware emulation, a piece of hardware imitates another, while in hardware virtualization, a hypervisor (a piece of software) imitates a particular piece of computer hardware or the entire computer. Furthermore, a hypervisor is not the same as an emulator; both are computer programs that imitate hardware, but their domain of use in language differs.
+
+===Video game console emulation===
+
+A video game console emulator is a program that allows a personal computer or video game console to emulate a different video game console's behavior. Video game console emulators and hypervisors both perform hardware virtualization; the fact that words like "virtualization", "virtual machine", "host" and "guest" is not used in conjunction with console emulators concerns linguistics, rather than computer science.
+
+===Snapshotting===
+
+A snapshot is the state of a virtual machine, and, generally, its storage devices, at an exact point in time.  Snapshots are "taken" by simply giving an order to do so at a given time, and can be "reverted" to on demand, with the effect that the VM appears (ideally) exactly as it did when the snapshot was taken.
+
+The capability is, for example, useful as an extremely rapid backup technique, prior to a risky operation.  It also provides the foundation for other advanced capabilities (discussed below).
+
+Virtual machines frequently use virtual disks for storage.  In a very simple case, for example, a 10 gigabyte hard disk is simulated with 10 gigabyte flat file.  Any requests by the VM for a location on its physical disk (which does not "exist" as an actual physical object in and of itself) are transparently translated into an operation on the corresponding file (which does exist as part of an actual storage device).
+
+Once such a translation layer is present, however, it is possible to intercept the operations and send them to different files, depending on various criteria.  In a snapshotting application, every time a snapshot is taken, a new file is created, and used as an overlay.  Whenever the VM does a write, the date is written to the topmost (current) overlay; whenever it does a read, each overlay is checked, working from the most recent back, until the most recent write to the requested location is found.  In this manner, the entire stack of snapshots is, subjectively, a single coherent disk.
+
+The RAM memory of the system can be managed in a similar way (though in the simplest systems, snapshots are disk-only, and the VM must be restarted).
+
+Generally, referencing a snapshot means to reference that snapshot, and all prior snapshots on which it is based, down to the initial state when the VM was created.
+
+To revert to a prior snapshot simply means to restart (or resume, if a memory state, processor state, and peripheral state snapshots are available in addition to disk states) the machine using only the overlays available up to a specific exact point in time (when the snapshot was taken, which resulted in new overlay files, rendering the ones that had been in use an instant before read-only), plus a new set of overlays to hold the current running state of the machine.
+
+===Teleportation===
+
+The snapshots described above can be moved to another host machine with its own hypervisor; when the VM is temporarily stopped, snapshotted, moved, and then resumed on the new host, this is known as teleportation (or migration).  If the older snapshots are kept in sync regularly, this operation can be quite fast, and allow the VM to provide uninterrupted service while its prior physical host is, for example, taken down for physical maintenance.
+
+===Failover===
+
+Similar to teleportation above, failover allows the VM to continue operations if the host fails. However, in this case, the VM continues operation from the last-known coherent state, rather than the current state, based on whatever materials the backup server was last provided with.
+
+===Challenges===
+An issue with virtualization is the complexities of licensing. For example, a server running a Linux OS attempting to offer a virtualized Windows Server must still satisfy licensing requirements. Therefore the potential benefits and flexibility of on-demand virtualization must be balanced against the requirements of closed-source, proprietary systems. Some vendors of proprietary software have updated their licensing schemes to address virtualization.
+
+Virtualized desktop results in dependence on centralized servers (for computing and SAN storage) and the network (and higher-bandwidth requirements). This leaves the end users vulnerable to server and network outages or capacity limits.
+
+==Desktop virtualization==
+
+Desktop virtualization is the concept of separating the logical desktop from the physical machine.
+
+One form of desktop virtualization, virtual desktop infrastructure (VDI), can be thought as a more advanced form of hardware virtualization. Rather than interacting with a host computer directly via a keyboard, mouse, and monitor, the user interacts with the host computer using another desktop computer or a mobile device by means of a network connection, such as a LAN, Wireless LAN or even the Internet. In addition, the host computer in this scenario becomes a server computer capable of hosting multiple virtual machines at the same time for multiple users.
+
+As organizations continue to virtualize and converge their data center environment, client architectures also continue to evolve in order to take advantage of the predictability, continuity, and quality of service delivered by their Converged Infrastructure. For example, companies like HP and IBM provide a hybrid VDI model with a range of virtualization software and delivery models to improve upon the limitations of distributed client computing. Selected client environments move workloads from PCs and other devices to data center servers, creating well-managed virtual clients, with applications and client operating environments hosted on servers and storage in the data center. For users, this means they can access their desktop from any location, without being tied to a single client device. Since the resources are centralized, users moving between work locations can still access the same client environment with their applications and data. For IT administrators, this means a more centralized, efficient client environment that is easier to maintain and able to more quickly respond to the changing needs of the user and business.
+
+Another form, session virtualization, allows multiple users to connect and log into a shared but powerful computer over the network and use it simultaneously. Each is given a desktop and a personal folder in which they store their files. With Multiseat configuration, session virtualization can be accomplished using a single PC with multiple monitors keyboards and mice connected.
+
+Thin clients, which are seen in desktop virtualization, are simple and/or cheap computers that are primarily designed to connect to the network. They may lack significant hard disk storage space, RAM or even processing power, but many organizations are beginning to look at the cost benefits of eliminating “thick client” desktops that are packed with software (and require software licensing fees) and making more strategic investments.
+<!--
+Using desktop virtualization allows your company to stay more flexible in an ever changing market.  Having virtual desktops allows for development to be implemented quicker and more expertly.  Proper testing can also be done without the need to disturb the end user.  Moving your desktop environment to the cloud also allows for less single points of failure if you allow a third party to control your security and infrastructure.  
+-->
+Desktop virtualization simplifies software versioning and patch management, where the new image is simply updated on the server, and the desktop gets the updated version when it reboots. It also enables centralized control over what applications the user is allowed to have access to on the workstation.
+
+Moving virtualised desktops into the cloud creates hosted virtual desktops (HVD), where the desktop images are centrally managed and maintained by a specialist hosting firm. Benefits include scalability and the reduction of capital expenditure, which is replaced by a monthly operational cost.
+
+==Other types==
+;Software
+* Operating system-level virtualization, hosting of multiple virtualized environments within a single OS instance.
+* Application virtualization and workspace virtualization, the hosting of individual applications in an environment separated from the underlying OS. Application virtualization is closely associated with the concept of portable applications.
+* Service virtualization, emulating the behavior of dependent (e.g., third-party, evolving, or not implemented) system components that are needed to exercise an application under test (AUT) for development or testing purposes. Rather than virtualizing entire components, it virtualizes only specific slices of dependent behavior critical to the execution of development and testing tasks.
+
+;Memory
+* Memory virtualization, aggregating random-access memory (RAM) resources from networked systems into a single memory pool
+* Virtual memory, giving an application program the impression that it has contiguous working memory, isolating it from the underlying physical memory implementation
+
+;Storage
+* Storage virtualization, the process of completely abstracting logical storage from physical storage
+* Distributed file system, any file system that allows access to files from multiple hosts sharing via a computer network
+* Virtual file system, an abstraction layer on top of a more concrete file system, allowing client applications to access different types of concrete file systems in a uniform way
+* Storage hypervisor, the software that manages storage virtualization and combines physical storage resources into one or more flexible pools of logical storage
+* Virtual disk drive, a computer program that emulates a disk drive such as a hard disk drive or optical disk drive (see comparison of disc image software)
+
+;Data
+* Data virtualization, the presentation of data as an abstract layer, independent of underlying database systems, structures and storage.
+* Database virtualization, the decoupling of the database layer, which lies between the storage and application layers within the application stack over all.
+
+;Network
+* Network virtualization, creation of a virtualized network addressing space within or across network subnets
+* Virtual private network (VPN), a network protocol that replaces the actual wire or other physical media in a network with an abstract layer, allowing a network to be created over the Internet
+
+==Nested virtualization==
+Nested virtualization refers to virtualized virtualization, or simulation of a virtual machine within another. The general concept can be extended to an arbitrary depth. A nested guest virtual machine need not be homogenous with its host virtual machine (e.g., application virtualization within hardware virtualization).
+
+==See also==
+* Timeline of virtualization development
+* Network Functions Virtualization
+* Smarter Computing
+* Emulation (computing)
+* Computer simulation
+* Numeronym (explains that "V12N" is an abbreviation for "virtualization")
+* Consolidation ratio
+* I/O virtualization
+* Application checkpointing
+
+==References==

@@ -1,0 +1,180 @@
+Econometrics is the application of mathematics, statistical methods,  and, more recently, computer science, to economic data and is described as the branch of economics that aims to give empirical content to economic relations. More precisely, it is "the quantitative analysis of actual economic phenomena based on the concurrent development of theory and observation, related by appropriate methods of inference." An introductory economics textbook describes econometrics as allowing economists "to sift through mountains of data to extract simple relationships."  The first known use of the term "econometrics" (in cognate form) was by Paweł Ciompa in 1910. Ragnar Frisch is credited with coining the term in the sense that it is used today.• H. P. Pesaran (1990), "Econometrics," Econometrics: The New Palgrave, p. 2, citing Ragnar Frisch (1936), "A Note on the Term 'Econometrics'," Econometrica, 4(1), p. 95.   • Aris Spanos (2008), "statistics and economics,"  The New Palgrave Dictionary of Economics, 2nd Edition. Abstract.
+
+Econometrics is the unification of economics, mathematics, and statistics. This unification produces more than the sum of its parts. Econometrics adds empirical content to economic theory allowing theories to be tested and used for forecasting and policy evaluation.
+
+==Basic econometric models: linear regression==
+The basic tool for econometrics is the linear regression model. In modern econometrics, other statistical tools are frequently used, but linear regression is still the most frequently used starting point for an analysis.  Estimating a linear regression on two variables can be visualized as fitting a line through data points representing paired values of the independent and dependent variables.
+
+For example, consider Okun's law, which relates GDP growth to the unemployment rate. This relationship is represented in a linear regression where the change in unemployment rate (\Delta\ Unemployment) is a function of an intercept ( \beta_0 ), a given value of GDP growth multiplied by a slope coefficient  \beta_1  and an error term, \epsilon:
+
+: \Delta\ Unemployment= \beta_0 + \beta_1\text{Growth} + \varepsilon.
+
+The unknown parameters  \beta_0  and  \beta_1  can be estimated.  Here  \beta_1  is estimated to be −1.77 and  \beta_0  is estimated to be 0.83. This means that if GDP grew one point faster, the unemployment rate would be predicted to drop by .94 points (−1.77*1+0.83).  The model could then be tested for statistical significance as to whether an increase in growth is associated with a decrease in the unemployment, as hypothesized. If the estimate of  \beta_1  were not significantly different from 0, the test would fail to find evidence that changes in the growth rate and unemployment rate were related.
+
+==Theory==
+
+Econometric theory uses statistical theory to evaluate and develop econometric methods. Econometricians try to find estimators that have desirable statistical properties including unbiasedness, efficiency, and consistency. An estimator is unbiased if its expected value is the true value of the parameter; It is consistent if it converges to the true value as sample size gets larger, and it is efficient if the estimator has lower standard error than other unbiased estimators for a given sample size.  Ordinary least squares (OLS) is often used for estimation since it provides the BLUE or "best linear unbiased estimator" (where "best" means most efficient, unbiased estimator) given the Gauss-Markov assumptions. When these assumptions are violated or other statistical properties are desired, other estimation techniques such as maximum likelihood estimation, generalized method of moments, or generalized least squares are used. Estimators that incorporate prior beliefs are advocated by those who favor Bayesian statistics over traditional,  classical or "frequentist" approaches.
+
+===Gauss–Markov theorem===
+The Gauss–Markov theorem shows that the OLS estimator is the best (minimum variance), unbiased estimator assuming the model is linear, the expected value of the error term is zero, errors are homoskedastic and not autocorrelated, and there is no perfect multicollinearity.
+
+====Linearity====
+The dependent variable is assumed to be a linear function of the variables specified in the model. The specification must be linear in its parameters. This does not mean that there must be a linear relationship between the independent and dependent variables. The independent variables can take non-linear forms as long as the parameters are linear.  The equation  y = \alpha + \beta x^2, \, qualifies as linear while  y = \alpha + \beta^2 x can be transformed to be linear by replacing (beta)^2 by another parameter, say gamma. An equation with a parameter dependent on an independent variable does not qualify as linear, for example y = alpha + beta(x) * x, where beta(x) is a function of x.
+
+Data transformations can be used to convert an equation into a linear form. For example, the Cobb–Douglas function—often used in economics—is nonlinear:
+:Y=AL^{\alpha}K^{\beta}\varepsilon \,
+
+But it can be expressed in linear form by taking the natural logarithm of both sides:
+ln Y=ln A + \alpha ln L + \beta lnK + ln\varepsilon
+
+This assumption also covers specification issues: assuming that the proper functional form has been selected and there are no omitted variables.
+
+====Expected error is zero====
+:\operatorname{E}[\,\varepsilon\,] = 0.
+The expected value of the error term is assumed to be zero. This assumption can be violated if the measurement of the dependent variable is consistently positive or negative. The mis-measurement will bias the estimation of the intercept parameter, but the slope parameters will remain unbiased.
+
+The intercept may also be biased if there is a logarithmic transformation. See the Cobb-Douglas equation above. The multiplicative error term will not have a mean of 0, so this assumption will be violated.
+
+This assumption can also be violated in limited dependent variable models. In such cases, both the intercept and slope parameters may be biased.
+
+====Spherical errors====
+:\operatorname{Var}[\,\varepsilon|X\,] = \sigma^2 I_n,
+Error terms are assumed to be spherical otherwise the OLS estimator is inefficient.  The OLS estimator remains unbiased, however. Spherical errors occur when errors have both uniform variance (homoscedasticity) and are uncorrelated with each other. The term "spherical errors" will describe the multivariate normal distribution: if \operatorname{Var}[\,\varepsilon|X\,] = \sigma^2 I_n in the multivariate normal density, then the equation f(x)=c is the formula for a “ball” centered at μ with radius σ in n-dimensional space.
+
+Heteroskedacity occurs when the amount of error is correlated with an independent variable. For example, in a regression on food expenditure and income, the error is correlated with income.  Low income people generally spend a similar amount on food, while high income people may spend a very large amount or as little as low income people spend. Heteroskedacity can also be caused by changes in measurement practices. For example, as statistical offices improve their data, measurement error decreases, so the error term declines over time.
+
+This assumption is violated when there is autocorrelation.  Autocorrelation can be visualized on a data plot when a given observation is more likely to lie above a fitted line if adjacent observations also lie above the fitted regression line. Autocorrelation is common in time series data where a data series may experience "inertia." If a dependent variable takes a while to fully absorb a shock. Spatial autocorrelation can also occur geographic areas are likely to have similar errors. Autocorrelation may be the result of misspecification such as choosing the wrong functional form. In these cases, correcting the specification is one possible way to deal with autocorrelation.
+
+In the presence of non-spherical errors, the generalized least squares estimator can be shown to be BLUE.
+
+====Exogeneity of independent variables====
+:\operatorname{E}[\,\varepsilon|X\,] = 0.
+This assumption is violated if the variables are endogenous. Endogeneity can be the result of simultaneity, where causality flows back and forth between both the dependent and independent variable. Instrumental variable techniques are commonly used to address this problem.
+
+====Full rank====
+The sample data matrix must have full rank or OLS cannot be estimated. There must be at least one observation for every parameter being estimated and the data cannot have perfect multicollinearity. Perfect multicollinearity will occur in a "dummy variable trap" when a base dummy variable is not omitted resulting in perfect correlation between the dummy variables and the constant term.
+
+Multicollinearity (as long as it is not "perfect") can be present resulting in a less efficient, but still unbiased estimate.
+
+==Methods==
+
+Applied econometrics uses theoretical econometrics and real-world data for assessing economic theories, developing econometric models, analyzing economic history, and forecasting.
+
+Econometrics may use standard statistical models to study economic questions, but most often they are with observational data, rather than in controlled experiments. In this, the design of observational studies in econometrics is similar to the design of studies in other observational disciplines, such as astronomy, epidemiology, sociology and political science. Analysis of data from an observational study is guided by the study protocol, although exploratory data analysis may by useful for generating new hypotheses. Economics often analyzes systems of equations and inequalities, such as supply and demand hypothesized to be in equilibrium. Consequently, the field of econometrics has developed methods for identification and estimation of simultaneous-equation models. These methods are analogous to methods used in other areas of science, such as the field of system identification in systems analysis and control theory.  Such  methods may allow researchers to estimate models and investigate their empirical consequences, without directly manipulating the system.
+
+One of the fundamental statistical methods used by econometricians is regression analysis. Regression methods are important in econometrics because economists typically cannot use controlled experiments. Econometricians often seek illuminating natural experiments in the absence of evidence from controlled experiments. Observational data may be subject to omitted-variable bias and a list of other problems that must be addressed using causal analysis of simultaneous-equation models.
+
+===Experimental economics===
+In recent decades, econometricians have increasingly turned to use of experiments to evaluate the often-contradictory conclusions of observational studies. Here, controlled and randomized experiments provide statistical inferences that may yield better empirical performance than do purely observational studies.• H. Wold 1954. "Causality and Econometrics," Econometrica, 22(2), p p. 162-177.   • Kevin D. Hoover (2008). "causality in economics and econometrics," The New Palgrave Dictionary of Economics, 2nd Edition. Abstract and galley proof.
+
+===Data===
+Data sets to which econometric analyses are applied can be classified as time-series data, cross-sectional data, panel data, and multidimensional panel data.  Time-series data sets contain observations over time; for example, inflation over the course of several years. Cross-sectional data sets contain observations at a single point in time; for example, many individuals' incomes in a given year.  Panel data sets contain both time-series and cross-sectional observations. Multi-dimensional panel data sets contain observations across time, cross-sectionally, and across some third dimension. For example, the Survey of Professional Forecasters contains forecasts for many forecasters (cross-sectional observations), at many points in time (time series observations), and at multiple forecast horizons (a third dimension).
+
+===Instrumental variables===
+In many econometric contexts, the commonly-used ordinary least squares method may not recover the theoretical relation desired or may produce estimates with poor statistical properties, because the assumptions for valid use of the method are violated. One widely-used remedy is the method of instrumental variables (IV). For an economic model described by more than one equation, simultaneous-equation methods may be used to remedy similar problems, including two IV variants, Two-Stage Least Squares (2SLS), and Three-Stage Least Squares (3SLS).
+
+===Computational methods===
+Computational concerns are important for evaluating econometric methods and for use in decision making.• Keisuke Hirano (2008). "decision theory in econometrics," The New Palgrave Dictionary of Economics, 2nd Edition. Abstract.   • James O. Berger (2008). "statistical decision theory," The New Palgrave Dictionary of Economics, 2nd Edition.  Abstract. Such concerns include mathematical well-posedness: the existence, uniqueness, and stability of any solutions to econometric equations. Another concern is the numerical efficiency and accuracy of software. A third concern is also the usability of econometric software.• Vassilis A. Hajivassiliou (2008). "computational methods in econometrics," The New Palgrave Dictionary of Economics, 2nd Edition. Abstract.   • Richard E. Quandt (1983). "Computational Problems and Methods,"  ch. 12, in Handbook of Econometrics, v. 1, pp. 699-764.   • Ray C. Fair (1996). "Computational Methods for Macroeconometric Models," Handbook of Computational Economics, v. 1, pp. [http://www.sciencedirect.com/science/article/pii/S1574002196010052143]-169.
+
+===Structural econometrics===
+Structural econometrics extends the ability of researchers to analyze data by using economic models as the lens through which to view the data. The benefit of this approach is that any policy recommendations are not subject to the Lucas critique since counter-factual analyses take an agent's re-optimization into account. Structural econometric analyses begin with an economic model that captures the salient features of the agents under investigation. The researcher then searches for parameters of the model that match the outputs of the model to the data. There are two ways of doing this. The first requires the researcher to completely solve the model and then use maximum likelihood. However, there have been many advances that can bypass the full solution of the model and that estimate models in two stages. Importantly, these methods allow the researcher to consider more complicated models with strategic interactions and multiple equilibria.
+
+A good example of structural econometrics is in the estimation of first price sealed bid auctions with independent private values. The key difficulty with bidding data from these auctions is that bids only partially reveal information on the underlying valuations, bids shade the underlying valuations. One would like to estimate these valuations in order to understand the magnitude of profits each bidder makes. More importantly, it is necessary to have the valuation distribution in hand to engage in mechanism design. In a first price sealed bid auction the expected payoff of a bidder is given by:
+: (v-b)\Pr(b\ \textrm{wins}) 
+where v is the bidder valuation, b is the bid. The optimal bid b^* solves a first order condition:
+: (v-b^*)\frac{\partial \Pr(b^*\ \textrm{wins})}{\partial b}-\Pr(b^*\ \textrm{wins})=0 
+which can be re-arranged to yield the following equation for v
+: v=b^*+\frac{\Pr(b^*\ \textrm{wins})}{\partial \Pr(b^*\ \textrm{wins})/\partial b} 
+Notice that the probability that a bid wins an auction can be estimated from a data set of completed auctions, where all bids are observed. This can be done using simple non-parametric estimators. If all bids are observed, it is then possible to use the above relation and the estimated probability function and its derivative to point wise estimate the underlying valuation. This will then allow the investigator to estimate the valuation distribution.
+
+==Example==
+A simple example of a relationship in econometrics from the field of labor economics is:
+
+: \ln(\text{wage}) = \beta_0 + \beta_1 (\text{years of education}) + \varepsilon.
+
+This example assumes that the natural logarithm of a person's wage is a linear function of the number of years of education that person has acquired. The parameter \beta_1 measures the increase in the natural log of the wage attributable to one more year of education.    The term \varepsilon is a random variable representing all other factors that may have direct influence on wage. The econometric goal is to estimate the parameters, \beta_0 \mbox{ and } \beta_1  under specific assumptions about the random variable \varepsilon. For example, if \varepsilon is uncorrelated with years of education, then the equation can be estimated with ordinary least squares.
+
+If the researcher could randomly assign people to different levels of education, the data set thus generated would allow estimation of the effect of changes in years of education on wages. In reality, those experiments cannot be conducted. Instead, the econometrician observes the years of education of and the wages paid to people who differ along many dimensions. Given this kind of data, the estimated coefficient on Years of Education in the equation above reflects both the effect of education on wages and the effect of other variables on wages, if those other variables were correlated with education. For example, people born in certain places may have higher wages and higher levels of education. Unless the econometrician controls for place of birth in the above equation, the effect of birthplace on wages may be falsely attributed to the effect of education on wages.
+
+The most obvious way to control for birthplace is to include a measure of the effect of birthplace in the equation above. Exclusion of birthplace, together with the assumption that \epsilon is uncorrelated with education produces a misspecified model. Another technique is to include in the equation additional set of measured covariates which are not instrumental variables, yet render \beta_1 identifiable.  An overview of econometric methods used to study this problem were provided by Card (1999).
+
+==Journals==
+The main journals which publish work in econometrics are Econometrica, the Journal of Econometrics, the Review of Economics and Statistics, Econometric Theory, the Journal of Applied Econometrics, Econometric Reviews, the Econometrics Journal, Applied Econometrics and International Development, the Journal of Business & Economic Statistics, and the Journal of Economic and Social Measurement.
+
+==Limitations and criticisms==
+
+Like other forms of statistical analysis, badly specified econometric models may show a spurious correlation where two variables are correlated but causally unrelated. In a study of the use of econometrics in major economics journals, McCloskey  concluded that economists report p values (following the Fisherian tradition of tests of significance of point null-hypotheses), neglecting concerns of type II errors; economists fail to report estimates of the size of effects (apart from statistical significance) and to discuss their economic importance.  Economists also fail to use economic reasoning for model selection, especially for deciding which variables to include in a regression.
+
+In some cases, economic variables cannot be experimentally manipulated as treatments randomly assigned to subjects. In such cases, economists rely on observational studies, often using data sets with many strongly associated covariates, resulting in enormous numbers of models with similar explanatory ability but different covariates and regression estimates. Regarding the plurality of models compatible with observational data-sets, Edward Leamer urged that "professionals ... properly withhold belief until an inference can be shown to be adequately insensitive to the choice of assumptions".
+
+Economists from the Austrian School argue that aggregate economic models are not well suited to describe economic reality because they waste a large part of specific knowledge. Friedrich Hayek in his The Use of Knowledge in Society argued that "knowledge of the particular circumstances of time and place" is not easily aggregated and is often ignored by professional economists.
+
+==Notable econometricians==
+*Sir James Ball
+*Victor Chernozhukov
+*James Durbin
+*William Greene
+*Lars Peter Hansen
+*Jerry Hausman
+*Fumio Hayashi
+*James Heckman
+*Guido Imbens
+*Lawrence Klein
+*CEV Leser
+*Whitney Newey
+*Halbert White
+*Jeff Wooldridge
+
+==See also==
+
+* Augmented Dickey–Fuller test
+* Choice modelling
+* Cowles Foundation
+* Econometric software
+* Financial modeling
+* Granger causality
+* Important publications in econometrics
+* Macroeconomic model
+* Methodological individualism
+* Predetermined variables
+* Single equation methods (econometrics)
+* Spatial econometrics
+* Unit root
+
+==Notes==
+
+==References==
+* Handbook of Econometrics Elsevier. Links to volume chapter-preview links:    Zvi Griliches and Michael D. Intriligator, ed. (1983). v. 1; (1984),v. 2; (1986), description, v. 3; (1994), description, v. 4    Robert F. Engle and Daniel L. McFadden, ed. (2001).Description,  v. 5    James J. Heckman and Edward E. Leamer, ed. (2007). Description, v. 6A & v. 6B
+* Handbook of Statistics, v. 11, Econometrics (1993), Elsevier. Links to first-page chapter previews.
+* International Encyclopedia of the Social & Behavioral Sciences (2001), Statistics, "Econometrics and Time Series," links to first-page previews of 21 articles.
+* Angrist, Joshua & Pischke, Jörn‐Steffen (2010). "The Credibility Revolution in Empirical Economics: How Better Research Design Is Taking the Con out of Econometrics],  24(2), , pp. 3–30.  Abstract.
+* Eatwell,  John, et al., eds. (1990).  Econometrics: The New Palgrave.  Article-preview links (from The New Palgrave: A Dictionary of Economics, 1987).
+* 
+* Greene, William H. (1999, 4th ed.) Econometric Analysis, Prentice Hall.
+* Hayashi, Fumio. (2000) Econometrics, Princeton University Press. ISBN 0-691-01018-8 Description and contents links.
+* Hamilton, James D. (1994) Time Series Analysis, Princeton University Press. Description and preview.
+* Hughes Hallett, Andrew J. "Econometrics and the Theory of Economic Policy: The Tinbergen-Theil Contributions 40 Years On," Oxford Economic Papers (1989) 41#1 pp 189–214
+* Kelejian, Harry H., and Wallace E. Oates (1989, 3rd ed.) Introduction to Econometrics.
+* 
+* Russell Davidson and James G. MacKinnon (2004). Econometric Theory and Methods. New York: Oxford University Press. Description.
+* Mills, Terence C., and Kerry Patterson, ed. Palgrave Handbook of Econometrics:
+:(2007) v. 1: Econometric Theoryv. 1. Links to description and contents.
+:(2009) v. 2, Applied Econometrics. Palgrave Macmillan. ISBN 978-1-4039-1799-7 Links to description and contents.
+* Pearl, Judea (2009, 2nd ed.). Causality: Models, Reasoning and Inference, Cambridge University Press, Description, TOC, and preview, ch. 1-10 and ch. 11. 5 economics-journal reviews, including Kevin D. Hoover, Economics Journal.
+* Pindyck, Robert S., and Daniel L. Rubinfeld (1998, 4th ed.). Econometric Methods and Economic Forecasts, McGraw-Hill.
+* Studenmund, A.H. (2011, 6th ed.). Using Econometrics: A Practical Guide. Contents (chapter-preview) links.
+* Wooldridge, Jeffrey (2003).  Introductory Econometrics: A Modern Approach.  Mason: Thomson South-Western.  ISBN 0-324-11364-1 Chapter-preview links in brief and detail.
+
+==Further reading==
+* Econometric Theory book on Wikibooks
+* Giovanini, Enrico Understanding Economic Statistics, OECD Publishing, 2008, ISBN 978-92-64-03312-2
+
+==External links==
+
+* Journal of Financial Econometrics
+* Econometric Society
+* The Econometrics Journal
+* Econometric Links
+* Teaching Econometrics (Index by the Economics Network (UK))
+* Applied Econometric Association
+* The Society for Financial Econometrics

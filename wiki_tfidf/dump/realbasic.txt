@@ -1,0 +1,110 @@
+Xojo is a programming environment developed and commercially marketed by Xojo, Inc of Austin, Texas for software development targeting Mac OS X, Microsoft Windows, 32-bit x86 Linux, as well as the web. Xojo uses a proprietary object-oriented programming language, also known as Xojo. Xojo has announced forthcoming support for building mobile apps.
+
+Using Xojo, developers can create applications by using drag-and-drop to build their user interface and then use one programming language to enable the functionality of their application cross platform.  Xojo is powerful enough for professional developers but also intended for those who are learning to program.
+
+==History==
+Xojo is descended from CrossBasic, which was released in 1998 by Andrew Barry and marketed as a shareware product. CrossBasic got its name from its ability to compile the same programming code for Mac OS and Java (although the integrated development environment was Mac only). CrossBasic was purchased by a company headed by Geoff Perlman that specialized in 4D database consulting and renamed REALbasic. At the same time, the company was renamed REAL Software.
+
+Prior to REALbasic version 2, the Java target was dropped and later replaced with a Windows target and database support, which had many bugs when finally released. After REALbasic had gained a reputation for producing poorly written software, REALbasic was renamed Real Studio. The option to compile for Linux was added in 2005 and the IDE was ported to Windows and Linux platforms.
+
+Real Studio Enterprise Edition was released in 2009.  In 2010 Real Software announced Real Studio Web Edition, allowing developers to compile web applications without the knowledge of multiple web technologies.
+
+On June 4, 2013 Real Software officially changed their name to Xojo, Inc. and Real Studio was renamed Xojo.  Also on this date they released Xojo 2013 Release 1, which was their biggest release to date, including an all-new user interface, full support for Cocoa on OS X, improved support for web applications, all new documentation and a new "Introduction to Programming Using Xojo" textbook that was designed for beginners to learn the fundamentals of object oriented programming.
+
+The Xojo IDE is currently available for Microsoft Windows, Mac OS X, 32-bit x86 Linux, and can compile applications for Windows (Windows XP and higher), Mac OS X (running on Intel-based Macs using the Cocoa frameworks), 32-bit x86 Linux, and the web, with support for iOS coming in December 2013. Xojo is self-hosted: the Xojo IDE is built with the current release of Xojo.
+
+==Features==
+
+Xojo supports inheritance, interfaces, polymorphism and is strongly-typed. Xojo abstracts developers from platform-dependent API calls, dramatically reducing development time.
+
+The built-in framework supports:
+* dictionaries,
+* declarations to external libraries (dll, dylib)
+* Visual Basic datatypes compatibility,
+* full Unicode support,
+* regular expressions,
+* application programming interface calls to compiled C libraries on all supported platforms,
+* ActiveX and basic OLE support (on Windows); COM objects are not fully supported,
+* Notification icons (on Windows),
+* Windows registry (on Windows),
+* cooperative threads,
+* scripting language embedded in Xojo programs,
+* XML parsing and generation,
+* console and service application support
+* Apple events (on Mac),
+* Address book (on Mac),
+* Keychain (on Mac),
+* Spotlight (on Mac),
+* QuickTime (on Mac and Windows),
+* sound,
+* real-time 3D graphics,
+* serial communications,
+* sockets (both TCP, UDP and IPC),
+* SSL 
+* HTTP, POP3, SMTP and SOAP
+
+== Example code ==
+This example writes to a new text
+
+Dim t as TextOutputStream
+Dim f as FolderItem
+f=GetSaveFolderItem(FileTypes1.Text,"Create Example.txt")
+If f  Nil then
+ t=TextOutputStream.Create(f)
+ t.WriteLine(TextField1.text)
+ t.Close
+End if
+
+This example draws a triangle in a Canvas control. It is placed in the Paint event. The parameter g as Graphics is passed into this event:
+
+Dim Points() as Integer
+Points=Array(10,10,100,50,10,200,10,10)
+g.ForeColor=RGB(100,200,255)
+g.FillPolygon Points
+
+The following code creates an internal database and uses SQLExecute to create a table:
+
+Dim db as REALSQLdatabase
+Dim f as FolderItem
+Dim result as Boolean
+f=New FolderItem("mydb")
+db=New REALSQLdatabase
+db.databaseFile=f
+result=db.CreateDatabaseFile
+If db.Connect() then
+ db.SQLExecute("create table invoices(id integer,Cust_ID integer,Amount double, Date date)")
+ db.Commit
+else
+ MsgBox "Database not created"
+end if
+
+== RBScript ==
+RBScript is a scripting language which is similar to, and shares many features with, Xojo. They are both object oriented, support modules and use almost identical datatypes (REALBasic introduced some differences, mainly for compatibility with some C APIs). RBScript is mainly used to script applications written with Xojo, and (from the 2006r1 version) is also used in the REALbasic IDE.
+
+Compared to the different scripting languages that can still be used with Xojo (thanks to the ability it offers to call C APIs), RBScript can be better integrated into REALbasic applications by the possibility it has to call the methods and to use the properties of the object passed to the script parser and compiler.
+
+=== Example Code ===
+This sample code asks the host program  for a number and doubles it:
+
+Dim Value As Integer
+Value = Val(Input("Which number?"))
+Print(Str(Value*2))
+
+It's up to the host program to decide how to implement the callback methods called from Input() and Print() - RBScript just expects the first method to return a string and accept a string parameter, and the second one to accept a string parameter. Usually, the program would prompt the user presenting the string passed from the script, and returning the user input to the hosted script.
+
+== Current editions of IDE ==
+The Xojo IDE is free to use for learning and development.  Deploying applications with Xojo requires a purchased license.  Multiple license levels are available for Desktop, Web, Console and Database Access and they can be purchased in any combination required.  Also available is Xojo Pro, which is a bundle that includes added support, guaranteed beta program access, access to a special Xojo Pro-only forum, 3x Feedback multiplier when ranking support cases, access to consulting leads, and a license that will work on 3 machines.
+
+== See also ==
+* Gambas
+* Visual Basic
+* Comparison of programming languages
+
+==References==
+
+==External links==
+*Xojo, Inc., makers of Xojo
+*Xojo user forum, Official Xojo discussion forums
+*Xojo Documentation, Xojo Product Documentation
+*Xojo Developer Magazine, a bi-monthly magazine about Xojo development
+*Introduction to Programming Using Xojo, a textbook on object oriented programming concepts

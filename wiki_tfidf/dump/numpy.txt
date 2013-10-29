@@ -1,0 +1,86 @@
+NumPy is an extension to the Python programming language, adding support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays. The ancestor of NumPy, Numeric, was originally created by Jim Hugunin with contributions from several other developers. In 2005, Travis Oliphant created NumPy by incorporating features of Numarray into Numeric with extensive modifications. NumPy is open source and has many contributors.
+
+== Traits ==
+
+Because Python is currently implemented as an interpreter, mathematical algorithms written in it often run slower than compiled equivalents. NumPy seeks to address this problem for numerical algorithms by providing multidimensional arrays and functions and operators that operate efficiently on arrays. Thus any algorithm that can be expressed primarily as operations on arrays and matrices can run almost as quickly as the equivalent C code.
+
+Using NumPy in Python gives functionality comparable to MATLAB since they are both interpreted, and they both allow the user to write fast programs as long as most operations work on arrays or matrices instead of scalars. In comparison, MATLAB boasts a large number of additional toolboxes, notably Simulink; whereas NumPy is intrinsically integrated with Python, a more modern, complete, and open source programming language. Moreover complementary Python packages are available; SciPy is a library that adds more MATLAB-like functionality and Matplotlib is a plotting package that provides MATLAB-like plotting functionality. Internally, both MATLAB and NumPy rely on BLAS and LAPACK for efficient linear algebra computations.
+
+=== The ndarray data structure ===
+
+The core functionality of NumPy is its "ndarray", for n-dimensional array, data structure. These arrays are strided views on memory. In contrast to Python's built-in list data structure (which, despite the name, is a dynamic array), these arrays are homogeneously typed: all elements of a single array must be of the same type.
+
+Inside C/C++/Cython extensions to the CPython,  and natively in the PyPy interpreter (Python implementations that support NumPy), ndarrays may be constructed from arbitrary memory buffers. NumPy has built-in support for memory-mapped ndarrays.
+
+==Routines==
+The following routines (grouped by functionality) are provided by NumPy : 
+# Array creation routines
+#Array Manipulation routines
+#Binary operations
+#String Operations
+#C-Type foreign function interface
+#Date-time support functions
+#Data type routines
+#Floating point error handling
+#Discrete fourier transform
+#Financial functions
+#Functional programming
+#Indexing routines
+#Input and output
+#Linear Algebra
+#Logic Functions
+#Masked array operations
+#Mathematical functions
+#Matrix library
+#Padding arrays
+#Polynomials
+#Random sampling
+#Set routines
+#Sorting, searching and counting
+#Statistics
+#Test support
+#Asserts
+
+== Example ==
+
+The following is a simple example of how to do interactive array manipulations and plot a graph with NumPy and Matplotlib.
+
+>>> import numpy as np
+>>> import matplotlib.pyplot as mpl
+>>> x = np.linspace(0, 2 * np.pi, 100)
+>>> y = np.sin(x)
+>>> mpl.plot(x, y)
+>>> mpl.show()
+
+== History ==
+NumPy is based on two earlier Python array packages. The first, variously called Numeric, Numerical Python extensions or NumPy, which is reasonably complete and stable, remains available, but is now obsolete. It was originally written in 1995 largely by Jim Hugunin, then a graduate student at MIT. When Hugunin joined CNRI to work on JPython, Paul Dubois of LLNL took over as maintainer. Other early contributors include David Ascher, Konrad Hinsen and Travis Oliphant.
+
+The other package, Numarray, was written as a more flexible replacement for Numeric. It is also deprecated. Numarray had faster operations for large arrays, but was slower than Numeric on small ones, so for a time both packages were used for different use cases. The last version of Numeric v24.2 was released on 11 November 2005 and numarray v1.5.2 was released on 24 August 2006.
+
+There was a desire to get Numeric into the Python standard library, but Guido van Rossum (the author of Python) was quite clear that the code was not maintainable in its state then.
+
+In early 2005, NumPy developer Travis Oliphant wanted to unify the community around a single array package and ported Numarray's features to Numeric, releasing the result as NumPy 1.0 in 2006 This new project was part of SciPy. To avoid installing the large SciPy package just to get an array object, this new package was separated and called NumPy.
+
+While the source code is freely available and it contains significant documentation, there is also an extensive official Guide to NumPy. The documentation is built around a unified docstring standard.
+
+The release version 1.5.1 of NumPy is compatible with Python versions 2.4&ndash;2.7 and 3.1&ndash;3.2. Support for Python 3 was added in 1.5.0. In 2011, PyPy started development on an implementation of the numpy API for PyPy. It is not yet 100% compatible, but much of the interface is useable
+
+== Video sources ==
+
+There are several videos recorded in the seminars and the conferences. These videos may help beginners learn how NumPy works. 2009 SciPy meeting had several sessions on SciPy and NumPy.
+
+== See also ==
+
+* List of numerical analysis software
+* SciPy
+* matplotlib
+
+== References ==
+
+==Further reading==
+
+== External links ==
+* 
+* History of NumPy
+:* Introduction to array objects in NumPy
+* Guide to NumPy

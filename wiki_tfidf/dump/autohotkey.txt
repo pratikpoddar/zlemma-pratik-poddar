@@ -1,0 +1,128 @@
+AutoHotkey is a free, open-source macro-creation and automation software utility that allows users to automate repetitive tasks in Microsoft Windows.  Any application user interface can be modified by AutoHotkey (for example, overriding the default Windows control key commands with their Emacs equivalents).  It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts or hotkeys.
+
+==Features==
+AutoHotkey scripts can be used to launch programs, open documents, send keystrokes and send mouse clicks and movements. AutoHotkey scripts can also assign, retrieve, and manipulate variables, run loops and manipulate windows, files, and folders. These commands can be triggered by a hotkey, such as a script that would open an internet browser whenever the user presses  on the keyboard. Keyboard keys can also be remapped or disabled, such that pressing the letter q, for example, might result in the computer receiving a letter r, or nothing at all. AutoHotkey also allows for 'hotstrings' that will automatically replace certain text as it is typed; the most typical use for hotstrings is expanding abbreviations, such as assigning the string "btw" to send the text "by the way" when typed, or the text "%o" to send "percentage of".
+
+More complex tasks can be achieved with custom data entry forms (GUI windows), working with the system registry, or using the Windows API by calling functions from DLLs. The scripts can be compiled into an executable file that can be run on other computers that do not have AutoHotkey installed. The source code is in C++ and can be compiled with Visual Studio Express.
+
+Memory access through pointers is allowed just as in C.
+
+Common AutoHotkey tasks:
+*Remapping the keyboard, such as from QWERTY to Dvorak or other alternative keyboard layouts.
+*Using shortcuts to fill in frequently-used filenames or other phrases.
+*Controlling the mouse cursor with a keyboard or joystick.
+*Opening programs, documents, and websites with simple keystrokes.
+*Adding a signature to e-mail, message boards, etc.
+*Monitoring a system and automatically closing unwanted programs.
+*Scheduling an automatic reminder, system scan, or backup.
+*Automating repetitive tasks in online games (often in violation of said games' terms of service)
+*Filling out contest and freebie forms automatically (i.e., it can type in your name, address, etc. automatically)
+*Quick code testing before implementing in another (more time consuming) programming language.
+
+==History==
+The first public beta of AutoHotkey was released on November 10, 2003 after author Chris Mallett's proposal to integrate hotkey support into AutoIt v2 failed to generate response from the AutoIt community. So the author began his own program from scratch basing the syntax on AutoIt v2 and using AutoIt v3 for some commands and the compiler. Later, AutoIt v3 switched from GPL to closed source because of "other projects repeatedly taking AutoIt code" and "setting themselves up as competitors."
+
+AutoHotkey has even been used by doctors in the radiology world.
+
+As of October 10, 2010, the author has stated that AutoHotkey_L has become the ongoing development of AutoHotkey and this has been placed in the download section on the website.
+
+Programmers within the AutoHotkey community have also begun development on their own versions/ports of the program:
+*Autohotkey_L – now the main development branch
+*AutoHotkey.dll – DLL version of AutoHotkey
+
+==Examples==
+This script swaps control and alt keys.
+
+LCtrl::Alt
+LAlt::Ctrl
+
+The following script will allow a user to search for a particular word or phrase using Google. After copying text from any application to the Clipboard, pressing the configurable hotkey  will open the user's default web browser and perform the search.
+
+#g:: ; Win+g
+   Run http://www.google.com/search?q=%clipboard%
+Return
+
+The following is an example of the script required to create the hotstring "afaik," which is automatically replaced by "as far as I know":
+
+::afaik::as far as I know
+
+The following is an example of a simple function in AutoHotkey.  When a URL is copied to the Clipboard, the hotkey  will check the URL for any/all parentheses and replace them with alternate characters before pasting the URL from the Clipboard:
+
+!x:: ; Alt+x
+   URLReplace()
+   Send ^v ; Ctrl+v
+Return
+
+URLReplace() {
+   StringReplace, Clipboard, Clipboard, (, `%28, All
+   StringReplace, Clipboard, Clipboard, ), `%29, All
+}
+
+In this example, once the contents of a user name or IP Address link have been copied from anywhere on Wikipedia's site to the Clipboard (using Firefox), the following script allows a user to perform the function CopyUser on the Clipboard's contents and save it to a variable designated by either the hotkey  or the hotkey . The hotkey  utilizes the resultant variables to produce a revert edits summary.
+
+^+w::last := CopyUser() ; Ctrl+Shift+w
+^+e::edit := CopyUser() ; Ctrl+Shift+e
+
+CopyUser() {
+   Clipboard =
+   StringReplace, Clipboard, Clipboard, http://en.wikipedia.org/
+   StringReplace, Clipboard, Clipboard, wiki/
+   StringReplace, Clipboard, Clipboard, w/index.php?title=
+   StringReplace, Clipboard, Clipboard, Special:Contributions&target=
+   StringReplace, Clipboard, Clipboard, User:
+   StringReplace, Clipboard, Clipboard, &action=edit
+   StringReplace, Clipboard, Clipboard, _, %A_Space%, All
+   Return, Clipboard
+}
+
+; Ctrl+Shift+r
+^+r::Send revert edits by %edit% to last version by %last%
+
+More examples of what can be done with AutoHotkey can be found in the Scripts and Functions section of AutoHotkey's online forum.
+
+==Community==
+The online community forum for AutoHotkey has around 27,300 registered users and around 482,000 posts as of January 2012.
+
+The online chat room for AutoHotkey is located on Freenode IRC with an average of 40 connected users as of November 2009.
+
+Recently the administration of the official site may be changed.
+
+==User-contributed features==
+The following extensions/interops/inline script libraries for usage with/from other programming languages are available or in development:
+*.NET Framework – VB/C# (.NET)
+*LibLua – Lua
+*Lisp on win32 – Lisp
+*Embeddable Common Lisp – ECL
+*Windows Scripting Host – VBScript/JScript
+*Embedded machine code – Machine code
+
+Other:
+
+*Aspect-oriented programming
+**Function Hooks
+*COM Wrappers – COM
+*Dynamic Code Generation
+*Human Interface Device(HID) Support – HID
+*Internet Explorer Automation
+*SmartGUI Creator
+*Sparrow AHK Web Server
+*Synthetic programming
+**Bit Wizardry
+*Windows Event Hooks
+
+==See also==
+
+*AutoIt
+*KiXtart
+*Winbatch
+*Macro Express
+*AutoKey (for Linux)
+*Automator (for Macintosh)
+*Bookmarklet
+*iMacros for Firefox
+
+==References==
+
+==External links==
+* 
+* AutoHotkey_L – the main development branch

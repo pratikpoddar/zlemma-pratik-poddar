@@ -1,0 +1,88 @@
+:Not to be confused with CPython.
+
+The Cython programming language is a superset of Python with a foreign function interface for invoking C/C++ routines and the ability to declare the static type of subroutine parameters and results, local variables, and class attributes.
+
+== Overview ==
+Cython is a compiled language that generates CPython extension modules. These extension modules can then be loaded and used by regular Python code using the import statement. Cython is written in Python and works on Windows, Linux, and Mac OS X, producing source files compatible with Python 2.4 through 3.3.
+
+== Hello World ==
+
+Cython has an unusually involved hello world program because it interfaces with the Python C API and the distutils extension building facility. At least three files are required for a basic project:
+
+* A setup.py file to invoke the distutils build process that generates the extension module
+* A main python program to load the extension module
+* Cython source file(s)
+
+The following code listings demonstrate the build and launch process.
+
+# hello.pyx
+def say_hello():
+    print "Hello World!"
+
+# launch.py 
+import hello
+hello.say_hello()
+
+# setup.py 
+from distutils.core import setup
+from Cython.Build import cythonize
+
+setup(name = 'Hello world app',
+      ext_modules = cythonize("*.pyx"))
+
+These commands build and launch the program
+
+$ python setup.py build_ext --inplace
+$ python launch.py
+
+== History ==
+Cython is a derivative of the Pyrex language, and supports more features and optimizations than Pyrex.Greg Ewing, Re: VM and Language summit info for those not at Pycon (and those that are!). Message to the electronic mailing-list python-dev, 21 March 2011. Retrieved 5 May 2011.
+
+Cython was forked from Pyrex in 2007 by developers of the Sage computer algebra package, because they were unhappy with Pyrex's limitations and could not get patches accepted by Pyrex's maintainer Greg Ewing, who envisioned a much smaller scope for his tool than the Sage developers had in mind. They then forked Pyrex as SageX. When they found people were downloading Sage just to get SageX, and developers of other packages (including Stefan Behnel, who maintains LXML) were also maintaining forks of Pyrex, SageX was split off the Sage project and merged with cython-lxml to become Cython.
+
+== Example ==
+Cython files have a .pyx extension. At its most basic, Cython code looks exactly like Python code. However, whereas standard Python is dynamically typed, in Cython, types can optionally be provided, allowing for improved performance, allowing loops to be converted into C loops where possible. For example:
+
+def primes(int kmax):  # The argument will be converted to int or raise a TypeError.
+    cdef int n, k, i  # These variables are declared with C types.
+    cdef int p[1000]  # Another C type
+    result = []  # A Python type
+    if kmax > 1000:
+        kmax = 1000
+    k = 0
+    n = 2
+    while k < kmax:
+        i = 0
+        while i < k and n % p[i] != 0:
+            i = i + 1
+        if i == k:
+            p[k] = n
+            k = k + 1
+            result.append(n)
+        n = n + 1
+    return result
+
+== Static type declarations and Performance ==
+
+A Cython program that implements the same algorithm as a corresponding Python program may consume fewer computing resources such as core memory and processing cycles due to differences between the CPython and Cython execution models. On the one hand, a basic Python program is loaded and executed by the CPython virtual machine, so both the runtime and the program itself consume computing resources. On the other hand, a Cython program is compiled to C code, which is further compiled to machine code, so the virtual machine is used only briefly when the program is loaded.
+
+Cython employs:
+* Optimistic optimizations
+* Type inference (optional)
+* Low overhead in control structures
+* Low function call overhead
+
+Since C is the intermediate language, performance will depend on the C compiler.
+
+== Uses ==
+Cython is particularly popular among scientific users of Python, where it has "the perfect audience" according to Python developer Guido van Rossum.Who also criticizes Cython: Re: VM and Language summit info for those not at Pycon (and those that are!). Message to the electronic mailing-list python-dev, 21 March 2011. Retrieved 5 May 2011. Of particular note:
+
+* The free software Sage computer algebra system depends on Cython, both for performance and to interface with other libraries.
+* Significant parts of the scientific computing libraries SciPy and scikit-learn are written in Cython.
+
+Cython's domain is not limited to just numerical computing. For example, the lxml XML toolkit is written mostly in Cython, and Cython is used to provide Pythonic bindings for many C and C++ libraries ranging from the graphics library OpenGL to the messaging library ZeroMQ. Cython can also be used to develop parallel programs for multicore machines, this feature makes use of the OpenMP library.
+
+==References==
+
+==External links==
+*

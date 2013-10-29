@@ -1,0 +1,120 @@
+Quadratic programming (QP) is a special type of mathematical optimization problem. It is the problem of optimizing (minimizing or maximizing) a quadratic function of several variables subject to linear constraints on these variables.
+
+==Problem formulation==
+The quadratic programming problem can be formulated as:
+
+Assume x belongs to \mathbb{R}^{n} space. Both x and c are column vectors with n elements (n&times;1 matrices), and Q  is a symmetric n&times;n matrix.
+
+Minimize (with respect to x)
+:f(\mathbf{x}) = \tfrac{1}{2} \mathbf{x}^T Q\mathbf{x} + \mathbf{c}^T \mathbf{x}.
+
+Subject to one or more constraints of the form:
+: A\mathbf{x} \leq \mathbf b  (inequality constraint)
+: E\mathbf{x} = \mathbf d  (equality constraint)
+
+where \mathbf{x}^T indicates the vector transpose of \mathbf{x}. The notation  A \mathbf x \leq \mathbf b  means that every entry of the vector A \mathbf x is less than or equal to the corresponding entry of the vector \mathbf b.
+
+A related programming problem, quadratically constrained quadratic programming, can be posed by adding quadratic constraints on the variables.
+
+==Solution methods==
+
+For general problems a variety of methods are commonly used, including
+
+:*interior point,
+:*active set,
+:*augmented Lagrangian,
+:*conjugate gradient,
+:*gradient projection,
+:*extensions of the simplex algorithm.
+
+Convex quadratic programming is a special case of the more general field of convex optimization.
+
+===Equality constraints===
+
+Quadratic programming is particularly simple when there are only equality constraints; specifically, the problem is linear. By using Lagrange multipliers and seeking the extremum of the Lagrangian, it may be readily shown that the solution to the equality constrained problem is given by the linear system:
+
+:
+\begin{bmatrix}
+   Q & E^T \\
+   E & 0
+\end{bmatrix} 
+\begin{bmatrix}
+   \mathbf x \\
+   \lambda
+\end{bmatrix}
+= 
+\begin{bmatrix}
+   -\mathbf c \\
+   \mathbf d
+\end{bmatrix}
+
+where \lambda is a set of Lagrange multipliers which come out of the solution alongside \mathbf x.
+
+The easiest means of approaching this system is direct solution (for example, LU factorization), which for small problems is very practical. For large problems, the system poses some unusual difficulties, most notably that problem is never positive definite (even if Q is), making it potentially very difficult to find a good numeric approach, and there are many approaches to choose from dependent on the problem.
+
+If the constraints don't couple the variables too tightly, a relatively simple attack is to change the variables so that constraints are unconditionally satisfied. For example, suppose \mathbf d = 0 (generalizing to nonzero is straightforward). Looking at the constraint equations:
+
+:E\mathbf{x} = 0
+
+introduce a new variable \mathbf y defined by
+
+:Z \mathbf{y} = \mathbf x
+
+where \mathbf y has dimension of \mathbf x minus the number of constraints. Then
+
+:E Z \mathbf{y} = 0
+
+and if Z is chosen so that E Z = 0 the constraint equation will be always satisfied. Finding such Z entails finding the null space of E, which is more or less simple depending on the structure of E. Substituting into the quadratic form gives an unconstrained minimization problem:
+
+:
+\tfrac{1}{2} \mathbf{x}^T Q\mathbf{x} + \mathbf{c}^T \mathbf{x} \quad \Rightarrow \quad
+\tfrac{1}{2} \mathbf{y}^T Z^T Q Z \mathbf{y} + (Z^T \mathbf{c})^T \mathbf{y}
+
+the solution of which is given by:
+
+:
+Z^T Q Z \mathbf{y} = -Z^T \mathbf{c}
+
+Under certain conditions on Q, the reduced matrix Z^T Q Z will be positive definite. It's possible to write a variation on the conjugate gradient method which avoids the explicit calculation of Z.
+
+==Lagrangian duality==
+
+The Lagrangian dual of a QP is also a QP. To see that let us focus on the case where c=0 and Q is positive definite. We write the Lagrangian function as 
+:L(x,\lambda) = \tfrac{1}{2} x^{T}Qx + \lambda^{T}(Ax-b). 
+Defining the (Lagrangian) dual function g(\lambda), defined as g(\lambda) = \inf_{x} L(x,\lambda) , we find an infimum of L, using \nabla_{x} L(x,\lambda)=0
+
+x^* =  -Q^{-1}A^{T}\lambda.
+
+hence the dual function is 
+:g(\lambda) = -\tfrac{1}{2}\lambda^{T}AQ^{-1}A^{T}\lambda - \lambda^{T}b
+hence the Lagrangian dual of the QP is
+
+maximize:  -\tfrac{1}{2}\lambda^{T}AQ^{-1}A^{T}\lambda - \lambda^{T}b
+
+subject to: \lambda \geqslant 0.
+
+Besides the Lagrangian duality theory, there are other duality pairings (e.g. Wolfe, etc.).
+
+==Complexity==
+
+For positive definite Q, the ellipsoid method solves the problem in polynomial time.  If, on the other hand, Q is indefinite, then the problem is NP-hard.  In fact, even if Q has only one negative eigenvalue, the problem is NP-hard.
+
+==Solvers and scripting (programming) languages==
+
+==See also==
+*Support vector machine
+*Sequential quadratic programming
+*Quadratically constrained quadratic programming
+
+==References==
+
+===Notes===
+
+===Bibliography===
+* 
+*  A6: MP2, pg.245.
+
+==External links==
+*A page about QP
+*NEOS Optimization Guide: Quadratic Programming
+*Solve an example Quadratic Programming (QP) problem

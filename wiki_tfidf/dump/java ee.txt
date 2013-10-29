@@ -1,0 +1,206 @@
+Java Platform, Enterprise Edition or Java EE is Oracle's enterprise Java computing platform. The platform provides an API and runtime environment for developing and running enterprise software, including network and web services, and other large-scale, multi-tiered, scalable, reliable, and secure network applications. Java EE extends the Java Platform, Standard Edition (Java SE), providing an API for  object-relational mapping, distributed and multi-tier architectures, and web services. The platform incorporates a design based largely on modular components running on an application server. Software for Java EE is primarily developed in the Java programming language. The platform emphasizes Convention over configuration  and annotations for configuration. Optionally XML can be used to override annotations or to deviate from the platform defaults.
+
+== Version history ==
+
+The platform was known as Java 2 Platform, Enterprise Edition or J2EE until the name was changed to Java Platform, Enterprise Edition or Java EE in version 5. The current version is called Java EE 7.
+
+* J2EE 1.2 (December 12, 1999)
+
+* J2EE 1.3 (September 24, 2001)
+* J2EE 1.4 (November 11, 2003)
+* Java EE 5 (May 11, 2006)
+* Java EE 6 (Dec 10, 2009)
+* Java EE 7 (May 28, 2013, but April 5, 2013 according to spec document.  June 12, 2013 was the planned kickoff date)
+
+== Standards and specifications ==
+Java EE is defined by its specification. As with other Java Community Process specifications, providers must meet certain conformance requirements in order to declare their products as Java EE compliant.
+
+Java EE includes several API specifications, such as JDBC, RMI, e-mail, JMS, web services, XML, etc., and defines how to coordinate them. Java EE also features some specifications unique to Java EE for components. These include Enterprise JavaBeans, Connectors, servlets, JavaServer Pages and several web service technologies. This allows developers to create enterprise applications that are portable and scalable, and that integrate with legacy technologies. A Java EE application server can handle transactions, security, scalability, concurrency and management of the components it is deploying, in order to enable developers to concentrate more on the business logic of the components rather than on infrastructure and integration tasks.
+
+== General APIs ==
+The Java EE APIs includes several technologies that extend the functionality of the base Java SE APIs.
+
+* Java EE 7 Platform Packages
+* Java EE 6 Platform Packages
+* Java EE 5 Platform Packages
+
+===  ===
+The servlet specification defines a set of APIs to service mainly HTTP requests. It includes the JavaServer Pages specification.
+
+===  ===
+The Java API for WebSocket specification defines a set of APIs to service WebSocket connections.
+
+===  ===
+This package defines the root of the JavaServer Faces (JSF) API.  JSF is a technology for constructing user interfaces out of components.
+
+===  ===
+This package defines the component part of the JavaServer Faces (JSF) API. Since JSF is primarily component oriented, this is one of the core packages. The package overview contains a UML diagram of the component hierarchy.
+
+===  ===
+This package defines the classes and interfaces for Java EE's Expression Language. The Expression Language (EL) is a simple language originally designed to satisfy the specific needs of web application developers. It's used specifically in JSF to bind components to (backing) beans and in CDI to name beans, but can be used throughout the entire platform.
+
+===  ===
+These packages define the injection annotations for the contexts and Dependency Injection (CDI) APIs.
+
+===  ===
+These packages define the context annotations and interfaces for the Contexts and Dependency Injection (CDI) API.
+
+===  ===
+The Enterprise JavaBean (EJB) specification defines a set of lightweight APIs that an object container (the EJB container) will support in order to provide transactions (using JTA), remote procedure calls (using RMI or RMI-IIOP), concurrency control, dependency injection and access control for business objects. This package contains the Enterprise JavaBeans classes and interfaces that define the contracts between the enterprise bean and its clients and between the enterprise bean and the ejb container.
+
+===  ===
+This package contains the annotations and interfaces for the declarative validation support offered by the Bean Validation API. Bean Validation provides a unified way to provide constraints on beans (e.g. JPA model classes) that can be enforced cross-layer. In Java EE, JPA honors bean validation constraints in the persistence layer, while JSF does so in the view layer.
+
+===  ===
+This package contains the classes and interfaces that define the contracts between a persistence provider and the managed classes and the clients of the Java Persistence API (JPA).
+
+===  ===
+This package provides the Java Transaction API (JTA) that contains the interfaces and annotations to interact with the transaction support offered by Java EE. Even though this API abstracts from the really low-level details, the interfaces are also considered somewhat low-level and the average application developer in Java EE is either assumed to be relying on transparent handling of transactions by the higher level EJB abstractions, or using the annotations provided by this API in combination with CDI managed beans.
+
+===  ===
+
+This package provides the core of the Java Authentication SPI (JASPIC) that contains the interfaces and classes to build authentication modules for secure Java EE applications. Authentication modules are responsible for the interaction dialog with a user (e.g. redirecting to a Form or to an OpenID provider), verifying the user's input (e.g. by doing an LDAP lookup, database query or contacting the OpenID provider with a token) and retrieving a set of groups/roles that the authenticated user is in or has (e.g. by again doing an LDAP lookup or database query).
+
+===  ===
+This package provides the interfaces for interacting directly with Java EE's platform default managed thread pool. A higher-level executor service working on this same thread pool can be used optionally. The same interfaces can be used for user-defined managed thread pools, but this relies on vendor specific configuration and is not covered by the Java EE specification.
+
+===  ===
+This package defines the Java Message Service (JMS) API(Application programming Interface). The JMS API provides a common way for Java programs to create, send, receive and read an enterprise messaging system's messages.
+
+===  ===
+This package defines the entry AP for Java EE Batch Applications. The Batch Applications API provides the means to run long running background tasks that possibly involve a large volume of data and which may need to be periodically executed.
+
+===  ===
+This package defines the Java EE Connector Architecture (JCA) API.  Java EE Connector Architecture (JCA) is a Java-based technology solution for connecting application servers and enterprise information systems (EIS) as part of enterprise application integration (EAI) solutions. This is a low-level API aimed at vendors that the average application developer typically does not come in contact with.
+
+== Certified application servers ==
+
+=== Differences between implementations ===
+
+Although by definition all Java EE implementations provide the same base level of technologies (namely, the Java EE spec and the associated APIs), they can differ considerably with respect to extra features (like connectors, clustering, fault tolerance, high availability, security, etc.), installed size, memory footprint, startup time, etc.
+
+==Code Sample==
+
+The code sample shown below demonstrates how various technologies in Java EE 7 are used together to build a web form for editing a user.
+
+===Example of UI page ===
+
+In Java EE a (web) UI can be built using Servlet, JavaServer Pages (JSP), or JavaServer Faces (JSF) with Facelets. The example below uses JSF and Facelets. Not explicitly shown is that the input components use  the Java EE Bean Validation API under the covers to validate constraints.
+
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+===Example Backing Bean class ===
+
+To assist the view, Java EE uses a concept called a "Backing Bean". The example below uses contexts and Dependency Injection (CDI) and Enterprise JavaBean (EJB).
+
+@Named
+@ViewScoped
+public class UserEdit {
+        
+    private User user;
+
+@Inject
+    private UserDAO userDAO;
+  
+    public String saveUser() {
+        userDAO.save(this.user);        
+        addFlashMessage("User " + this.user.getId() + " saved");
+                
+        return "users.xhtml?faces-redirect=true";
+    }
+
+public void setUser(User user) {
+        this.user = user;
+    }
+
+public User getUser() {
+        return user;
+    }
+}
+
+===Example DAO class===
+
+To implement business logic, Enterprise JavaBean (EJB) is the dedicated technology in Java EE. For the actual persistence, JDBC or Java Persistence API (JPA) can be used. The example below uses EJB and JPA. Not explicitly shown is that JTA is used under the covers by EJB to control transactional behavior.
+
+@Stateless
+public class UserDAO {
+        
+    @PersistenceContext
+    private EntityManager entityManager;
+        
+    public void save(User user) {
+        entityManager.persist(user);
+    }
+        
+    public void update(User user) {
+        entityManager.merge(user);
+    }
+
+public List getAll() {
+        return entityManager.createNamedQuery("User.getAll", User.class)
+                            .getResultList();
+    }
+
+}
+
+===Example Entity class===
+
+For defining entity/model classes Java EE provides the Java Persistence API (JPA), and for expressing constraints on those entities it provides the Bean Validation API. The example below uses both these technologies.
+
+@Entity
+public class User {
+
+@Id
+    @GeneratedValue(strategy = IDENTITY)
+    private Integer id;
+        
+    @Size(min = 2, message="First name too short")
+    private String firstName;
+        
+    @Size(min = 2, message="Last name too short")
+    private String lastName;
+  
+    public Integer getId() {
+        return id;
+    }
+        
+    public void setId(Integer id) {
+        this.id = id;
+    }
+  
+    public String getFirstName() {
+        return firstName;
+    }
+
+public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+        
+    public String getLastName() {
+        return lastName;
+    }
+ 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+}
+
+== See also ==
+
+* Web container
+* Deployment Descriptor
+* Java BluePrints
+* Sun Java System Portal Server
+* Java EE version history
+* Sun Community Source License
+* Java Research License
+
+==References==
+
+==External links==
+* Oracle Technology Network's Java EE
+* Oracle's Java EE Compatibility page - Certified Java EE Compatible Implementations
+* Core J2EE Patterns
+* A short tutorial introducing beginning Java EE developers to the Java EE platform

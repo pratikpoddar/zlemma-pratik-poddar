@@ -1,0 +1,456 @@
+JavaScript (JS) is an interpreted computer programming language.  As part of web browsers, implementations allow client-side scripts to interact with the user, control the browser, communicate asynchronously, and alter the document content that is displayed. It has also become common in server-side programming, game development and the creation of desktop applications.
+
+JavaScript is a prototype-based scripting language with dynamic typing and has first-class functions. Its syntax was influenced by C. JavaScript copies many names and naming conventions from Java, but the two languages are otherwise unrelated and have very different semantics. The key design principles within JavaScript are taken from the Self and Scheme programming languages.  It is a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.
+
+The application of JavaScript to uses outside of web pages—for example, in PDF documents, site-specific browsers, and desktop widgets—is also significant. Newer and faster JavaScript VMs and frameworks built upon them (notably Node.js) have also increased the popularity of JavaScript for server-side web applications.
+
+JavaScript was formalized in the ECMAScript language standard and is primarily used as part of a web browser (client-side JavaScript). This enables programmatic access to computational objects within a host environment.
+
+==History==
+
+===Birth at Netscape===
+JavaScript was originally developed by Brendan Eich. While battling with Microsoft over the Web, Netscape considered their client-server offering a distributed OS, running a portable version of Sun Microsystems' Java. Because Java was a competitor of C++ and aimed at professional programmers, Netscape also wanted a lightweight interpreted language that would complement Java by appealing to nonprofessional programmers, like Microsoft's Visual Basic  (see JavaScript and Java).
+
+Although it was developed under the name Mocha, the language was officially called LiveScript when it first shipped in beta releases of Netscape Navigator 2.0 in September 1995, but it was renamed JavaScript when it was deployed in the Netscape browser version 2.0B3.
+
+The change of name from LiveScript to JavaScript roughly coincided with Netscape adding support for Java technology in its Netscape Navigator web browser. The final choice of name caused confusion, giving the impression that the language was a spin-off of the Java programming language, and the choice has been characterized by many as a marketing ploy by Netscape to give JavaScript the cachet of what was then the hot new web programming language.
+
+===Server-side JavaScript===
+Netscape introduced an implementation of the language for server-side scripting (SSJS) with Netscape Enterprise Server, first released in December, 1994 (soon after releasing JavaScript for browsers).
+Since the mid-2000s, there has been a proliferation of server-side JavaScript implementations. Node.js is one recent notable example of server-side JavaScript being used in real-world applications.
+
+===Adoption by Microsoft===
+JavaScript very quickly gained widespread success as a client-side scripting language for web pages.
+Microsoft introduced JavaScript support in its own web browser, Internet Explorer, in version 3.0, released in August 1996.
+Microsoft's webserver, Internet Information Server, introduced support for server-side scripting in JavaScript with release 3.0 (1996).
+Microsoft started to promote webpage scripting using the umbrella term Dynamic HTML.
+
+Microsoft's JavaScript implementation was later renamed JScript to avoid trademark issues.
+JScript added new date methods to fix the Y2K-problematic methods in JavaScript, which were based on Java's java.util.Date class.
+
+===Standardization===
+
+In November 1996, Netscape announced that it had submitted JavaScript to Ecma International for consideration as an industry standard, and subsequent work resulted in the standardized version named ECMAScript. In June 1997, Ecma International published the first edition of the ECMA-262 specification. A year later, in June 1998, some modifications were made to adapt it to the ISO/IEC-16262 standard, and the second edition was released. The third edition of ECMA-262 (published on December 1999) is the version most browsers currently use.
+
+A fourth edition of the ECMAScript standard was not released and does not exist. Fifth edition of the Ecmascript standard was released in December 2009. The current edition of the ECMAScript standard is 5.1, released in June 2011.
+
+===Later developments===
+JavaScript has become one of the most popular programming languages on the web. Initially, however, many professional programmers denigrated the language because its target audience consisted of web authors and other such "amateurs", among other reasons. The advent of Ajax returned JavaScript to the spotlight and brought more professional programming attention. The result was a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside of web browsers, as seen by the proliferation of server-side JavaScript platforms.
+
+In January 2009, the CommonJS project was founded with the goal of specifying a common standard library mainly for JavaScript development outside the browser.
+
+==Trademark==
+Today, "JavaScript" is a trademark of Oracle Corporation. It is used under license for technology invented and implemented by Netscape Communications and current entities such as the Mozilla Foundation.
+
+==Features==
+The following features are common to all conforming ECMAScript implementations, unless explicitly specified otherwise.
+
+===Imperative and structured===
+JavaScript supports much of the structured programming syntax from C (e.g., if statements, while loops, switch statements, etc.). One partial exception is scoping: C-style block scoping is not supported. Instead, JavaScript has function scoping (although, block scoping using the let keyword was added in JavaScript 1.7). Like C, JavaScript makes a distinction between expressions and statements. One syntactic difference from C is automatic semicolon insertion, in which the semicolons that terminate statements can be omitted.
+
+===Dynamic===
+; Dynamic typing: As in most scripting languages, types are associated with values, not with variables. For example, a variable x could be bound to a number, then later rebound to a string. JavaScript supports various ways to test the type of an object, including duck typing.
+; Object based: JavaScript is almost entirely object-based. JavaScript objects are associative arrays, augmented with prototypes (see below). Object property names are string keys.  They support two equivalent syntaxes: dot notation (obj.x = 10) and bracket notation (obj['x'] = 10). Properties and their values can be added, changed, or deleted at run-time. Most properties of an object (and those on its prototype inheritance chain) can be enumerated using a for...in loop. JavaScript has a small number of built-in objects such as Function and Date.
+; Run-time evaluation: JavaScript includes an eval function that can execute statements provided as strings at run-time.
+
+===Functional===
+; First-class functions: Functions are first-class; they are objects themselves. As such, they have properties and methods, such as .call() and .bind(). A nested function is a function defined within another function. It is created each time the outer function is invoked. In addition, each created function forms a lexical closure: the lexical scope of the outer function, including any constants, local variables and argument values, becomes part of the internal state of each inner function object, even after execution of the outer function concludes.
+
+===Prototype-based===
+
+; Prototypes: JavaScript uses prototypes where many other object oriented languages use classes for inheritance.  It is possible to simulate many class-based features with prototypes in JavaScript.
+; Functions as object constructors: Functions double as object constructors along with their typical role. Prefixing a function call with new will create an instance of a prototype, inheriting properties and methods from the constructor (including properties from the Object prototype). ECMAScript 5 offers the Object.create method, allowing explicit creation of an instance without automatically inheriting from the Object prototype (older environments can assign the prototype to null).  The constructor's prototype property determines the object used for the new object's internal prototype. New methods can be added by modifying the prototype of the object used as a constructor. JavaScript's built-in constructors, such as Array or Object, also have prototypes that can be modified. While it is possible to modify the Object prototype, it is generally considered bad practice because most objects in Javascript will inherit methods and properties from the Object prototype and they may not expect the prototype to be modified.
+; Functions as methods: Unlike many object-oriented languages, there is no distinction between a function definition and a method definition. Rather, the distinction occurs during function calling; when a function is called as a method of an object, the function's local this keyword is bound to that object for that invocation.
+
+===Implicit and Explicit Delegation===
+
+JavaScript is a Delegation Language.
+
+; Functions as Roles (Traits and Mixins): JavaScript natively supports various function based implementations of Role patterns like Traits and  Mixins. Such a function defines additional behavior by at least one method bound to the this keyword within its function body. A Role then has to be delegated explicitly via call or apply to objects that need to feature additional behavior that is not shared via the prototype chain.
+; Type Composition and Inheritance: Whereas explicit function based delegation does cover composition in JavaScript, implicit delegation already happens every time the prototype chain is walked in order to e.g. find a method that might be related to but is not directly owned by an object. Once the method was found it gets called within this objects context. Thus inheritance in JavaScript is covered by a delegation automatism that is bound to the prototype slot of constructor functions.
+
+===Miscellaneous===
+; Run-time environment: JavaScript typically relies on a run-time environment (e.g. a web browser) to provide objects and methods by which scripts can interact with the environment (e.g. a webpage DOM). It also relies on the run-time environment to provide the ability to include/import scripts (e.g. HTML  elements). This is not a language feature per se, but it is common in most JavaScript implementations.
+; Variadic functions: An indefinite number of parameters can be passed to a function. The function can access them through formal parameters and also through the local arguments object. Variadic functions can also be created by using the apply method.
+; Array and object literals: Like many scripting languages, arrays and objects (associative arrays in other languages) can each be created with a succinct shortcut syntax. In fact, these literals form the basis of the JSON data format.
+; Regular expressions: JavaScript also supports regular expressions in a manner similar to Perl, which provide a concise and powerful syntax for text manipulation that is more sophisticated than the built-in string functions.
+
+===Vendor-specific extensions===
+JavaScript is officially managed by Mozilla Foundation, and new language features are added periodically. However, only some JavaScript engines support these new features:
+* property getter and setter functions (supported by WebKit, Opera, ActionScript, and Rhino)
+* conditional catch clauses
+* iterator protocol (adopted from Python)
+* shallow generators-coroutines (adopted from Python)
+* array comprehensions and generator expressions (adopted from Python)
+* proper block scope via the let keyword
+* array and object destructuring (limited form of pattern matching)
+* concise function expressions (function(args) expr)
+* ECMAScript for XML (E4X), an extension that adds native XML support to ECMAScript
+
+==Syntax==
+
+, the latest version of the language is JavaScript 1.8.5. It is a superset of ECMAScript (ECMA-262) Edition 3. Extensions to the language, including partial ECMAScript for XML (E4X) (ECMA-357) support and experimental features considered for inclusion into future ECMAScript editions, are documented here.
+
+===Simple examples===
+Variables in JavaScript can be defined using the var keyword:
+
+var x; //defines the variable x, although no value is assigned to it by default
+var y = 2; //defines the variable y and assigns the value of 2 to it
+
+Note the comments in the example above, both of which were preceded with two forward slashes.
+
+There is no built-in I/O functionality in JavaScript; the runtime environment provides that. The ECMAScript specification in edition 5.1 mentions:
+... indeed, there are no provisions in this specification for input of external data or output of computed results.
+However, most runtime environments have a console object that can be used to print output. Here is a minimalist Hello World program:
+
+console.log("Hello world!");
+
+A simple recursive function:
+
+function factorial(n) {
+    if (n === 0) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+Anonymous function (or lambda) syntax and closure example:
+
+var displayClosure = function() {
+    var count = 0;
+    return function () {
+        return ++count;
+    };
+}
+var inc = displayClosure();
+inc(); // returns 1
+inc(); // returns 2
+inc(); // returns 3
+
+Variadic function demonstration (arguments is a special variable).
+
+var sum = function() {
+    var i, x = 0;
+    for (i = 0; i < arguments.length; ++i) {
+        x += arguments[i];
+    }
+    return x;
+}
+sum(1, 2, 3); // returns 6
+
+Immediately-invoked function expressions allow functions to pass around variables under their own closures.
+
+var v;
+v = 1;
+var getValue = (function(v) {
+  return function() {return v;};
+})(v);
+
+v = 2;
+
+getValue(); // 1
+
+===More advanced example===
+This sample code displays various JavaScript features.
+
+/* Finds the lowest common multiple (LCM) of two numbers */
+function LCMCalculator(x, y) { // constructor function
+    var checkInt = function (x) { // inner function
+        if (x % 1 !== 0) {
+            throw new TypeError(x + " is not an integer"); // throw an exception
+        }
+        return x;
+    };
+    this.a = checkInt(x)
+    //   semicolons   ^^^^  are optional, a newline is enough
+    this.b = checkInt(y);
+}
+// The prototype of object instances created by a constructor is
+// that constructor's "prototype" property.
+LCMCalculator.prototype = { // object literal
+    constructor: LCMCalculator, // when reassigning a prototype, set the constructor property appropriately
+    gcd: function () { // method that calculates the greatest common divisor
+        // Euclidean algorithm:
+        var a = Math.abs(this.a), b = Math.abs(this.b), t;
+        if (a < b) {
+            // swap variables
+            t = b;
+            b = a;
+            a = t;
+        }
+        while (b !== 0) {
+            t = b;
+            b = a % b;
+            a = t;
+        }
+        // Only need to calculate GCD once, so "redefine" this method.
+        // (Actually not redefinition—it's defined on the instance itself,
+        // so that this.gcd refers to this "redefinition" instead of LCMCalculator.prototype.gcd.)
+        // Also, 'gcd' === "gcd", this['gcd'] === this.gcd
+        this['gcd'] = function () {
+            return a;
+        };
+        return a;
+    },
+    // Object property names can be specified by strings delimited by double (") or single (') quotes.
+    "lcm" : function () {
+        // Variable names don't collide with object properties, e.g. |lcm| is not |this.lcm|.
+        // not using |this.a * this.b| to avoid FP precision issues
+        var lcm = this.a / this.gcd() * this.b;
+        // Only need to calculate lcm once, so "redefine" this method.
+        this.lcm = function () {
+            return lcm;
+        };
+        return lcm;
+    },
+    toString: function () {
+        return "LCMCalculator: a = " + this.a + ", b = " + this.b;
+    }
+};
+
+// Define generic output function; this implementation only works for web browsers
+function output(x) {
+    document.body.appendChild(document.createTextNode(x));
+    document.body.appendChild(document.createElement('br'));
+}
+
+// Note: Array's map() and forEach() are defined in JavaScript 1.6.
+// They are used here to demonstrate JavaScript's inherent functional nature.
+[55, 56, 58, 56].map(function (pair) { // array literal + mapping function
+    return new LCMCalculator(pair[0], pair[1]);
+}).sort(function (a, b) { // sort with this comparative function
+    return a.lcm() - b.lcm();
+}).forEach(function (obj) {
+    output(obj + ", gcd = " + obj.gcd() + ", lcm = " + obj.lcm());
+});
+
+The following output should be displayed in the browser window.
+
+LCMCalculator: a = 28, b = 56, gcd = 28, lcm = 56
+LCMCalculator: a = 21, b = 56, gcd = 7, lcm = 168
+LCMCalculator: a = 25, b = 55, gcd = 5, lcm = 275
+LCMCalculator: a = 22, b = 58, gcd = 2, lcm = 638
+
+==Use in web pages==
+
+The most common use of JavaScript is to write functions that are embedded in or included from HTML pages and that interact with the Document Object Model (DOM) of the page. Some simple examples of this usage are:
+
+* Loading new page content or submitting data to the server via AJAX without reloading the page (for example, a social network might allow the user to post status updates without leaving the page)
+* Animation of page elements, fading them in and out, resizing them, moving them, etc.
+* Interactive content, for example games, and playing audio and video
+* Validating input values of a web form to make sure that they are acceptable before being submitted to the server.
+* Transmitting information about the user's reading habits and browsing activities to various websites. Web pages frequently do this for web analytics, ad tracking, personalization or other purposes.
+
+Because JavaScript code can run locally in a user's browser (rather than on a remote server), the browser can respond to user actions quickly, making an application more responsive. Furthermore, JavaScript code can detect user actions which HTML alone cannot, such as individual keystrokes.  Applications such as Gmail take advantage of this: much of the user-interface logic is written in JavaScript, and JavaScript dispatches requests for information (such as the content of an e-mail message) to the server. The wider trend of Ajax programming similarly exploits this strength.
+
+A JavaScript engine (also known as JavaScript interpreter or JavaScript implementation) is an interpreter that interprets JavaScript source code and executes the script accordingly. The first JavaScript engine was created by Brendan Eich at Netscape Communications Corporation, for the Netscape Navigator web browser. The engine, code-named SpiderMonkey, is implemented in C. It has since been updated (in JavaScript 1.5) to conform to ECMA-262 Edition 3. The Rhino engine, created primarily by Norris Boyd (formerly of Netscape; now at Google) is a JavaScript implementation in Java. Rhino, like SpiderMonkey, is ECMA-262 Edition 3 compliant.
+
+A web browser is by far the most common host environment for JavaScript. Web browsers typically create "host objects" to represent the Document Object Model (DOM) in JavaScript. The web server is another common host environment. A JavaScript webserver would typically expose host objects representing HTTP request and response objects, which a JavaScript program could then interrogate and manipulate to dynamically generate web pages.
+
+Because JavaScript is the only language that the most popular browsers share support for, it has become a target language for many frameworks in other languages, even though JavaScript was never intended to be such a language. Despite the performance limitations inherent to its dynamic nature, the increasing speed of JavaScript engines has made the language a surprisingly feasible compilation target.
+
+===Example script===
+
+Below is a minimal example of a standards-conforming web page containing JavaScript (using HTML 5 syntax) and the DOM:
+
+Minimal Example
+
+This is JavaScript
+
+document.body.appendChild(document.createTextNode('Hello World!'));
+
+var h1 = document.getElementById('header'); // holds a reference to the  tag
+    h1 = document.getElementsByTagName('h1')[0]; // accessing the same  element
+
+Your browser either does not support JavaScript, or has it turned off.
+
+===Compatibility considerations===
+
+Because JavaScript runs in widely varying environments, an important part of testing and debugging is to test and verify that the JavaScript works across multiple browsers.
+
+The DOM interfaces for manipulating web pages are not part of the ECMAScript standard, or of JavaScript itself. Officially, the DOM interfaces are defined by a separate standardization effort by the W3C; in practice, browser implementations differ from the standards and from each other, and not all browsers execute JavaScript.
+
+To deal with these differences, JavaScript authors can attempt to write standards-compliant code which will also be executed correctly by most browsers; failing that, they can write code that checks for the presence of certain browser features and behaves differently if they are not available. In some cases, two browsers may both implement a feature but with different behavior, and authors may find it practical to detect what browser is running and change their script's behavior to match. Programmers may also use libraries or toolkits which take browser differences into account.
+
+Furthermore, scripts may not work for some users. For example, a user may:
+
+* use an old or rare browser with incomplete or unusual DOM support,
+* use a PDA or mobile phone browser which cannot execute JavaScript,
+* have JavaScript execution disabled as a security precaution,
+* use a speech browser due to, for example, a visual disability.
+
+To support these users, web authors can try to create pages which degrade gracefully on user agents (browsers) which do not support the page's JavaScript. In particular, the page should remain usable albeit without the extra features that the JavaScript would have added. An alternative approach that many find preferable is to first author content using basic technologies that work in all browsers, then enhance the content for users that have JavaScript enabled. This is known as progressive enhancement.
+
+===Accessibility===
+
+Assuming that the user has not disabled its execution, client-side web JavaScript should be written to enhance the experiences of visitors with visual or physical disabilities, and certainly should avoid denying information to these visitors.
+
+Screen readers, used by the blind and partially sighted, can be JavaScript-aware and so may access and read the page DOM after the script has altered it. The HTML should be as concise, navigable and semantically rich as possible whether the scripts have run or not. JavaScript should not be totally reliant on mouse or keyboard specific events because a user may be physically unable to use these input devices.  For this reason, device-agnostic events such as onfocus and onchange are preferable to device-centric events such as onmouseover and onkeypress in most cases.
+
+JavaScript should not be used in a way that is confusing or disorienting to any web user. For example, using script to alter or disable the normal functionality of the browser, such as by changing the way the "back" or "refresh" buttons work, is usually best avoided. Equally, triggering events that the user may not be aware of reduces the user's sense of control as do unexpected scripted changes to the page content.
+
+Often the process of making a complex web page as accessible as possible becomes a nontrivial problem where issues become matters of debate and opinion, and where compromises are necessary in the end. However, user agents and assistive technologies are constantly evolving and new guidelines and relevant information are continually being published on the web.
+
+==Security==
+
+JavaScript and the DOM provide the potential for malicious authors to deliver scripts to run on a client computer via the web.  Browser authors contain this risk using two restrictions.  First, scripts run in a sandbox in which they can only perform web-related actions, not general-purpose programming tasks like creating files.  Second, scripts are constrained by the same origin policy: scripts from one web site do not have access to information such as usernames, passwords, or cookies sent to another site.  Most JavaScript-related security bugs are breaches of either the same origin policy or the sandbox.
+
+There are subsets of general JavaScript — ADsafe, Secure ECMA Script (SES) — that provide greater level of security, especially on code created by third parties (such as advertisements).
+
+Content Security Policy is the main intended method of ensuring that only trusted code is executed on a web page.
+
+===Cross-site vulnerabilities===
+
+A common JavaScript-related security problem is cross-site scripting, or XSS, a violation of the same-origin policy. XSS vulnerabilities occur when an attacker is able to cause a target web site, such as an online banking website, to include a malicious script in the webpage presented to a victim. The script in this example can then access the banking application with the privileges of the victim, potentially disclosing secret information or transferring money without the victim's authorization.  A solution to XSS vulnerabilities is to use HTML escaping whenever displaying untrusted data.
+
+Some browsers include partial protection against reflected XSS attacks, in which the attacker provides a URL including malicious script.  However, even users of those browsers are vulnerable to other XSS attacks, such as those where the malicious code is stored in a database.  Only correct design of Web applications on the server side can fully prevent XSS.
+
+XSS vulnerabilities can also occur because of implementation mistakes by browser authors.
+
+Another cross-site vulnerability is cross-site request forgery or CSRF.  In CSRF, code on an attacker's site tricks the victim's browser into taking actions the user didn't intend at a target site (like transferring money at a bank).  It works because, if the target site relies only on cookies to authenticate requests, then requests initiated by code on the attacker's site will carry the same legitimate login credentials as requests initiated by the user.  In general, the solution to CSRF is to require an authentication value in a hidden form field, and not only in the cookies, to authenticate any request that might have lasting effects.  Checking the HTTP Referrer header can also help.
+
+"JavaScript hijacking" is a type of CSRF attack in which a  tag on an attacker's site exploits a page on the victim's site that returns private information such as JSON or JavaScript.  Possible solutions include:
+* requiring an authentication token in the POST and GET parameters for any response that returns private information
+* using POST and never GET for requests that return private information
+
+====Misplaced trust in the client====
+Developers of client-server applications must recognize that untrusted clients may be under the control of attackers.  The application author cannot assume that his JavaScript code will run as intended (or at all) because any secret embedded in the code could be extracted by a determined adversary.  Some implications are:
+
+* Web site authors cannot perfectly conceal how their JavaScript operates because the raw source code must be sent to the client. The code can be obfuscated, but obfuscation can be reverse-engineered.
+* JavaScript form validation only provides convenience for users, not security.  If a site verifies that the user agreed to its terms of service, or filters invalid characters out of fields that should only contain numbers, it must do so on the server, not only the client.
+* Scripts can be selectively disabled, so JavaScript can't be relied on to prevent operations such as right-clicking on an image to save it.
+* It is extremely bad practice to embed sensitive information such as passwords in JavaScript because it can be extracted by an attacker.
+
+====Browser and plugin coding errors====
+JavaScript provides an interface to a wide range of browser capabilities, some of which may have flaws such as buffer overflows.  These flaws can allow attackers to write scripts which would run any code they wish on the user's system. This code is not by any means limited to another JavaScript application. For example, a buffer overrun exploit can allow an attacker to gain access to the operating system's API with superuser privileges.
+
+These flaws have affected major browsers including Firefox, Internet Explorer, and Safari.
+
+Plugins, such as video players, Adobe Flash, and the wide range of ActiveX controls enabled by default in Microsoft Internet Explorer, may also have flaws exploitable via JavaScript (such flaws have been exploited in the past).
+
+In Windows Vista, Microsoft has attempted to contain the risks of bugs such as buffer overflows by running the Internet Explorer process with limited privileges.  Google Chrome similarly confines its page renderers to their own "sandbox".
+
+====Sandbox implementation errors====
+Web browsers are capable of running JavaScript outside of the sandbox, with the privileges necessary to, for example, create or delete files. Of course, such privileges aren't meant to be granted to code from the web.
+
+Incorrectly granting privileges to JavaScript from the web has played a role in vulnerabilities in both Internet Explorer and Firefox.  In Windows XP Service Pack 2, Microsoft demoted JScript's privileges in Internet Explorer.
+
+Microsoft Windows allows JavaScript source files on a computer's hard drive to be launched as general-purpose, non-sandboxed programs (see: Windows Script Host).  This makes JavaScript (like VBScript) a theoretically viable vector for a Trojan horse, although JavaScript Trojan horses are uncommon in practice.
+
+==Uses outside web pages==
+In addition to web browsers and servers, JavaScript interpreters are embedded in a number of tools. Each of these applications provides its own object model which provides access to the host environment.  The core JavaScript language remains mostly the same in each application.
+
+===Embedded scripting language===
+* Google's Chrome extensions, Opera's extensions, Apple's Safari 5 extensions, Apple's Dashboard Widgets, Microsoft's Gadgets, Yahoo! Widgets, Google Desktop Gadgets, and Serence Klipfolio are implemented using JavaScript.
+* Adobe's Acrobat and Adobe Reader support JavaScript in PDF files.
+* Tools in the Adobe Creative Suite, including Photoshop, Illustrator, Dreamweaver, and InDesign, allow scripting through JavaScript.
+* OpenOffice.org, an office application suite, allows JavaScript to be used as a scripting language.
+* The interactive music signal processing software Max/MSP released by Cycling '74, offers a JavaScript model of its environment for use by developers. It allows much more precise control than the default GUI-centric programming model.
+* Apple's Logic Pro X digital audio workstation (DAW) software can create custom MIDI effects plugins using JavaScript.
+* ECMAScript was included in the VRML97 standard for scripting nodes of VRML scene description files.
+* Sphere is an open-source and cross-platform computer program designed primarily to make role-playing games that use JavaScript as a scripting language.
+* The open-source Re-Animator framework allows developing 2D sprite-based games using JavaScript and XML.
+* The Unity game engine supports a modified version of JavaScript for scripting via Mono.
+* DX Studio (3D engine) uses the SpiderMonkey implementation of JavaScript for game and simulation logic.
+* Maxwell Render (rendering software) provides an ECMA standard based scripting engine for tasks automation.
+* Google Apps Script in Google Spreadsheets and Google Sites allows users to create custom formulas, automate repetitive tasks and also interact with other Google products such as Gmail.
+* Many IRC clients, like ChatZilla or XChat, use JavaScript for their scripting abilities.
+* SpinetiX products use the SpiderMonkey JavaScript engine to allow scripting within SVG files to create digital signage projects.
+* Cloud Party virtual world uses a limited version of JavaScript/ECMAScript 5 as in-world scripting language.
+
+===Scripting engine===
+* Microsoft's Active Scripting technology supports JScript as a scripting language.
+* The Java programming language introduced the javax.script package in version 6 that includes a JavaScript implementation based on Mozilla Rhino. Thus, Java applications can host scripts that access the application's variables and objects, much like web browsers host scripts that access a webpage's Document Object Model (DOM).
+* The Qt C++ toolkit includes a QtScript module to interpret JavaScript, analogous to Java's javax.script package.
+* JSDB (JavaScript for Databases) is an open-source JavaScript shell for Windows, Mac OS X, Linux, and Unix, which extends the Mozilla JavaScript engine with file, database, email, and network objects.
+* jslibs is an open-source JavaScript shell for Windows and Linux which extends the Mozilla JavaScript engine.  It has the ability to call functions in commonly used libraries like NSPR, SQLite, libTomCrypt, OpenGL, OpenAL, and librsvg.
+* Late Night Software's JavaScript OSA (aka JavaScript for OSA, or JSOSA) is a freeware alternative to AppleScript for Mac OS X. It is based on the Mozilla 1.5 JavaScript implementation, with the addition of a MacOS object for interaction with the operating system and third-party applications.
+
+===Application platform===
+* ActionScript, the programming language used in Adobe Flash, is another implementation of the ECMAScript standard.
+* Adobe Integrated Runtime is a JavaScript runtime that allows developers to create desktop applications.
+* CA, Inc.'s AutoShell cross-application scripting environment is built on the SpiderMonkey Javascript engine.  It contains preprocessor-like extensions for command definition, as well as custom classes for various system-related tasks like file I/O, operation system command invocation and redirection, and COM scripting.
+* GNOME Shell, the shell for the  desktop environment, made Javascript its default programming language in 2013.
+* The Mozilla platform, which underlies Firefox, Thunderbird, and some other web browsers, uses JavaScript to implement the graphical user interface (GUI) of its various products.
+* myNFC is a JavaScript based framework that allows developers to create applications for smart phones.
+* Qt Quick's markup language (available since Qt 4.7) uses JavaScript for its application logic.  Its declarative syntax is also similar to JavaScript.
+* TypeScript is a programming language based on JavaScript that adds support for optional type annotations and some other language extensions such as classes, interfaces and modules. A TS-script compiles into plain JavaScript and can be executed in any JS host supporting ECMAScript 3 or higher. The compiler is itself written in TypeScript.
+* Ubuntu Touch provides a JavaScript API for its unified usability interface.
+* webOS uses the WebKit implementation of JavaScript in its SDK to allow developers to create stand-alone applications solely in JavaScript.
+* WinJS provides a special Windows Library for JavaScript functionality in Windows 8 that enables the development of Modern style (formerly Metro style) applications in HTML5 and JavaScript.
+
+==Development tools==
+Within JavaScript, access to a debugger becomes invaluable when developing large, non-trivial programs. Because there can be implementation differences between the various browsers (particularly within the Document Object Model), it is useful to have access to a debugger for each of the browsers that a web application targets.
+
+Script debuggers are available for Internet Explorer, Firefox, Safari, Google Chrome, and Opera.
+
+Three debuggers are available for Internet Explorer: Microsoft Visual Studio is the richest of the three, closely followed by Microsoft Script Editor (a component of Microsoft Office), and finally the free Microsoft Script Debugger which is far more basic than the other two. The free Microsoft Visual Web Developer Express provides a limited version of the JavaScript debugging functionality in Microsoft Visual Studio.  Internet Explorer has included developer tools since version 8 (reached by pressing the F12 key).
+
+Web applications within Firefox can be debugged using the Firebug add-on, or the older Venkman debugger. Firefox also has a simpler built-in Error Console, which logs and evaluates JavaScript. It also logs CSS errors and warnings.
+
+Opera includes a set of tools called Dragonfly.
+
+WebKit's Web Inspector includes a JavaScript debugger, which is used in Safari.  A modified version is used in Google Chrome.
+
+Some debugging aids are themselves written in JavaScript and built to run on the Web. An example is the program JSLint, developed by Douglas Crockford who has written extensively on the language. JSLint scans JavaScript code for conformance to a set of standards and guidelines.
+
+==Version history==
+
+The following table is based on information from multiple sources.
+
+==Related languages and features==
+
+JSON, or JavaScript Object Notation, is a general-purpose data interchange format that is defined as a subset of JavaScript's literal syntax.
+
+jQuery and Prototype are popular JavaScript libraries designed to simplify DOM-oriented client-side HTML scripting.
+
+Mozilla browsers currently support LiveConnect, a feature that allows JavaScript and Java to intercommunicate on the web. However, Mozilla-specific support for LiveConnect is scheduled to be phased out in the future in favor of passing on the LiveConnect handling via NPAPI to the Java 1.6+ plug-in (not yet supported on the Mac ). Most browser inspection tools, such as Firebug in Firefox, include JavaScript interpreters that can act on the visible page's DOM.
+
+===Use as an intermediate language===
+
+As JavaScript is the most widely supported client-side language that can run within a web browser, it has become an intermediate language for other languages to target. This has included both newly created languages and ports of existing languages. Some of these include:
+
+* Objective-J, a superset of JavaScript that compiles to standard JavaScript. It adds traditional inheritance and Smalltalk/Objective-C style dynamic dispatch and optional pseudo-static typing to JavaScript.
+* Processing.js,  a JavaScript port of Processing, a programming language designed to write visualizations, images, and interactive content. It allows web browsers to display animations, visual applications, games and other graphical rich content without the need for a Java applet or Flash plugin.
+* CoffeeScript, an alternate syntax for JavaScript intended to be more concise and readable.  It adds features like array comprehensions (also available in JavaScript since version 1.7) and pattern matching.  Like Objective-J, it compiles to JavaScript. Ruby and Python have been cited as influential on CoffeeScript syntax.
+* Google Web Toolkit translates a subset of Java to JavaScript.
+* Scala, an object-oriented and functional programming language, has an experimental Scala-to-Javascript compiler.
+* Quby, a proprietary sand-boxed Ruby-like language by PlayMyCode used for building browser games.
+* OMeta, a functional language featuring pattern matching.
+* Phype, an open-source PHP-to-JavaScript compiler.
+* TIScript, a superset of JavaScript that adds classes, namespaces, and lambda expressions.
+* ClojureScript, a Clojure to JavaScript compiler which is compatible with the advanced compilation mode of the Google Closure optimizing compiler.
+* Parenscript, a Common Lisp library that can translate both well-circumscribed Common Lisp code, and JavaScript rendered as "inlined" S-expressions to Javascript.
+* Py2JS, a subset of Python
+* Pyjamas, a port of Google Web Toolkit to Python (translates a subset of Python to JavaScript)
+* Dart, an open-source programming language developed by Google, can be compiled to JavaScript.
+* Whalesong, a Racket-to-JavaScript compiler.
+* Emscripten, a LLVM-backend for porting native libraries to JavaScript.
+* Fantom a programming language that runs on JVM, .NET and JavaScript.
+* TypeScript, a free and open-source programming language developed by Microsoft. It is a superset of JavaScript, and essentially adds optional static typing and class-based object-oriented programming to the language.
+* Haxe, an open-source high-level multiplatform programming language and compiler that can produce applications and source code for many different platforms including JavaScript.
+
+===JavaScript and Java===
+A common misconception is that JavaScript is similar or closely related to Java. It is true that both have a C-like syntax (the C language being their most immediate common ancestor language). They also are both typically sandboxed (when used inside a browser), and JavaScript was designed with Java's syntax and standard library in mind. In particular, all Java keywords were reserved in original JavaScript, JavaScript's standard library follows Java's naming conventions, and JavaScript's Math and Date objects are based on classes from Java 1.0, but the similarities end there.
+
+The differences between the two languages are more prominent than their similarities. Java has static typing, while JavaScript's typing is dynamic (meaning a variable can hold an object of any type and cannot be restricted). Java is loaded from compiled bytecode, while JavaScript is loaded as human-readable source code. Java's objects are class-based, while JavaScript's are prototype-based. Finally, Java does not support functional programming, while Javascript does, as it contains many features based on the Scheme language.
+
+==References==
+
+==Further reading==
+
+==External links==
+
+* JS Beginner's tutorial
+* Codeacademy's JavaScript Track
+* Douglas Crockford's video lectures on JavaScript
+* Douglas Crockford's A Survey of the JavaScript Programming Language
+* Mozilla Developer Center
+** Mozilla's Official Documentation on JavaScript
+** References for Core JavaScript versions: 1.5+
+** overview over new features in JavaScript
+** List of JavaScript releases: versions 1.5+
+** Re-Introduction to JavaScript
+* Eloquent JavaScript by Marijn Haverbeke—a free, Creative Commons–licensed eBook
+* JavaScript—Opera Developer Community
+* List of languages that compile to JS
