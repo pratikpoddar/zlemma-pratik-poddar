@@ -57,9 +57,11 @@ if __name__ == "__main__":
     print len(documents)
     resultSolution = pairwiseSimilarity(documents)    
     print resultSolution
- 
 
+    l = skillset
+    m = resultSolution.toarray()
+    outputdict = dict(zip(l, map(lambda x: dict(zip(l,x)), m)))
     
-    
-
+    execfile("../floyd-warshall.py")
+    completematrix=floydwarshall(outputdict, skillset)
 
