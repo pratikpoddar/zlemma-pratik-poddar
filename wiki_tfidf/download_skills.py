@@ -39,8 +39,8 @@ def save_page(skill):
 if __name__ == "__main__":
     execfile("../skill_list.py")
     skill_list = map(lambda x: x.replace("-", " "), skill_list)	
-    for skill in skill_list:
-        save_page(skill)
+    #for skill in skill_list:
+    #    save_page(skill)
     documents = []
     skillset = []
     for skill in skill_list:
