@@ -1,0 +1,279 @@
+Data mining (the analysis step of the "Knowledge Discovery in Databases" process, or KDD), an interdisciplinary subfield of computer science, is the computational process of discovering patterns in large data sets involving methods at the intersection of artificial intelligence, machine learning, statistics, and database systems. The overall goal of the data mining process is to extract information from a data set and transform it into an understandable structure for further use. Aside from the raw analysis step, it involves database and data management aspects, data pre-processing, model and inference considerations, interestingness metrics, complexity considerations, post-processing of discovered structures, visualization, and online updating.
+
+The term is a buzzword, and is frequently misused to mean any form of large-scale data or information processing (collection, extraction, warehousing, analysis, and statistics) but is also generalized to any kind of computer decision support system, including artificial intelligence, machine learning, and business intelligence. In the proper use of the word, the key term is discovery, commonly defined as "detecting something new". Even the popular book "Data mining: Practical machine learning tools and techniques with Java" (which covers mostly machine learning material) was originally to be named just "Practical machine learning", and the term "data mining" was only added for marketing reasons. Often the more general terms "(large scale) data analysis", or "analytics" – or when referring to actual methods, artificial intelligence and machine learning – are more appropriate.
+
+The actual data mining task is the automatic or semi-automatic analysis of large quantities of data to extract previously unknown interesting patterns such as groups of data records (cluster analysis), unusual records (anomaly detection) and dependencies (association rule mining). This usually involves using database techniques such as spatial indices. These patterns can then be seen as a kind of summary of the input data, and may be used in further analysis or, for example, in machine learning and predictive analytics. For example, the data mining step might identify multiple groups in the data, which can then be used to obtain more accurate prediction results by a decision support system. Neither the data collection, data preparation, nor result interpretation and reporting are part of the data mining step, but do belong to the overall KDD process as additional steps.
+
+The related terms data dredging, data fishing, and data snooping refer to the use of data mining methods to sample parts of a larger population data set that are (or may be) too small for reliable statistical inferences to be made about the validity of any patterns discovered. These methods can, however, be used in creating new hypotheses to test against the larger data populations.
+
+Data mining uses information from past data to analyze the outcome of a particular problem or situation that may arise. Data mining works to analyze data stored in data warehouses that are used to store that data that is being analyzed. That particular data may come from all parts of business, from the production to the management. Managers also use data mining to decide upon marketing strategies for their product. They can use data to compare and contrast among competitors. Data mining interprets its data into real time analysis that can be used to increase sales, promote new product, or delete product that is not value-added to the company.
+
+==Etymology==
+In the 1960s, statisticians used terms like "Data Fishing" or "Data Dredging" to refer to what they considered the bad practice of analyzing data without an a-priori hypothesis. The term "Data Mining" appeared around 1990 in the database community. At the beginning of the century, there was a phrase "database mining"™, trademarked by HNC, a San Diego-based company (now merged into FICO), to pitch their Data Mining Workstation; researchers consequently turned to "data mining". Other terms used include Data Archaeology, Information Harvesting, Information Discovery, Knowledge Extraction, etc. Gregory Piatetsky-Shapiro coined the term "Knowledge Discovery in Databases" for the first workshop on the same topic (1989) and this term became more popular in AI and Machine Learning Community. However, the term data mining became more popular in the business and press communities. Currently, Data Mining and Knowledge Discovery are used interchangeably.
+
+==Background==
+The manual extraction of patterns from data has occurred for centuries. Early methods of identifying patterns in data include Bayes' theorem (1700s) and regression analysis (1800s). The proliferation, ubiquity and increasing power of computer technology has dramatically increased data collection, storage, and manipulation ability. As data sets have grown in size and complexity, direct "hands-on" data analysis has increasingly been augmented with indirect, automated data processing, aided by other discoveries in computer science, such as neural networks, cluster analysis, genetic algorithms (1950s), decision trees (1960s), and support vector machines (1990s). Data mining is the process of applying these methods with the intention of uncovering hidden patterns in large data sets. It bridges the gap from applied statistics and artificial intelligence (which usually provide the mathematical background) to database management by exploiting the way data is stored and indexed in databases to execute the actual learning and discovery algorithms more efficiently, allowing such methods to be applied to ever larger data sets.
+
+===Research and evolution===
+The premier professional body in the field is the Association for Computing Machinery's (ACM) Special Interest Group (SIG) on Knowledge Discovery and Data Mining (SIGKDD). Since 1989 this ACM SIG has hosted an annual international conference and published its proceedings, and since 1999 it has published a biannual academic journal titled "SIGKDD Explorations".
+
+Computer science conferences on data mining include:
+
+* CIKM Conference – ACM Conference on Information and Knowledge Management
+* DMIN Conference – International Conference on Data Mining
+* DMKD Conference – Research Issues on Data Mining and Knowledge Discovery
+* ECDM Conference – European Conference on Data Mining
+* ECML-PKDD Conference – European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases
+* EDM Conference – International Conference on Educational Data Mining
+* ICDM Conference – IEEE International Conference on Data Mining
+* KDD Conference – ACM SIGKDD Conference on Knowledge Discovery and Data Mining
+* MLDM Conference – Machine Learning and Data Mining in Pattern Recognition
+* PAKDD Conference – The annual Pacific-Asia Conference on Knowledge Discovery and Data Mining
+* PAW Conference – Predictive Analytics World
+* SDM Conference – SIAM International Conference on Data Mining (SIAM)
+* SSTD Symposium – Symposium on Spatial and Temporal Databases
+* WSDM Conference – ACM Conference on Web Search and Data Mining
+
+Data mining topics are also present on many data management/database conferences such as the ICDE Conference, SIGMOD Conference and International Conference on Very Large Data Bases
+
+==Process==
+The Knowledge Discovery in Databases (KDD) process is commonly defined with the stages:
+
+:(1) Selection
+:(2) Pre-processing
+:(3) Transformation
+:(4) Data Mining
+:(5) Interpretation/Evaluation.
+
+It exists, however, in many variations on this theme, such as the Cross Industry Standard Process for Data Mining (CRISP-DM) which defines six phases:
+
+:(1) Business Understanding
+:(2) Data Understanding
+:(3) Data Preparation
+:(4) Modeling
+:(5) Evaluation
+:(6) Deployment
+
+or a simplified process such as (1) pre-processing, (2) data mining, and (3) results validation.
+
+Polls conducted in 2002, 2004, and 2007 show that the CRISP-DM methodology is the leading methodology used by data miners. The only other data mining standard named in these polls was SEMMA.  However, 3-4 times as many people reported using CRISP-DM.  Several teams of researchers have published reviews of data mining process models, and Azevedo and Santos conducted a comparison of CRISP-DM and SEMMA in 2008.
+
+===Pre-processing===
+Before data mining algorithms can be used, a target data set must be assembled. As data mining can only uncover patterns actually present in the data, the target data set must be large enough to contain these patterns while remaining concise enough to be mined within an acceptable time limit. A common source for data is a data mart or data warehouse. Pre-processing is essential to analyze the multivariate data sets before data mining. The target set is then cleaned. Data cleaning removes the observations containing noise and those with missing data.
+
+===Data mining===
+Data mining involves six common classes of tasks:
+
+* Anomaly detection (Outlier/change/deviation detection) – The identification of unusual data records, that might be interesting or data errors that require further investigation.
+
+* Association rule learning (Dependency modeling) – Searches for relationships between variables. For example a supermarket might gather data on customer purchasing habits. Using association rule learning, the supermarket can determine which products are frequently bought together and use this information for marketing purposes. This is sometimes referred to as market basket analysis.
+
+* Clustering – is the task of discovering groups and structures in the data that are in some way or another "similar", without using known structures in the data.
+
+* Classification – is the task of generalizing known structure to apply to new data. For example, an e-mail program might attempt to classify an e-mail as "legitimate" or as "spam".
+
+* Regression – Attempts to find a function which models the data with the least error.
+
+* Summarization – providing a more compact representation of the data set, including visualization and report generation.
+
+===Results validation===
+
+The final step of knowledge discovery from data is to verify that the patterns produced by the data mining algorithms occur in the wider data set.  Not all patterns found by the data mining algorithms are necessarily valid.  It is common for the data mining algorithms to find patterns in the training set which are not present in the general data set.  This is called overfitting. To overcome this, the evaluation uses a test set of data on which the data mining algorithm was not trained.  The learned patterns are applied to this test set, and the resulting output is compared to the desired output.  For example, a data mining algorithm trying to distinguish "spam" from "legitimate" emails would be trained on a training set of sample e-mails.  Once trained, the learned patterns would be applied to the test set of e-mails on which it had not been trained.  The accuracy of the patterns can then be measured from how many e-mails they correctly classify.  A number of statistical methods may be used to evaluate the algorithm, such as ROC curves.
+
+If the learned patterns do not meet the desired standards, subsequently it is necessary to re-evaluate and change the pre-processing and data mining steps. If the learned patterns do meet the desired standards, then the final step is to interpret the learned patterns and turn them into knowledge.
+
+==Standards==
+There have been some efforts to define standards for the data mining process, for example the 1999 European Cross Industry Standard Process for Data Mining (CRISP-DM 1.0) and the 2004 Java Data Mining standard (JDM 1.0). Development on successors to these processes (CRISP-DM 2.0 and JDM 2.0) was active in 2006, but has stalled since. JDM 2.0 was withdrawn without reaching a final draft.
+
+For exchanging the extracted models – in particular for use in predictive analytics – the key standard is the Predictive Model Markup Language (PMML), which is an XML-based language developed by the Data Mining Group (DMG) and supported as exchange format by many data mining applications. As the name suggests, it only covers prediction models, a particular data mining task of high importance to business applications. However, extensions to cover (for example) subspace clustering have been proposed independently of the DMG.
+
+==Notable uses==
+
+===Games===
+Since the early 1960s, with the availability of oracles for certain combinatorial games, also called tablebases (e.g. for 3x3-chess) with any beginning configuration, small-board dots-and-boxes, small-board-hex, and certain endgames in chess, dots-and-boxes, and hex; a new area for data mining has been opened. This is the extraction of human-usable strategies from these oracles. Current pattern recognition approaches do not seem to fully acquire the high level of abstraction required to be applied successfully. Instead, extensive experimentation with the tablebases – combined with an intensive study of tablebase-answers to well designed problems, and with knowledge of prior art (i.e., pre-tablebase knowledge) – is used to yield insightful patterns. Berlekamp (in dots-and-boxes, etc.) and John Nunn (in chess endgames) are notable examples of researchers doing this work, though they were not – and are not – involved in tablebase generation.
+
+===Business===
+
+Data mining is the analysis of historical business activities, stored as static data in data warehouse databases, to reveal hidden patterns and trends. Data mining software uses advanced pattern recognition algorithms to sift through large amounts of data to assist in discovering previously unknown strategic business information. Examples of what businesses use data mining for include performing market analysis to identify new product bundles, finding the root cause of manufacturing problems, to prevent customer attrition and acquire new customers, cross-sell to existing customers, and profile customers with more accuracy.
+In today’s world raw data is being collected by companies at an exploding rate. For example, Walmart processes over 20 million point-of-sale transactions every day. This information is stored in a centralized database, but would be useless without some type of data mining software to analyse it. If Walmart analyzed their point-of-sale data with data mining techniques they would be able to determine sales trends, develop marketing campaigns, and more accurately predict customer loyalty. 
+Every time we use our credit card, a store loyalty card, or fill out a warranty card data is being collected about our purchasing behavior. Many people find the amount of information stored about us from companies, such as Google, Facebook, and Amazon, disturbing and are concerned about privacy. Although there is the potential for our personal data to be used in harmful, or unwanted, ways it is also being used to make our lives better. For example, Ford and Audi hope to one day collect information about customer driving patterns so they can recommend safer routes and warn drivers about dangerous road conditions.
+
+Data mining in customer relationship management applications can contribute significantly to the bottom line. Rather than randomly contacting a prospect or customer through a call center or sending mail, a company can concentrate its efforts on prospects that are predicted to have a high likelihood of responding to an offer.  More sophisticated methods may be used to optimize resources across campaigns so that one may predict to which channel and to which offer an individual is most likely to respond (across all potential offers). Additionally, sophisticated applications could be used to automate mailing. Once the results from data mining (potential prospect/customer and channel/offer) are determined,  this "sophisticated application" can either automatically send an e-mail or a regular mail. Finally, in cases where many people will take an action without an offer, "uplift modeling" can be used to determine which people have the greatest increase in response if given an offer.  Uplift modeling thereby enables marketers to focus mailings and offers on persuadable people, and not to send offers to people who will buy the product without an offer. Data clustering can also be used to automatically discover the segments or groups within a customer data set.
+
+Businesses employing data mining may see a return on investment, but also they recognize that the number of predictive models can quickly become very large. Rather than using one model to predict how many customers will churn, a business could build a separate model for each region and customer type.  Then, instead of sending an offer to all people that are likely to churn, it may only want to send offers to loyal customers. Finally, the business may want to determine which customers are going to be profitable over a certain window in time, and only send the offers to those that are likely to be profitable. In order to maintain this quantity of models, they need to manage model versions and move on to automated data mining.
+
+Data mining can also be helpful to human resources (HR) departments in identifying the characteristics of their most successful employees. Information obtained – such as universities attended by highly successful employees – can help HR focus recruiting efforts accordingly. Additionally, Strategic Enterprise Management applications help a company translate corporate-level goals, such as profit and margin share targets, into operational decisions, such as production plans and workforce levels.
+
+Another example of data mining, often called the market basket analysis, relates to its use in retail sales. If a clothing store records the purchases of customers, a data mining system could identify those customers who favor silk shirts over cotton ones. Although some explanations of relationships may be difficult, taking advantage of it is easier. The example deals with association rules within transaction-based data. Not all data are transaction based and logical, or inexact rules may also be present within a database.
+
+Market basket analysis has also been used to identify the purchase patterns of the Alpha Consumer. Alpha Consumers are people that play a key role in connecting with the concept behind a product, then adopting that product, and finally validating it for the rest of society. Analyzing the data collected on this type of user has allowed companies to predict future buying trends and forecast supply demands.
+
+Data mining is a highly effective tool in the catalog marketing industry.  Catalogers have a rich database of history of their customer transactions for millions of customers dating back a number of years.  Data mining tools can identify patterns among customers and help identify the most likely customers to respond to upcoming mailing campaigns.
+
+Data mining for business applications is a component that needs to be integrated into a complex modeling and decision making process. Reactive business intelligence (RBI) advocates a "holistic" approach that integrates data mining, modeling, and interactive visualization into an end-to-end discovery and continuous innovation process powered by human and automated learning.
+
+In the area of decision making, the RBI approach has been used to mine knowledge that is progressively acquired from the decision maker, and then self-tune the decision method accordingly. The relation between the quality of a data mining system and the amount of investment that the decision maker is willing to make was formalized by providing an economic perspective on the value of “extracted knowledge” in terms of its payoff to the organization This decision-theoretic classification framework was applied to a real-world semiconductor wafer manufacturing line, where decision rules for effectively monitoring and controlling the semiconductor wafer fabrication line were developed.
+
+An example of data mining related to an integrated-circuit (IC) production line is described in the paper "Mining IC Test Data to Optimize VLSI Testing." In this paper, the application of data mining and decision analysis to the problem of die-level functional testing is described.  Experiments mentioned demonstrate the ability to apply a system of mining historical die-test data to create a probabilistic model of patterns of die failure. These patterns are then utilized to decide, in real time, which die to test next and when to stop testing.  This system has been shown, based on experiments with historical test data, to have the potential to improve profits on mature IC products. Other examples  of the application of data mining methodologies in semiconductor manufacturing environments suggest that data mining methodologies may be particularly useful when data is scarce, and the various physical and chemical parameters that affect the process exhibit highly complex interactions. Another implication is that on-line monitoring of the semiconductor manufacturing process using data mining may be highly effective.
+===Science and engineering===
+In recent years, data mining has been used widely in the areas of science and engineering, such as bioinformatics, genetics, medicine, education and electrical power engineering.
+
+In the study of human genetics, sequence mining helps address the important goal of understanding the mapping relationship between the inter-individual variations in human DNA sequence and the variability in disease susceptibility. In simple terms, it aims to find out how the changes in an individual's DNA sequence affects the risks of developing common diseases such as cancer, which is of great importance to improving methods of diagnosing, preventing, and treating these diseases. The data mining method that is used to perform this task is known as multifactor dimensionality reduction.
+
+In the area of electrical power engineering, data mining methods have been widely used for condition monitoring of high voltage electrical equipment. The purpose of condition monitoring is to obtain valuable information on, for example, the status of the insulation (or other important safety-related parameters). Data clustering techniques – such as the self-organizing map (SOM), have been applied to vibration monitoring and analysis of transformer on-load tap-changers (OLTCS). Using vibration monitoring, it can be observed that each tap change operation generates a signal that contains information about the condition of the tap changer contacts and the drive mechanisms. Obviously, different tap positions will generate different signals. However, there was considerable variability amongst normal condition signals for exactly the same tap position. SOM has been applied to detect abnormal conditions and to hypothesize about the nature of the abnormalities.
+
+Data mining methods have also been applied to dissolved gas analysis (DGA) in power transformers. DGA, as a diagnostics for power transformers, has been available for many years. Methods such as SOM has been applied to analyze generated data and to determine trends which are not obvious to the standard DGA ratio methods (such as Duval Triangle).
+
+Another example of data mining in science and engineering is found in educational research, where data mining has been used to study the factors leading students to choose to engage in behaviors which reduce their learning, and to understand factors influencing university student retention. A similar example of social application of data mining is its use in expertise finding systems, whereby descriptors of human expertise are extracted, normalized, and classified so as to facilitate the finding of experts, particularly in scientific and technical fields. In this way, data mining can facilitate institutional memory.
+
+Other examples of application of data mining methods are biomedical data facilitated by domain ontologies, mining clinical trial data, and traffic analysis using SOM.
+
+In adverse drug reaction surveillance, the Uppsala Monitoring Centre has, since 1998, used data mining methods to routinely screen for reporting patterns indicative of emerging drug safety issues in the WHO global database of 4.6 million suspected adverse drug reaction incidents. Recently, similar methodology has been developed to mine large collections of electronic health records for temporal patterns associating drug prescriptions to medical diagnoses.
+
+Data mining has been applied software artifacts within the realm of software engineering: Mining Software Repositories.
+
+===Human rights===
+Data mining of government records – particularly records of the justice system (i.e., courts, prisons) – enables the discovery of systemic human rights violations in connection to generation and publication of invalid or fraudulent legal records by various government agencies.
+
+===Medical data mining===
+In 2011, the case of Sorrell v. IMS Health, Inc., decided by the Supreme Court of the United States, ruled that pharmacies may share information with outside companies. This practice was authorized under the 1st Amendment of the Constitution, protecting the "freedom of speech." However, the passage of the Health Information Technology for Economic and Clinical Health Act (HITECH Act) helped to initiate the adoption of the electronic health record (HER) and supporting technology in the United States.  The HITECH Act was signed into law on February 17, 2009 as part of the American Recovery and Reinvestment Act (ARRA) and helped to open the door to medical data mining.  Prior to the signing of this law, estimates of only 20% of United States based physician were utilizing electronic patient records.  Søren Brunak notes that “the patient record becomes as information-rich as possible” and thereby “maximizes the data mining opportunities.” Hence, electronic patient records further expands the possibilities regarding medical data mining thereby opening the door to a vast source of medical data analysis.
+
+=== Spatial data mining ===
+Spatial data mining is the application of data mining methods to spatial data. The end objective of spatial data mining is to find patterns in data with respect to geography. So far, data mining and Geographic Information Systems (GIS) have existed as two separate technologies, each with its own methods, traditions, and approaches to visualization and data analysis. Particularly, most contemporary GIS have only very basic spatial analysis functionality. The immense explosion in geographically referenced data occasioned by developments in IT, digital mapping, remote sensing, and the global diffusion of GIS emphasizes the importance of developing data-driven inductive approaches to geographical analysis and modeling.
+
+Data mining offers great potential benefits for GIS-based applied decision-making. Recently, the task of integrating these two ##technologies has become of critical importance, especially as various public and private sector organizations possessing huge databases with thematic and geographically referenced data begin to realize the huge potential of the information contained therein. Among those organizations are:
+
+* offices requiring analysis or dissemination of geo-referenced statistical data
+* public health services searching for explanations of disease clustering
+* environmental agencies assessing the impact of changing land-use patterns on climate change
+* geo-marketing companies doing customer segmentation based on spatial location.
+
+Challenges in Spatial mining:
+Geospatial data repositories tend to be very large.  Moreover, existing GIS datasets are often splintered into feature and attribute components that are conventionally archived in hybrid data management systems. Algorithmic requirements differ substantially for relational (attribute) data management and for topological (feature) data management. Related to this is the range and diversity of geographic data formats, which present unique challenges. The digital geographic data revolution is creating new types of data formats beyond the traditional "vector" and "raster" formats. Geographic data repositories increasingly include ill-structured data, such as imagery and geo-referenced multi-media.
+
+There are several critical research challenges in geographic knowledge discovery and data mining. Miller and Han offer the following list of emerging research topics in the field:
+
+* Developing and supporting geographic data warehouses (GDW's): Spatial properties are often reduced to simple aspatial attributes in mainstream data warehouses. Creating an integrated GDW requires solving issues of spatial and temporal data interoperability – including differences in semantics, referencing systems, geometry, accuracy, and position.
+
+* Better spatio-temporal representations in geographic knowledge discovery: Current geographic knowledge discovery (GKD) methods generally use very simple representations of geographic objects and spatial relationships. Geographic data mining methods should recognize more complex geographic objects (i.e., lines and polygons) and relationships (i.e., non-Euclidean distances, direction, connectivity, and interaction through attributed geographic space such as terrain). Furthermore, the time dimension needs to be more fully integrated into these geographic representations and relationships.
+
+* Geographic knowledge discovery using diverse data types: GKD methods should be developed that can handle diverse data types beyond the traditional raster and vector models, including imagery and geo-referenced multimedia, as well as dynamic data types (video streams, animation).
+
+===Sensor data mining===
+Wireless sensor networks can be used for facilitating the collection of data for spatial data mining for a variety of applications such as air pollution monitoring.  A characteristic of such networks is that nearby sensor nodes monitoring an environmental feature typically register similar values. This kind of data redundancy due to the spatial correlation between sensor observations inspires the techniques for in-network data aggregation and mining. By measuring the spatial correlation between data sampled by different sensors, a wide class of specialized algorithms can be developed to develop more efficient spatial data mining algorithms.
+
+===Visual data mining===
+In the process of turning from analogical into digital, large data sets have been generated, collected, and stored discovering statistical patterns, trends and information which is hidden in data, in order to build predictive patterns. Studies suggest visual data mining is faster and much more intuitive than is traditional data mining. See also Computer vision.
+
+===Music data mining===
+Data mining techniques, and in particular co-occurrence analysis, has been used to discover relevant similarities among music corpora (radio lists, CD databases) for the purpose of classifying music into genres in a more objective manner.
+
+===Surveillance===
+Data mining has been used to fight terrorism by the U.S. government. Programs include the Total Information Awareness (TIA) program, Secure Flight (formerly known as Computer-Assisted Passenger Prescreening System (CAPPS II)), Analysis, Dissemination, Visualization, Insight, Semantic Enhancement (ADVISE), and the Multi-state Anti-Terrorism Information Exchange (MATRIX). These programs have been discontinued due to controversy over whether they violate the 4th Amendment to the United States Constitution, although many programs that were formed under them continue to be funded by different organizations or under different names.
+
+In the context of combating terrorism, two particularly plausible methods of data mining are "pattern mining" and "subject-based data mining".
+
+===Pattern mining=== 
+"Pattern mining" is a data mining method that involves finding existing patterns in data. In this context patterns often means association rules. The original motivation for searching association rules came from the desire to analyze supermarket transaction data, that is, to examine customer behavior in terms of the purchased products. For example, an association rule "beer ⇒ potato chips (80%)" states that four out of five customers that bought beer also bought potato chips.
+
+In the context of pattern mining as a tool to identify terrorist activity, the National Research Council provides the following definition: "Pattern-based data mining looks for patterns (including anomalous data patterns) that might be associated with terrorist activity — these patterns might be regarded as small signals in a large ocean of noise." Pattern Mining includes new areas such a Music Information Retrieval (MIR) where patterns seen both in the temporal and non temporal domains are imported to classical knowledge discovery search methods.
+
+===Subject-based data mining=== 
+"Subject-based data mining" is a data mining method involving the search for associations between individuals in data.  In the context of combating terrorism, the National Research Council provides the following definition: "Subject-based data mining uses an initiating individual or other datum that is considered, based on other information, to be of high interest, and the goal is to determine what other persons or financial transactions or movements, etc., are related to that initiating datum."
+
+===Knowledge grid===
+Knowledge discovery "On the Grid" generally refers to conducting knowledge discovery in an open environment using grid computing concepts, allowing users to integrate data from various online data sources, as well make use of remote resources, for executing their data mining tasks. The earliest example was the Discovery Net, developed at Imperial College London, which won the "Most Innovative Data-Intensive Application Award" at the ACM SC02 (Supercomputing 2002) conference and exhibition, based on a demonstration of a fully interactive distributed knowledge discovery application for a bioinformatics application. Other examples include work conducted by researchers at the University of Calabria, who developed a Knowledge Grid architecture for distributed knowledge discovery, based on grid computing.
+
+==Reliability / Validity==
+Data mining can be misused, and can also unintentionally produce results which appear significant but which do not actually predict future behavior and cannot be reproduced on a new sample of data. See Data dredging.
+
+==Privacy concerns and ethics==
+Some people believe that data mining itself is ethically neutral. While the term "data mining" has no ethical implications, it is often associated with the mining of information in relation to peoples' behavior (ethical and otherwise). To be precise, data mining is a statistical method that is applied to a set of information (i.e., a data set). Associating these data sets with people is an extreme narrowing of the types of data that are available. Examples could range from a set of crash test data for passenger vehicles, to the performance of a group of stocks. These types of data sets make up a great proportion of the information available to be acted on by data mining methods, and rarely have ethical concerns associated with them. However, the ways in which data mining can be used can in some cases and contexts raise questions regarding privacy, legality, and ethics. In particular, data mining government or commercial data sets for national security or law enforcement purposes, such as in the Total Information Awareness Program or in ADVISE, has raised privacy concerns.
+
+Data mining requires data preparation which can uncover information or patterns which may compromise confidentiality and privacy obligations. A common way for this to occur is through data aggregation. Data aggregation involves combining data together (possibly from various sources) in a way that facilitates analysis (but that also might make identification of private, individual-level data deducible or otherwise apparent). This is not data mining per se, but a result of the preparation of data before – and for the purposes of – the analysis. The threat to an individual's privacy comes into play when the data, once compiled, cause the data miner, or anyone who has access to the newly compiled data set, to be able to identify specific individuals, especially when the data were originally anonymous.
+
+It is recommended that an individual is made aware of the following before data are collected:
+* the purpose of the data collection and any (known) data mining projects
+* how the data will be used
+* who will be able to mine the data and use the data and their derivatives
+* the status of security surrounding access to the data
+* how collected data can be updated.
+
+In America, privacy concerns have been addressed to some extent by the US Congress via the passage of regulatory controls such as the Health Insurance Portability and Accountability Act (HIPAA). The HIPAA requires individuals to give their "informed consent" regarding information they provide and its intended present and future uses. According to an article in Biotech Business Week', "'[i]n practice, HIPAA may not offer any greater protection than the longstanding regulations in the research arena,' says the AAHC. More importantly, the rule's goal of protection through informed consent is undermined by the complexity of consent forms that are required of patients and participants, which approach a level of incomprehensibility to average individuals." This underscores the necessity for data anonymity in data aggregation and mining practices.
+
+Data may also be modified so as to become anonymous, so that individuals may not readily be identified. However, even "de-identified"/"anonymized" data sets can potentially contain enough information to allow identification of individuals, as occurred when journalists were able to find several individuals based on a set of search histories that were inadvertently released by AOL.
+
+==Software==
+
+===Free open-source data mining software and applications===
+* Carrot2: Text and search results clustering framework.
+* Chemicalize.org:  A chemical structure miner and web search engine.
+* ELKI: A university research project with advanced cluster analysis and outlier detection methods written in the Java language.
+* GATE: a natural language processing and language engineering tool.
+* SCaViS: Java cross-platform data analysis framework developed at Argonne National Laboratory.
+* KNIME: The Konstanz Information Miner, a user friendly and comprehensive data analytics framework.
+* ML-Flex: A software package that enables users to integrate with third-party machine-learning packages written in any programming language, execute classification analyses in parallel across multiple computing nodes, and produce HTML reports of classification results.
+* NLTK (Natural Language Toolkit): A suite of libraries and programs for symbolic and statistical natural language processing (NLP) for the Python language.
+* SenticNet API: A semantic and affective resource for opinion mining and sentiment analysis.
+* Orange: A component-based data mining and machine learning software suite written in the Python language.
+* R: A programming language and software environment for statistical computing, data mining, and graphics. It is part of the GNU Project.
+* RapidMiner:  An environment for machine learning and data mining experiments.
+* UIMA: The UIMA (Unstructured Information Management Architecture) is a component framework for analyzing unstructured content such as text, audio and video – originally developed by IBM.
+* Weka: A suite of machine learning software applications written in the Java programming language.
+
+===Commercial data-mining software and applications===
+* Angoss KnowledgeSTUDIO: data mining tool provided by Angoss.
+* BIRT Analytics: visual data mining and predictive analytics tool provided by Actuate Corporation.
+* Clarabridge: enterprise class text analytics solution.
+* IBM DB2 Intelligent Miner: in-database data mining platform provided by IBM, with modeling, scoring and visualization services based on the SQL/MM - PMML framework.
+* IBM SPSS Modeler: data mining software provided by IBM.
+* KXEN Modeler: data mining tool provided by KXEN.
+* LIONsolver: an integrated software application for data mining, business intelligence, and modeling that implements the Learning and Intelligent OptimizatioN (LION) approach.
+* Microsoft Analysis Services: data mining software provided by Microsoft.
+* NetOwl: suite of multilingual text and entity analytics products that enable data mining.
+* Oracle Data Mining: data mining software by Oracle.
+* Predixion Insight: data mining software by Predixion Software.
+* SAS Enterprise Miner: data mining software provided by the SAS Institute.
+* STATISTICA Data Miner: data mining software provided by StatSoft.
+
+===Marketplace surveys===
+Several researchers and organizations have conducted reviews of data mining tools and surveys of data miners.  These identify some of the strengths and weaknesses of the software packages.  They also provide an overview of the behaviors, preferences and views of data miners.  Some of these reports include:
+* 2011 Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery
+*Annual Rexer Analytics Data Miner Surveys (2007–2011)
+* Forrester Research 2010 Predictive Analytics and Data Mining Solutions report
+* Gartner 2008 "Magic Quadrant" report
+* Robert A. Nisbet's 2006 Three Part Series of articles "Data Mining Tools: Which One is Best For CRM?"
+* Haughton et al.'s 2003 Review of Data Mining Software Packages in The American Statistician
+
+==See also==
+; Methods
+
+; Application domains
+
+; Application examples
+
+; Related topics
+Data mining is about analyzing data; for information about extracting information out of data, see:
+
+==References==
+
+==Further reading==
+* Cabena, Peter; Hadjnian, Pablo; Stadler, Rolf; Verhees, Jaap; and Zanasi, Alessandro (1997); Discovering Data Mining: From Concept to Implementation, Prentice Hall, ISBN 0-13-743980-6
+* M.S. Chen, J. Han, P.S. Yu (1996) "Data mining: an overview from a database perspective". Knowledge and data Engineering, IEEE Transactions on 8 (6), 866-883
+* Feldman, Ronen; and Sanger, James; The Text Mining Handbook, Cambridge University Press, ISBN 978-0-521-83657-9
+* Guo, Yike; and Grossman, Robert (editors) (1999); High Performance Data Mining: Scaling Algorithms, Applications and Systems, Kluwer Academic Publishers
+* Han, Jiawei, Micheline Kamber, and Jian Pei. Data mining: concepts and techniques. Morgan kaufmann, 2006.
+* Hastie, Trevor, Tibshirani, Robert and Friedman, Jerome (2001); The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Springer, ISBN 0-387-95284-5
+* Liu, Bing (2007); Web Data Mining: Exploring Hyperlinks, Contents and Usage Data, Springer, ISBN 3-540-37881-2
+* 
+* Nisbet, Robert; Elder, John; Miner, Gary (2009); Handbook of Statistical Analysis & Data Mining Applications, Academic Press/Elsevier, ISBN 978-0-12-374765-5
+* Poncelet, Pascal; Masseglia, Florent; and Teisseire, Maguelonne (editors) (October 2007); "Data Mining Patterns: New Methods and Applications", Information Science Reference, ISBN 978-1-59904-162-9
+* Tan, Pang-Ning; Steinbach, Michael; and Kumar, Vipin (2005); Introduction to Data Mining, ISBN 0-321-32136-7
+* Theodoridis, Sergios; and Koutroumbas, Konstantinos (2009); Pattern Recognition, 4th Edition, Academic Press, ISBN 978-1-59749-272-0
+* Weiss, Sholom M.; and Indurkhya, Nitin (1998); Predictive Data Mining, Morgan Kaufmann
+*  (See also Free Weka software)
+* Ye, Nong (2003); The Handbook of Data Mining, Mahwah, NJ: Lawrence Erlbaum
+
+==External links==
+
+*
