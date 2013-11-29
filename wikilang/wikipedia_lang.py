@@ -1,5 +1,7 @@
 import json
 import itertools
+import sys
+
 json_data=open('wikipedia_lang_2.json')
 data = json.load(json_data)
 
@@ -35,31 +37,58 @@ def printMatrix(skills, outputdict):
 	return
 
 def getRelationship(skill1, skill2):
-	vec1 = data[skill1].split(',')
-	vec2 = data[skill2].split(',')
-	common = list(set(vec1) & set(vec2))
-	value = 0.0
-	for eachcommon in common:
-		try:
-			value+= 0.5/(2**(vec1.index(eachcommon)+vec2.index(eachcommon)))
-		except:
-			pass
+	try:
+		vec1 = data[skill1].split(',')
+		vec2 = data[skill2].split(',')
+		common = list(set(vec1) & set(vec2))
+		value = 0.0
+		for eachcommon in common:
+			try:
+				value+= 0.5/(2**(vec1.index(eachcommon)+vec2.index(eachcommon)))
+			except:
+				pass
 		
-	print skill1 + " " + skill2 + " " + str(value)
+		print skill1 + " " + skill2 + " " + str(value)
 
-	return value
+		return value
+	except:
+		return None
 
-skills2 = ["c++", "java", "python", "ruby", "scala", "lisp"]
+def slugify(title):
+    name = title.replace(' ', '-').lower()
+    return name
 
-outputdict = {}
-for skill in skills2:
-	outputdict[skill] = {}
+if not len(sys.argv) == 2:
+	print "Usage : python wikipedia_lang.py saveresults"
+	sys.exit(1)
 
-for comb in itertools.permutations(skills2,2):
-	val = getRelationship(comb[0], comb[1])
-	outputdict[comb[0]][comb[1]] = val
+if sys.argv[1] not in ["saveresults"]:
+	print "Usage : python wikipedia_lang.py saveresults"
+	sys.exit(1)
 
-printMatrix(skills2, outputdict)
+execfile("../skill_list.py")
+skills = skill_list
+skills2 = map(lambda x: slugify(x), skills)
+print skills2
 
+if sys.argv[1] == "saveresults":
+	outputdict = {}
+	for skill in skills2:
+		outputdict[skill] = {}
+
+	for comb in itertools.permutations(skills2,2):
+        	val = getRelationship(comb[0], comb[1])
+		if val:
+		        outputdict[comb[0]][comb[1]] = val
+
+	print outputdict
+	printMatrix(skills2, outputdict)
+	with open('result.txt', 'w') as infile:
+		infile.write(json.dumps(outputdict))
+
+	execfile("../floyd-warshall.py")
+	completematrix=floydwarshall(outputdict, skills)
+	with open('complete.txt', 'w') as infile:
+		infile.write(json.dumps(completematrix))
 
 

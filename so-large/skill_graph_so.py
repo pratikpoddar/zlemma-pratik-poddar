@@ -2,9 +2,11 @@ import urllib2
 import math
 import itertools
 import functools32
+import sys
 import gevent
 from gevent import monkey
 from gevent.pool import Pool
+import json
 
 monkey.patch_all(thread=False)
 
@@ -163,6 +165,13 @@ def prob_A_given_B(skill1, skill2):
 
     return retval
 
+if not len(sys.argv) == 2:
+	print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
+	sys.exit(1)
+
+if sys.argv[1] not in ["downloaddata","saveresults"]:
+	print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
+	sys.exit(1)
 
 skills = ["Machine Learning", "Probability", "Statistics", "Data Mining", "NLP", "Hadoop", "Programming", "SQL", "Algorithm", "Artificial Intelligence", "Pattern Recognition", "Python", "Django", "C++", "Java", "Ruby", "Algebra", "Convex Optimization", "Optimization"]
 execfile("../skill_list.py")
@@ -171,29 +180,30 @@ skills = map(lambda x: slugify(x), skills)
 skills2 = filter(lambda x: check_skill_so(x), skills)
 print skills2
 
-## Save all the files
-#pool = Pool(len(skills2))
-#jobs = [pool.spawn(getParentInfo , skill) for skill in skills2]
-#pool.join()
+if sys.argv[1] == "downloaddata":
+	## Save all the files
+	pool = Pool(len(skills2))
+	jobs = [pool.spawn(getParentInfo , skill) for skill in skills2]
+	pool.join()
 
-outputdict = {}
-for skill in skills2:
-	outputdict[skill] = {}
+if sys.argv[1] == "saveresults":
+	outputdict = {}
+	for skill in skills2:
+		outputdict[skill] = {}
 
-for comb in itertools.permutations(skills2,2):
-	val = prob_A_given_B(comb[0], comb[1])
-	outputdict[comb[0]][comb[1]] = val
-
-
-print outputdict
-printMatrix(skills, outputdict)
-
-execfile("../floyd-warshall.py")
-completematrix=floydwarshall(outputdict, skills)
-print completematrix
+	for comb in itertools.permutations(skills2,2):
+		val = prob_A_given_B(comb[0], comb[1])
+		outputdict[comb[0]][comb[1]] = val
 
 
+	print outputdict
+	printMatrix(skills, outputdict)
+	with open('result.txt', 'w') as infile:
+		infile.write(json.dumps(outputdict))
 
-
+	execfile("../floyd-warshall.py")
+	completematrix=floydwarshall(outputdict, skills)
+	with open('complete.txt', 'w') as infile:
+		infile.write(json.dumps(completematrix))
 
 
