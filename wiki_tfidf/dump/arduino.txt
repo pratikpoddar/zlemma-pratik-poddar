@@ -1,0 +1,130 @@
+Arduino is a single-board microcontroller to make using electronics in multidisciplinary projects more accessible.  The hardware consists of an open-source hardware board designed around an 8-bit Atmel AVR microcontroller, or a 32-bit Atmel ARM.  The software consists of a standard programming language compiler and a boot loader that executes on the microcontroller.
+
+Arduino boards can be purchased pre-assembled or as do-it-yourself kits.  Hardware design information is available for those who would like to assemble an Arduino by hand. It was estimated in mid-2011 that over 300,000 official Arduinos had been commercially produced.
+
+== History ==
+Arduino started in 2005 as a project for students at the Interaction Design Institute Ivrea in Ivrea, Italy. At that time program students used a "BASIC Stamp" at a cost of $100, considered expensive for students. Massimo Banzi, one of the founders, taught at Ivrea.
+
+A hardware thesis was contributed for a wiring design by Colombian student Hernando Barragan. After the wiring platform was complete, researchers worked to make it lighter, less expensive, and available to the open source community. The school eventually closed down, so these researchers, one of them David Cuartielles, promoted the idea.
+
+The current prices run around $30 and related "clones" as low as $9.
+
+== Hardware ==
+
+An Arduino board consists of an Atmel 8-bit AVR microcontroller with complementary components to facilitate programming and incorporation into other circuits. An important aspect of the Arduino is the standard way that connectors are exposed, allowing the CPU board to be connected to a variety of interchangeable add-on modules known as shields. Some shields communicate with the Arduino board directly over various pins, but many shields are individually addressable via an I²C serial bus, allowing many shields to be stacked and used in parallel. Official Arduinos have used the megaAVR series of chips, specifically the ATmega8, ATmega168, ATmega328, ATmega1280, and ATmega2560. A handful of other processors have been used by Arduino compatibles. Most boards include a 5 volt linear regulator and a 16 MHz crystal oscillator (or ceramic resonator in some variants), although some designs such as the LilyPad run at 8 MHz and dispense with the onboard voltage regulator due to specific form-factor restrictions. An Arduino's microcontroller is also pre-programmed with a boot loader that simplifies uploading of programs to the on-chip flash memory, compared with other devices that typically need an external programmer.
+
+At a conceptual level, when using the Arduino software stack, all boards are programmed over an RS-232 serial connection, but the way this is implemented varies by hardware version. Serial Arduino boards contain a level shifter circuit to convert between RS-232-level and TTL-level signals. Current Arduino boards are programmed via USB, implemented using USB-to-serial adapter chips such as the FTDI FT232. Some variants, such as the Arduino Mini and the unofficial Boarduino, use a detachable USB-to-serial adapter board or cable, Bluetooth or other methods. (When used with traditional microcontroller tools instead of the Arduino IDE, standard AVR ISP programming is used.)
+
+The Arduino board exposes most of the microcontroller's I/O pins for use by other circuits. The Diecimila, Duemilanove, and current Uno provide 14 digital I/O pins, six of which can produce pulse-width modulated signals, and six analog inputs. These pins are on the top of the board, via female  headers. Several plug-in application shields are also commercially available.
+
+The Arduino Nano, and Arduino-compatible Bare Bones Board and Boarduino boards may provide male header pins on the underside of the board to be plugged into solderless breadboards.
+
+There are many Arduino-compatible and Arduino-derived boards. Some are functionally equivalent to an Arduino and may be used interchangeably. Many are the basic Arduino with the addition of commonplace output drivers, often for use in school-level education to simplify the construction of buggies and small robots. Others are electrically equivalent but change the form factor, sometimes permitting the continued use of Shields, sometimes not. Some variants use completely different processors, with varying levels of compatibility.
+
+=== Official boards ===
+
+The original Arduino hardware is manufactured by the Italian company Smart Projects. Some Arduino-branded boards have been designed by the American company SparkFun Electronics. Sixteen versions of the Arduino hardware have been commercially produced to date.
+
+Image:Arduino_Diecimila_6.jpg|Arduino Diecimila
+Image:Arduino Duemilanove 2009b.jpg|Arduino Duemilanove (rev 2009b)
+Image:Arduino UNO unpacked.jpg|Arduino UNO
+Image:Arduino Leonardo.jpg|Arduino Leonardo
+Image:Arduino Mega.jpg|Arduino Mega
+Image:Arduino Nano.jpg|Arduino Nano
+Image:Arduino Due.jpg|Arduino Due (ARM-based)
+Image:LilyPad Arduino Main Board.JPG|LilyPad Arduino (rev 2007)
+
+=== Shields ===
+Arduino and Arduino-compatible boards make use of shields—printed circuit expansion boards that plug into the normally supplied Arduino pin-headers. Shields can provide motor controls, GPS, ethernet, LCD display, or breadboarding (prototyping).  A number of shields can also be made DIY.
+
+Image:Arduino Protoboard Shields.jpg|Multiple shields can be stacked.  In this example the top shield contains a solderless breadboard
+Image:Wingshield on Arduino - ARSH-05-WI.jpg|Screw-terminal breakout shield in a wing-type format
+Image:Adafruit Motor Shield - ARSH-02-MS 01.jpg|Adafruit Motor Shield with screw terminals for connection to motors
+Image:ARSH-09-DL 03.jpg|Adafruit Datalogging Shield with a SD slot and Real-Time Clock chip
+
+== Software ==
+
+The Arduino integrated development environment (IDE) is a cross-platform application written in Java, and is derived from the IDE for the Processing programming language and the Wiring projects. It is designed to introduce programming to artists and other newcomers unfamiliar with software development. It includes a code editor with features such as syntax highlighting, brace matching, and automatic indentation, and is also capable of compiling and uploading programs to the board with a single click. A program or code written for Arduino is called a "sketch".
+
+Arduino programs are written in C or C++. The Arduino IDE comes with a software library called "Wiring" from the original Wiring project, which makes many common input/output operations much easier. Users only need define two functions to make a runnable cyclic executive program:
+
+* setup(): a function run once at the start of a program that can initialize settings
+* loop(): a function called repeatedly until the board powers off
+
+A typical first program for a microcontroller simply blinks an LED on and off. In the Arduino environment, the user might write a program like this:
+
+#define LED_PIN 13
+
+void setup () {
+  pinMode (LED_PIN, OUTPUT); // Enable pin 13 for digital output
+}
+
+void loop () {
+  digitalWrite (LED_PIN, HIGH); // Turn on the LED
+  delay (1000); // Wait one second (1000 milliseconds)
+  digitalWrite (LED_PIN, LOW); // Turn off the LED
+  delay (1000); // Wait one second
+}
+
+It is a feature of most Arduino boards that they have an LED and load resistor connected between pin 13 and ground; a convenient feature for many simple tests. The previous code would not be seen by a standard C++ compiler as a valid program, so when the user clicks the "Upload to I/O board" button in the IDE, a copy of the code is written to a temporary file with an extra include header at the top and a very simple main() function at the bottom, to make it a valid C++ program.
+
+The Arduino IDE uses the GNU toolchain and AVR Libc to compile programs, and uses avrdude to upload programs to the board.
+
+As the Arduino platform uses Atmel microcontrollers, Atmel's development environment, AVR Studio or the newer Atmel Studio, may also be used to develop software for the Arduino.
+
+== Development ==
+
+The core Arduino developer team is composed of Massimo Banzi, David Cuartielles, Tom Igoe, Gianluca Martino, David Mellis and Nicholas Zambetti. Massimo Banzi was interviewed on the March 21st, 2009 episode (Episode 61) of FLOSS Weekly on the TWiT.tv network, in which he discussed the history and goals of the Arduino project. He also gave a talk at TEDGlobal 2012 Conference, where he outlined various uses of Arduino boards around the world.
+
+Arduino is open source hardware: the Arduino hardware reference designs are distributed under a Creative Commons Attribution Share-Alike 2.5 license and are available on the Arduino Web site. Layout and production files for some versions of the Arduino hardware are also available. The source code for the IDE is available and released under the GNU General Public License, version 2.
+
+Although the hardware and software designs are freely available under copyleft licenses, the developers have requested that the name "Arduino" be exclusive to the official product and not be used for derivative works without permission. The official policy document on the use of the Arduino name emphasizes that the project is open to incorporating work by others into the official product. Several Arduino-compatible products commercially released have avoided the "Arduino" name by using "-duino" name variants.
+
+== Applications ==
+* Xoscillo: open-source oscilloscope
+* Scientific equipment
+* Arduinome: a MIDI controller device that mimics the Monome
+* OBDuino: a trip computer that uses the on-board diagnostics interface found in most modern cars
+* The Humane Reader and Humane PC from Humane Informatics: low-cost electronic devices with TV-out that can hold a five thousand book library (e.g. offline Wikipedia compilations) on a microSD card
+* Ardupilot: drone software / hardware
+* ArduinoPhone
+
+== Reception ==
+
+The Arduino project received an honorary mention in the Digital Communities category at the 2006 Prix Ars Electronica.
+
+== See also ==
+
+* ARM express
+* BASIC Stamp
+* Fritzing
+* Gadgeteer
+* Gumstix
+* ioBridge
+* Make Controller Kit
+* Maximite
+* mbed microcontroller
+* Minibloq
+* Netduino
+* OOPic
+* Parallax Propeller
+* PICAXE
+* Raspberry Pi
+* ROBOTC
+* Simplecortex
+* Tinkerforge
+* Microduino
+* UDOO
+
+== References ==
+
+== External links ==
+
+* 
+* , YouTube, Vimeo
+* Simple Arduino setup process. 
+*Documentary about Arduino, Wired Magazine (in Italian)
+* How to install additional Arduino libraries?
+* Arduino Cheat Sheet
+* Arduino Board Pinout Diagrams: Due, Esplora, Leonardo, Mega, Micro, Mini, Uno
+* Evolution tree for Arduino

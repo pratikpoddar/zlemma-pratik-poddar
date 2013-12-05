@@ -1,0 +1,53 @@
+A timer is a specialized type of clock for measuring time intervals.   A timer which counts upwards from zero for measuring elapsed time is often called a stopwatch, a device which counts down from a specified time interval is more usually called a timer.  A simple example is an hourglass.  Some timers sound an audible indication that the time interval has expired. Time switches, timing mechanisms which activate a switch, are sometimes called "timers".
+
+Timers and time switches may be free-standing or incorporated into appliances and machines.  Their operating mechanism may be mechanical (typically clockwork), electromechanical, or purely electronic (counting cycles of an electronic oscillator). Timing functionality can be provided by software, typically in a computer; the program is often called a "timer".
+
+==Mechanical timers==
+
+Mechanical timers use mechanical clockwork to measure time.  Manual timers are typically set by turning a dial to the time interval desired; turning the dial stores energy in a mainspring to run the mechanism.    They function similarly to a mechanical alarm clock; the energy in the mainspring causes a balance wheel to rotate back and forth.  Each swing of the wheel releases the gear train to move forward by a small fixed amount, causing the dial to move steadily backward until it reaches zero, when a lever arm strikes a bell.  The mechanical kitchen timer was invented in 1926 by Thomas Norman Hicks.  More inaccurate, cheap mechanisms use a flat paddle called a fan fly that spins against air resistance; mechanical egg-timers are sometimes of this type.
+
+The simplest and oldest type of mechanical timer is the hourglass, in which a fixed amount of sand drains through a narrow opening from one chamber to another to measure a time interval.
+
+==Electromechanical timers==
+Short-period bimetallic electromechanical timers use a thermal mechanism, with a metal finger made of strips of two metals with different rates of thermal expansion sandwiched together; steel and bronze are common.  An electric current flowing through this finger causes heating of the metals, one side expands less than the other, and an electrical contact on the end of the finger moves away from or towards an electrical switch contact.  The most common use of this type is in the "flasher" units that flash turn signals in automobiles, and sometimes in Christmas lights. This is a non-electronic type of multivibrator.
+
+An electromechanical cam timer uses a small synchronous AC motor turning a cam against a comb of switch contacts.  The AC motor is turned at an accurate rate by the alternating current, which power companies carefully regulate.  Gears drive a shaft at the desired rate, and turn the cam.  The most common application of this timer now is in washers, driers and dishwashers.  This type of timer often has a friction clutch between the gear train and the cam, so that the cam can be turned to reset the time.
+
+Electromechanical timers survive in these applications because mechanical switch contacts may still be less expensive than the semiconductor devices needed to control powerful lights, motors and heaters.
+
+In the past these electromechanical timers were often combined with electrical relays to create electro-mechanical controllers.  Electromechanical timers reached a high state of development in the 1950s and 1960s because of their extensive use in aerospace and weapons systems. Programmable electromechanical timers controlled launch sequence events in early rockets and ballistic missiles. As digital electronics has progressed and dropped in price, electronic timers have become more advantageous.
+
+==Electronic timers==
+Electronic timers are essentially quartz clocks with special electronics, and can achieve higher precision than mechanical timers. Electronic timers have digital electronics, but may have an analog or digital display. Integrated circuits have made digital logic so inexpensive that an electronic timer is now less expensive than many mechanical and electromechanical timers.  Individual timers are implemented as a simple single-chip computer system, similar to a watch and usually using the same, mass-produced, technology.
+
+Many timers are now implemented in software.  Modern controllers use a programmable logic controller rather than a box full of electromechanical parts.  The logic is usually designed as if it were relays, using a special computer language called ladder logic.  In PLCs, timers are usually simulated by the software built into the controller.  Each timer is just an entry in a table maintained by the software.
+
+Digital timers are used in safety devices such as a gas timer.
+
+==Computer timers==
+===Hardware timers===
+
+Computer systems usually have at least one hardware timer. These are typically digital counters that either increment or decrement at a fixed frequency, which is often configurable, and which interrupt the processor when reaching zero, or alternatively a counter with a sufficiently large word size that it will not reach its counter limit before the end of life of the system.
+
+More sophisticated timers may have comparison logic to compare the timer value against a specific value, set by software, that triggers some action when the timer value matches the preset value. This might be used, for example, to measure events or generate pulse width modulated waveforms to control the speed of motors (using a class D digital electronic amplifier).
+
+One specialist use of hardware timers in computer systems is as watchdog timers, that are designed to perform a hardware reset of the system if its software fails.
+
+===Software timers===
+As the number of hardware timers in a computer system or processor is finite and limited, operating systems and embedded systems often use a single hardware timer to implement an extensible set of software timers. In this scenario, the hardware timer's interrupt service routine would handle house-keeping and management of as many software timers as are required, and the hardware timer would be set to expire when the next software timer is due to expire. At expiry, the interrupt routine would update the hardware timer to expire when the next software timer is due, and any actions would be triggered for the software timers that had just expired. Expired timers that are continuous would also be reset to a new expiry time based on their timer interval, and one-shot timers would be disabled or removed from the set of timers.
+
+Compared to hardware timers, software timers typically offer considerably lower levels of time precision. Nevertheless, while simple in concept, care must be taken with software timer implementation if issues such as timer drift and delayed interrupts is to be minimised. In modern operating systems, software timer precision can be traded off further for CPU power savings, using a technique called timer coalescing.
+
+==See also==
+*Candle-timers
+*Drip irrigation
+*Intervalometer
+*Time to digital converter
+*Water clock
+*Countdown
+
+==External links==
+
+* NIST Recommended Practice Guide: Special Publication 960-12 Stopwatch and Timer Calibrations
+
+==References==

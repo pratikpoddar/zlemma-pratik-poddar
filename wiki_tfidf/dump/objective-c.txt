@@ -1,0 +1,790 @@
+Objective-C is a general-purpose, object-oriented programming language that adds Smalltalk-style messaging to the C programming language. It is the main programming language used by Apple for the OS X and iOS operating systems and their respective APIs, Cocoa and Cocoa Touch.
+
+Originally developed in the early 1980s, it was selected as the main language used by NeXT for its NeXTSTEP operating system, from which OS X and iOS are derived. Generic Objective-C programs that do not use the Cocoa or Cocoa Touch libraries, or using parts that may be ported or reimplemented for other systems can also be compiled for any system supported by GCC or Clang.
+
+==History==
+Objective-C was created primarily by Brad Cox and Tom Love in the early 1980s at their company Stepstone. Both had been introduced to Smalltalk while at ITT Corporation's Programming Technology Center in 1981. The earliest work on Objective-C traces back to around that time.
+Cox was intrigued by problems of true reusability in software design and programming. He realized that a language like Smalltalk would be invaluable in building development environments for system developers at ITT. However, he and Tom Love also recognized that backward compatibility with C was critically important in ITT's telecom engineering milieu.
+
+Cox began writing a pre-processor for C to add some of the capabilities of Smalltalk. He soon had a working implementation of an object-oriented extension to the C language, which he called "OOPC" for Object-Oriented Pre-Compiler.
+Love was hired by Schlumberger Research in 1982 and had the opportunity to acquire the first commercial copy of Smalltalk-80, which further influenced the development of their brainchild.
+
+In order to demonstrate that real progress could be made, Cox showed that making interchangeable software components really needed only a few practical changes to existing tools. Specifically, they needed to support objects in a flexible manner, come supplied with a usable set of libraries, and allow for the code (and any resources needed by the code) to be bundled into a single cross-platform format.
+
+Love and Cox eventually formed a new venture, Productivity Products International (PPI), to commercialize their product, which coupled an Objective-C compiler with class libraries. In 1986, Cox published the main description of Objective-C in its original form in the book Object-Oriented Programming, An Evolutionary Approach. Although he was careful to point out that there is more to the problem of reusability than just the language, Objective-C often found itself compared feature for feature with other languages.
+
+===Popularization through NeXT===
+In 1988, NeXT licensed Objective-C from StepStone (the new name of PPI, the owner of the Objective-C trademark) and extended the GCC compiler to support Objective-C, and developed the AppKit and Foundation Kit libraries on which the NeXTstep user interface and interface builder were based. While the NeXT workstations failed to make a great impact in the marketplace, the tools were widely lauded in the industry. This led NeXT to drop hardware production and focus on software tools, selling NeXTstep (and OpenStep) as a platform for custom programming.
+
+The work to extend GCC was led by Steve Naroff, who joined NeXT from StepStone. The compiler changes, but not the runtime libraries, were made available as per GPL license terms rendering the open source contribution unusable to the general public.  This led to other parties developing such under open source license.  Later, Steve Naroff was also principal contributor to work at Apple to build the Objective-C frontend to Clang.
+
+The GNU project started work on its free software implementation of Cocoa, named GNUstep, based on the OpenStep standard. Dennis Glatting wrote the first GNU Objective-C runtime in 1992. The GNU Objective-C runtime, which has been in use since 1993, is the one developed by Kresten Krab Thorup when he was a university student in Denmark. Thorup also worked at NeXT from 1993 to 1996.
+
+After acquiring NeXT in 1996, Apple Computer used OpenStep in its new operating system, Mac OS X. This included Objective-C and NeXT's Objective-C based developer tool, Project Builder (which had been expanded and is now called Xcode), as well as its interface design tool, Interface Builder. Most of Apple's present-day Cocoa API is based on OpenStep interface objects, and is the most significant Objective-C environment being used for active development.
+
+==Syntax==
+Objective-C is a thin layer on top of C, and moreover is a strict superset of C; it is possible to compile any C program with an Objective-C compiler, and to freely include C code within an Objective-C class.
+
+Objective-C derives its object syntax from Smalltalk. All of the syntax for non-object-oriented operations (including primitive variables, pre-processing, expressions, function declarations, and function calls) are identical to that of C, while the syntax for object-oriented features is an implementation of Smalltalk-style messaging.
+
+===Messages===
+The Objective-C model of object-oriented programming is based on message passing to object instances. In Objective-C one does not simply call a method; one sends a message. This is unlike the Simula-style programming model used by C++. The difference between these two concepts is in how the code referenced by the method or message name is executed. In a Simula-style language, the method name is in most cases bound to a section of code in the target class by the compiler. In Smalltalk and Objective-C, the target of a message is resolved at runtime, with the receiving object itself interpreting the message. A method is identified by a selector or SEL — a NUL-terminated string representing its name — and resolved to a C method pointer implementing it: an IMP. A consequence of this is that the message-passing system has no type checking. The object to which the message is directed — the receiver — is not guaranteed to respond to a message, and if it does not, it simply raises an exception.
+
+Sending the message method to the object pointed to by the pointer obj would require the following code in C++:
+
+obj->method(argument);
+
+In Objective-C, this is written as follows:
+
+method:argument;
+
+Both styles of programming have their strengths and weaknesses. Object-oriented programming in the Simula (C++) style allows multiple inheritance and faster execution by using compile-time binding whenever possible, but it does not support dynamic binding by default. It also forces all methods to have a corresponding implementation unless they are abstract. The Smalltalk-style programming as used in Objective-C allows messages to go unimplemented, with the method resolved to its implementation at runtime. For example, a message may be sent to a collection of objects, to which only some will be expected to respond, without fear of producing runtime errors. Message passing also does not require that an object be defined at compile time. An implementation is still required for the method to be called in the derived object. (See the dynamic typing section below for more advantages of dynamic (late) binding.)
+
+===Interfaces and implementations===
+Objective-C requires that the interface and implementation of a class be in separately declared code blocks. By convention, developers place the interface in a header file and the implementation in a code file. The header files, normally suffixed .h, are similar to C header files while the implementation (method) files, normally suffixed .m, can be very similar to C code files.
+
+====Interface====
+In other programming languages, this is called a "class definition".
+
+The interface of a class is usually defined in a header file. A common convention is to name the header file after the name of the class, e.g. Ball.h would contain the interface for the class Ball.
+
+An interface declaration takes the form:
+
+@interface classname : superclassname {
+ // instance variables
+}
++ classMethod1;
++ (return_type)classMethod2;
++ (return_type)classMethod3:(param1_type)param1_varName;
+
+- (return_type)instanceMethod1With1Parameter:(param1_type)param1_varName;
+- (return_type)instanceMethod2With2Parameters:(param1_type)param1_varName param2_callName:(param2_type)param2_varName;
+@end
+
+In the above, plus signs denote class methods, or methods that can be called on the class itself (not on an instance), and minus signs denote instance methods, which can only be called on a particular instance of the class. Class methods also have no access to instance variables.
+
+The code above is roughly equivalent to the following C++ interface:
+
+class classname : public superclassname {
+ protected:
+ // instance variables
+
+public:
+ // Class (static) functions
+ static void * classMethod1();
+ static return_type classMethod2();
+ static return_type classMethod3(param1_type param1_varName);
+
+// Instance (member) functions
+ return_type instanceMethod1With1Parameter (param1_type param1_varName);
+ return_type instanceMethod2With2Parameters (param1_type param1_varName, param2_type param2_varName=default);
+};
+
+Note that instanceMethod2With2Parameters:param2_callName: demonstrates the interleaving of selector segments with argument expressions, for which there is no direct equivalent in C/C++.
+
+Return types can be any standard C type, a pointer to a generic Objective-C object, a pointer to a specific type of object such as NSArray *, NSImage *, or NSString *, or a pointer to the class to which the method belongs (instancetype). The default return type is the generic Objective-C type id.
+
+Method arguments begin with a colon followed by the expected argument type in parentheses and the argument name. In some cases (e.g. when writing system APIs) it is useful to add descriptive text before each parameter.
+
+- (void)setRangeStart:(int)start end:(int)end;
+- (void)importDocumentWithName:(NSString *)name withSpecifiedPreferences:
+(Preferences *)prefs beforePage:(int)insertPage;
+
+====Implementation====
+The interface only declares the class interface and not the methods themselves: the actual code is written in the implementation file. Implementation (method) files normally have the file extension .m, which originally signified "messages".
+
+@implementation classname
++ (return_type)classMethod
+{
+ // implementation
+}
+- (return_type)instanceMethod
+{
+ // implementation
+}
+@end
+
+Methods are written using their interface declarations.
+Comparing Objective-C and C:
+
+- (int)method:(int)i
+{
+ return square_root:i;
+}
+
+int function (int i)
+{
+ return square_root(i);
+}
+
+The syntax allows pseudo-naming of arguments.
+
+- (int)changeColorToRed:(float)red green:(float)green blue:(float)blue;
+
+changeColorToRed:5.0 green:2.0 blue:6.0;
+
+Internal representations of a method vary between different implementations of Objective-C. If myColor is of the class Color, instance method -changeColorToRed:green:blue: might be internally labeled _i_Color_changeColorToRed_green_blue. The i is to refer to an instance method, with the class and then method names appended and colons changed to underscores. As the order of parameters is part of the method name, it cannot be changed to suit coding style or expression as with true named parameters.
+
+However, internal names of the function are rarely used directly. Generally, messages are converted to function calls defined in the Objective-C runtime library. It is not necessarily known at link time which method will be called because the class of the receiver (the object being sent the message) need not be known until runtime.
+
+====Instantiation====
+Once an Objective-C class is written, it can be instantiated. This is done by first allocating an uninitialized instance of the class (an object) and then by initializing it. An object is not fully functional until both steps have been completed. These steps should be accomplished with a single line of code so that there is never an allocated object that hasn't undergone initialization (and because it is not advisable to keep the intermediate result since -init can return a different object than that which it is called on).
+
+Instantiation with the default, no-parameter initializer:
+
+MyObject *o = [alloc init];
+
+Instantiation with a custom initializer:
+
+MyObject *o = [alloc initWithString:myString];
+
+In the case where no custom initialization is being performed, the "new" method can often be used in place of the alloc-init messages:
+
+MyObject *o = new;
+
+Also, some classes implement class method initializers. Like +new, they combine +alloc and -init, but unlike +new, they return an autoreleased instance. Some class method initializers take parameters:
+
+MyObject *o = object;
+MyObject *o2 = objectWithString:myString;
+
+The alloc message allocates enough memory to hold all the instance variables for an object, sets all the instance variables to zero values, and turns the memory into an instance of the class; at no point during the initialization is the memory an instance of the superclass.
+
+The init message performs the set-up of the instance upon creation. The init method is often written as follows:
+
+- (id)init {
+    self = init;
+    if (self) {
+        // perform initialization of object here
+    }
+    return self;
+}
+
+In the above example, notice the id return type. This type stands for "pointer to any object" in Objective-C (See the Dynamic typing section).
+
+The initializer pattern is used in order to assure that the object is properly initialized by its superclass before the init method performs its initialization. It performs the following actions:
+# self = init
+#: Sends the superclass instance an init message and assigns the result to self (pointer to the current object).
+# if (self)
+#: Checks if the returned object pointer is valid before performing any initialization.
+# return self
+#: Returns the value of self to the caller.
+
+A non-valid object pointer has the value nil; conditional statements like "if" treat nil like a null pointer, so the initialization code will not be executed if init returned nil. If there is an error in initialization the init method should perform any necessary cleanup, including sending a "release" message to self, and return nil to indicate that initialization failed. Any checking for such errors must only be performed after having called the superclass initialization to ensure that destroying the object will be done correctly.
+
+If a class has more than one initialization method, only one of them (the "designated initializer") needs to follow this pattern; others should call the designated initializer instead of the superclass initializer.
+
+===Protocols===
+In other programming languages, these are called "interfaces".
+
+Objective-C was extended at NeXT to introduce the concept of multiple inheritance of specification, but not implementation, through the introduction of protocols. This is a pattern achievable either as an abstract multiple inherited base class in C++, or as an "interface" (as in Java and C#). Objective-C makes use of ad hoc protocols called informal protocols and compiler-enforced protocols called formal protocols.
+
+An informal protocol is a list of methods that a class can opt to implement. It is specified in the documentation, since it has no presence in the language. Informal protocols often include optional methods, which, if implemented, can change the behavior of a class. For example, a text field class might have a delegate that implements an informal protocol with an optional method for performing auto-completion of user-typed text. The text field discovers whether the delegate implements that method (via reflection) and, if so, calls the delegate's method to support the auto-complete feature.
+
+A formal protocol is similar to an interface in Java or C#. It is a list of methods that any class can declare itself to implement. Versions of Objective-C before 2.0 required that a class must implement all methods in a protocol it declares itself as adopting; the compiler will emit an error if the class does not implement every method from its declared protocols. Objective-C 2.0 added support for marking certain methods in a protocol optional, and the compiler will not enforce implementation of optional methods.
+
+A class must be declared to implement that protocol to be said to conform to it. This is detectable at runtime. Formal protocols cannot provide any implementations; they simply assure callers that classes that conform to the protocol will provide implementations. In the NeXT/Apple library, protocols are frequently used by the Distributed Objects system to represent the capabilities of an object executing on a remote system.
+
+The syntax
+
+@protocol NSLocking
+- (void)lock;
+- (void)unlock;
+@end
+
+denotes that there is the abstract idea of locking. By stating that the protocol is implemented in the class definition:
+
+@interface NSLock : NSObject 
+//...
+@end
+
+Instances of NSLock claim that they will provide an implementation for the two instance methods.
+
+===Dynamic typing===
+Objective-C, like Smalltalk, can use dynamic typing: an object can be sent a message that is not specified in its interface. This can allow for increased flexibility, as it allows an object to "capture" a message and send the message to a different object that can respond to the message appropriately, or likewise send the message on to another object. This behavior is known as message forwarding or delegation (see below). Alternatively, an error handler can be used in case the message cannot be forwarded. If an object does not forward a message, respond to it, or handle an error, then the system will generate a runtime exception.   If messages are sent to nil (the null object pointer), they will be silently ignored or raise a generic exception, depending on compiler options.
+
+Static typing information may also optionally be added to variables. This information is then checked at compile time. In the following four statements, increasingly specific type information is provided. The statements are equivalent at runtime, but the additional information allows the compiler to warn the programmer if the passed argument does not match the type specified.
+
+- (void)setMyValue:(id)foo;
+
+In the above statement, foo may be of any class.
+
+- (void)setMyValue:(id)foo;
+
+In the above statement, foo may be an instance of any class that conforms to the NSCopying protocol.
+
+- (void)setMyValue:(NSNumber *)foo;
+
+In the above statement, foo must be an instance of the NSNumber class.
+
+- (void)setMyValue:(NSNumber *)foo;
+
+In the above statement, foo must be an instance of the NSNumber class, and it must conform to the NSCopying protocol.
+
+===Forwarding===
+Objective-C permits the sending of a message to an object that may not respond. Rather than responding or simply dropping the message, an object can forward the message to an object that can respond. Forwarding can be used to simplify implementation of certain design patterns, such as the observer pattern or the proxy pattern.
+
+The Objective-C runtime specifies a pair of methods in Object
+* forwarding methods:
+
+- (retval_t)forward:(SEL)sel args:(arglist_t)args; // with GCC
+- (id)forward:(SEL)sel args:(marg_list)args; // with NeXT/Apple systems
+
+* action methods:
+
+- (retval_t)performv:(SEL)sel args:(arglist_t)args; // with GCC
+- (id)performv:(SEL)sel args:(marg_list)args; // with NeXT/Apple systems
+
+An object wishing to implement forwarding needs only to override the forwarding method with a new method to define the forwarding behavior. The action method performv:: need not be overridden, as this method merely performs an action based on the selector and arguments. Notice the SEL type, which is the type of messages in Objective-C.
+
+Note: in OpenStep, Cocoa, and GNUstep, the commonly used frameworks of Objective-C, one does not use the Object class. The - (void)forwardInvocation:(NSInvocation *)anInvocation method of the NSObject class is used to do forwarding.
+
+====Example====
+Here is an example of a program that demonstrates the basics of forwarding.
+
+; Forwarder.h
+
+# import
+
+@interface Forwarder : Object {
+ id recipient; //The object we want to forward the message to.
+}
+
+//Accessor methods.
+- (id)recipient;
+- (id)setRecipient:(id)_recipient;
+
+@end
+
+; Forwarder.m
+
+# import "Forwarder.h"
+
+@implementation Forwarder
+
+- (retval_t)forward:(SEL)sel args:(arglist_t) args {
+ /*
+ * Check whether the recipient actually responds to the message.
+ * This may or may not be desirable, for example, if a recipient
+ * in turn does not respond to the message, it might do forwarding
+ * itself.
+ */
+ if(respondsToSelector:sel) {
+  return performv:sel args:args;
+ } else {
+  return error:"Recipient does not respond";
+ }
+}
+
+- (id)setRecipient:(id)_recipient {
+ autorelease;
+ recipient = retain;
+ return self;
+}
+
+- (id) recipient {
+ return recipient;
+}
+@end
+
+; Recipient.h
+
+# import
+
+// A simple Recipient object.
+@interface Recipient : Object
+- (id)hello;
+@end
+
+; Recipient.m
+
+# import "Recipient.h"
+
+@implementation Recipient
+
+- (id)hello {
+ printf("Recipient says hello!\n");
+
+return self;
+}
+
+@end
+
+; main.m
+
+# import "Forwarder.h"
+# import "Recipient.h"
+
+int main(void) {
+ Forwarder *forwarder = new;
+ Recipient *recipient = new;
+
+setRecipient:recipient; //Set the recipient.
+ /*
+ * Observe forwarder does not respond to a hello message! It will
+ * be forwarded. All unrecognized methods will be forwarded to
+ * the recipient
+ * (if the recipient responds to them, as written in the Forwarder)
+ */
+ hello;
+
+release;
+ release;
+
+return 0;
+}
+
+====Notes====
+When compiled using gcc, the compiler reports:
+
+$ gcc -x objective-c -Wno-import Forwarder.m Recipient.m main.m -lobjc
+ main.m: In function `main':
+ main.m:12: warning: `Forwarder' does not respond to `hello'
+ $
+
+The compiler is reporting the point made earlier, that Forwarder does not respond to hello messages. In this circumstance, it is safe to ignore the warning since forwarding was implemented. Running the program produces this output:
+ $ ./a.out
+ Recipient says hello!
+
+===Categories===
+During the design of Objective-C, one of the main concerns was the maintainability of large code bases. Experience from the structured programming world had shown that one of the main ways to improve code was to break it down into smaller pieces. Objective-C borrowed and extended the concept of categories from Smalltalk implementations to help with this process.
+
+Furthermore, the methods within a category are added to a class at run-time. Thus, categories permit the programmer to add methods to an existing class without the need to recompile that class or even have access to its source code. For example, if a system does not contain a spell checker in its String implementation, it could be added without modifying the String source code.
+
+Methods within categories become indistinguishable from the methods in a class when the program is run. A category has full access to all of the instance variables within the class, including private variables.
+
+If a category declares a method with the same method signature as an existing method in a class, the category’s method is adopted. Thus categories can not only add methods to a class, but also replace existing methods. This feature can be used to fix bugs in other classes by rewriting their methods, or to cause a global change to a class’s behavior within a program. If two categories have methods with the same name (not to be confused with method signature), it is undefined which category’s method is adopted.
+
+Other languages have attempted to add this feature in a variety of ways. TOM took the Objective-C system a step further and allowed for the addition of variables as well. Other languages have used prototype oriented solutions instead, with the most notable being Self.
+
+The C# and Visual Basic.NET languages implement superficially similar functionality in the form of extension methods, but these do not have access to the private variables of the class. Ruby and several other dynamic programming languages refer to the technique as "monkey patching".
+
+Logtalk implements a concept of categories (as first-class entities) that subsumes Objective-C categories functionality (Logtalk categories can also be used as fine-grained units of composition when defining e.g. new classes or prototypes; in particular, a Logtalk category can be virtually imported by any number of classes and prototypes).
+
+====Example usage of categories====
+This example builds up an Integer class, by defining first a basic class with only accessor methods implemented, and adding two categories, Arithmetic and Display, which extend the basic class. While categories can access the base class’ private data members, it is often good practice to access these private data members through the accessor methods, which helps keep categories more independent from the base class. This is one typical usage of categories—the other is to use categories to add or replace certain methods in the base class (however it is not regarded as good practice to use categories for subclass overriding, also known as monkey patching).  By convention files containing categories that extend base classes will take the name BaseClass+ExtensionClass.h.
+
+; Integer.h
+
+# import
+
+@interface Integer : Object {
+ int integer;
+}
+
+- (int) integer;
+- (id) integer: (int) _integer;
+@end
+
+; Integer.m
+
+# import "Integer.h"
+
+@implementation Integer
+- (int) integer {
+ return integer;
+}
+
+- (id) integer: (int) _integer {
+ integer = _integer;
+
+return self;
+}
+@end
+
+; Integer+Arithmetic.h
+
+# import "Integer.h"
+
+@interface Integer (Arithmetic)
+- (id) add: (Integer *) addend;
+- (id) sub: (Integer *) subtrahend;
+@end
+
+; Integer+Arithmetic.m
+
+# import "Integer+Arithmetic.h"
+
+@implementation Integer (Arithmetic)
+- (id) add: (Integer *) addend {
+ return [self integer: integer + integer];
+}
+
+- (id) sub: (Integer *) subtrahend {
+ return [self integer: integer - integer];
+}
+@end
+
+; Integer+Display.h
+
+# import "Integer.h"
+
+@interface Integer (Display)
+- (id) showstars;
+- (id) showint;
+@end
+
+; Integer+Display.m
+
+# import "Integer+Display.h"
+
+@implementation Integer (Display)
+- (id) showstars {
+ int i, x = integer;
+ for (i = 0; i < x; i++) {
+ printf("*");
+ }
+ printf("\n");
+
+return self;
+}
+
+- (id) showint {
+ printf("%d\n", integer);
+
+return self;
+}
+@end
+
+; main.m
+
+# import "Integer.h"
+# import "Integer+Arithmetic.h"
+# import "Integer+Display.h"
+
+int main(void) {
+ Integer *num1 = new, *num2 = new;
+ int x;
+
+printf("Enter an integer: ");
+ scanf("%d", &x);
+
+integer:x;
+ showstars;
+
+printf("Enter an integer: ");
+ scanf("%d", &x);
+
+integer:x;
+ showstars;
+
+add:num2;
+ showint;
+
+return 0;
+}
+
+====Notes====
+Compilation is performed, for example, by:
+ gcc -x objective-c main.m Integer.m Arithmetic.m Display.m -lobjc
+
+One can experiment by omitting the #import "Arithmetic.h"  and add:num2 lines and omit Arithmetic.m in compilation. The program will still run. This means that it is possible to "mix-and-match" added categories if necessary; if one does not need to have some capability provided in a category, one can simply not compile it in.
+
+===Posing===
+Objective-C permits a class to wholly replace another class within a program. The replacing class is said to "pose as" the target class.
+
+Note: Class posing was declared deprecated with Mac OS X v10.5, and is unavailable in the 64-bit runtime.
+
+For the versions still supporting posing, all messages sent to the target class are instead received by the posing class. There are several restrictions:
+* A class may only pose as one of its direct or indirect superclasses.
+* The posing class must not define any new instance variables that are absent from the target class (though it may define or override methods).
+* The target class may not have received any messages prior to the posing.
+
+Posing, similarly with categories, allows global augmentation of existing classes. Posing permits two features absent from categories:
+* A posing class can call overridden methods through super, thus incorporating the implementation of the target class.
+* A posing class can override methods defined in categories.
+
+For example,
+
+@interface CustomNSApplication : NSApplication
+@end
+
+@implementation CustomNSApplication
+- (void) setMainMenu: (NSMenu*) menu {
+ // do something with menu
+}
+@end
+
+class_poseAs (class, class);
+
+This intercepts every invocation of setMainMenu to NSApplication.
+
+===#import===
+In the C language, the #include pre-compile directive always causes a file's contents to be inserted into the source at that point. Objective-C has the equivalent #import directive except each file is included only once per compilation unit, obviating the need for include guards.
+
+==Other features==
+Objective-C's features often allow for flexible, and often easy, solutions to programming issues.
+* Delegating methods to other objects and remote invocation can be easily implemented using categories and message forwarding.
+* Swizzling of the isa pointer allows for classes to change at runtime. Typically used for debugging where freed objects are swizzled into zombie objects whose only purpose is to report an error when someone calls them. Swizzling was also used in Enterprise Objects Framework to create database faults. Swizzling is used today by Apple’s Foundation Framework to implement Key-Value Observing.
+
+==Language variants==
+
+===Objective-C++===
+Objective-C++ is a language variant accepted by the front-end to the GNU Compiler Collection and Clang, which can compile source files that use a combination of C++ and Objective-C syntax. Objective-C++ adds to C++ the extensions that Objective-C adds to C. As nothing is done to unify the semantics behind the various language features, certain restrictions apply:
+* A C++ class cannot derive from an Objective-C class and vice versa.
+* C++ namespaces cannot be declared inside an Objective-C declaration.
+* Objective-C declarations may appear only in global scope, not inside a C++ namespace
+* Objective-C classes cannot have instance variables of C++ classes that do not have a default constructor or that have one or more virtual methods, but pointers to C++ objects can be used as instance variables without restriction (allocate them with new in the -init method).
+* C++ "by value" semantics cannot be applied to Objective-C objects, which are only accessible through pointers.
+* An Objective-C declaration cannot be within a C++ template declaration and vice versa. However, Objective-C types, (e.g., Classname *) can be used as C++ template parameters.
+* Objective-C and C++ exception handling is distinct; the handlers of each cannot handle exceptions of the other type. This is mitigated in recent runtimes as Objective-C exceptions are either replaced by C++ exceptions completely (Apple runtime), or partly when Objective-C++ library is linked (GNUstep libobjc2).
+* Care must be taken since the destructor calling conventions of Objective-C and C++’s exception run-time models do not match (i.e., a C++ destructor will not be called when an Objective-C exception exits the C++ object’s scope). The new 64-bit runtime resolves this by introducing interoperability with C++ exceptions in this sense.
+* Objective-C blocks and C++11 lambdas are distinct entities, however a block is transparently generated on Mac OS X when passing a lambda where a block is expected.
+
+===Objective-C 2.0===
+At the 2006 Worldwide Developers Conference, Apple announced the release of "Objective-C 2.0," a revision of the Objective-C language to include "modern garbage collection, syntax enhancements, runtime performance improvements, and 64-bit support". Mac OS X v10.5, released in October 2007, included an Objective-C 2.0 compiler. GCC 4.6 supports many new Objective-C features, such as declared and synthesized properties, dot syntax, fast enumeration, optional protocol methods, method/protocol/class attributes, class extensions and a new GNUnn Objective-C runtime API.
+
+====Garbage collection====
+Objective-C 2.0 provided an optional conservative, generational garbage collector. When run in backwards-compatible mode, the runtime turned reference counting operations such as "retain" and "release" into no-ops. All objects were subject to garbage collection when garbage collection was enabled. Regular C pointers could be qualified with "__strong" to also trigger the underlying write-barrier compiler intercepts and thus participate in garbage collection. A zero-ing weak subsystem was also provided such that pointers marked as "__weak" are set to zero when the object (or more simply, GC memory) is collected. The garbage collector did not exist on the iOS implementation of Objective-C 2.0. Garbage collection in Objective-C ran on a low-priority background thread, and can halt on user events, with the intention of keeping the user experience responsive.
+
+Garbage collection was never made available in iOS due to performance concerns. It was deprecated in OS X v10.8 in favour of Automatic Reference Counting (ARC) and is scheduled to be removed in a future version of OS X.
+
+====Properties====
+Objective-C 2.0 introduces a new syntax to declare instance variables as properties, with optional attributes to configure the generation of accessor methods. Properties are, in a sense, public instance variables; that is, declaring an instance variable as a property provides external classes with access (possibly limited, e.g. read only) to that property. A property may be declared as "readonly", and may be provided with storage semantics such as "assign", "copy" or "retain". By default, properties are considered atomic, which results in a lock preventing multiple threads from accessing them at the same time. A property can be declared as "nonatomic", which removes this lock.
+
+@interface Person : NSObject {
+ @public
+ NSString *name;
+ @private
+ int age;
+}
+
+@property(copy) NSString *name;
+@property(readonly) int age;
+
+-(id)initWithAge:(int)age;
+@end
+
+Properties are implemented by way of the @synthesize keyword, which generates getter (and setter, if not read-only) methods according to the property declaration. Alternatively, the getter and setter methods must be implemented explicitly, or the @dynamic keyword can be used to indicate that accessor methods will be provided by other means. When compiled using clang 3.1 or higher, all properties which is not explicitly declared with @dynamic, marked readonly or have complete user-implemented getter and setter will be automatically implicitly @synthesize'd.
+
+@implementation Person
+@synthesize name;
+
+-(id)initWithAge:(int)initAge {
+ self = init;
+ if (self) {
+ age = initAge; // NOTE: direct instance variable assignment, not property setter
+ }
+ return self;
+}
+
+-(int)age {
+ return age;
+}
+@end
+
+Properties can be accessed using the traditional message passing syntax, dot notation, or, in Key-Value Coding, by name via the "valueForKey:"/"setValue:forKey:" methods.
+
+Person *aPerson = [alloc initWithAge: 53];
+aPerson.name = @"Steve"; // NOTE: dot notation, uses synthesized setter,
+ // equivalent to setName: @"Steve";
+NSLog(@"Access by message (%@), dot notation(%@),
+property name(%@) and direct instance variable access (%@)",
+ name, aPerson.name, valueForKey:@"name", aPerson->name);
+
+In order to use dot notation to invoke property accessors within an instance method, the "self" keyword should be used:
+
+-(void) introduceMyselfWithProperties:(BOOL)useGetter {
+ NSLog(@"Hi, my name is %@.", (useGetter ? self.name : name));
+// NOTE: getter vs. ivar access
+}
+
+A class or protocol's properties may be dynamically introspected.
+
+int i;
+int propertyCount = 0;
+objc_property_t *propertyList = class_copyPropertyList(class, &propertyCount);
+
+for (i = 0; i < propertyCount; i++) {
+ objc_property_t *thisProperty = propertyList + i;
+ const char* propertyName = property_getName(*thisProperty);
+ NSLog(@"Person has a property: '%s'", propertyName);
+}
+
+====Non-fragile instance variables====
+Objective-C 2.0 provides non-fragile instance variables where supported by the runtime (i.e. when building 64-bit Mac OS X code as well as all iOS code). Under the modern runtime, an extra layer of indirection is added to instance variable access, allowing the dynamic linker to adjust instance layout at runtime. This feature allows for two important improvements to Objective-C code:
+* This eliminates the fragile binary interface problem—superclasses can change sizes without affecting binary compatibility.
+* This allows instance variables that provide the backing for properties to be synthesized at runtime without them being declared in the class’ interface.
+
+====Fast enumeration====
+Instead of using an NSEnumerator object or indices to iterate through a collection, Objective-C 2.0 offers the fast enumeration syntax. In Objective-C 2.0, the following loops are functionally equivalent, but have different performance characteristics.
+
+// Using NSEnumerator
+NSEnumerator *enumerator = objectEnumerator;
+Person *p;
+
+while ((p = nextObject) != nil) {
+ NSLog(@"%@ is %i years old.", name, age);
+}
+
+// Using indexes
+for (int i = 0; i < count; i++) {
+ Person *p = objectAtIndex:i;
+ NSLog(@"%@ is %i years old.", name, age);
+}
+
+// Using fast enumeration
+for (Person *p in thePeople) {
+ NSLog(@"%@ is %i years old.", name, age);
+}
+
+Fast enumeration generates more efficient code than standard enumeration because method calls to enumerate over objects are replaced by pointer arithmetic using the NSFastEnumeration protocol.
+
+====Class Extensions====
+A class extension has the same syntax as a category declaration with no category name, and the methods and properties declared in it are added directly to the main class. It is mostly used as an alternative to a category to add methods to a class without advertising them in the public headers, with the advantage that for class extensions the compiler checks that all the privately declared methods are actually implemented.
+
+====Implications for Cocoa development====
+
+All Objective-C applications developed for Mac OS X that make use of the above improvements for Objective-C 2.0 are incompatible with all operating systems prior to 10.5 (Leopard). Since fast enumeration does not generate exactly the same binaries as standard enumeration, its use will cause an application to crash on OS X version 10.4 or earlier.
+
+===Blocks===
+
+Blocks is a nonstandard extension for Objective-C (as well as C and C++) that uses special syntax to create closures. Blocks are only supported in Mac OS X 10.6 "Snow Leopard" or later and iOS 4 or later, as well as GNUstep with libobjc2 1.7 and compiling with clang 3.1 or later.
+
+#include 
+#include 
+typedef int (^IntBlock)();
+
+IntBlock MakeCounter(int start, int increment) {
+	__block int i = start;
+	
+	return Block_copy( ^ {
+		int ret = i;
+		i += increment;
+		return ret;
+	});
+	
+}
+
+int main(void) {
+	IntBlock mycounter = MakeCounter(5, 2);
+	printf("First call: %d\n", mycounter());
+	printf("Second call: %d\n", mycounter());
+	printf("Third call: %d\n", mycounter());
+	
+	/* because it was copied, it must also be released */
+	Block_release(mycounter);
+	
+	return 0;
+}
+/* Output:
+	First call: 5
+	Second call: 7
+	Third call: 9
+*/
+
+===Modern Objective-C===
+
+====Automatic Reference Counting====
+
+Automatic Reference Counting (ARC) is a compile-time feature that eliminates the need for programmers to manually manage retain counts using retain and release.  Unlike garbage collection, which occurs at run time, ARC eliminates the overhead of a separate process managing retain counts. ARC and manual memory management are not mutually exclusive; programmers can continue to use non-ARC code in ARC-enabled projects by disabling ARC for individual code files. XCode can also attempt to automatically upgrade a project to ARC.
+
+====Literals====
+NeXT and Apple Obj-C runtimes have long included a short-form way to create new strings, using the literal syntax @"a new string". Using this format saves the programmer from having to use the longer initWithString or similar methods when doing certain operations.
+
+When using Apple LLVM compiler 4.0 or later, arrays, dictionaries, and numbers (NSArray, NSDictionary, NSNumber classes) can also be created using literal syntax instead of methods. Literal syntax uses the @ symbol combined with [], {}, (), to create the classes mentioned above, respectively.
+
+Example without literals:
+
+NSArray *myArray = arrayWithObjects:object1,object2,object3,nil;
+NSDictionary *myDictionary1 = dictionaryWithObject:someObject forKey:@"key";
+NSDictionary *myDictionary2 = dictionaryWithObjectsAndKeys:object1, key1, object2, key2, nil;
+NSNumber *myNumber = numberWithInt:myInt;
+
+Example with literals:
+
+NSArray *myArray = @object1, object2, object3 ;
+NSDictionary *myDictionary1 = @{ @"key" : someObject };
+NSDictionary *myDictionary2 = @{ key1: object1, key2: object2 };
+NSNumber *myNumber = @(myInt);
+
+However, different from string literals, which compile to actual constants in the executable, these literals compile to code equivalent to the above method calls. In particular, under manually reference-counted memory management, these objects are autoreleased, which requires additional care when e.g. used with function-static variables or other kinds of globals.
+
+====Subscripting====
+When using Apple LLVM compiler 4.0 or later, arrays and dictionaries (NSArray and NSDictionary classes) can be manipulated using subscripting.  Subscripting can be used to retrieve values from indexes (array) or keys (dictionary), and with mutable objects, can also be used to set objects to indexes or keys. In code, subscripting is represented using brackets .
+
+Example without subscripting:
+
+id object1 = objectAtIndex:0;
+id object2 = objectForKey:@"key";
+replaceObjectAtIndex:0 withObject:object3;
+setObject:object4 forKey:@"key";
+
+Example with subscripting:
+
+id object1 = someArray[0];
+id object2 = someDictionary[@"key"];
+someMutableArray[0] = object3;
+someMutableDictionary[@"key"] = object4;
+
+===Portable Object Compiler===
+Besides the GCC/NeXT/Apple implementation, which added several extensions to the original Stepstone implementation, another free, open-source Objective-C implementation called the Portable Object Compiler also exists. The set of extensions implemented by the Portable Object Compiler differs from the GCC/NeXT/Apple implementation; in particular, it includes Smalltalk-like blocks for Objective-C, while it lacks protocols and categories, two features used extensively in OpenStep and its derivatives and relatives. Overall, POC represents an older, pre-NeXT stage in the language's evolution, roughly conformant to Brad Cox's 1991 book.
+
+It also includes a runtime library called ObjectPak, which is based on Cox's original ICPak101 library (which in turn derives from the Smalltalk-80 class library), and is quite radically different from the OpenStep FoundationKit.
+
+===GEOS Objective-C===
+The PC GEOS system used a programming language known as GEOS Objective-C or goc; despite the name similarity, the two languages are similar only in overall concept and the use of keywords prefixed with an @ sign.
+
+===Clang===
+The Clang compiler suite, part of the LLVM project, implements Objective-C as well as other languages.
+
+==Library use==
+Objective-C today is often used in tandem with a fixed library of standard objects (often known as a "kit" or "framework"), such as Cocoa, GNUstep or ObjFW. These libraries often come with the operating system: the GNUstep libraries often come with GNU/Linux based distributions and Cocoa comes with OS X. The programmer is not forced to inherit functionality from the existing base class (NSObject / OFObject). Objective-C allows for the declaration of new root classes that do not inherit any existing functionality. Originally, Objective-C based programming environments typically offered an Object class as the base class from which almost all other classes inherited. With the introduction of OpenStep, NeXT created a new base class named NSObject, which offered additional features over Object (an emphasis on using object references and reference counting instead of raw pointers, for example). Almost all classes in Cocoa inherit from NSObject.
+
+Not only did the renaming serve to differentiate the new default behavior of classes within the OpenStep API, but it allowed code that used Object—the original base class used on NeXTSTEP (and, more or less, other Objective-C class libraries)—to co-exist in the same runtime with code that used NSObject (with some limitations). The introduction of the two letter prefix also became a simplistic form of namespaces, which Objective-C lacks. Using a prefix to create an informal packaging identifier became an informal coding standard in the Objective-C community, and continues to this day.
+
+More recently, package managers have started appearing, such as CocoaPods, which aims to be both a package manager and a repository of packages. A lot of open-source Objective-C code that was written in the last years can now be installed using CocoaPods.
+
+==Analysis of the language==
+
+Objective-C implementations use a thin runtime system written in C, which adds little to the size of the application. In contrast, most object-oriented systems at the time that it was created used large virtual machine runtimes. Programs written in Objective-C tend to be not much larger than the size of their code and that of the libraries (which generally do not need to be included in the software distribution), in contrast to Smalltalk systems where a large amount of memory was used just to open a window. Objective-C applications tend to be larger than similar C or C++ applications because Objective-C dynamic typing does not allow methods to be stripped or inlined. Since the programmer has such freedom to delegate, forward calls, build selectors on the fly and pass them to the runtime system, the Objective-C compiler cannot assume it's safe to remove unused methods or to inline calls.
+
+Likewise, the language can be implemented on top of existing C compilers (in GCC, first as a preprocessor, then as a module) rather than as a new compiler. This allows Objective-C to leverage the huge existing collection of C code, libraries, tools, etc. Existing C libraries can be wrapped in Objective-C wrappers to provide an OO-style interface. In this aspect, it is similar to GObject library and Vala language, which are widely used in development of GTK applications.
+
+All of these practical changes lowered the barrier to entry, likely the biggest problem for the widespread acceptance of Smalltalk in the 1980s.
+
+The first versions of Objective-C did not support garbage collection. At the time this decision was a matter of some debate, and many people considered long "dead times" (when Smalltalk did collection) to render the entire system unusable. Some 3rd party implementations have added this feature (most notably GNUstep) and Apple has implemented it as of Mac OS X v10.5. However in more recent versions of Mac OS X and iOS, garbage collection has been deprecated in favor of ARC (see below).
+
+Another common criticism is that Objective-C does not have language support for namespaces. Instead, programmers are forced to add prefixes to their class names, which are traditionally shorter than namespace names and thus more prone to collisions. As of 2007, all Mac OS X classes and functions in the Cocoa programming environment are prefixed with "NS" (e.g. NSObject, NSButton) to identify them as belonging to the Mac OS X or iOS core; the "NS" derives from the names of the classes as defined during the development of NeXTstep.
+
+Since Objective-C is a strict superset of C, it does not treat C primitive types as first-class objects.
+
+Unlike C++, Objective-C does not support operator overloading. Also unlike C++, Objective-C allows an object to directly inherit only from one class (forbidding multiple inheritance). However, categories and protocols may be used as an alternative way to achieve the same results.
+
+Because Objective-C uses dynamic runtime typing and because all method calls are function calls (or, in some cases, syscalls), many common performance optimizations cannot be applied to Objective-C methods (for example: inlining, constant propagation, interprocedural optimizations, and scalar replacement of aggregates). This limits the performance of Objective-C abstractions relative to similar abstractions in languages such as C++ where such optimizations are possible.
+
+Many programmers dislike garbage collected languages because of the runtime performance tradeoffs. Apple introduced Automatic Reference Counting (ARC)  in 2011 as an alternative memory management mechanism. With ARC, the compiler inserts retain and release calls automatically into Objective-C code based on static code analysis. The automation relieves the programmer of having to write in memory management code. ARC also adds weak references to the Objective-C language.
+
+===Philosophical differences between Objective-C and C++===
+The design and implementation of C++ and Objective-C represent different approaches to extending C.
+
+In addition to C’s style of procedural programming, C++ directly supports certain forms of object-oriented programming, generic programming, and metaprogramming. C++ also comes with a large standard library that includes several container classes. Similarly, Objective-C adds object-oriented programming, dynamic typing, and reflection to C. Objective-C does not provide a standard library, per se, but in most places where Objective-C is used, it is used with an OpenStep-like library such as OPENSTEP, Cocoa, or GNUstep, which provide functionality similar to C++’s standard library.
+
+One notable difference is that Objective-C provides runtime support for reflective features, whereas C++ adds only a small amount of runtime support to C. In Objective-C, an object can be queried about its own properties, e.g., whether it will respond to a certain message. In C++ this is not possible without the use of external libraries.
+
+The use of reflection is part of the wider distinction between dynamic (run-time) features versus static (compile-time) features of a language. Although Objective-C and C++ each employ a mix of both features, Objective-C is decidedly geared toward run-time decisions while C++ is geared toward compile-time decisions. The tension between dynamic and static programming involves many of the classic trade-offs in programming: dynamic features add flexibility, static features add speed and type checking.
+
+Generic programming and metaprogramming can be implemented in both languages using runtime polymorphism; in C++ this takes the form of virtual functions and runtime type identification, while Objective-C offers dynamic typing and reflection.  Objective-C lacks compile-time polymorphism (generics) entirely, while C++ does support this via function overloading and templates.
+
+==See also==
+* C (programming language)
+* C++
+* Comparison of programming languages
+* Xcode
+
+==References==
+
+==Further reading==
+
+*
+
+==External links==
+
+* Programming with Objective-C, from Apple (2012-12-13) 
+* The Objective-C 2.0 Programming Language, from Apple (2011-10-11)
+* Objective-C Runtime Programming Guide, from Apple (2009-10-19)
+* Objective-C GNUstep Base Programming Manual
+* Objective-C by Brad Cox
+* Object Oriented Programming in Objective-C
+* Objective-C FAQ
+* Objective-C Programming: The Big Nerd Ranch Guide by Aaron Hillegass, Pearson Education
+* Programming in Objective-C, 4th Edition by Stephen Kochan, Addison-Wesley

@@ -1,0 +1,39 @@
+The High-level shader language or High-level shading language (HLSL) is a proprietary shading language developed by Microsoft for use with the Microsoft Direct3D API. It is analogous to the GLSL shading language used with the OpenGL standard. It is the same as the Nvidia Cg shading language, as it was developed alongside it.
+
+HLSL programs come in three forms: vertex shaders, geometry shaders, and pixel (or fragment) shaders. A vertex shader is executed for each vertex that is submitted by the application, and is primarily responsible for transforming the vertex from object space to view space, generating texture coordinates, and calculating lighting coefficients such as the vertex's tangent, binormal and normal vectors. When a group of vertices (normally 3, to form a triangle) come through the vertex shader, their output position is interpolated to form pixels within its area; this process is known as rasterisation. Each of these pixels comes through the pixel shader, whereby the resultant screen colour is calculated.
+
+Optionally, an application using a Direct3D 10/11 interface and Direct3D 10/11 hardware may also specify a geometry shader. This shader takes as its input the three vertices of a triangle and uses this data to generate (or tessellate) additional triangles, which are each then sent to the rasterizer.
+
+==Shader model comparison==
+===Pixel shader comparison===
+
+*PS 2.0 = DirectX 9.0 original Shader Model 2 specification.
+*PS 2.0a = NVIDIA GeForce FX-optimized model.
+*PS 2.0b = ATI Radeon X700, X800, X850 shader model, DirectX 9.0b.
+*PS 3.0 = Shader Model 3.0.
+*PS 4.0 = Shader Model 4.0.
+*PS 4.1 = Shader Model 4.1.
+*PS 5.0 = Shader Model 5.0.
+
+"32 + 64" for Executed Instructions means "32 texture instructions and 64 arithmetic instructions."
+
+=== Vertex shader comparison ===
+
+*VS 2.0 = DirectX 9.0 original Shader Model  specification.
+*VS 2.0a = NVIDIA GeForce FX-optimized model.
+*VS 3.0 = Shader Model 3.0.
+** Note that ATI X1000 series cards (e.g. X1900) does not support Vertex Texture Fetch, hence it does not fully comply with the VS 3.0 model. Instead, they offer a feature called "Render to Vertex Buffer (R2VB)" that provides functionality that is a superset of Vertex Texture Fetch.
+*VS 4.0 = Shader Model 4.0.
+*VS 4.1 = Shader Model 4.1.
+*VS 5.0 = Shader Model 5.0.
+
+== See also ==
+* GLSL
+
+==Footnotes==
+
+==External links==
+* Programming Guide for HLSL, from Microsoft
+* Introduction to the DirectX 9 High Level Shading Language, (ATI) AMD developer central
+* Riemer's HLSL Introduction & Tutorial (includes sample code)
+* HLSL Introduction

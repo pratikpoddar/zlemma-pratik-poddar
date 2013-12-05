@@ -1,0 +1,44 @@
+Cointegration is a statistical property of time series variables. Two or more time series are cointegrated if they share a common stochastic drift.
+
+==Introduction==
+If two or more series are individually integrated (in the time series sense) but some linear combination of them has a lower order of integration, then the series are said to be cointegrated. A common example is where the individual series are first-order integrated (I(1)) but some (cointegrating) vector of coefficients exists to form a stationary linear combination of them. For instance, a stock market index and the price of its associated futures contract move through time, each roughly following a random walk. Testing the hypothesis that there is a statistically significant connection between the futures price and the spot price could now be done by testing for the existence of a cointegrated combination of the two series. (If such a combination has a low order of integration — in particular if it is I(0), this can signify an equilibrium relationship between the original series, which are said to be cointegrated.)
+
+Before the 1980s many economists used linear regressions on (de-trended) non-stationary time series data, which Nobel laureate Clive Granger and others showed to be a dangerous approach that could produce spurious correlation, since standard detrending techniques can result in data that are still non-stationary. His 1987 paper with Nobel laureate Robert Engle formalized the cointegrating vector approach, and coined the term.
+
+The possible presence of cointegration must be taken into account when choosing a technique to test hypotheses concerning the relationship between two variables having unit roots (i.e. integrated of at least order one).
+
+The usual procedure for testing hypotheses concerning the relationship between non-stationary variables was to run ordinary least squares (OLS) regressions on data which had initially been differenced. Although this method is correct in large samples, cointegration provides more powerful tools when the data sets are of limited length, as most economic time-series are.  Cointegration measures may be calculated over sets of time series using fast routines.
+
+==Test==
+The three main methods for testing for cointegration are:
+
+===The Engle–Granger two-step method===
+If two time series x_t and y_t are cointegrated, a linear combination of them must be stationary.  In other words:
+
+: 
+y_t - \beta x_t = u_t \,
+
+where u_t is stationary.
+
+If we knew u_t, we could just test it for stationarity with something like a Dickey–Fuller test, Phillips-Perron test and be done.  But because we don't know \beta, we must estimate this first, generally by using ordinary least squares, and then run our stationarity test on the estimated u_t series, often denoted \hat{u}_t.  This is the Engle–Granger two-step method.
+
+===The Johansen test===
+The Johansen test is a test for cointegration that allows for more than one cointegrating relationship, unlike the Engle–Granger method.
+
+===Phillips–Ouliaris cointegration test===
+
+===Notes===
+In practice, cointegration is often used for two I(1) series, but it is more generally applicable and can be used for variables integrated of higher order (to detect correlated accelerations or other second-difference effects). Multicointegration extends the cointegration technique beyond two variables, and occasionally to variables integrated at different orders.
+
+However, these tests for cointegration assume that the cointegrating vector is constant during the period of study. In reality, it is possible that the long-run relationship between the underlying variables change (shifts in the cointegrating vector can occur). The reason for this might be technological progress, economic crises, changes in the people’s preferences and behaviour accordingly, policy or regime alteration, and organizational or institutional developments. This is especially likely to be the case if the sample period is long. To take this issue into account, tests have been introduced for cointegration with one unknown structural break, and tests for cointegration with two unknown breaks are also available.
+
+==See also==
+* Error correction model
+* Granger causality
+* Stationary subspace analysis
+* Cointelation
+
+==References==
+
+==External links==
+*A drunk and her dog: An illustration of cointegration and error correction by Michael P. Murray, 1994. An intuitive introduction to cointegration.

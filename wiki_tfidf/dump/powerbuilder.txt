@@ -1,0 +1,119 @@
+PowerBuilder is an integrated development environment owned by Sybase, a division of SAP.  It has been in use since 1991, peaking around 1998 with around 100,000 users.
+
+While Powerbuilder's market share has diminished, many applications created with it are still in use. In 2010, Sybase released a major upgrade to PowerBuilder, intended to compete directly with Microsoft Visual Studio.
+
+Sybase sells another programming language called PocketBuilder. It is based on PowerBuilder and used for creating applications that run on mobile devices such as cell phones or PDAs.But It has been discontinued.
+
+==Features==
+PowerBuilder has a native data-handling object called a DataWindow, which can be used to create, edit, and display data from the database.  This object gives the programmer a number of tools for specifying and controlling user interface appearance and behavior, and also provides simplified access to database content.  To some extent, the DataWindow frees the programmer from considering the differences between Database Management Systems from different vendors.
+
+==Usage==
+PowerBuilder is used primarily for building business applications. PowerBuilder is used by some companies in the financial and telecoms sectors. However in recent years, PowerBuilder has seen substantial competition arise from Java development tools and from Visual Studio.
+
+There are a number of third-party tools that build upon and enhance the functionality of PowerBuilder, including Appeon for PowerBuilder, Visual Expert for PowerBuilder, and Enable Multilingual.
+
+==History==
+PowerBuilder was originally developed by Powersoft in 1991. Powersoft went public in 1993 and was acquired by Sybase for $904 million in Sybase stock in 1995. In May 2010, SAP announced that it would be acquiring Sybase for $5.8 billion. PowerBuilder languished for a long time for several reasons:
+* Sybase's stock plummeted in 1996 after discovery of inflated sales reports, and many members of the original Powersoft development team left Sybase.
+* Competition from rival tools for building GUIs to databases, such as Microsoft Visual Basic, Microsoft Access and Delphi, reduced PowerBuilder's market share.
+* PowerBuilder was slow to move to the Web: long after rivals began to support Web development, it continued to be based on two-tier (traditional client-server) technology. Two-tier approaches, while allowing more rapid development, are inherently less scalable than N-tier solutions (such as Web-based database solutions). In a two-tier solution, there must be one connection to the database for each concurrent user,  whereas with N-tier solutions, which incorporate connection-pooling technology, a limited number of database connections - sometimes, just a single connection - are multiplexed among a much larger number of actual concurrent users. While two-tier applications continue to be used (appropriately) when the number of users is modest, they are inappropriate for, say, E-commerce scenarios. Also, deployment of two-tier solutions, including management of software updates, is significantly more complicated: Web-based solutions require only a browser on the user's machine, and the latest version of the application's Web pages will always be available.
+  
+PowerBuilder 12, through compatibility with Web technologies such as ASP.NET, represents an attempt to regain market share. In order to move developers to newer versions, PowerBuilder 12 provides utilities that attempt to simplify migration [http://www.sybase.com/pbmigration].
+
+==Summary of PowerBuilder features==
+
+Powerscript is an Object-Oriented programming language. Nearly all of the visual and non-visual objects support Inheritance, Polymorphism, and Encapsulation. The programmer may utilize a common code framework such as PowerBuilder Foundation Classes, also known as PFC, to inherit objects from and leverage pre-existing code.
+
+The DataWindow is the key component (and selling point) of PowerBuilder.  The DataWindow offers a visual SQL painter which supports outer joins, unions and subquery operations.  It can convert SQL to Visual representation and back, so the developer can use native SQL if desired.  DataWindow updates are automatic—it produces the proper SQL at runtime based on the DBMS to which  the user is currently connected.  This feature makes it easier for developers who are not experienced with SQL.
+
+The DataWindow also has the built-in ability to both retrieve data and update data via Stored Procedures.  The user picks the Stored Procedure from a visual list.
+
+===RDBMS Interfaces===
+PowerBuilder offers native interfaces to all major databases, as well as ODBC and OLE-DB, in the Enterprise version. There are many connectivity options that allow performance monitoring and tuning, such as:
+# Integrated Security
+# Tracing of all SQL
+# Isolation Level
+# Password Expiration Dialog
+# Blocking Factor
+# Number of SQL statements to Cache
+# Use Connection Pool
+# Thread Safe
+# Trace ODBC API Calls
+
+Due to the information about the database schema (such as primary key information) that are stored in PowerBuilder's data dictionary, the code required to implement data display and browsing is greatly simplified, because the dictionary information allows generation of the appropriate SQL behind the scenes. Here is a sample PowerBuilder update script:
+ dw_1.AcceptText()
+ dw_1.Update()
+PowerBuilder supports the following ways of interacting with a database:
+
+DataWindow: this is the simplest approach, relying on automatically generated SQL.
+
+;"Embedded SQL": Embedded SQL supports SELECT, INSERT, UPDATE, DELETE and cursors.  This option is used when the developer desires more control than is available with the DataWindow option. Example:
+
+UPDATE my_employee SET STATUS = 'A';
+ IF sqlca.sqlcode0 THEN ...
+
+;"Dynamic SQL": This is a form of parameterized SQL, where the user builds a string that may optionally have bind variables.  Dynamic SQL may be used to create cursors as well.
+
+===Integration with third-party software===
+PowerBuilder supports ActiveX and OCX controls, both visible and non-visible.  It also can use OLE Automation as a client.  However, PowerBuilder supports only late binding, not early binding.  Therefore, when using OLE Automation, a dropdown of possible actions is not provided.  PowerBuilder can also act as a DDE client or server, providing a further mechanism to interoperate with other applications.
+
+PowerBuilder can make Windows and third-party API calls, and, in general, works well with third-party libraries in DLL files, however it does not directly support callback functions.
+
+===Compilation and debugging===
+PowerBuilder offers a "/pbdebug" runtime switch, which creates a log file.  This can help track down a bug "in the field", as the user simply emails this log file to the developer.  It has another feature which can log all SQL statements to a file.  It also has built-in performance profiling, an integrated debugger, context-sensitive help, and an active newsgroup to provide support.
+
+PowerBuilder applications are typically compiled to p-code, which is then interpreted by the PowerBuilder runtime.  Although it can be compiled to machine code (called c-code), a typical business application does not run any faster.  Only applications which do an unusually large amount of computations with little I/O are likely to benefit from compiling to machine code.
+
+==Criticism==
+
+Extensibility of the language was rather limited for older versions of PowerBuilder. The technologies provided to overcome this (ex. PowerBuilder Native Interface, or PBNI) are still rather tricky. To develop a solution that includes external C++ code may not only require a competent C++ developer, but also a PowerBuilder expert to guide the developer through the myriad of subtleties of the language and the PowerBuilder Virtual Machine.
+
+For PowerBuilder 12 [http://www.sybase.com/powerbuilder12beta], released in late 2010, Sybase states that this extensibility is less of an issue [http://www.sybase.com/powerbuilder12], because PowerBuilder .NET's APIs allow the use of "off the street XAML" including control templates and skins as well as its ability to use custom WPF controls with less effort than its historic use of External Function calls and “PBNI” to access external resources.
+
+Sybase has released regular updates to PowerBuilder at intervals of every 1.5 years or so. Moreover, in each of these releases, Sybase regularly incorporates modern development paradigms into the IDE, and provides the ability to develop for .NET. PowerBuilder 12.5 introduces even more .NET and WPF support [http://blogs.sybase.com/powerbuilder/2011/08/powerbuilder-12-5-released/].
+
+The (classic) Powerscript language itself, which is still available for compatibility reasons, is known as "a language built around the DataWindow" amongst developers with PowerBuilder being the "IDE built around the DataWindow". 
+Since PowerBuilder 12.0, the (now .NET-compliant) PowerScript language is fully compliant with the common language specification (CLS), and can be compared with C#, Java or VB.NET.
+The language now supports Arrays, Delegates, Parameterized Constructors, User-defined Enumerations and Generics. [http://download.sybase.com/beta/pb12ctp/Sybase_PB12_FeaturesforPublicCTP.pdf]. PowerBuilder 12.5 introduces support for Multithreading, the ability to consume RESTful (Representational State Transfer) Web Services and Batch Command Processing. For the "classic" PowerScript, various smaller enhancements were added,too. [http://blogs.sybase.com/powerbuilder/2011/08/powerbuilder-12-5-released/].
+
+==Community==
+There is a variety of grass roots community groups and resources for PowerBuilder developers to share and convene. These include the International Sybase User Group [http://www.ISUG.com] and what some call the very first technical journal devoted to an IDE, PowerBuilder Developer's Journal [http://pbdj.sys-con.com/]. There are also blogs from TeamSybase [http://www.sybase.com/developer/sdncommunity/powerbuilder] and evangelists [http://blogs.sybase.com/powerbuilder] available. PowerBuilderTV [http://www.powerbuilder.tv] is series of webinars by and for the PowerBuilder community with webinars by PowerBuilder evangelists, developers and vendors. PowerBuilder Central [http://www.powerbuildercentral.com] is a  community initiative to create a single source for third party add-ons and services. In mid 2013, a community based PowerBuilder World Tour was announced [http://www.powerbuilder-world-tour.com] spanning 4 continents. In 2010 the DisplacedGuy PowerBuilder Blog launched a massive Training Portal [http://www.displacedguy.com/tech/powerbuilder-12-5-pb-net-free-training-and-tutorials] one of the largest, regularly updated collections of free PowerBuilder information including reference guides, tutorials, videos, sample applications, commercial products, blogrolls, polls, migration guides with emphasis on tutorials for PowerBuilder 12, 12.5 and PB.NET. PowerBuilder Central [http://www.powerbuildercentral.com] is a  community initiative to create a single source for third party add-ons and services. In mid 2013, a community based PowerBuilder World Tour was announced [http://www.powerbuilder-world-tour.com] spanning 4 continents.
+
+==Some PowerBuilder Tools==
+* Appeon Mobile - Develop native mobile applications with PowerBuilder that runs on iOS (iPad and iPhone), Android (tablets and phones), and Windows Phone with support for the native mobile SDK.
+* Appeon for PowerBuilder - Deploys existing or new PowerBuilder projects as Web applications that runs natively on either .NET or Java servers and OS.
+* Visual Expert for PowerBuilder - Visual Expert helps in sharing the knowledge of your applications. It also automates impact analysis and checks code quality.
+* Enable Multilingual - Enable makes PowerBuilder applications multilingual quickly and easily.  Using Enable, developers can only need to make a few small changes to the original PowerBuilder code to go from monolingual to multilingual.
+* ProDiff - ProDiff is designed to highlight the differences between versions of PowerBuilder development source code.
+* Visual Guard for PowerBuilder - Visual Guard is an access control and application-level permissions tool. It helps you centralize view and control of users and their rights in PowerBuilder applications
+* Customization Studio for PowerBuilder - Customization Studio allows end-users to modify the executable version of a PowerBuilder application without changing the source code.
+* Framework for PowerBuilder - Free object oriented development framework for PowerBuilder, EAServer, and Appeon.
+* PB Ultimate Suite - A suite of controls, written in PowerScript, that modernizes the GUI of PowerBuilder applications; PB Ultimate Suite gives applications a contemporary look and makes them more user-friendly.
+
+==References==
+
+==External links==
+*PowerBuilder's Official Website
+*PowerBuilderTV - Webinars for PowerBuilder developers in English, Spanish and French
+*ISUG - International Sybase User Group
+*PowerBuilder Developers Journal
+*PowerBuilder Community and TeamSybase
+* Evangelist Blogs
+*PowerBuilder Evangelist Hub
+*PowerBuilder UI Components
+*PowerBuilder Geeks (Discussion Group)
+*PBDR.com - Powerbuilder news, tips and utilities
+*History as told by one of the early users
+*History of PB
+*Detailed Technical History (Version by version changes)
+*PBNI - Extending functionality
+*French community of Powerbuilder
+*IDC White Paper: Back to the Future with Application Development Productivity with PowerBuilder
+*Visual Studio Isolated Shell
+*PocketBuilder
+*PB Migration Resources
+*New Sybase PowerBuilder 12 requires little coding
+*Novalys
+*PowerBuilder Central
+*PowerBuilder World Tour 2013/2014
+*Huge Collection of PowerBuilder Tips, Training, Tutorials & Reference Guides for PB 12, 12.5 and PB.NET

@@ -1,0 +1,191 @@
+A microcontroller (sometimes abbreviated µC, uC or MCU) is a small computer on a single integrated circuit containing a processor core, memory, and programmable input/output peripherals. Program memory in the form of NOR flash or OTP ROM is also often included on chip, as well as a typically small amount of RAM. Microcontrollers are designed for embedded applications, in contrast to the microprocessors used in personal computers or other general purpose applications.
+
+Microcontrollers are used in automatically controlled products and devices, such as automobile engine control systems, implantable medical devices, remote controls, office machines, appliances, power tools, toys and other embedded systems. By reducing the size and cost compared to a design that uses a separate microprocessor, memory, and input/output devices, microcontrollers make it economical to digitally control even more devices and processes. Mixed signal microcontrollers are common, integrating analog components needed to control non-digital electronic systems.
+
+Some microcontrollers may use 4-bit words and operate at clock rate frequencies as low as 4 kHz, for low power consumption (single-digit milliwatts or microwatts). They will generally have the ability to retain functionality while waiting for an event such as a button press or other interrupt; power consumption while sleeping (CPU clock and most peripherals off) may be just nanowatts, making many of them well suited for long lasting battery applications. Other microcontrollers may serve performance-critical roles, where they may need to act more like a digital signal processor (DSP), with higher clock speeds and power consumption.
+
+== History ==
+
+The first microprocessor was the 4-bit Intel 4004 released in 1971, with the Intel 8008 and other more capable microprocessors becoming available over the next several years. However, both processors required external chips to implement a working system, raising total system cost, and making it impossible to economically computerize appliances.
+
+The Smithsonian Institution says TI engineers Gary Boone and Michael Cochran succeeded in creating the first microcontroller in 1971. The result of their work was the TMS 1000, which went commercial in 1974. It combined read-only memory, read/write memory, processor and clock on one chip and was targeted at embedded systems.
+
+Partly in response to the existence of the single-chip TMS 1000, Intel developed a computer system on a chip optimized for control applications, the Intel 8048, with commercial parts first shipping in 1977. It combined RAM and ROM on the same chip. This chip would find its way into over one billion PC keyboards, and other numerous applications. At that time Intel's President, Luke J. Valenter, stated that the microcontroller was one of the most successful in the company's history, and expanded the division's budget over 25%.
+
+Most microcontrollers at this time had two variants.  One had an erasable EPROM program memory, with a transparent quartz window in the lid of the package to allow it to be erased by exposure to ultraviolet light.
+The other was a PROM variant which was only programmable once; sometimes this was signified with the designation OTP, standing for "one-time programmable".  The PROM was actually exactly the same type of memory as the EPROM, but because there was no way to expose it to ultraviolet light, it could not be erased.  The erasable versions required ceramic packages with quartz windows, making them significantly more expensive than the OTP versions, which could be made in lower-cost opaque plastic packages.  For the erasable variants, quartz was required, instead of less expensive glass, for its transparency to ultraviolet—glass is largely opaque to UV—but the main cost differentiator was the ceramic package itself.
+
+In 1993, the introduction of EEPROM memory allowed microcontrollers (beginning with the Microchip PIC16x84) to be electrically erased quickly without an expensive package as required for EPROM, allowing both rapid prototyping, and In System Programming.  (EEPROM technology had been available prior to this time, but the earlier EEPROM was more expensive and less durable, making it unsuitable for low-cost mass-produced microcontrollers.)  The same year, Atmel introduced the first microcontroller using Flash memory, a special type of EEPROM. Other companies rapidly followed suit, with both memory types.
+
+Cost has plummeted over time, with the cheapest 8-bit microcontrollers being available for under  in quantity (thousands) in 2009, and some 32-bit microcontrollers around  for similar quantities. The NXP-LPC810 is a 32 bit ARM CORTEX M0+ in an 8 pin DIP package and sells in single quantity for £0.66 or $1.00 in 2013.
+
+Nowadays microcontrollers are cheap and readily available for hobbyists, with large online communities around certain processors.
+
+In the future, MRAM could potentially be used in microcontrollers as it has infinite endurance and its incremental semiconductor wafer process cost is relatively low.
+
+=== Volumes ===
+About 55% of all CPUs sold in the world are 8-bit microcontrollers and microprocessors. According to Semico, over four billion 8-bit microcontrollers were sold in 2006.  More recently, Semico has claimed the MCU market grew 36.5% in 2010 and 12% in 2011. A typical home in a developed country is likely to have only four general-purpose microprocessors but around three dozen microcontrollers. A typical mid-range automobile has as many as 30 or more microcontrollers. They can also be found in many electrical devices such as washing machines, microwave ovens, and telephones.
+Image:PIC18F8720.jpg|right|thumbnail|A PIC 18F8720 microcontroller in an 80-pin TQFP package.
+
+== Embedded design ==
+A microcontroller can be considered a self-contained system with a processor, memory and peripherals and can be used as an embedded system. The majority of microcontrollers in use today are embedded in other machinery, such as automobiles, telephones, appliances, and peripherals for computer systems. While some embedded systems are very sophisticated, many have minimal requirements for memory and program length, with no operating system, and low software complexity. Typical input and output devices include switches, relays, solenoids, LEDs, small or custom LCD displays, radio frequency devices, and sensors for data such as temperature, humidity, light level etc. Embedded systems usually have no keyboard, screen, disks, printers, or other recognizable I/O devices of a personal computer, and may lack human interaction devices of any kind.
+
+=== Interrupts ===
+Microcontrollers must provide real time (predictable, though not necessarily fast) response to events in the embedded system they are controlling. When certain events occur, an interrupt system can signal the processor to suspend processing the current instruction sequence and to begin an interrupt service routine (ISR, or "interrupt handler"). The ISR will perform any processing required based on the source of the interrupt, before returning to the original instruction sequence. Possible interrupt sources are device dependent, and often include events such as an internal timer overflow, completing an analog to digital conversion, a logic level change on an input such as from a button being pressed, and data received on a communication link. Where power consumption is important as in battery operated devices, interrupts may also wake a microcontroller from a low power sleep state where the processor is halted until required to do something by a peripheral event.
+
+=== Programs ===
+Typically microcontroller programs must fit in the available on-chip program memory, since it would be costly to provide a system with external, expandable, memory. Compilers and assemblers are used to convert high-level language and assembler language codes into a compact machine code for storage in the microcontroller's memory.  Depending on the device, the program memory may be permanent, read-only memory that can only be programmed at the factory, or program memory that may be field-alterable flash or erasable read-only memory.
+
+Manufacturers have often produced special versions of their microcontrollers in order to help the hardware and software development of the target system. Originally these included EPROM versions that have a "window" on the top of the device through which program memory can be erased by ultraviolet light, ready for reprogramming after a programming ("burn") and test cycle. Since 1998, EPROM versions are rare and have been replaced by EEPROM and flash, which are easier to use (can be erased electronically) and cheaper to manufacture.
+
+Other versions may be available where the ROM is accessed as an external device rather than as internal memory, however these are becoming increasingly rare due to the widespread availability of cheap microcontroller programmers.
+
+The use of field-programmable devices on a microcontroller may allow field update of the firmware or permit late factory revisions to products that have been assembled but not yet shipped. Programmable memory also reduces the lead time required for deployment of a new product.
+
+Where hundreds of thousands of identical devices are required, using parts programmed at the time of manufacture can be an economical option. These "mask programmed" parts have the program laid down in the same way as the logic of the chip, at the same time.
+
+A customizable microcontroller incorporates a block of digital logic that can be personalized in order to provide additional processing capability, peripherals and interfaces that are adapted to the requirements of the application.  For example, the AT91CAP from Atmel has a block of logic that can be customized during manufacture according to user requirements.
+
+=== Other microcontroller features ===
+
+Microcontrollers generally contain numerous general purpose input/output pins (GPIO). GPIO pins are software configurable to either an input or an output state. When GPIO pins are configured to an input state, they are often used to read sensors or external signals. Configured to the output state, GPIO pins can drive external devices such as LEDs or motors.
+
+Analog-to-digital converter (ADC) units read analog signals and convert them into digital signals.  A less common feature is the DAC which allows the microcontroller to generate an analog output.
+
+Pulse Width Modulation (PWM) units provide on/off signals on a GPIO pin at a well defined frequency/duty cycle.
+
+Universal Asynchronous Receiver/Transmitter (USART) units facilitate receiving and transmitting data over a serial line with very little load on the CPU (such as RS232/RS485).
+
+Timers to generate periodic interrupts or time internal/external events are present on all microcontrollers .
+
+Chip to chip protocols such as SPI and I2C are also common.
+
+== Higher integration ==
+
+Micro-controllers may not implement an external address or data bus as they integrate RAM and non-volatile memory on the same chip as the CPU. Using fewer pins, the chip can be placed in a much smaller, cheaper package.
+
+Integrating the memory and other peripherals on a single chip and testing them as a unit increases the cost of that chip, but often results in decreased net cost of the embedded system as a whole. Even if the cost of a CPU that has integrated peripherals is slightly more than the cost of a CPU and external peripherals, having fewer chips typically allows a smaller and cheaper circuit board, and reduces the labor required to assemble and test the circuit board, in addition to tending to decrease the defect rate for the finished assembly.
+
+A micro-controller is a single integrated circuit, commonly with the following features:
+* central processing unit - ranging from small and simple 4-bit processors to complex 32- or 64-bit processors
+* volatile memory (RAM) for data storage
+* ROM, EPROM, EEPROM or Flash memory for program and operating parameter storage
+* discrete input and output bits, allowing control or detection of the logic state of an individual package pin
+* serial input/output such as serial ports (UARTs)
+* other serial communications interfaces like I²C, Serial Peripheral Interface and Controller Area Network for system interconnect
+* peripherals such as timers, event counters, PWM generators, and watchdog
+* clock generator - often an oscillator for a quartz timing crystal, resonator or RC circuit
+* many include analog-to-digital converters, some include digital-to-analog converters
+* in-circuit programming and debugging support
+* USB and Ethernet are common on high end microcontrollers.
+
+This integration drastically reduces the number of chips and the amount of wiring and circuit board space that would be needed to produce equivalent systems using separate chips. Furthermore,  on low pin count devices in particular, each pin may interface to several internal peripherals, with the pin function selected by software. This allows a part to be used in a wider variety of applications than if pins had dedicated functions. Micro-controllers have proved to be highly popular in embedded systems since their introduction in the 1970s.
+
+Some microcontrollers use a Harvard architecture: separate memory buses for instructions and data, allowing accesses to take place concurrently. Where a Harvard architecture is used, instruction words for the processor may be a different bit size than the length of internal memory and registers; for example: 12-bit instructions used with 8-bit data registers.
+
+The decision of which peripheral to integrate is often difficult. The microcontroller vendors often trade operating frequencies and system design flexibility against time-to-market requirements from their customers and overall lower system cost. Manufacturers have to balance the need to minimize the chip size against additional functionality.
+
+Microcontroller architectures vary widely. Some designs include general-purpose microprocessor cores, with one or more ROM, RAM, or I/O functions integrated onto the package. Other designs are purpose built for control applications. A micro-controller instruction set usually has many instructions intended for bit-wise operations to make control programs more compact. For example, a general purpose processor might require several instructions to test a bit in a register and branch if the bit is set, where a micro-controller could have a single instruction to provide that commonly required function.
+
+Microcontrollers typically do not have a math coprocessor, so floating point arithmetic is performed by software.
+
+== Programming environments ==
+Microcontrollers were originally programmed only in assembly language, but various high-level programming languages are now also in common use to target microcontrollers. These languages are either designed specially for the purpose, or versions of general purpose languages such as the C programming language. Compilers for general purpose languages will typically have some restrictions as well as enhancements to better support the unique characteristics of microcontrollers. Some microcontrollers have environments to aid developing certain types of applications. Microcontroller vendors often make tools freely available to make it easier to adopt their hardware.
+
+Many microcontrollers are so quirky that they effectively require their own non-standard dialects of C, such as SDCC for the 8051, which prevent using standard tools (such as code libraries or static analysis tools) even for code unrelated to hardware features.  Interpreters are often used to hide such low level quirks.
+
+Interpreter firmware is also available for some microcontrollers. For example, BASIC on the early microcontrollers Intel 8052; BASIC and FORTH on the Zilog Z8 as well as some modern devices. Typically these interpreters support interactive programming.
+
+Simulators are available for some microcontrollers. These allow a developer to analyze what the behavior of the microcontroller and their program should be if they were using the actual part. A simulator will show the internal processor state and also that of the outputs, as well as allowing input signals to be generated. While on the one hand most simulators will be limited from being unable to simulate much other hardware in a system, they can exercise conditions that may otherwise be hard to reproduce at will in the physical implementation, and can be the quickest way to debug and analyze problems.
+
+Recent microcontrollers are often integrated with on-chip debug circuitry that when accessed by an in-circuit emulator via JTAG, allow debugging of the firmware with a debugger.
+
+== Types of microcontrollers ==
+
+there are numerous microcontroller architectures and vendors including:
+* 65802 and 65816
+* 8051 (many variations and vendors of original Intel-product)
+* ARM (many vendors) and ARM Cortex-M, specifically targeted towards microcontroller applications
+* Atmel AVR (8-bit), AVR32 (32-bit), and AT91SAM (32-bit)
+* Cypress Semiconductor's M8C Core used in their PSoC (Programmable System-on-Chip)
+* eZ8 8-bit based family of microcontrollers
+* eZ80 8/16/24-bit family of microcontrollers and microprocessors
+* Freescale ColdFire (32-bit) and S08 (8-bit)
+* Freescale 68HC11 (8-bit)
+* Infineon: 8-bit XC800, 16-bit XE166, 32-bit XMC4000 (ARM based Cortex M4F), 32-bit TriCore and, 32-bit Aurix Tricore Bit microcontrollers
+* MIPS
+* Microchip Technology PIC, (8-bit PIC16, PIC18, 16-bit dsPIC33 / PIC24), (32-bit PIC32)
+* NXP Semiconductors LPC1000, LPC2000, LPC3000, LPC4000 (32-bit), LPC900, LPC700 (8-bit)
+* Parallax Propeller
+* PowerPC ISE
+* Rabbit 2000 (8-bit)
+* Renesas Electronics:  RL78 16-bit MCU; RX 32-bit MCU; SuperH;  V850 32-bit MCU; H8;  R8C 16-bit MCU
+* Silicon Laboratories Pipelined 8-bit 8051 Microcontrollers and mixed-signal ARM-based 32-bit microcontrollers
+* STMicroelectronics STM8 (8-bit), ST10 (16-bit) and STM32 (32-bit)
+* Texas Instruments TI MSP430 (16-bit) C2000 (32-bit)
+* Toshiba TLCS-870 (8-bit/16-bit).
+
+Many others exist, some of which are used in very narrow range of applications or are more like applications processors than microcontrollers. The microcontroller market is extremely fragmented, with numerous vendors, technologies, and markets.  Note that many vendors sell or have sold multiple architectures.
+
+== Interrupt latency ==
+In contrast to general-purpose computers, microcontrollers used in embedded systems often seek to optimize interrupt latency over instruction throughput. Issues include both reducing the latency, and making it be more predictable (to support real-time control).
+
+When an electronic device causes an interrupt, the intermediate results (registers) have to be saved before the software responsible for handling the interrupt can run. They must also be restored after that software is finished. If there are more registers, this saving and restoring process takes more time, increasing the latency. Ways to reduce such context/restore latency include having relatively few registers in their central processing units (undesirable because it slows down most non-interrupt processing substantially), or at least having the hardware not save them all (this fails if the software then needs to compensate by saving the rest "manually"). Another technique involves spending silicon gates on "shadow registers": One or more duplicate registers used only by the interrupt software, perhaps supporting a dedicated stack.
+
+Other factors affecting interrupt latency include:
+* Cycles needed to complete current CPU activities. To minimize those costs, microcontrollers tend to have short pipelines (often three instructions or less), small write buffers, and ensure that longer instructions are continuable or restartable. RISC design principles ensure that most instructions take the same number of cycles, helping avoid the need for most such continuation/restart logic.
+* The length of any critical section that needs to be interrupted.  Entry to a critical section restricts concurrent data structure access.  When a data structure must be accessed by an interrupt handler, the critical section must block that interrupt.  Accordingly, interrupt latency is increased by however long that interrupt is blocked.  When there are hard external constraints on system latency, developers often need tools to measure interrupt latencies and track down which critical sections cause slowdowns.
+** One common technique just blocks all interrupts for the duration of the critical section.  This is easy to implement, but sometimes critical sections get uncomfortably long.
+** A more complex technique just blocks the interrupts that may trigger access to that data structure.  This is often based on interrupt priorities, which tend to not correspond well to the relevant system data structures.  Accordingly, this technique is used mostly in very constrained environments.
+** Processors may have hardware support for some critical sections.  Examples include supporting atomic access to bits or bytes within a word, or other atomic access primitives like the LDREX/STREX exclusive access primitives introduced in the ARMv6 architecture.
+* Interrupt nesting.  Some microcontrollers allow higher priority interrupts to interrupt lower priority ones.  This allows software to manage latency by giving time-critical interrupts higher priority (and thus lower and more predictable latency) than less-critical ones.
+* Trigger rate.  When interrupts occur back-to-back, microcontrollers may avoid an extra context save/restore cycle by a form of tail call optimization.
+
+Lower end microcontrollers tend to support fewer interrupt latency controls than higher end ones.
+
+== Microcontroller embedded memory technology ==
+Since the emergence of microcontrollers, many different memory technologies have been used. Almost all microcontrollers have at least two different kinds of memory, a non-volatile memory for storing firmware and a read-write memory for temporary data.
+
+=== Data ===
+From the earliest microcontrollers to today, six-transistor SRAM is almost always used as the read/write working memory, with a few more transistors per bit used in the register file. MRAM could potentially replace it as it is  denser which would make it more cost effective.
+
+In addition to the SRAM, some microcontrollers also have internal EEPROM for data storage; and even ones that do not have any (or not enough) are often connected to external serial EEPROM chip (such as the BASIC Stamp) or external serial flash memory chip.
+
+A few recent microcontrollers beginning in 2003 have "self-programmable" flash memory.
+
+=== Firmware ===
+The earliest microcontrollers used mask ROM to store firmware. Later microcontrollers (such as the early versions of the Freescale 68HC11 and early PIC microcontrollers) had quartz windows that allowed ultraviolet light in to erase the EPROM.
+
+The Microchip PIC16C84, introduced in 1993,
+was the first microcontroller to use EEPROM to store firmware. In the same year, Atmel introduced the first microcontroller using NOR Flash memory to store firmware.
+
+== See also ==
+
+* List of common microcontrollers
+* Microbotics
+* Programmable logic controller
+* Single-board microcontroller
+
+== Notes ==
+
+== External links ==
+
+<!--
+
+Please be cautious adding more external links.
+
+Wikipedia is not a collection of links and should not be used for advertising.
+
+Excessive or inappropriate links will be removed.
+
+See Wikipedia:External links and Wikipedia:Spam for details.
+
+If there are already suitable links, propose additions or replacements on
+the article's talk page, or submit your link to the relevant category at 
+the Open Directory Project (dmoz.org) and link there using .
+
+-->
+* How to Program a Microcontroller
+
+* 
+* Embedded Systems Design magazine

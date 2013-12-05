@@ -1,0 +1,57 @@
+SETL (SET Language) is a very-high level programming language based on the mathematical theory of sets.  It was originally developed by Jack Schwartz at the NYU Courant Institute of Mathematical Sciences in the late 1960s.
+
+David Bacon, who was previously a PhD student in NYU with Jack Schwartz still actively maintains the compiler for SETL and its website.
+
+== Design ==
+
+SETL provides two basic aggregate data types: unordered sets, and sequences (the latter also called tuples). The elements of sets and tuples can be of any arbitrary type, including sets and tuples themselves. Maps are provided as sets of pairs (i.e., tuples of length 2) and can have arbitrary domain and range types. Primitive operations in SETL include set membership, union, intersection, and power set construction, among others.
+
+SETL provides quantified boolean expressions constructed using the universal and existential quantifiers of first-order predicate logic.
+
+SETL provides several iterators to produce a variety of loops over aggregate data structures.
+
+== Examples ==
+
+Print all prime numbers from 2 to N:
+    print([n in [2..N] | forall m in {2..n - 1} | n mod m > 0]);
+The notation is similar to list comprehension.
+
+A factorial procedure definition:
+ procedure factorial(n); -- calculates the factorial n!
+   return if n = 1 then 1 else n * factorial(n - 1) end if;
+ end factorial;
+
+A more conventional SETL expression for factorial (n > 0):
+ */[1..n]
+
+== Uses ==
+
+In the 1970s, SETL was ported to the BESM-6, ES EVM and other Russian computer systems.
+
+SETL was used for an early implementation of the Ada programming language, known as the NYU Ada/ED translator. This later became the first validated Ada implementation, certified on April 11, 1983.
+
+== History ==
+
+== See also ==
+
+* ISETL (programming language)
+* ISETLW (programming language)
+* ProSet
+* Rapira
+* SETL2
+
+== References ==
+
+== Further reading ==
+
+* Schwartz, Jacob T., "Set Theory as a Language for Program Specification and Programming". Courant Institute of Mathematical Sciences, New York University, 1970.
+* Schwartz, Jacob T., "On Programming, An Interim Report on the SETL Project", Computer Science Department, Courant Institute of Mathematical Sciences, New York University (1973).
+* Schwartz, Jacob T., Dewar, R.B.K., Dubinsky, E., and Schonberg, E., Programming With Sets: An Introduction to SETL, 1986. ISBN 0-387-96399-5.
+
+== External links ==
+* GNU SETL official website
+* SETL binary distribution for UNIX
+* Programming on SETL and other things
+* SETL documentation
+* The SETL programming language, by Robert Dewar
+* SetlX

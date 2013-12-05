@@ -1,0 +1,189 @@
+Brainfuck is an esoteric programming language noted for its extreme minimalism. The language consists of only eight simple commands and an instruction pointer. It is a Turing tarpit, designed to challenge and amuse programmers, and was not made to be suitable for practical use. It was created in 1993 by Urban Müller.
+<!-- NOTE: If your intention is to edit the word "brainfuck" and replace it with "brainf**k" or any other form of censorship, STOP NOW. It is against the policy of Wikipedia to censor articles. Anyone who continues to make such edits will be consider vandalizing the article and will be dealt with accordingly. If this is an issue to you, PLEASE see the talk page
+-->
+
+==Language design==
+Urban Müller created brainfuck in 1993 with the intention of designing a language which could be implemented with the smallest possible compiler, inspired by the 1024-byte compiler for the FALSE programming language. Several brainfuck compilers have been made smaller than 200 bytes. One compiler of 100 bytes is known to exist. The classic distribution is Müller's version 2, containing a compiler for the Amiga, an interpreter, example programs, and a readme document.
+
+The language consists of eight commands, listed below. A brainfuck program is a sequence of these commands, possibly interspersed with other characters (which are ignored). The commands are executed sequentially, except as noted below; an instruction pointer begins at the first command, and each command it points to is executed, after which it normally moves forward to the next command. The program terminates when the instruction pointer moves past the last command.
+
+The brainfuck language uses a simple machine model consisting of the program and instruction pointer, as well as an array of at least 30,000 byte cells initialized to zero; a movable data pointer (initialized to point to the leftmost byte of the array); and two streams of bytes for input and output (most often connected to a keyboard and a monitor respectively, and using the ASCII character encoding).
+
+===Commands===
+The eight language commands, each consisting of a single character:
+
+(Alternatively, the ] command may instead be translated as an unconditional jump to the corresponding [ command, or vice versa; programs will behave the same but will run more slowly, due to unnecessary double searching.)
+
+and  match as parentheses usually do: each matches exactly one  and vice versa, the [ comes first, and there can be no unmatched or  between the two.
+
+Brainfuck programs can be translated into C using the following substitutions, assuming ptr is of type unsigned char* and has been initialized to point to an array of zeroed bytes:
+{|class="wikitable"
+|-
+! style="text-align:center;"|brainfuck command
+! style="text-align:left;" |C equivalent
+|-
+|style="text-align:center;"|(Program Start) || 
+|-
+|style="text-align:center;"|&gt; || 
+|-
+|style="text-align:center;"|&lt; || 
+|-
+|style="text-align:center;"|+ || 
+|-
+|style="text-align:center;"|- || 
+|-
+|style="text-align:center;"|. || 
+|-
+|style="text-align:center;"|, || 
+|-
+|style="text-align:center;"||| {{c-lang|1=while (*ptr) {}}
+|-
+|style="text-align:center;"| || 
+|}
+
+As the name suggests, brainfuck programs tend to be difficult to comprehend. This is partly because any mildly complex task requires a long sequence of commands; partly it is because the program's text gives no direct indications of the program's state. These, as well as brainfuck's inefficiency and its limited input/output capabilities, are some of the reasons it is not used for serious programming. Nonetheless, like any Turing-complete language, brainfuck is theoretically capable of computing any computable function or simulating any other computational model, if given access to an unlimited amount of memory. A variety of brainfuck programs have been written. Although brainfuck programs, especially complicated ones, are difficult to write, it is quite trivial to write an interpreter for brainfuck in a more typical language such as C due to its simplicity. There even exists a brainfuck interpreter written in the brainfuck language itself.
+
+=== Brainfuck's formal "parent language" ===
+Except for its two I/O commands, brainfuck is a minor variation of the formal programming language P′′ created by Corrado Böhm in 1964.  In fact, using six symbols equivalent to the respective brainfuck commands +, -, , >, , Böhm provided an explicit program for each of the basic functions that together serve to compute any computable function.  So in a very real sense, the first "brainfuck" programs appear in Böhm's 1964 paper &ndash; and they were programs sufficient to prove Turing-completeness.
+
+== Examples ==
+=== Hello World! ===
+The following program prints "Hello World!" and a newline to the screen:
+
++++++ +++++             initialize counter (cell #0) to 10
+                      use loop to set the next four cells to 70/100/30/10
+    > +++++ ++              add  7 to cell #1
+    > +++++ +++++           add 10 to cell #2 
+    > +++                   add  3 to cell #3
+    > +                     add  1 to cell #4
+    <<<< -                  decrement counter (cell #0)
+                   
+> ++ .                  print 'H'
+> + .                   print 'e'
++++++ ++ .              print 'l'
+.                       print 'l'
++++ .                   print 'o'
+> ++ .                  print ' '
+<< +++++ +++++ +++++ .  print 'W'
+> .                     print 'o'
++++ .                   print 'r'
+----- - .               print 'l'
+----- --- .             print 'd'
+> + .                   print '!'
+> .                     print '\n'
+
+For readability, this code has been spread across many lines and blanks and comments have been added. Brainfuck ignores all characters except the eight commands +-[],. so no special syntax for comments is needed (as long as the comments don't contain the command characters). The code could just as well have been written as:
+++++++++++[>+++++++>++++++++++>+++>+++.>+.+++++++..+++.>++..+++.------.--------.>+.>.
+
+The first line initialises a[0] = 10 by simply incrementing ten times from 0. The loop from line 2 effectively sets the initial values for the array: a[1] = 70 (close to 72, the ASCII code for the character 'H'), a[2] = 100 (close to 101 or 'e'), a[3] = 30 (close to 32, the code for space) and a[4] = 10 (newline). The loop works by adding 7, 10, 3, and 1, to cells  a[1], a[2], a[3] and   a[4] respectively each time through the loop - 10 additions for each cell in total (giving  a[1]=70 etc.). After the loop is finished, a[0] is zero. >++. then moves the pointer to a[1], which holds 70, adds two to it (producing 72, which is the ASCII character code of a capital H), and outputs it.
+
+The next line moves the array pointer to a[2] and adds one to it, producing 101, a lower-case 'e', which is then output.
+
+As 'l' happens to be the seventh letter after 'e', to output 'll' another seven are added (+++++++) to a[2] and the result is output twice.
+
+'o' is the third letter after 'l', so a[2] is incremented three more times and output the result.
+
+The rest of the program goes on in the same way. For the space and capital letters, different array cells are selected and incremented or decremented as needed.
+
+=== ROT13 ===
+This program enciphers its input with the ROT13 cipher. To do this, it must map characters A-M (ASCII 65-77) to N-Z (78-90), and vice versa. Also it must map a-m (97-109) to n-z (110-122) and vice versa. It must map all other characters to themselves; it reads characters one at a time and outputs their enciphered equivalents until it reads an EOF (here assumed to be represented as either -1 or "no change"), at which point the program terminates.
+
+The basic approach used is as follows. Calling the input character x, divide x-1 by 32, keeping quotient and remainder. Unless the quotient is 2 or 3, just output x, having kept a copy of it during the division. If the quotient is 2 or 3, divide the remainder ((x-1) modulo 32) by 13; if the quotient here is 0, output x+13; if 1, output x-13; if 2, output x.
+
+Regarding the division algorithm, when dividing y by z to get a quotient q and remainder r, there is an outer loop which sets q and r first to the quotient and remainder of 1/z, then to those of 2/z, and so on; after it has executed y times, this outer loop terminates, leaving q and r set to the quotient and remainder of y/z. (The dividend y is used as a diminishing counter that controls how many times this loop is executed.) Within the loop, there is code to increment r and decrement y, which is usually sufficient; however, every zth time through the outer loop, it is necessary to zero r and increment q. This is done with a diminishing counter set to the divisor z; each time through the outer loop, this counter is decremented, and when it reaches zero, it is refilled by moving the value from r back into it.
+
+-,+[                         Read first character and start outer character reading loop
+    -[                       Skip forward if character is 0
+        >>++++[>++++++++<-]  Set up divisor (32) for division loop
+                               (MEMORY LAYOUT: dividend copy remainder divisor quotient zero zero)
+        <+<-[                Set up dividend (x minus 1) and enter division loop
+            >+>+>-[>>>]      Increase copy and remainder / reduce divisor / Normal case: skip forward
+            +>+>]    Special case: move remainder back to divisor and increase quotient
+            <<<<<-           Decrement dividend
+        ]                    End division loop
+    ]>>>[-]+                 End skip loop; zero former divisor and reuse space for a flag
+    >--[-[+++[-]]]<[         Zero that flag unless quotient was 2 or 3; zero quotient; check flag
+        ++++++++++++<[       If flag then set up divisor (13) for second division loop
+                               (MEMORY LAYOUT: zero copy dividend divisor remainder quotient zero zero)
+            >-[>+>>]         Reduce divisor; Normal case: increase remainder
+            >[+[-]>+>>]   Special case: increase remainder / move it back to divisor / increase quotient
+            <<<<<-           Decrease dividend
+        ]                    End division loop
+        >>[-]             Add remainder back to divisor to get a useful 13
+        >[                   Skip forward if quotient was 0
+            -              Decrement quotient and skip forward if quotient was 1
+                ->     Zero quotient and divisor if quotient was 2
+            >-]>>    Zero divisor and subtract 13 from copy if quotient was 1
+        ]>-]          Zero divisor and add 13 to copy if quotient was 0
+    ]                        End outer skip loop (jump to here if ((character minus 1)/32) was not 2 or 3)
+    <[-]                     Clear remainder from first division if second division was skipped
+    <.[-]                    Output ROT13ed character from copy and clear it
+    <-,+                     Read next character
+]                            End character reading loop
+
+==Portability issues==
+Partly because Urban Müller did not write a thorough language specification, the many subsequent brainfuck interpreters and compilers have come to use slightly different dialects of brainfuck.
+
+===Cell size===
+In the classic distribution, the cells are of 8-bit size (cells are bytes), and this is still the most common size. However, to read non-textual data, a brainfuck program may need to distinguish an end-of-file condition from any possible byte value; thus 16-bit cells have also been used. Some implementations have used 32-bit cells, 64-bit cells, or bignum cells with practically unlimited range, but programs that use this extra range are likely to be slow, since storing the value n into a cell requires Ω(n) time as a cell's value may only be changed by incrementing and decrementing.
+
+In all these variants, the , and . commands still read and write data in bytes. In most of them, the cells wrap around, i.e. incrementing a cell which holds its maximal value (with the + command) will bring it to its minimal value and vice versa. The exceptions are implementations which are distant from the underlying hardware, implementations that use bignums, and implementations that try to enforce portability.
+
+Fortunately, it is usually easy to write brainfuck programs that do not ever cause integer wraparound or overflow, and therefore don't depend on cell size. Generally this means avoiding increment of +255 (unsigned 8-bit wraparound), or avoiding overstepping the boundaries of +127 (signed 8-bit wraparound) (since there are no comparison operators, a program cannot distinguish between a signed and unsigned two's complement fixed-bit-size cell and negativeness of numbers is a matter of interpretation). For more details on integer wraparound, see the Integer overflow article.
+
+===Array size===
+In the classic distribution, the array has 30,000 cells, and the pointer begins at the leftmost cell. Even more cells are needed to store things like the millionth Fibonacci number, and the easiest way to make the language Turing-complete is to make the array unlimited on the right.
+
+A few implementations extend the array to the left as well; this is an uncommon feature, and therefore portable brainfuck programs do not depend on it.
+
+When the pointer moves outside the bounds of the array, some implementations will give an error message, some will try to extend the array dynamically, some will not notice and will produce undefined behavior, and a few will move the pointer to the opposite end of the array. Some tradeoffs are involved: expanding the array dynamically to the right is the most user-friendly approach and is good for memory-hungry programs, but it carries a speed penalty. If a fixed-size array is used it is helpful to make it very large, or better yet let the user set the size. Giving an error message for bounds violations is very useful for debugging but even that carries a speed penalty unless it can be handled by the operating system's memory protections.
+
+===End-of-line code===
+Different operating systems (and sometimes different programming environments) use subtly different versions of ASCII. The most important difference is in the code used for the end of a line of text. MS-DOS and Microsoft Windows use a CRLF, i.e. a 13 followed by a 10, in most contexts. UNIX and its descendants, including Linux and Mac OS X, use just 10, and older Macs use just 13. It would be unfortunate if brainfuck programs had to be rewritten for different operating systems. Fortunately, a unified standard is easy to find. Urban Müller's compiler and his example programs use 10, on both input and output; so do a large majority of existing brainfuck programs; and 10 is also more convenient to use than CRLF. Thus, brainfuck implementations should make sure that brainfuck programs that assume newline=10 will run properly; many do so, but some do not.
+
+This assumption is also consistent with most of the world's sample code for C and other languages, in that they use '\n', or 10, for their newlines. On systems that use CRLF line endings, the C standard library transparently remaps "\n" to "\r\n" on output and "\r\n" to "\n" on input for streams not opened in binary mode.
+
+===End-of-file behavior===
+The behavior of the "," command when an end-of-file condition has been encountered varies. Some implementations set the cell at the pointer to 0, some set it to the C constant EOF (in practice this is usually -1), some leave the cell's value unchanged. There is no real consensus; arguments for the three behaviors are as follows.
+
+Setting the cell to 0 avoids the use of negative numbers, and makes it marginally more concise to write a loop that reads characters until EOF occurs. This is a language extension devised by Panu Kalliokoski.
+
+Setting the cell to -1 allows EOF to be distinguished from any byte value (if the cells are larger than bytes), which is necessary for reading non-textual data; also, it is the behavior of the C translation of "," given in Müller's readme file. However, it is not obvious that those C translations are to be taken as normative.
+
+Leaving the cell's value unchanged is the behavior of Urban Müller's brainfuck compiler. This behavior can easily coexist with either of the others; for instance, a program that assumes EOF=0 can set the cell to 0 before each "," command, and will then work correctly on implementations that do either EOF=0 or EOF="no change". It is so easy to accommodate the "no change" behavior that any brainfuck programmer interested in portability should do so.
+
+===Miscellaneous dialects===
+Many people have modified brainfuck to produce their own languages, often by adding commands, occasionally by removing them. Many of the resulting languages are included in the brainfuck derivatives list on the Esoteric Languages wiki. However, there are also unnamed minor variants, formed possibly as a result of inattention, of which some of the more common are:
+* forbidding, rather than ignoring, any non-command characters in brainfuck programs
+* introducing a comment marker which comments out the rest of the line
+* various alterations of the loop semantics, sometimes destroying Turing completeness
+* requiring a special character to mark the end of the program
+
+==Interpretation as art==
+Theorists such as Geoff Cox and Daniel Temkin have explored brainfuck from an art-historical perspective. Cox argues that brainfuck questions the authority of the machine, that esolangs in general "somewhat undermine the interpellative authority of the computer and stress alternative interpretations like the paradoxical qualities of speech". Temkin sees brainfuck as challenging the way programming languages reinforce the logical and compulsive thinking inherent in communicating with computers. Brainfuck allows irrationality to blossom in a place of exactitude, recalling systems-based work by Sol LeWitt and the event scores of Yoko Ono. Where programming languages are denotative, the bodily gesture and nuance that comes naturally to humans communicating comes in through esolangs.
+
+==References==
+
+==External links==
+
+* The Brainfuck Archive
+* 
+* Brainfuck on the Esolang (Esoteric Languages) wiki
+* Visual brainfuck, a brainfuck IDE compatible with Windows 7 x86 and x64.
+* Brainfuck Developer, Brainfuck IDE for Windows (also works with WINE under Linux)
+* MfBfE, browser based Brainfuck IDE
+* bf2c, a Brainfuck to C translator.
+* ookie, a Brainfuck and Ook! language interpreter
+*  Ook.jar, another  Ook! and Brainfuck language interpreter, this time written in Java.
+* BrainForce, compiler (wrap gcc) and C translator (has lots of options to control wrapping values, cell sizes, etc.)
+* esolang, a Brainfuck interpreter for iPhone written in objective c.
+* Le Brainfuck, a Javascript based optimizing interpreter. Also has many options, including memory dumping.
+* Brainfuck C, a lightweight Brainfuck interpreter written in C.
+* Brainfuck Java, an interpreter for the Brainfuck language and its dialects written in the Java programming language.
+* lex/yacc-based Brainfuck interpreter in C and Python
+* Bfck, open-source Brainfuck interpreter written in C.
+* Brainfuck JIT, Brainfuck JIT compiler.
+* Brainfuck2Javascript, Brainfuck to Javascript compiler.
+* Brainfuck Visualizer, Javascript Brainfuck Interpreter + Visualizer.
+* Brainfuck interpreter in xslt.
+* PHPBF, Brainfuck Compiler (to C), and Interpreter in PHP.

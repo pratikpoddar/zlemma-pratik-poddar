@@ -1,0 +1,167 @@
+In probability theory and statistics, covariance is a measure of how much two random variables change together. If the greater values of one variable mainly correspond with the greater values of the other variable, and the same holds for the smaller values, i.e., the variables tend to show similar behavior, the covariance is positive. In the opposite case, when the greater values of one variable mainly correspond to the smaller values of the other, i.e., the variables tend to show opposite behavior, the covariance is negative. The sign of the covariance therefore shows the tendency in the linear relationship between the variables. The magnitude of the covariance is not easy to interpret. The normalized version of the covariance, the correlation coefficient, however, shows by its magnitude the strength of the linear relation.
+
+A distinction must be made between (1) the covariance of two random variables, which is a population parameter that can be seen as a property of the joint probability distribution, and (2) the sample covariance, which serves as an estimated value of the parameter.
+
+== Definition ==
+The covariance between two jointly distributed real-valued random variables x and y with finite second moments is defined as
+:
+\sigma(x,y) = \operatorname{E}{\big[(x - \operatorname{E}[x])(y - \operatorname{E}[y])\big]},
+
+where E[x] is the expected value of x, also known as the mean of x. By using the linearity property of expectations, this can be simplified to
+:
+\begin{align}
+\sigma(x,y)
+&= \operatorname{E}\left[\left(x - \operatorname{E}\left[x\right]\right) \left(y - \operatorname{E}\left[y\right]\right)\right] \\
+&= \operatorname{E}\left[x y - x \operatorname{E}\left[y\right] - \operatorname{E}\left[x\right] y + \operatorname{E}\left[x\right] \operatorname{E}\left[y\right]\right] \\
+&= \operatorname{E}\lefty\right - \operatorname{E}\left[x\right] \operatorname{E}\left[y\right] - \operatorname{E}\left[x\right] \operatorname{E}\left[y\right] + \operatorname{E}\left[x\right] \operatorname{E}\left[y\right] \\
+&= \operatorname{E}\lefty\right - \operatorname{E}\left[x\right] \operatorname{E}\left[y\right].
+\end{align}
+
+However, this last equation is prone to catastrophic cancellation when computed with floating point arithmetic and \operatorname{E}[xy] \approx \operatorname{E}[x]\operatorname{E}[y] and thus should be avoided in computer programs when the data has not been centered before.
+
+For random vectors \mathbf{x} and \mathbf{y} (of dimension m and n respectively) the m×n cross covariance matrix (also known as dispersion matrix or variance–covariance matrix, or simply called covariance matrix) is equal to
+
+: 
+\begin{align}
+    \sigma(\mathbf{x},\mathbf{y}) 
+               & = \operatorname{E}
+               \left[(\mathbf{x} - \operatorname{E}[\mathbf{x}])
+                  (\mathbf{y} - \operatorname{E}[\mathbf{y}])^\mathrm{T}\right]\\
+               & = \operatorname{E}\left\mathbf{y}^\mathrm{T}\right - \operatorname{E}[\mathbf{x}]\operatorname{E}[\mathbf{y}]^\mathrm{T},
+\end{align}
+
+where mT is the transpose of the vector (or matrix) m.
+
+The (i,j)-th element of this matrix is equal to the covariance Cov(xi, yj) between the i-th scalar component of x and the j-th scalar component of y. In particular, Cov(y, x) is the transpose  of Cov(x, y).
+
+For a vector \mathbf{x}=
+\begin{bmatrix}x_1 & x_2 & \dots & x_m\end{bmatrix}^\mathrm{T}
+ of m jointly distributed random variables with finite second moments, its covariance matrix is defined as
+
+: \Sigma(\mathbf{x}) = \sigma(\mathbf{x},\mathbf{x}) .
+
+Random variables whose covariance is zero are called uncorrelated.
+
+The units of measurement of the covariance Cov(x, y) are those of x times those of y.  By contrast, correlation coefficients, which depend on the covariance, are a dimensionless measure of linear dependence. (In fact, correlation coefficients can simply be understood as a normalized version of covariance.)
+
+== Properties ==
+* Variance is a special case of the covariance when the two variables are identical:
+:\sigma(x, x) =\sigma^2(x).
+
+*If x, y, w, and v are real-valued random variables and a, b, c, d are constant ("constant" in this context means non-random), then the following facts are a consequence of the definition of covariance:
+
+: 
+\begin{align}
+    \sigma(x, a) &= 0 \\
+    \sigma(x, x) &= \sigma^2(x) \\
+    \sigma(x, y) &= \sigma(y, x) \\
+    \sigma(ax, by) &= ab\, \sigma(x, y) \\
+    \sigma(x+a, y+b) &= \sigma(x, y) \\ 
+    \sigma(ax+by, cw+dv) &= ac\,\sigma(x,w)+ad\,\sigma(x,v)+bc\,\sigma(y,w)+bd\,\sigma(y,v)
+\end{align}
+
+For a sequence x1, ..., xn of random variables, and constants a1, ..., an, we have
+
+:\sigma^2\left(\sum_{i=1}^n a_ix_i \right) = \sum_{i=1}^n a_i^2\sigma^2(x_i) + 2\sum_{i,j\,:\,i<j} a_ia_j\sigma(x_i,x_j) = \sum_{i,j} {a_ia_j\sigma(x_i,x_j)}
+
+=== A more general identity for covariance matrices ===
+
+Let \mathbf{x} be a random vector with covariance matrix \Sigma(\mathbf{x}), and let A be a matrix that can act on \mathbf{x}. The covariance matrix of the vector A\mathbf{x} is:
+:
+\Sigma(A\mathbf{x}) = A\, \Sigma(\mathbf{x})\, A^\mathrm{T}.
+
+This is a direct result of the linearity of expectation and is useful
+when applying a linear transformation, such as a whitening transformation, to a vector.
+
+===Uncorrelatedness and independence===
+If x and y are independent, then their covariance is zero. This follows because under independence,
+
+: \operatorname{E}\lefty\right = \operatorname{E}[x] \cdot \operatorname{E}[y].
+
+The converse, however, is not generally true. For example, let x be uniformly distributed in 1 and let y = x2. Clearly, x and y are dependent, but
+: 
+\begin{align}
+ \sigma(x, y) &= \sigma(x, x^2) \\
+         &= \operatorname{E}\!\left\cdot x^2\right - \operatorname{E}[x] \cdot \operatorname{E}\!\left[x^2\right] \\
+         &= \operatorname{E}\!\left[x^3\right] - \operatorname{E}[x]\operatorname{E}\!\left[x^2\right]  \\
+         &= 0 - 0 \cdot \operatorname{E}\!\left[x^2\right]   \\
+         &= 0.  
+\end{align}
+
+In this case, the relationship between y and x is non-linear, while 
+correlation and covariance are measures of linear dependence between two variables. 
+This example shows that if two variables are uncorrelated, that does not in general imply that they are independent. However, if two variables are jointly normally distributed (but not if they are merely individually normally distributed), uncorrelatedness does imply independence.
+
+=== Relationship to inner products ===
+Many of the properties of covariance can be extracted elegantly by observing that it satisfies similar properties to those of an inner product:
+# bilinear:  for constants a and b and random variables x, y, z, σ(ax + by, z) = a σ(x, z) + b σ(y, z);
+# symmetric:  σ(x, y) = σ(y, x);
+# positive semi-definite:  σ2(x) = σ(x, x) ≥ 0 for all random variables x, and σ(x, x) = 0 implies that x is a constant random variable (K).
+
+In fact these properties imply that the covariance defines an inner product over the quotient vector space obtained by taking the subspace of random variables with finite second moment and identifying any two that differ by a constant. (This identification turns the positive semi-definiteness above into positive definiteness.) That quotient vector space is isomorphic to the subspace of random variables with finite second moment and mean zero; on that subspace, the covariance is exactly the L2 inner product of real-valued functions on the sample space.
+
+As a result for random variables with finite variance, the inequality
+
+: |\sigma(x,y)| \le \sigma(x) \sigma(y)
+
+holds via the Cauchy–Schwarz inequality.
+
+Proof: If σ2(y) = 0, then it holds trivially.  Otherwise, let random variable
+
+:  z = x - \frac{\sigma(x,y)}{\sigma^2(y)} y.
+
+Then we have
+
+: 
+\begin{align}
+0 \le \sigma^2(z) & = \sigma\left(x - \frac{\sigma(x,y)}{\sigma^2(y)} y,x - \frac{\sigma(x,y)}{\sigma^2(y)} y \right) \\[12pt]
+& = \sigma^2(x) - \frac{ (\sigma(x,y))^2 }{\sigma^2(y)}.
+\end{align}
+
+== Calculating the sample covariance ==
+
+The sample covariance of N observations of K variables is the K-by-K matrix \textstyle \overline{ \overline q }=\left[ q_{jk}\right]  with the entries
+
+: q_{jk}=\frac{1}{N-1}\sum_{i=1}^{N}\left(  x_{ij}-\bar{x}_j \right)  \left( x_{ik}-\bar{x}_k \right) ,
+
+which is an estimate of the covariance between 
+variable  and variable .
+
+The sample mean and the sample covariance matrix are unbiased estimates of the mean and the covariance matrix of the random vector \textstyle \mathbf{x}, a row vector whose jth element (j = 1, ..., K) is one of the random variables. The reason the sample covariance matrix has \textstyle N-1 in the denominator rather than \textstyle N is essentially that the population mean E(x) is not known and is replaced by the sample mean \mathbf{\bar{x}}. If the population mean E(x) is known, the analogous unbiased estimate is given by
+
+: q_{jk}=\frac{1}{N}\sum_{i=1}^N \left(  x_{ij}-E(x_j)\right)  \left( x_{ik}-E(x_k)\right)
+
+== Comments ==
+
+The covariance is sometimes called a measure of "linear dependence" between the two random variables. That does not mean the same thing as in the context of linear algebra (see linear dependence). When the covariance is normalized, one obtains the correlation coefficient. From it, one can obtain the Pearson coefficient, which gives us the goodness of the fit for the best possible linear function describing the relation between the variables. In this sense covariance is a linear gauge of dependence.
+
+==Applications==
+
+=== In genetics and molecular biology ===
+Covariance is an important measure in biology. Certain sequences of DNA are conserved more than others among species, and thus to study secondary and tertiary structures of proteins, or of RNA structures, we compare sequences in closely related species. If we find sequence changes or no changes at all in noncoding RNA (such as microRNA), we can find out about which sequences are necessary for common structural motifs, such as an RNA loop.
+
+===In financial economics===
+
+Covariances play a key role in financial economics, especially in portfolio theory and in the capital asset pricing model. Covariances among various assets' returns are used to determine, under certain assumptions, the relative amounts of different assets that investors should (in a normative analysis) or are predicted to (in a positive analysis) choose to hold in a context of diversification.
+
+== See also ==
+
+* Algorithms for calculating covariance
+* Analysis of covariance
+* Autocovariance
+* Correlation and dependence
+* Covariance function
+* Covariance matrix
+* Covariance operator
+* Distance covariance, or Brownian covariance.
+* Eddy covariance
+* Law of total covariance
+* Propagation of uncertainty
+
+==References==
+
+== External links ==
+
+* 
+* MathWorld page on calculating the sample covariance
+* Covariance Tutorial using R
