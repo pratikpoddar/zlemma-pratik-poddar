@@ -4,6 +4,7 @@ import itertools
 import functools32
 import sys
 import json
+import subprocess
 
 def slugify(title):
     name = title.replace(' ', '-').lower()
@@ -23,6 +24,8 @@ if sys.argv[1] == "saveresults":
 if sys.argv[1] == "mergeresults":
 	solargedata = getData('so-large/result.txt')
 	mathselargedata = getData('mathse-large/result.txt')
+	soquantlargedata = getData('so-quant-large/result.txt')
+	#soeleclargedata = getData('so-elec-large/result.txt')
 	wikilangdata = getData('wikilang/result.txt')
 	wiki_tfidfdata = getData('wiki_tfidf/result.txt')
 	
@@ -41,6 +44,16 @@ if sys.argv[1] == "mergeresults":
 		except:
 			pass
 
+                try:
+                        return soquantlargedata[skill1][skill2]
+                except:
+                        pass
+
+                #try:
+                #        return soeleclargedata[skill1][skill2]
+                #except:
+                #        pass
+
 		try:
 			return wikilangdata[skill1][skill2]
 		except:
@@ -50,10 +63,14 @@ if sys.argv[1] == "mergeresults":
 			return wiki_tfidfdata[skill1][skill2]
 		except:
 			pass
-	
+
 		return 0.0
 
-	skill_total = list(set(solargedata.keys() + mathselargedata.keys() + wikilangdata.keys() + wiki_tfidfdata.keys()))
+	#skill_total = list(set(solargedata.keys() + mathselargedata.keys() + wikilangdata.keys() + wiki_tfidfdata.keys() + soquantlargedata.keys() + soeleclargedata.keys()))
+	skill_total = list(set(solargedata.keys() + mathselargedata.keys() + wikilangdata.keys() + wiki_tfidfdata.keys() + soquantlargedata.keys()))
+
+	execfile("skill_list.py")
+	skill_total = filter(lambda x: x in skill_list, skill_total)
 	
 	outputdict = {}
         for skill in skill_total:
