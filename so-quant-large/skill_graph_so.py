@@ -46,7 +46,7 @@ def printMatrix(skills, outputdict):
 	return
 
 def check_skill_so(skill):
-    if getNumQues(skill)<=100:
+    if getNumQues(skill)<=80:
 	return 0
     else:
 	return 1
@@ -191,10 +191,11 @@ if sys.argv[1] == "saveresults":
 	for skill in skills2:
 		outputdict[skill] = {}
 
+	print skills2
+
 	for comb in itertools.permutations(skills2,2):
 		val = prob_A_given_B(comb[0], comb[1])
 		outputdict[comb[0]][comb[1]] = val
-
 
 	print outputdict
 	printMatrix(skills, outputdict)

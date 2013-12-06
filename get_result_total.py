@@ -15,6 +15,47 @@ def getData(filename):
 	    data=json.load(infile)
 	return data
 
+def getDiff(pathnew, pathold, pathdiff):
+
+	dictnew = getData(pathnew)
+	dictold = getData(pathold)
+	
+	knew = dictnew.keys()
+	kold = dictold.keys()
+	addedkeys = filter(lambda x: x not in kold, knew)
+	deletedkeys = filter(lambda x: x not in knew, kold)
+	commonkeys = list(set(knew) and set(kold))
+
+	bigchanges = []
+
+	for comb in itertools.permutations(commonkeys,2):
+		if abs(dictnew[comb[0]][comb[1]] - dictold[comb[0]][comb[1]]) > 0.15:
+			bigchanges.push({'skill1':comb[0], 'skill2':comb[1], 'oldval':dictold[comb[0]][comb[1]], 'newval':dictnew[comb[0]][comb[1]]})
+	diffoutput = {'deletedkeys': deletedkeys, 'addedkeys': addedkeys, 'bigchanges': bigchanges}
+	
+	with open(pathdiff, 'w') as infile:
+		infile.write(json.dumps(diffoutput))
+
+	return
+
+
+def getRenamed(pathold, pathrenamed):
+	
+	infile = open(pathold)
+	outfile = open(pathrenamed, 'w')
+
+	#replacements = {'"algorithm"':'"algo"'}
+	replacements = {}
+
+	for line in infile:
+	    for src, target in replacements.iteritems():
+	        line = line.replace(src, target)
+	    outfile.write(line)
+	infile.close()
+	outfile.close()
+
+	return
+
 if sys.argv[1] == "downloaddata":
 	sys.exit(1)	
 
@@ -87,5 +128,29 @@ if sys.argv[1] == "mergeresults":
         completematrix=floydwarshall(outputdict, skill_total)
         with open('complete.txt', 'w') as infile:
                 infile.write(json.dumps(completematrix))
+
+if sys.argv[1] == "diffresults":
+	getDiff('so-large/result.txt', 'so-large/resultold.txt', 'so-large/diff.txt')
+	getDiff('mathse-large/result.txt', 'mathse-large/resultold.txt', 'mathse-large/diff.txt')
+	getDiff('so-quant-large/result.txt', 'so-quant-large/resultold.txt', 'so-quant-large/diff.txt')
+	#getDiff('so-elec-large/result.txt', 'so-elec-large/resultold.txt', 'so-elec-large/diff.txt')
+	getDiff('wikilang/result.txt', 'wikilang/resultold.txt', 'wikilang/diff.txt')
+	getDiff('wiki_tfidf/result.txt', 'wiki_tfidf/resultold.txt', 'wiki_tfidf/diff.txt')
+	getDiff('result.txt', 'resultold.txt', 'diff.txt')
+
+if sys.argv[1] == "getrenamedresults":
+	getRenamed('so-large/result.txt', 'so-large/renamedresult.txt')
+	getRenamed('mathse-large/result.txt', 'mathse-large/renamedresult.txt')
+	getRenamed('so-quant-large/result.txt', 'so-quant-large/renamedresult.txt')
+	getRenamed('so-elec-large/result.txt', 'so-elec-large/renamedresult.txt')
+	getRenamed('wikilang/result.txt', 'wikilang/renamedresult.txt')
+	getRenamed('wiki_tfidf/result.txt', 'wiki_tfidf/renamedresult.txt')
+	getRenamed('result.txt', 'renamedresult.txt')
+
 	
+
+
+
+
+
 

@@ -46,7 +46,7 @@ def printMatrix(skills, outputdict):
 	return
 
 def check_skill_so(skill):
-    if getNumQues(skill)<=100:
+    if getNumQues(skill)<=80:
 	return 0
     else:
 	return 1

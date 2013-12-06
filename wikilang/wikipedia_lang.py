@@ -80,6 +80,8 @@ if sys.argv[1] == "saveresults":
         	val = getRelationship(comb[0], comb[1])
 		if val:
 		        outputdict[comb[0]][comb[1]] = val
+		else:
+			outputdict[comb[0]][comb[1]] = 0.0
 
 	print outputdict
 	printMatrix(skills2, outputdict)
