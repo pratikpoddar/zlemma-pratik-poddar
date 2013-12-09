@@ -44,8 +44,7 @@ def getRenamed(pathold, pathrenamed):
 	infile = open(pathold)
 	outfile = open(pathrenamed, 'w')
 
-	#replacements = {'"algorithm"':'"algo"'}
-	replacements = {}
+	replacements = getData('manualreplacements.txt')
 
 	for line in infile:
 	    for src, target in replacements.iteritems():
@@ -55,6 +54,18 @@ def getRenamed(pathold, pathrenamed):
 	outfile.close()
 
 	return
+
+def modifyManualInput(dictionary):
+	
+        manualoverride = getData('manualinput.txt')
+        for key1 in manualoverride.keys():
+		for key2 in manualoverride[key1].keys():
+			try:
+				dictionary[key1][key2] = manualoverride[key1][key2]
+			except Exception as e:
+				print "Exception while modifying outputdict with manual override " + key1 + " " + key2
+
+        return dictionary
 
 if sys.argv[1] == "downloaddata":
 	sys.exit(1)	
@@ -124,8 +135,13 @@ if sys.argv[1] == "mergeresults":
         with open('result.txt', 'w') as infile:
                 infile.write(json.dumps(outputdict))
 
+	manual_overridden_outputdict = modifyManualInput(outputdict)
+
+	with open('manual_overridden_result.txt', 'w') as infile:
+        	infile.write(json.dumps(manual_overridden_outputdict))
+
         execfile("floyd-warshall.py")
-        completematrix=floydwarshall(outputdict, skill_total)
+        completematrix=floydwarshall(manual_overridden_outputdict, skill_total)
         with open('complete.txt', 'w') as infile:
                 infile.write(json.dumps(completematrix))
 
@@ -146,7 +162,7 @@ if sys.argv[1] == "getrenamedresults":
 	getRenamed('wikilang/result.txt', 'wikilang/renamedresult.txt')
 	getRenamed('wiki_tfidf/result.txt', 'wiki_tfidf/renamedresult.txt')
 	getRenamed('result.txt', 'renamedresult.txt')
-
+	getRenamed('manual_overridden_result.txt', 'manual_overridden_renamedresult.txt')
 	
 
 
