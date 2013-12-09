@@ -29,8 +29,12 @@ def getDiff(pathnew, pathold, pathdiff):
 	bigchanges = []
 
 	for comb in itertools.permutations(commonkeys,2):
-		if abs(dictnew[comb[0]][comb[1]] - dictold[comb[0]][comb[1]]) > 0.15:
-			bigchanges.push({'skill1':comb[0], 'skill2':comb[1], 'oldval':dictold[comb[0]][comb[1]], 'newval':dictnew[comb[0]][comb[1]]})
+		try:
+			if abs(dictnew[comb[0]][comb[1]] - dictold[comb[0]][comb[1]]) > 0.15:
+				bigchanges.append({'skill1':comb[0], 'skill2':comb[1], 'oldval':dictold[comb[0]][comb[1]], 'newval':dictnew[comb[0]][comb[1]]})
+		except Exception as e:
+			print "getDiff Error: " + str(e)
+
 	diffoutput = {'deletedkeys': deletedkeys, 'addedkeys': addedkeys, 'bigchanges': bigchanges}
 	
 	with open(pathdiff, 'w') as infile:
