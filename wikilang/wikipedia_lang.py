@@ -3,7 +3,9 @@ import itertools
 import sys
 
 json_data=open('wikipedia_lang_2.json')
+json_data_application=open('wikipedia_lang_3.json')
 data = json.load(json_data)
+data_application=json.load(json_data_application)
 
 def printMatrix(skills, outputdict):
         skillset = []
@@ -40,13 +42,23 @@ def getRelationship(skill1, skill2):
 	try:
 		vec1 = data[skill1].split(',')
 		vec2 = data[skill2].split(',')
+		vec1app = data_application[skill1]
+		vec2app = data_application[skill2]
+		print vec1
+		print vec2
+		print vec1app
+		print vec2app
 		common = list(set(vec1) & set(vec2))
+		commonapplication = list(set(vec1app) & set(vec2app))
+		totalapplications = list(set(vec1app + vec2app))
 		value = 0.0
 		for eachcommon in common:
 			try:
 				value+= 0.5/(2**(vec1.index(eachcommon)+vec2.index(eachcommon)))
 			except:
 				pass
+		if len(commonapplication) and len(totalapplications):
+			value=value*len(commonapplication)/(len(totalapplications)**(0.5))
 		
 		print skill1 + " " + skill2 + " " + str(value)
 
