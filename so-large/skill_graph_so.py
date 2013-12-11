@@ -152,8 +152,11 @@ def prob_A_given_B(skill1, skill2):
     #print "Base: " + str(parentinfo[skill2])
     #print skill1+" given "+ skill2 + " " + "{0:.2f}".format(parentinfo[skill2]/summation)
     try:
-	retval = float(parentinfodict['commonques'][skill2])/float(parentinfodict['parentques'][skill2])
-	retval = (7.0/11.0)*math.atan(retval*10000.0/300.0) 
+	if float(parentinfodict['commonques'][skill2]) > 20:
+		retval = float(parentinfodict['commonques'][skill2])/float(parentinfodict['parentques'][skill2])
+		retval = (7.0/11.0)*math.atan(retval*10000.0/300.0) 
+	else:
+		retval = 0.0
     except Exception as e:
 	#print "Exception: " + skill1 + " " + skill2 + " " + str(e.args)
 	retval = 0.0
@@ -191,10 +194,11 @@ if sys.argv[1] == "saveresults":
 	for skill in skills2:
 		outputdict[skill] = {}
 
+	print skills2
+
 	for comb in itertools.permutations(skills2,2):
 		val = prob_A_given_B(comb[0], comb[1])
 		outputdict[comb[0]][comb[1]] = val
-
 
 	print outputdict
 	printMatrix(skills, outputdict)
