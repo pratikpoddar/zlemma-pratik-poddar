@@ -152,7 +152,7 @@ def prob_A_given_B(skill1, skill2):
     #print "Base: " + str(parentinfo[skill2])
     #print skill1+" given "+ skill2 + " " + "{0:.2f}".format(parentinfo[skill2]/summation)
     try:
-	if float(parentinfodict['commonques'][skill2]) > 20:
+	if float(parentinfodict['commonques'][skill2]) > 10:
 		retval = float(parentinfodict['commonques'][skill2])/float(parentinfodict['parentques'][skill2])
 		retval = (7.0/11.0)*math.atan(retval*10000.0/300.0) 
 	else:
