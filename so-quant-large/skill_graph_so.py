@@ -182,7 +182,7 @@ skills = skill_list
 skills = map(lambda x: slugify(x), skills)
 skills2 = filter(lambda x: check_skill_so(x), skills)
 
-not_to_be_included_skills = ['java', 'programming-languages']
+not_to_be_included_skills = ['java', 'programming-languages', 'programming']
 skills2 = filter(lambda x: x not in not_to_be_included_skills, skills2)
 
 print skills2
