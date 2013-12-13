@@ -65,7 +65,7 @@ def modifyManualInput(dictionary):
         for key1 in manualoverride.keys():
 		for key2 in manualoverride[key1].keys():
 			try:
-				dictionary[key1][key2] = manualoverride[key1][key2]
+				dictionary[key1][key2] = float(manualoverride[key1][key2])
 			except Exception as e:
 				print "Exception while modifying outputdict with manual override " + key1 + " " + key2
 

@@ -29,7 +29,6 @@ def floydwarshall(matrix, skills):
 			for skill3 in skills:
 				if outputmatrix[skill1][skill2]*outputmatrix[skill2][skill3] > outputmatrix[skill1][skill3]:
 					outputmatrix[skill1][skill3] = outputmatrix[skill1][skill2]*outputmatrix[skill2][skill3]
-
 	return outputmatrix
 
 
