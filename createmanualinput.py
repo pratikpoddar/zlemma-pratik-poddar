@@ -38,3 +38,29 @@ print output
 with open('manualinput.txt', 'w') as infile:
                 infile.write(json.dumps(output))
 
+
+# Edit at location: https://docs.google.com/a/zlemma.com/spreadsheet/ccc?key=0Ang7Vqp7FIPSdG1QWjBwLTNJUTZzbktWVXNocGtSb3c#gid=0
+
+d = json.load(urllib2.urlopen('https://spreadsheets.google.com/feeds/list/0Ang7Vqp7FIPSdG1QWjBwLTNJUTZzbktWVXNocGtSb3c/od6/public/basic?hl=en_US&alt=json'))
+output = {}
+
+for entry in d['feed']['entry']:
+        try:
+                num = entry['content']['$t'].split(',')[1].replace('num: ','').strip()
+                skill2 = entry['content']['$t'].split(',')[0].replace('skill2: ','').strip()
+                skill1 = entry['title']['$t'].strip()
+
+                try:
+                        output[skill1][skill2] = num
+                except:
+                        output[skill1] = {}
+                        output[skill1][skill2] = num
+        except:
+                print "Not able to read " + str(entry)
+
+print "Final Manual Forced Input Dict: "
+print output
+with open('manualforcedinput.txt', 'w') as infile:
+                infile.write(json.dumps(output))
+
+

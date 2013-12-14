@@ -71,6 +71,34 @@ def modifyManualInput(dictionary):
 
         return dictionary
 
+def modifyManualInputForced(dictionary):
+	
+	manualoverride = getData('manualforcedinput.txt')
+	new_keys = []
+        for key1 in manualoverride.keys():
+                for key2 in manualoverride[key1].keys():
+			new_keys.append(key1)
+			new_keys.append(key2)
+
+	new_keys = list(set(new_keys))
+
+	for key in new_keys:
+		if key not in dictionary.keys():
+			dictionary[key]={}
+
+	for key in new_keys:
+		for keyold in dictionary.keys():
+			try:
+				dictionary[keyold][key] = float(manualoverride[keyold][key])
+			except:
+				try:
+					dictionary[keyold][key] = dictionary[keyold][key]
+				except:
+					dictionary[keyold][key] = 0.0
+		
+        return {'skills': dictionary.keys(), 'outputdict': dictionary}
+	
+
 if sys.argv[1] == "downloaddata":
 	sys.exit(1)	
 
@@ -140,12 +168,16 @@ if sys.argv[1] == "mergeresults":
                 infile.write(json.dumps(outputdict))
 
 	manual_overridden_outputdict = modifyManualInput(outputdict)
+	
+	manual_overridden_forced_output = modifyManualInputForced(outputdict)
+	skill_total_forced = manual_overridden_forced_output['skills']
+	manual_overridden_forced_outputdict = manual_overridden_forced_output['outputdict']
 
 	with open('manual_overridden_result.txt', 'w') as infile:
-        	infile.write(json.dumps(manual_overridden_outputdict))
+        	infile.write(json.dumps(manual_overridden_forced_outputdict))	
 
         execfile("floyd-warshall.py")
-        completematrix=floydwarshall(manual_overridden_outputdict, skill_total)
+        completematrix=floydwarshall(manual_overridden_outputdict, skill_total_forced)
         with open('complete.txt', 'w') as infile:
                 infile.write(json.dumps(completematrix))
 
