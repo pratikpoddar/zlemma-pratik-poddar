@@ -71,6 +71,17 @@ def modifyManualInput(dictionary):
 
         return dictionary
 
+def normalizationMapping(dictionary):
+
+	from scipy.interpolate import interp1d
+	mapping = interp1d([0.0, 0.1, 0.3, 0.5, 0.7, 1.0],[0.0, 0.3, 0.5, 0.6, 0.85, 1.0])
+
+	for key1 in dictionary.keys():
+		for key2 in dictionary[key1].keys():
+			dictionary[key1][key2] = float(mapping(dictionary[key1][key2]))
+	
+	return dictionary
+
 def modifyManualInputForced(dictionary):
 	
 	manualoverride = getData('manualforcedinput.txt')
@@ -174,10 +185,15 @@ if sys.argv[1] == "mergeresults":
 	manual_overridden_forced_outputdict = manual_overridden_forced_output['outputdict']
 
 	with open('manual_overridden_result.txt', 'w') as infile:
-        	infile.write(json.dumps(manual_overridden_forced_outputdict))	
+        	infile.write(json.dumps(manual_overridden_forced_outputdict))
+
+		
+	manual_overridden_forced_normalized_outputdict = normalizationMapping(manual_overridden_forced_outputdict)
+	with open('manual_overridden_normalized_result.txt', 'w') as infile:
+        	infile.write(json.dumps(manual_overridden_forced_normalized_outputdict))
 
         execfile("floyd-warshall.py")
-        completematrix=floydwarshall(manual_overridden_outputdict, skill_total_forced)
+        completematrix=floydwarshall(manual_overridden_forced_outputdict, skill_total_forced)
         with open('complete.txt', 'w') as infile:
                 infile.write(json.dumps(completematrix))
 
@@ -199,6 +215,8 @@ if sys.argv[1] == "getrenamedresults":
 	getRenamed('wiki_tfidf/result.txt', 'wiki_tfidf/renamedresult.txt')
 	getRenamed('result.txt', 'renamedresult.txt')
 	getRenamed('manual_overridden_result.txt', 'manual_overridden_renamedresult.txt')
+	getRenamed('manual_overridden_normalized_result.txt', 'manual_overridden_normalized_renamedresult.txt')
+	getRenamed('complete.txt', 'renamedcomplete.txt')
 	
 
 
