@@ -121,8 +121,8 @@ if sys.argv[1] == "mergeresults":
 	mathselargedata = getData('mathse-large/result.txt')
 	soquantlargedata = getData('so-quant-large/result.txt')
 	#soeleclargedata = getData('so-elec-large/result.txt')
-	wikilangdata = getData('wikilang/result.txt')
-	wiki_tfidfdata = getData('wiki_tfidf/result.txt')
+	#wikilangdata = getData('wikilang/result.txt')
+	#wiki_tfidfdata = getData('wiki_tfidf/result.txt')
 	
 	def getMerged(skill1, skill2):
 	
@@ -149,20 +149,22 @@ if sys.argv[1] == "mergeresults":
                 #except:
                 #        pass
 
-		try:
-			return wikilangdata[skill1][skill2]
-		except:
-			pass
+		#try:
+		#	return wikilangdata[skill1][skill2]
+		#except:
+		#	pass
 	
-		try:
-			return wiki_tfidfdata[skill1][skill2]
-		except:
-			pass
+		#try:
+		#	return wiki_tfidfdata[skill1][skill2]
+		#except:
+		#	pass
 
 		return 0.0
 
 	#skill_total = list(set(solargedata.keys() + mathselargedata.keys() + wikilangdata.keys() + wiki_tfidfdata.keys() + soquantlargedata.keys() + soeleclargedata.keys()))
-	skill_total = list(set(solargedata.keys() + mathselargedata.keys() + wikilangdata.keys() + wiki_tfidfdata.keys() + soquantlargedata.keys()))
+	#skill_total = list(set(solargedata.keys() + mathselargedata.keys() + wikilangdata.keys() + wiki_tfidfdata.keys() + soquantlargedata.keys()))
+
+        skill_total = list(set(solargedata.keys() + mathselargedata.keys() + soquantlargedata.keys()))
 
 	execfile("skill_list.py")
 	skill_total = filter(lambda x: x in skill_list, skill_total)
@@ -202,17 +204,17 @@ if sys.argv[1] == "diffresults":
 	getDiff('mathse-large/result.txt', 'mathse-large/resultold.txt', 'mathse-large/diff.txt')
 	getDiff('so-quant-large/result.txt', 'so-quant-large/resultold.txt', 'so-quant-large/diff.txt')
 	#getDiff('so-elec-large/result.txt', 'so-elec-large/resultold.txt', 'so-elec-large/diff.txt')
-	getDiff('wikilang/result.txt', 'wikilang/resultold.txt', 'wikilang/diff.txt')
-	getDiff('wiki_tfidf/result.txt', 'wiki_tfidf/resultold.txt', 'wiki_tfidf/diff.txt')
+	#getDiff('wikilang/result.txt', 'wikilang/resultold.txt', 'wikilang/diff.txt')
+	#getDiff('wiki_tfidf/result.txt', 'wiki_tfidf/resultold.txt', 'wiki_tfidf/diff.txt')
 	getDiff('result.txt', 'resultold.txt', 'diff.txt')
 
 if sys.argv[1] == "getrenamedresults":
 	getRenamed('so-large/result.txt', 'so-large/renamedresult.txt')
 	getRenamed('mathse-large/result.txt', 'mathse-large/renamedresult.txt')
 	getRenamed('so-quant-large/result.txt', 'so-quant-large/renamedresult.txt')
-	getRenamed('so-elec-large/result.txt', 'so-elec-large/renamedresult.txt')
-	getRenamed('wikilang/result.txt', 'wikilang/renamedresult.txt')
-	getRenamed('wiki_tfidf/result.txt', 'wiki_tfidf/renamedresult.txt')
+	#getRenamed('so-elec-large/result.txt', 'so-elec-large/renamedresult.txt')
+	#getRenamed('wikilang/result.txt', 'wikilang/renamedresult.txt')
+	#getRenamed('wiki_tfidf/result.txt', 'wiki_tfidf/renamedresult.txt')
 	getRenamed('result.txt', 'renamedresult.txt')
 	getRenamed('manual_overridden_result.txt', 'manual_overridden_renamedresult.txt')
 	getRenamed('manual_overridden_normalized_result.txt', 'manual_overridden_normalized_renamedresult.txt')
