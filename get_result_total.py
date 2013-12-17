@@ -47,8 +47,9 @@ def renameSkillList(skill_list):
 	
 	replacements = getData('manualreplacements.txt')
 
+	skill_list_str = ', '.join(skill_list)
 	for src, target in replacements.iteritems():
-		skill_list_str = ', '.join(skill_list).replace(src.replace('"',''), target.replace('"',''))
+		skill_list_str = skill_list_str.replace(src.replace('"',''), target.replace('"',''))
 
 	skill_list = map(lambda x: camelCase(x.strip()), skill_list_str.split(','))
 	
