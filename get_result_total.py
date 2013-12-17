@@ -42,6 +42,20 @@ def getDiff(pathnew, pathold, pathdiff):
 
 	return
 
+#renameSkillList(skill_list)
+def renameSkillList(skill_list):
+	
+	replacements = getData('manualreplacements.txt')
+
+	for src, target in replacements.iteritems():
+		skill_list_str = ', '.join(skill_list).replace(src.replace('"',''), target.replace('"',''))
+
+	skill_list = map(lambda x: camelCase(x.strip()), skill_list_str.split(','))
+	
+	return skill_list	
+	
+def camelCase(word):
+    return ' '.join(x.capitalize() for x in word.split('-'))
 
 def getRenamed(pathold, pathrenamed):
 	
@@ -56,6 +70,20 @@ def getRenamed(pathold, pathrenamed):
 	    outfile.write(line)
 	infile.close()
 	outfile.close()
+
+	outputDict = getData(pathrenamed)
+	newOutputDict = {}
+
+	for key1 in outputDict.keys():
+		for key2 in outputDict[key1].keys():
+			try:
+				newOutputDict[camelCase(key1)][camelCase(key2)] = outputDict[key1][key2]
+			except:
+				newOutputDict[camelCase(key1)] = {}
+				newOutputDict[camelCase(key1)][camelCase(key2)] = outputDict[key1][key2]
+
+        with open(pathrenamed, 'w') as infile:
+                infile.write(json.dumps(newOutputDict))
 
 	return
 
