@@ -45,18 +45,22 @@ def getDiff(pathnew, pathold, pathdiff):
 #renameSkillList(skill_list)
 def renameSkillList(skill_list):
 	
+	list_of_skills=[]
+	for skill in skill_list:
+		list_of_skills.append(skill)
+
 	replacements = getData('manualreplacements.txt')
 
-	skill_list_str = ', '.join(skill_list)
 	for src, target in replacements.iteritems():
-		skill_list_str = skill_list_str.replace(src.replace('"',''), target.replace('"',''))
+		list_of_skills.remove(src.replace('"',''))
+		list_of_skills.append(target.replace('"',''))
 
-	skill_list = map(lambda x: camelCase(x.strip()), skill_list_str.split(','))
+	list_of_skills = map(lambda x: camelCase(x.strip()), list_of_skills)
 	
-	return skill_list	
+	return list(set(list_of_skills))
 	
 def camelCase(word):
-    return ' '.join(x.capitalize() for x in word.split('-'))
+    return ' '.join(x[0].upper()+x[1:] for x in word.split('-'))
 
 def getRenamed(pathold, pathrenamed):
 	
