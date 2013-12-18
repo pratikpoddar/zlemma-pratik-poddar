@@ -24,7 +24,7 @@ def getDiff(pathnew, pathold, pathdiff):
 	kold = dictold.keys()
 	addedkeys = filter(lambda x: x not in kold, knew)
 	deletedkeys = filter(lambda x: x not in knew, kold)
-	commonkeys = list(set(knew) and set(kold))
+	commonkeys = list(set(knew) - set(addedkeys))
 
 	bigchanges = []
 
@@ -44,7 +44,7 @@ def getDiff(pathnew, pathold, pathdiff):
 
 #renameSkillList(skill_list)
 def renameSkillList(skill_list):
-	
+
 	list_of_skills=[]
 	for skill in skill_list:
 		list_of_skills.append(skill)
@@ -144,7 +144,7 @@ def modifyManualInputForced(dictionary):
 	
 
 if sys.argv[1] == "downloaddata":
-	sys.exit(1)	
+	sys.exit(1)
 
 if sys.argv[1] == "saveresults":
 	sys.exit(1)
@@ -253,9 +253,4 @@ if sys.argv[1] == "getrenamedresults":
 	getRenamed('manual_overridden_normalized_result.txt', 'manual_overridden_normalized_renamedresult.txt')
 	getRenamed('complete.txt', 'renamedcomplete.txt')
 	
-
-
-
-
-
 

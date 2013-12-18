@@ -55,6 +55,8 @@ print set(list1)-set(list2)
 list3 = list(set(list1+list2))
 list3.sort()
 print list3
+for s in list3:
+	print s
 print "----"
 
 solargedata = getData('so-large/result.txt')
