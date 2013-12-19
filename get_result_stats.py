@@ -47,7 +47,9 @@ def renameSkillList(skill_list):
 print "----"
 execfile("skill_list.py")
 list1 = renameSkillList(skill_list)
+print 'Ruby' in list1
 list2 = getData('renamedcomplete.txt').keys()
+print 'Ruby' in list2
 print len(list1)
 print len(list2)
 print set(list2)-set(list1)
