@@ -57,7 +57,13 @@ list3.sort()
 print list3
 for s in list3:
 	print s
+outfile = open('allskills.txt', 'w')
+for s in list3:
+	outfile.write(s)
+	outfile.write('\n')
+outfile.close()
 print "----"
+
 
 solargedata = getData('so-large/result.txt')
 mathselargedata = getData('mathse-large/result.txt')
