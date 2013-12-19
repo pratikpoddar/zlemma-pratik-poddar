@@ -130,6 +130,13 @@ def modifyManualInputForced(dictionary):
 		if key not in dictionary.keys():
 			dictionary[key]={}
 
+	for key1 in dictionary.keys():
+		for key2 in dictionary.keys():
+			try:
+				dictionary[key1][key2] = dictionary[key1][key2]
+			except:
+				dictionary[key1][key2] = 0.0
+
 	for key in new_keys:
 		for keyold in dictionary.keys():
 			try:
