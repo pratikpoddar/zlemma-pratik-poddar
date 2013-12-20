@@ -230,9 +230,9 @@ if sys.argv[1] == "mergeresults":
         	infile.write(json.dumps(manual_overridden_forced_outputdict))
 
 		
-	manual_overridden_forced_normalized_outputdict = normalizationMapping(manual_overridden_forced_outputdict)
-	with open('manual_overridden_normalized_result.txt', 'w') as infile:
-        	infile.write(json.dumps(manual_overridden_forced_normalized_outputdict))
+	#manual_overridden_forced_normalized_outputdict = normalizationMapping(manual_overridden_forced_outputdict)
+	#with open('manual_overridden_normalized_result.txt', 'w') as infile:
+        #	infile.write(json.dumps(manual_overridden_forced_normalized_outputdict))
 
         execfile("floyd-warshall.py")
         completematrix=floydwarshall(manual_overridden_forced_outputdict, skill_total_forced)
@@ -257,7 +257,7 @@ if sys.argv[1] == "getrenamedresults":
 	#getRenamed('wiki_tfidf/result.txt', 'wiki_tfidf/renamedresult.txt')
 	getRenamed('result.txt', 'renamedresult.txt')
 	getRenamed('manual_overridden_result.txt', 'manual_overridden_renamedresult.txt')
-	getRenamed('manual_overridden_normalized_result.txt', 'manual_overridden_normalized_renamedresult.txt')
+	#getRenamed('manual_overridden_normalized_result.txt', 'manual_overridden_normalized_renamedresult.txt')
 	getRenamed('complete.txt', 'renamedcomplete.txt')
 	
 
