@@ -46,7 +46,7 @@ def printMatrix(skills, outputdict):
 	return
 
 def check_skill_so(skill):
-    if getNumQues(skill)<=80:
+    if getNumQues(skill)<=10:
 	return 0
     else:
 	return 1
@@ -152,7 +152,7 @@ def prob_A_given_B(skill1, skill2):
     #print "Base: " + str(parentinfo[skill2])
     #print skill1+" given "+ skill2 + " " + "{0:.2f}".format(parentinfo[skill2]/summation)
     try:
-	if float(parentinfodict['commonques'][skill2]) > 5:
+	if float(parentinfodict['commonques'][skill2]) > 3:
 		retval = float(parentinfodict['commonques'][skill2])/float(parentinfodict['parentques'][skill2])
 		retval = (7.0/11.0)*math.atan(retval*10000.0/300.0) 
 	else:
@@ -168,13 +168,13 @@ def prob_A_given_B(skill1, skill2):
 
     return retval
 
-if not len(sys.argv) == 2:
-	print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
-	sys.exit(1)
+#if not len(sys.argv) == 2:
+	#print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
+	#sys.exit(1)
 
-if sys.argv[1] not in ["downloaddata","saveresults"]:
-	print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
-	sys.exit(1)
+#if sys.argv[1] not in ["downloaddata","saveresults"]:
+#	print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
+#	sys.exit(1)
 
 skills = ["Machine Learning", "Probability", "Statistics", "Data Mining", "NLP", "Hadoop", "Programming", "SQL", "Algorithm", "Artificial Intelligence", "Pattern Recognition", "Python", "Django", "C++", "Java", "Ruby", "Algebra", "Convex Optimization", "Optimization"]
 execfile("../skill_list.py")

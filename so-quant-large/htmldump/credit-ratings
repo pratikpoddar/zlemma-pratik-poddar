@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=d36f8dfaf230">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged credit-ratings" href="/feeds/tag/credit-ratings" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187500,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1388791465,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"12109644213eccb6c723506875159743","isAnonymous":true,"ab":{"welcome_email":{"v":"b","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"2902a23ad46f","js/full.en.js":"c63381338a59","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,96 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+    <div class="related-links js-related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcredit-ratings" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcredit-ratings" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[credit-ratings]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcredit-ratings">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcredit-ratings">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[credit-ratings]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +194,11 @@
 
 <div id="tabs">
         <a href="/tags/credit-ratings/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/credit-ratings?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/credit-ratings?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/credit-ratings?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/credit-ratings?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/credit-ratings?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/credit-ratings?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/credit-ratings?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/credit-ratings?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/credit-ratings?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/credit-ratings?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -173,8 +234,8 @@ The <a href="/questions/tagged/credit-ratings" class="post-tag" title="show ques
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="42 views">
-    42 views
+        <div class="views " title="48 views">
+    48 views
 </div>
     </div>
     <div class="summary">
@@ -192,7 +253,7 @@ The <a href="/questions/tagged/credit-ratings" class="post-tag" title="show ques
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-11 15:31:08Z" class="relativetime">Nov 11 at 15:31</span>
+        asked <span title="2013-11-11 15:31:08Z" class="relativetime">Nov 11 '13 at 15:31</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6490/ideate"><div><img src="https://www.gravatar.com/avatar/a2e4a0a5e4e5a0aecd0698054f5f452d?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -218,8 +279,8 @@ The <a href="/questions/tagged/credit-ratings" class="post-tag" title="show ques
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="71 views">
-    71 views
+        <div class="views " title="79 views">
+    79 views
 </div>
     </div>
     <div class="summary">
@@ -236,7 +297,7 @@ The <a href="/questions/tagged/credit-ratings" class="post-tag" title="show ques
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-30 14:24:29Z" class="relativetime">Oct 30 at 14:24</span>
+        asked <span title="2013-10-30 14:24:29Z" class="relativetime">Oct 30 '13 at 14:24</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3029/gt6989b"><div><img src="https://www.gravatar.com/avatar/1e8e67c6abb4a9c0d8bbb52e0d28416e?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -262,8 +323,8 @@ The <a href="/questions/tagged/credit-ratings" class="post-tag" title="show ques
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="129 views">
-    129 views
+        <div class="views " title="173 views">
+    173 views
 </div>
     </div>
     <div class="summary">
@@ -283,14 +344,14 @@ Given that I have cumulative default probability of each credit rating from Glob
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-07 15:15:17Z" class="relativetime">Oct 7 at 15:15</span>
+        asked <span title="2013-10-07 15:15:17Z" class="relativetime">Oct 7 '13 at 15:15</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6119/dennis"><div><img src="https://www.gravatar.com/avatar/e7c2294e21a3fdb61ff49adec14734d9?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6119/dennis">Dennis</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">39</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">64</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -309,8 +370,8 @@ Given that I have cumulative default probability of each credit rating from Glob
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="143 views">
-    143 views
+        <div class="views " title="159 views">
+    159 views
 </div>
     </div>
     <div class="summary">
@@ -327,7 +388,7 @@ Given that I have cumulative default probability of each credit rating from Glob
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-23 07:12:47Z" class="relativetime">Aug 23 at 7:12</span>
+        asked <span title="2013-08-23 07:12:47Z" class="relativetime">Aug 23 '13 at 7:12</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2466/karusmeister"><div><img src="https://www.gravatar.com/avatar/9e01ad457b1bb5065a0927f239c9886d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -353,8 +414,8 @@ Given that I have cumulative default probability of each credit rating from Glob
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="59 views">
-    59 views
+        <div class="views " title="61 views">
+    61 views
 </div>
     </div>
     <div class="summary">
@@ -374,7 +435,7 @@ Y_c = \sqrt{\rho_c} Z ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-06 13:17:07Z" class="relativetime">Jun 6 at 13:17</span>
+        asked <span title="2013-06-06 13:17:07Z" class="relativetime">Jun 6 '13 at 13:17</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2466/karusmeister"><div><img src="https://www.gravatar.com/avatar/9e01ad457b1bb5065a0927f239c9886d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -400,8 +461,8 @@ Y_c = \sqrt{\rho_c} Z ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="100 views">
-    100 views
+        <div class="views " title="105 views">
+    105 views
 </div>
     </div>
     <div class="summary">
@@ -423,7 +484,7 @@ T2 = Retained ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-02-06 01:25:00Z" class="relativetime">Feb 6 at 1:25</span>
+        asked <span title="2013-02-06 01:25:00Z" class="relativetime">Feb 6 '13 at 1:25</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/4751/brojsimpson"><div><img src="https://www.gravatar.com/avatar/dd394066827a0d667758b5e20365c465?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -449,8 +510,8 @@ T2 = Retained ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="157 views">
-    157 views
+        <div class="views " title="158 views">
+    158 views
 </div>
     </div>
     <div class="summary">
@@ -474,7 +535,7 @@ T2 = Retained ...
     </div>
     <div class="user-details">
         <a href="/users/1106/tal-fishman">Tal Fishman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">7,017</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="18 silver badges"><span class="badge2"></span><span class="badgecount">18</span></span><span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">7,067</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="18 silver badges"><span class="badge2"></span><span class="badgecount">18</span></span><span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span>
     </div>
 </div>
         </div>  
@@ -493,8 +554,8 @@ T2 = Retained ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="374 views">
-    374 views
+        <div class="views " title="381 views">
+    381 views
 </div>
     </div>
     <div class="summary">
@@ -537,7 +598,7 @@ T2 = Retained ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views warm" title="3,770 views">
+        <div class="views warm" title="3,879 views">
     4k views
 </div>
     </div>
@@ -587,7 +648,7 @@ T2 = Retained ...
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=credit-ratings&amp;sort=newest" title="the 30 newest credit-ratings questions"><span class="feed-icon"></span>newest credit-ratings questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=credit-ratings&sort=newest" title="the 30 newest credit-ratings questions"><span class="feed-icon"></span>newest credit-ratings questions feed</a></div>
 </div>
 
 
@@ -601,45 +662,248 @@ T2 = Retained ...
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/credit-ratings/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/credit-ratings+credit-risk" class="post-tag" title="show questions tagged &#39;credit-ratings credit-risk&#39;" rel="tag">credit-risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/credit-ratings+default" class="post-tag" title="show questions tagged &#39;credit-ratings default&#39;" rel="tag">default</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/credit-ratings+fixed-income" class="post-tag" title="show questions tagged &#39;credit-ratings fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/credit-ratings+credit" class="post-tag" title="show questions tagged &#39;credit-ratings credit&#39;" rel="tag">credit</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+modeling" class="post-tag" title="show questions tagged &#39;credit-ratings modeling&#39;" rel="tag">modeling</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+yield" class="post-tag" title="show questions tagged &#39;credit-ratings yield&#39;" rel="tag">yield</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+recovery" class="post-tag" title="show questions tagged &#39;credit-ratings recovery&#39;" rel="tag">recovery</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+risk-models" class="post-tag" title="show questions tagged &#39;credit-ratings risk-models&#39;" rel="tag">risk-models</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+reuters" class="post-tag" title="show questions tagged &#39;credit-ratings reuters&#39;" rel="tag">reuters</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+probability" class="post-tag" title="show questions tagged &#39;credit-ratings probability&#39;" rel="tag">probability</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+normal-distribution" class="post-tag" title="show questions tagged &#39;credit-ratings normal-distribution&#39;" rel="tag">normal-distribution</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+copula" class="post-tag" title="show questions tagged &#39;credit-ratings copula&#39;" rel="tag">copula</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+inflation" class="post-tag" title="show questions tagged &#39;credit-ratings inflation&#39;" rel="tag">inflation</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+data" class="post-tag" title="show questions tagged &#39;credit-ratings data&#39;" rel="tag">data</a>&nbsp;<br>
-            <a href="/questions/tagged/credit-ratings+time-series" class="post-tag" title="show questions tagged &#39;credit-ratings time-series&#39;" rel="tag">time-series</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/credit-ratings+credit-risk" class="post-tag" title="show questions tagged &#39;credit-ratings credit-risk&#39;" rel="tag">credit-risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/credit-ratings+default" class="post-tag" title="show questions tagged &#39;credit-ratings default&#39;" rel="tag">default</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/credit-ratings+fixed-income" class="post-tag" title="show questions tagged &#39;credit-ratings fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/credit-ratings+credit" class="post-tag" title="show questions tagged &#39;credit-ratings credit&#39;" rel="tag">credit</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/credit-ratings+modeling" class="post-tag" title="show questions tagged &#39;credit-ratings modeling&#39;" rel="tag">modeling</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/credit-ratings+yield" class="post-tag" title="show questions tagged &#39;credit-ratings yield&#39;" rel="tag">yield</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/credit-ratings+recovery" class="post-tag" title="show questions tagged &#39;credit-ratings recovery&#39;" rel="tag">recovery</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/credit-ratings+risk-models" class="post-tag" title="show questions tagged &#39;credit-ratings risk-models&#39;" rel="tag">risk-models</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/credit-ratings+reuters" class="post-tag" title="show questions tagged &#39;credit-ratings reuters&#39;" rel="tag">reuters</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/credit-ratings+probability" class="post-tag" title="show questions tagged &#39;credit-ratings probability&#39;" rel="tag">probability</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/credit-ratings+normal-distribution" class="post-tag" title="show questions tagged &#39;credit-ratings normal-distribution&#39;" rel="tag">normal-distribution</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/credit-ratings+copula" class="post-tag" title="show questions tagged &#39;credit-ratings copula&#39;" rel="tag">copula</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/credit-ratings+inflation" class="post-tag" title="show questions tagged &#39;credit-ratings inflation&#39;" rel="tag">inflation</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/credit-ratings+time-series" class="post-tag" title="show questions tagged &#39;credit-ratings time-series&#39;" rel="tag">time-series</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/credit-ratings+data" class="post-tag" title="show questions tagged &#39;credit-ratings data&#39;" rel="tag">data</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/38515/making-these-conditions-shorter" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Making these conditions shorter
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223027/at-what-point-is-version-control-needed" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    At what point is version control needed?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17342/verify-brainfuck-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Verify Brainfuck program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/625223/do-we-know-if-there-exist-true-mathematical-statements-that-can-not-be-proven" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Do we know if there exist true mathematical statements that can not be proven?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/48022/what-kinds-of-encryption-are-not-breakable-via-quantum-computers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:162 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What kinds of encryption are _not_ breakable via Quantum Computers?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47342/what-are-harry-potters-children" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What are Harry Potter&#39;s Children?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-crypto" title="Cryptography Stack Exchange"></div><a href="http://crypto.stackexchange.com/questions/12710/where-does-this-part-of-rsa-come-from" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:281 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Where does this part of RSA come from?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/17793/telling-my-manager-that-he-made-a-huge-budgeting-mistake" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Telling my manager that he made a huge budgeting mistake
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/152264/to-write-this-norm-equation-better" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    To write this norm equation better?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/16226/i-need-a-program-where-the-user-inputs-an-array-of-doubles-and-the-program-outpu" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I need a program where the user inputs an array of doubles and the program outputs the array sorted
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/107739/how-to-trigger-a-system-self-destruct-with-a-certain-password-is-entered" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to trigger a system self destruct with a certain password is entered
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/565/proper-procedure-for-leaving-class-d-airspace" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Proper procedure for leaving class D airspace?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15326/how-to-deal-with-particles-in-a-last-name-in-a-reference-list" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to deal with particles in a last name in a reference list
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/16370/what-was-sherlock-about-to-remark" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:367 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What was Sherlock about to remark?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31206/rpg-for-a-very-poor-reader" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    RPG for a very poor reader
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17287/a-function-that-returns-most-occuring-element-in-a-list" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A function that returns most occuring element in a list
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-blender" title="Blender Stack Exchange"></div><a href="http://blender.stackexchange.com/questions/5972/how-to-save-print-quality-screenshots-of-a-matcaped-model" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:502 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to save print-quality screenshots of a matcaped model?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/95342/5v-and-3-3v-power-supply" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:135 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    5V and 3.3V power supply
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/149121/will-wolves-eat-ocelots-in-minecraft" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Will wolves eat ocelots in minecraft?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/152196/what-is-the-advantage-of-using-the-notation-fig-in-the-label" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the advantage of using the notation &#39;fig:&#39; in the \label {}?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/15285/is-the-sentence-im-not-doing-that-because-i-hate-you-ambiguous" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:481 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the sentence “I&#39;m not doing that because I hate you&quot; ambiguous?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/153302/teaching-homology-via-everyday-examples" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Teaching homology via everyday examples
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/143782/idiom-or-word-for-a-very-crowded-place" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Idiom or word for a very crowded place
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions');
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -659,7 +923,7 @@ T2 = Retained ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/credit-ratings")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -779,14 +1043,14 @@ T2 = Retained ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.3.1275
             </div>
             
         </div>
@@ -822,6 +1086,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

@@ -36,13 +36,17 @@ def renameSkillList(skill_list):
         replacements = getData('manualreplacements.txt')
 
         for src, target in replacements.iteritems():
-                list_of_skills.remove(src.replace('"',''))
-                list_of_skills.append(target.replace('"',''))
+		try:
+			list_of_skills.remove(src.replace('"',''))
+		        list_of_skills.append(target.replace('"',''))
+		except:
+			print src
+			print target
+			raise
 
         list_of_skills = map(lambda x: camelCase(x.strip()), list_of_skills)
 
         return list(set(list_of_skills))
-
 
 print "----"
 execfile("skill_list.py")
@@ -83,6 +87,18 @@ print("wiki-lang")
 getBinnedResults(wikilangdata)
 print("wiki_tfidf")
 getBinnedResults(wiki_tfidfdata)
+print "----"
+
+print "----"
+s1 = getData('manual_overridden_renamedresult.txt').keys()
+with open('allskills.txt') as f:
+        s2 = map(lambda x : x.replace('\n',''), f.readlines())
+print set(s1)-set(s2)
+print set(s2)-set(s1)
+print len(s1)
+print len(s2)
+print "----"
+
 	
 print "xxx"
 	

@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=d36f8dfaf230">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged asset-pricing" href="/feeds/tag/asset-pricing" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187547,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1388791034,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"12109644213eccb6c723506875159743","isAnonymous":true,"ab":{"welcome_email":{"v":"b","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"2902a23ad46f","js/full.en.js":"c63381338a59","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,96 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+    <div class="related-links js-related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fasset-pricing" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fasset-pricing" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[asset-pricing]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fasset-pricing">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fasset-pricing">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[asset-pricing]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +194,11 @@
 
 <div id="tabs">
         <a href="/tags/asset-pricing/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/asset-pricing?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/asset-pricing?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/asset-pricing?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/asset-pricing?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/asset-pricing?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/asset-pricing?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/asset-pricing?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/asset-pricing?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/asset-pricing?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/asset-pricing?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,7 +220,52 @@ The <a href="/questions/tagged/asset-pricing" class="post-tag" title="show quest
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9216">
+<div class="question-summary" id="question-summary-9767">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="35 views">
+    35 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9767/how-to-estimate-market-integration-parameter-in-singer-terhaar-model-for-er" class="question-hyperlink">How to estimate market integration parameter in Singer-Terhaar model for E(r)?</a></h3>
+        <div class="excerpt">
+            Singer-Terhaar is part of CFA II and III curriculum. It estimates risk premium for some asset, traded at some local market, as weighted average of expected premiums for the case of 
+(1) local market, ...
+        </div>          
+        <div class="tags t-equities t-returns t-capm t-expected-return t-asset-pricing">
+            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/returns" class="post-tag" title="show questions tagged &#39;returns&#39;" rel="tag">returns</a> <a href="/questions/tagged/capm" class="post-tag" title="show questions tagged &#39;capm&#39;" rel="tag">capm</a> <a href="/questions/tagged/expected-return" class="post-tag" title="show questions tagged &#39;expected-return&#39;" rel="tag">expected-return</a> <a href="/questions/tagged/asset-pricing" class="post-tag" title="show questions tagged &#39;asset-pricing&#39;" rel="tag">asset-pricing</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-22 01:28:29Z" class="relativetime">Dec 22 '13 at 1:28</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6535/alexander-didenko"><div><img src="https://www.gravatar.com/avatar/985c72fd1563bd0f0d16e29c63462ae7?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6535/alexander-didenko">Alexander Didenko</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9216">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -173,8 +279,8 @@ The <a href="/questions/tagged/asset-pricing" class="post-tag" title="show quest
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="182 views">
-    182 views
+        <div class="views " title="193 views">
+    193 views
 </div>
     </div>
     <div class="summary">
@@ -194,14 +300,14 @@ The <a href="/questions/tagged/asset-pricing" class="post-tag" title="show quest
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-10-21 14:48:53Z" class="relativetime">Oct 21 at 14:48</span>
+        asked <span title="2013-10-21 14:48:53Z" class="relativetime">Oct 21 '13 at 14:48</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/848/bob-jansen"><div><img src="https://www.gravatar.com/avatar/5ab2b261c42f24695ece33c28fd57cbd?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/848/bob-jansen">Bob Jansen</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,478</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,488</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
     </div>
 </div>
         </div>  
@@ -220,8 +326,8 @@ The <a href="/questions/tagged/asset-pricing" class="post-tag" title="show quest
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="73 views">
-    73 views
+        <div class="views " title="80 views">
+    80 views
 </div>
     </div>
     <div class="summary">
@@ -242,7 +348,7 @@ E.g.
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-22 17:27:22Z" class="relativetime">Sep 22 at 17:27</span>
+        asked <span title="2013-09-22 17:27:22Z" class="relativetime">Sep 22 '13 at 17:27</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3178/boncodigo"><div><img src="https://www.gravatar.com/avatar/14a225b416674b1d9fb6cf14554d5054?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -268,8 +374,8 @@ E.g.
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="105 views">
-    105 views
+        <div class="views " title="106 views">
+    106 views
 </div>
     </div>
     <div class="summary">
@@ -288,7 +394,7 @@ This suggests that in an APT-like ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-25 09:31:40Z" class="relativetime">Jun 25 at 9:31</span>
+        asked <span title="2013-06-25 09:31:40Z" class="relativetime">Jun 25 '13 at 9:31</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5599/max"><div><img src="https://www.gravatar.com/avatar/4a57f523157ebdf6e5a9662d2e8754b9?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -314,8 +420,8 @@ This suggests that in an APT-like ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="94 views">
-    94 views
+        <div class="views " title="95 views">
+    95 views
 </div>
     </div>
     <div class="summary">
@@ -325,8 +431,8 @@ This suggests that in an APT-like ...
 
 I am struggling to 'normalize' the prices of the assets properly.  On page 6 of the ...
         </div>          
-        <div class="tags t-asset-pricing t-dynamic t-asset t-exchange t-sp">
-            <a href="/questions/tagged/asset-pricing" class="post-tag" title="show questions tagged &#39;asset-pricing&#39;" rel="tag">asset-pricing</a> <a href="/questions/tagged/dynamic" class="post-tag" title="show questions tagged &#39;dynamic&#39;" rel="tag">dynamic</a> <a href="/questions/tagged/asset" class="post-tag" title="show questions tagged &#39;asset&#39;" rel="tag">asset</a> <a href="/questions/tagged/exchange" class="post-tag" title="show questions tagged &#39;exchange&#39;" rel="tag">exchange</a> <a href="/questions/tagged/sp" class="post-tag" title="show questions tagged &#39;sp&#39;" rel="tag">sp</a> 
+        <div class="tags t-asset-pricing t-dynamic t-asset t-exchange">
+            <a href="/questions/tagged/asset-pricing" class="post-tag" title="show questions tagged &#39;asset-pricing&#39;" rel="tag">asset-pricing</a> <a href="/questions/tagged/dynamic" class="post-tag" title="show questions tagged &#39;dynamic&#39;" rel="tag">dynamic</a> <a href="/questions/tagged/asset" class="post-tag" title="show questions tagged &#39;asset&#39;" rel="tag">asset</a> <a href="/questions/tagged/exchange" class="post-tag" title="show questions tagged &#39;exchange&#39;" rel="tag">exchange</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -334,7 +440,7 @@ I am struggling to 'normalize' the prices of the assets properly.  On page 6 of 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-21 20:55:37Z" class="relativetime">Jun 21 at 20:55</span>
+        asked <span title="2013-06-21 20:55:37Z" class="relativetime">Jun 21 '13 at 20:55</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5577/user2188190"><div><img src="https://www.gravatar.com/avatar/59324d2b5ec1c013492c96412fc2ee89?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -360,8 +466,8 @@ I am struggling to 'normalize' the prices of the assets properly.  On page 6 of 
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="170 views">
-    170 views
+        <div class="views " title="171 views">
+    171 views
 </div>
     </div>
     <div class="summary">
@@ -405,7 +511,7 @@ Suppose we have a stock with the following monthly return ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views warm" title="1,713 views">
+        <div class="views warm" title="1,761 views">
     2k views
 </div>
     </div>
@@ -449,7 +555,7 @@ Suppose we have a stock with the following monthly return ...
                 <strong>6</strong>answers
             </div>
         </div>
-        <div class="views warm" title="1,043 views">
+        <div class="views warm" title="1,078 views">
     1k views
 </div>
     </div>
@@ -476,7 +582,7 @@ If I choose, say, oil, I want as many time series which ...
     </div>
     <div class="user-details">
         <a href="/users/909/suminda-sirinath-salpitikorala">Suminda Sirinath Salpitikorala</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">382</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">385</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
     </div>
 </div>
         </div>  
@@ -495,8 +601,8 @@ If I choose, say, oil, I want as many time series which ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="310 views">
-    310 views
+        <div class="views " title="329 views">
+    329 views
 </div>
     </div>
     <div class="summary">
@@ -539,8 +645,8 @@ If I choose, say, oil, I want as many time series which ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="450 views">
-    450 views
+        <div class="views " title="453 views">
+    453 views
 </div>
     </div>
     <div class="summary">
@@ -586,66 +692,286 @@ If I choose, say, oil, I want as many time series which ...
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=asset-pricing&amp;sort=newest" title="the 30 newest asset-pricing questions"><span class="feed-icon"></span>newest asset-pricing questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=asset-pricing&sort=newest" title="the 30 newest asset-pricing questions"><span class="feed-icon"></span>newest asset-pricing questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">9</div>
+            <div class="summarycount al">10</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/asset-pricing" class="post-tag" title="show questions tagged &#39;asset-pricing&#39;" rel="tag">asset-pricing</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/asset-pricing/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/asset-pricing+models" class="post-tag" title="show questions tagged &#39;asset-pricing models&#39;" rel="tag">models</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/asset-pricing+equities" class="post-tag" title="show questions tagged &#39;asset-pricing equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/asset-pricing+time-series" class="post-tag" title="show questions tagged &#39;asset-pricing time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/asset-pricing+high-frequency" class="post-tag" title="show questions tagged &#39;asset-pricing high-frequency&#39;" rel="tag">high-frequency</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+valuation" class="post-tag" title="show questions tagged &#39;asset-pricing valuation&#39;" rel="tag">valuation</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+options" class="post-tag" title="show questions tagged &#39;asset-pricing options&#39;" rel="tag">options</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+random-variables" class="post-tag" title="show questions tagged &#39;asset-pricing random-variables&#39;" rel="tag">random-variables</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+simulations" class="post-tag" title="show questions tagged &#39;asset-pricing simulations&#39;" rel="tag">simulations</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+correlation" class="post-tag" title="show questions tagged &#39;asset-pricing correlation&#39;" rel="tag">correlation</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+continuous-time" class="post-tag" title="show questions tagged &#39;asset-pricing continuous-time&#39;" rel="tag">continuous-time</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+modeling" class="post-tag" title="show questions tagged &#39;asset-pricing modeling&#39;" rel="tag">modeling</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+diversification" class="post-tag" title="show questions tagged &#39;asset-pricing diversification&#39;" rel="tag">diversification</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+volume" class="post-tag" title="show questions tagged &#39;asset-pricing volume&#39;" rel="tag">volume</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+expected-return" class="post-tag" title="show questions tagged &#39;asset-pricing expected-return&#39;" rel="tag">expected-return</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+sp" class="post-tag" title="show questions tagged &#39;asset-pricing sp&#39;" rel="tag">sp</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+exchange" class="post-tag" title="show questions tagged &#39;asset-pricing exchange&#39;" rel="tag">exchange</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+asset" class="post-tag" title="show questions tagged &#39;asset-pricing asset&#39;" rel="tag">asset</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+dynamic" class="post-tag" title="show questions tagged &#39;asset-pricing dynamic&#39;" rel="tag">dynamic</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+risk-premium" class="post-tag" title="show questions tagged &#39;asset-pricing risk-premium&#39;" rel="tag">risk-premium</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+fixed-income" class="post-tag" title="show questions tagged &#39;asset-pricing fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+risk-neutral-measure" class="post-tag" title="show questions tagged &#39;asset-pricing risk-neutral-measure&#39;" rel="tag">risk-neutral-measure</a>&nbsp;<br>
-            <a href="/questions/tagged/asset-pricing+forecasting" class="post-tag" title="show questions tagged &#39;asset-pricing forecasting&#39;" rel="tag">forecasting</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/asset-pricing+equities" class="post-tag" title="show questions tagged &#39;asset-pricing equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/asset-pricing+expected-return" class="post-tag" title="show questions tagged &#39;asset-pricing expected-return&#39;" rel="tag">expected-return</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/asset-pricing+models" class="post-tag" title="show questions tagged &#39;asset-pricing models&#39;" rel="tag">models</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/asset-pricing+time-series" class="post-tag" title="show questions tagged &#39;asset-pricing time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/asset-pricing+valuation" class="post-tag" title="show questions tagged &#39;asset-pricing valuation&#39;" rel="tag">valuation</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/asset-pricing+options" class="post-tag" title="show questions tagged &#39;asset-pricing options&#39;" rel="tag">options</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/asset-pricing+random-variables" class="post-tag" title="show questions tagged &#39;asset-pricing random-variables&#39;" rel="tag">random-variables</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/asset-pricing+simulations" class="post-tag" title="show questions tagged &#39;asset-pricing simulations&#39;" rel="tag">simulations</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/asset-pricing+correlation" class="post-tag" title="show questions tagged &#39;asset-pricing correlation&#39;" rel="tag">correlation</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/asset-pricing+continuous-time" class="post-tag" title="show questions tagged &#39;asset-pricing continuous-time&#39;" rel="tag">continuous-time</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+modeling" class="post-tag" title="show questions tagged &#39;asset-pricing modeling&#39;" rel="tag">modeling</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+risk-neutral-measure" class="post-tag" title="show questions tagged &#39;asset-pricing risk-neutral-measure&#39;" rel="tag">risk-neutral-measure</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+diversification" class="post-tag" title="show questions tagged &#39;asset-pricing diversification&#39;" rel="tag">diversification</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+dynamic" class="post-tag" title="show questions tagged &#39;asset-pricing dynamic&#39;" rel="tag">dynamic</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+exchange" class="post-tag" title="show questions tagged &#39;asset-pricing exchange&#39;" rel="tag">exchange</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+asset" class="post-tag" title="show questions tagged &#39;asset-pricing asset&#39;" rel="tag">asset</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+risk-premium" class="post-tag" title="show questions tagged &#39;asset-pricing risk-premium&#39;" rel="tag">risk-premium</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+fixed-income" class="post-tag" title="show questions tagged &#39;asset-pricing fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+high-frequency" class="post-tag" title="show questions tagged &#39;asset-pricing high-frequency&#39;" rel="tag">high-frequency</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+capm" class="post-tag" title="show questions tagged &#39;asset-pricing capm&#39;" rel="tag">capm</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+returns" class="post-tag" title="show questions tagged &#39;asset-pricing returns&#39;" rel="tag">returns</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+volume" class="post-tag" title="show questions tagged &#39;asset-pricing volume&#39;" rel="tag">volume</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/asset-pricing+forecasting" class="post-tag" title="show questions tagged &#39;asset-pricing forecasting&#39;" rel="tag">forecasting</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/38515/making-these-conditions-shorter" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Making these conditions shorter
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223027/at-what-point-is-version-control-needed" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    At what point is version control needed?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17342/verify-brainfuck-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Verify Brainfuck program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/625223/do-we-know-if-there-exist-true-mathematical-statements-that-can-not-be-proven" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Do we know if there exist true mathematical statements that can not be proven?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/48022/what-kinds-of-encryption-are-not-breakable-via-quantum-computers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:162 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What kinds of encryption are _not_ breakable via Quantum Computers?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47342/what-are-harry-potters-children" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What are Harry Potter&#39;s Children?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-crypto" title="Cryptography Stack Exchange"></div><a href="http://crypto.stackexchange.com/questions/12710/where-does-this-part-of-rsa-come-from" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:281 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Where does this part of RSA come from?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/17793/telling-my-manager-that-he-made-a-huge-budgeting-mistake" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Telling my manager that he made a huge budgeting mistake
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/152264/to-write-this-norm-equation-better" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    To write this norm equation better?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/16226/i-need-a-program-where-the-user-inputs-an-array-of-doubles-and-the-program-outpu" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I need a program where the user inputs an array of doubles and the program outputs the array sorted
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/107739/how-to-trigger-a-system-self-destruct-with-a-certain-password-is-entered" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to trigger a system self destruct with a certain password is entered
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/565/proper-procedure-for-leaving-class-d-airspace" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Proper procedure for leaving class D airspace?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15326/how-to-deal-with-particles-in-a-last-name-in-a-reference-list" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to deal with particles in a last name in a reference list
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/16370/what-was-sherlock-about-to-remark" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:367 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What was Sherlock about to remark?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31206/rpg-for-a-very-poor-reader" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    RPG for a very poor reader
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17287/a-function-that-returns-most-occuring-element-in-a-list" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A function that returns most occuring element in a list
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-blender" title="Blender Stack Exchange"></div><a href="http://blender.stackexchange.com/questions/5972/how-to-save-print-quality-screenshots-of-a-matcaped-model" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:502 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to save print-quality screenshots of a matcaped model?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/95342/5v-and-3-3v-power-supply" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:135 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    5V and 3.3V power supply
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/149121/will-wolves-eat-ocelots-in-minecraft" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Will wolves eat ocelots in minecraft?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/152196/what-is-the-advantage-of-using-the-notation-fig-in-the-label" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the advantage of using the notation &#39;fig:&#39; in the \label {}?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/15285/is-the-sentence-im-not-doing-that-because-i-hate-you-ambiguous" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:481 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the sentence “I&#39;m not doing that because I hate you&quot; ambiguous?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/153302/teaching-homology-via-everyday-examples" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Teaching homology via everyday examples
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/143782/idiom-or-word-for-a-very-crowded-place" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Idiom or word for a very crowded place
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions');
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -665,7 +991,7 @@ If I choose, say, oil, I want as many time series which ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/asset-pricing")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -785,14 +1111,14 @@ If I choose, say, oil, I want as many time series which ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.3.1275
             </div>
             
         </div>
@@ -828,6 +1154,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>
