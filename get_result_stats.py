@@ -1,6 +1,7 @@
 import math
 import json
 import numpy as np
+from cluster import *
 
 bins = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 print(bins)
@@ -47,6 +48,107 @@ def renameSkillList(skill_list):
         list_of_skills = map(lambda x: camelCase(x.strip()), list_of_skills)
 
         return list(set(list_of_skills))
+
+
+def transpose_dict_of_dicts(d):
+  n = {}
+  for i in d:
+    for j in d[i]:
+      if not (j in n):
+        n[j] = {}
+      n[j][i] = d[i][j]
+
+  return n
+
+def identifyWeakNodes(filename, threshold_func):
+	d = getData(filename)
+ 	keys = d.keys()
+	outbound_pain = []
+	for key in keys:
+		if not threshold_func(d[key].values()):
+			outbound_pain.append(key)
+
+	n = transpose_dict_of_dicts(d)
+	keys = n.keys()
+	inbound_pain = []
+	for key in keys:
+		if not threshold_func(n[key].values()):
+			inbound_pain.append(key)
+
+	return {'o': outbound_pain, 'i': inbound_pain }
+
+def identify_clusters(filename):
+
+	d = getData(filename)
+	keys = d.keys()
+	
+	print "Hierarchical Clustering on " + filename
+	cl = HierarchicalClustering(keys, lambda x,y: 0-math.log(max(d[x][y],d[y][x],0.0001)))
+	for c in cl.getlevel(1):
+		print c
+
+	return cl.getlevel(1)
+
+	#nparray = []
+	#for key1 in keys:
+	#	nparray2 = []
+	#	for key2 in keys:
+	#		nparray2.append(max(d[key1][key2], d[key2][key1]))
+	#	nparray.append(nparray2)
+	
+	#A = np.array(nparray)
+
+	#G = nx.from_numpy_matrix(A, create_using=nx.DiGraph())
+	#for subg in nx.strongly_connected_component_subgraphs(G):
+	#    print map(lambda x: keys[x], subg.nodes())
+
+	#return map(lambda subg: map(lambda x: keys[x], subg.nodes()), nx.strongly_connected_component_subgraphs(G))
+
+def identify_big_numbers(filename, threshold):
+
+	d = getData(filename)
+	keys = d.keys()
+	
+	output = []
+	print "Big Numbers on " + filename
+	for key1 in keys:
+		for key2 in keys:
+			if (d[key1][key2] > threshold) and (not (key1 == key2)):
+				print key1 + " " + key2 + " " + str(d[key1][key2])
+				output.append((key1, key2))
+	return output
+
+def identify_possible_clusters(filename, threshold):
+
+        d = getData(filename)
+        keys = d.keys()
+
+        print "Possible Clusters on " + filename
+	list_of_clusters = []
+	for key in keys:
+		list_of_clusters.append([key])
+
+	try:
+	        for key1 in keys:
+	                for key2 in keys:
+        	                if (d[key1][key2] > threshold) and (not (key1 == key2)):
+					cluster1 = filter(lambda x: key1 in x, list_of_clusters)[0]
+					cluster2 = filter(lambda x: key2 in x, list_of_clusters)[0]
+
+					if cluster1 != cluster2:
+						list_of_clusters.remove(cluster1)
+						list_of_clusters.remove(cluster2)
+						list_of_clusters.append(cluster1+cluster2)
+						
+	except Exception as e:
+		print e
+		pass
+	
+	for cluster in list_of_clusters:
+		if (len(cluster))>1:
+			print cluster
+
+        return list_of_clusters
 
 print "----"
 execfile("skill_list.py")
@@ -100,6 +202,41 @@ print len(s2)
 print "----"
 
 	
+print "----"
+def tf(l):
+	high_values = len(filter(lambda x: x>0.4, l))
+	if high_values < 3:
+		return False
+	if high_values > len(l)/3:
+		return False
+
+	return True
+	
+weaknodes = identifyWeakNodes('renamedcomplete.txt', tf)
+print weaknodes
+print "----"
+
+print "----"
+#identify_clusters('renamedcomplete.txt')
+print "----"
+
+print "----"
+identify_big_numbers('renamedcomplete.txt', 0.7)
+print "----"
+
+print "----"
+identify_possible_clusters('renamedcomplete.txt', 0.6)
+print "----"
+
+print "----"
+identify_possible_clusters('renamedcomplete.txt', 0.8)
+print "----"
+
+print "----"
+identify_possible_clusters('renamedcomplete.txt', 0.9)
+print "----"
+
+
 print "xxx"
 	
 
