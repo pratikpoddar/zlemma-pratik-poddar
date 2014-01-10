@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged probability" href="/feeds/tag/probability" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187347,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350441,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fprobability" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fprobability" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[probability]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fprobability">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fprobability">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[probability]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/probability/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/probability?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/probability?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/probability?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/probability?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/probability?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/probability?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/probability?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/probability?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/probability?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/probability?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,33 +221,33 @@ The <a href="/questions/tagged/probability" class="post-tag" title="show questio
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9597">
+<div class="question-summary" id="question-summary-9733">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>-3</strong></span>
+                    <span class="vote-count-post "><strong>2</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
+            <div class="status answered">
+                <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="41 views">
-    41 views
+        <div class="views " title="125 views">
+    125 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/9597/how-to-show-that-under-risk-neutral-probability-measure-q-the-probability-of-str" class="question-hyperlink">How to show that under risk-neutral probability measure Q the probability of strike price being smaller than share price at maturity is N(d2)? [on hold]</a></h3>
+        <h3><a href="/questions/9733/random-brownian-simulation-startling-results" class="question-hyperlink">Random Brownian Simulation Startling Results</a></h3>
         <div class="excerpt">
-            
+            I was playing around in Excel the other day, simulating possible equity curve/P&amp;L paths for a simple game I designed. The game is really trying to find an optimal risk managment strategy.
 
-I would like to know how to show that under risk-neutral probability measure Q, given the share price, the probability of strike price being smaller than share price at maturity is equal to N(d2) ...
+I start ...
         </div>          
-        <div class="tags t-probability t-risk-neutral-measure t-binary-options t-strike">
-            <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> <a href="/questions/tagged/risk-neutral-measure" class="post-tag" title="show questions tagged &#39;risk-neutral-measure&#39;" rel="tag">risk-neutral-measure</a> <a href="/questions/tagged/binary-options" class="post-tag" title="show questions tagged &#39;binary-options&#39;" rel="tag">binary-options</a> <a href="/questions/tagged/strike" class="post-tag" title="show questions tagged &#39;strike&#39;" rel="tag">strike</a> 
+        <div class="tags t-probability t-simulations">
+            <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> <a href="/questions/tagged/simulations" class="post-tag" title="show questions tagged &#39;simulations&#39;" rel="tag">simulations</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -193,14 +255,111 @@ I would like to know how to show that under risk-neutral probability measure Q, 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-30 13:21:24Z" class="relativetime">Nov 30 at 13:21</span>
+        asked <span title="2013-12-15 20:58:17Z" class="relativetime">Dec 15 '13 at 20:58</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/6636/s-parker"><div><img src="https://www.gravatar.com/avatar/e401bb66fdaba15dbbfddb569997f40c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/4729/jessica"><div><img src="https://www.gravatar.com/avatar/7426aa2b2a119593ceb346114bad7049?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/6636/s-parker">S Parker</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        <a href="/users/4729/jessica">jessica</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">423</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9679">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="72 views">
+    72 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9679/default-probability" class="question-hyperlink">default probability</a></h3>
+        <div class="excerpt">
+            Suppose the hazard rate is $\lambda$
+the default probability density function follow exponential 
+
+$f(t) = \lambda e^{-\lambda t}$
+
+and cumulative probability function is
+
+$F(t) = 1 - e^{-\lambda t}$
+
+...
+        </div>          
+        <div class="tags t-probability t-default">
+            <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> <a href="/questions/tagged/default" class="post-tag" title="show questions tagged &#39;default&#39;" rel="tag">default</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-10 05:37:34Z" class="relativetime">Dec 10 '13 at 5:37</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6354/jay"><div><img src="https://www.gravatar.com/avatar/cff0f4d43d399e92773fafcb1bf0922b?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6354/jay">Jay</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9661">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="70 views">
+    70 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9661/fitting-student-t-distributions-to-log-returns" class="question-hyperlink">Fitting Student t-distributions to log-returns</a></h3>
+        <div class="excerpt">
+            It seems that some tail-risk centric groups are bent on using Paretian and t-distributions to account for tail risk when fitting log-returns.  It has been observed, however, that with and without ...
+        </div>          
+        <div class="tags t-probability t-garch t-distribution t-log-returns t-arma">
+            <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> <a href="/questions/tagged/garch" class="post-tag" title="show questions tagged &#39;garch&#39;" rel="tag">garch</a> <a href="/questions/tagged/distribution" class="post-tag" title="show questions tagged &#39;distribution&#39;" rel="tag">distribution</a> <a href="/questions/tagged/log-returns" class="post-tag" title="show questions tagged &#39;log-returns&#39;" rel="tag">log-returns</a> <a href="/questions/tagged/arma" class="post-tag" title="show questions tagged &#39;arma&#39;" rel="tag">arma</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-08 19:15:45Z" class="relativetime">Dec 8 '13 at 19:15</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6430/lep"><div><img src="https://www.gravatar.com/avatar/243c54e74d4b6699c1cc7450b9d54dae?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6430/lep">LEP</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">126</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -219,8 +378,8 @@ I would like to know how to show that under risk-neutral probability measure Q, 
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="106 views">
-    106 views
+        <div class="views " title="120 views">
+    120 views
 </div>
     </div>
     <div class="summary">
@@ -239,7 +398,7 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-25 08:27:20Z" class="relativetime">Nov 25 at 8:27</span>
+        asked <span title="2013-11-25 08:27:20Z" class="relativetime">Nov 25 '13 at 8:27</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6596/user6596"><div><img src="https://www.gravatar.com/avatar/eb041c8bd6ec55e4036d7954afb86fe2?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -265,8 +424,8 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="129 views">
-    129 views
+        <div class="views " title="167 views">
+    167 views
 </div>
     </div>
     <div class="summary">
@@ -285,7 +444,7 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-18 22:36:37Z" class="relativetime">Nov 18 at 22:36</span>
+        asked <span title="2013-11-18 22:36:37Z" class="relativetime">Nov 18 '13 at 22:36</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6547/daedalusbloom"><div><img src="https://www.gravatar.com/avatar/aaa0653947e614ed46be90cf9963895a?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -311,8 +470,8 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="141 views">
-    141 views
+        <div class="views " title="157 views">
+    157 views
 </div>
     </div>
     <div class="summary">
@@ -329,7 +488,7 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-12 18:53:06Z" class="relativetime">Oct 12 at 18:53</span>
+        asked <span title="2013-10-12 18:53:06Z" class="relativetime">Oct 12 '13 at 18:53</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6276/alkibiades"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/100006820780207/picture?type=large" alt=""></div></a>
@@ -355,8 +514,8 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="90 views">
-    90 views
+        <div class="views " title="100 views">
+    100 views
 </div>
     </div>
     <div class="summary">
@@ -374,7 +533,7 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-10 06:24:24Z" class="relativetime">Oct 10 at 6:24</span>
+        asked <span title="2013-10-10 06:24:24Z" class="relativetime">Oct 10 '13 at 6:24</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6247/julian-lopez-baasch"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/723311839/picture?type=large" alt=""></div></a>
@@ -400,8 +559,8 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="254 views">
-    254 views
+        <div class="views " title="301 views">
+    301 views
 </div>
     </div>
     <div class="summary">
@@ -418,7 +577,7 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-31 14:20:05Z" class="relativetime">Aug 31 at 14:20</span>
+        asked <span title="2013-08-31 14:20:05Z" class="relativetime">Aug 31 '13 at 14:20</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6027/feras"><div><img src="https://www.gravatar.com/avatar/a90642da56ff524692c54a16449a3c2e?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -462,7 +621,7 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-24 13:02:40Z" class="relativetime">Aug 24 at 13:02</span>
+        asked <span title="2013-08-24 13:02:40Z" class="relativetime">Aug 24 '13 at 13:02</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5989/steven"><div><img src="https://www.gravatar.com/avatar/e080ef8ab8aaa0fc1dad57c20d0b8950?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -488,8 +647,8 @@ The question is: Bavarian Sausage stock has an average historical return of 16.3
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="89 views">
-    89 views
+        <div class="views " title="91 views">
+    91 views
 </div>
     </div>
     <div class="summary">
@@ -510,14 +669,14 @@ I was asking myself ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-13 14:37:15Z" class="relativetime">Jul 13 at 14:37</span>
+        asked <span title="2013-07-13 14:37:15Z" class="relativetime">Jul 13 '13 at 14:37</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5708/nick"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/gRc2w.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5708/nick">Nick</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">110</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">111</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -528,16 +687,16 @@ I was asking myself ...
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
                 </div>
             </div>
             <div class="status answered">
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="154 views">
-    154 views
+        <div class="views " title="223 views">
+    223 views
 </div>
     </div>
     <div class="summary">
@@ -552,8 +711,8 @@ Specifically:
 
   When the ...
         </div>          
-        <div class="tags t-time-series t-quant-trading-strategies t-correlation t-automated-trading t-probability">
-            <a href="/questions/tagged/time-series" class="post-tag" title="show questions tagged &#39;time-series&#39;" rel="tag">time-series</a> <a href="/questions/tagged/quant-trading-strategies" class="post-tag" title="show questions tagged &#39;quant-trading-strategies&#39;" rel="tag">quant-trading-strategies</a> <a href="/questions/tagged/correlation" class="post-tag" title="show questions tagged &#39;correlation&#39;" rel="tag">correlation</a> <a href="/questions/tagged/automated-trading" class="post-tag" title="show questions tagged &#39;automated-trading&#39;" rel="tag">automated-trading</a> <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> 
+        <div class="tags t-time-series t-correlation t-probability">
+            <a href="/questions/tagged/time-series" class="post-tag" title="show questions tagged &#39;time-series&#39;" rel="tag">time-series</a> <a href="/questions/tagged/correlation" class="post-tag" title="show questions tagged &#39;correlation&#39;" rel="tag">correlation</a> <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -561,14 +720,14 @@ Specifically:
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-13 12:12:56Z" class="relativetime">Jul 13 at 12:12</span>
+        asked <span title="2013-07-13 12:12:56Z" class="relativetime">Jul 13 '13 at 12:12</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5168/user997112"><div><img src="https://www.gravatar.com/avatar/7c52a3944cdd2eac9725e54fc548f368?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5168/user997112">user997112</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">154</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">164</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -587,8 +746,8 @@ Specifically:
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="629 views">
-    629 views
+        <div class="views " title="789 views">
+    789 views
 </div>
     </div>
     <div class="summary">
@@ -607,14 +766,14 @@ However, the behavior of ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-20 11:29:50Z" class="relativetime">Jun 20 at 11:29</span>
+        asked <span title="2013-06-20 11:29:50Z" class="relativetime">Jun 20 '13 at 11:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5208/sets"><div><img src="https://www.gravatar.com/avatar/143dbd5de52f06b6e9d319227ac62076?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5208/sets">sets</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">148</span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">153</span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
     </div>
 </div>
         </div>  
@@ -633,8 +792,8 @@ However, the behavior of ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="59 views">
-    59 views
+        <div class="views " title="61 views">
+    61 views
 </div>
     </div>
     <div class="summary">
@@ -654,7 +813,7 @@ Y_c = \sqrt{\rho_c} Z ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-06 13:17:07Z" class="relativetime">Jun 6 at 13:17</span>
+        asked <span title="2013-06-06 13:17:07Z" class="relativetime">Jun 6 '13 at 13:17</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2466/karusmeister"><div><img src="https://www.gravatar.com/avatar/9e01ad457b1bb5065a0927f239c9886d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -680,8 +839,8 @@ Y_c = \sqrt{\rho_c} Z ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="105 views">
-    105 views
+        <div class="views " title="108 views">
+    108 views
 </div>
     </div>
     <div class="summary">
@@ -699,7 +858,7 @@ Suppose $U_t$ is a random variables subject to Lognormal($x_1$, $z_1^2$)distribu
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-11 15:29:03Z" class="relativetime">May 11 at 15:29</span>
+        asked <span title="2013-05-11 15:29:03Z" class="relativetime">May 11 '13 at 15:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5354/yita17"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/3mLlK.jpg?s=32&g=1" alt=""></div></a>
@@ -725,7 +884,7 @@ Suppose $U_t$ is a random variables subject to Lognormal($x_1$, $z_1^2$)distribu
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views warm" title="1,185 views">
+        <div class="views warm" title="1,412 views">
     1k views
 </div>
     </div>
@@ -743,103 +902,14 @@ Suppose $U_t$ is a random variables subject to Lognormal($x_1$, $z_1^2$)distribu
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-04-12 12:50:03Z" class="relativetime">Apr 12 at 12:50</span>
+        asked <span title="2013-04-12 12:50:03Z" class="relativetime">Apr 12 '13 at 12:50</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/4709/good-guy-mike"><div><img src="https://www.gravatar.com/avatar/4c28dfa168089016634178756b14c67d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/4709/good-guy-mike"><div><img src="https://www.gravatar.com/avatar/895b2301eefc464dd77b38aa7912aa16?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/4709/good-guy-mike">Good Guy Mike</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">104</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-7505">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>5</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="294 views">
-    294 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/7505/calculate-the-expectation-of-a-shift-cdf" class="question-hyperlink">Calculate the expectation of a shift CDF</a></h3>
-        <div class="excerpt">
-            Suppose $X$ is a normal random variable with mean 0, and variance $\sigma^2$.  $F(x)$ is the CDF(cumulative distribution function) of a standard normal random variable(mean 0 and variable 1), how to ...
-        </div>          
-        <div class="tags t-probability">
-            <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-03-12 09:10:24Z" class="relativetime">Mar 12 at 9:10</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/4601/nkhuyu"><div><img src="https://www.gravatar.com/avatar/a46f1439f1c49a14b000bcdb9180aae8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/4601/nkhuyu">nkhuyu</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">240</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-7243">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="214 views">
-    214 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/7243/what-are-d-1-and-d-2-for-laplace" class="question-hyperlink">What are $d_1$ and $d_2$ for Laplace?</a></h3>
-        <div class="excerpt">
-            What are the formulae for <span class='tex2jax_ignore'>d1</span> &amp; <span class='tex2jax_ignore'>d2</span> using a Laplace distribution?
-
-        </div>          
-        <div class="tags t-black-scholes t-probability t-stochastic-processes t-distribution">
-            <a href="/questions/tagged/black-scholes" class="post-tag" title="show questions tagged &#39;black-scholes&#39;" rel="tag">black-scholes</a> <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> <a href="/questions/tagged/stochastic-processes" class="post-tag" title="show questions tagged &#39;stochastic-processes&#39;" rel="tag">stochastic-processes</a> <a href="/questions/tagged/distribution" class="post-tag" title="show questions tagged &#39;distribution&#39;" rel="tag">distribution</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-02-07 18:04:59Z" class="relativetime">Feb 7 at 18:04</span>
-    </div>
-    <div class="user-gravatar32">
-        <span class="anonymous-gravatar"></span>
-    </div>
-    <div class="user-details">
-        user3232<br>
-        
+        <span class="reputation-score" title="reputation score " dir="ltr">139</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
@@ -862,77 +932,305 @@ Suppose $U_t$ is a random variables subject to Lognormal($x_1$, $z_1^2$)distribu
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/probability?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/probability?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/probability?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/probability?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/probability?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/probability?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=probability&amp;sort=newest" title="the 30 newest probability questions"><span class="feed-icon"></span>newest probability questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=probability&sort=newest" title="the 30 newest probability questions"><span class="feed-icon"></span>newest probability questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">47</div>
+            <div class="summarycount al">49</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/probability/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/probability+options" class="post-tag" title="show questions tagged &#39;probability options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/probability+modeling" class="post-tag" title="show questions tagged &#39;probability modeling&#39;" rel="tag">modeling</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/probability+statistics" class="post-tag" title="show questions tagged &#39;probability statistics&#39;" rel="tag">statistics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/probability+risk" class="post-tag" title="show questions tagged &#39;probability risk&#39;" rel="tag">risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/probability+option-pricing" class="post-tag" title="show questions tagged &#39;probability option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/probability+correlation" class="post-tag" title="show questions tagged &#39;probability correlation&#39;" rel="tag">correlation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/probability+forecasting" class="post-tag" title="show questions tagged &#39;probability forecasting&#39;" rel="tag">forecasting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/probability+black-scholes" class="post-tag" title="show questions tagged &#39;probability black-scholes&#39;" rel="tag">black-scholes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/probability+estimation" class="post-tag" title="show questions tagged &#39;probability estimation&#39;" rel="tag">estimation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/probability+random-walk" class="post-tag" title="show questions tagged &#39;probability random-walk&#39;" rel="tag">random-walk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+mathematics" class="post-tag" title="show questions tagged &#39;probability mathematics&#39;" rel="tag">mathematics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+joint-probability" class="post-tag" title="show questions tagged &#39;probability joint-probability&#39;" rel="tag">joint-probability</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+distribution" class="post-tag" title="show questions tagged &#39;probability distribution&#39;" rel="tag">distribution</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+fixed-income" class="post-tag" title="show questions tagged &#39;probability fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+equities" class="post-tag" title="show questions tagged &#39;probability equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+binomial-tree" class="post-tag" title="show questions tagged &#39;probability binomial-tree&#39;" rel="tag">binomial-tree</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+expected-return" class="post-tag" title="show questions tagged &#39;probability expected-return&#39;" rel="tag">expected-return</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+monte-carlo" class="post-tag" title="show questions tagged &#39;probability monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+stochastic-processes" class="post-tag" title="show questions tagged &#39;probability stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+risk-neutral-measure" class="post-tag" title="show questions tagged &#39;probability risk-neutral-measure&#39;" rel="tag">risk-neutral-measure</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+finance" class="post-tag" title="show questions tagged &#39;probability finance&#39;" rel="tag">finance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+automated-trading" class="post-tag" title="show questions tagged &#39;probability automated-trading&#39;" rel="tag">automated-trading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+research" class="post-tag" title="show questions tagged &#39;probability research&#39;" rel="tag">research</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/probability+copula" class="post-tag" title="show questions tagged &#39;probability copula&#39;" rel="tag">copula</a>&nbsp;<br>
-            <a href="/questions/tagged/probability+portfolio" class="post-tag" title="show questions tagged &#39;probability portfolio&#39;" rel="tag">portfolio</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/probability+options" class="post-tag" title="show questions tagged &#39;probability options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/probability+modeling" class="post-tag" title="show questions tagged &#39;probability modeling&#39;" rel="tag">modeling</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/probability+risk" class="post-tag" title="show questions tagged &#39;probability risk&#39;" rel="tag">risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/probability+statistics" class="post-tag" title="show questions tagged &#39;probability statistics&#39;" rel="tag">statistics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/probability+option-pricing" class="post-tag" title="show questions tagged &#39;probability option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/probability+estimation" class="post-tag" title="show questions tagged &#39;probability estimation&#39;" rel="tag">estimation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/probability+forecasting" class="post-tag" title="show questions tagged &#39;probability forecasting&#39;" rel="tag">forecasting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/probability+black-scholes" class="post-tag" title="show questions tagged &#39;probability black-scholes&#39;" rel="tag">black-scholes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/probability+correlation" class="post-tag" title="show questions tagged &#39;probability correlation&#39;" rel="tag">correlation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/probability+distribution" class="post-tag" title="show questions tagged &#39;probability distribution&#39;" rel="tag">distribution</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+finance" class="post-tag" title="show questions tagged &#39;probability finance&#39;" rel="tag">finance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+default" class="post-tag" title="show questions tagged &#39;probability default&#39;" rel="tag">default</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+research" class="post-tag" title="show questions tagged &#39;probability research&#39;" rel="tag">research</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+mathematics" class="post-tag" title="show questions tagged &#39;probability mathematics&#39;" rel="tag">mathematics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+binomial-tree" class="post-tag" title="show questions tagged &#39;probability binomial-tree&#39;" rel="tag">binomial-tree</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+random-walk" class="post-tag" title="show questions tagged &#39;probability random-walk&#39;" rel="tag">random-walk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+monte-carlo" class="post-tag" title="show questions tagged &#39;probability monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+stochastic-processes" class="post-tag" title="show questions tagged &#39;probability stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+joint-probability" class="post-tag" title="show questions tagged &#39;probability joint-probability&#39;" rel="tag">joint-probability</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+equities" class="post-tag" title="show questions tagged &#39;probability equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+expected-return" class="post-tag" title="show questions tagged &#39;probability expected-return&#39;" rel="tag">expected-return</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+fixed-income" class="post-tag" title="show questions tagged &#39;probability fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+risk-management" class="post-tag" title="show questions tagged &#39;probability risk-management&#39;" rel="tag">risk-management</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+drawdown" class="post-tag" title="show questions tagged &#39;probability drawdown&#39;" rel="tag">drawdown</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/probability+portfolio" class="post-tag" title="show questions tagged &#39;probability portfolio&#39;" rel="tag">portfolio</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -952,7 +1250,7 @@ Suppose $U_t$ is a random variables subject to Lognormal($x_1$, $z_1^2$)distribu
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/probability")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1045,7 +1343,7 @@ Suppose $U_t$ is a random variables subject to Lognormal($x_1$, $z_1^2$)distribu
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1072,14 +1370,14 @@ Suppose $U_t$ is a random variables subject to Lognormal($x_1$, $z_1^2$)distribu
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1115,6 +1413,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

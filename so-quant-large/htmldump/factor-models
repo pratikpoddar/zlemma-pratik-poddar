@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged factor-models" href="/feeds/tag/factor-models" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187643,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350584,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffactor-models" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffactor-models" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[factor-models]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffactor-models">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffactor-models">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[factor-models]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/factor-models/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/factor-models?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/factor-models?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/factor-models?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/factor-models?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/factor-models?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/factor-models?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/factor-models?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/factor-models?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/factor-models?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/factor-models?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,7 +221,143 @@ The <a href="/questions/tagged/factor-models" class="post-tag" title="show quest
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9207">
+<div class="question-summary" id="question-summary-9859">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="98 views">
+    98 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9859/optimizing-principal-component-factor-weightings-over-time" class="question-hyperlink">Optimizing Principal Component factor weightings over time</a></h3>
+        <div class="excerpt">
+            I was given the returns of a cross-asset class portfolio of ETFs and I conducted PCA to obtain factors on dates from T-n, T-3, T-2,..., T. What I would like to do is decompose the market moves from ...
+        </div>          
+        <div class="tags t-time-series t-optimization t-factor-models t-etf t-pca">
+            <a href="/questions/tagged/time-series" class="post-tag" title="show questions tagged &#39;time-series&#39;" rel="tag">time-series</a> <a href="/questions/tagged/optimization" class="post-tag" title="show questions tagged &#39;optimization&#39;" rel="tag">optimization</a> <a href="/questions/tagged/factor-models" class="post-tag" title="show questions tagged &#39;factor-models&#39;" rel="tag">factor-models</a> <a href="/questions/tagged/etf" class="post-tag" title="show questions tagged &#39;etf&#39;" rel="tag">etf</a> <a href="/questions/tagged/pca" class="post-tag" title="show questions tagged &#39;pca&#39;" rel="tag">pca</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-04 17:30:13Z" class="relativetime">Jan 4 at 17:30</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6893/user6893"><div><img src="https://www.gravatar.com/avatar/50288382e63a17c6a0f0f08c22f689b2?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6893/user6893">user6893</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9697">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="128 views">
+    128 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9697/optimization-factor-model-versus-asset-by-asset-model" class="question-hyperlink">Optimization: Factor model versus asset-by-asset model</a></h3>
+        <div class="excerpt">
+            In portfolio management one often has to solve problems of the quadratic form
+$$
+w^T \Sigma w + w^T c \rightarrow Min
+$$
+with portfolio weights $w \in \mathbb{R}^N$ a constant $c \in \mathbb{R}^N$ and ...
+        </div>          
+        <div class="tags t-portfolio-management t-optimization t-factor-models t-covariance-matrix t-portfolio-optimization">
+            <a href="/questions/tagged/portfolio-management" class="post-tag" title="show questions tagged &#39;portfolio-management&#39;" rel="tag">portfolio-management</a> <a href="/questions/tagged/optimization" class="post-tag" title="show questions tagged &#39;optimization&#39;" rel="tag">optimization</a> <a href="/questions/tagged/factor-models" class="post-tag" title="show questions tagged &#39;factor-models&#39;" rel="tag">factor-models</a> <a href="/questions/tagged/covariance-matrix" class="post-tag" title="show questions tagged &#39;covariance-matrix&#39;" rel="tag">covariance-matrix</a> <a href="/questions/tagged/portfolio-optimization" class="post-tag" title="show questions tagged &#39;portfolio-optimization&#39;" rel="tag">portfolio-optimization</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2013-12-12 12:57:03Z" class="relativetime">Dec 12 '13 at 12:57</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/2587/richard"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/HUGYd.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/2587/richard">Richard</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">2,009</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9695">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="247 views">
+    247 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9695/what-is-quantitative-investing-and-how-does-it-differ-from-quantitative-trading" class="question-hyperlink">What is Quantitative Investing and how does it differ from Quantitative Trading?</a></h3>
+        <div class="excerpt">
+            I have worked in quantitative trading for a couple of years so I know what that space is about. I am curious to know what quantitative investing is all about. Based on what I have read and talked to ...
+        </div>          
+        <div class="tags t-factor-models t-investment">
+            <a href="/questions/tagged/factor-models" class="post-tag" title="show questions tagged &#39;factor-models&#39;" rel="tag">factor-models</a> <a href="/questions/tagged/investment" class="post-tag" title="show questions tagged &#39;investment&#39;" rel="tag">investment</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-12 04:57:12Z" class="relativetime">Dec 12 '13 at 4:57</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/1696/silencer"><div><img src="https://www.gravatar.com/avatar/428c164eee1e4ec1ba965a878dc52a95?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/1696/silencer">silencer</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">428</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9207">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -173,8 +371,8 @@ The <a href="/questions/tagged/factor-models" class="post-tag" title="show quest
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="234 views">
-    234 views
+        <div class="views " title="277 views">
+    277 views
 </div>
     </div>
     <div class="summary">
@@ -195,14 +393,14 @@ where $r$ is the return, $R_f$ is the risk-free rate, $K_m$ ...
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-10-20 11:32:45Z" class="relativetime">Oct 20 at 11:32</span>
+        asked <span title="2013-10-20 11:32:45Z" class="relativetime">Oct 20 '13 at 11:32</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/848/bob-jansen"><div><img src="https://www.gravatar.com/avatar/5ab2b261c42f24695ece33c28fd57cbd?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/848/bob-jansen">Bob Jansen</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,478</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,488</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
     </div>
 </div>
         </div>  
@@ -221,8 +419,8 @@ where $r$ is the return, $R_f$ is the risk-free rate, $K_m$ ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="72 views">
-    72 views
+        <div class="views " title="80 views">
+    80 views
 </div>
     </div>
     <div class="summary">
@@ -246,7 +444,7 @@ any insight here?
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-12 16:43:27Z" class="relativetime">Oct 12 at 16:43</span>
+        asked <span title="2013-10-12 16:43:27Z" class="relativetime">Oct 12 '13 at 16:43</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6272/ccfenix"><div><img src="https://www.gravatar.com/avatar/426f8e8859f3b6bf7b042ac76c93fe88?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -272,8 +470,8 @@ any insight here?
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="120 views">
-    120 views
+        <div class="views " title="146 views">
+    146 views
 </div>
     </div>
     <div class="summary">
@@ -290,7 +488,7 @@ any insight here?
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-18 17:11:52Z" class="relativetime">Sep 18 at 17:11</span>
+        asked <span title="2013-09-18 17:11:52Z" class="relativetime">Sep 18 '13 at 17:11</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5689/rhaskett"><div><img src="https://www.gravatar.com/avatar/5a532f7f1a6acec773e7433446044fb2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -316,8 +514,8 @@ any insight here?
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="190 views">
-    190 views
+        <div class="views " title="201 views">
+    201 views
 </div>
     </div>
     <div class="summary">
@@ -335,7 +533,7 @@ any insight here?
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-16 15:28:27Z" class="relativetime">Sep 16 at 15:28</span>
+        asked <span title="2013-09-16 15:28:27Z" class="relativetime">Sep 16 '13 at 15:28</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2011/neerav"><div><img src="https://www.gravatar.com/avatar/a331cf4baeb748315faa0a2f23a7db74?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -361,8 +559,8 @@ any insight here?
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="148 views">
-    148 views
+        <div class="views " title="160 views">
+    160 views
 </div>
     </div>
     <div class="summary">
@@ -383,7 +581,7 @@ where $r^i$ is a $(T\times 1)$ vector of the T observations of the dependent ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-12 17:01:46Z" class="relativetime">Sep 12 at 17:01</span>
+        asked <span title="2013-09-12 17:01:46Z" class="relativetime">Sep 12 '13 at 17:01</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5896/mariam"><div><img src="https://www.gravatar.com/avatar/ed865d38277e04390a2e207422480a2b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -409,8 +607,8 @@ where $r^i$ is a $(T\times 1)$ vector of the T observations of the dependent ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="294 views">
-    294 views
+        <div class="views " title="311 views">
+    311 views
 </div>
     </div>
     <div class="summary">
@@ -427,7 +625,7 @@ where $r^i$ is a $(T\times 1)$ vector of the T observations of the dependent ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-14 15:04:24Z" class="relativetime">Aug 14 at 15:04</span>
+        asked <span title="2013-08-14 15:04:24Z" class="relativetime">Aug 14 '13 at 15:04</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5896/mariam"><div><img src="https://www.gravatar.com/avatar/ed865d38277e04390a2e207422480a2b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -453,8 +651,8 @@ where $r^i$ is a $(T\times 1)$ vector of the T observations of the dependent ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="718 views">
-    718 views
+        <div class="views " title="844 views">
+    844 views
 </div>
     </div>
     <div class="summary">
@@ -474,7 +672,7 @@ For each of the 5000 stocks, I run 284 regressions (by rolling over my sample ..
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-08 20:06:23Z" class="relativetime">Aug 8 at 20:06</span>
+        asked <span title="2013-08-08 20:06:23Z" class="relativetime">Aug 8 '13 at 20:06</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5896/mariam"><div><img src="https://www.gravatar.com/avatar/ed865d38277e04390a2e207422480a2b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -500,8 +698,8 @@ For each of the 5000 stocks, I run 284 regressions (by rolling over my sample ..
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="78 views">
-    78 views
+        <div class="views " title="83 views">
+    83 views
 </div>
     </div>
     <div class="summary">
@@ -518,7 +716,7 @@ For each of the 5000 stocks, I run 284 regressions (by rolling over my sample ..
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-05 18:11:41Z" class="relativetime">Aug 5 at 18:11</span>
+        asked <span title="2013-08-05 18:11:41Z" class="relativetime">Aug 5 '13 at 18:11</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5523/mike-flynn"><div><img src="https://www.gravatar.com/avatar/64ca2c1540eb6254acb10aec1958655c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -544,8 +742,8 @@ For each of the 5000 stocks, I run 284 regressions (by rolling over my sample ..
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="213 views">
-    213 views
+        <div class="views " title="238 views">
+    238 views
 </div>
     </div>
     <div class="summary">
@@ -564,7 +762,7 @@ I am asking because there seems to be considerable ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-30 04:26:19Z" class="relativetime">Jul 30 at 4:26</span>
+        asked <span title="2013-07-30 04:26:19Z" class="relativetime">Jul 30 '13 at 4:26</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5667/j-li"><div><img src="https://www.gravatar.com/avatar/51b506d6a64b25f806e444489482bbb9?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -590,8 +788,8 @@ I am asking because there seems to be considerable ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="171 views">
-    171 views
+        <div class="views " title="180 views">
+    180 views
 </div>
     </div>
     <div class="summary">
@@ -608,7 +806,7 @@ I am asking because there seems to be considerable ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-05 15:01:01Z" class="relativetime">May 5 at 15:01</span>
+        asked <span title="2013-05-05 15:01:01Z" class="relativetime">May 5 '13 at 15:01</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5261/gene"><div><img src="https://www.gravatar.com/avatar/e95d15a0afc337b43297b6545506d27c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -634,8 +832,8 @@ I am asking because there seems to be considerable ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="67 views">
-    67 views
+        <div class="views " title="72 views">
+    72 views
 </div>
     </div>
     <div class="summary">
@@ -654,7 +852,7 @@ I'd like to build a basic industry-based fundamental factor model. As this is a 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-04-22 16:54:21Z" class="relativetime">Apr 22 at 16:54</span>
+        asked <span title="2013-04-22 16:54:21Z" class="relativetime">Apr 22 '13 at 16:54</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2119/mikerand"><div><img src="https://www.gravatar.com/avatar/2f822f8f82def56dc3237cc4ff794e9e?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -680,8 +878,8 @@ I'd like to build a basic industry-based fundamental factor model. As this is a 
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="185 views">
-    185 views
+        <div class="views " title="197 views">
+    197 views
 </div>
     </div>
     <div class="summary">
@@ -708,153 +906,14 @@ B = N ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-02-20 07:13:52Z" class="relativetime">Feb 20 at 7:13</span>
+        asked <span title="2013-02-20 07:13:52Z" class="relativetime">Feb 20 '13 at 7:13</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/1696/silencer"><div><img src="https://www.gravatar.com/avatar/428c164eee1e4ec1ba965a878dc52a95?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/1696/silencer">silencer</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">431</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-4882">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="236 views">
-    236 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/4882/why-use-market-capitalization-weighted-index-over-pca" class="question-hyperlink">Why use market capitalization weighted index over PCA?</a></h3>
-        <div class="excerpt">
-            Why is it so popular to use market capitalization weighted indices instead of taking the first principle component that explains the most variation of the constituents? I haven't yet seen an academic ...
-        </div>          
-        <div class="tags t-factor-models t-index t-pca">
-            <a href="/questions/tagged/factor-models" class="post-tag" title="show questions tagged &#39;factor-models&#39;" rel="tag">factor-models</a> <a href="/questions/tagged/index" class="post-tag" title="show questions tagged &#39;index&#39;" rel="tag">index</a> <a href="/questions/tagged/pca" class="post-tag" title="show questions tagged &#39;pca&#39;" rel="tag">pca</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2012-12-29 13:20:21Z" class="relativetime">Dec 29 '12 at 13:20</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/3174/jase"><div><img src="https://www.gravatar.com/avatar/79f02c080f9fb680e0493500dcbcce0a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/3174/jase">Jase</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">542</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-4693">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="88 views">
-    88 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/4693/estimating-two-normal-random-numbers-with-one-equation" class="question-hyperlink">Estimating two normal random numbers with one equation</a></h3>
-        <div class="excerpt">
-            Subtitle: Estimating the correlation of the shocks driving two commodities in
-two multi-factor models
-
-I am fitting two 2-factor models to electricity and gas futures, respectively.
-
-In order to ...
-        </div>          
-        <div class="tags t-futures t-factor-models t-brownian-motion t-pca t-multivariate">
-            <a href="/questions/tagged/futures" class="post-tag" title="show questions tagged &#39;futures&#39;" rel="tag">futures</a> <a href="/questions/tagged/factor-models" class="post-tag" title="show questions tagged &#39;factor-models&#39;" rel="tag">factor-models</a> <a href="/questions/tagged/brownian-motion" class="post-tag" title="show questions tagged &#39;brownian-motion&#39;" rel="tag">brownian-motion</a> <a href="/questions/tagged/pca" class="post-tag" title="show questions tagged &#39;pca&#39;" rel="tag">pca</a> <a href="/questions/tagged/multivariate" class="post-tag" title="show questions tagged &#39;multivariate&#39;" rel="tag">multivariate</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2012-12-05 17:57:26Z" class="relativetime">Dec 5 '12 at 17:57</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/3373/user1141785"><div><img src="https://www.gravatar.com/avatar/6dcb4737dd359148c1be2b63218889db?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/3373/user1141785">user1141785</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">116</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-4541">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="155 views">
-    155 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/4541/missing-factor-in-the-factor-model" class="question-hyperlink">Missing factor in the factor model</a></h3>
-        <div class="excerpt">
-            I am developing a factor model to predict monthly returns. One of the factors alone accounts for an R squared of 0.3 to 0.4 for many single periods that has surprised me. 
-
-However, for some periods ...
-        </div>          
-        <div class="tags t-factor-models">
-            <a href="/questions/tagged/factor-models" class="post-tag" title="show questions tagged &#39;factor-models&#39;" rel="tag">factor-models</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2012-11-16 06:06:45Z" class="relativetime">Nov 16 '12 at 6:06</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/3245/amir-yousefi"><div><img src="https://www.gravatar.com/avatar/b149f18dbe8589150ea9c61dd4d7ec0a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/3245/amir-yousefi">Amir Yousefi</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">130</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">428</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
     </div>
 </div>
         </div>  
@@ -875,77 +934,305 @@ However, for some periods ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/factor-models?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/factor-models?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/factor-models?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/factor-models?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/factor-models?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/factor-models?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=factor-models&amp;sort=newest" title="the 30 newest factor-models questions"><span class="feed-icon"></span>newest factor-models questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=factor-models&sort=newest" title="the 30 newest factor-models questions"><span class="feed-icon"></span>newest factor-models questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">27</div>
+            <div class="summarycount al">30</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/factor-models" class="post-tag" title="show questions tagged &#39;factor-models&#39;" rel="tag">factor-models</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/factor-models/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/factor-models+regression" class="post-tag" title="show questions tagged &#39;factor-models regression&#39;" rel="tag">regression</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/factor-models+factor-loading" class="post-tag" title="show questions tagged &#39;factor-models factor-loading&#39;" rel="tag">factor-loading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/factor-models+portfolio-management" class="post-tag" title="show questions tagged &#39;factor-models portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/factor-models+statistics" class="post-tag" title="show questions tagged &#39;factor-models statistics&#39;" rel="tag">statistics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/factor-models+pca" class="post-tag" title="show questions tagged &#39;factor-models pca&#39;" rel="tag">pca</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/factor-models+correlation" class="post-tag" title="show questions tagged &#39;factor-models correlation&#39;" rel="tag">correlation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/factor-models+capm" class="post-tag" title="show questions tagged &#39;factor-models capm&#39;" rel="tag">capm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/factor-models+equities" class="post-tag" title="show questions tagged &#39;factor-models equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/factor-models+backtesting" class="post-tag" title="show questions tagged &#39;factor-models backtesting&#39;" rel="tag">backtesting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/factor-models+cointegration" class="post-tag" title="show questions tagged &#39;factor-models cointegration&#39;" rel="tag">cointegration</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/factor-models+time-series" class="post-tag" title="show questions tagged &#39;factor-models time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/factor-models+risk-models" class="post-tag" title="show questions tagged &#39;factor-models risk-models&#39;" rel="tag">risk-models</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/factor-models+quant-trading-strategies" class="post-tag" title="show questions tagged &#39;factor-models quant-trading-strategies&#39;" rel="tag">quant-trading-strategies</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/factor-models+r" class="post-tag" title="show questions tagged &#39;factor-models r&#39;" rel="tag">r</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/factor-models+asset-allocation" class="post-tag" title="show questions tagged &#39;factor-models asset-allocation&#39;" rel="tag">asset-allocation</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+risk-management" class="post-tag" title="show questions tagged &#39;factor-models risk-management&#39;" rel="tag">risk-management</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+machine-learning" class="post-tag" title="show questions tagged &#39;factor-models machine-learning&#39;" rel="tag">machine-learning</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+risk" class="post-tag" title="show questions tagged &#39;factor-models risk&#39;" rel="tag">risk</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+volatility" class="post-tag" title="show questions tagged &#39;factor-models volatility&#39;" rel="tag">volatility</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+forecasting" class="post-tag" title="show questions tagged &#39;factor-models forecasting&#39;" rel="tag">forecasting</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+correlation-matrix" class="post-tag" title="show questions tagged &#39;factor-models correlation-matrix&#39;" rel="tag">correlation-matrix</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+prediction" class="post-tag" title="show questions tagged &#39;factor-models prediction&#39;" rel="tag">prediction</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+information" class="post-tag" title="show questions tagged &#39;factor-models information&#39;" rel="tag">information</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+research" class="post-tag" title="show questions tagged &#39;factor-models research&#39;" rel="tag">research</a>&nbsp;<br>
-            <a href="/questions/tagged/factor-models+beta" class="post-tag" title="show questions tagged &#39;factor-models beta&#39;" rel="tag">beta</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/factor-models+regression" class="post-tag" title="show questions tagged &#39;factor-models regression&#39;" rel="tag">regression</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/factor-models+pca" class="post-tag" title="show questions tagged &#39;factor-models pca&#39;" rel="tag">pca</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/factor-models+portfolio-management" class="post-tag" title="show questions tagged &#39;factor-models portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/factor-models+factor-loading" class="post-tag" title="show questions tagged &#39;factor-models factor-loading&#39;" rel="tag">factor-loading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/factor-models+time-series" class="post-tag" title="show questions tagged &#39;factor-models time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/factor-models+statistics" class="post-tag" title="show questions tagged &#39;factor-models statistics&#39;" rel="tag">statistics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/factor-models+correlation" class="post-tag" title="show questions tagged &#39;factor-models correlation&#39;" rel="tag">correlation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/factor-models+backtesting" class="post-tag" title="show questions tagged &#39;factor-models backtesting&#39;" rel="tag">backtesting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/factor-models+risk-models" class="post-tag" title="show questions tagged &#39;factor-models risk-models&#39;" rel="tag">risk-models</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/factor-models+cointegration" class="post-tag" title="show questions tagged &#39;factor-models cointegration&#39;" rel="tag">cointegration</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+quant-trading-strategies" class="post-tag" title="show questions tagged &#39;factor-models quant-trading-strategies&#39;" rel="tag">quant-trading-strategies</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+r" class="post-tag" title="show questions tagged &#39;factor-models r&#39;" rel="tag">r</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+optimization" class="post-tag" title="show questions tagged &#39;factor-models optimization&#39;" rel="tag">optimization</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+equities" class="post-tag" title="show questions tagged &#39;factor-models equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+capm" class="post-tag" title="show questions tagged &#39;factor-models capm&#39;" rel="tag">capm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+machine-learning" class="post-tag" title="show questions tagged &#39;factor-models machine-learning&#39;" rel="tag">machine-learning</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+research" class="post-tag" title="show questions tagged &#39;factor-models research&#39;" rel="tag">research</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+prediction" class="post-tag" title="show questions tagged &#39;factor-models prediction&#39;" rel="tag">prediction</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+risk-management" class="post-tag" title="show questions tagged &#39;factor-models risk-management&#39;" rel="tag">risk-management</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+asset-allocation" class="post-tag" title="show questions tagged &#39;factor-models asset-allocation&#39;" rel="tag">asset-allocation</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+information" class="post-tag" title="show questions tagged &#39;factor-models information&#39;" rel="tag">information</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+beta" class="post-tag" title="show questions tagged &#39;factor-models beta&#39;" rel="tag">beta</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+correlation-matrix" class="post-tag" title="show questions tagged &#39;factor-models correlation-matrix&#39;" rel="tag">correlation-matrix</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+negative" class="post-tag" title="show questions tagged &#39;factor-models negative&#39;" rel="tag">negative</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/factor-models+interest-rates" class="post-tag" title="show questions tagged &#39;factor-models interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -965,7 +1252,7 @@ However, for some periods ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/factor-models")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1058,7 +1345,7 @@ However, for some periods ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1085,14 +1372,14 @@ However, for some periods ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1128,6 +1415,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

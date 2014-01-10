@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged equities" href="/feeds/tag/equities" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187233,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350533,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fequities" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fequities" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[equities]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fequities">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fequities">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[equities]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/equities/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/equities?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/equities?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/equities?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/equities?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/equities?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/equities?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/equities?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/equities?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/equities?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/equities?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,51 +221,7 @@ Shares of stock traded in a stock market.  Equities represent the residual claim
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9617">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>-2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="42 views">
-    42 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/9617/stock-exchange-simulator-price-calculations" class="question-hyperlink">stock exchange simulator price calculations [on hold]</a></h3>
-        <div class="excerpt">
-            Before you downvote it I inform you that I am a zero in the field of stocks. I have an online event conducted by my college and there is an event that simulates a dalalstreet and I have been assigned ...
-        </div>          
-        <div class="tags t-equities t-finance">
-            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/finance" class="post-tag" title="show questions tagged &#39;finance&#39;" rel="tag">finance</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-12-03 14:00:04Z" class="relativetime">yesterday</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/6652/aswin-murugesh"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/b8SUS.jpg?s=128&g=1?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/6652/aswin-murugesh">Aswin Murugesh</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">97</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-9561">
+<div class="question-summary" id="question-summary-9909">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -217,19 +235,19 @@ Shares of stock traded in a stock market.  Equities represent the residual claim
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="55 views">
-    55 views
+        <div class="views " title="45 views">
+    45 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/9561/seeking-a-general-flavor-on-modelling-algorithms-for-propreitary-equity-trade-tr" class="question-hyperlink">Seeking a General Flavor on Modelling Algorithms For Propreitary Equity Trade Triggers [closed]</a></h3>
+        <h3><a href="/questions/9909/why-do-quants-have-such-a-big-edge-on-retail-investors" class="question-hyperlink">Why do quants have such a big edge on retail investors?</a></h3>
         <div class="excerpt">
-            Software developer here with zero background on exotic quant strategies beyond working with the 101 technical indicators.
+            I was recently reading a well known forum, and someone made this post:
 
-When coding back-testing models, say for an equity and short term (5-15 days) ...
+...
         </div>          
-        <div class="tags t-equities t-trading t-algorithm t-proprietary">
-            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/trading" class="post-tag" title="show questions tagged &#39;trading&#39;" rel="tag">trading</a> <a href="/questions/tagged/algorithm" class="post-tag" title="show questions tagged &#39;algorithm&#39;" rel="tag">algorithm</a> <a href="/questions/tagged/proprietary" class="post-tag" title="show questions tagged &#39;proprietary&#39;" rel="tag">proprietary</a> 
+        <div class="tags t-equities t-programming t-quant-trading-strategies t-retail">
+            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/quant-trading-strategies" class="post-tag" title="show questions tagged &#39;quant-trading-strategies&#39;" rel="tag">quant-trading-strategies</a> <a href="/questions/tagged/retail" class="post-tag" title="show questions tagged &#39;retail&#39;" rel="tag">retail</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -237,14 +255,243 @@ When coding back-testing models, say for an equity and short term (5-15 days) ..
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-26 19:24:12Z" class="relativetime">Nov 26 at 19:24</span>
+        asked <span title="2014-01-10 01:15:23Z" class="relativetime">9 hours ago</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/5769/code-monkey"><div><img src="https://www.gravatar.com/avatar/262349ff3be53891d0106a631ae6a960?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/6938/noob-coder"><div><img src="https://www.gravatar.com/avatar/3d9472befb9c8d139cf0ba2d426c7bd2?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/5769/code-monkey">Code Monkey</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">113</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <a href="/users/6938/noob-coder">Noob Coder</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">101</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9873">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="32 views">
+    32 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9873/optimal-number-of-global-tickers-source-and-issue-with-yahoo" class="question-hyperlink">Optimal number of global tickers, source and issue with yahoo [on hold]</a></h3>
+        <div class="excerpt">
+            I would like to gather global tickers in database in order to analyse global money flow and price moves.
+
+So far I built small trading tools, but I had access to limited data of around 500 stocks with ...
+        </div>          
+        <div class="tags t-equities t-data t-programming t-r t-yahoo">
+            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/data" class="post-tag" title="show questions tagged &#39;data&#39;" rel="tag">data</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/r" class="post-tag" title="show questions tagged &#39;r&#39;" rel="tag">r</a> <a href="/questions/tagged/yahoo" class="post-tag" title="show questions tagged &#39;yahoo&#39;" rel="tag">yahoo</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-07 18:01:34Z" class="relativetime">2 days ago</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6913/velletti"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/ce3bf418c32e34914200d67d3a32b1d5?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6913/velletti">Velletti</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9831">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-1</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="57 views">
+    57 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9831/calculate-the-total-returns-from-the-total-return-index" class="question-hyperlink">Calculate the total returns from the total return index [closed]</a></h3>
+        <div class="excerpt">
+            I have the <span class='tex2jax_ignore'>Total Return Index(RI)</span> for several companies.
+
+I know that I can calculate the log retunrs with $ln(RI_t/RI_{t-1})$. Therefore my first guess would be to ...
+        </div>          
+        <div class="tags t-time-series t-equities t-statistics t-return">
+            <a href="/questions/tagged/time-series" class="post-tag" title="show questions tagged &#39;time-series&#39;" rel="tag">time-series</a> <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/statistics" class="post-tag" title="show questions tagged &#39;statistics&#39;" rel="tag">statistics</a> <a href="/questions/tagged/return" class="post-tag" title="show questions tagged &#39;return&#39;" rel="tag">return</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-30 16:54:33Z" class="relativetime">Dec 30 '13 at 16:54</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/5414/user1000"><div><img src="https://www.gravatar.com/avatar/1838e5a06588f77510e8480f3b7fdf44?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/5414/user1000">user1000</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">170</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9810">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="68 views">
+    68 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9810/quantitative-fraud-detection-techniques" class="question-hyperlink">Quantitative fraud detection techniques</a></h3>
+        <div class="excerpt">
+            I am trying to develop a short equity strategy that dedicates some, currently arbitrary, percentage of short capital to potential frauds.
+
+I am aware of Benford's Law, but this is not my specialty.
+
+...
+        </div>          
+        <div class="tags t-equities t-strategy t-detection">
+            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/strategy" class="post-tag" title="show questions tagged &#39;strategy&#39;" rel="tag">strategy</a> <a href="/questions/tagged/detection" class="post-tag" title="show questions tagged &#39;detection&#39;" rel="tag">detection</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-28 23:30:49Z" class="relativetime">Dec 28 '13 at 23:30</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6500/quantycuenta"><div><img src="https://www.gravatar.com/avatar/3533415508cc1ab89a083a9d8a1ff259?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6500/quantycuenta">quantycuenta</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">188</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9772">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="77 views">
+    77 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9772/where-to-find-historical-stock-news-and-other-events" class="question-hyperlink">Where to find historical stock news and other events?</a></h3>
+        <div class="excerpt">
+            So, I am working on a strategy that has pin-pointed some very interesting events in the form of extremely low volatility. The phenomena spans the past few years and a wide variety of symbols. Now, to ...
+        </div>          
+        <div class="tags t-equities t-data t-market-data t-historical-data t-news">
+            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/data" class="post-tag" title="show questions tagged &#39;data&#39;" rel="tag">data</a> <a href="/questions/tagged/market-data" class="post-tag" title="show questions tagged &#39;market-data&#39;" rel="tag">market-data</a> <a href="/questions/tagged/historical-data" class="post-tag" title="show questions tagged &#39;historical-data&#39;" rel="tag">historical-data</a> <a href="/questions/tagged/news" class="post-tag" title="show questions tagged &#39;news&#39;" rel="tag">news</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-22 13:02:27Z" class="relativetime">Dec 22 '13 at 13:02</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6717/anonymous"><div><img src="https://www.gravatar.com/avatar/6cbc1c5e4296add1bc5cb5100a5366ea?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6717/anonymous">Anonymous</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">23</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9767">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="38 views">
+    38 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9767/how-to-estimate-market-integration-parameter-in-singer-terhaar-model-for-er" class="question-hyperlink">How to estimate market integration parameter in Singer-Terhaar model for E(r)?</a></h3>
+        <div class="excerpt">
+            Singer-Terhaar is part of CFA II and III curriculum. It estimates risk premium for some asset, traded at some local market, as weighted average of expected premiums for the case of 
+(1) local market, ...
+        </div>          
+        <div class="tags t-equities t-returns t-capm t-expected-return t-asset-pricing">
+            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/returns" class="post-tag" title="show questions tagged &#39;returns&#39;" rel="tag">returns</a> <a href="/questions/tagged/capm" class="post-tag" title="show questions tagged &#39;capm&#39;" rel="tag">capm</a> <a href="/questions/tagged/expected-return" class="post-tag" title="show questions tagged &#39;expected-return&#39;" rel="tag">expected-return</a> <a href="/questions/tagged/asset-pricing" class="post-tag" title="show questions tagged &#39;asset-pricing&#39;" rel="tag">asset-pricing</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-22 01:28:29Z" class="relativetime">Dec 22 '13 at 1:28</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6535/alexander-didenko"><div><img src="https://www.gravatar.com/avatar/985c72fd1563bd0f0d16e29c63462ae7?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6535/alexander-didenko">Alexander Didenko</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
@@ -263,8 +510,8 @@ When coding back-testing models, say for an equity and short term (5-15 days) ..
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="30 views">
-    30 views
+        <div class="views " title="32 views">
+    32 views
 </div>
     </div>
     <div class="summary">
@@ -286,7 +533,7 @@ bid size 2000 at 10.10, ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-17 18:02:19Z" class="relativetime">Nov 17 at 18:02</span>
+        asked <span title="2013-11-17 18:02:19Z" class="relativetime">Nov 17 '13 at 18:02</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6532/simplicity123"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/f6c51e80fec16da5bb51d8dc42e2fcbf?s=128&d=identicon&r=PG" alt=""></div></a>
@@ -312,8 +559,8 @@ bid size 2000 at 10.10, ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="54 views">
-    54 views
+        <div class="views " title="59 views">
+    59 views
 </div>
     </div>
     <div class="summary">
@@ -333,7 +580,7 @@ ie, how do I strip out any auto correlation among the names?
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-11 16:25:56Z" class="relativetime">Nov 11 at 16:25</span>
+        asked <span title="2013-11-11 16:25:56Z" class="relativetime">Nov 11 '13 at 16:25</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5558/steeple"><div><img src="https://www.gravatar.com/avatar/d69463a93457fc18ba97c55b493b0012?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -359,8 +606,8 @@ ie, how do I strip out any auto correlation among the names?
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="51 views">
-    51 views
+        <div class="views " title="69 views">
+    69 views
 </div>
     </div>
     <div class="summary">
@@ -380,7 +627,7 @@ and I would like to convert them into their corresponding RIC codes. Do you know
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-11 12:36:49Z" class="relativetime">Nov 11 at 12:36</span>
+        asked <span title="2013-11-11 12:36:49Z" class="relativetime">Nov 11 '13 at 12:36</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6486/noobie"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/uimvC.gif?s=128&g=1?s=32&g=1" alt=""></div></a>
@@ -402,12 +649,12 @@ and I would like to convert them into their corresponding RIC codes. Do you know
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status answered">
-                <strong>1</strong>answer
+            <div class="status unanswered">
+                <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="127 views">
-    127 views
+        <div class="views " title="155 views">
+    155 views
 </div>
     </div>
     <div class="summary">
@@ -426,60 +673,14 @@ Since Matlab get's major memory issues (which I try to prevent by the usual solu
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-05 15:42:16Z" class="relativetime">Nov 5 at 15:42</span>
+        asked <span title="2013-11-05 15:42:16Z" class="relativetime">Nov 5 '13 at 15:42</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2402/cindy88"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/PuWRV.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2402/cindy88">Cindy88</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">61</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-9354">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>-2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="35 views">
-    35 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/9354/minute-tick-data-of-the-sp500-index" class="question-hyperlink">Minute tick data of the S&amp;P500 index [duplicate]</a></h3>
-        <div class="excerpt">
-            I am currently looking for historical minute-tick data of the S&amp;P500 index value.
-
-I don't know wether I can find these for free? I've been looking for days and the best resource that I got was ...
-        </div>          
-        <div class="tags t-equities t-data t-market-data t-historical-data t-index">
-            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/data" class="post-tag" title="show questions tagged &#39;data&#39;" rel="tag">data</a> <a href="/questions/tagged/market-data" class="post-tag" title="show questions tagged &#39;market-data&#39;" rel="tag">market-data</a> <a href="/questions/tagged/historical-data" class="post-tag" title="show questions tagged &#39;historical-data&#39;" rel="tag">historical-data</a> <a href="/questions/tagged/index" class="post-tag" title="show questions tagged &#39;index&#39;" rel="tag">index</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-04 13:38:07Z" class="relativetime">Nov 4 at 13:38</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5708/nick"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/gRc2w.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5708/nick">Nick</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">110</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">66</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -490,7 +691,7 @@ I don't know wether I can find these for free? I've been looking for days and th
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>12</strong></span>
+                    <span class="vote-count-post "><strong>14</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -498,8 +699,8 @@ I don't know wether I can find these for free? I've been looking for days and th
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="625 views">
-    625 views
+        <div class="views " title="725 views">
+    725 views
 </div>
     </div>
     <div class="summary">
@@ -517,14 +718,14 @@ Why do quantitative financial analysts (analysts/traders/etc.) prefer ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-31 03:22:12Z" class="relativetime">Oct 31 at 3:22</span>
+        asked <span title="2013-10-31 03:22:12Z" class="relativetime">Oct 31 '13 at 3:22</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6399/kirk-hadley"><div><img src="https://www.gravatar.com/avatar/8498b5edd4dbef5602f2b0df9ad18c11?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6399/kirk-hadley">Kirk Hadley</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">63</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">73</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -543,8 +744,8 @@ Why do quantitative financial analysts (analysts/traders/etc.) prefer ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="255 views">
-    255 views
+        <div class="views " title="348 views">
+    348 views
 </div>
     </div>
     <div class="summary">
@@ -572,7 +773,7 @@ Is there any other ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-18 11:24:06Z" class="relativetime">Oct 18 at 11:24</span>
+        asked <span title="2013-10-18 11:24:06Z" class="relativetime">Oct 18 '13 at 11:24</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3092/vladimir"><div><img src="https://www.gravatar.com/avatar/cca63ad931ef3084cfedf97327666ccd?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -598,8 +799,8 @@ Is there any other ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="246 views">
-    246 views
+        <div class="views " title="268 views">
+    268 views
 </div>
     </div>
     <div class="summary">
@@ -616,7 +817,7 @@ Is there any other ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-16 09:41:53Z" class="relativetime">Oct 16 at 9:41</span>
+        asked <span title="2013-10-16 09:41:53Z" class="relativetime">Oct 16 '13 at 9:41</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3098/randomblue"><div><img src="https://www.gravatar.com/avatar/439db9ac83f4ea14a904390900ec6634?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -642,8 +843,8 @@ Is there any other ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="277 views">
-    277 views
+        <div class="views " title="321 views">
+    321 views
 </div>
     </div>
     <div class="summary">
@@ -660,14 +861,14 @@ Is there any other ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-15 14:10:31Z" class="relativetime">Oct 15 at 14:10</span>
+        asked <span title="2013-10-15 14:10:31Z" class="relativetime">Oct 15 '13 at 14:10</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2402/cindy88"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/PuWRV.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2402/cindy88">Cindy88</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">61</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">66</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -686,8 +887,8 @@ Is there any other ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="180 views">
-    180 views
+        <div class="views " title="206 views">
+    206 views
 </div>
     </div>
     <div class="summary">
@@ -704,7 +905,7 @@ Is there any other ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-03 09:25:25Z" class="relativetime">Oct 3 at 9:25</span>
+        asked <span title="2013-10-03 09:25:25Z" class="relativetime">Oct 3 '13 at 9:25</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6221/elelias"><div><img src="https://www.gravatar.com/avatar/965e7fce619a96b6163a4f8feaef7355?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -712,140 +913,6 @@ Is there any other ...
     <div class="user-details">
         <a href="/users/6221/elelias">elelias</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">5</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-9070">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="111 views">
-    111 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/9070/adjusted-close-prices-on-sp500" class="question-hyperlink">adjusted close prices on SP500</a></h3>
-        <div class="excerpt">
-            When I look at the adjusted close prices of SP500, for example, I notice that the numbers are always significantly below the actual closing.
-
-In the explanation of what adjusted prices are, one gets ...
-        </div>          
-        <div class="tags t-equities t-data t-backtesting t-automated-trading t-historical-data">
-            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/data" class="post-tag" title="show questions tagged &#39;data&#39;" rel="tag">data</a> <a href="/questions/tagged/backtesting" class="post-tag" title="show questions tagged &#39;backtesting&#39;" rel="tag">backtesting</a> <a href="/questions/tagged/automated-trading" class="post-tag" title="show questions tagged &#39;automated-trading&#39;" rel="tag">automated-trading</a> <a href="/questions/tagged/historical-data" class="post-tag" title="show questions tagged &#39;historical-data&#39;" rel="tag">historical-data</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-02 16:37:01Z" class="relativetime">Oct 2 at 16:37</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/6221/elelias"><div><img src="https://www.gravatar.com/avatar/965e7fce619a96b6163a4f8feaef7355?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/6221/elelias">elelias</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">5</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-9045">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="110 views">
-    110 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/9045/forecasting-equity-returns-using-state-space-models" class="question-hyperlink">Forecasting Equity returns using state-space models</a></h3>
-        <div class="excerpt">
-            I have data for 3 yrs of 5 min prices of various equities. I can construct a linear regression model and try to see the in-sample model performance. But I was wondering whether fitting a state-space ...
-        </div>          
-        <div class="tags t-equities t-high-frequency">
-            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/high-frequency" class="post-tag" title="show questions tagged &#39;high-frequency&#39;" rel="tag">high-frequency</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-30 05:56:08Z" class="relativetime">Sep 30 at 5:56</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/6199/iku"><div><img src="https://www.gravatar.com/avatar/e62aea4dc460f61aba097b7796254ddb?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/6199/iku">iku</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-8997">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="147 views">
-    147 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/8997/fundamental-reasons-for-the-stock-price-change" class="question-hyperlink">Fundamental reasons for the stock price change</a></h3>
-        <div class="excerpt">
-            Let us start from the old times, where markets were less liquid. Suppose I hold some stocks of the company XYZ and I want to sell them. Why shall I expect that their price can rise in the next quarter ...
-        </div>          
-        <div class="tags t-equities t-market-microstructure">
-            <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> <a href="/questions/tagged/market-microstructure" class="post-tag" title="show questions tagged &#39;market-microstructure&#39;" rel="tag">market-microstructure</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-25 08:04:22Z" class="relativetime">Sep 25 at 8:04</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/6160/s-d"><div><img src="https://www.gravatar.com/avatar/a20e2e05e1cea53a8432fc5412294044?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/6160/s-d">S.D.</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">106</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -870,77 +937,305 @@ In the explanation of what adjusted prices are, one gets ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/equities?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/equities?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/equities?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/equities?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/equities?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/equities?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=equities&amp;sort=newest" title="the 30 newest equities questions"><span class="feed-icon"></span>newest equities questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=equities&sort=newest" title="the 30 newest equities questions"><span class="feed-icon"></span>newest equities questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">124</div>
+            <div class="summarycount al">127</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/equities" class="post-tag" title="show questions tagged &#39;equities&#39;" rel="tag">equities</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/equities/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/equities+research" class="post-tag" title="show questions tagged &#39;equities research&#39;" rel="tag">research</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span><br>
-            <a href="/questions/tagged/equities+data" class="post-tag" title="show questions tagged &#39;equities data&#39;" rel="tag">data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/equities+regression" class="post-tag" title="show questions tagged &#39;equities regression&#39;" rel="tag">regression</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/equities+returns" class="post-tag" title="show questions tagged &#39;equities returns&#39;" rel="tag">returns</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/equities+quant-trading-strategies" class="post-tag" title="show questions tagged &#39;equities quant-trading-strategies&#39;" rel="tag">quant-trading-strategies</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/equities+backtesting" class="post-tag" title="show questions tagged &#39;equities backtesting&#39;" rel="tag">backtesting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/equities+time-series" class="post-tag" title="show questions tagged &#39;equities time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/equities+volatility" class="post-tag" title="show questions tagged &#39;equities volatility&#39;" rel="tag">volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/equities+market-data" class="post-tag" title="show questions tagged &#39;equities market-data&#39;" rel="tag">market-data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/equities+options" class="post-tag" title="show questions tagged &#39;equities options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/equities+trading" class="post-tag" title="show questions tagged &#39;equities trading&#39;" rel="tag">trading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/equities+portfolio-management" class="post-tag" title="show questions tagged &#39;equities portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/equities+forecasting" class="post-tag" title="show questions tagged &#39;equities forecasting&#39;" rel="tag">forecasting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/equities+automated-trading" class="post-tag" title="show questions tagged &#39;equities automated-trading&#39;" rel="tag">automated-trading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/equities+risk" class="post-tag" title="show questions tagged &#39;equities risk&#39;" rel="tag">risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/equities+high-frequency" class="post-tag" title="show questions tagged &#39;equities high-frequency&#39;" rel="tag">high-frequency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/equities+market-microstructure" class="post-tag" title="show questions tagged &#39;equities market-microstructure&#39;" rel="tag">market-microstructure</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/equities+stochastic-processes" class="post-tag" title="show questions tagged &#39;equities stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/equities+statistics" class="post-tag" title="show questions tagged &#39;equities statistics&#39;" rel="tag">statistics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/equities+pricing" class="post-tag" title="show questions tagged &#39;equities pricing&#39;" rel="tag">pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/equities+modeling" class="post-tag" title="show questions tagged &#39;equities modeling&#39;" rel="tag">modeling</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/equities+etf" class="post-tag" title="show questions tagged &#39;equities etf&#39;" rel="tag">etf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/equities+market-making" class="post-tag" title="show questions tagged &#39;equities market-making&#39;" rel="tag">market-making</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/equities+fixed-income" class="post-tag" title="show questions tagged &#39;equities fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/equities+tactical-asset-allocation" class="post-tag" title="show questions tagged &#39;equities tactical-asset-allocation&#39;" rel="tag">tactical-asset-allocation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
+        <div>
+            <a href="/questions/tagged/equities+research" class="post-tag" title="show questions tagged &#39;equities research&#39;" rel="tag">research</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/equities+data" class="post-tag" title="show questions tagged &#39;equities data&#39;" rel="tag">data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/equities+regression" class="post-tag" title="show questions tagged &#39;equities regression&#39;" rel="tag">regression</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/equities+returns" class="post-tag" title="show questions tagged &#39;equities returns&#39;" rel="tag">returns</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/equities+quant-trading-strategies" class="post-tag" title="show questions tagged &#39;equities quant-trading-strategies&#39;" rel="tag">quant-trading-strategies</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/equities+time-series" class="post-tag" title="show questions tagged &#39;equities time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/equities+backtesting" class="post-tag" title="show questions tagged &#39;equities backtesting&#39;" rel="tag">backtesting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/equities+options" class="post-tag" title="show questions tagged &#39;equities options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/equities+volatility" class="post-tag" title="show questions tagged &#39;equities volatility&#39;" rel="tag">volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/equities+market-data" class="post-tag" title="show questions tagged &#39;equities market-data&#39;" rel="tag">market-data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+portfolio-management" class="post-tag" title="show questions tagged &#39;equities portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+trading" class="post-tag" title="show questions tagged &#39;equities trading&#39;" rel="tag">trading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+automated-trading" class="post-tag" title="show questions tagged &#39;equities automated-trading&#39;" rel="tag">automated-trading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+risk" class="post-tag" title="show questions tagged &#39;equities risk&#39;" rel="tag">risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+forecasting" class="post-tag" title="show questions tagged &#39;equities forecasting&#39;" rel="tag">forecasting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+statistics" class="post-tag" title="show questions tagged &#39;equities statistics&#39;" rel="tag">statistics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+market-microstructure" class="post-tag" title="show questions tagged &#39;equities market-microstructure&#39;" rel="tag">market-microstructure</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+etf" class="post-tag" title="show questions tagged &#39;equities etf&#39;" rel="tag">etf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+pricing" class="post-tag" title="show questions tagged &#39;equities pricing&#39;" rel="tag">pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+modeling" class="post-tag" title="show questions tagged &#39;equities modeling&#39;" rel="tag">modeling</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+return" class="post-tag" title="show questions tagged &#39;equities return&#39;" rel="tag">return</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+stochastic-processes" class="post-tag" title="show questions tagged &#39;equities stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+high-frequency" class="post-tag" title="show questions tagged &#39;equities high-frequency&#39;" rel="tag">high-frequency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+reference-request" class="post-tag" title="show questions tagged &#39;equities reference-request&#39;" rel="tag">reference-request</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/equities+derivatives" class="post-tag" title="show questions tagged &#39;equities derivatives&#39;" rel="tag">derivatives</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -960,7 +1255,7 @@ In the explanation of what adjusted prices are, one gets ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/equities")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1053,7 +1348,7 @@ In the explanation of what adjusted prices are, one gets ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1080,14 +1375,14 @@ In the explanation of what adjusted prices are, one gets ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1123,6 +1418,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

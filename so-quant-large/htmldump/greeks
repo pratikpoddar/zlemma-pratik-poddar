@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged greeks" href="/feeds/tag/greeks" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187316,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350599,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgreeks" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgreeks" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[greeks]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgreeks">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgreeks">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[greeks]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/greeks/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/greeks?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/greeks?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/greeks?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/greeks?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/greeks?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/greeks?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/greeks?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/greeks?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/greeks?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/greeks?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -173,8 +235,8 @@ The <a href="/questions/tagged/greeks" class="post-tag" title="show questions ta
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="68 views">
-    68 views
+        <div class="views " title="76 views">
+    76 views
 </div>
     </div>
     <div class="summary">
@@ -193,7 +255,7 @@ In textbooks and websites, I commonly encounter the unqualified claim that "The 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-26 14:40:16Z" class="relativetime">Oct 26 at 14:40</span>
+        asked <span title="2013-10-26 14:40:16Z" class="relativetime">Oct 26 '13 at 14:40</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6368/anton"><div><img src="https://www.gravatar.com/avatar/7ab3fb24816d8646d35448cbb57ae603?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -219,8 +281,8 @@ In textbooks and websites, I commonly encounter the unqualified claim that "The 
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="82 views">
-    82 views
+        <div class="views " title="104 views">
+    104 views
 </div>
     </div>
     <div class="summary">
@@ -248,7 +310,7 @@ Covered Call = 1 ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-22 22:32:36Z" class="relativetime">Sep 22 at 22:32</span>
+        asked <span title="2013-09-22 22:32:36Z" class="relativetime">Sep 22 '13 at 22:32</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/4707/vtech"><div><img src="https://www.gravatar.com/avatar/41838c45ff1763ae48d77aef077edf96?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -274,8 +336,8 @@ Covered Call = 1 ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="103 views">
-    103 views
+        <div class="views " title="106 views">
+    106 views
 </div>
     </div>
     <div class="summary">
@@ -293,7 +355,7 @@ So I was wondering if some of those tools would be suitable for quantitative ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-10 15:29:31Z" class="relativetime">Sep 10 at 15:29</span>
+        asked <span title="2013-09-10 15:29:31Z" class="relativetime">Sep 10 '13 at 15:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2688/nicolas-essis-breton"><div><img src="https://www.gravatar.com/avatar/a39997a65cb9258001f700549caa48b0?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -319,8 +381,8 @@ So I was wondering if some of those tools would be suitable for quantitative ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="541 views">
-    541 views
+        <div class="views " title="658 views">
+    658 views
 </div>
     </div>
     <div class="summary">
@@ -339,7 +401,7 @@ The analytical solution for the most common option ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-26 16:15:12Z" class="relativetime">Jun 26 at 16:15</span>
+        asked <span title="2013-06-26 16:15:12Z" class="relativetime">Jun 26 '13 at 16:15</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2291/johnandrews"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/QcIpS.png?s=32&g=1" alt=""></div></a>
@@ -365,8 +427,8 @@ The analytical solution for the most common option ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="188 views">
-    188 views
+        <div class="views " title="210 views">
+    210 views
 </div>
     </div>
     <div class="summary">
@@ -390,14 +452,14 @@ I'm looking to calculate IV for each tick. Is there a way to approximate the tic
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-31 21:44:47Z" class="relativetime">May 31 at 21:44</span>
+        asked <span title="2013-05-31 21:44:47Z" class="relativetime">May 31 '13 at 21:44</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2257/victor-p"><div><img src="https://www.gravatar.com/avatar/be17c093ae7d0c09b4f9930846d8e455?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2257/victor-p">Victor P</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">413</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">413</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
     </div>
 </div>
         </div>  
@@ -416,8 +478,8 @@ I'm looking to calculate IV for each tick. Is there a way to approximate the tic
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="100 views">
-    100 views
+        <div class="views " title="107 views">
+    107 views
 </div>
     </div>
     <div class="summary">
@@ -436,7 +498,7 @@ My question concern ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-04-15 07:34:02Z" class="relativetime">Apr 15 at 7:34</span>
+        asked <span title="2013-04-15 07:34:02Z" class="relativetime">Apr 15 '13 at 7:34</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3553/un-montagnard"><div><img src="https://www.gravatar.com/avatar/c417af398ebd5316efbcac13b719a7f0?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -462,8 +524,8 @@ My question concern ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="336 views">
-    336 views
+        <div class="views " title="375 views">
+    375 views
 </div>
     </div>
     <div class="summary">
@@ -486,7 +548,7 @@ Average volatility between both legs?
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-01-31 19:29:49Z" class="relativetime">Jan 31 at 19:29</span>
+        asked <span title="2013-01-31 19:29:49Z" class="relativetime">Jan 31 '13 at 19:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/4707/vtech"><div><img src="https://www.gravatar.com/avatar/41838c45ff1763ae48d77aef077edf96?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -512,8 +574,8 @@ Average volatility between both legs?
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="165 views">
-    165 views
+        <div class="views " title="168 views">
+    168 views
 </div>
     </div>
     <div class="summary">
@@ -530,14 +592,14 @@ Average volatility between both legs?
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-01-25 23:39:05Z" class="relativetime">Jan 25 at 23:39</span>
+        asked <span title="2013-01-25 23:39:05Z" class="relativetime">Jan 25 '13 at 23:39</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/370/alexey-kalmykov"><div><img src="https://www.gravatar.com/avatar/7970448fb84156438e6a52ddd6e1face?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/370/alexey-kalmykov">Alexey Kalmykov</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,898</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,908</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
     </div>
 </div>
         </div>  
@@ -556,8 +618,8 @@ Average volatility between both legs?
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="458 views">
-    458 views
+        <div class="views " title="499 views">
+    499 views
 </div>
     </div>
     <div class="summary">
@@ -576,7 +638,7 @@ Average volatility between both legs?
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-01-18 19:37:24Z" class="relativetime">Jan 18 at 19:37</span>
+        asked <span title="2013-01-18 19:37:24Z" class="relativetime">Jan 18 '13 at 19:37</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/4605/laslowh"><div><img src="https://www.gravatar.com/avatar/6b0caa74c7b0a925622eb5075e1fc726?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -602,8 +664,8 @@ Average volatility between both legs?
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="506 views">
-    506 views
+        <div class="views " title="538 views">
+    538 views
 </div>
     </div>
     <div class="summary">
@@ -629,7 +691,7 @@ For example, a portfolio of 100 call options and 100 ...
     </div>
     <div class="user-details">
         <a href="/users/1112/strimp099">strimp099</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,048</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,053</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
     </div>
 </div>
         </div>  
@@ -648,8 +710,8 @@ For example, a portfolio of 100 call options and 100 ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="167 views">
-    167 views
+        <div class="views " title="174 views">
+    174 views
 </div>
     </div>
     <div class="summary">
@@ -692,8 +754,8 @@ For example, a portfolio of 100 call options and 100 ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="271 views">
-    271 views
+        <div class="views " title="286 views">
+    286 views
 </div>
     </div>
     <div class="summary">
@@ -738,8 +800,8 @@ For example, a portfolio of 100 call options and 100 ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="510 views">
-    510 views
+        <div class="views " title="539 views">
+    539 views
 </div>
     </div>
     <div class="summary">
@@ -759,11 +821,11 @@ For example, a portfolio of 100 call options and 100 ...
         asked <span title="2012-08-31 08:42:12Z" class="relativetime">Aug 31 '12 at 8:42</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/1733/homunculus-reticulli"><div><img src="https://www.gravatar.com/avatar/ad2c4adf290287b497ded01d7dea2a41?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/1733/homunculus-reticulli"><div><img src="https://www.gravatar.com/avatar/f055eb6f9117f4d6c38c8631f56812a5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/1733/homunculus-reticulli">Homunculus Reticulli</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">409</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">416</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -782,8 +844,8 @@ For example, a portfolio of 100 call options and 100 ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="259 views">
-    259 views
+        <div class="views " title="275 views">
+    275 views
 </div>
     </div>
     <div class="summary">
@@ -805,11 +867,11 @@ For example, a portfolio of 100 call options and 100 ...
         asked <span title="2012-08-31 08:24:38Z" class="relativetime">Aug 31 '12 at 8:24</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/1733/homunculus-reticulli"><div><img src="https://www.gravatar.com/avatar/ad2c4adf290287b497ded01d7dea2a41?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/1733/homunculus-reticulli"><div><img src="https://www.gravatar.com/avatar/f055eb6f9117f4d6c38c8631f56812a5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/1733/homunculus-reticulli">Homunculus Reticulli</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">409</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">416</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -828,8 +890,8 @@ For example, a portfolio of 100 call options and 100 ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="783 views">
-    783 views
+        <div class="views " title="804 views">
+    804 views
 </div>
     </div>
     <div class="summary">
@@ -853,7 +915,7 @@ For example, a portfolio of 100 call options and 100 ...
     </div>
     <div class="user-details">
         <a href="/users/370/alexey-kalmykov">Alexey Kalmykov</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,898</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,908</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
     </div>
 </div>
         </div>  
@@ -874,15 +936,15 @@ For example, a portfolio of 100 call options and 100 ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/greeks?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/greeks?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/greeks?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/greeks?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/greeks?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/greeks?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=greeks&amp;sort=newest" title="the 30 newest greeks questions"><span class="feed-icon"></span>newest greeks questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=greeks&sort=newest" title="the 30 newest greeks questions"><span class="feed-icon"></span>newest greeks questions feed</a></div>
 </div>
 
 
@@ -896,55 +958,283 @@ For example, a portfolio of 100 call options and 100 ...
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/greeks/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/greeks+options" class="post-tag" title="show questions tagged &#39;greeks options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span><br>
-            <a href="/questions/tagged/greeks+option-pricing" class="post-tag" title="show questions tagged &#39;greeks option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/greeks+gamma" class="post-tag" title="show questions tagged &#39;greeks gamma&#39;" rel="tag">gamma</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/greeks+numerical-methods" class="post-tag" title="show questions tagged &#39;greeks numerical-methods&#39;" rel="tag">numerical-methods</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/greeks+portfolio" class="post-tag" title="show questions tagged &#39;greeks portfolio&#39;" rel="tag">portfolio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/greeks+monte-carlo" class="post-tag" title="show questions tagged &#39;greeks monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/greeks+futures" class="post-tag" title="show questions tagged &#39;greeks futures&#39;" rel="tag">futures</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/greeks+derivatives" class="post-tag" title="show questions tagged &#39;greeks derivatives&#39;" rel="tag">derivatives</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/greeks+portfolio-management" class="post-tag" title="show questions tagged &#39;greeks portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/greeks+hedging" class="post-tag" title="show questions tagged &#39;greeks hedging&#39;" rel="tag">hedging</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+swaps" class="post-tag" title="show questions tagged &#39;greeks swaps&#39;" rel="tag">swaps</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+interest-rates" class="post-tag" title="show questions tagged &#39;greeks interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+vix" class="post-tag" title="show questions tagged &#39;greeks vix&#39;" rel="tag">vix</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+bond" class="post-tag" title="show questions tagged &#39;greeks bond&#39;" rel="tag">bond</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+fx" class="post-tag" title="show questions tagged &#39;greeks fx&#39;" rel="tag">fx</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+option-strategies" class="post-tag" title="show questions tagged &#39;greeks option-strategies&#39;" rel="tag">option-strategies</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+investing" class="post-tag" title="show questions tagged &#39;greeks investing&#39;" rel="tag">investing</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+calculation" class="post-tag" title="show questions tagged &#39;greeks calculation&#39;" rel="tag">calculation</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+volatility" class="post-tag" title="show questions tagged &#39;greeks volatility&#39;" rel="tag">volatility</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+basket" class="post-tag" title="show questions tagged &#39;greeks basket&#39;" rel="tag">basket</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+implied-volatility" class="post-tag" title="show questions tagged &#39;greeks implied-volatility&#39;" rel="tag">implied-volatility</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+delta-hedging" class="post-tag" title="show questions tagged &#39;greeks delta-hedging&#39;" rel="tag">delta-hedging</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+delta" class="post-tag" title="show questions tagged &#39;greeks delta&#39;" rel="tag">delta</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+risk-management" class="post-tag" title="show questions tagged &#39;greeks risk-management&#39;" rel="tag">risk-management</a>&nbsp;<br>
-            <a href="/questions/tagged/greeks+history" class="post-tag" title="show questions tagged &#39;greeks history&#39;" rel="tag">history</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/greeks+options" class="post-tag" title="show questions tagged &#39;greeks options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/greeks+option-pricing" class="post-tag" title="show questions tagged &#39;greeks option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/greeks+gamma" class="post-tag" title="show questions tagged &#39;greeks gamma&#39;" rel="tag">gamma</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/greeks+numerical-methods" class="post-tag" title="show questions tagged &#39;greeks numerical-methods&#39;" rel="tag">numerical-methods</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/greeks+portfolio" class="post-tag" title="show questions tagged &#39;greeks portfolio&#39;" rel="tag">portfolio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/greeks+monte-carlo" class="post-tag" title="show questions tagged &#39;greeks monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/greeks+futures" class="post-tag" title="show questions tagged &#39;greeks futures&#39;" rel="tag">futures</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/greeks+derivatives" class="post-tag" title="show questions tagged &#39;greeks derivatives&#39;" rel="tag">derivatives</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/greeks+portfolio-management" class="post-tag" title="show questions tagged &#39;greeks portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/greeks+hedging" class="post-tag" title="show questions tagged &#39;greeks hedging&#39;" rel="tag">hedging</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+swaps" class="post-tag" title="show questions tagged &#39;greeks swaps&#39;" rel="tag">swaps</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+interest-rates" class="post-tag" title="show questions tagged &#39;greeks interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+vix" class="post-tag" title="show questions tagged &#39;greeks vix&#39;" rel="tag">vix</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+bond" class="post-tag" title="show questions tagged &#39;greeks bond&#39;" rel="tag">bond</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+fx" class="post-tag" title="show questions tagged &#39;greeks fx&#39;" rel="tag">fx</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+option-strategies" class="post-tag" title="show questions tagged &#39;greeks option-strategies&#39;" rel="tag">option-strategies</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+investing" class="post-tag" title="show questions tagged &#39;greeks investing&#39;" rel="tag">investing</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+calculation" class="post-tag" title="show questions tagged &#39;greeks calculation&#39;" rel="tag">calculation</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+volatility" class="post-tag" title="show questions tagged &#39;greeks volatility&#39;" rel="tag">volatility</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+basket" class="post-tag" title="show questions tagged &#39;greeks basket&#39;" rel="tag">basket</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+implied-volatility" class="post-tag" title="show questions tagged &#39;greeks implied-volatility&#39;" rel="tag">implied-volatility</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+delta-hedging" class="post-tag" title="show questions tagged &#39;greeks delta-hedging&#39;" rel="tag">delta-hedging</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+delta" class="post-tag" title="show questions tagged &#39;greeks delta&#39;" rel="tag">delta</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+risk-management" class="post-tag" title="show questions tagged &#39;greeks risk-management&#39;" rel="tag">risk-management</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/greeks+history" class="post-tag" title="show questions tagged &#39;greeks history&#39;" rel="tag">history</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -964,7 +1254,7 @@ For example, a portfolio of 100 call options and 100 ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/greeks")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1057,7 +1347,7 @@ For example, a portfolio of 100 call options and 100 ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1084,14 +1374,14 @@ For example, a portfolio of 100 call options and 100 ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1127,6 +1417,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

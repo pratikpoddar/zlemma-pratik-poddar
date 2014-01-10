@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged implied-volatility" href="/feeds/tag/implied-volatility" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187433,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350601,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fimplied-volatility" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fimplied-volatility" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[implied-volatility]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fimplied-volatility">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fimplied-volatility">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[implied-volatility]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/implied-volatility/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/implied-volatility?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/implied-volatility?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/implied-volatility?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/implied-volatility?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/implied-volatility?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/implied-volatility?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/implied-volatility?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/implied-volatility?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/implied-volatility?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/implied-volatility?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,7 +221,145 @@ The volatility of the price of the underlying security that is implied by the ma
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9578">
+<div class="question-summary" id="question-summary-9846">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="62 views">
+    62 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9846/given-implied-vol-for-all-strikes-how-do-you-determine-if-there-are-arbitrage-o" class="question-hyperlink">Given implied vol for all strikes, how do you determine if there are arbitrage opportunities? [closed]</a></h3>
+        <div class="excerpt">
+            Happy new year. I was wondering:
+"Given implied vol for all strikes, how do you determine if there are arbitrage opportunities?"
+Any idea.
+
+Thank you!
+
+        </div>          
+        <div class="tags t-implied-volatility t-arbitrage">
+            <a href="/questions/tagged/implied-volatility" class="post-tag" title="show questions tagged &#39;implied-volatility&#39;" rel="tag">implied-volatility</a> <a href="/questions/tagged/arbitrage" class="post-tag" title="show questions tagged &#39;arbitrage&#39;" rel="tag">arbitrage</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-01 18:38:21Z" class="relativetime">Jan 1 at 18:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6873/user6873"><div><img src="https://www.gravatar.com/avatar/a582e9a34e6028de58fd545536b66a1b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6873/user6873">user6873</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9748">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="41 views">
+    41 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9748/bs-implied-volatility-under-normal-returns" class="question-hyperlink">BS Implied Volatility under Normal returns</a></h3>
+        <div class="excerpt">
+            If I use theoretical prices under a normal valuation model, and I estimate their implied volatility using BLACK SCHOLES implied volatility, do I'll get corresponding log normal volatility?
+
+        </div>          
+        <div class="tags t-black-scholes t-implied-volatility t-normal-distribution t-lognormal">
+            <a href="/questions/tagged/black-scholes" class="post-tag" title="show questions tagged &#39;black-scholes&#39;" rel="tag">black-scholes</a> <a href="/questions/tagged/implied-volatility" class="post-tag" title="show questions tagged &#39;implied-volatility&#39;" rel="tag">implied-volatility</a> <a href="/questions/tagged/normal-distribution" class="post-tag" title="show questions tagged &#39;normal-distribution&#39;" rel="tag">normal-distribution</a> <a href="/questions/tagged/lognormal" class="post-tag" title="show questions tagged &#39;lognormal&#39;" rel="tag">lognormal</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-17 16:18:21Z" class="relativetime">Dec 17 '13 at 16:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6247/julian-lopez-baasch"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/723311839/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6247/julian-lopez-baasch">Julian Lopez Baasch</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9722">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="42 views">
+    42 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9722/itm-puts-under-negatively-skewed-return-distribution-volatility-skew" class="question-hyperlink">ITM Puts under negatively skewed return distribution (volatility skew)</a></h3>
+        <div class="excerpt">
+            I read Hull (2009) on implied volatilies. I understand that (given a negatively skewed return distribution) an OTM-Put is more worth than under a normal distribution and that a OTM-Call is worth less ...
+        </div>          
+        <div class="tags t-implied-volatility t-distribution t-return">
+            <a href="/questions/tagged/implied-volatility" class="post-tag" title="show questions tagged &#39;implied-volatility&#39;" rel="tag">implied-volatility</a> <a href="/questions/tagged/distribution" class="post-tag" title="show questions tagged &#39;distribution&#39;" rel="tag">distribution</a> <a href="/questions/tagged/return" class="post-tag" title="show questions tagged &#39;return&#39;" rel="tag">return</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-14 15:47:18Z" class="relativetime">Dec 14 '13 at 15:47</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6748/freshf"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/b523223e4d7d478ea5138870edcb2ed1?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6748/freshf">FreshF</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9578">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -173,8 +373,8 @@ The volatility of the price of the underlying security that is implied by the ma
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="93 views">
-    93 views
+        <div class="views " title="125 views">
+    125 views
 </div>
     </div>
     <div class="summary">
@@ -193,14 +393,14 @@ I manually MFT, have no knowledge of these specialties, and may be observing phe
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-29 02:36:04Z" class="relativetime">Nov 29 at 2:36</span>
+        asked <span title="2013-11-29 02:36:04Z" class="relativetime">Nov 29 '13 at 2:36</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6500/quantycuenta"><div><img src="https://www.gravatar.com/avatar/3533415508cc1ab89a083a9d8a1ff259?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6500/quantycuenta">quantycuenta</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">123</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">188</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -219,8 +419,8 @@ I manually MFT, have no knowledge of these specialties, and may be observing phe
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="73 views">
-    73 views
+        <div class="views " title="78 views">
+    78 views
 </div>
     </div>
     <div class="summary">
@@ -237,14 +437,14 @@ I manually MFT, have no knowledge of these specialties, and may be observing phe
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-10 03:19:10Z" class="relativetime">Nov 10 at 3:19</span>
+        asked <span title="2013-11-10 03:19:10Z" class="relativetime">Nov 10 '13 at 3:19</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6478/luncheater"><div><img src="https://www.gravatar.com/avatar/d1043eb5fb5084c29d29fd09dc285e6e?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6478/luncheater">Luncheater</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">9</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
@@ -263,8 +463,8 @@ I manually MFT, have no knowledge of these specialties, and may be observing phe
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="216 views">
-    216 views
+        <div class="views " title="238 views">
+    238 views
 </div>
     </div>
     <div class="summary">
@@ -281,7 +481,7 @@ I manually MFT, have no knowledge of these specialties, and may be observing phe
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-03 20:21:15Z" class="relativetime">Nov 3 at 20:21</span>
+        asked <span title="2013-11-03 20:21:15Z" class="relativetime">Nov 3 '13 at 20:21</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6362/andrew-dabrowski"><div><img src="https://www.gravatar.com/avatar/34a314220e38e18d796b1d20745cef3f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -307,8 +507,8 @@ I manually MFT, have no knowledge of these specialties, and may be observing phe
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="72 views">
-    72 views
+        <div class="views " title="100 views">
+    100 views
 </div>
     </div>
     <div class="summary">
@@ -328,7 +528,7 @@ I define implied volatility as ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-22 10:22:03Z" class="relativetime">Oct 22 at 10:22</span>
+        asked <span title="2013-10-22 10:22:03Z" class="relativetime">Oct 22 '13 at 10:22</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6249/jimifiki"><div><img src="https://www.gravatar.com/avatar/b01d1b190b75cd4a4c828052fd3bedbb?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -354,8 +554,8 @@ I define implied volatility as ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="141 views">
-    141 views
+        <div class="views " title="150 views">
+    150 views
 </div>
     </div>
     <div class="summary">
@@ -375,14 +575,14 @@ I smell some reasonably complicated explanation here so any pointer to a paper .
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-18 19:40:29Z" class="relativetime">Oct 18 at 19:40</span>
+        asked <span title="2013-10-18 19:40:29Z" class="relativetime">Oct 18 '13 at 19:40</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5339/statquant"><div><img src="https://www.gravatar.com/avatar/f174bce8a5353f014885c76a9c628823?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5339/statquant">statquant</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">152</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">195</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -401,8 +601,8 @@ I smell some reasonably complicated explanation here so any pointer to a paper .
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="129 views">
-    129 views
+        <div class="views " title="143 views">
+    143 views
 </div>
     </div>
     <div class="summary">
@@ -419,14 +619,14 @@ I smell some reasonably complicated explanation here so any pointer to a paper .
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-01 03:31:34Z" class="relativetime">Oct 1 at 3:31</span>
+        asked <span title="2013-10-01 03:31:34Z" class="relativetime">Oct 1 '13 at 3:31</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5086/sashkello"><div><img src="https://www.gravatar.com/avatar/fa4eda8044c652477c07fde37d5699b5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5086/sashkello">sashkello</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">222</span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">222</span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
     </div>
 </div>
         </div>  
@@ -445,8 +645,8 @@ I smell some reasonably complicated explanation here so any pointer to a paper .
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="153 views">
-    153 views
+        <div class="views " title="159 views">
+    159 views
 </div>
     </div>
     <div class="summary">
@@ -469,14 +669,14 @@ VSTOXX futures ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-14 14:15:51Z" class="relativetime">Aug 14 at 14:15</span>
+        asked <span title="2013-08-14 14:15:51Z" class="relativetime">Aug 14 '13 at 14:15</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2909/eli"><div><img src="https://www.gravatar.com/avatar/4c560d2d3eba57e4ef1d162f17813d19?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2909/eli">Eli</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">331</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">346</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
@@ -495,8 +695,8 @@ VSTOXX futures ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="767 views">
-    767 views
+        <div class="views " title="860 views">
+    860 views
 </div>
     </div>
     <div class="summary">
@@ -515,14 +715,14 @@ For ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-01 15:05:55Z" class="relativetime">Jul 1 at 15:05</span>
+        asked <span title="2013-07-01 15:05:55Z" class="relativetime">Jul 1 '13 at 15:05</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3058/lisa-ann"><div><img src="https://www.gravatar.com/avatar/76984cfe5803365e2c41a8765137636a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/3058/lisa-ann">Lisa Ann</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">473</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">483</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -541,8 +741,8 @@ For ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="127 views">
-    127 views
+        <div class="views " title="138 views">
+    138 views
 </div>
     </div>
     <div class="summary">
@@ -562,14 +762,14 @@ Should I use Roll-Geske-Whaley and solve for a given option price?
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-27 18:27:57Z" class="relativetime">Jun 27 at 18:27</span>
+        asked <span title="2013-06-27 18:27:57Z" class="relativetime">Jun 27 '13 at 18:27</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2257/victor-p"><div><img src="https://www.gravatar.com/avatar/be17c093ae7d0c09b4f9930846d8e455?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2257/victor-p">Victor P</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">413</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">413</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
     </div>
 </div>
         </div>  
@@ -588,8 +788,8 @@ Should I use Roll-Geske-Whaley and solve for a given option price?
                 <strong>4</strong>answers
             </div>
         </div>
-        <div class="views " title="787 views">
-    787 views
+        <div class="views " title="945 views">
+    945 views
 </div>
     </div>
     <div class="summary">
@@ -608,14 +808,14 @@ Please can you point me to paper or implementation (R, ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-14 22:29:42Z" class="relativetime">Jun 14 at 22:29</span>
+        asked <span title="2013-06-14 22:29:42Z" class="relativetime">Jun 14 '13 at 22:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2257/victor-p"><div><img src="https://www.gravatar.com/avatar/be17c093ae7d0c09b4f9930846d8e455?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2257/victor-p">Victor P</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">413</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">413</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
     </div>
 </div>
         </div>  
@@ -634,8 +834,8 @@ Please can you point me to paper or implementation (R, ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="160 views">
-    160 views
+        <div class="views " title="176 views">
+    176 views
 </div>
     </div>
     <div class="summary">
@@ -652,14 +852,14 @@ Please can you point me to paper or implementation (R, ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-09 06:19:17Z" class="relativetime">Jun 9 at 6:19</span>
+        asked <span title="2013-06-09 06:19:17Z" class="relativetime">Jun 9 '13 at 6:19</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/4729/jessica"><div><img src="https://www.gravatar.com/avatar/7426aa2b2a119593ceb346114bad7049?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/4729/jessica">jessica</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">408</span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">423</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -678,8 +878,8 @@ Please can you point me to paper or implementation (R, ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="188 views">
-    188 views
+        <div class="views " title="210 views">
+    210 views
 </div>
     </div>
     <div class="summary">
@@ -703,158 +903,14 @@ I'm looking to calculate IV for each tick. Is there a way to approximate the tic
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-31 21:44:47Z" class="relativetime">May 31 at 21:44</span>
+        asked <span title="2013-05-31 21:44:47Z" class="relativetime">May 31 '13 at 21:44</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2257/victor-p"><div><img src="https://www.gravatar.com/avatar/be17c093ae7d0c09b4f9930846d8e455?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2257/victor-p">Victor P</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">413</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-8070">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="108 views">
-    108 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/8070/different-exercise-style-options-on-same-underlying" class="question-hyperlink">Different Exercise Style Options on Same Underlying</a></h3>
-        <div class="excerpt">
-            Some equities on European markets have options traded in two different exercise styles: American and European. 
-
-Examples: 
-
-
-ABB and ABB (european) on Eurex
-Banco Santander on MEFF
-
-
-Consider ...
-        </div>          
-        <div class="tags t-options t-implied-volatility t-surface">
-            <a href="/questions/tagged/options" class="post-tag" title="show questions tagged &#39;options&#39;" rel="tag">options</a> <a href="/questions/tagged/implied-volatility" class="post-tag" title="show questions tagged &#39;implied-volatility&#39;" rel="tag">implied-volatility</a> <a href="/questions/tagged/surface" class="post-tag" title="show questions tagged &#39;surface&#39;" rel="tag">surface</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-24 15:44:04Z" class="relativetime">May 24 at 15:44</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/2909/eli"><div><img src="https://www.gravatar.com/avatar/4c560d2d3eba57e4ef1d162f17813d19?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/2909/eli">Eli</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">331</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-8056">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>11</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="628 views">
-    628 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/8056/so-many-volatility-models-any-comparisons-of-them" class="question-hyperlink">So many volatility models. Any comparisons of them?</a></h3>
-        <div class="excerpt">
-            Are there any papers that make an explicit contrast/comparison of the following (or other) vol models in terms of the suitability for addressing some empirical problem?
-
-
-Wavelet multiresolution ...
-        </div>          
-        <div class="tags t-volatility t-implied-volatility t-garch t-econometrics">
-            <a href="/questions/tagged/volatility" class="post-tag" title="show questions tagged &#39;volatility&#39;" rel="tag">volatility</a> <a href="/questions/tagged/implied-volatility" class="post-tag" title="show questions tagged &#39;implied-volatility&#39;" rel="tag">implied-volatility</a> <a href="/questions/tagged/garch" class="post-tag" title="show questions tagged &#39;garch&#39;" rel="tag">garch</a> <a href="/questions/tagged/econometrics" class="post-tag" title="show questions tagged &#39;econometrics&#39;" rel="tag">econometrics</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-23 14:11:45Z" class="relativetime">May 23 at 14:11</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/3174/jase"><div><img src="https://www.gravatar.com/avatar/79f02c080f9fb680e0493500dcbcce0a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/3174/jase">Jase</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">542</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-8055">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="58 views">
-    58 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/8055/discount-of-asian-vs-european-vols" class="question-hyperlink">Discount of Asian vs European vols</a></h3>
-        <div class="excerpt">
-            I understand the discount for Asian vs. European vol depends on time to expiry and length of averaging period. This makes sense intuitively; a short averaging period far away blurs into a single ...
-        </div>          
-        <div class="tags t-implied-volatility t-asian t-european">
-            <a href="/questions/tagged/implied-volatility" class="post-tag" title="show questions tagged &#39;implied-volatility&#39;" rel="tag">implied-volatility</a> <a href="/questions/tagged/asian" class="post-tag" title="show questions tagged &#39;asian&#39;" rel="tag">asian</a> <a href="/questions/tagged/european" class="post-tag" title="show questions tagged &#39;european&#39;" rel="tag">european</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-23 07:17:05Z" class="relativetime">May 23 at 7:17</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5394/blank-duck"><div><img src="https://www.gravatar.com/avatar/2caeff24526072fa83b4961b7e4abd77?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5394/blank-duck">blank duck</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">413</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
     </div>
 </div>
         </div>  
@@ -878,77 +934,305 @@ Wavelet multiresolution ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/implied-volatility?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/implied-volatility?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/implied-volatility?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/implied-volatility?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/implied-volatility?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/implied-volatility?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=implied-volatility&amp;sort=newest" title="the 30 newest implied-volatility questions"><span class="feed-icon"></span>newest implied-volatility questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=implied-volatility&sort=newest" title="the 30 newest implied-volatility questions"><span class="feed-icon"></span>newest implied-volatility questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">66</div>
+            <div class="summarycount al">69</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/implied-volatility" class="post-tag" title="show questions tagged &#39;implied-volatility&#39;" rel="tag">implied-volatility</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/implied-volatility/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/implied-volatility+options" class="post-tag" title="show questions tagged &#39;implied-volatility options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">29</span></span><br>
-            <a href="/questions/tagged/implied-volatility+volatility" class="post-tag" title="show questions tagged &#39;implied-volatility volatility&#39;" rel="tag">volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span><br>
-            <a href="/questions/tagged/implied-volatility+option-pricing" class="post-tag" title="show questions tagged &#39;implied-volatility option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/implied-volatility+black-scholes" class="post-tag" title="show questions tagged &#39;implied-volatility black-scholes&#39;" rel="tag">black-scholes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/implied-volatility+vix" class="post-tag" title="show questions tagged &#39;implied-volatility vix&#39;" rel="tag">vix</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/implied-volatility+skew" class="post-tag" title="show questions tagged &#39;implied-volatility skew&#39;" rel="tag">skew</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/implied-volatility+volatiliy-smile" class="post-tag" title="show questions tagged &#39;implied-volatility volatiliy-smile&#39;" rel="tag">volatiliy-smile</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/implied-volatility+equities" class="post-tag" title="show questions tagged &#39;implied-volatility equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/implied-volatility+distribution" class="post-tag" title="show questions tagged &#39;implied-volatility distribution&#39;" rel="tag">distribution</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/implied-volatility+spx" class="post-tag" title="show questions tagged &#39;implied-volatility spx&#39;" rel="tag">spx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/implied-volatility+stochastic-volatility" class="post-tag" title="show questions tagged &#39;implied-volatility stochastic-volatility&#39;" rel="tag">stochastic-volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/implied-volatility+american-options" class="post-tag" title="show questions tagged &#39;implied-volatility american-options&#39;" rel="tag">american-options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/implied-volatility+fx" class="post-tag" title="show questions tagged &#39;implied-volatility fx&#39;" rel="tag">fx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/implied-volatility+correlation" class="post-tag" title="show questions tagged &#39;implied-volatility correlation&#39;" rel="tag">correlation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/implied-volatility+visualization" class="post-tag" title="show questions tagged &#39;implied-volatility visualization&#39;" rel="tag">visualization</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/implied-volatility+market-data" class="post-tag" title="show questions tagged &#39;implied-volatility market-data&#39;" rel="tag">market-data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/implied-volatility+garch" class="post-tag" title="show questions tagged &#39;implied-volatility garch&#39;" rel="tag">garch</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/implied-volatility+research" class="post-tag" title="show questions tagged &#39;implied-volatility research&#39;" rel="tag">research</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/implied-volatility+r" class="post-tag" title="show questions tagged &#39;implied-volatility r&#39;" rel="tag">r</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/implied-volatility+index" class="post-tag" title="show questions tagged &#39;implied-volatility index&#39;" rel="tag">index</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/implied-volatility+interest-rates" class="post-tag" title="show questions tagged &#39;implied-volatility interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/implied-volatility+market-making" class="post-tag" title="show questions tagged &#39;implied-volatility market-making&#39;" rel="tag">market-making</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/implied-volatility+quantlib" class="post-tag" title="show questions tagged &#39;implied-volatility quantlib&#39;" rel="tag">quantlib</a>&nbsp;<br>
-            <a href="/questions/tagged/implied-volatility+backtesting" class="post-tag" title="show questions tagged &#39;implied-volatility backtesting&#39;" rel="tag">backtesting</a>&nbsp;<br>
-            <a href="/questions/tagged/implied-volatility+replication" class="post-tag" title="show questions tagged &#39;implied-volatility replication&#39;" rel="tag">replication</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/implied-volatility+options" class="post-tag" title="show questions tagged &#39;implied-volatility options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">29</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/implied-volatility+volatility" class="post-tag" title="show questions tagged &#39;implied-volatility volatility&#39;" rel="tag">volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/implied-volatility+option-pricing" class="post-tag" title="show questions tagged &#39;implied-volatility option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/implied-volatility+black-scholes" class="post-tag" title="show questions tagged &#39;implied-volatility black-scholes&#39;" rel="tag">black-scholes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/implied-volatility+vix" class="post-tag" title="show questions tagged &#39;implied-volatility vix&#39;" rel="tag">vix</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/implied-volatility+distribution" class="post-tag" title="show questions tagged &#39;implied-volatility distribution&#39;" rel="tag">distribution</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/implied-volatility+volatiliy-smile" class="post-tag" title="show questions tagged &#39;implied-volatility volatiliy-smile&#39;" rel="tag">volatiliy-smile</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/implied-volatility+skew" class="post-tag" title="show questions tagged &#39;implied-volatility skew&#39;" rel="tag">skew</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/implied-volatility+equities" class="post-tag" title="show questions tagged &#39;implied-volatility equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/implied-volatility+stochastic-volatility" class="post-tag" title="show questions tagged &#39;implied-volatility stochastic-volatility&#39;" rel="tag">stochastic-volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+american-options" class="post-tag" title="show questions tagged &#39;implied-volatility american-options&#39;" rel="tag">american-options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+spx" class="post-tag" title="show questions tagged &#39;implied-volatility spx&#39;" rel="tag">spx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+fx" class="post-tag" title="show questions tagged &#39;implied-volatility fx&#39;" rel="tag">fx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+interest-rates" class="post-tag" title="show questions tagged &#39;implied-volatility interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+market-making" class="post-tag" title="show questions tagged &#39;implied-volatility market-making&#39;" rel="tag">market-making</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+index" class="post-tag" title="show questions tagged &#39;implied-volatility index&#39;" rel="tag">index</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+garch" class="post-tag" title="show questions tagged &#39;implied-volatility garch&#39;" rel="tag">garch</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+research" class="post-tag" title="show questions tagged &#39;implied-volatility research&#39;" rel="tag">research</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+market-data" class="post-tag" title="show questions tagged &#39;implied-volatility market-data&#39;" rel="tag">market-data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+visualization" class="post-tag" title="show questions tagged &#39;implied-volatility visualization&#39;" rel="tag">visualization</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+correlation" class="post-tag" title="show questions tagged &#39;implied-volatility correlation&#39;" rel="tag">correlation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+r" class="post-tag" title="show questions tagged &#39;implied-volatility r&#39;" rel="tag">r</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+replication" class="post-tag" title="show questions tagged &#39;implied-volatility replication&#39;" rel="tag">replication</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+variance" class="post-tag" title="show questions tagged &#39;implied-volatility variance&#39;" rel="tag">variance</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/implied-volatility+calibration" class="post-tag" title="show questions tagged &#39;implied-volatility calibration&#39;" rel="tag">calibration</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -968,7 +1252,7 @@ Wavelet multiresolution ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/implied-volatility")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1061,7 +1345,7 @@ Wavelet multiresolution ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1088,14 +1372,14 @@ Wavelet multiresolution ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1131,6 +1415,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

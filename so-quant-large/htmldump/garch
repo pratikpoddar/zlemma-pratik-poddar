@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged garch" href="/feeds/tag/garch" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187207,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350481,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgarch" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgarch" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[garch]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgarch">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgarch">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[garch]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/garch/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/garch?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/garch?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/garch?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/garch?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/garch?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/garch?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/garch?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/garch?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/garch?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/garch?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,7 +221,7 @@ The <a href="/questions/tagged/garch" class="post-tag" title="show questions tag
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9453">
+<div class="question-summary" id="question-summary-9775">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -169,12 +231,147 @@ The <a href="/questions/tagged/garch" class="post-tag" title="show questions tag
                     <div class="viewcount">vote</div>
                 </div>
             </div>
+            <div class="status answered">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="413 views">
+    413 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9775/how-to-trade-volatility" class="question-hyperlink">How to trade volatility?</a></h3>
+        <div class="excerpt">
+            I am analyzing the volatility of financial stock returns and let's say I have a pretty good model to forecast tomorrows volatility of the stock returns. So let's say for simplicity reasons I have a ...
+        </div>          
+        <div class="tags t-volatility t-quant-trading-strategies t-trading t-garch">
+            <a href="/questions/tagged/volatility" class="post-tag" title="show questions tagged &#39;volatility&#39;" rel="tag">volatility</a> <a href="/questions/tagged/quant-trading-strategies" class="post-tag" title="show questions tagged &#39;quant-trading-strategies&#39;" rel="tag">quant-trading-strategies</a> <a href="/questions/tagged/trading" class="post-tag" title="show questions tagged &#39;trading&#39;" rel="tag">trading</a> <a href="/questions/tagged/garch" class="post-tag" title="show questions tagged &#39;garch&#39;" rel="tag">garch</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-22 17:03:34Z" class="relativetime">Dec 22 '13 at 17:03</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/5395/jen-bohold"><div><img src="https://www.gravatar.com/avatar/4231586813e362916b85209052d97794?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/5395/jen-bohold">Jen Bohold</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">106</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9661">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
             <div class="status unanswered">
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="35 views">
-    35 views
+        <div class="views " title="70 views">
+    70 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9661/fitting-student-t-distributions-to-log-returns" class="question-hyperlink">Fitting Student t-distributions to log-returns</a></h3>
+        <div class="excerpt">
+            It seems that some tail-risk centric groups are bent on using Paretian and t-distributions to account for tail risk when fitting log-returns.  It has been observed, however, that with and without ...
+        </div>          
+        <div class="tags t-probability t-garch t-distribution t-log-returns t-arma">
+            <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> <a href="/questions/tagged/garch" class="post-tag" title="show questions tagged &#39;garch&#39;" rel="tag">garch</a> <a href="/questions/tagged/distribution" class="post-tag" title="show questions tagged &#39;distribution&#39;" rel="tag">distribution</a> <a href="/questions/tagged/log-returns" class="post-tag" title="show questions tagged &#39;log-returns&#39;" rel="tag">log-returns</a> <a href="/questions/tagged/arma" class="post-tag" title="show questions tagged &#39;arma&#39;" rel="tag">arma</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-08 19:15:45Z" class="relativetime">Dec 8 '13 at 19:15</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6430/lep"><div><img src="https://www.gravatar.com/avatar/243c54e74d4b6699c1cc7450b9d54dae?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6430/lep">LEP</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">126</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9651">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="156 views">
+    156 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9651/evaluation-volatility-with-garch-model" class="question-hyperlink">Evaluation volatility with Garch model</a></h3>
+        <div class="excerpt">
+            I want to forecast the volatility (with Garch) of a canadian stock in 5 months with daily returns. How many data do I have to collect ?
+
+Thanks.
+
+        </div>          
+        <div class="tags t-volatility t-finance t-garch t-models">
+            <a href="/questions/tagged/volatility" class="post-tag" title="show questions tagged &#39;volatility&#39;" rel="tag">volatility</a> <a href="/questions/tagged/finance" class="post-tag" title="show questions tagged &#39;finance&#39;" rel="tag">finance</a> <a href="/questions/tagged/garch" class="post-tag" title="show questions tagged &#39;garch&#39;" rel="tag">garch</a> <a href="/questions/tagged/models" class="post-tag" title="show questions tagged &#39;models&#39;" rel="tag">models</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-07 18:00:57Z" class="relativetime">Dec 7 '13 at 18:00</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6685/user6685"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/600446674/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6685/user6685">user6685</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9453">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="59 views">
+    59 views
 </div>
     </div>
     <div class="summary">
@@ -195,14 +392,14 @@ So for each model, I ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-14 21:29:37Z" class="relativetime">Nov 14 at 21:29</span>
+        asked <span title="2013-11-14 21:29:37Z" class="relativetime">Nov 14 '13 at 21:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6392/user847663"><div><img src="https://www.gravatar.com/avatar/b2e574a4de3a16d194c345fa39661e54?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6392/user847663">user847663</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">156</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -213,7 +410,7 @@ So for each model, I ...
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>4</strong></span>
+                    <span class="vote-count-post "><strong>5</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -221,8 +418,8 @@ So for each model, I ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="168 views">
-    168 views
+        <div class="views " title="260 views">
+    260 views
 </div>
     </div>
     <div class="summary">
@@ -239,14 +436,14 @@ So for each model, I ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-04 06:02:50Z" class="relativetime">Nov 4 at 6:02</span>
+        asked <span title="2013-11-04 06:02:50Z" class="relativetime">Nov 4 '13 at 6:02</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/6430/lep"><div><img src="https://www.gravatar.com/avatar/cf655f68be812df690090f0d9fa7b4ba?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+        <a href="/users/6430/lep"><div><img src="https://www.gravatar.com/avatar/243c54e74d4b6699c1cc7450b9d54dae?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6430/lep">LEP</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">41</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">126</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -265,8 +462,8 @@ So for each model, I ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="182 views">
-    182 views
+        <div class="views " title="205 views">
+    205 views
 </div>
     </div>
     <div class="summary">
@@ -286,14 +483,14 @@ Suppose I wanted to compare the forecasting accuracy of a GARCH(1,1) model with 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-29 22:38:02Z" class="relativetime">Oct 29 at 22:38</span>
+        asked <span title="2013-10-29 22:38:02Z" class="relativetime">Oct 29 '13 at 22:38</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6392/user847663"><div><img src="https://www.gravatar.com/avatar/b2e574a4de3a16d194c345fa39661e54?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6392/user847663">user847663</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">156</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -312,8 +509,8 @@ Suppose I wanted to compare the forecasting accuracy of a GARCH(1,1) model with 
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="164 views">
-    164 views
+        <div class="views " title="194 views">
+    194 views
 </div>
     </div>
     <div class="summary">
@@ -332,7 +529,7 @@ Hi, I was trying to fit a GARCH(1,1) model to the variance of log returns of a s
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-18 01:13:08Z" class="relativetime">Oct 18 at 1:13</span>
+        asked <span title="2013-10-18 01:13:08Z" class="relativetime">Oct 18 '13 at 1:13</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6307/nonbaryonic13"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/577038148/picture?type=large" alt=""></div></a>
@@ -358,8 +555,8 @@ Hi, I was trying to fit a GARCH(1,1) model to the variance of log returns of a s
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="263 views">
-    263 views
+        <div class="views " title="350 views">
+    350 views
 </div>
     </div>
     <div class="summary">
@@ -378,7 +575,7 @@ The SAS ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-14 11:20:00Z" class="relativetime">Sep 14 at 11:20</span>
+        asked <span title="2013-09-14 11:20:00Z" class="relativetime">Sep 14 '13 at 11:20</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6094/dalem"><div><img src="https://www.gravatar.com/avatar/ca0600ae514b847a275e2ec617432765?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -404,8 +601,8 @@ The SAS ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="220 views">
-    220 views
+        <div class="views " title="264 views">
+    264 views
 </div>
     </div>
     <div class="summary">
@@ -422,7 +619,7 @@ The SAS ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-08 20:14:25Z" class="relativetime">Aug 8 at 20:14</span>
+        asked <span title="2013-08-08 20:14:25Z" class="relativetime">Aug 8 '13 at 20:14</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5897/lostinthewoods"><div><img src="https://www.gravatar.com/avatar/f8c9509899842daf5bee1b6d084fac2b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -448,8 +645,8 @@ The SAS ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="116 views">
-    116 views
+        <div class="views " title="141 views">
+    141 views
 </div>
     </div>
     <div class="summary">
@@ -466,7 +663,7 @@ The SAS ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-06 20:22:36Z" class="relativetime">Aug 6 at 20:22</span>
+        asked <span title="2013-08-06 20:22:36Z" class="relativetime">Aug 6 '13 at 20:22</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5874/lostinthewoods"><div><img src="https://www.gravatar.com/avatar/f8c9509899842daf5bee1b6d084fac2b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -492,8 +689,8 @@ The SAS ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="177 views">
-    177 views
+        <div class="views " title="197 views">
+    197 views
 </div>
     </div>
     <div class="summary">
@@ -510,7 +707,7 @@ The SAS ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-26 19:24:17Z" class="relativetime">Jun 26 at 19:24</span>
+        asked <span title="2013-06-26 19:24:17Z" class="relativetime">Jun 26 '13 at 19:24</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5610/user5610"><div><img src="https://www.gravatar.com/avatar/baaf2a17ae6089c1356b423b4f18858f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -536,8 +733,8 @@ The SAS ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="385 views">
-    385 views
+        <div class="views " title="439 views">
+    439 views
 </div>
     </div>
     <div class="summary">
@@ -557,7 +754,7 @@ The SAS ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-18 14:02:05Z" class="relativetime">Jun 18 at 14:02</span>
+        asked <span title="2013-06-18 14:02:05Z" class="relativetime">Jun 18 '13 at 14:02</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5556/mark80"><div><img src="https://www.gravatar.com/avatar/adf2e2790524904da93a27b04b267ff8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -583,8 +780,8 @@ The SAS ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="160 views">
-    160 views
+        <div class="views " title="176 views">
+    176 views
 </div>
     </div>
     <div class="summary">
@@ -601,14 +798,14 @@ The SAS ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-09 06:19:17Z" class="relativetime">Jun 9 at 6:19</span>
+        asked <span title="2013-06-09 06:19:17Z" class="relativetime">Jun 9 '13 at 6:19</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/4729/jessica"><div><img src="https://www.gravatar.com/avatar/7426aa2b2a119593ceb346114bad7049?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/4729/jessica">jessica</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">408</span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">423</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -627,8 +824,8 @@ The SAS ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="628 views">
-    628 views
+        <div class="views " title="648 views">
+    648 views
 </div>
     </div>
     <div class="summary">
@@ -648,14 +845,14 @@ Wavelet multiresolution ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-23 14:11:45Z" class="relativetime">May 23 at 14:11</span>
+        asked <span title="2013-05-23 14:11:45Z" class="relativetime">May 23 '13 at 14:11</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3174/jase"><div><img src="https://www.gravatar.com/avatar/79f02c080f9fb680e0493500dcbcce0a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/3174/jase">Jase</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">542</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">552</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
     </div>
 </div>
         </div>  
@@ -674,8 +871,8 @@ Wavelet multiresolution ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="491 views">
-    491 views
+        <div class="views " title="598 views">
+    598 views
 </div>
     </div>
     <div class="summary">
@@ -696,7 +893,7 @@ I specify my model and do the fit and show the plots with
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-08 10:14:19Z" class="relativetime">May 8 at 10:14</span>
+        asked <span title="2013-05-08 10:14:19Z" class="relativetime">May 8 '13 at 10:14</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5078/stat-tistician"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/pjYTI.png?s=32&g=1" alt=""></div></a>
@@ -704,146 +901,6 @@ I specify my model and do the fit and show the plots with
     <div class="user-details">
         <a href="/users/5078/stat-tistician">Stat Tistician</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-7911">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>8</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="165 views">
-    165 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/7911/rugarch-joint-estimation-leads-to-different-results" class="question-hyperlink">rugarch: Joint estimation leads to different results</a></h3>
-        <div class="excerpt">
-            I want to fit an ARMA-GARCH model to my data using rugarch package in R.
-
-First of all, I look at the acf and pacf:
-
-...
-        </div>          
-        <div class="tags t-r t-garch t-estimation t-auto-correlation t-arma">
-            <a href="/questions/tagged/r" class="post-tag" title="show questions tagged &#39;r&#39;" rel="tag">r</a> <a href="/questions/tagged/garch" class="post-tag" title="show questions tagged &#39;garch&#39;" rel="tag">garch</a> <a href="/questions/tagged/estimation" class="post-tag" title="show questions tagged &#39;estimation&#39;" rel="tag">estimation</a> <a href="/questions/tagged/auto-correlation" class="post-tag" title="show questions tagged &#39;auto-correlation&#39;" rel="tag">auto-correlation</a> <a href="/questions/tagged/arma" class="post-tag" title="show questions tagged &#39;arma&#39;" rel="tag">arma</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-05 17:28:21Z" class="relativetime">May 5 at 17:28</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5078/stat-tistician"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/pjYTI.png?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5078/stat-tistician">Stat Tistician</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-7849">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="157 views">
-    157 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/7849/error-term-innovation-process-in-arch-garch-processes" class="question-hyperlink">Error term/Innovation process in ARCH/GARCH processes?</a></h3>
-        <div class="excerpt">
-            I am wondering about the distribution of the error term/innovation process in a ARCH/GARCH process and its implementation, I am not sure about some points. The basic assumption is
-
-...
-        </div>          
-        <div class="tags t-r t-garch">
-            <a href="/questions/tagged/r" class="post-tag" title="show questions tagged &#39;r&#39;" rel="tag">r</a> <a href="/questions/tagged/garch" class="post-tag" title="show questions tagged &#39;garch&#39;" rel="tag">garch</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-04-26 17:11:47Z" class="relativetime">Apr 26 at 17:11</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5078/stat-tistician"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/pjYTI.png?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5078/stat-tistician">Stat Tistician</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-7725">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="76 views">
-    76 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/7725/what-does-negative-gamma-mean-in-apgarch-model" class="question-hyperlink">What does negative gamma mean in APGARCH model?</a></h3>
-        <div class="excerpt">
-            I got a gamma of -0.1321677.
-
-...
-        </div>          
-        <div class="tags t-r t-garch">
-            <a href="/questions/tagged/r" class="post-tag" title="show questions tagged &#39;r&#39;" rel="tag">r</a> <a href="/questions/tagged/garch" class="post-tag" title="show questions tagged &#39;garch&#39;" rel="tag">garch</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-04-12 09:57:25Z" class="relativetime">Apr 12 at 9:57</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5116/user5116"><div><img src="https://www.gravatar.com/avatar/ea2e437f9025cb0d21da50ef74b194fd?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5116/user5116">user5116</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
@@ -865,77 +922,305 @@ First of all, I look at the acf and pacf:
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/garch?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/garch?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/garch?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/garch?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/garch?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/garch?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=garch&amp;sort=newest" title="the 30 newest garch questions"><span class="feed-icon"></span>newest garch questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=garch&sort=newest" title="the 30 newest garch questions"><span class="feed-icon"></span>newest garch questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">34</div>
+            <div class="summarycount al">37</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/garch" class="post-tag" title="show questions tagged &#39;garch&#39;" rel="tag">garch</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/garch/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/garch+volatility" class="post-tag" title="show questions tagged &#39;garch volatility&#39;" rel="tag">volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span><br>
-            <a href="/questions/tagged/garch+r" class="post-tag" title="show questions tagged &#39;garch r&#39;" rel="tag">r</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/garch+arma" class="post-tag" title="show questions tagged &#39;garch arma&#39;" rel="tag">arma</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/garch+estimation" class="post-tag" title="show questions tagged &#39;garch estimation&#39;" rel="tag">estimation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/garch+econometrics" class="post-tag" title="show questions tagged &#39;garch econometrics&#39;" rel="tag">econometrics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/garch+time-series" class="post-tag" title="show questions tagged &#39;garch time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/garch+variance" class="post-tag" title="show questions tagged &#39;garch variance&#39;" rel="tag">variance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/garch+correlation" class="post-tag" title="show questions tagged &#39;garch correlation&#39;" rel="tag">correlation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/garch+programming" class="post-tag" title="show questions tagged &#39;garch programming&#39;" rel="tag">programming</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/garch+correlation-matrix" class="post-tag" title="show questions tagged &#39;garch correlation-matrix&#39;" rel="tag">correlation-matrix</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/garch+implied-volatility" class="post-tag" title="show questions tagged &#39;garch implied-volatility&#39;" rel="tag">implied-volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/garch+risk" class="post-tag" title="show questions tagged &#39;garch risk&#39;" rel="tag">risk</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+forecasting" class="post-tag" title="show questions tagged &#39;garch forecasting&#39;" rel="tag">forecasting</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+var" class="post-tag" title="show questions tagged &#39;garch var&#39;" rel="tag">var</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+mathematics" class="post-tag" title="show questions tagged &#39;garch mathematics&#39;" rel="tag">mathematics</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+trading" class="post-tag" title="show questions tagged &#39;garch trading&#39;" rel="tag">trading</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+markov-switching" class="post-tag" title="show questions tagged &#39;garch markov-switching&#39;" rel="tag">markov-switching</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+high-frequency" class="post-tag" title="show questions tagged &#39;garch high-frequency&#39;" rel="tag">high-frequency</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+cross-validation" class="post-tag" title="show questions tagged &#39;garch cross-validation&#39;" rel="tag">cross-validation</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+returns" class="post-tag" title="show questions tagged &#39;garch returns&#39;" rel="tag">returns</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+auto-correlation" class="post-tag" title="show questions tagged &#39;garch auto-correlation&#39;" rel="tag">auto-correlation</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+monte-carlo" class="post-tag" title="show questions tagged &#39;garch monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+sas" class="post-tag" title="show questions tagged &#39;garch sas&#39;" rel="tag">sas</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+bekk" class="post-tag" title="show questions tagged &#39;garch bekk&#39;" rel="tag">bekk</a>&nbsp;<br>
-            <a href="/questions/tagged/garch+options" class="post-tag" title="show questions tagged &#39;garch options&#39;" rel="tag">options</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/garch+volatility" class="post-tag" title="show questions tagged &#39;garch volatility&#39;" rel="tag">volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/garch+r" class="post-tag" title="show questions tagged &#39;garch r&#39;" rel="tag">r</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/garch+arma" class="post-tag" title="show questions tagged &#39;garch arma&#39;" rel="tag">arma</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/garch+estimation" class="post-tag" title="show questions tagged &#39;garch estimation&#39;" rel="tag">estimation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/garch+econometrics" class="post-tag" title="show questions tagged &#39;garch econometrics&#39;" rel="tag">econometrics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/garch+variance" class="post-tag" title="show questions tagged &#39;garch variance&#39;" rel="tag">variance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/garch+time-series" class="post-tag" title="show questions tagged &#39;garch time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/garch+programming" class="post-tag" title="show questions tagged &#39;garch programming&#39;" rel="tag">programming</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/garch+correlation-matrix" class="post-tag" title="show questions tagged &#39;garch correlation-matrix&#39;" rel="tag">correlation-matrix</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/garch+correlation" class="post-tag" title="show questions tagged &#39;garch correlation&#39;" rel="tag">correlation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+implied-volatility" class="post-tag" title="show questions tagged &#39;garch implied-volatility&#39;" rel="tag">implied-volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+trading" class="post-tag" title="show questions tagged &#39;garch trading&#39;" rel="tag">trading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+finance" class="post-tag" title="show questions tagged &#39;garch finance&#39;" rel="tag">finance</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+mathematics" class="post-tag" title="show questions tagged &#39;garch mathematics&#39;" rel="tag">mathematics</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+var" class="post-tag" title="show questions tagged &#39;garch var&#39;" rel="tag">var</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+forecasting" class="post-tag" title="show questions tagged &#39;garch forecasting&#39;" rel="tag">forecasting</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+risk" class="post-tag" title="show questions tagged &#39;garch risk&#39;" rel="tag">risk</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+markov-switching" class="post-tag" title="show questions tagged &#39;garch markov-switching&#39;" rel="tag">markov-switching</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+high-frequency" class="post-tag" title="show questions tagged &#39;garch high-frequency&#39;" rel="tag">high-frequency</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+modeling" class="post-tag" title="show questions tagged &#39;garch modeling&#39;" rel="tag">modeling</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+returns" class="post-tag" title="show questions tagged &#39;garch returns&#39;" rel="tag">returns</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+auto-correlation" class="post-tag" title="show questions tagged &#39;garch auto-correlation&#39;" rel="tag">auto-correlation</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+quant-trading-strategies" class="post-tag" title="show questions tagged &#39;garch quant-trading-strategies&#39;" rel="tag">quant-trading-strategies</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+probability" class="post-tag" title="show questions tagged &#39;garch probability&#39;" rel="tag">probability</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/garch+monte-carlo" class="post-tag" title="show questions tagged &#39;garch monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -955,7 +1240,7 @@ First of all, I look at the acf and pacf:
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/garch")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1048,7 +1333,7 @@ First of all, I look at the acf and pacf:
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1075,14 +1360,14 @@ First of all, I look at the acf and pacf:
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1118,6 +1403,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

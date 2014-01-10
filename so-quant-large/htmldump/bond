@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged bond" href="/feeds/tag/bond" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187667,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350609,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fbond" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fbond" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[bond]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fbond">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fbond">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[bond]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/bond/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/bond?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/bond?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/bond?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/bond?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/bond?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/bond?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/bond?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/bond?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/bond?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/bond?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,7 +221,141 @@ The <a href="/questions/tagged/bond" class="post-tag" title="show questions tagg
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9605">
+<div class="question-summary" id="question-summary-9865">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="43 views">
+    43 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9865/bonds-yield-vs-yield-to-maturity" class="question-hyperlink">Bonds: Yield vs Yield to maturity [on hold]</a></h3>
+        <div class="excerpt">
+            I am new to bonds and in my lectures notes it says the following:
+
+...
+        </div>          
+        <div class="tags t-fixed-income t-bond t-yield">
+            <a href="/questions/tagged/fixed-income" class="post-tag" title="show questions tagged &#39;fixed-income&#39;" rel="tag">fixed-income</a> <a href="/questions/tagged/bond" class="post-tag" title="show questions tagged &#39;bond&#39;" rel="tag">bond</a> <a href="/questions/tagged/yield" class="post-tag" title="show questions tagged &#39;yield&#39;" rel="tag">yield</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-05 14:40:28Z" class="relativetime">Jan 5 at 14:40</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6621/tom"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/0uK3G.png?s=128&g=1?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6621/tom">Tom</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">121</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9760">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="58 views">
+    58 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9760/how-to-determine-risk-free-rate-of-ecuador" class="question-hyperlink">How to determine risk-free rate of Ecuador?</a></h3>
+        <div class="excerpt">
+            I have a question in determining the risk-free rate of Ecuador. For developed countries like United States and Great Britain, the risk-free rate can be obtained in financial database such as Reuter or ...
+        </div>          
+        <div class="tags t-bond t-risk-free t-bill">
+            <a href="/questions/tagged/bond" class="post-tag" title="show questions tagged &#39;bond&#39;" rel="tag">bond</a> <a href="/questions/tagged/risk-free" class="post-tag" title="show questions tagged &#39;risk-free&#39;" rel="tag">risk-free</a> <a href="/questions/tagged/bill" class="post-tag" title="show questions tagged &#39;bill&#39;" rel="tag">bill</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-19 17:30:03Z" class="relativetime">Dec 19 '13 at 17:30</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6119/dennis"><div><img src="https://www.gravatar.com/avatar/e7c2294e21a3fdb61ff49adec14734d9?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6119/dennis">Dennis</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">64</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9686">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="113 views">
+    113 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9686/arbitrage-with-freshly-issued-bonds" class="question-hyperlink">Arbitrage with freshly issued bonds</a></h3>
+        <div class="excerpt">
+            I recently heard someone mention an arbitrage strategy involving selling freshly issued bonds and buying the "old batch" as it has shown that the liquidity in the fresh batch motivates/drives up these ...
+        </div>          
+        <div class="tags t-fixed-income t-arbitrage t-bond">
+            <a href="/questions/tagged/fixed-income" class="post-tag" title="show questions tagged &#39;fixed-income&#39;" rel="tag">fixed-income</a> <a href="/questions/tagged/arbitrage" class="post-tag" title="show questions tagged &#39;arbitrage&#39;" rel="tag">arbitrage</a> <a href="/questions/tagged/bond" class="post-tag" title="show questions tagged &#39;bond&#39;" rel="tag">bond</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-11 14:36:37Z" class="relativetime">Dec 11 '13 at 14:36</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6717/anonymous"><div><img src="https://www.gravatar.com/avatar/6cbc1c5e4296add1bc5cb5100a5366ea?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6717/anonymous">Anonymous</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">23</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9605">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -173,8 +369,8 @@ The <a href="/questions/tagged/bond" class="post-tag" title="show questions tagg
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="26 views">
-    26 views
+        <div class="views " title="46 views">
+    46 views
 </div>
     </div>
     <div class="summary">
@@ -193,7 +389,7 @@ Can somebody suggest how I can derive the monthly risk free ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-01 14:14:46Z" class="relativetime">Dec 1 at 14:14</span>
+        asked <span title="2013-12-01 14:14:46Z" class="relativetime">Dec 1 '13 at 14:14</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6644/codingjockey"><div><img src="https://www.gravatar.com/avatar/e2be2fcc3287bd39ea04711f505607f0?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -211,25 +407,24 @@ Can somebody suggest how I can derive the monthly risk free ...
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
                 </div>
             </div>
             <div class="status answered-accepted">
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="58 views">
-    58 views
+        <div class="views " title="110 views">
+    110 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/9571/pricing-credit-risky-bonds" class="question-hyperlink">Pricing Credit Risky bonds</a></h3>
+        <h3><a href="/questions/9571/pricing-credit-risky-bonds" class="question-hyperlink">Pricing credit risky bonds</a></h3>
         <div class="excerpt">
-            How do we price Credit risky bonds?
+            How do we price credit risky bonds?
 
-If I discount the Cash flows using Libor/zero rates, it won't take the credit riskyness into account. So should I use a rate based on Issuer's credit spread?
-Or is ...
+If I discount the cash flows using LIBOR/zero rates, it won't take the credit riskiness into account. So should I use a rate based on the issuer's credit spread? ...
         </div>          
         <div class="tags t-fixed-income t-bond">
             <a href="/questions/tagged/fixed-income" class="post-tag" title="show questions tagged &#39;fixed-income&#39;" rel="tag">fixed-income</a> <a href="/questions/tagged/bond" class="post-tag" title="show questions tagged &#39;bond&#39;" rel="tag">bond</a> 
@@ -240,14 +435,14 @@ Or is ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-28 08:17:56Z" class="relativetime">Nov 28 at 8:17</span>
+        asked <span title="2013-11-28 08:17:56Z" class="relativetime">Nov 28 '13 at 8:17</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6617/vaibhav"><div><img src="https://www.gravatar.com/avatar/013bb5b721d0c5b848ab34badbe49be7?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6617/vaibhav">Vaibhav</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
     </div>
 </div>
         </div>  
@@ -258,16 +453,16 @@ Or is ...
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
                 </div>
             </div>
             <div class="status answered">
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="33 views">
-    33 views
+        <div class="views " title="52 views">
+    52 views
 </div>
     </div>
     <div class="summary">
@@ -288,14 +483,14 @@ Or is ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-23 12:41:00Z" class="relativetime">Nov 23 at 12:41</span>
+        asked <span title="2013-11-23 12:41:00Z" class="relativetime">Nov 23 '13 at 12:41</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5414/user1000"><div><img src="https://www.gravatar.com/avatar/1838e5a06588f77510e8480f3b7fdf44?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5414/user1000">user1000</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">60</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">170</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -314,8 +509,8 @@ Or is ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="126 views">
-    126 views
+        <div class="views " title="133 views">
+    133 views
 </div>
     </div>
     <div class="summary">
@@ -334,14 +529,14 @@ This takes as inputs <span class='tex2jax_ignore'>gearings</span> ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-23 11:10:48Z" class="relativetime">Aug 23 at 11:10</span>
+        asked <span title="2013-08-23 11:10:48Z" class="relativetime">Aug 23 '13 at 11:10</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3058/lisa-ann"><div><img src="https://www.gravatar.com/avatar/76984cfe5803365e2c41a8765137636a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/3058/lisa-ann">Lisa Ann</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">473</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">483</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -360,8 +555,8 @@ This takes as inputs <span class='tex2jax_ignore'>gearings</span> ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="42 views">
-    42 views
+        <div class="views " title="44 views">
+    44 views
 </div>
     </div>
     <div class="summary">
@@ -378,7 +573,7 @@ This takes as inputs <span class='tex2jax_ignore'>gearings</span> ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-20 16:51:10Z" class="relativetime">Jun 20 at 16:51</span>
+        asked <span title="2013-06-20 16:51:10Z" class="relativetime">Jun 20 '13 at 16:51</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5571/johannes-nytt"><div><img src="https://www.gravatar.com/avatar/1239498345073a951436aa9b0bbe68f1?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -404,8 +599,8 @@ This takes as inputs <span class='tex2jax_ignore'>gearings</span> ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="311 views">
-    311 views
+        <div class="views " title="333 views">
+    333 views
 </div>
     </div>
     <div class="summary">
@@ -424,14 +619,14 @@ The bond is the PEUGOT 7 ⅜ 03/06/18, whose ISIN code is FR0011439975. I'm usin
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-10 11:09:51Z" class="relativetime">May 10 at 11:09</span>
+        asked <span title="2013-05-10 11:09:51Z" class="relativetime">May 10 '13 at 11:09</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3058/lisa-ann"><div><img src="https://www.gravatar.com/avatar/76984cfe5803365e2c41a8765137636a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/3058/lisa-ann">Lisa Ann</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">473</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">483</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -450,8 +645,8 @@ The bond is the PEUGOT 7 ⅜ 03/06/18, whose ISIN code is FR0011439975. I'm usin
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="109 views">
-    109 views
+        <div class="views " title="110 views">
+    110 views
 </div>
     </div>
     <div class="summary">
@@ -472,14 +667,14 @@ The bond is the PEUGOT 7 ⅜ 03/06/18, whose ISIN code is FR0011439975. I'm usin
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-02 11:43:43Z" class="relativetime">May 2 at 11:43</span>
+        asked <span title="2013-05-02 11:43:43Z" class="relativetime">May 2 '13 at 11:43</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3058/lisa-ann"><div><img src="https://www.gravatar.com/avatar/76984cfe5803365e2c41a8765137636a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/3058/lisa-ann">Lisa Ann</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">473</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">483</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -498,8 +693,8 @@ The bond is the PEUGOT 7 ⅜ 03/06/18, whose ISIN code is FR0011439975. I'm usin
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="345 views">
-    345 views
+        <div class="views " title="383 views">
+    383 views
 </div>
     </div>
     <div class="summary">
@@ -520,7 +715,7 @@ b. If a bond’s yield to maturity ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-03-28 08:08:23Z" class="relativetime">Mar 28 at 8:08</span>
+        asked <span title="2013-03-28 08:08:23Z" class="relativetime">Mar 28 '13 at 8:08</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5025/ong-junjie"><div><img src="https://www.gravatar.com/avatar/aedfffea884af93de8bc1e77cab884e2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -546,8 +741,8 @@ b. If a bond’s yield to maturity ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="352 views">
-    352 views
+        <div class="views " title="412 views">
+    412 views
 </div>
     </div>
     <div class="summary">
@@ -564,7 +759,7 @@ b. If a bond’s yield to maturity ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-01-13 11:22:14Z" class="relativetime">Jan 13 at 11:22</span>
+        asked <span title="2013-01-13 11:22:14Z" class="relativetime">Jan 13 '13 at 11:22</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3593/captain-comic"><div><img src="https://www.gravatar.com/avatar/d43e10441964711277aa0d9e76e5c712?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -590,8 +785,8 @@ b. If a bond’s yield to maturity ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="542 views">
-    542 views
+        <div class="views " title="623 views">
+    623 views
 </div>
     </div>
     <div class="summary">
@@ -610,7 +805,7 @@ I would think the dirty price should ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-01-08 15:37:41Z" class="relativetime">Jan 8 at 15:37</span>
+        asked <span title="2013-01-08 15:37:41Z" class="relativetime">Jan 8 '13 at 15:37</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/1810/grzenio"><div><img src="https://www.gravatar.com/avatar/712248df6de12dd9b8ba73869a110f1f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -636,8 +831,8 @@ I would think the dirty price should ...
                 <strong>4</strong>answers
             </div>
         </div>
-        <div class="views " title="354 views">
-    354 views
+        <div class="views " title="372 views">
+    372 views
 </div>
     </div>
     <div class="summary">
@@ -654,7 +849,7 @@ I would think the dirty price should ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-01-04 15:18:13Z" class="relativetime">Jan 4 at 15:18</span>
+        asked <span title="2013-01-04 15:18:13Z" class="relativetime">Jan 4 '13 at 15:18</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/1810/grzenio"><div><img src="https://www.gravatar.com/avatar/712248df6de12dd9b8ba73869a110f1f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -680,8 +875,8 @@ I would think the dirty price should ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="245 views">
-    245 views
+        <div class="views " title="253 views">
+    253 views
 </div>
     </div>
     <div class="summary">
@@ -710,141 +905,6 @@ I would think the dirty price should ...
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-4129">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="410 views">
-    410 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/4129/calculate-the-ten-year-zero-rate-given-two-bonds-with-two-prices" class="question-hyperlink">Calculate the &ldquo;ten year zero rate&rdquo;  given two bonds with two prices</a></h3>
-        <div class="excerpt">
-            I have a little question and need some help with the notation. So, the question goes as follows:
-
-
-  A bond with a maturity of ten years that pays annual coupons of 8% has a price of \$90. A bond with ...
-        </div>          
-        <div class="tags t-interest-rates t-yield-curve t-bond">
-            <a href="/questions/tagged/interest-rates" class="post-tag" title="show questions tagged &#39;interest-rates&#39;" rel="tag">interest-rates</a> <a href="/questions/tagged/yield-curve" class="post-tag" title="show questions tagged &#39;yield-curve&#39;" rel="tag">yield-curve</a> <a href="/questions/tagged/bond" class="post-tag" title="show questions tagged &#39;bond&#39;" rel="tag">bond</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2012-09-16 20:47:23Z" class="relativetime">Sep 16 '12 at 20:47</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/1817/marie-p"><div><img src="https://www.gravatar.com/avatar/45e99652c5740e8c2dbd75a9f8c11840?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/1817/marie-p">Marie. P.</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">207</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-4089">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="107 views">
-    107 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/4089/observed-market-price-for-the-august-greece-paid-bonds-where-the-npv-of-the-bond" class="question-hyperlink">Observed market price for the August-Greece-paid bonds where the NPV of the bond or of an option?</a></h3>
-        <div class="excerpt">
-            The bonds which Greece has paid had been valued by market as junk once, just before there payment. Given that the observed market value is the net present value of the instrument, why were they so ...
-        </div>          
-        <div class="tags t-embedded-options t-bond">
-            <a href="/questions/tagged/embedded-options" class="post-tag" title="show questions tagged &#39;embedded-options&#39;" rel="tag">embedded-options</a> <a href="/questions/tagged/bond" class="post-tag" title="show questions tagged &#39;bond&#39;" rel="tag">bond</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2012-09-06 16:03:37Z" class="relativetime">Sep 6 '12 at 16:03</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/2872/user7056"><div><img src="https://www.gravatar.com/avatar/2e33d0976f4ddd523e33da76133529d0?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/2872/user7056">user7056</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">169</span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-3856">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="405 views">
-    405 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/3856/how-to-properly-interpret-accrued-interest-of-bonds" class="question-hyperlink">How to properly interpret accrued interest of bonds</a></h3>
-        <div class="excerpt">
-            Ever since I work in finance I was wondering what accrued interest (AI) are good for (see the wikipedia article for a short introduction). I think I have a clear picture in mind now and the usual ...
-        </div>          
-        <div class="tags t-fixed-income t-bond">
-            <a href="/questions/tagged/fixed-income" class="post-tag" title="show questions tagged &#39;fixed-income&#39;" rel="tag">fixed-income</a> <a href="/questions/tagged/bond" class="post-tag" title="show questions tagged &#39;bond&#39;" rel="tag">bond</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2012-07-26 15:52:20Z" class="relativetime">Jul 26 '12 at 15:52</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/2587/richard"><div><img src="https://www.gravatar.com/avatar/deae632370384460f28c99a5ae44deda?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/2587/richard">Richard</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,803</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
 </div>
         </div>
 
@@ -861,71 +921,296 @@ I would think the dirty price should ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/bond?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/bond?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/bond?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/bond?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/bond?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/bond?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=bond&amp;sort=newest" title="the 30 newest bond questions"><span class="feed-icon"></span>newest bond questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=bond&sort=newest" title="the 30 newest bond questions"><span class="feed-icon"></span>newest bond questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">17</div>
+            <div class="summarycount al">20</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/bond" class="post-tag" title="show questions tagged &#39;bond&#39;" rel="tag">bond</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/bond/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/bond+fixed-income" class="post-tag" title="show questions tagged &#39;bond fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/bond+r" class="post-tag" title="show questions tagged &#39;bond r&#39;" rel="tag">r</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/bond+finance" class="post-tag" title="show questions tagged &#39;bond finance&#39;" rel="tag">finance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/bond+quantlib" class="post-tag" title="show questions tagged &#39;bond quantlib&#39;" rel="tag">quantlib</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/bond+yield-curve" class="post-tag" title="show questions tagged &#39;bond yield-curve&#39;" rel="tag">yield-curve</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/bond+floating-rate" class="post-tag" title="show questions tagged &#39;bond floating-rate&#39;" rel="tag">floating-rate</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+yield" class="post-tag" title="show questions tagged &#39;bond yield&#39;" rel="tag">yield</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+pricing" class="post-tag" title="show questions tagged &#39;bond pricing&#39;" rel="tag">pricing</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+bloomberg" class="post-tag" title="show questions tagged &#39;bond bloomberg&#39;" rel="tag">bloomberg</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+futures" class="post-tag" title="show questions tagged &#39;bond futures&#39;" rel="tag">futures</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+present-value" class="post-tag" title="show questions tagged &#39;bond present-value&#39;" rel="tag">present-value</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+risk-premium" class="post-tag" title="show questions tagged &#39;bond risk-premium&#39;" rel="tag">risk-premium</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+equities" class="post-tag" title="show questions tagged &#39;bond equities&#39;" rel="tag">equities</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+derivatives" class="post-tag" title="show questions tagged &#39;bond derivatives&#39;" rel="tag">derivatives</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+interest-rates" class="post-tag" title="show questions tagged &#39;bond interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+embedded-options" class="post-tag" title="show questions tagged &#39;bond embedded-options&#39;" rel="tag">embedded-options</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+options" class="post-tag" title="show questions tagged &#39;bond options&#39;" rel="tag">options</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+mathematics" class="post-tag" title="show questions tagged &#39;bond mathematics&#39;" rel="tag">mathematics</a>&nbsp;<br>
-            <a href="/questions/tagged/bond+greeks" class="post-tag" title="show questions tagged &#39;bond greeks&#39;" rel="tag">greeks</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/bond+fixed-income" class="post-tag" title="show questions tagged &#39;bond fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/bond+r" class="post-tag" title="show questions tagged &#39;bond r&#39;" rel="tag">r</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/bond+yield" class="post-tag" title="show questions tagged &#39;bond yield&#39;" rel="tag">yield</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/bond+finance" class="post-tag" title="show questions tagged &#39;bond finance&#39;" rel="tag">finance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/bond+quantlib" class="post-tag" title="show questions tagged &#39;bond quantlib&#39;" rel="tag">quantlib</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/bond+yield-curve" class="post-tag" title="show questions tagged &#39;bond yield-curve&#39;" rel="tag">yield-curve</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/bond+options" class="post-tag" title="show questions tagged &#39;bond options&#39;" rel="tag">options</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/bond+embedded-options" class="post-tag" title="show questions tagged &#39;bond embedded-options&#39;" rel="tag">embedded-options</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/bond+interest-rates" class="post-tag" title="show questions tagged &#39;bond interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/bond+derivatives" class="post-tag" title="show questions tagged &#39;bond derivatives&#39;" rel="tag">derivatives</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+equities" class="post-tag" title="show questions tagged &#39;bond equities&#39;" rel="tag">equities</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+risk-premium" class="post-tag" title="show questions tagged &#39;bond risk-premium&#39;" rel="tag">risk-premium</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+present-value" class="post-tag" title="show questions tagged &#39;bond present-value&#39;" rel="tag">present-value</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+pricing" class="post-tag" title="show questions tagged &#39;bond pricing&#39;" rel="tag">pricing</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+futures" class="post-tag" title="show questions tagged &#39;bond futures&#39;" rel="tag">futures</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+floating-rate" class="post-tag" title="show questions tagged &#39;bond floating-rate&#39;" rel="tag">floating-rate</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+mathematics" class="post-tag" title="show questions tagged &#39;bond mathematics&#39;" rel="tag">mathematics</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+arbitrage" class="post-tag" title="show questions tagged &#39;bond arbitrage&#39;" rel="tag">arbitrage</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+bill" class="post-tag" title="show questions tagged &#39;bond bill&#39;" rel="tag">bill</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+risk-free" class="post-tag" title="show questions tagged &#39;bond risk-free&#39;" rel="tag">risk-free</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+bloomberg" class="post-tag" title="show questions tagged &#39;bond bloomberg&#39;" rel="tag">bloomberg</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/bond+greeks" class="post-tag" title="show questions tagged &#39;bond greeks&#39;" rel="tag">greeks</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -945,7 +1230,7 @@ I would think the dirty price should ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/bond")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1038,7 +1323,7 @@ I would think the dirty price should ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1065,14 +1350,14 @@ I would think the dirty price should ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1108,6 +1393,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

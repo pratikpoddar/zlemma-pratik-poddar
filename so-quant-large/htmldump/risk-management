@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged risk-management" href="/feeds/tag/risk-management" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187217,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350502,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2frisk-management" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2frisk-management" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[risk-management]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2frisk-management">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2frisk-management">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[risk-management]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/risk-management/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/risk-management?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/risk-management?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/risk-management?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/risk-management?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/risk-management?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/risk-management?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/risk-management?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/risk-management?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/risk-management?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/risk-management?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,13 +221,13 @@ The identification, assessment, and prioritization of risks, followed by coordin
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9623">
+<div class="question-summary" id="question-summary-9743">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
+                    <span class="vote-count-post "><strong>0</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -173,8 +235,145 @@ The identification, assessment, and prioritization of risks, followed by coordin
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="21 views">
-    21 views
+        <div class="views " title="10 views">
+    10 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9743/any-introduction-on-beta-adjustment-for-basis-risk" class="question-hyperlink">any introduction on beta adjustment for basis risk?</a></h3>
+        <div class="excerpt">
+            On beta adjustment for basis risk, I could only find an online definition:
+
+
+  Gap reports modified to mollify the errors caused by basis risk. The
+  essential concept of beta-adjusted gap is that all ...
+        </div>          
+        <div class="tags t-risk-management">
+            <a href="/questions/tagged/risk-management" class="post-tag" title="show questions tagged &#39;risk-management&#39;" rel="tag">risk-management</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-17 03:36:01Z" class="relativetime">Dec 17 '13 at 3:36</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/2161/athos"><div><img src="https://www.gravatar.com/avatar/1ae7b03db7483523fc909e19edbe5dec?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/2161/athos">athos</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">470</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9675">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="56 views">
+    56 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9675/what-are-the-math-topics-involved-in-frm-1" class="question-hyperlink">What are the math topics involved in FRM 1</a></h3>
+        <div class="excerpt">
+            Is there a way to get the math curriculum for FRM level 1 without purchasing the Exam? I wish to take a look at the math topics and see if I have any chance of cracking it. But  I could not find an ...
+        </div>          
+        <div class="tags t-risk-management">
+            <a href="/questions/tagged/risk-management" class="post-tag" title="show questions tagged &#39;risk-management&#39;" rel="tag">risk-management</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-09 21:51:10Z" class="relativetime">Dec 9 '13 at 21:51</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/218/kaushik"><div><img src="https://www.gravatar.com/avatar/958dcfafe6f9ce479e613653f31c4c13?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/218/kaushik">Kaushik</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">108</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9629">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>6</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="132 views">
+    132 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9629/when-did-volatilities-start-to-smile-in-capital-markets" class="question-hyperlink">When did volatilities start to smile in capital markets?</a></h3>
+        <div class="excerpt">
+            Glimpsing through literature, I read that volatilities in the equity market started to display a smile after the crash in 1987.  But when did volatilities start to smile in capital markets?
+
+        </div>          
+        <div class="tags t-risk-management t-market-data">
+            <a href="/questions/tagged/risk-management" class="post-tag" title="show questions tagged &#39;risk-management&#39;" rel="tag">risk-management</a> <a href="/questions/tagged/market-data" class="post-tag" title="show questions tagged &#39;market-data&#39;" rel="tag">market-data</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-05 11:39:00Z" class="relativetime">Dec 5 '13 at 11:39</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6505/user40989"><div><img src="https://www.gravatar.com/avatar/2e0ddb5220ade92f6e38fe2f74a64742?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6505/user40989">user40989</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">105</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9623">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>6</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="191 views">
+    191 views
 </div>
     </div>
     <div class="summary">
@@ -191,14 +390,14 @@ The identification, assessment, and prioritization of risks, followed by coordin
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-04 16:33:20Z" class="relativetime">3 hours ago</span>
+        asked <span title="2013-12-04 16:33:20Z" class="relativetime">Dec 4 '13 at 16:33</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6660/acmh"><div><img src="https://www.gravatar.com/avatar/6168031488de28cb52aab635f16cd7aa?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6660/acmh">acmh</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">31</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
@@ -217,8 +416,8 @@ The identification, assessment, and prioritization of risks, followed by coordin
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="115 views">
-    115 views
+        <div class="views " title="135 views">
+    135 views
 </div>
     </div>
     <div class="summary">
@@ -235,7 +434,7 @@ The identification, assessment, and prioritization of risks, followed by coordin
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-14 19:58:04Z" class="relativetime">Nov 14 at 19:58</span>
+        asked <span title="2013-11-14 19:58:04Z" class="relativetime">Nov 14 '13 at 19:58</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5361/xodarap"><div><img src="https://www.gravatar.com/avatar/4881e74d5b966aca3f5945a974e8d91b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -261,8 +460,8 @@ The identification, assessment, and prioritization of risks, followed by coordin
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="153 views">
-    153 views
+        <div class="views " title="164 views">
+    164 views
 </div>
     </div>
     <div class="summary">
@@ -279,14 +478,14 @@ The identification, assessment, and prioritization of risks, followed by coordin
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-11-12 09:37:18Z" class="relativetime">Nov 12 at 9:37</span>
+        asked <span title="2013-11-12 09:37:18Z" class="relativetime">Nov 12 '13 at 9:37</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/2587/richard"><div><img src="https://www.gravatar.com/avatar/deae632370384460f28c99a5ae44deda?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/2587/richard"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/HUGYd.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2587/richard">Richard</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,803</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">2,009</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
     </div>
 </div>
         </div>  
@@ -305,8 +504,8 @@ The identification, assessment, and prioritization of risks, followed by coordin
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="182 views">
-    182 views
+        <div class="views " title="246 views">
+    246 views
 </div>
     </div>
     <div class="summary">
@@ -325,7 +524,7 @@ We have tried ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-16 09:02:04Z" class="relativetime">Oct 16 at 9:02</span>
+        asked <span title="2013-10-16 09:02:04Z" class="relativetime">Oct 16 '13 at 9:02</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3456/purnendumaity"><div><img src="https://www.gravatar.com/avatar/7643373129ddb04b50d23bb7cbb73507?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -351,8 +550,8 @@ We have tried ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="151 views">
-    151 views
+        <div class="views " title="180 views">
+    180 views
 </div>
     </div>
     <div class="summary">
@@ -371,14 +570,14 @@ If we look at the integral we see that spectral risk measures have the property 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-30 15:05:17Z" class="relativetime">Sep 30 at 15:05</span>
+        asked <span title="2013-09-30 15:05:17Z" class="relativetime">Sep 30 '13 at 15:05</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2727/vanguard2k"><div><img src="https://www.gravatar.com/avatar/b4c976f866673fe49398b2c0d2c29310?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2727/vanguard2k">vanguard2k</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">798</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">849</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span>
     </div>
 </div>
         </div>  
@@ -397,8 +596,8 @@ If we look at the integral we see that spectral risk measures have the property 
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="132 views">
-    132 views
+        <div class="views " title="164 views">
+    164 views
 </div>
     </div>
     <div class="summary">
@@ -419,7 +618,7 @@ If we look at the integral we see that spectral risk measures have the property 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-30 10:40:29Z" class="relativetime">Sep 30 at 10:40</span>
+        asked <span title="2013-09-30 10:40:29Z" class="relativetime">Sep 30 '13 at 10:40</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5599/max"><div><img src="https://www.gravatar.com/avatar/4a57f523157ebdf6e5a9662d2e8754b9?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -445,8 +644,8 @@ If we look at the integral we see that spectral risk measures have the property 
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="67 views">
-    67 views
+        <div class="views " title="74 views">
+    74 views
 </div>
     </div>
     <div class="summary">
@@ -463,7 +662,7 @@ If we look at the integral we see that spectral risk measures have the property 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-28 11:57:01Z" class="relativetime">Sep 28 at 11:57</span>
+        asked <span title="2013-09-28 11:57:01Z" class="relativetime">Sep 28 '13 at 11:57</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5952/matthew-mcmaster"><div><img src="https://www.gravatar.com/avatar/25da65c3715eae2f7208ffd41e85321b?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -489,8 +688,8 @@ If we look at the integral we see that spectral risk measures have the property 
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="74 views">
-    74 views
+        <div class="views " title="75 views">
+    75 views
 </div>
     </div>
     <div class="summary">
@@ -509,14 +708,14 @@ $$\psi_i = w_i \frac{\partial \sigma(w)}{\partial w_i}= \frac{1}{\sigma(w)} \lef
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-09-12 08:32:02Z" class="relativetime">Sep 12 at 8:32</span>
+        asked <span title="2013-09-12 08:32:02Z" class="relativetime">Sep 12 '13 at 8:32</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/467/srkx"><div><img src="https://www.gravatar.com/avatar/2e23a8cb28b986becbed577221c6467d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/467/srkx">SRKX</a><span class="mod-flair" title="moderator">&#9830;</span><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">5,091</span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">5,134</span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
     </div>
 </div>
         </div>  
@@ -535,8 +734,8 @@ $$\psi_i = w_i \frac{\partial \sigma(w)}{\partial w_i}= \frac{1}{\sigma(w)} \lef
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="122 views">
-    122 views
+        <div class="views " title="153 views">
+    153 views
 </div>
     </div>
     <div class="summary">
@@ -555,7 +754,7 @@ I have tried to reproduce ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-04 15:08:26Z" class="relativetime">Sep 4 at 15:08</span>
+        asked <span title="2013-09-04 15:08:26Z" class="relativetime">Sep 4 '13 at 15:08</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3319/bytesize"><div><img src="https://www.gravatar.com/avatar/9500b0f33d600b7fbf985a7a5e27b92b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -581,8 +780,8 @@ I have tried to reproduce ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="124 views">
-    124 views
+        <div class="views " title="129 views">
+    129 views
 </div>
     </div>
     <div class="summary">
@@ -599,14 +798,14 @@ I have tried to reproduce ...
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-07-04 08:33:05Z" class="relativetime">Jul 4 at 8:33</span>
+        asked <span title="2013-07-04 08:33:05Z" class="relativetime">Jul 4 '13 at 8:33</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/464/ilya"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/7A2m9.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/464/ilya">Ilya</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">906</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">906</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
     </div>
 </div>
         </div>  
@@ -625,8 +824,8 @@ I have tried to reproduce ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="109 views">
-    109 views
+        <div class="views " title="117 views">
+    117 views
 </div>
     </div>
     <div class="summary">
@@ -645,14 +844,14 @@ $$\frac{\partial \sigma(x)}{\partial x_i} = \frac{1}{\sigma(x)} \left( w_i \sigm
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-06-21 08:30:54Z" class="relativetime">Jun 21 at 8:30</span>
+        asked <span title="2013-06-21 08:30:54Z" class="relativetime">Jun 21 '13 at 8:30</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/467/srkx"><div><img src="https://www.gravatar.com/avatar/2e23a8cb28b986becbed577221c6467d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/467/srkx">SRKX</a><span class="mod-flair" title="moderator">&#9830;</span><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">5,091</span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">5,134</span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
     </div>
 </div>
         </div>  
@@ -671,8 +870,8 @@ $$\frac{\partial \sigma(x)}{\partial x_i} = \frac{1}{\sigma(x)} \left( w_i \sigm
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="116 views">
-    116 views
+        <div class="views " title="129 views">
+    129 views
 </div>
     </div>
     <div class="summary">
@@ -691,159 +890,14 @@ It talks about Gap ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-17 03:47:27Z" class="relativetime">Jun 17 at 3:47</span>
+        asked <span title="2013-06-17 03:47:27Z" class="relativetime">Jun 17 '13 at 3:47</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2161/athos"><div><img src="https://www.gravatar.com/avatar/1ae7b03db7483523fc909e19edbe5dec?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2161/athos">athos</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">460</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-8153">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="97 views">
-    97 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/8153/quantitative-risk-management-strategy-for-a-large-participant-in-an-illiquid-mar" class="question-hyperlink">Quantitative risk management strategy for a large participant in an illiquid market</a></h3>
-        <div class="excerpt">
-            Are there any practical quantitative risk management strategies for a large participant  in an illiquid market with a few dominant players? By a large partcipant I mean someone who 
-
-
-has significant ...
-        </div>          
-        <div class="tags t-risk-management t-liquidity-risk">
-            <a href="/questions/tagged/risk-management" class="post-tag" title="show questions tagged &#39;risk-management&#39;" rel="tag">risk-management</a> <a href="/questions/tagged/liquidity-risk" class="post-tag" title="show questions tagged &#39;liquidity-risk&#39;" rel="tag">liquidity-risk</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-04 12:28:15Z" class="relativetime">Jun 4 at 12:28</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/370/alexey-kalmykov"><div><img src="https://www.gravatar.com/avatar/7970448fb84156438e6a52ddd6e1face?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/370/alexey-kalmykov">Alexey Kalmykov</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,898</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-8076">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>5</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="710 views">
-    710 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/8076/papers-about-risk-managment-in-algorithmic-trading-systems" class="question-hyperlink">Papers about risk managment in algorithmic trading systems?</a></h3>
-        <div class="excerpt">
-            I am currently doing my research for my master thesis, which will clearly focus on the question of risk managment in algorithmic trading systems.
-
-I have done research about this topic and found some ...
-        </div>          
-        <div class="tags t-research t-risk-management t-high-frequency t-algorithmic-trading">
-            <a href="/questions/tagged/research" class="post-tag" title="show questions tagged &#39;research&#39;" rel="tag">research</a> <a href="/questions/tagged/risk-management" class="post-tag" title="show questions tagged &#39;risk-management&#39;" rel="tag">risk-management</a> <a href="/questions/tagged/high-frequency" class="post-tag" title="show questions tagged &#39;high-frequency&#39;" rel="tag">high-frequency</a> <a href="/questions/tagged/algorithmic-trading" class="post-tag" title="show questions tagged &#39;algorithmic-trading&#39;" rel="tag">algorithmic-trading</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-25 13:58:34Z" class="relativetime">May 25 at 13:58</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5414/user1000"><div><img src="https://www.gravatar.com/avatar/1838e5a06588f77510e8480f3b7fdf44?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5414/user1000">user1000</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">60</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-8020">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>6</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="656 views">
-    656 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/8020/is-unexpected-loss-ever-used-in-basel-ii" class="question-hyperlink">Is Unexpected Loss ever used in Basel II?</a></h3>
-        <div class="excerpt">
-            In Basel II, EL is useful. It's calculated as
-
-$$EL = PD \cdot EAD \cdot LGD $$
-
-in advance IRB (internal rate-based approach),
-
-Correlation
-$$R = 0.12 \frac{1 – e^{-50 \cdot PD}}{1 – e^{-50}} 
-+ 0.24 ...
-        </div>          
-        <div class="tags t-risk-management t-credit-risk t-basel">
-            <a href="/questions/tagged/risk-management" class="post-tag" title="show questions tagged &#39;risk-management&#39;" rel="tag">risk-management</a> <a href="/questions/tagged/credit-risk" class="post-tag" title="show questions tagged &#39;credit-risk&#39;" rel="tag">credit-risk</a> <a href="/questions/tagged/basel" class="post-tag" title="show questions tagged &#39;basel&#39;" rel="tag">basel</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-18 14:29:47Z" class="relativetime">May 18 at 14:29</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/2161/athos"><div><img src="https://www.gravatar.com/avatar/1ae7b03db7483523fc909e19edbe5dec?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/2161/athos">athos</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">460</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">470</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
     </div>
 </div>
         </div>  
@@ -867,77 +921,305 @@ $$R = 0.12 \frac{1 – e^{-50 \cdot PD}}{1 – e^{-50}}
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/risk-management?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/risk-management?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/risk-management?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/risk-management?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/risk-management?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/risk-management?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=risk-management&amp;sort=newest" title="the 30 newest risk-management questions"><span class="feed-icon"></span>newest risk-management questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=risk-management&sort=newest" title="the 30 newest risk-management questions"><span class="feed-icon"></span>newest risk-management questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">64</div>
+            <div class="summarycount al">67</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/risk-management" class="post-tag" title="show questions tagged &#39;risk-management&#39;" rel="tag">risk-management</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/risk-management/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/risk-management+risk" class="post-tag" title="show questions tagged &#39;risk-management risk&#39;" rel="tag">risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/risk-management+risk-models" class="post-tag" title="show questions tagged &#39;risk-management risk-models&#39;" rel="tag">risk-models</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/risk-management+portfolio-management" class="post-tag" title="show questions tagged &#39;risk-management portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/risk-management+asset-allocation" class="post-tag" title="show questions tagged &#39;risk-management asset-allocation&#39;" rel="tag">asset-allocation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/risk-management+interest-rates" class="post-tag" title="show questions tagged &#39;risk-management interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/risk-management+monte-carlo" class="post-tag" title="show questions tagged &#39;risk-management monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/risk-management+coherent-risk-measure" class="post-tag" title="show questions tagged &#39;risk-management coherent-risk-measure&#39;" rel="tag">coherent-risk-measure</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/risk-management+liquidity-risk" class="post-tag" title="show questions tagged &#39;risk-management liquidity-risk&#39;" rel="tag">liquidity-risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/risk-management+var" class="post-tag" title="show questions tagged &#39;risk-management var&#39;" rel="tag">var</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/risk-management+fx" class="post-tag" title="show questions tagged &#39;risk-management fx&#39;" rel="tag">fx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+modeling" class="post-tag" title="show questions tagged &#39;risk-management modeling&#39;" rel="tag">modeling</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+beta" class="post-tag" title="show questions tagged &#39;risk-management beta&#39;" rel="tag">beta</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+stochastic-processes" class="post-tag" title="show questions tagged &#39;risk-management stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+regression" class="post-tag" title="show questions tagged &#39;risk-management regression&#39;" rel="tag">regression</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+hedging" class="post-tag" title="show questions tagged &#39;risk-management hedging&#39;" rel="tag">hedging</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+time-series" class="post-tag" title="show questions tagged &#39;risk-management time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+insurance" class="post-tag" title="show questions tagged &#39;risk-management insurance&#39;" rel="tag">insurance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+automated-trading" class="post-tag" title="show questions tagged &#39;risk-management automated-trading&#39;" rel="tag">automated-trading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+backtesting" class="post-tag" title="show questions tagged &#39;risk-management backtesting&#39;" rel="tag">backtesting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+mathematics" class="post-tag" title="show questions tagged &#39;risk-management mathematics&#39;" rel="tag">mathematics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+fixed-income" class="post-tag" title="show questions tagged &#39;risk-management fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-management+high-frequency" class="post-tag" title="show questions tagged &#39;risk-management high-frequency&#39;" rel="tag">high-frequency</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-management+probability" class="post-tag" title="show questions tagged &#39;risk-management probability&#39;" rel="tag">probability</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-management+estimation" class="post-tag" title="show questions tagged &#39;risk-management estimation&#39;" rel="tag">estimation</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-management+distribution" class="post-tag" title="show questions tagged &#39;risk-management distribution&#39;" rel="tag">distribution</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/risk-management+risk" class="post-tag" title="show questions tagged &#39;risk-management risk&#39;" rel="tag">risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-management+risk-models" class="post-tag" title="show questions tagged &#39;risk-management risk-models&#39;" rel="tag">risk-models</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-management+portfolio-management" class="post-tag" title="show questions tagged &#39;risk-management portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-management+asset-allocation" class="post-tag" title="show questions tagged &#39;risk-management asset-allocation&#39;" rel="tag">asset-allocation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-management+liquidity-risk" class="post-tag" title="show questions tagged &#39;risk-management liquidity-risk&#39;" rel="tag">liquidity-risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-management+coherent-risk-measure" class="post-tag" title="show questions tagged &#39;risk-management coherent-risk-measure&#39;" rel="tag">coherent-risk-measure</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-management+monte-carlo" class="post-tag" title="show questions tagged &#39;risk-management monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-management+interest-rates" class="post-tag" title="show questions tagged &#39;risk-management interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-management+var" class="post-tag" title="show questions tagged &#39;risk-management var&#39;" rel="tag">var</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-management+automated-trading" class="post-tag" title="show questions tagged &#39;risk-management automated-trading&#39;" rel="tag">automated-trading</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+modeling" class="post-tag" title="show questions tagged &#39;risk-management modeling&#39;" rel="tag">modeling</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+insurance" class="post-tag" title="show questions tagged &#39;risk-management insurance&#39;" rel="tag">insurance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+stochastic-processes" class="post-tag" title="show questions tagged &#39;risk-management stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+regression" class="post-tag" title="show questions tagged &#39;risk-management regression&#39;" rel="tag">regression</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+hedging" class="post-tag" title="show questions tagged &#39;risk-management hedging&#39;" rel="tag">hedging</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+backtesting" class="post-tag" title="show questions tagged &#39;risk-management backtesting&#39;" rel="tag">backtesting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+beta" class="post-tag" title="show questions tagged &#39;risk-management beta&#39;" rel="tag">beta</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+fx" class="post-tag" title="show questions tagged &#39;risk-management fx&#39;" rel="tag">fx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+fixed-income" class="post-tag" title="show questions tagged &#39;risk-management fixed-income&#39;" rel="tag">fixed-income</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+mathematics" class="post-tag" title="show questions tagged &#39;risk-management mathematics&#39;" rel="tag">mathematics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+time-series" class="post-tag" title="show questions tagged &#39;risk-management time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+factor-models" class="post-tag" title="show questions tagged &#39;risk-management factor-models&#39;" rel="tag">factor-models</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+macro" class="post-tag" title="show questions tagged &#39;risk-management macro&#39;" rel="tag">macro</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+broker" class="post-tag" title="show questions tagged &#39;risk-management broker&#39;" rel="tag">broker</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-management+order-execution" class="post-tag" title="show questions tagged &#39;risk-management order-execution&#39;" rel="tag">order-execution</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -957,7 +1239,7 @@ $$R = 0.12 \frac{1 – e^{-50 \cdot PD}}{1 – e^{-50}}
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/risk-management")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1050,7 +1332,7 @@ $$R = 0.12 \frac{1 – e^{-50 \cdot PD}}{1 – e^{-50}}
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1077,14 +1359,14 @@ $$R = 0.12 \frac{1 – e^{-50 \cdot PD}}{1 – e^{-50}}
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1120,6 +1402,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

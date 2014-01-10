@@ -150,6 +150,7 @@ def identify_possible_clusters(filename, threshold):
 
         return list_of_clusters
 
+
 print "----"
 execfile("skill_list.py")
 list1 = renameSkillList(skill_list)
@@ -160,9 +161,9 @@ print set(list2)-set(list1)
 print set(list1)-set(list2)
 list3 = list(set(list1+list2))
 list3.sort()
-print list3
-for s in list3:
-	print s
+#print list3
+#for s in list3:
+#	print s
 outfile = open('allskills.txt', 'w')
 for s in list3:
 	outfile.write(s)
@@ -201,39 +202,34 @@ print len(s1)
 print len(s2)
 print "----"
 
-	
 print "----"
 def tf(l):
-	high_values = len(filter(lambda x: x>0.4, l))
-	if high_values < 3:
+	high_values = len(filter(lambda x: x>0.5, l))
+	if high_values < 1:
 		return False
 	if high_values > len(l)/3:
 		return False
 
 	return True
-	
+
 weaknodes = identifyWeakNodes('renamedcomplete.txt', tf)
 print weaknodes
 print "----"
-
+	
 print "----"
-#identify_clusters('renamedcomplete.txt')
-print "----"
-
-print "----"
-identify_big_numbers('renamedcomplete.txt', 0.7)
+#identify_big_numbers('renamedcomplete.txt', 0.7)
 print "----"
 
 print "----"
-identify_possible_clusters('renamedcomplete.txt', 0.6)
+#identify_possible_clusters('renamedcomplete.txt', 0.6)
 print "----"
 
 print "----"
-identify_possible_clusters('renamedcomplete.txt', 0.8)
+#identify_possible_clusters('renamedcomplete.txt', 0.8)
 print "----"
 
 print "----"
-identify_possible_clusters('renamedcomplete.txt', 0.9)
+#identify_possible_clusters('renamedcomplete.txt', 0.9)
 print "----"
 
 

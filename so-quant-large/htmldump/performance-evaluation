@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged performance-evaluation" href="/feeds/tag/performance-evaluation" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187349,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389351900,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fperformance-evaluation" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fperformance-evaluation" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[performance-evaluation]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fperformance-evaluation">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fperformance-evaluation">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[performance-evaluation]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/performance-evaluation/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/performance-evaluation?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/performance-evaluation?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/performance-evaluation?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/performance-evaluation?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/performance-evaluation?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/performance-evaluation?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/performance-evaluation?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/performance-evaluation?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/performance-evaluation?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/performance-evaluation?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -173,8 +235,8 @@ The <a href="/questions/tagged/performance-evaluation" class="post-tag" title="s
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="106 views">
-    106 views
+        <div class="views " title="110 views">
+    110 views
 </div>
     </div>
     <div class="summary">
@@ -193,14 +255,14 @@ Since there are many methods out in the wild, and do ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-23 16:03:04Z" class="relativetime">Oct 23 at 16:03</span>
+        asked <span title="2013-10-23 16:03:04Z" class="relativetime">Oct 23 '13 at 16:03</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/1764/pycthon"><div><img src="https://www.gravatar.com/avatar/d8bf21acbea586da1fae68ee4d0d4bb0?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/1764/pycthon">pyCthon</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">491</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">491</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
     </div>
 </div>
         </div>  
@@ -219,8 +281,8 @@ Since there are many methods out in the wild, and do ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="120 views">
-    120 views
+        <div class="views " title="146 views">
+    146 views
 </div>
     </div>
     <div class="summary">
@@ -237,7 +299,7 @@ Since there are many methods out in the wild, and do ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-18 17:11:52Z" class="relativetime">Sep 18 at 17:11</span>
+        asked <span title="2013-09-18 17:11:52Z" class="relativetime">Sep 18 '13 at 17:11</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5689/rhaskett"><div><img src="https://www.gravatar.com/avatar/5a532f7f1a6acec773e7433446044fb2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -263,8 +325,8 @@ Since there are many methods out in the wild, and do ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="132 views">
-    132 views
+        <div class="views " title="139 views">
+    139 views
 </div>
     </div>
     <div class="summary">
@@ -281,7 +343,7 @@ Since there are many methods out in the wild, and do ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-08 04:57:13Z" class="relativetime">Aug 8 at 4:57</span>
+        asked <span title="2013-08-08 04:57:13Z" class="relativetime">Aug 8 '13 at 4:57</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5769/code-monkey"><div><img src="https://www.gravatar.com/avatar/262349ff3be53891d0106a631ae6a960?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -307,8 +369,8 @@ Since there are many methods out in the wild, and do ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="290 views">
-    290 views
+        <div class="views " title="327 views">
+    327 views
 </div>
     </div>
     <div class="summary">
@@ -325,7 +387,7 @@ Since there are many methods out in the wild, and do ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-07 10:47:58Z" class="relativetime">May 7 at 10:47</span>
+        asked <span title="2013-05-07 10:47:58Z" class="relativetime">May 7 '13 at 10:47</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/89/quant-dev"><div><img src="https://www.gravatar.com/avatar/e838d146abd68f2038fc56b808d82ffd?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -351,7 +413,7 @@ Since there are many methods out in the wild, and do ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views warm" title="1,185 views">
+        <div class="views warm" title="1,412 views">
     1k views
 </div>
     </div>
@@ -369,14 +431,14 @@ Since there are many methods out in the wild, and do ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-04-12 12:50:03Z" class="relativetime">Apr 12 at 12:50</span>
+        asked <span title="2013-04-12 12:50:03Z" class="relativetime">Apr 12 '13 at 12:50</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/4709/good-guy-mike"><div><img src="https://www.gravatar.com/avatar/4c28dfa168089016634178756b14c67d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/4709/good-guy-mike"><div><img src="https://www.gravatar.com/avatar/895b2301eefc464dd77b38aa7912aa16?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/4709/good-guy-mike">Good Guy Mike</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">104</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">139</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
@@ -395,8 +457,8 @@ Since there are many methods out in the wild, and do ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="624 views">
-    624 views
+        <div class="views " title="669 views">
+    669 views
 </div>
     </div>
     <div class="summary">
@@ -415,7 +477,7 @@ The main problem I have is ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-02-14 17:38:44Z" class="relativetime">Feb 14 at 17:38</span>
+        asked <span title="2013-02-14 17:38:44Z" class="relativetime">Feb 14 '13 at 17:38</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/4796/user4796"><div><img src="https://www.gravatar.com/avatar/cf9adf83276e63ae763677eac755b754?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -441,8 +503,8 @@ The main problem I have is ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="385 views">
-    385 views
+        <div class="views " title="407 views">
+    407 views
 </div>
     </div>
     <div class="summary">
@@ -489,8 +551,8 @@ I compare my alpha against ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="344 views">
-    344 views
+        <div class="views " title="349 views">
+    349 views
 </div>
     </div>
     <div class="summary">
@@ -530,7 +592,7 @@ The ...
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>10</strong></span>
+                    <span class="vote-count-post "><strong>11</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -538,8 +600,8 @@ The ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="259 views">
-    259 views
+        <div class="views " title="276 views">
+    276 views
 </div>
     </div>
     <div class="summary">
@@ -563,7 +625,7 @@ The ...
     </div>
     <div class="user-details">
         <a href="/users/2727/vanguard2k">vanguard2k</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">798</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">849</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span>
     </div>
 </div>
         </div>  
@@ -574,7 +636,7 @@ The ...
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>9</strong></span>
+                    <span class="vote-count-post "><strong>10</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -582,8 +644,8 @@ The ...
                 <strong>6</strong>answers
             </div>
         </div>
-        <div class="views warm" title="4,463 views">
-    4k views
+        <div class="views warm" title="4,909 views">
+    5k views
 </div>
     </div>
     <div class="summary">
@@ -607,7 +669,7 @@ The ...
     </div>
     <div class="user-details">
         <a href="/users/108/shabbychef">shabbychef</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,121</span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,136</span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="24 bronze badges"><span class="badge3"></span><span class="badgecount">24</span></span>
     </div>
 </div>
         </div>  
@@ -626,8 +688,8 @@ The ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="485 views">
-    485 views
+        <div class="views " title="496 views">
+    496 views
 </div>
     </div>
     <div class="summary">
@@ -670,8 +732,8 @@ The ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="563 views">
-    563 views
+        <div class="views " title="594 views">
+    594 views
 </div>
     </div>
     <div class="summary">
@@ -716,7 +778,7 @@ Now I should be golden. All I need is to always have the S&amp;P shorted with th
                 <strong>11</strong>answers
             </div>
         </div>
-        <div class="views warm" title="3,007 views">
+        <div class="views warm" title="3,062 views">
     3k views
 </div>
     </div>
@@ -743,7 +805,7 @@ Every idea, reference, paper ...
     </div>
     <div class="user-details">
         <a href="/users/12/vonjd">vonjd</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">7,553</span><span title="19 silver badges"><span class="badge2"></span><span class="badgecount">19</span></span><span title="64 bronze badges"><span class="badge3"></span><span class="badgecount">64</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">7,608</span><span title="20 silver badges"><span class="badge2"></span><span class="badgecount">20</span></span><span title="64 bronze badges"><span class="badge3"></span><span class="badgecount">64</span></span>
     </div>
 </div>
         </div>  
@@ -765,7 +827,7 @@ Every idea, reference, paper ...
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=performance-evaluation&amp;sort=newest" title="the 30 newest performance-evaluation questions"><span class="feed-icon"></span>newest performance-evaluation questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=performance-evaluation&sort=newest" title="the 30 newest performance-evaluation questions"><span class="feed-icon"></span>newest performance-evaluation questions feed</a></div>
 </div>
 
 
@@ -779,55 +841,283 @@ Every idea, reference, paper ...
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/performance-evaluation/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/performance-evaluation+performance" class="post-tag" title="show questions tagged &#39;performance-evaluation performance&#39;" rel="tag">performance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/performance-evaluation+sharpe-ratio" class="post-tag" title="show questions tagged &#39;performance-evaluation sharpe-ratio&#39;" rel="tag">sharpe-ratio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/performance-evaluation+performanceanalytics" class="post-tag" title="show questions tagged &#39;performance-evaluation performanceanalytics&#39;" rel="tag">performanceanalytics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/performance-evaluation+risk" class="post-tag" title="show questions tagged &#39;performance-evaluation risk&#39;" rel="tag">risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/performance-evaluation+volatility" class="post-tag" title="show questions tagged &#39;performance-evaluation volatility&#39;" rel="tag">volatility</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+returns" class="post-tag" title="show questions tagged &#39;performance-evaluation returns&#39;" rel="tag">returns</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+time-series" class="post-tag" title="show questions tagged &#39;performance-evaluation time-series&#39;" rel="tag">time-series</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+reference-request" class="post-tag" title="show questions tagged &#39;performance-evaluation reference-request&#39;" rel="tag">reference-request</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+research" class="post-tag" title="show questions tagged &#39;performance-evaluation research&#39;" rel="tag">research</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+manager-analysis" class="post-tag" title="show questions tagged &#39;performance-evaluation manager-analysis&#39;" rel="tag">manager-analysis</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+behavioral-finance" class="post-tag" title="show questions tagged &#39;performance-evaluation behavioral-finance&#39;" rel="tag">behavioral-finance</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+tactical-asset-allocation" class="post-tag" title="show questions tagged &#39;performance-evaluation tactical-asset-allocation&#39;" rel="tag">tactical-asset-allocation</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+capm" class="post-tag" title="show questions tagged &#39;performance-evaluation capm&#39;" rel="tag">capm</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+portfolio" class="post-tag" title="show questions tagged &#39;performance-evaluation portfolio&#39;" rel="tag">portfolio</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+portfolio-management" class="post-tag" title="show questions tagged &#39;performance-evaluation portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+asset-returns" class="post-tag" title="show questions tagged &#39;performance-evaluation asset-returns&#39;" rel="tag">asset-returns</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+analysis" class="post-tag" title="show questions tagged &#39;performance-evaluation analysis&#39;" rel="tag">analysis</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+probability" class="post-tag" title="show questions tagged &#39;performance-evaluation probability&#39;" rel="tag">probability</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+backtesting" class="post-tag" title="show questions tagged &#39;performance-evaluation backtesting&#39;" rel="tag">backtesting</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+investment" class="post-tag" title="show questions tagged &#39;performance-evaluation investment&#39;" rel="tag">investment</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+best-practices" class="post-tag" title="show questions tagged &#39;performance-evaluation best-practices&#39;" rel="tag">best-practices</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+market-data" class="post-tag" title="show questions tagged &#39;performance-evaluation market-data&#39;" rel="tag">market-data</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+robust-optimization" class="post-tag" title="show questions tagged &#39;performance-evaluation robust-optimization&#39;" rel="tag">robust-optimization</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+factor-loading" class="post-tag" title="show questions tagged &#39;performance-evaluation factor-loading&#39;" rel="tag">factor-loading</a>&nbsp;<br>
-            <a href="/questions/tagged/performance-evaluation+factor-models" class="post-tag" title="show questions tagged &#39;performance-evaluation factor-models&#39;" rel="tag">factor-models</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+performance" class="post-tag" title="show questions tagged &#39;performance-evaluation performance&#39;" rel="tag">performance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+sharpe-ratio" class="post-tag" title="show questions tagged &#39;performance-evaluation sharpe-ratio&#39;" rel="tag">sharpe-ratio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+performanceanalytics" class="post-tag" title="show questions tagged &#39;performance-evaluation performanceanalytics&#39;" rel="tag">performanceanalytics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+risk" class="post-tag" title="show questions tagged &#39;performance-evaluation risk&#39;" rel="tag">risk</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+volatility" class="post-tag" title="show questions tagged &#39;performance-evaluation volatility&#39;" rel="tag">volatility</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+returns" class="post-tag" title="show questions tagged &#39;performance-evaluation returns&#39;" rel="tag">returns</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+time-series" class="post-tag" title="show questions tagged &#39;performance-evaluation time-series&#39;" rel="tag">time-series</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+reference-request" class="post-tag" title="show questions tagged &#39;performance-evaluation reference-request&#39;" rel="tag">reference-request</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+research" class="post-tag" title="show questions tagged &#39;performance-evaluation research&#39;" rel="tag">research</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/performance-evaluation+manager-analysis" class="post-tag" title="show questions tagged &#39;performance-evaluation manager-analysis&#39;" rel="tag">manager-analysis</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+behavioral-finance" class="post-tag" title="show questions tagged &#39;performance-evaluation behavioral-finance&#39;" rel="tag">behavioral-finance</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+tactical-asset-allocation" class="post-tag" title="show questions tagged &#39;performance-evaluation tactical-asset-allocation&#39;" rel="tag">tactical-asset-allocation</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+capm" class="post-tag" title="show questions tagged &#39;performance-evaluation capm&#39;" rel="tag">capm</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+portfolio" class="post-tag" title="show questions tagged &#39;performance-evaluation portfolio&#39;" rel="tag">portfolio</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+portfolio-management" class="post-tag" title="show questions tagged &#39;performance-evaluation portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+asset-returns" class="post-tag" title="show questions tagged &#39;performance-evaluation asset-returns&#39;" rel="tag">asset-returns</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+analysis" class="post-tag" title="show questions tagged &#39;performance-evaluation analysis&#39;" rel="tag">analysis</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+probability" class="post-tag" title="show questions tagged &#39;performance-evaluation probability&#39;" rel="tag">probability</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+backtesting" class="post-tag" title="show questions tagged &#39;performance-evaluation backtesting&#39;" rel="tag">backtesting</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+investment" class="post-tag" title="show questions tagged &#39;performance-evaluation investment&#39;" rel="tag">investment</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+best-practices" class="post-tag" title="show questions tagged &#39;performance-evaluation best-practices&#39;" rel="tag">best-practices</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+market-data" class="post-tag" title="show questions tagged &#39;performance-evaluation market-data&#39;" rel="tag">market-data</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+robust-optimization" class="post-tag" title="show questions tagged &#39;performance-evaluation robust-optimization&#39;" rel="tag">robust-optimization</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+factor-loading" class="post-tag" title="show questions tagged &#39;performance-evaluation factor-loading&#39;" rel="tag">factor-loading</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/performance-evaluation+factor-models" class="post-tag" title="show questions tagged &#39;performance-evaluation factor-models&#39;" rel="tag">factor-models</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -847,7 +1137,7 @@ Every idea, reference, paper ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/performance-evaluation")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -940,7 +1230,7 @@ Every idea, reference, paper ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -967,14 +1257,14 @@ Every idea, reference, paper ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1010,6 +1300,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

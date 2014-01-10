@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged forward" href="/feeds/tag/forward" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187673,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350474,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fforward" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fforward" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[forward]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fforward">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fforward">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[forward]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/forward/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/forward?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/forward?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/forward?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/forward?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/forward?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/forward?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/forward?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/forward?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/forward?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/forward?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,34 +221,35 @@ The <a href="/questions/tagged/forward" class="post-tag" title="show questions t
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9596">
+<div class="question-summary" id="question-summary-9704">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>-3</strong></span>
-                    <div class="viewcount">votes</div>
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
                 </div>
             </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="31 views">
-    31 views
+        <div class="views " title="97 views">
+    97 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/9596/how-to-show-that-eur-vanilla-call-and-put-when-struck-at-money-forward-equal" class="question-hyperlink">How to show that Eur vanilla call and put when struck at money forward equal ..? [on hold]</a></h3>
+        <h3><a href="/questions/9704/eurodollar-vs-fra" class="question-hyperlink">EuroDollar vs FRA</a></h3>
         <div class="excerpt">
-            
+            I am not quite clear about this.
 
-I would like to know how to prove this question.
 
+When people mention Eurodollar are they mean Eurodollar Futures? 
+One of the difference between Eurodollar and Forward Rate Agreement(FRA) is basically difference ...
         </div>          
-        <div class="tags t-forward t-call t-put t-strike t-european">
-            <a href="/questions/tagged/forward" class="post-tag" title="show questions tagged &#39;forward&#39;" rel="tag">forward</a> <a href="/questions/tagged/call" class="post-tag" title="show questions tagged &#39;call&#39;" rel="tag">call</a> <a href="/questions/tagged/put" class="post-tag" title="show questions tagged &#39;put&#39;" rel="tag">put</a> <a href="/questions/tagged/strike" class="post-tag" title="show questions tagged &#39;strike&#39;" rel="tag">strike</a> <a href="/questions/tagged/european" class="post-tag" title="show questions tagged &#39;european&#39;" rel="tag">european</a> 
+        <div class="tags t-interest-rates t-futures t-forward t-irs">
+            <a href="/questions/tagged/interest-rates" class="post-tag" title="show questions tagged &#39;interest-rates&#39;" rel="tag">interest-rates</a> <a href="/questions/tagged/futures" class="post-tag" title="show questions tagged &#39;futures&#39;" rel="tag">futures</a> <a href="/questions/tagged/forward" class="post-tag" title="show questions tagged &#39;forward&#39;" rel="tag">forward</a> <a href="/questions/tagged/irs" class="post-tag" title="show questions tagged &#39;irs&#39;" rel="tag">irs</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -194,14 +257,14 @@ I would like to know how to prove this question.
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-30 12:59:38Z" class="relativetime">Nov 30 at 12:59</span>
+        asked <span title="2013-12-13 00:21:51Z" class="relativetime">Dec 13 '13 at 0:21</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/6636/s-parker"><div><img src="https://www.gravatar.com/avatar/e401bb66fdaba15dbbfddb569997f40c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/6354/jay"><div><img src="https://www.gravatar.com/avatar/cff0f4d43d399e92773fafcb1bf0922b?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/6636/s-parker">S Parker</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        <a href="/users/6354/jay">Jay</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
     </div>
 </div>
         </div>  
@@ -220,8 +283,8 @@ I would like to know how to prove this question.
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="104 views">
-    104 views
+        <div class="views " title="142 views">
+    142 views
 </div>
     </div>
     <div class="summary">
@@ -238,7 +301,7 @@ I would like to know how to prove this question.
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-12 05:20:17Z" class="relativetime">Oct 12 at 5:20</span>
+        asked <span title="2013-10-12 05:20:17Z" class="relativetime">Oct 12 '13 at 5:20</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2672/ali-haider"><div><img src="https://www.gravatar.com/avatar/3adf491b609c2462001889686edde315?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -264,8 +327,8 @@ I would like to know how to prove this question.
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="118 views">
-    118 views
+        <div class="views " title="144 views">
+    144 views
 </div>
     </div>
     <div class="summary">
@@ -282,7 +345,7 @@ I would like to know how to prove this question.
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-02 14:52:34Z" class="relativetime">Oct 2 at 14:52</span>
+        asked <span title="2013-10-02 14:52:34Z" class="relativetime">Oct 2 '13 at 14:52</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6213/eddie-e"><div><img src="https://www.gravatar.com/avatar/9978fbf3abe3d986d6021a81a2430bbd?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -300,7 +363,7 @@ I would like to know how to prove this question.
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>5</strong></span>
+                    <span class="vote-count-post "><strong>6</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -308,8 +371,8 @@ I would like to know how to prove this question.
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="130 views">
-    130 views
+        <div class="views " title="138 views">
+    138 views
 </div>
     </div>
     <div class="summary">
@@ -328,14 +391,14 @@ We know also that it's actually possible to extract an implied term ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-21 07:55:03Z" class="relativetime">Sep 21 at 7:55</span>
+        asked <span title="2013-09-21 07:55:03Z" class="relativetime">Sep 21 '13 at 7:55</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3058/lisa-ann"><div><img src="https://www.gravatar.com/avatar/76984cfe5803365e2c41a8765137636a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/3058/lisa-ann">Lisa Ann</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">473</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">483</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -354,8 +417,8 @@ We know also that it's actually possible to extract an implied term ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="102 views">
-    102 views
+        <div class="views " title="118 views">
+    118 views
 </div>
     </div>
     <div class="summary">
@@ -373,7 +436,7 @@ We know also that it's actually possible to extract an implied term ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-23 02:34:16Z" class="relativetime">Aug 23 at 2:34</span>
+        asked <span title="2013-08-23 02:34:16Z" class="relativetime">Aug 23 '13 at 2:34</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5976/user2209979"><div><img src="https://www.gravatar.com/avatar/a09abcfacf8d20cefaecad9b3bc37050?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -399,8 +462,8 @@ We know also that it's actually possible to extract an implied term ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="255 views">
-    255 views
+        <div class="views " title="309 views">
+    309 views
 </div>
     </div>
     <div class="summary">
@@ -420,7 +483,7 @@ IMM dates are defined as the third Wednesday of every March/June/September/Decem
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-01 09:51:19Z" class="relativetime">Aug 1 at 9:51</span>
+        asked <span title="2013-08-01 09:51:19Z" class="relativetime">Aug 1 '13 at 9:51</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2466/karusmeister"><div><img src="https://www.gravatar.com/avatar/9e01ad457b1bb5065a0927f239c9886d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -446,8 +509,8 @@ IMM dates are defined as the third Wednesday of every March/June/September/Decem
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="509 views">
-    509 views
+        <div class="views " title="634 views">
+    634 views
 </div>
     </div>
     <div class="summary">
@@ -466,14 +529,14 @@ Spot: ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-27 12:36:07Z" class="relativetime">Jun 27 at 12:36</span>
+        asked <span title="2013-06-27 12:36:07Z" class="relativetime">Jun 27 '13 at 12:36</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2685/pbd10017"><div><img src="https://www.gravatar.com/avatar/468524843c1063c7bb3312fbfb01750c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2685/pbd10017">PBD10017</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">95</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">115</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -492,8 +555,8 @@ Spot: ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="673 views">
-    673 views
+        <div class="views " title="834 views">
+    834 views
 </div>
     </div>
     <div class="summary">
@@ -512,7 +575,7 @@ If I do understand why forwards are useful for ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-15 14:56:05Z" class="relativetime">Jun 15 at 14:56</span>
+        asked <span title="2013-06-15 14:56:05Z" class="relativetime">Jun 15 '13 at 14:56</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5539/humble-jok"><div><img src="https://www.gravatar.com/avatar/0ebd0fd64079af540f12a26677ff5ad4?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -538,8 +601,8 @@ If I do understand why forwards are useful for ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="58 views">
-    58 views
+        <div class="views " title="61 views">
+    61 views
 </div>
     </div>
     <div class="summary">
@@ -558,7 +621,7 @@ I am ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-03 14:59:09Z" class="relativetime">Jun 3 at 14:59</span>
+        asked <span title="2013-06-03 14:59:09Z" class="relativetime">Jun 3 '13 at 14:59</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5479/alex-schmitt"><div><img src="https://www.gravatar.com/avatar/ed2cf92a90511a0a40c7b549de970921?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -584,8 +647,8 @@ I am ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="191 views">
-    191 views
+        <div class="views " title="201 views">
+    201 views
 </div>
     </div>
     <div class="summary">
@@ -604,14 +667,14 @@ I am ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-03-08 12:27:04Z" class="relativetime">Mar 8 at 12:27</span>
+        asked <span title="2013-03-08 12:27:04Z" class="relativetime">Mar 8 '13 at 12:27</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2017/piotrus"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/2hcn0.png?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2017/piotrus">piotruś</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">326</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">336</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
@@ -630,8 +693,8 @@ I am ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="130 views">
-    130 views
+        <div class="views " title="131 views">
+    131 views
 </div>
     </div>
     <div class="summary">
@@ -648,14 +711,14 @@ I am ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-03-04 21:04:13Z" class="relativetime">Mar 4 at 21:04</span>
+        asked <span title="2013-03-04 21:04:13Z" class="relativetime">Mar 4 '13 at 21:04</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2017/piotrus"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/2hcn0.png?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2017/piotrus">piotruś</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">326</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">336</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
@@ -674,8 +737,8 @@ I am ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="150 views">
-    150 views
+        <div class="views " title="158 views">
+    158 views
 </div>
     </div>
     <div class="summary">
@@ -694,14 +757,14 @@ I am ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-03-04 14:29:13Z" class="relativetime">Mar 4 at 14:29</span>
+        asked <span title="2013-03-04 14:29:13Z" class="relativetime">Mar 4 '13 at 14:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2017/piotrus"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/2hcn0.png?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2017/piotrus">piotruś</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">326</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">336</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
@@ -720,8 +783,8 @@ I am ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="246 views">
-    246 views
+        <div class="views " title="267 views">
+    267 views
 </div>
     </div>
     <div class="summary">
@@ -738,7 +801,7 @@ I am ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-02-03 19:54:06Z" class="relativetime">Feb 3 at 19:54</span>
+        asked <span title="2013-02-03 19:54:06Z" class="relativetime">Feb 3 '13 at 19:54</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/4692/louise"><div><img src="https://www.gravatar.com/avatar/396438fe8fcef60467d36b52e7dd7d36?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -764,8 +827,8 @@ I am ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="103 views">
-    103 views
+        <div class="views " title="106 views">
+    106 views
 </div>
     </div>
     <div class="summary">
@@ -794,7 +857,7 @@ We are at $t$ now.
     </div>
     <div class="user-details">
         <a href="/users/3174/jase">Jase</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">542</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">552</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
     </div>
 </div>
         </div>  
@@ -813,7 +876,7 @@ We are at $t$ now.
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views warm" title="1,358 views">
+        <div class="views warm" title="1,432 views">
     1k views
 </div>
     </div>
@@ -838,7 +901,7 @@ We are at $t$ now.
     </div>
     <div class="user-details">
         <a href="/users/2685/pbd10017">PBD10017</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">95</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">115</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -860,7 +923,7 @@ We are at $t$ now.
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=forward&amp;sort=newest" title="the 30 newest forward questions"><span class="feed-icon"></span>newest forward questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=forward&sort=newest" title="the 30 newest forward questions"><span class="feed-icon"></span>newest forward questions feed</a></div>
 </div>
 
 
@@ -874,55 +937,283 @@ We are at $t$ now.
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/forward/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/forward+fx" class="post-tag" title="show questions tagged &#39;forward fx&#39;" rel="tag">fx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/forward+interest-rates" class="post-tag" title="show questions tagged &#39;forward interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/forward+yield-curve" class="post-tag" title="show questions tagged &#39;forward yield-curve&#39;" rel="tag">yield-curve</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/forward+delta" class="post-tag" title="show questions tagged &#39;forward delta&#39;" rel="tag">delta</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/forward+volatility" class="post-tag" title="show questions tagged &#39;forward volatility&#39;" rel="tag">volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/forward+derivatives" class="post-tag" title="show questions tagged &#39;forward derivatives&#39;" rel="tag">derivatives</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/forward+pricing" class="post-tag" title="show questions tagged &#39;forward pricing&#39;" rel="tag">pricing</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+equities" class="post-tag" title="show questions tagged &#39;forward equities&#39;" rel="tag">equities</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+yield" class="post-tag" title="show questions tagged &#39;forward yield&#39;" rel="tag">yield</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+eigenvalue" class="post-tag" title="show questions tagged &#39;forward eigenvalue&#39;" rel="tag">eigenvalue</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+rates" class="post-tag" title="show questions tagged &#39;forward rates&#39;" rel="tag">rates</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+covariance" class="post-tag" title="show questions tagged &#39;forward covariance&#39;" rel="tag">covariance</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+implied-volatility" class="post-tag" title="show questions tagged &#39;forward implied-volatility&#39;" rel="tag">implied-volatility</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+investment" class="post-tag" title="show questions tagged &#39;forward investment&#39;" rel="tag">investment</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+returns" class="post-tag" title="show questions tagged &#39;forward returns&#39;" rel="tag">returns</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+hedge" class="post-tag" title="show questions tagged &#39;forward hedge&#39;" rel="tag">hedge</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+call" class="post-tag" title="show questions tagged &#39;forward call&#39;" rel="tag">call</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+risk-neutral-measure" class="post-tag" title="show questions tagged &#39;forward risk-neutral-measure&#39;" rel="tag">risk-neutral-measure</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+excel" class="post-tag" title="show questions tagged &#39;forward excel&#39;" rel="tag">excel</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+cds" class="post-tag" title="show questions tagged &#39;forward cds&#39;" rel="tag">cds</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+currency" class="post-tag" title="show questions tagged &#39;forward currency&#39;" rel="tag">currency</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+futures" class="post-tag" title="show questions tagged &#39;forward futures&#39;" rel="tag">futures</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+options" class="post-tag" title="show questions tagged &#39;forward options&#39;" rel="tag">options</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+additive-gaussian" class="post-tag" title="show questions tagged &#39;forward additive-gaussian&#39;" rel="tag">additive-gaussian</a>&nbsp;<br>
-            <a href="/questions/tagged/forward+hullwhite" class="post-tag" title="show questions tagged &#39;forward hullwhite&#39;" rel="tag">hullwhite</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/forward+fx" class="post-tag" title="show questions tagged &#39;forward fx&#39;" rel="tag">fx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/forward+interest-rates" class="post-tag" title="show questions tagged &#39;forward interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/forward+futures" class="post-tag" title="show questions tagged &#39;forward futures&#39;" rel="tag">futures</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/forward+yield-curve" class="post-tag" title="show questions tagged &#39;forward yield-curve&#39;" rel="tag">yield-curve</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/forward+delta" class="post-tag" title="show questions tagged &#39;forward delta&#39;" rel="tag">delta</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/forward+volatility" class="post-tag" title="show questions tagged &#39;forward volatility&#39;" rel="tag">volatility</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/forward+derivatives" class="post-tag" title="show questions tagged &#39;forward derivatives&#39;" rel="tag">derivatives</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/forward+pricing" class="post-tag" title="show questions tagged &#39;forward pricing&#39;" rel="tag">pricing</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/forward+equities" class="post-tag" title="show questions tagged &#39;forward equities&#39;" rel="tag">equities</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/forward+eigenvalue" class="post-tag" title="show questions tagged &#39;forward eigenvalue&#39;" rel="tag">eigenvalue</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+yield" class="post-tag" title="show questions tagged &#39;forward yield&#39;" rel="tag">yield</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+rates" class="post-tag" title="show questions tagged &#39;forward rates&#39;" rel="tag">rates</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+covariance" class="post-tag" title="show questions tagged &#39;forward covariance&#39;" rel="tag">covariance</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+implied-volatility" class="post-tag" title="show questions tagged &#39;forward implied-volatility&#39;" rel="tag">implied-volatility</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+investment" class="post-tag" title="show questions tagged &#39;forward investment&#39;" rel="tag">investment</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+hedge" class="post-tag" title="show questions tagged &#39;forward hedge&#39;" rel="tag">hedge</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+risk-neutral-measure" class="post-tag" title="show questions tagged &#39;forward risk-neutral-measure&#39;" rel="tag">risk-neutral-measure</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+risk" class="post-tag" title="show questions tagged &#39;forward risk&#39;" rel="tag">risk</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+excel" class="post-tag" title="show questions tagged &#39;forward excel&#39;" rel="tag">excel</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+cds" class="post-tag" title="show questions tagged &#39;forward cds&#39;" rel="tag">cds</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+currency" class="post-tag" title="show questions tagged &#39;forward currency&#39;" rel="tag">currency</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+options" class="post-tag" title="show questions tagged &#39;forward options&#39;" rel="tag">options</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+additive-gaussian" class="post-tag" title="show questions tagged &#39;forward additive-gaussian&#39;" rel="tag">additive-gaussian</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+hullwhite" class="post-tag" title="show questions tagged &#39;forward hullwhite&#39;" rel="tag">hullwhite</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/forward+simulations" class="post-tag" title="show questions tagged &#39;forward simulations&#39;" rel="tag">simulations</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -942,7 +1233,7 @@ We are at $t$ now.
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/forward")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1035,7 +1326,7 @@ We are at $t$ now.
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1062,14 +1353,14 @@ We are at $t$ now.
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1105,6 +1396,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

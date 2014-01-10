@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged risk-neutral-measure" href="/feeds/tag/risk-neutral-measure" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187157,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350628,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2frisk-neutral-measure" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2frisk-neutral-measure" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[risk-neutral-measure]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2frisk-neutral-measure">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2frisk-neutral-measure">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[risk-neutral-measure]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/risk-neutral-measure/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/risk-neutral-measure?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/risk-neutral-measure?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/risk-neutral-measure?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/risk-neutral-measure?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/risk-neutral-measure?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/risk-neutral-measure?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/risk-neutral-measure?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/risk-neutral-measure?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/risk-neutral-measure?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/risk-neutral-measure?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,33 +221,35 @@ The <a href="/questions/tagged/risk-neutral-measure" class="post-tag" title="sho
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9597">
+<div class="question-summary" id="question-summary-9883">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>-3</strong></span>
+                    <span class="vote-count-post "><strong>0</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="41 views">
-    41 views
+        <div class="views " title="32 views">
+    32 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/9597/how-to-show-that-under-risk-neutral-probability-measure-q-the-probability-of-str" class="question-hyperlink">How to show that under risk-neutral probability measure Q the probability of strike price being smaller than share price at maturity is N(d2)? [on hold]</a></h3>
+        <h3><a href="/questions/9883/under-an-emm-does-there-necessarily-exist-a-replicating-portfolio" class="question-hyperlink">Under an EMM, does there necessarily exist a replicating portfolio?</a></h3>
         <div class="excerpt">
-            
+            In general, under an EMM, does there necessarily exist a replicating portfolio for every derivative?
 
-I would like to know how to show that under risk-neutral probability measure Q, given the share price, the probability of strike price being smaller than share price at maturity is equal to N(d2) ...
+I believe the answer to this is false. A simple example is a discrete time, trinomial model.
+
+...
         </div>          
-        <div class="tags t-probability t-risk-neutral-measure t-binary-options t-strike">
-            <a href="/questions/tagged/probability" class="post-tag" title="show questions tagged &#39;probability&#39;" rel="tag">probability</a> <a href="/questions/tagged/risk-neutral-measure" class="post-tag" title="show questions tagged &#39;risk-neutral-measure&#39;" rel="tag">risk-neutral-measure</a> <a href="/questions/tagged/binary-options" class="post-tag" title="show questions tagged &#39;binary-options&#39;" rel="tag">binary-options</a> <a href="/questions/tagged/strike" class="post-tag" title="show questions tagged &#39;strike&#39;" rel="tag">strike</a> 
+        <div class="tags t-risk-neutral-measure t-replication">
+            <a href="/questions/tagged/risk-neutral-measure" class="post-tag" title="show questions tagged &#39;risk-neutral-measure&#39;" rel="tag">risk-neutral-measure</a> <a href="/questions/tagged/replication" class="post-tag" title="show questions tagged &#39;replication&#39;" rel="tag">replication</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -193,14 +257,14 @@ I would like to know how to show that under risk-neutral probability measure Q, 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-30 13:21:24Z" class="relativetime">Nov 30 at 13:21</span>
+        asked <span title="2014-01-08 18:31:45Z" class="relativetime">yesterday</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/6636/s-parker"><div><img src="https://www.gravatar.com/avatar/e401bb66fdaba15dbbfddb569997f40c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/3334/lost1"><div><img src="https://www.gravatar.com/avatar/4700ed4e1a96fb7c67922d47dd5a0c04?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/6636/s-parker">S Parker</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        <a href="/users/3334/lost1">Lost1</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">230</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
@@ -211,7 +275,7 @@ I would like to know how to show that under risk-neutral probability measure Q, 
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
+                    <span class="vote-count-post "><strong>3</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -219,8 +283,8 @@ I would like to know how to show that under risk-neutral probability measure Q, 
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="55 views">
-    55 views
+        <div class="views " title="73 views">
+    73 views
 </div>
     </div>
     <div class="summary">
@@ -239,14 +303,14 @@ Like most stochastic ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-26 22:33:13Z" class="relativetime">Nov 26 at 22:33</span>
+        asked <span title="2013-11-26 22:33:13Z" class="relativetime">Nov 26 '13 at 22:33</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3334/lost1"><div><img src="https://www.gravatar.com/avatar/4700ed4e1a96fb7c67922d47dd5a0c04?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/3334/lost1">Lost1</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">192</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">230</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
@@ -265,8 +329,8 @@ Like most stochastic ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="171 views">
-    171 views
+        <div class="views " title="211 views">
+    211 views
 </div>
     </div>
     <div class="summary">
@@ -285,7 +349,7 @@ What I can't seem to understand is why the Vasicek model is risk-neutral? Follow
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-17 11:20:32Z" class="relativetime">Oct 17 at 11:20</span>
+        asked <span title="2013-10-17 11:20:32Z" class="relativetime">Oct 17 '13 at 11:20</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6304/user6304"><div><img src="https://www.gravatar.com/avatar/8bbecf36fb58cbb184b1c251dab6cbe3?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -311,8 +375,8 @@ What I can't seem to understand is why the Vasicek model is risk-neutral? Follow
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="77 views">
-    77 views
+        <div class="views " title="95 views">
+    95 views
 </div>
     </div>
     <div class="summary">
@@ -337,7 +401,7 @@ Now, let's say that I have ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-16 21:03:54Z" class="relativetime">Oct 16 at 21:03</span>
+        asked <span title="2013-10-16 21:03:54Z" class="relativetime">Oct 16 '13 at 21:03</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6297/jso"><div><img src="https://www.gravatar.com/avatar/5b2919d0c848d82e2134917b94a56e07?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -363,8 +427,8 @@ Now, let's say that I have ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="157 views">
-    157 views
+        <div class="views " title="171 views">
+    171 views
 </div>
     </div>
     <div class="summary">
@@ -383,7 +447,7 @@ I'm trying to get the exchange option price ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-04 03:28:15Z" class="relativetime">Sep 4 at 3:28</span>
+        asked <span title="2013-09-04 03:28:15Z" class="relativetime">Sep 4 '13 at 3:28</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5754/joao-serafim"><div><img src="https://www.gravatar.com/avatar/1939bb07715bceadc4d0da76d865baf1?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -409,8 +473,8 @@ I'm trying to get the exchange option price ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="60 views">
-    60 views
+        <div class="views " title="69 views">
+    69 views
 </div>
     </div>
     <div class="summary">
@@ -429,14 +493,14 @@ I'm trying to get the exchange option price ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-08 11:21:24Z" class="relativetime">Aug 8 at 11:21</span>
+        asked <span title="2013-08-08 11:21:24Z" class="relativetime">Aug 8 '13 at 11:21</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5863/user2006864"><div><img src="https://www.gravatar.com/avatar/0a06684167fd2e4151e12931ac09e593?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5863/user2006864">user2006864</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">26</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">31</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
     </div>
 </div>
         </div>  
@@ -455,8 +519,8 @@ I'm trying to get the exchange option price ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="62 views">
-    62 views
+        <div class="views " title="65 views">
+    65 views
 </div>
     </div>
     <div class="summary">
@@ -473,14 +537,14 @@ I'm trying to get the exchange option price ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-07 02:41:53Z" class="relativetime">Aug 7 at 2:41</span>
+        asked <span title="2013-08-07 02:41:53Z" class="relativetime">Aug 7 '13 at 2:41</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5867/sharon-reed"><div><img src="https://www.gravatar.com/avatar/3ce41e25bfaa0616c129092513a11128?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5867/sharon-reed">Sharon Reed</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">38</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">43</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
     </div>
 </div>
         </div>  
@@ -499,8 +563,8 @@ I'm trying to get the exchange option price ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="266 views">
-    266 views
+        <div class="views " title="313 views">
+    313 views
 </div>
     </div>
     <div class="summary">
@@ -517,10 +581,10 @@ I'm trying to get the exchange option price ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-29 09:01:21Z" class="relativetime">Jun 29 at 9:01</span>
+        asked <span title="2013-06-29 09:01:21Z" class="relativetime">Jun 29 '13 at 9:01</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/5101/zbigniew"><div><img src="https://www.gravatar.com/avatar/2055b6fcda281845465853bd18aafd35?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/5101/zbigniew"><div><img src="https://www.gravatar.com/avatar/a469153857a4d7736707d55e0e045080?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5101/zbigniew">Zbigniew</a><br>
@@ -543,8 +607,8 @@ I'm trying to get the exchange option price ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="629 views">
-    629 views
+        <div class="views " title="789 views">
+    789 views
 </div>
     </div>
     <div class="summary">
@@ -563,14 +627,14 @@ However, the behavior of ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-20 11:29:50Z" class="relativetime">Jun 20 at 11:29</span>
+        asked <span title="2013-06-20 11:29:50Z" class="relativetime">Jun 20 '13 at 11:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5208/sets"><div><img src="https://www.gravatar.com/avatar/143dbd5de52f06b6e9d319227ac62076?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5208/sets">sets</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">148</span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">153</span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
     </div>
 </div>
         </div>  
@@ -589,8 +653,8 @@ However, the behavior of ...
                 <strong>4</strong>answers
             </div>
         </div>
-        <div class="views " title="697 views">
-    697 views
+        <div class="views " title="845 views">
+    845 views
 </div>
     </div>
     <div class="summary">
@@ -613,7 +677,7 @@ and different stocks have different drifts of $\mu$. Why would ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-18 04:35:29Z" class="relativetime">Jun 18 at 4:35</span>
+        asked <span title="2013-06-18 04:35:29Z" class="relativetime">Jun 18 '13 at 4:35</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2576/codenoob"><div><img src="https://www.gravatar.com/avatar/56b51de2018a4f7a02b708ff941936c0?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -639,8 +703,8 @@ and different stocks have different drifts of $\mu$. Why would ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="240 views">
-    240 views
+        <div class="views " title="246 views">
+    246 views
 </div>
     </div>
     <div class="summary">
@@ -669,14 +733,14 @@ I have just been thinking about this later equation. This is very interesting be
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-03-23 05:22:23Z" class="relativetime">Mar 23 at 5:22</span>
+        asked <span title="2013-03-23 05:22:23Z" class="relativetime">Mar 23 '13 at 5:22</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2017/piotrus"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/2hcn0.png?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2017/piotrus">piotruś</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">326</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">336</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
@@ -695,8 +759,8 @@ I have just been thinking about this later equation. This is very interesting be
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="316 views">
-    316 views
+        <div class="views " title="345 views">
+    345 views
 </div>
     </div>
     <div class="summary">
@@ -719,13 +783,13 @@ Now when a text mentions drift = 5% does that mean that interest ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-03-16 15:58:19Z" class="relativetime">Mar 16 at 15:58</span>
+        asked <span title="2013-03-16 15:58:19Z" class="relativetime">Mar 16 '13 at 15:58</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/3336/okash-khawaja"><div><img src="https://www.gravatar.com/avatar/445b3b33beb77f87dad8d0990abae4a1?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/3336/bytefire"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/Xwn9U.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/3336/okash-khawaja">Okash Khawaja</a><br>
+        <a href="/users/3336/bytefire">bytefire</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">130</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
@@ -745,8 +809,8 @@ Now when a text mentions drift = 5% does that mean that interest ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="126 views">
-    126 views
+        <div class="views " title="128 views">
+    128 views
 </div>
     </div>
     <div class="summary">
@@ -765,7 +829,7 @@ When I tried to use the equations provided, the pricing became extremely lopside
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-02-15 03:22:41Z" class="relativetime">Feb 15 at 3:22</span>
+        asked <span title="2013-02-15 03:22:41Z" class="relativetime">Feb 15 '13 at 3:22</span>
     </div>
     <div class="user-gravatar32">
         <span class="anonymous-gravatar"></span>
@@ -791,8 +855,8 @@ When I tried to use the equations provided, the pricing became extremely lopside
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="171 views">
-    171 views
+        <div class="views " title="176 views">
+    176 views
 </div>
     </div>
     <div class="summary">
@@ -815,7 +879,7 @@ For pricing complex ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-01-29 09:14:31Z" class="relativetime">Jan 29 at 9:14</span>
+        asked <span title="2013-01-29 09:14:31Z" class="relativetime">Jan 29 '13 at 9:14</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/482/g-g"><div><img src="https://www.gravatar.com/avatar/466d768d863ffff04fb94ad40330c0c6?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -841,8 +905,8 @@ For pricing complex ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="103 views">
-    103 views
+        <div class="views " title="106 views">
+    106 views
 </div>
     </div>
     <div class="summary">
@@ -871,7 +935,7 @@ We are at $t$ now.
     </div>
     <div class="user-details">
         <a href="/users/3174/jase">Jase</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">542</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">552</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
     </div>
 </div>
         </div>  
@@ -892,15 +956,15 @@ We are at $t$ now.
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/risk-neutral-measure?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/risk-neutral-measure?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/risk-neutral-measure?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/risk-neutral-measure?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/risk-neutral-measure?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/risk-neutral-measure?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=risk-neutral-measure&amp;sort=newest" title="the 30 newest risk-neutral-measure questions"><span class="feed-icon"></span>newest risk-neutral-measure questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=risk-neutral-measure&sort=newest" title="the 30 newest risk-neutral-measure questions"><span class="feed-icon"></span>newest risk-neutral-measure questions feed</a></div>
 </div>
 
 
@@ -914,55 +978,283 @@ We are at $t$ now.
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/risk-neutral-measure/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/risk-neutral-measure+option-pricing" class="post-tag" title="show questions tagged &#39;risk-neutral-measure option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+stochastic-processes" class="post-tag" title="show questions tagged &#39;risk-neutral-measure stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+options" class="post-tag" title="show questions tagged &#39;risk-neutral-measure options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+monte-carlo" class="post-tag" title="show questions tagged &#39;risk-neutral-measure monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+stochastic-calculus" class="post-tag" title="show questions tagged &#39;risk-neutral-measure stochastic-calculus&#39;" rel="tag">stochastic-calculus</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+black-scholes" class="post-tag" title="show questions tagged &#39;risk-neutral-measure black-scholes&#39;" rel="tag">black-scholes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+probability" class="post-tag" title="show questions tagged &#39;risk-neutral-measure probability&#39;" rel="tag">probability</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+mathematics" class="post-tag" title="show questions tagged &#39;risk-neutral-measure mathematics&#39;" rel="tag">mathematics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+derivatives" class="post-tag" title="show questions tagged &#39;risk-neutral-measure derivatives&#39;" rel="tag">derivatives</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+interest-rates" class="post-tag" title="show questions tagged &#39;risk-neutral-measure interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/risk-neutral-measure+lognormal" class="post-tag" title="show questions tagged &#39;risk-neutral-measure lognormal&#39;" rel="tag">lognormal</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+diversification" class="post-tag" title="show questions tagged &#39;risk-neutral-measure diversification&#39;" rel="tag">diversification</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+expected-return" class="post-tag" title="show questions tagged &#39;risk-neutral-measure expected-return&#39;" rel="tag">expected-return</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+binomial-tree" class="post-tag" title="show questions tagged &#39;risk-neutral-measure binomial-tree&#39;" rel="tag">binomial-tree</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+martingale" class="post-tag" title="show questions tagged &#39;risk-neutral-measure martingale&#39;" rel="tag">martingale</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+binary-options" class="post-tag" title="show questions tagged &#39;risk-neutral-measure binary-options&#39;" rel="tag">binary-options</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+strike" class="post-tag" title="show questions tagged &#39;risk-neutral-measure strike&#39;" rel="tag">strike</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+valuation" class="post-tag" title="show questions tagged &#39;risk-neutral-measure valuation&#39;" rel="tag">valuation</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+forward" class="post-tag" title="show questions tagged &#39;risk-neutral-measure forward&#39;" rel="tag">forward</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+pricing" class="post-tag" title="show questions tagged &#39;risk-neutral-measure pricing&#39;" rel="tag">pricing</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+equities" class="post-tag" title="show questions tagged &#39;risk-neutral-measure equities&#39;" rel="tag">equities</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+risk-management" class="post-tag" title="show questions tagged &#39;risk-neutral-measure risk-management&#39;" rel="tag">risk-management</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+american-options" class="post-tag" title="show questions tagged &#39;risk-neutral-measure american-options&#39;" rel="tag">american-options</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+fundamentals" class="post-tag" title="show questions tagged &#39;risk-neutral-measure fundamentals&#39;" rel="tag">fundamentals</a>&nbsp;<br>
-            <a href="/questions/tagged/risk-neutral-measure+volatility" class="post-tag" title="show questions tagged &#39;risk-neutral-measure volatility&#39;" rel="tag">volatility</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+option-pricing" class="post-tag" title="show questions tagged &#39;risk-neutral-measure option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+stochastic-processes" class="post-tag" title="show questions tagged &#39;risk-neutral-measure stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+options" class="post-tag" title="show questions tagged &#39;risk-neutral-measure options&#39;" rel="tag">options</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+monte-carlo" class="post-tag" title="show questions tagged &#39;risk-neutral-measure monte-carlo&#39;" rel="tag">monte-carlo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+stochastic-calculus" class="post-tag" title="show questions tagged &#39;risk-neutral-measure stochastic-calculus&#39;" rel="tag">stochastic-calculus</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+black-scholes" class="post-tag" title="show questions tagged &#39;risk-neutral-measure black-scholes&#39;" rel="tag">black-scholes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+mathematics" class="post-tag" title="show questions tagged &#39;risk-neutral-measure mathematics&#39;" rel="tag">mathematics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+interest-rates" class="post-tag" title="show questions tagged &#39;risk-neutral-measure interest-rates&#39;" rel="tag">interest-rates</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+derivatives" class="post-tag" title="show questions tagged &#39;risk-neutral-measure derivatives&#39;" rel="tag">derivatives</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/risk-neutral-measure+binomial-tree" class="post-tag" title="show questions tagged &#39;risk-neutral-measure binomial-tree&#39;" rel="tag">binomial-tree</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+martingale" class="post-tag" title="show questions tagged &#39;risk-neutral-measure martingale&#39;" rel="tag">martingale</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+risk-management" class="post-tag" title="show questions tagged &#39;risk-neutral-measure risk-management&#39;" rel="tag">risk-management</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+valuation" class="post-tag" title="show questions tagged &#39;risk-neutral-measure valuation&#39;" rel="tag">valuation</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+forward" class="post-tag" title="show questions tagged &#39;risk-neutral-measure forward&#39;" rel="tag">forward</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+diversification" class="post-tag" title="show questions tagged &#39;risk-neutral-measure diversification&#39;" rel="tag">diversification</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+pricing" class="post-tag" title="show questions tagged &#39;risk-neutral-measure pricing&#39;" rel="tag">pricing</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+equities" class="post-tag" title="show questions tagged &#39;risk-neutral-measure equities&#39;" rel="tag">equities</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+expected-return" class="post-tag" title="show questions tagged &#39;risk-neutral-measure expected-return&#39;" rel="tag">expected-return</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+replication" class="post-tag" title="show questions tagged &#39;risk-neutral-measure replication&#39;" rel="tag">replication</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+volatility" class="post-tag" title="show questions tagged &#39;risk-neutral-measure volatility&#39;" rel="tag">volatility</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+asset-pricing" class="post-tag" title="show questions tagged &#39;risk-neutral-measure asset-pricing&#39;" rel="tag">asset-pricing</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+probability" class="post-tag" title="show questions tagged &#39;risk-neutral-measure probability&#39;" rel="tag">probability</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+no-arbitrage-theory" class="post-tag" title="show questions tagged &#39;risk-neutral-measure no-arbitrage-theory&#39;" rel="tag">no-arbitrage-theory</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+basket" class="post-tag" title="show questions tagged &#39;risk-neutral-measure basket&#39;" rel="tag">basket</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/risk-neutral-measure+spread-options" class="post-tag" title="show questions tagged &#39;risk-neutral-measure spread-options&#39;" rel="tag">spread-options</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -982,7 +1274,7 @@ We are at $t$ now.
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/risk-neutral-measure")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1075,7 +1367,7 @@ We are at $t$ now.
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1102,14 +1394,14 @@ We are at $t$ now.
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1145,6 +1437,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

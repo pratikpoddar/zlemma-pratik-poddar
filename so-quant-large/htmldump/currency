@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged currency" href="/feeds/tag/currency" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187219,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350584,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcurrency" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcurrency" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[currency]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcurrency">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcurrency">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[currency]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/currency/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/currency?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/currency?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/currency?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/currency?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/currency?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/currency?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/currency?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/currency?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/currency?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/currency?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -159,7 +221,7 @@ The <a href="/questions/tagged/currency" class="post-tag" title="show questions 
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-9440">
+<div class="question-summary" id="question-summary-9855">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -173,8 +235,56 @@ The <a href="/questions/tagged/currency" class="post-tag" title="show questions 
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="57 views">
-    57 views
+        <div class="views " title="26 views">
+    26 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/9855/assume-foreign-demand-for-us-assets-rises-does-this-lead-to-inflation-or-deflat" class="question-hyperlink">Assume foreign demand for US assets rises. Does this lead to inflation or deflation of the US price level? [closed]</a></h3>
+        <div class="excerpt">
+            Not sure how to hash it out.
+
+Assume demand for US assets rise among foreigners. Then Demand for USD rises, leading to appreciation of the currency, and deflation for natives.
+
+However, if demand for ...
+        </div>          
+        <div class="tags t-currency t-inflation t-trade">
+            <a href="/questions/tagged/currency" class="post-tag" title="show questions tagged &#39;currency&#39;" rel="tag">currency</a> <a href="/questions/tagged/inflation" class="post-tag" title="show questions tagged &#39;inflation&#39;" rel="tag">inflation</a> <a href="/questions/tagged/trade" class="post-tag" title="show questions tagged &#39;trade&#39;" rel="tag">trade</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-03 18:04:12Z" class="relativetime">Jan 3 at 18:04</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6887/bob-the-builds"><div><img src="https://www.gravatar.com/avatar/73919a6f0a4c95f9cc1775f8a066d135?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6887/bob-the-builds">Bob the Builds</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-9440">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="61 views">
+    61 views
 </div>
     </div>
     <div class="summary">
@@ -191,14 +301,14 @@ The <a href="/questions/tagged/currency" class="post-tag" title="show questions 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-13 22:29:49Z" class="relativetime">Nov 13 at 22:29</span>
+        asked <span title="2013-11-13 22:29:49Z" class="relativetime">Nov 13 '13 at 22:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6443/rwolst"><div><img src="https://www.gravatar.com/avatar/cdd8455d7ef529f1941b1874bd67e3c8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/6443/rwolst">rwolst</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">124</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">122</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
     </div>
 </div>
         </div>  
@@ -217,8 +327,8 @@ The <a href="/questions/tagged/currency" class="post-tag" title="show questions 
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="102 views">
-    102 views
+        <div class="views " title="118 views">
+    118 views
 </div>
     </div>
     <div class="summary">
@@ -236,7 +346,7 @@ The <a href="/questions/tagged/currency" class="post-tag" title="show questions 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-23 02:34:16Z" class="relativetime">Aug 23 at 2:34</span>
+        asked <span title="2013-08-23 02:34:16Z" class="relativetime">Aug 23 '13 at 2:34</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5976/user2209979"><div><img src="https://www.gravatar.com/avatar/a09abcfacf8d20cefaecad9b3bc37050?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -262,8 +372,8 @@ The <a href="/questions/tagged/currency" class="post-tag" title="show questions 
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="84 views">
-    84 views
+        <div class="views " title="87 views">
+    87 views
 </div>
     </div>
     <div class="summary">
@@ -281,7 +391,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-23 00:29:14Z" class="relativetime">Aug 23 at 0:29</span>
+        asked <span title="2013-08-23 00:29:14Z" class="relativetime">Aug 23 '13 at 0:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5976/user2209979"><div><img src="https://www.gravatar.com/avatar/a09abcfacf8d20cefaecad9b3bc37050?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -307,8 +417,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="77 views">
-    77 views
+        <div class="views " title="78 views">
+    78 views
 </div>
     </div>
     <div class="summary">
@@ -325,7 +435,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-27 14:04:22Z" class="relativetime">Jul 27 at 14:04</span>
+        asked <span title="2013-07-27 14:04:22Z" class="relativetime">Jul 27 '13 at 14:04</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5797/finniemae"><div><img src="https://www.gravatar.com/avatar/45f747c0a6d7e6f1ecb9bacd7266a98c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -351,8 +461,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="169 views">
-    169 views
+        <div class="views " title="181 views">
+    181 views
 </div>
     </div>
     <div class="summary">
@@ -369,14 +479,14 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-19 15:16:25Z" class="relativetime">Jul 19 at 15:16</span>
+        asked <span title="2013-07-19 15:16:25Z" class="relativetime">Jul 19 '13 at 15:16</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2114/matt-wolf"><div><img src="https://www.gravatar.com/avatar/0f1373fbc48fce33158d19ed1a398132?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2114/matt-wolf">Matt Wolf</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8,295</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="21 bronze badges"><span class="badge3"></span><span class="badgecount">21</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">8,360</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
     </div>
 </div>
         </div>  
@@ -395,8 +505,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="47 views">
-    47 views
+        <div class="views " title="52 views">
+    52 views
 </div>
     </div>
     <div class="summary">
@@ -413,7 +523,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-17 20:12:36Z" class="relativetime">Jul 17 at 20:12</span>
+        asked <span title="2013-07-17 20:12:36Z" class="relativetime">Jul 17 '13 at 20:12</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5693/laszlo"><div><img src="https://www.gravatar.com/avatar/617248e899da78c9391b0d8d44eab701?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -439,8 +549,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="57 views">
-    57 views
+        <div class="views " title="60 views">
+    60 views
 </div>
     </div>
     <div class="summary">
@@ -457,7 +567,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-17 20:05:29Z" class="relativetime">Jul 17 at 20:05</span>
+        asked <span title="2013-07-17 20:05:29Z" class="relativetime">Jul 17 '13 at 20:05</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5693/laszlo"><div><img src="https://www.gravatar.com/avatar/617248e899da78c9391b0d8d44eab701?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -483,8 +593,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="28 views">
-    28 views
+        <div class="views " title="30 views">
+    30 views
 </div>
     </div>
     <div class="summary">
@@ -501,7 +611,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-17 19:58:36Z" class="relativetime">Jul 17 at 19:58</span>
+        asked <span title="2013-07-17 19:58:36Z" class="relativetime">Jul 17 '13 at 19:58</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5693/laszlo"><div><img src="https://www.gravatar.com/avatar/617248e899da78c9391b0d8d44eab701?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -527,8 +637,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="34 views">
-    34 views
+        <div class="views " title="38 views">
+    38 views
 </div>
     </div>
     <div class="summary">
@@ -545,7 +655,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-17 19:51:52Z" class="relativetime">Jul 17 at 19:51</span>
+        asked <span title="2013-07-17 19:51:52Z" class="relativetime">Jul 17 '13 at 19:51</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5693/laszlo"><div><img src="https://www.gravatar.com/avatar/617248e899da78c9391b0d8d44eab701?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -571,8 +681,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="29 views">
-    29 views
+        <div class="views " title="30 views">
+    30 views
 </div>
     </div>
     <div class="summary">
@@ -589,7 +699,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-17 19:42:30Z" class="relativetime">Jul 17 at 19:42</span>
+        asked <span title="2013-07-17 19:42:30Z" class="relativetime">Jul 17 '13 at 19:42</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5693/laszlo"><div><img src="https://www.gravatar.com/avatar/617248e899da78c9391b0d8d44eab701?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -615,8 +725,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="216 views">
-    216 views
+        <div class="views " title="281 views">
+    281 views
 </div>
     </div>
     <div class="summary">
@@ -633,7 +743,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-17 19:37:29Z" class="relativetime">Jul 17 at 19:37</span>
+        asked <span title="2013-07-17 19:37:29Z" class="relativetime">Jul 17 '13 at 19:37</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5693/laszlo"><div><img src="https://www.gravatar.com/avatar/617248e899da78c9391b0d8d44eab701?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -659,8 +769,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="121 views">
-    121 views
+        <div class="views " title="131 views">
+    131 views
 </div>
     </div>
     <div class="summary">
@@ -677,7 +787,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-11 13:19:24Z" class="relativetime">Jul 11 at 13:19</span>
+        asked <span title="2013-07-11 13:19:24Z" class="relativetime">Jul 11 '13 at 13:19</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5693/laszlo"><div><img src="https://www.gravatar.com/avatar/617248e899da78c9391b0d8d44eab701?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -703,8 +813,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="162 views">
-    162 views
+        <div class="views " title="184 views">
+    184 views
 </div>
     </div>
     <div class="summary">
@@ -712,8 +822,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="excerpt">
             Most automated trading systems have a number of embedded parameters such as the lookback periods, entry and exit thresholds, etc. This is like the moving average crossover system or any of the systems ...
         </div>          
-        <div class="tags t-optimization t-models t-currency t-blackbox t-parameter">
-            <a href="/questions/tagged/optimization" class="post-tag" title="show questions tagged &#39;optimization&#39;" rel="tag">optimization</a> <a href="/questions/tagged/models" class="post-tag" title="show questions tagged &#39;models&#39;" rel="tag">models</a> <a href="/questions/tagged/currency" class="post-tag" title="show questions tagged &#39;currency&#39;" rel="tag">currency</a> <a href="/questions/tagged/blackbox" class="post-tag" title="show questions tagged &#39;blackbox&#39;" rel="tag">blackbox</a> <a href="/questions/tagged/parameter" class="post-tag" title="show questions tagged &#39;parameter&#39;" rel="tag">parameter</a> 
+        <div class="tags t-optimization t-models t-currency t-parameter">
+            <a href="/questions/tagged/optimization" class="post-tag" title="show questions tagged &#39;optimization&#39;" rel="tag">optimization</a> <a href="/questions/tagged/models" class="post-tag" title="show questions tagged &#39;models&#39;" rel="tag">models</a> <a href="/questions/tagged/currency" class="post-tag" title="show questions tagged &#39;currency&#39;" rel="tag">currency</a> <a href="/questions/tagged/parameter" class="post-tag" title="show questions tagged &#39;parameter&#39;" rel="tag">parameter</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -721,14 +831,14 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-30 07:02:19Z" class="relativetime">May 30 at 7:02</span>
+        asked <span title="2013-05-30 07:02:19Z" class="relativetime">May 30 '13 at 7:02</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5456/amir-sani"><div><img src="https://www.gravatar.com/avatar/cb038b1faa095e8698adeac1303a3901?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5456/amir-sani">Amir Sani</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">18</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">20</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -747,8 +857,8 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="115 views">
-    115 views
+        <div class="views " title="137 views">
+    137 views
 </div>
     </div>
     <div class="summary">
@@ -765,7 +875,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-23 15:42:15Z" class="relativetime">May 23 at 15:42</span>
+        asked <span title="2013-05-23 15:42:15Z" class="relativetime">May 23 '13 at 15:42</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5097/gekke-henkie"><div><img src="https://www.gravatar.com/avatar/cf9adf83276e63ae763677eac755b754?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -773,50 +883,6 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
     <div class="user-details">
         <a href="/users/5097/gekke-henkie">Gekke Henkie</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">32</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-4889">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="328 views">
-    328 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/4889/optimizing-a-currency-only-portfolio-with-negative-weights" class="question-hyperlink">Optimizing a currency only portfolio with negative weights</a></h3>
-        <div class="excerpt">
-            I am testing various optimization methods for a currency-only portfolio. I have a vector of expected returns for the major developed currencies vs. the USD each week (based on a proprietary model). I ...
-        </div>          
-        <div class="tags t-portfolio-management t-optimization t-currency">
-            <a href="/questions/tagged/portfolio-management" class="post-tag" title="show questions tagged &#39;portfolio-management&#39;" rel="tag">portfolio-management</a> <a href="/questions/tagged/optimization" class="post-tag" title="show questions tagged &#39;optimization&#39;" rel="tag">optimization</a> <a href="/questions/tagged/currency" class="post-tag" title="show questions tagged &#39;currency&#39;" rel="tag">currency</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2012-12-31 04:12:28Z" class="relativetime">Dec 31 '12 at 4:12</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/3521/david-weismann"><div><img src="https://www.gravatar.com/avatar/158b3f8b823105e184b18b1c02c65e42?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/3521/david-weismann">David Weismann</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
@@ -837,77 +903,305 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/currency?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/currency?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/currency?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/currency?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/currency?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/currency?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=currency&amp;sort=newest" title="the 30 newest currency questions"><span class="feed-icon"></span>newest currency questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=currency&sort=newest" title="the 30 newest currency questions"><span class="feed-icon"></span>newest currency questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">21</div>
+            <div class="summarycount al">22</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/currency" class="post-tag" title="show questions tagged &#39;currency&#39;" rel="tag">currency</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/currency/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/currency+returns" class="post-tag" title="show questions tagged &#39;currency returns&#39;" rel="tag">returns</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/currency+beta" class="post-tag" title="show questions tagged &#39;currency beta&#39;" rel="tag">beta</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/currency+coherent-risk-measure" class="post-tag" title="show questions tagged &#39;currency coherent-risk-measure&#39;" rel="tag">coherent-risk-measure</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/currency+capm" class="post-tag" title="show questions tagged &#39;currency capm&#39;" rel="tag">capm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/currency+fx" class="post-tag" title="show questions tagged &#39;currency fx&#39;" rel="tag">fx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/currency+optimization" class="post-tag" title="show questions tagged &#39;currency optimization&#39;" rel="tag">optimization</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/currency+portfolio-management" class="post-tag" title="show questions tagged &#39;currency portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/currency+equities" class="post-tag" title="show questions tagged &#39;currency equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/currency+numerical-methods" class="post-tag" title="show questions tagged &#39;currency numerical-methods&#39;" rel="tag">numerical-methods</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+analysis" class="post-tag" title="show questions tagged &#39;currency analysis&#39;" rel="tag">analysis</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+data" class="post-tag" title="show questions tagged &#39;currency data&#39;" rel="tag">data</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+tactical-asset-allocation" class="post-tag" title="show questions tagged &#39;currency tactical-asset-allocation&#39;" rel="tag">tactical-asset-allocation</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+modeling" class="post-tag" title="show questions tagged &#39;currency modeling&#39;" rel="tag">modeling</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+arbitrage" class="post-tag" title="show questions tagged &#39;currency arbitrage&#39;" rel="tag">arbitrage</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+trading" class="post-tag" title="show questions tagged &#39;currency trading&#39;" rel="tag">trading</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+diversification" class="post-tag" title="show questions tagged &#39;currency diversification&#39;" rel="tag">diversification</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+models" class="post-tag" title="show questions tagged &#39;currency models&#39;" rel="tag">models</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+blackbox" class="post-tag" title="show questions tagged &#39;currency blackbox&#39;" rel="tag">blackbox</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+finance" class="post-tag" title="show questions tagged &#39;currency finance&#39;" rel="tag">finance</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+programming" class="post-tag" title="show questions tagged &#39;currency programming&#39;" rel="tag">programming</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+backtesting" class="post-tag" title="show questions tagged &#39;currency backtesting&#39;" rel="tag">backtesting</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+exchange" class="post-tag" title="show questions tagged &#39;currency exchange&#39;" rel="tag">exchange</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+index" class="post-tag" title="show questions tagged &#39;currency index&#39;" rel="tag">index</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+time-series" class="post-tag" title="show questions tagged &#39;currency time-series&#39;" rel="tag">time-series</a>&nbsp;<br>
-            <a href="/questions/tagged/currency+forward" class="post-tag" title="show questions tagged &#39;currency forward&#39;" rel="tag">forward</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/currency+returns" class="post-tag" title="show questions tagged &#39;currency returns&#39;" rel="tag">returns</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/currency+capm" class="post-tag" title="show questions tagged &#39;currency capm&#39;" rel="tag">capm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/currency+coherent-risk-measure" class="post-tag" title="show questions tagged &#39;currency coherent-risk-measure&#39;" rel="tag">coherent-risk-measure</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/currency+beta" class="post-tag" title="show questions tagged &#39;currency beta&#39;" rel="tag">beta</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/currency+fx" class="post-tag" title="show questions tagged &#39;currency fx&#39;" rel="tag">fx</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/currency+equities" class="post-tag" title="show questions tagged &#39;currency equities&#39;" rel="tag">equities</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/currency+portfolio-management" class="post-tag" title="show questions tagged &#39;currency portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/currency+optimization" class="post-tag" title="show questions tagged &#39;currency optimization&#39;" rel="tag">optimization</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/currency+diversification" class="post-tag" title="show questions tagged &#39;currency diversification&#39;" rel="tag">diversification</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/currency+trading" class="post-tag" title="show questions tagged &#39;currency trading&#39;" rel="tag">trading</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+modeling" class="post-tag" title="show questions tagged &#39;currency modeling&#39;" rel="tag">modeling</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+tactical-asset-allocation" class="post-tag" title="show questions tagged &#39;currency tactical-asset-allocation&#39;" rel="tag">tactical-asset-allocation</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+data" class="post-tag" title="show questions tagged &#39;currency data&#39;" rel="tag">data</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+analysis" class="post-tag" title="show questions tagged &#39;currency analysis&#39;" rel="tag">analysis</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+numerical-methods" class="post-tag" title="show questions tagged &#39;currency numerical-methods&#39;" rel="tag">numerical-methods</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+arbitrage" class="post-tag" title="show questions tagged &#39;currency arbitrage&#39;" rel="tag">arbitrage</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+parameter" class="post-tag" title="show questions tagged &#39;currency parameter&#39;" rel="tag">parameter</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+inflation" class="post-tag" title="show questions tagged &#39;currency inflation&#39;" rel="tag">inflation</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+finance" class="post-tag" title="show questions tagged &#39;currency finance&#39;" rel="tag">finance</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+programming" class="post-tag" title="show questions tagged &#39;currency programming&#39;" rel="tag">programming</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+backtesting" class="post-tag" title="show questions tagged &#39;currency backtesting&#39;" rel="tag">backtesting</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+exchange" class="post-tag" title="show questions tagged &#39;currency exchange&#39;" rel="tag">exchange</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+index" class="post-tag" title="show questions tagged &#39;currency index&#39;" rel="tag">index</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+time-series" class="post-tag" title="show questions tagged &#39;currency time-series&#39;" rel="tag">time-series</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/currency+forward" class="post-tag" title="show questions tagged &#39;currency forward&#39;" rel="tag">forward</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -927,7 +1221,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/currency")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -1020,7 +1314,7 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1047,14 +1341,14 @@ I am looking at the Australian US currency pair. When evaluating day counts, sho
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -1090,6 +1384,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>

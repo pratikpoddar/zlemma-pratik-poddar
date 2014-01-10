@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=332941c740e4">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=ee8047b2c4db" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/quant/all.css?v=a64528f40f18">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged financial-engineering" href="/feeds/tag/financial-engineering" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('204');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('204');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386187397,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1389350560,"enableUserHovercards":true,"site":{"name":"Quantitative Finance Stack Exchange","description":"Q&A for finance professionals and academics","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"ff495a9c1acacf0943c5f735b52070df","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"37ba49b36412","js/full.en.js":"ac6bb1bd631c","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"038b38e68e1a","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"6f8a95d5c039","js/mathjax-editing.en.js":"a09844f7b738"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,97 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//quant.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-quant" title="Quantitative Finance"></div>
+        Quantitative Finance
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.quant.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:206, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-quantmeta" title="Quantitative Finance Meta"></div>
+        Quantitative Finance Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffinancial-engineering" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffinancial-engineering" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                        <a href="/help">help</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[financial-engineering]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffinancial-engineering">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffinancial-engineering">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[financial-engineering]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -133,11 +195,11 @@
 
 <div id="tabs">
         <a href="/tags/financial-engineering/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/financial-engineering?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/financial-engineering?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/financial-engineering?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/financial-engineering?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/financial-engineering?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/financial-engineering?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/financial-engineering?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/financial-engineering?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/financial-engineering?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/financial-engineering?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -173,8 +235,8 @@ The <a href="/questions/tagged/financial-engineering" class="post-tag" title="sh
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="98 views">
-    98 views
+        <div class="views " title="130 views">
+    130 views
 </div>
     </div>
     <div class="summary">
@@ -193,14 +255,14 @@ in mathematical finance the distribution of $X_T$ for fixed $T&gt;0$ is unknown,
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-28 20:18:45Z" class="relativetime">Nov 28 at 20:18</span>
+        asked <span title="2013-11-28 20:18:45Z" class="relativetime">Nov 28 '13 at 20:18</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5656/hans-peter-schrei"><div><img src="https://www.gravatar.com/avatar/ef2fc248f1af8be898fd11b3ac2d4e6c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5656/hans-peter-schrei">Hans-Peter Schrei</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">23</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">30</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -219,8 +281,8 @@ in mathematical finance the distribution of $X_T$ for fixed $T&gt;0$ is unknown,
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="772 views">
-    772 views
+        <div class="views " title="962 views">
+    962 views
 </div>
     </div>
     <div class="summary">
@@ -237,7 +299,7 @@ in mathematical finance the distribution of $X_T$ for fixed $T&gt;0$ is unknown,
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-03 13:31:08Z" class="relativetime">Sep 3 at 13:31</span>
+        asked <span title="2013-09-03 13:31:08Z" class="relativetime">Sep 3 '13 at 13:31</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6034/ice"><div><img src="https://www.gravatar.com/avatar/ee925b09aa0e8f3a297dd6141c26d5c7?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -263,8 +325,8 @@ in mathematical finance the distribution of $X_T$ for fixed $T&gt;0$ is unknown,
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="112 views">
-    112 views
+        <div class="views " title="122 views">
+    122 views
 </div>
     </div>
     <div class="summary">
@@ -285,7 +347,7 @@ What methods would you recommend to use in order to change from ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-02 16:13:10Z" class="relativetime">Sep 2 at 16:13</span>
+        asked <span title="2013-09-02 16:13:10Z" class="relativetime">Sep 2 '13 at 16:13</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/6034/ice"><div><img src="https://www.gravatar.com/avatar/ee925b09aa0e8f3a297dd6141c26d5c7?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -311,8 +373,8 @@ What methods would you recommend to use in order to change from ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="222 views">
-    222 views
+        <div class="views " title="226 views">
+    226 views
 </div>
     </div>
     <div class="summary">
@@ -329,7 +391,7 @@ What methods would you recommend to use in order to change from ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-07 00:51:21Z" class="relativetime">May 7 at 0:51</span>
+        asked <span title="2013-05-07 00:51:21Z" class="relativetime">May 7 '13 at 0:51</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2153/factor3"><div><img src="https://www.gravatar.com/avatar/bdb8dc7d321a527514b75c942623efa6?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -355,8 +417,8 @@ What methods would you recommend to use in order to change from ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="237 views">
-    237 views
+        <div class="views " title="241 views">
+    241 views
 </div>
     </div>
     <div class="summary">
@@ -428,7 +490,7 @@ If so, what were the quantitative results or ...
     </div>
     <div class="user-details">
         <a href="/users/627/paul">Paul</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">258</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">263</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
@@ -447,8 +509,8 @@ If so, what were the quantitative results or ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="381 views">
-    381 views
+        <div class="views " title="387 views">
+    387 views
 </div>
     </div>
     <div class="summary">
@@ -493,8 +555,8 @@ Independent variables that I believe must be included ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="457 views">
-    457 views
+        <div class="views " title="474 views">
+    474 views
 </div>
     </div>
     <div class="summary">
@@ -537,8 +599,8 @@ Independent variables that I believe must be included ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="280 views">
-    280 views
+        <div class="views " title="281 views">
+    281 views
 </div>
     </div>
     <div class="summary">
@@ -584,8 +646,8 @@ arg\inf\limits_{\mu \in U_1(\mu, ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="163 views">
-    163 views
+        <div class="views " title="164 views">
+    164 views
 </div>
     </div>
     <div class="summary">
@@ -631,7 +693,7 @@ arg\inf\limits_{\mu \in U_1(\mu, ...
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=financial-engineering&amp;sort=newest" title="the 30 newest financial-engineering questions"><span class="feed-icon"></span>newest financial-engineering questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=financial-engineering&sort=newest" title="the 30 newest financial-engineering questions"><span class="feed-icon"></span>newest financial-engineering questions feed</a></div>
 </div>
 
 
@@ -645,53 +707,277 @@ arg\inf\limits_{\mu \in U_1(\mu, ...
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/financial-engineering/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-            <div class="spacer"> 
-                <div class="bulletin-item-type event-date">event</div>
-                <div class="bulletin-item-content">
-                    <a href="http://quant.stackexchange.com/review/site-eval" class="question-hyperlink" target="_blank">Site self-evaluation</a>
-                        <span class="event-date" style="white-space: nowrap;">&ndash; ends <span title="2013-12-10 03:00:47Z" class="relativetime">in 5 days</span></span>
-                </div>
-                <br class="cbt" />
-            </div>
-
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/financial-engineering+stochastic-processes" class="post-tag" title="show questions tagged &#39;financial-engineering stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/financial-engineering+stochastic-calculus" class="post-tag" title="show questions tagged &#39;financial-engineering stochastic-calculus&#39;" rel="tag">stochastic-calculus</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/financial-engineering+time-series" class="post-tag" title="show questions tagged &#39;financial-engineering time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/financial-engineering+quantitative" class="post-tag" title="show questions tagged &#39;financial-engineering quantitative&#39;" rel="tag">quantitative</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+black-scholes" class="post-tag" title="show questions tagged &#39;financial-engineering black-scholes&#39;" rel="tag">black-scholes</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+option-pricing" class="post-tag" title="show questions tagged &#39;financial-engineering option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+modeling" class="post-tag" title="show questions tagged &#39;financial-engineering modeling&#39;" rel="tag">modeling</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+binomial-tree" class="post-tag" title="show questions tagged &#39;financial-engineering binomial-tree&#39;" rel="tag">binomial-tree</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+probability" class="post-tag" title="show questions tagged &#39;financial-engineering probability&#39;" rel="tag">probability</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+analysis" class="post-tag" title="show questions tagged &#39;financial-engineering analysis&#39;" rel="tag">analysis</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+market-microstructure" class="post-tag" title="show questions tagged &#39;financial-engineering market-microstructure&#39;" rel="tag">market-microstructure</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+research" class="post-tag" title="show questions tagged &#39;financial-engineering research&#39;" rel="tag">research</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+structured-finance" class="post-tag" title="show questions tagged &#39;financial-engineering structured-finance&#39;" rel="tag">structured-finance</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+reference-request" class="post-tag" title="show questions tagged &#39;financial-engineering reference-request&#39;" rel="tag">reference-request</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+rate-distortion" class="post-tag" title="show questions tagged &#39;financial-engineering rate-distortion&#39;" rel="tag">rate-distortion</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+cluster" class="post-tag" title="show questions tagged &#39;financial-engineering cluster&#39;" rel="tag">cluster</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+python" class="post-tag" title="show questions tagged &#39;financial-engineering python&#39;" rel="tag">python</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+stationarity" class="post-tag" title="show questions tagged &#39;financial-engineering stationarity&#39;" rel="tag">stationarity</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+econometrics" class="post-tag" title="show questions tagged &#39;financial-engineering econometrics&#39;" rel="tag">econometrics</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+sde" class="post-tag" title="show questions tagged &#39;financial-engineering sde&#39;" rel="tag">sde</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+finance" class="post-tag" title="show questions tagged &#39;financial-engineering finance&#39;" rel="tag">finance</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+portfolio-management" class="post-tag" title="show questions tagged &#39;financial-engineering portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;<br>
-            <a href="/questions/tagged/financial-engineering+options" class="post-tag" title="show questions tagged &#39;financial-engineering options&#39;" rel="tag">options</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/financial-engineering+stochastic-processes" class="post-tag" title="show questions tagged &#39;financial-engineering stochastic-processes&#39;" rel="tag">stochastic-processes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/financial-engineering+stochastic-calculus" class="post-tag" title="show questions tagged &#39;financial-engineering stochastic-calculus&#39;" rel="tag">stochastic-calculus</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/financial-engineering+time-series" class="post-tag" title="show questions tagged &#39;financial-engineering time-series&#39;" rel="tag">time-series</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/financial-engineering+quantitative" class="post-tag" title="show questions tagged &#39;financial-engineering quantitative&#39;" rel="tag">quantitative</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/financial-engineering+black-scholes" class="post-tag" title="show questions tagged &#39;financial-engineering black-scholes&#39;" rel="tag">black-scholes</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/financial-engineering+option-pricing" class="post-tag" title="show questions tagged &#39;financial-engineering option-pricing&#39;" rel="tag">option-pricing</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/financial-engineering+modeling" class="post-tag" title="show questions tagged &#39;financial-engineering modeling&#39;" rel="tag">modeling</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/financial-engineering+binomial-tree" class="post-tag" title="show questions tagged &#39;financial-engineering binomial-tree&#39;" rel="tag">binomial-tree</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/financial-engineering+probability" class="post-tag" title="show questions tagged &#39;financial-engineering probability&#39;" rel="tag">probability</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/financial-engineering+analysis" class="post-tag" title="show questions tagged &#39;financial-engineering analysis&#39;" rel="tag">analysis</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+market-microstructure" class="post-tag" title="show questions tagged &#39;financial-engineering market-microstructure&#39;" rel="tag">market-microstructure</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+research" class="post-tag" title="show questions tagged &#39;financial-engineering research&#39;" rel="tag">research</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+structured-finance" class="post-tag" title="show questions tagged &#39;financial-engineering structured-finance&#39;" rel="tag">structured-finance</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+reference-request" class="post-tag" title="show questions tagged &#39;financial-engineering reference-request&#39;" rel="tag">reference-request</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+rate-distortion" class="post-tag" title="show questions tagged &#39;financial-engineering rate-distortion&#39;" rel="tag">rate-distortion</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+cluster" class="post-tag" title="show questions tagged &#39;financial-engineering cluster&#39;" rel="tag">cluster</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+python" class="post-tag" title="show questions tagged &#39;financial-engineering python&#39;" rel="tag">python</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+stationarity" class="post-tag" title="show questions tagged &#39;financial-engineering stationarity&#39;" rel="tag">stationarity</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+econometrics" class="post-tag" title="show questions tagged &#39;financial-engineering econometrics&#39;" rel="tag">econometrics</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+sde" class="post-tag" title="show questions tagged &#39;financial-engineering sde&#39;" rel="tag">sde</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+finance" class="post-tag" title="show questions tagged &#39;financial-engineering finance&#39;" rel="tag">finance</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+portfolio-management" class="post-tag" title="show questions tagged &#39;financial-engineering portfolio-management&#39;" rel="tag">portfolio-management</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/financial-engineering+options" class="post-tag" title="show questions tagged &#39;financial-engineering options&#39;" rel="tag">options</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/698312/if-32-bit-machines-can-only-handle-numbers-up-to-232-why-can-i-write-100000000" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    If 32-bit machines can only handle numbers up to 2^32, why can I write 1000000000000 (trillion) without my machine crashing?
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21029174/whats-this-operator" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s this =! operator?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/699278/convincingly-breaking-a-system-for-a-non-technical-user" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Convincingly &quot;breaking&quot; a system for a non technical user
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/630339/pedagogy-how-to-cure-students-of-the-law-of-universal-linearity" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Pedagogy: How to cure students of the &quot;law of universal linearity&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145157/a-formal-way-to-say-i-dont-want-to-sound-too-cocky" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    A formal way to say &quot;I don&#39;t want to sound too cocky...&quot;
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18028/largest-number-printable" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Largest Number Printable
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31346/techniques-for-making-undead-scary-again" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Techniques for making undead scary again
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-programmers" title="Programmers Stack Exchange"></div><a href="http://programmers.stackexchange.com/questions/223634/what-is-meant-by-now-you-have-two-problems" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:131 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is meant by &quot;Now you have two problems&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/633216/an-oddity-in-some-linear-equations" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    An oddity in some linear equations
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/17005/produce-the-number-2014-without-any-numbers-in-your-source-code" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Produce the number 2014 without any numbers in your source code
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/47756/why-is-sauron-called-the-necromancer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:186 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Sauron called &quot;the Necromancer&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/809/is-there-a-dedicated-emergency-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there a dedicated emergency frequency?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/631977/why-is-euclids-proof-on-the-infinitude-of-primes-considered-a-proof" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why is Euclid&#39;s proof on the infinitude of primes considered a proof?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/154017/counterexamples-in-universal-algebra" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Counterexamples in universal algebra
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/632705/why-are-mathematical-proofs-that-rely-on-computers-controversial" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why are mathematical proofs that rely on computers controversial?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/26101/whats-the-most-efficient-way-to-blank-old-comic-word-balloons-while-retaining" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:174 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What&#39;s the most efficient way to &quot;blank&quot; old comic word balloons while retaining paper texture?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/92969/why-does-the-speed-of-light-have-no-uncertainty" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why does the speed of light have no uncertainty?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/82521/is-there-python-library-other-than-arcpy-for-geoprocessing-such-as-buffer" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:79 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is there Python library (other than ArcPy) for geoprocessing such as buffer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21037406/static-variables-why-this-code-is-not-throwing-nullpointerexception" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Static Variables : Why this code is not throwing NullPointerException
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/108635/why-i-cant-escape-spaces-on-a-bash-script" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why I can&#39;t escape spaces on a bash script?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/15505/how-to-work-efficiently-under-loose-supervision-during-graduate-studies" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How to work efficiently under loose supervision during graduate studies?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18111/i-know-you-but-you-dont-know-me" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    I know you, but you don&#39;t know me
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/145071/what-does-days-mean" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:97 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What does &quot;day&#39;s&quot; mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/31319/can-you-cast-invisibility-on-a-large-box-and-hide-inside" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:122 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can you cast Invisibility on a large box and hide inside?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -711,7 +997,7 @@ arg\inf\limits_{\mu \in U_1(\mu, ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/financial-engineering")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.quant.stackexchange.com">feedback</a></b>
                     
@@ -804,7 +1090,7 @@ arg\inf\limits_{\mu \in U_1(\mu, ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -831,14 +1117,14 @@ arg\inf\limits_{\mu \in U_1(\mu, ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
  with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="footer-flair">
                 <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.10.1290
             </div>
             
         </div>
@@ -874,6 +1160,7 @@ _gaq.push(['_trackPageview']);
     })();
     _comscore.push({ c1: "2", c2: "17440561" });
     _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+    </script>
+            
 </body>
 </html>
