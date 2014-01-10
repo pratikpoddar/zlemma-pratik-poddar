@@ -30,8 +30,8 @@ for entry in d['feed']['entry']:
 		except:
 			output[skill1] = {}
 			output[skill1][skill2] = num
-	except:
-		print "Not able to read " + str(entry)
+	except Exception as e:
+		print "Not able to read " + str(e) + " " + str(entry)
 
 print "Final Manual Input Dict: "
 print output
@@ -55,8 +55,8 @@ for entry in d['feed']['entry']:
                 except:
                         output[skill1] = {}
                         output[skill1][skill2] = num
-        except:
-                print "Not able to read " + str(entry)
+        except Exception as e:
+                print "Not able to read " + str(e) + " " + str(entry)
 
 print "Final Manual Forced Input Dict: "
 print output

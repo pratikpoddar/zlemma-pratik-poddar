@@ -113,7 +113,7 @@ def identify_big_numbers(filename, threshold):
 	print "Big Numbers on " + filename
 	for key1 in keys:
 		for key2 in keys:
-			if (d[key1][key2] > threshold) and (not (key1 == key2)):
+			if (d[key1][key2] >= threshold) and (not (key1 == key2)):
 				print key1 + " " + key2 + " " + str(d[key1][key2])
 				output.append((key1, key2))
 	return output
@@ -204,7 +204,7 @@ print "----"
 
 print "----"
 def tf(l):
-	high_values = len(filter(lambda x: x>0.5, l))
+	high_values = len(filter(lambda x: x>=0.7, l))
 	if high_values < 1:
 		return False
 	if high_values > len(l)/3:
@@ -217,19 +217,19 @@ print weaknodes
 print "----"
 	
 print "----"
-#identify_big_numbers('renamedcomplete.txt', 0.7)
+identify_big_numbers('renamedcomplete.txt', 0.7)
 print "----"
 
 print "----"
-#identify_possible_clusters('renamedcomplete.txt', 0.6)
+identify_possible_clusters('renamedcomplete.txt', 0.6)
 print "----"
 
 print "----"
-#identify_possible_clusters('renamedcomplete.txt', 0.8)
+identify_possible_clusters('renamedcomplete.txt', 0.8)
 print "----"
 
 print "----"
-#identify_possible_clusters('renamedcomplete.txt', 0.9)
+identify_possible_clusters('renamedcomplete.txt', 0.9)
 print "----"
 
 
