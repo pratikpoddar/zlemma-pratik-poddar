@@ -11,7 +11,7 @@ import gevent
 from gevent import monkey
 from gevent.pool import Pool
 import json
-from tor_urllib2 import getUrl
+#from tor_urllib2 import getUrl
 
 monkey.patch_all(thread=False)
 
@@ -26,6 +26,7 @@ def getMSdata(skill):
 	f = open('htmldump/' + skill, 'r')
 	data = f.read()
 	f.close()
+	print "Found skill " + skill + " from file"
     except:
 	print "Could not get " + skill + " data"
     return data
@@ -37,14 +38,13 @@ def getorcreateMSdata(kwid):
 	except:
 		try:
 			print kwid
-			##opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(), urllib2.ProxyHandler({}))
-                	##opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 5.1; rv:10.0.1) Gecko/20100101 Firefox/10.0.1'), ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')]
+			opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(), urllib2.ProxyHandler({'http':'127.0.0.1:8118'}))
+                	opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 5.1; rv:10.0.1) Gecko/20100101 Firefox/10.0.1'), ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')]
 			url = "http://academic.research.microsoft.com/Keyword/"+str(kwid)
 			print url
-                	##filedata = opener.open(url)
-			print url
-			##data = filedata.read()
-			data = getUrl(url)
+                	filedata = opener.open(url)
+			data = filedata.read()
+			###### data = getUrl(url)
 			print str(kwid) + "------" + data[0:100]
 			parsed = BeautifulSoup(data)
 			if parsed.title.text:
@@ -69,9 +69,10 @@ def getKeywordData(skill):
 
 if sys.argv[1] == "downloaddata":
 	#getorcreateMSdata(int(sys.argv[2]))
-	for i in range(1,100):
-		getorcreateMSdata(i)
-	#pool = Pool(100)
-	#jobs = [pool.spawn(getorcreateMSdata , n) for n in range(0,100)]
-	#pool.join()
+	#for i in range(1,100):
+	#	getorcreateMSdata(i)
+	for i in range(2, 100):
+		pool = Pool(200)
+		jobs = [pool.spawn(getorcreateMSdata , n) for n in range(i*200,(i+1)*200)]
+		pool.join()
 
