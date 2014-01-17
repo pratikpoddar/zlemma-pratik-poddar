@@ -1,0 +1,1048 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head id="Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta  http-equiv="content-language" content="en-us" />
+    
+    
+    <script type="text/javascript" language="javascript" src="http://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" language="javascript" src="http://academic.research.microsoft.com/Scripts/SearchQuery.3.3.0399.00.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://academic.research.microsoft.com/Style/libra_en.3.3.0399.00.css" />
+    <link type="text/css" rel="stylesheet" href="http://academic.research.microsoft.com/Style/user-login-details.3.3.0399.00.css" />
+    <link type="text/css" rel="stylesheet" href="http://academic.research.microsoft.com/Style/author_namecard.3.3.0399.00.css" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title> ab initio calculation </title>
+    <link type="application/rss+xml" rel="alternate" title="Rss for ab&#32;initio&#32;calculation" href="&#47;Rss&#63;id&#61;138&#38;cata&#61;8" />
+    
+<script type="text/javascript" language="javascript">
+    //<![CDATA[
+    var _keyword_data = ["Electronic Structure__Electronic&#32;Structure__/Keyword/11984/electronic-structure", "Density Function Theory__Density&#32;Function&#32;Theory__/Keyword/9465/density-function-theory", "Hydrogen Bond__Hydrogen&#32;Bond__/Keyword/18810/hydrogen-bond", "Ground State__Ground&#32;State__/Keyword/56045/ground-state", "Potential Energy Surface__Potential&#32;Energy&#32;Surface__/Keyword/32104/potential-energy-surface", "Electron Diffraction__Electron&#32;Diffraction__/Keyword/11891/electron-diffraction", "hartree fock__hartree&#32;fock__/Keyword/17472/hartree-fock", "Electron Correlation__Electron&#32;Correlation__/Keyword/11885/electron-correlation", "Electronic Properties__Electronic&#32;Properties__/Keyword/11974/electronic-properties", "Raman Spectra__Raman&#32;Spectra__/Keyword/34153/raman-spectra", "Infrared Spectra__Infrared&#32;Spectra__/Keyword/19984/infrared-spectra", "Excited States__Excited&#32;States__/Keyword/13241/excited-states", "Electronic State__Electronic&#32;State__/Keyword/11981/electronic-state", "Molecular Structure__Molecular&#32;Structure__/Keyword/25962/molecular-structure", "Force Field__Force&#32;Field__/Keyword/14802/force-field"];
+    //]]>
+</script>
+<script type="text/javascript" language="javascript" src="http://academic.research.microsoft.com/Scripts/Core.3.3.0399.00.js"></script>
+<script type="text/javascript" language="javascript" src="http://academic.research.microsoft.com/Scripts/VML.3.3.0399.00.js"></script>
+<script type="text/javascript" language="javascript" src="http://academic.research.microsoft.com/Scripts/TrendChart.3.3.0399.00.js"></script>
+
+</head>
+<body onpageshow="document.forms['aspnetForm'].reset();">
+    <form name="aspnetForm" method="post" action="138?id=138" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTIzNjQ0NzA4MA9kFgJmD2QWAgIBD2QWAgIHD2QWAgIBD2QWCAIBD2QWBAIBDxYCHgdWaXNpYmxlZxYIAgEPZBYEAgEPZBYCZg9kFgICAQ9kFgJmD2QWAmYPFgIeBXdpZHRoBQUxMDBweGQCAw9kFgJmD2QWAgIBD2QWAmYPZBYCZg8WAh8BBQQ2NXB4ZAIDD2QWBAIBD2QWAmYPD2QWAh4Hb25jbGljawVudHJ5e3JldHVybiBzaSgyMSwnY3RsMDBfTWFpbkNvbnRlbnRfU2VhcmNoU3VtbWFyeScsJ2N0bDAwX01haW5Db250ZW50X1NlYXJjaFN1bW1hcnlfaW1nQ29tcGFyZScpO31jYXRjaChleCl7O31kAgMPD2QWAh8CBW50cnl7cmV0dXJuIHNpKDIxLCdjdGwwMF9NYWluQ29udGVudF9TZWFyY2hTdW1tYXJ5JywnY3RsMDBfTWFpbkNvbnRlbnRfU2VhcmNoU3VtbWFyeV9oeXBDb21wYXJlJyk7fWNhdGNoKGV4KXs7fWQCBQ9kFgQCAQ8PFgIeB1Rvb2xUaXAFQkVtYmVkIHRoaXMgbGlzdCBpbiB5b3VyIGhvbWVwYWdlLiBJdCB3aWxsIGJlIHVwZGF0ZWQgYXV0b21hdGljYWxseWQWAmYPD2QWAh8CBWx0cnl7cmV0dXJuIHNpKDE2LCdjdGwwMF9NYWluQ29udGVudF9TZWFyY2hTdW1tYXJ5JywnY3RsMDBfTWFpbkNvbnRlbnRfU2VhcmNoU3VtbWFyeV9pbWdFbWJlZCcpO31jYXRjaChleCl7O31kAgMPDxYCHwMFQkVtYmVkIHRoaXMgbGlzdCBpbiB5b3VyIGhvbWVwYWdlLiBJdCB3aWxsIGJlIHVwZGF0ZWQgYXV0b21hdGljYWxseRYCHwIFb3RyeXtyZXR1cm4gc2koMTgsJ2N0bDAwX01haW5Db250ZW50X1NlYXJjaFN1bW1hcnknLCdjdGwwMF9NYWluQ29udGVudF9TZWFyY2hTdW1tYXJ5X2xpYnJhSW5MaW5rJyk7fWNhdGNoKGV4KXs7fWQCBw9kFgQCAQ8PFgQeC05hdmlnYXRlVXJsBRN+L1Jzcz9pZD0xMzgmY2F0YT04HwMFFlN1YnNjcmliZSB0byB0aGlzIGxpc3RkFgJmDw9kFgIfAgVrdHJ5e3JldHVybiBzaSgxNSwnY3RsMDBfTWFpbkNvbnRlbnRfU2VhcmNoU3VtbWFyeScsJ2N0bDAwX01haW5Db250ZW50X1NlYXJjaFN1bW1hcnlfaW1nRmVlZCcpO31jYXRjaChleCl7O31kAgMPDxYEHwQFE34vUnNzP2lkPTEzOCZjYXRhPTgfAwUWU3Vic2NyaWJlIHRvIHRoaXMgbGlzdBYCHwIFa3RyeXtyZXR1cm4gc2koMTcsJ2N0bDAwX01haW5Db250ZW50X1NlYXJjaFN1bW1hcnknLCdjdGwwMF9NYWluQ29udGVudF9TZWFyY2hTdW1tYXJ5X1Jzc0xpbmsnKTt9Y2F0Y2goZXgpezt9ZAIDD2QWAgIDDxYCHgRUZXh0BYICPGRpdiBjbGFzcz0icmlnaHQtYXJyb3ciPjwvZGl2PjxhIGNsYXNzPSd0ZXh0JyBocmVmPScmIzQ3O1JhbmtMaXN0JiM2MztlbnRpdHl0eXBlJiM2MTs4JiMzODt0b3BEb21haW5JRCYjNjE7MTkmIzM4O3N1YkRvbWFpbklEJiM2MTs2JiMzODtsYXN0JiM2MTswJiMzODtzdGFydCYjNjE7MSYjMzg7ZW5kJiM2MTsxMDAnPktleXdvcmRzPC9hPjxkaXYgY2xhc3M9InJpZ2h0LWFycm93Ij48L2Rpdj48c3Bhbj5hYiBpbml0aW8gY2FsY3VsYXRpb248L3NwYW4+ZAIFD2QWAmYPZBYIZg8WAh8FBWM8aDE+LGFiIGluaXRpbyBjYWxjdWxhdGlvbixhYiBpbml0aW8gY2FsY3VsYXRpb25zLGFiIGluaXRpbyBjYWxjdWxhdGVkLGFiIGluaXRpbyBjYWxjdWxhdGlvbmFsPC9oMT5kAgIPDxYCHwUFFWFiIGluaXRpbyBjYWxjdWxhdGlvbmRkAgMPDxYCHwUFSFB1YmxpY2F0aW9uczogMzIsNDU1PHNwYW4gY2xhc3M9InNwYWNlIj58PC9zcGFuPiBDaXRhdGlvbiBDb3VudDogMzcsMjI5IGRkAgQPZBYCAgEPDxYCHwUFRWFiIGluaXRpbyBjYWxjdWxhdGlvbnMsIGFiIGluaXRpbyBjYWxjdWxhdGVkLCBhYiBpbml0aW8gY2FsY3VsYXRpb25hbGRkAgcPDxYCHwBoZBYEZg8PFgIfAGdkFgYCAQ9kFgQCAQ9kFgJmD2QWAgIBD2QWAmYPZBYCZg8WAh8BBQUxMDBweGQCAw9kFgJmD2QWAgIBD2QWAmYPZBYCZg8WAh8BBQUxMDBweGQCAw9kFgJmD2QWAgIBD2QWAmYPZBYCZg8WAh8BBQQ2NXB4ZAIFD2QWAmYPZBYCAgMPZBYCAgEPFgIfAgVec2hvd0NvcHlQYW5lbCgpO0NoZWNrRmlyc3RTaG93bigpO3NpVXJsKCcnLCdjdGwwMF9NYWluQ29udGVudF9EZWZpbml0aW9uTGlzdF9jdGwwMF9zcEJpYlRleHQnKWQCBg9kFgICAQ8PFgIfBAUqfi9EZXRhaWw/ZW50aXR5dHlwZT04JnNlYXJjaHR5cGU9MTEmaWQ9MTM4ZBYCAgEPFgIfBQU9TW9yZSBkZWZpbml0aW9uIGNvbnRleHRzIDxzcGFuIGNsYXNzPSJpdGVtLWNvdW50Ij4oMCk8L3NwYW4+IGQCCQ9kFgRmDw8WAh8AZ2QWBgIBD2QWBAIBD2QWAmYPZBYCAgEPZBYCZg9kFgJmDxYCHwEFBTEwMHB4ZAIDD2QWAmYPZBYCAgEPZBYCZg9kFgJmDxYCHwEFBTEwMHB4ZAIDDw8WAh8AZ2QWAmYPZBYCAgEPZBYCZg9kFgJmDxYCHwEFBDY1cHhkAgUPZBYCZg9kFgICAw9kFgICAQ8WAh8CBVlzaG93Q29weVBhbmVsKCk7Q2hlY2tGaXJzdFNob3duKCk7c2lVcmwoJycsJ2N0bDAwX01haW5Db250ZW50X1BhcGVyTGlzdF9jdGwwMF9zcEJpYlRleHQnKWQCBg9kFgICAQ8PFgIfBAUpfi9EZXRhaWw/ZW50aXR5dHlwZT04JnNlYXJjaHR5cGU9MiZpZD0xMzhkFgICAQ8WAh8FBTtNb3JlIHB1YmxpY2F0aW9uc3MgPHNwYW4gY2xhc3M9Iml0ZW0tY291bnQiPigzMjQ1NSk8L3NwYW4+IGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFKmN0bDAwJFNlYXJjaEhlYWRlciRTZWFyY2hGb3JtJFNlYXJjaEJ1dHRvbgUjY3RsMDAkRm9vdGVyU2VhcmNoRm9ybSRTZWFyY2hCdXR0b240ixUwy+qqy9e+QYIFifTAo10ZBw==" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function si(t, i, u){var h='http://academic.research.microsoft.com';var p='/Images/logClick.gif?';var l = h + p + 't=' + t + '&i=' + i + '&tm=' + new Date() + '&u=' + u + '&url=' + document.location;if(document.images)(new Image).src=l;return true;}//]]>
+</script>
+<script type="text/javascript">var SiteRoot = 'http://academic.research.microsoft.com';</script>
+<script type="text/javascript">
+//<![CDATA[
+function siUrl(url, ctl){var h='http://academic.research.microsoft.com';var p='/Images/logClick.gif?';var l = h + p + 'url=' + document.location + '&tm=' + new Date() + '&ctl=' + ctl;if(document.images)(new Image).src=l;return true;} function showAdvancedSearch(){ document.getElementById('divDomainPanel').style.display='none';if(document.getElementById('advancedsearchDiv').style.display!='block'){document.getElementById('advancedsearchDiv').style.display='block';showAdvanceTab(0);if(document.getElementById('divYearFilter')) {document.getElementById('divYearFilter').style.display = 'none';}; $('.input-box-advanced-yearquery').hide();$('#yearSpanText').hide();if ($('.input-box-advanced-yearquery').length > 0) {$('.input-box-advanced-yearquery').eq(0).show();}} else hideAdvancedSearch();}function CheckAdvInput(objName,len){var obj=document.getElementById(objName); if(obj.value.length>len){obj.value=obj.value.substring(0,len);}};function hideAdvancedSearch(){document.getElementById('advancedsearchDiv').style.display='none';delCookie('advanceTabIndex');if(document.getElementById('divYearFilter'))document.getElementById('divYearFilter').style.display = '';}//]]>
+</script>
+
+        <div class="container">
+            <div id="ctl00_SearchHeader_divHeaderWrapper" class="header-wrapper">
+    <div class="share-link">
+        
+    </div>
+    <div class="header-wrapper-inner">
+        <div class="user-identity-bar">
+            
+            <div class="user-login-details">
+                <div class="user-name"><span id="ctl00_SearchHeader_UserNameLabel"></span></div>
+                <div class="user-login-status">
+                    <a id="ctl00_SearchHeader_LinkSignout" href="../Membership/SignIn"><span id="ctl00_SearchHeader_LinkSignoutLabel">Sign in</span></a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="search-bar-wrapper" id="searchBarLeft">
+            <a class="logo" href="http://academic.research.microsoft.com">
+                <img id="ctl00_SearchHeader_imgLogo" NavigateUrl="~/" src="http://academic.research.microsoft.com/Images/logo.png" style="border-width:0px;" />
+            </a>
+            <div id="ctl00_SearchHeader_SearchForm_searchBar" class="search-bar">
+	
+    <div id="ctl00_SearchHeader_SearchForm_divSearchBox" class="search-box" style="position:relative">
+        <input name="ctl00$SearchHeader$SearchForm$txtQuery" type="text" id="ctl00_SearchHeader_SearchForm_txtQuery" class="search-textbox" autocomplete="off" onkeyup="flagUserKeyDown =true ;if(event.keyCode==13){ document.getElementById(&#39;ctl00_SearchHeader_SearchForm_SearchButton&#39;).click(); return false;}" oninput="var obj=document.getElementById(&#39;ctl00_SearchHeader_SearchForm_txtQuery&#39;); if(obj.value.length>256){obj.value=obj.value.substring(0,256);};" onpropertychange="var obj=document.getElementById(&#39;ctl00_SearchHeader_SearchForm_txtQuery&#39;); if(obj.value.length>256){obj.value=obj.value.substring(0,256);};" />
+        <div id="ctl00_SearchHeader_SearchForm_divDomainButton" class="domain-panel-button" style="z-index:100; position:relative;" onclick="try{return si(20,&#39;ctl00_SearchHeader_SearchForm&#39;,&#39;ctl00_SearchHeader_SearchForm_divDomainButton&#39;);}catch(ex){;}">
+            <div class="left">
+               <span></span>
+               <div class="dropdown-arrow">
+               </div>
+            </div>
+        </div>
+    </div>
+    <input type="image" name="ctl00$SearchHeader$SearchForm$SearchButton" id="ctl00_SearchHeader_SearchForm_SearchButton" class="search-button" src="../Images/search_button_wide.png" alt="Search" onclick="try{return si(11,&#39;ctl00_SearchHeader_SearchForm&#39;,&#39;ctl00_SearchHeader_SearchForm_SearchButton&#39;);}catch(ex){;};" style="border-width:0px;" />
+    <div class="type-suggestion">
+        <div id="autoSuggest" class="typesuggest">
+        </div>
+    </div>
+    <div id="ctl00_SearchHeader_SearchForm_SpAdvancedSearch" class="advancedsearch">
+        <a href="javascript:showAdvancedSearch()" id="ctl00_SearchHeader_SearchForm_advancedsearch">Advanced Search</a></div>
+    <div class="searching-div">
+        <div class="loadImg" id="divLoadingIcon" >
+        </div>
+    </div>
+
+</div>
+<div id="advancedsearchDiv" class="modalpopup">
+    
+<div class="advanced-search">
+        <div class="closelink">
+            <a href="javascript:hideAdvancedSearch()" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_imgbtnClose" onkeydown="if(event.shiftKey &amp;&amp; event.keyCode== 9){if ( event &amp;&amp; event.preventDefault  ){event.preventDefault (); }else{event.returnValue  = false;}document.getElementById(&#39;btnAddToSearch&#39;).focus();}"></a>
+        </div>
+        <div class="small-btn"></div>
+    <table cellspacing="0" cellpadding="0" border="0" class="content-table">
+        <tr>
+            <td id="tdCriteriaTab" style="color:#d7d7d7" colspan="2">
+                <span onclick="showAdvanceTab(0)" class="advanced-search-tab" style="padding-left: 0px">
+                    Author</span>
+                    |
+                    <span onclick="showAdvanceTab(1)" class="advanced-search-tab-unfocus">Conference</span>
+                    |
+                    <span onclick="showAdvanceTab(2)" class="advanced-search-tab-unfocus">Journal</span>
+                    |
+                    <span onclick="showAdvanceTab(3)" class="advanced-search-tab-unfocus">Organization</span>
+                    |
+                    <span onclick="showAdvanceTab(4)" class="advanced-search-tab-unfocus">Year</span>
+                    |
+                    <span onclick="showAdvanceTab(5)" class="advanced-search-tab-unfocus">DOI</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="hint" colspan="2" id="tdAdvancedSearchHint">
+                Look for results that meet for the following criteria:
+            </td>
+        </tr>
+        <tr>
+            <td id="tdCriteria" class="advancesearch-criteria">
+                <div style="display: block">
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$authorQuery" type="text" value="Bill Gates" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_authorQuery" class="input-box-advanced" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_authorQuery&#39;,256)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_authorQuery&#39;,256)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;Bill Gates&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Bill Gates&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999" /></div>
+                <div style="display: none">
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$confQuery" type="text" value="SIGGRAPH" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_confQuery" class="input-box-advanced" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_confQuery&#39;,256)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_confQuery&#39;,256)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;SIGGRAPH&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;SIGGRAPH&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999" />
+                </div>
+                <div style="display: none">
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$JournQuery" type="text" value="Journal of The ACM" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_JournQuery" class="input-box-advanced" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_JournQuery&#39;,256)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_JournQuery&#39;,256)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;Journal of The ACM&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Journal of The ACM&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999" />
+                </div>
+                <div style="display: none">
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$orgQuery" type="text" value="Microsoft" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_orgQuery" class="input-box-advanced" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_orgQuery&#39;,256)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_orgQuery&#39;,256)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;Microsoft&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;Microsoft&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999" />
+                </div>
+                <div style="display: none">
+                    <select name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$compareQuery" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_compareQuery" class="advance-search-dropdownlist" onchange="showTimeSpanTextbox(this.value,event)">
+	<option selected="selected" value=">=">since</option>
+	<option value="=">equal to</option>
+	<option value="&lt;=">before</option>
+	<option value="~">between</option>
+
+</select>
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$yearQuery" type="text" value="2000" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearQuery" class="input-box-advanced-yearquery" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearQuery&#39;,4)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearQuery&#39;,4)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;2000&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;2000&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999" />
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$yearSpanA" type="text" value="2006" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearSpanA" class="input-box-advanced-yearquery" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearSpanA&#39;,4)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearSpanA&#39;,4)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;2006&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;2006&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999;width:40px;display:none;margin-left:20px;" />
+                    <span id="yearSpanText" style="width:20px;display:none;margin-left:20px;">and</span>
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$yearSpanB" type="text" value="2011" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearSpanB" class="input-box-advanced-yearquery" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearSpanB&#39;,4)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearSpanB&#39;,4)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;2011&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;2011&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999;width:40px;display:none;margin-left:20px;" />
+                </div>
+                <div style="display: none">
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$doiQuery" type="text" value="10.1093/nar/25.17.3389" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_doiQuery" class="input-box-advanced" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_doiQuery&#39;,256)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_doiQuery&#39;,256)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;10.1093/nar/25.17.3389&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;10.1093/nar/25.17.3389&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999" />
+                </div>
+                <div style="display: none">
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$fulltextQuery" type="text" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_fulltextQuery" class="input-box-advanced" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_fulltextQuery&#39;,256)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_fulltextQuery&#39;,256)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999" />
+                </div>
+                <div style="display: none">
+                    <input name="ctl00$SearchHeader$SearchForm$DivAdvancedSearch$titleQuery" type="text" id="ctl00_SearchHeader_SearchForm_DivAdvancedSearch_titleQuery" class="input-box-advanced" onpropertychange="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_titleQuery&#39;,256)" oninput="CheckAdvInput(&#39;ctl00_SearchHeader_SearchForm_DivAdvancedSearch_titleQuery&#39;,256)" onkeypress="this.style.color=&#39;#000&#39;;if(event.keyCode==13){ document.getElementById(&#39;btnAddToSearch&#39;).click(); return false;}" onfocus="if (this.value == &#39;&#39;) {this.value = &#39;&#39;;} else {this.style.color = &#39;#000&#39;;}" onblur="if (this.value == &#39;&#39;) {this.value = &#39;&#39;; this.style.color = &#39;#999&#39;;}" style="color:#999" />
+                </div>
+            </td>
+            <td align="left">
+                <input type="button" id="btnAddToSearch" value="Add to search" onclick="addToSearch('ctl00_SearchHeader_SearchForm_txtQuery', 'ctl00_SearchHeader_SearchForm_SearchButton');"
+                    style="width: 100px" />
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+// <![CDATA[
+   if(typeof(window.domYearQuery) == 'undefined'){
+        window.domYearQuery = $('#ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearQuery');
+   }
+   if(typeof(window.domYearSpanA) == 'undefined'){
+        window.domYearSpanA = $('#ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearSpanA');
+   }
+   if(typeof(window.domYearSpanB) == 'undefined'){
+        window.domYearSpanB = $('#ctl00_SearchHeader_SearchForm_DivAdvancedSearch_yearSpanB');
+   }
+   if(typeof(window.domYearSpanText) == 'undefined'){
+        window.domYearSpanText = $('#yearSpanText');
+   }
+
+   if( $.browser.mozilla){
+      $('#ctl00_SearchHeader_SearchForm_DivAdvancedSearch_compareQuery').change(function(event){
+	    showTimeSpanTextbox($(this).val(), event);
+	  });
+   }
+//]]>
+    </script>
+</div>
+
+
+
+</div>
+<div class="modalpopup" style="display: block">
+    <div class="advanced-search" id="divDomainPanel" style="display: none">
+        <div class="domain-closelink">
+        </div>
+        <div class="small-btn">
+        </div>
+        <div class="domain-panel">
+            <div>
+                <input type="radio" value="1" name="AllDomainRadio" checked="checked" />
+                <span>Search in all fields of study</span>
+            </div>
+            <div>
+                <input type="radio" value="0" name="AllDomainRadio" />
+                <span>Limit my searches in the following fields of study</span>
+            </div>
+            <div style="padding-left: 10px;">
+                <div class='option'><input type='checkbox' value='16'/> <span>Agriculture Science</span></div><div class='option'><input type='checkbox' value='3'/> <span>Arts & Humanities</span></div><div class='option'><input type='checkbox' value='4'/> <span>Biology</span></div><div class='option'><input type='checkbox' value='5'/> <span>Chemistry</span></div><div class='option'><input type='checkbox' value='2'/> <span>Computer Science</span></div><div class='option'><input type='checkbox' value='7'/> <span>Economics & Business</span></div><div class='option'><input type='checkbox' value='8'/> <span>Engineering</span></div><div class='option'><input type='checkbox' value='9'/> <span>Environmental Sciences</span></div><div class='option'><input type='checkbox' value='10'/> <span>Geosciences</span></div><div class='option'><input type='checkbox' value='12'/> <span>Material Science</span></div><div class='option'><input type='checkbox' value='15'/> <span>Mathematics</span></div><div class='option'><input type='checkbox' value='6'/> <span>Medicine</span></div><div class='option'><input type='checkbox' value='19'/> <span>Physics</span></div><div class='option'><input type='checkbox' value='22'/> <span>Social Science</span></div><div class='option'><input type='checkbox' value='1'/> <span>Multidisciplinary</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ctl00_SearchHeader_SearchForm_srptBindEventDomainButton">
+    <script type="text/javascript" language="javascript">
+        BindEventForDomainPanelButton("ctl00_SearchHeader_SearchForm_txtQuery", "ctl00_SearchHeader_SearchForm_divDomainButton");
+    </script>
+</div>
+<div id="ctl00_SearchHeader_SearchForm_scrpAutoComplete">
+    <script type="text/javascript" language="javascript">
+    //<![CDATA[
+        $(function () {
+            //author
+            var data = { 'inputId': '#ctl00_SearchHeader_SearchForm_txtQuery',
+                'tsId': '#autoSuggest',
+                'searchboxId': '#ctl00_SearchHeader_SearchForm_divSearchBox',
+                'suggestType': 1,
+                'maxNumber': -1,
+                'root': 'http://academic.research.microsoft.com',
+                'postAction': function () {
+                    $("#ctl00_SearchHeader_SearchForm_SearchButton").click();
+                }
+            };
+            TypeSuggest.Init(data);
+
+        })
+    //]]>
+    </script>
+</div>
+ <script type="text/javascript" language="javascript">
+    //<![CDATA[
+     $(function () {
+         $("#ctl00_SearchHeader_SearchForm_SearchButton").click(
+                function () {
+                    var query = $('#ctl00_SearchHeader_SearchForm_txtQuery')[0].value;
+                    $.ajax({
+                        url: "http://academic.research.microsoft.com/Images/logClick.gif?t=13&query=" + query + "&tm=" + new Date(),
+                        success: function () {
+                        }
+                    });
+                    $("#divLoadingIcon").show();
+                    var xPosition = 0;
+                    setInterval(function () {
+                        if (xPosition <= 0)
+                            xPosition = 160;
+                        xPosition = xPosition - 20;
+                        $('#divLoadingIcon').css('background-position', xPosition + 'px 0px');
+                    }, 125);
+
+                }
+            );
+
+            $("#ctl00_SearchHeader_SearchForm_advancedsearch").click(function () {
+                siUrl(this.location, 'ctl00_SearchHeader_SearchForm_advancedsearch');
+            });
+            $("#ctl00_SearchHeader_SearchForm_divSearchBox").click(function () {
+                siUrl(this.location, 'ctl00_SearchHeader_SearchForm_divSearchBox');
+            });
+     })
+    //]]>
+    </script>
+<input name="ctl00$SearchHeader$SearchForm$hdnSelectedDomain" type="hidden" id="ctl00_SearchHeader_SearchForm_hdnSelectedDomain" />
+
+            
+        </div>
+        <div class="propupwidth">
+            <div class="search-bar-right" id="searchBarRight">
+            </div>
+        </div>
+    </div>
+</div>
+
+            <div class="content-wrapper" id="divContentWrapper">
+                <div id="ctl00_divContentHeader" class="content-header-wrapper">
+                    <script type="text/javascript" language="javascript"> 
+                        var isSilverlightInstalled = false;
+                        function CheckSilverlightInstalled() {
+                            try {
+                                try {
+                                    var slControl = new ActiveXObject('AgControl.AgControl'); //IE
+                                    isSilverlightInstalled = true;
+                                }
+                                catch (e) {
+                                    if (navigator.plugins["Silverlight Plug-In"]) //non-IE
+                                    {
+                                        isSilverlightInstalled = true;
+                                    }
+                                }
+                            }
+                            catch (e) { }
+                        }
+                        CheckSilverlightInstalled();
+
+                        $(function () {
+                            $(".ranklist-summary").css("position", "static");
+                            $(".ranklist-summary").css("position", "relative");
+                        })
+                    </script>
+                    
+
+                </div>
+                <div id="ctl00_divLeftWrapper" class="left-wrapper">
+                    
+    <div class="section-wrapper">
+        
+<div class="left-section-header">
+    <h2>
+    <a id="ctl00_LeftPanel_RelatedAuthors_PanelHeader" href="../Detail?entitytype=8&amp;searchtype=1&amp;id=138">Authors <span class="item-count">(54237)</span> </a>
+    
+    </h2>
+</div>
+<ul>
+	<li onclick="try{return si(6,&#39;James%20R.%20Durig&#39;,&#39;%2fAuthor%2f51674479%2fjames-r-durig&#39;);}catch(ex){;}"><a href="/Author/51674479/james-r-durig">James R. Durig</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=2&amp;srcID=138&amp;desID=51674479" title="212 publication(s) from this author"><div class="left">
+			212
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;Gamil%20A.%20Guirgis&#39;,&#39;%2fAuthor%2f11402502%2fgamil-a-guirgis&#39;);}catch(ex){;}"><a href="/Author/11402502/gamil-a-guirgis">Gamil A. Guirgis</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=2&amp;srcID=138&amp;desID=11402502" title="203 publication(s) from this author"><div class="left">
+			203
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;James%20R.%20Durig&#39;,&#39;%2fAuthor%2f19672043%2fjames-r-durig&#39;);}catch(ex){;}"><a href="/Author/19672043/james-r-durig">James R. Durig</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=2&amp;srcID=138&amp;desID=19672043" title="141 publication(s) from this author"><div class="left">
+			141
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;Joel%20M.%20Bowman&#39;,&#39;%2fAuthor%2f12536778%2fjoel-m-bowman&#39;);}catch(ex){;}"><a href="/Author/12536778/joel-m-bowman">Joel M. Bowman</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=2&amp;srcID=138&amp;desID=12536778" title="89 publication(s) from this author"><div class="left">
+			89
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;Rajeev%20B.%20Ahuja&#39;,&#39;%2fAuthor%2f12955354%2frajeev-b-ahuja&#39;);}catch(ex){;}"><a href="/Author/12955354/rajeev-b-ahuja">Rajeev B. Ahuja</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=2&amp;srcID=138&amp;desID=12955354" title="88 publication(s) from this author"><div class="left">
+			88
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+
+</ul>
+
+<div class="clear"></div>
+
+    </div>
+   <div class="section-wrapper">
+        
+<div class="left-section-header">
+    <h2>
+    <a id="ctl00_LeftPanel_RelatedConferences_PanelHeader" href="../Detail?entitytype=8&amp;searchtype=3&amp;id=138">Conferences <span class="item-count">(56)</span> </a>
+    
+    </h2>
+</div>
+<ul>
+	<li onclick="try{return si(6,&#39;INTERMAG&#39;,&#39;%2fConference%2f4280%2fintermag-magnetics-international-conference&#39;);}catch(ex){;}"><a href="/Conference/4280/intermag-magnetics-international-conference" title="Magnetics International Conference">INTERMAG</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=3&amp;srcID=138&amp;desID=4280" title="6 publication(s) in this conference"><div class="left">
+			6
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;INEC&#39;,&#39;%2fConference%2f4493%2finec-ieee-international-nanoelectronics-conference&#39;);}catch(ex){;}"><a href="/Conference/4493/inec-ieee-international-nanoelectronics-conference" title="IEEE International Nanoelectronics Conference">INEC</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=3&amp;srcID=138&amp;desID=4493" title="6 publication(s) in this conference"><div class="left">
+			6
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;SISPAD&#39;,&#39;%2fConference%2f5003%2fsispad-international-conference-on-simulation-of-semiconductor-processes-and-devices&#39;);}catch(ex){;}"><a href="/Conference/5003/sispad-international-conference-on-simulation-of-semiconductor-processes-and-devices" title="International Conference on Simulation of Semiconductor Processes and Devices">SISPAD</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=3&amp;srcID=138&amp;desID=5003" title="6 publication(s) in this conference"><div class="left">
+			6
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;ICT&#39;,&#39;%2fConference%2f5221%2fict-international-conference-on-thermoelectrics&#39;);}catch(ex){;}"><a href="/Conference/5221/ict-international-conference-on-thermoelectrics" title="International Conference on Thermoelectrics">ICT</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=3&amp;srcID=138&amp;desID=5221" title="6 publication(s) in this conference"><div class="left">
+			6
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;IEDM&#39;,&#39;%2fConference%2f3689%2fiedm-international-electron-devices-meeting&#39;);}catch(ex){;}"><a href="/Conference/3689/iedm-international-electron-devices-meeting" title="International Electron Devices Meeting">IEDM</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=3&amp;srcID=138&amp;desID=3689" title="5 publication(s) in this conference"><div class="left">
+			5
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+
+</ul>
+
+<div class="clear"></div>
+
+    </div>
+    <div class="section-wrapper">
+        
+<div class="left-section-header">
+    <h2>
+    <a id="ctl00_LeftPanel_RelatedJournals_PanelHeader" href="../Detail?entitytype=8&amp;searchtype=4&amp;id=138">Journals <span class="item-count">(742)</span> </a>
+    
+    </h2>
+</div>
+<ul>
+	<li onclick="try{return si(6,&#39;CHEM%20PHYS&#39;,&#39;%2fJournal%2f1957%2fchem-phys-chemical-physics&#39;);}catch(ex){;}"><a href="/Journal/1957/chem-phys-chemical-physics" title="Chemical Physics">CHEM PHYS</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=4&amp;srcID=138&amp;desID=1957" title="5187 publication(s) in this journal"><div class="left">
+			5187
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;PHYS%20REV%20B&#39;,&#39;%2fJournal%2f8566%2fphys-rev-b-physical-review-b&#39;);}catch(ex){;}"><a href="/Journal/8566/phys-rev-b-physical-review-b" title="Physical Review B">PHYS REV B</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=4&amp;srcID=138&amp;desID=8566" title="2797 publication(s) in this journal"><div class="left">
+			2797
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;CHEM%20PHYS%20LETT&#39;,&#39;%2fJournal%2f1959%2fchem-phys-lett-chemical-physics-letters&#39;);}catch(ex){;}"><a href="/Journal/1959/chem-phys-lett-chemical-physics-letters" title="Chemical Physics Letters">CHEM PHYS LETT</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=4&amp;srcID=138&amp;desID=1959" title="1093 publication(s) in this journal"><div class="left">
+			1093
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;J%20MOL%20STRUC-THEOCHEM&#39;,&#39;%2fJournal%2f2157%2fj-mol-struc-theochem-journal-of-molecular-structure-theochem&#39;);}catch(ex){;}"><a href="/Journal/2157/j-mol-struc-theochem-journal-of-molecular-structure-theochem" title="Journal of Molecular Structure-theochem">J MOL STRUC-THEOCHEM</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=4&amp;srcID=138&amp;desID=2157" title="998 publication(s) in this journal"><div class="left">
+			998
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+	<li onclick="try{return si(6,&#39;J%20MOL%20STRUCT&#39;,&#39;%2fJournal%2f2156%2fj-mol-struct-journal-of-molecular-structure&#39;);}catch(ex){;}"><a href="/Journal/2156/j-mol-struct-journal-of-molecular-structure" title="Journal of Molecular Structure">J MOL STRUCT</a><span class="evidence"><div class="evidence-icon">
+		<a href="/PublicationList?srcType=8&amp;desType=4&amp;srcID=138&amp;desID=2156" title="997 publication(s) in this journal"><div class="left">
+			997
+		</div><div class="right">
+
+		</div></a>
+	</div></span><div class="clear">
+
+	</div></li>
+
+</ul>
+
+<div class="clear"></div>
+
+    </div>
+    <div class="section-wrapper">
+        
+<div class="left-section-header">
+    <h2>
+    <a id="ctl00_LeftPanel_RelatedKeywords_PanelHeader" href="../Detail?entitytype=8&amp;searchtype=9&amp;id=138">Keywords <span class="item-count">(612)</span> </a>
+    
+    </h2>
+</div>
+<ul>
+
+</ul>
+
+<div class="clear"></div>
+
+        <div id="divKeywordCloud" class="NormalTagCloud"></div>
+        <div class="clear"></div>
+    <script type="text/javascript" language="javascript" src="http://academic.research.microsoft.com/Scripts/KeywordCloud.3.3.0399.00.js"></script>
+    <script type="text/javascript" language="javascript">
+        //<![CDATA[
+        loadKeyword("divKeywordCloud", _keyword_data, 16);
+         //]]>
+    </script>
+    </div>
+
+                </div>
+                <div id="ctl00_divCenter" class="center-wrapper">
+                    
+    
+    
+
+<div class="bing-summary">
+    <div id="ctl00_MainContent_SearchSummary_divAction" class="action">
+        
+        
+        
+        <span id="ctl00_MainContent_SearchSummary_spRSSfeedAction">
+            <a id="ctl00_MainContent_SearchSummary_imgFeedLink" title="Subscribe to this list" href="../Rss?id=138&amp;cata=8"><img id="ctl00_MainContent_SearchSummary_imgFeed" class="small-icon" onclick="try{return si(15,&#39;ctl00_MainContent_SearchSummary&#39;,&#39;ctl00_MainContent_SearchSummary_imgFeed&#39;);}catch(ex){;}" src="../Images/feed.png" style="border-width:0px;" /></a>
+            <a id="ctl00_MainContent_SearchSummary_RssLink" title="Subscribe to this list" onclick="try{return si(17,&#39;ctl00_MainContent_SearchSummary&#39;,&#39;ctl00_MainContent_SearchSummary_RssLink&#39;);}catch(ex){;}" href="../Rss?id=138&amp;cata=8" style="font-weight:normal;">
+                        Subscribe</a>
+        </span>
+        
+    </div>
+    <div id="ctl00_MainContent_SearchSummary_divSummary" class="declare">
+        <a class="text" href="../">
+        Academic</a>
+
+        <div class="right-arrow"></div><a class='text' href='&#47;RankList&#63;entitytype&#61;8&#38;topDomainID&#61;19&#38;subDomainID&#61;6&#38;last&#61;0&#38;start&#61;1&#38;end&#61;100'>Keywords</a><div class="right-arrow"></div><span>ab initio calculation</span>
+        
+
+        
+    </div>
+</div>
+
+<div class="clear">
+</div>
+
+    
+    
+<div class="conference-card" id="divKeywordCard">
+    <div id="ctl00_MainContent_KeywodItem_divKeywordLeft">
+        <h1>,ab initio calculation,ab initio calculations,ab initio calculated,ab initio calculational</h1>
+        <div class="content">
+            <div class="card-title">
+                
+                <span id="ctl00_MainContent_KeywodItem_name">ab initio calculation</span>
+            </div>
+        </div>
+        <div class="detailInfo">
+            <span id="ctl00_MainContent_KeywodItem_detailInfo">Publications: 32,455<span class="space">|</span> Citation Count: 37,229 </span></div>
+        <div id="ctl00_MainContent_KeywodItem_divStemming">
+            Stemming Variations:
+            <span id="ctl00_MainContent_KeywodItem_ltrStemmings" class="keyword-variation">ab initio calculations, ab initio calculated, ab initio calculational</span>
+        </div>
+        <div id="holder" class="trendchart">
+            <div id="ctl00_MainContent_KeywodItem_objectWrapper">
+                <object type="application/x-silverlight-2" data="data:application/x-silverlight-2,"
+                    id="trendChart">
+                    <param name="MinRuntimeVersion" value="2.0.31005.0" />
+                    <param name="source" value="/ClientBin/TrendChart.3.3.0399.00.xap" />
+                    <param name="Background" value="#FFe4eef6" />
+                    <param name="InitParams" value="xml=http://academic.research.microsoft.com/TrendChartData.aspx?kid=138;http://academic.research.microsoft.com/TrendChartData.aspx?original=true&kid=138,title=Cumulative;Annual,radioButtonTip=Show data through a given year;Show only data for a given year" />
+                    <param name="windowless" value="true" />
+                </object>
+            </div>
+            <div class="trendchartJS" id="divTrendChart">
+                <div class="radio-buttons">
+                    <input type="radio" name="ViewType" checked="checked" value="Cumulative" onclick="ChangeView(0)" />Cumulative
+                    <input type="radio" name="ViewType" value="Annual" style="margin-left: 10px" onclick="ChangeView(1)" />Annual
+                </div>
+            </div>
+        </div>
+        <div class="trendchart-paperlist" id="divPaperList">
+            <div class="close-button" onclick="document.getElementById('divPaperList').style.display='none'">
+            </div>
+            <a id="hypListTitle" class="list-title"></a>
+            <div class="clear">
+            </div>
+            <div class="list-paper">
+            </div>
+        </div>
+        <script language="javascript" type="text/javascript">
+            if (!isSilverlightInstalled) {
+                if ($("#ctl00_MainContent_KeywodItem_objectWrapper")[0]) {
+                    $("#ctl00_MainContent_KeywodItem_objectWrapper").hide();
+                    $("#divTrendChart").width($("#ctl00_MainContent_KeywodItem_divKeywordLeft").width());
+                    $("#divTrendChart").show();
+                    var myChart = new Libra.TrendChart();
+                    myChart.Init($("#divTrendChart")[0], $("#ctl00_MainContent_KeywodItem_divKeywordLeft").width(), $("#divTrendChart").height(), '[{"_config":{"m_marginTop":15,"m_marginBottom":30,"m_marginLeft":55,"m_marginRight":40,"m_xminValue":1959,"m_xmaxValue":2013,"m_yminValue":2,"m_ymaxValue":35557,"m_isShowLabel":true,"m_lineThickness":3},"_grid":{"m_vLine":[{"m_value":1959,"m_text":"1959","m_text2":null,"color":"#cccccc","border":1},{"m_value":1965,"m_text":"1965","m_text2":null,"color":null,"border":0},{"m_value":1971,"m_text":"1971","m_text2":null,"color":null,"border":0},{"m_value":1977,"m_text":"1977","m_text2":null,"color":null,"border":0},{"m_value":1983,"m_text":"1983","m_text2":null,"color":null,"border":0},{"m_value":1989,"m_text":"1989","m_text2":null,"color":null,"border":0},{"m_value":1995,"m_text":"1995","m_text2":null,"color":null,"border":0},{"m_value":2001,"m_text":"2001","m_text2":null,"color":null,"border":0},{"m_value":2007,"m_text":"2007","m_text2":null,"color":null,"border":0},{"m_value":2013,"m_text":"2013","m_text2":null,"color":"#cccccc","border":1}],"m_hLine":[{"m_value":35557,"m_text":"35557","m_text2":null,"color":null,"border":0},{"m_value":2,"m_text":"2","m_text2":"","color":null,"border":0}]},"m_Lines":[{"m_config":{"m_color":"#00bfe7","m_name":"publications"},"m_pointList":[{"m_x":1959,"m_y":2,"m_text":"0","m_Visible":false},{"m_x":1964,"m_y":7,"m_text":"publications:7 (year 1964)","m_Visible":true},{"m_x":1965,"m_y":16,"m_text":"publications:16 (year 1965)","m_Visible":true},{"m_x":1966,"m_y":23,"m_text":"publications:23 (year 1966)","m_Visible":true},{"m_x":1967,"m_y":33,"m_text":"publications:33 (year 1967)","m_Visible":true},{"m_x":1968,"m_y":58,"m_text":"publications:58 (year 1968)","m_Visible":true},{"m_x":1969,"m_y":86,"m_text":"publications:86 (year 1969)","m_Visible":true},{"m_x":1970,"m_y":139,"m_text":"publications:139 (year 1970)","m_Visible":true},{"m_x":1971,"m_y":204,"m_text":"publications:204 (year 1971)","m_Visible":true},{"m_x":1972,"m_y":276,"m_text":"publications:276 (year 1972)","m_Visible":true},{"m_x":1973,"m_y":357,"m_text":"publications:357 (year 1973)","m_Visible":true},{"m_x":1974,"m_y":447,"m_text":"publications:447 (year 1974)","m_Visible":true},{"m_x":1975,"m_y":527,"m_text":"publications:527 (year 1975)","m_Visible":true},{"m_x":1976,"m_y":632,"m_text":"publications:632 (year 1976)","m_Visible":true},{"m_x":1977,"m_y":749,"m_text":"publications:749 (year 1977)","m_Visible":true},{"m_x":1978,"m_y":838,"m_text":"publications:838 (year 1978)","m_Visible":true},{"m_x":1979,"m_y":961,"m_text":"publications:961 (year 1979)","m_Visible":true},{"m_x":1980,"m_y":1079,"m_text":"publications:1079 (year 1980)","m_Visible":true},{"m_x":1981,"m_y":1189,"m_text":"publications:1189 (year 1981)","m_Visible":true},{"m_x":1982,"m_y":1334,"m_text":"publications:1334 (year 1982)","m_Visible":true},{"m_x":1983,"m_y":1476,"m_text":"publications:1476 (year 1983)","m_Visible":true},{"m_x":1984,"m_y":1612,"m_text":"publications:1612 (year 1984)","m_Visible":true},{"m_x":1985,"m_y":1811,"m_text":"publications:1811 (year 1985)","m_Visible":true},{"m_x":1986,"m_y":2065,"m_text":"publications:2065 (year 1986)","m_Visible":true},{"m_x":1987,"m_y":2306,"m_text":"publications:2306 (year 1987)","m_Visible":true},{"m_x":1988,"m_y":2588,"m_text":"publications:2588 (year 1988)","m_Visible":true},{"m_x":1989,"m_y":2852,"m_text":"publications:2852 (year 1989)","m_Visible":true},{"m_x":1990,"m_y":3188,"m_text":"publications:3188 (year 1990)","m_Visible":true},{"m_x":1991,"m_y":3628,"m_text":"publications:3628 (year 1991)","m_Visible":true},{"m_x":1992,"m_y":4143,"m_text":"publications:4143 (year 1992)","m_Visible":true},{"m_x":1993,"m_y":4676,"m_text":"publications:4676 (year 1993)","m_Visible":true},{"m_x":1994,"m_y":5260,"m_text":"publications:5260 (year 1994)","m_Visible":true},{"m_x":1995,"m_y":6184,"m_text":"publications:6184 (year 1995)","m_Visible":true},{"m_x":1996,"m_y":7248,"m_text":"publications:7248 (year 1996)","m_Visible":true},{"m_x":1997,"m_y":8418,"m_text":"publications:8418 (year 1997)","m_Visible":true},{"m_x":1998,"m_y":9657,"m_text":"publications:9657 (year 1998)","m_Visible":true},{"m_x":1999,"m_y":11034,"m_text":"publications:11034 (year 1999)","m_Visible":true},{"m_x":2000,"m_y":12458,"m_text":"publications:12458 (year 2000)","m_Visible":true},{"m_x":2001,"m_y":13924,"m_text":"publications:13924 (year 2001)","m_Visible":true},{"m_x":2002,"m_y":15311,"m_text":"publications:15311 (year 2002)","m_Visible":true},{"m_x":2003,"m_y":16863,"m_text":"publications:16863 (year 2003)","m_Visible":true},{"m_x":2004,"m_y":18604,"m_text":"publications:18604 (year 2004)","m_Visible":true},{"m_x":2005,"m_y":20367,"m_text":"publications:20367 (year 2005)","m_Visible":true},{"m_x":2006,"m_y":22226,"m_text":"publications:22226 (year 2006)","m_Visible":true},{"m_x":2007,"m_y":24188,"m_text":"publications:24188 (year 2007)","m_Visible":true},{"m_x":2008,"m_y":25990,"m_text":"publications:25990 (year 2008)","m_Visible":true},{"m_x":2009,"m_y":27901,"m_text":"publications:27901 (year 2009)","m_Visible":true},{"m_x":2010,"m_y":30001,"m_text":"publications:30001 (year 2010)","m_Visible":true},{"m_x":2011,"m_y":31930,"m_text":"publications:31930 (year 2011)","m_Visible":true},{"m_x":2012,"m_y":32021,"m_text":"publications:32021 (year 2012)","m_Visible":true},{"m_x":2013,"m_y":32022,"m_text":"publications:32022, YTD","m_Visible":true}]},{"m_config":{"m_color":"#ff711f","m_name":"citations"},"m_pointList":[{"m_x":1959,"m_y":2,"m_text":"0","m_Visible":false},{"m_x":1964,"m_y":2,"m_text":"citations:2 (year 1964)","m_Visible":true},{"m_x":1965,"m_y":4,"m_text":"citations:4 (year 1965)","m_Visible":true},{"m_x":1966,"m_y":5,"m_text":"citations:5 (year 1966)","m_Visible":true},{"m_x":1967,"m_y":6,"m_text":"citations:6 (year 1967)","m_Visible":true},{"m_x":1968,"m_y":7,"m_text":"citations:7 (year 1968)","m_Visible":true},{"m_x":1969,"m_y":12,"m_text":"citations:12 (year 1969)","m_Visible":true},{"m_x":1970,"m_y":18,"m_text":"citations:18 (year 1970)","m_Visible":true},{"m_x":1971,"m_y":25,"m_text":"citations:25 (year 1971)","m_Visible":true},{"m_x":1972,"m_y":34,"m_text":"citations:34 (year 1972)","m_Visible":true},{"m_x":1973,"m_y":50,"m_text":"citations:50 (year 1973)","m_Visible":true},{"m_x":1974,"m_y":67,"m_text":"citations:67 (year 1974)","m_Visible":true},{"m_x":1975,"m_y":92,"m_text":"citations:92 (year 1975)","m_Visible":true},{"m_x":1976,"m_y":113,"m_text":"citations:113 (year 1976)","m_Visible":true},{"m_x":1977,"m_y":156,"m_text":"citations:156 (year 1977)","m_Visible":true},{"m_x":1978,"m_y":191,"m_text":"citations:191 (year 1978)","m_Visible":true},{"m_x":1979,"m_y":249,"m_text":"citations:249 (year 1979)","m_Visible":true},{"m_x":1980,"m_y":297,"m_text":"citations:297 (year 1980)","m_Visible":true},{"m_x":1981,"m_y":369,"m_text":"citations:369 (year 1981)","m_Visible":true},{"m_x":1982,"m_y":414,"m_text":"citations:414 (year 1982)","m_Visible":true},{"m_x":1983,"m_y":466,"m_text":"citations:466 (year 1983)","m_Visible":true},{"m_x":1984,"m_y":545,"m_text":"citations:545 (year 1984)","m_Visible":true},{"m_x":1985,"m_y":633,"m_text":"citations:633 (year 1985)","m_Visible":true},{"m_x":1986,"m_y":728,"m_text":"citations:728 (year 1986)","m_Visible":true},{"m_x":1987,"m_y":830,"m_text":"citations:830 (year 1987)","m_Visible":true},{"m_x":1988,"m_y":930,"m_text":"citations:930 (year 1988)","m_Visible":true},{"m_x":1989,"m_y":1075,"m_text":"citations:1075 (year 1989)","m_Visible":true},{"m_x":1990,"m_y":1230,"m_text":"citations:1230 (year 1990)","m_Visible":true},{"m_x":1991,"m_y":1383,"m_text":"citations:1383 (year 1991)","m_Visible":true},{"m_x":1992,"m_y":1607,"m_text":"citations:1607 (year 1992)","m_Visible":true},{"m_x":1993,"m_y":1797,"m_text":"citations:1797 (year 1993)","m_Visible":true},{"m_x":1994,"m_y":1990,"m_text":"citations:1990 (year 1994)","m_Visible":true},{"m_x":1995,"m_y":2304,"m_text":"citations:2304 (year 1995)","m_Visible":true},{"m_x":1996,"m_y":2646,"m_text":"citations:2646 (year 1996)","m_Visible":true},{"m_x":1997,"m_y":3098,"m_text":"citations:3098 (year 1997)","m_Visible":true},{"m_x":1998,"m_y":3551,"m_text":"citations:3551 (year 1998)","m_Visible":true},{"m_x":1999,"m_y":4035,"m_text":"citations:4035 (year 1999)","m_Visible":true},{"m_x":2000,"m_y":4665,"m_text":"citations:4665 (year 2000)","m_Visible":true},{"m_x":2001,"m_y":5490,"m_text":"citations:5490 (year 2001)","m_Visible":true},{"m_x":2002,"m_y":6233,"m_text":"citations:6233 (year 2002)","m_Visible":true},{"m_x":2003,"m_y":7181,"m_text":"citations:7181 (year 2003)","m_Visible":true},{"m_x":2004,"m_y":8518,"m_text":"citations:8518 (year 2004)","m_Visible":true},{"m_x":2005,"m_y":10790,"m_text":"citations:10790 (year 2005)","m_Visible":true},{"m_x":2006,"m_y":13578,"m_text":"citations:13578 (year 2006)","m_Visible":true},{"m_x":2007,"m_y":17091,"m_text":"citations:17091 (year 2007)","m_Visible":true},{"m_x":2008,"m_y":21947,"m_text":"citations:21947 (year 2008)","m_Visible":true},{"m_x":2009,"m_y":28116,"m_text":"citations:28116 (year 2009)","m_Visible":true},{"m_x":2010,"m_y":33847,"m_text":"citations:33847 (year 2010)","m_Visible":true},{"m_x":2011,"m_y":35335,"m_text":"citations:35335 (year 2011)","m_Visible":true},{"m_x":2012,"m_y":35556,"m_text":"citations:35556 (year 2012)","m_Visible":true},{"m_x":2013,"m_y":35557,"m_text":"citations:35557, YTD","m_Visible":true}]}]},{"_config":{"m_marginTop":15,"m_marginBottom":30,"m_marginLeft":55,"m_marginRight":40,"m_xminValue":1959,"m_xmaxValue":2013,"m_yminValue":0,"m_ymaxValue":6169,"m_isShowLabel":true,"m_lineThickness":3},"_grid":{"m_vLine":[{"m_value":1959,"m_text":"1959","m_text2":null,"color":"#ff711f","border":2},{"m_value":1965,"m_text":"1965","m_text2":null,"color":null,"border":0},{"m_value":1971,"m_text":"1971","m_text2":null,"color":null,"border":0},{"m_value":1977,"m_text":"1977","m_text2":null,"color":null,"border":0},{"m_value":1983,"m_text":"1983","m_text2":null,"color":null,"border":0},{"m_value":1989,"m_text":"1989","m_text2":null,"color":null,"border":0},{"m_value":1995,"m_text":"1995","m_text2":null,"color":null,"border":0},{"m_value":2001,"m_text":"2001","m_text2":null,"color":null,"border":0},{"m_value":2007,"m_text":"2007","m_text2":null,"color":null,"border":0},{"m_value":2013,"m_text":"2013","m_text2":null,"color":"#00bfe7","border":2}],"m_hLine":[{"m_value":0,"m_text":"0","m_text2":"","color":null,"border":0},{"m_value":6169,"m_text":"6169","m_text2":"2310","color":null,"border":0}]},"m_Lines":[{"m_config":{"m_color":"#00bfe7","m_name":"publications"},"m_pointList":[{"m_x":1959,"m_y":0,"m_text":"0","m_Visible":false},{"m_x":1959,"m_y":0,"m_text":"0","m_Visible":false},{"m_x":1964,"m_y":8,"m_text":"publications:3 (year 1964)","m_Visible":true},{"m_x":1965,"m_y":24,"m_text":"publications:9 (year 1965)","m_Visible":true},{"m_x":1966,"m_y":19,"m_text":"publications:7 (year 1966)","m_Visible":true},{"m_x":1967,"m_y":27,"m_text":"publications:10 (year 1967)","m_Visible":true},{"m_x":1968,"m_y":67,"m_text":"publications:25 (year 1968)","m_Visible":true},{"m_x":1969,"m_y":75,"m_text":"publications:28 (year 1969)","m_Visible":true},{"m_x":1970,"m_y":142,"m_text":"publications:53 (year 1970)","m_Visible":true},{"m_x":1971,"m_y":174,"m_text":"publications:65 (year 1971)","m_Visible":true},{"m_x":1972,"m_y":192,"m_text":"publications:72 (year 1972)","m_Visible":true},{"m_x":1973,"m_y":216,"m_text":"publications:81 (year 1973)","m_Visible":true},{"m_x":1974,"m_y":240,"m_text":"publications:90 (year 1974)","m_Visible":true},{"m_x":1975,"m_y":214,"m_text":"publications:80 (year 1975)","m_Visible":true},{"m_x":1976,"m_y":280,"m_text":"publications:105 (year 1976)","m_Visible":true},{"m_x":1977,"m_y":312,"m_text":"publications:117 (year 1977)","m_Visible":true},{"m_x":1978,"m_y":238,"m_text":"publications:89 (year 1978)","m_Visible":true},{"m_x":1979,"m_y":328,"m_text":"publications:123 (year 1979)","m_Visible":true},{"m_x":1980,"m_y":315,"m_text":"publications:118 (year 1980)","m_Visible":true},{"m_x":1981,"m_y":294,"m_text":"publications:110 (year 1981)","m_Visible":true},{"m_x":1982,"m_y":387,"m_text":"publications:145 (year 1982)","m_Visible":true},{"m_x":1983,"m_y":379,"m_text":"publications:142 (year 1983)","m_Visible":true},{"m_x":1984,"m_y":363,"m_text":"publications:136 (year 1984)","m_Visible":true},{"m_x":1985,"m_y":531,"m_text":"publications:199 (year 1985)","m_Visible":true},{"m_x":1986,"m_y":678,"m_text":"publications:254 (year 1986)","m_Visible":true},{"m_x":1987,"m_y":644,"m_text":"publications:241 (year 1987)","m_Visible":true},{"m_x":1988,"m_y":753,"m_text":"publications:282 (year 1988)","m_Visible":true},{"m_x":1989,"m_y":705,"m_text":"publications:264 (year 1989)","m_Visible":true},{"m_x":1990,"m_y":897,"m_text":"publications:336 (year 1990)","m_Visible":true},{"m_x":1991,"m_y":1175,"m_text":"publications:440 (year 1991)","m_Visible":true},{"m_x":1992,"m_y":1375,"m_text":"publications:515 (year 1992)","m_Visible":true},{"m_x":1993,"m_y":1423,"m_text":"publications:533 (year 1993)","m_Visible":true},{"m_x":1994,"m_y":1560,"m_text":"publications:584 (year 1994)","m_Visible":true},{"m_x":1995,"m_y":2468,"m_text":"publications:924 (year 1995)","m_Visible":true},{"m_x":1996,"m_y":2841,"m_text":"publications:1064 (year 1996)","m_Visible":true},{"m_x":1997,"m_y":3125,"m_text":"publications:1170 (year 1997)","m_Visible":true},{"m_x":1998,"m_y":3309,"m_text":"publications:1239 (year 1998)","m_Visible":true},{"m_x":1999,"m_y":3677,"m_text":"publications:1377 (year 1999)","m_Visible":true},{"m_x":2000,"m_y":3803,"m_text":"publications:1424 (year 2000)","m_Visible":true},{"m_x":2001,"m_y":3915,"m_text":"publications:1466 (year 2001)","m_Visible":true},{"m_x":2002,"m_y":3704,"m_text":"publications:1387 (year 2002)","m_Visible":true},{"m_x":2003,"m_y":4145,"m_text":"publications:1552 (year 2003)","m_Visible":true},{"m_x":2004,"m_y":4649,"m_text":"publications:1741 (year 2004)","m_Visible":true},{"m_x":2005,"m_y":4708,"m_text":"publications:1763 (year 2005)","m_Visible":true},{"m_x":2006,"m_y":4965,"m_text":"publications:1859 (year 2006)","m_Visible":true},{"m_x":2007,"m_y":5240,"m_text":"publications:1962 (year 2007)","m_Visible":true},{"m_x":2008,"m_y":4812,"m_text":"publications:1802 (year 2008)","m_Visible":true},{"m_x":2009,"m_y":5103,"m_text":"publications:1911 (year 2009)","m_Visible":true},{"m_x":2010,"m_y":5608,"m_text":"publications:2100 (year 2010)","m_Visible":true},{"m_x":2011,"m_y":5152,"m_text":"publications:1929 (year 2011)","m_Visible":true},{"m_x":2012,"m_y":243,"m_text":"publications:91 (year 2012)","m_Visible":true},{"m_x":2013,"m_y":3,"m_text":"publications:1, YTD","m_Visible":true}]},{"m_config":{"m_color":"#ff711f","m_name":"citations"},"m_pointList":[{"m_x":1959,"m_y":0,"m_text":"0","m_Visible":false},{"m_x":1959,"m_y":0,"m_text":"0","m_Visible":false},{"m_x":1964,"m_y":0,"m_text":"citations:0 (year 1964)","m_Visible":false},{"m_x":1965,"m_y":2,"m_text":"citations:2 (year 1965)","m_Visible":true},{"m_x":1966,"m_y":1,"m_text":"citations:1 (year 1966)","m_Visible":true},{"m_x":1967,"m_y":1,"m_text":"citations:1 (year 1967)","m_Visible":true},{"m_x":1968,"m_y":1,"m_text":"citations:1 (year 1968)","m_Visible":true},{"m_x":1969,"m_y":5,"m_text":"citations:5 (year 1969)","m_Visible":true},{"m_x":1970,"m_y":6,"m_text":"citations:6 (year 1970)","m_Visible":true},{"m_x":1971,"m_y":7,"m_text":"citations:7 (year 1971)","m_Visible":true},{"m_x":1972,"m_y":9,"m_text":"citations:9 (year 1972)","m_Visible":true},{"m_x":1973,"m_y":16,"m_text":"citations:16 (year 1973)","m_Visible":true},{"m_x":1974,"m_y":17,"m_text":"citations:17 (year 1974)","m_Visible":true},{"m_x":1975,"m_y":25,"m_text":"citations:25 (year 1975)","m_Visible":true},{"m_x":1976,"m_y":21,"m_text":"citations:21 (year 1976)","m_Visible":true},{"m_x":1977,"m_y":43,"m_text":"citations:43 (year 1977)","m_Visible":true},{"m_x":1978,"m_y":35,"m_text":"citations:35 (year 1978)","m_Visible":true},{"m_x":1979,"m_y":58,"m_text":"citations:58 (year 1979)","m_Visible":true},{"m_x":1980,"m_y":48,"m_text":"citations:48 (year 1980)","m_Visible":true},{"m_x":1981,"m_y":72,"m_text":"citations:72 (year 1981)","m_Visible":true},{"m_x":1982,"m_y":45,"m_text":"citations:45 (year 1982)","m_Visible":true},{"m_x":1983,"m_y":52,"m_text":"citations:52 (year 1983)","m_Visible":true},{"m_x":1984,"m_y":79,"m_text":"citations:79 (year 1984)","m_Visible":true},{"m_x":1985,"m_y":88,"m_text":"citations:88 (year 1985)","m_Visible":true},{"m_x":1986,"m_y":95,"m_text":"citations:95 (year 1986)","m_Visible":true},{"m_x":1987,"m_y":102,"m_text":"citations:102 (year 1987)","m_Visible":true},{"m_x":1988,"m_y":100,"m_text":"citations:100 (year 1988)","m_Visible":true},{"m_x":1989,"m_y":145,"m_text":"citations:145 (year 1989)","m_Visible":true},{"m_x":1990,"m_y":155,"m_text":"citations:155 (year 1990)","m_Visible":true},{"m_x":1991,"m_y":153,"m_text":"citations:153 (year 1991)","m_Visible":true},{"m_x":1992,"m_y":224,"m_text":"citations:224 (year 1992)","m_Visible":true},{"m_x":1993,"m_y":190,"m_text":"citations:190 (year 1993)","m_Visible":true},{"m_x":1994,"m_y":193,"m_text":"citations:193 (year 1994)","m_Visible":true},{"m_x":1995,"m_y":314,"m_text":"citations:314 (year 1995)","m_Visible":true},{"m_x":1996,"m_y":342,"m_text":"citations:342 (year 1996)","m_Visible":true},{"m_x":1997,"m_y":452,"m_text":"citations:452 (year 1997)","m_Visible":true},{"m_x":1998,"m_y":453,"m_text":"citations:453 (year 1998)","m_Visible":true},{"m_x":1999,"m_y":484,"m_text":"citations:484 (year 1999)","m_Visible":true},{"m_x":2000,"m_y":630,"m_text":"citations:630 (year 2000)","m_Visible":true},{"m_x":2001,"m_y":825,"m_text":"citations:825 (year 2001)","m_Visible":true},{"m_x":2002,"m_y":743,"m_text":"citations:743 (year 2002)","m_Visible":true},{"m_x":2003,"m_y":948,"m_text":"citations:948 (year 2003)","m_Visible":true},{"m_x":2004,"m_y":1337,"m_text":"citations:1337 (year 2004)","m_Visible":true},{"m_x":2005,"m_y":2272,"m_text":"citations:2272 (year 2005)","m_Visible":true},{"m_x":2006,"m_y":2788,"m_text":"citations:2788 (year 2006)","m_Visible":true},{"m_x":2007,"m_y":3513,"m_text":"citations:3513 (year 2007)","m_Visible":true},{"m_x":2008,"m_y":4856,"m_text":"citations:4856 (year 2008)","m_Visible":true},{"m_x":2009,"m_y":6169,"m_text":"citations:6169 (year 2009)","m_Visible":true},{"m_x":2010,"m_y":5731,"m_text":"citations:5731 (year 2010)","m_Visible":true},{"m_x":2011,"m_y":1488,"m_text":"citations:1488 (year 2011)","m_Visible":true},{"m_x":2012,"m_y":221,"m_text":"citations:221 (year 2012)","m_Visible":true},{"m_x":2013,"m_y":1,"m_text":"citations:1, YTD","m_Visible":true}]}]}]');
+                    function ChangeView(index) {
+                        myChart.Render(index);
+                    }
+                }
+            }
+        </script>
+    </div>
+    <div class="clear">
+    </div>
+    <script type="text/javascript">
+        var publicationByYearDataUrlformat = 'http://academic.research.microsoft.com/io.ashx?type=3&entitytype=8&id=138&year=';
+        var publicationByYearUrlformat = 'http://academic.research.microsoft.com/Detail?entitytype=8&searchtype=2&id=138';
+        function ShowListByYear(year, type) {
+            if (type == "publication") {
+                showPublicationsByYear(SiteRoot, publicationByYearDataUrlformat + year, "Publication in " + year, "divPaperList");
+                $("#hypListTitle").css("color", "#00bfe7");
+                $("#hypListTitle").attr("href", publicationByYearUrlformat + "&year=" + year);
+            }
+            else {
+                $("#divPaperList").hide();
+            }
+        }                                 
+    </script>
+</div>
+
+    
+    <div class="section-wrapper">
+        
+    </div>
+    <div class="section-wrapper">
+        <div id="ctl00_MainContent_PaperList_ListHeader" class="section-header">
+	
+    
+    
+<div class="orderby-filter">
+    
+<div class="dropdownlist">
+ <div>
+        <table id="ctl00_MainContent_PaperList_OrderByFilter_drpList_drpList" cellpadding="0" cellspacing="0">
+		<tr>
+			<td id="ctl00_MainContent_PaperList_OrderByFilter_drpList_tdDrpList" class="dropdownlist-left" width="65px">
+                <input name="ctl00$MainContent$PaperList$OrderByFilter$drpList$drp_hidden_focus" type="text" id="ctl00_MainContent_PaperList_OrderByFilter_drpList_drp_hidden_focus" class="hidden" />
+
+                <span id="ctl00_MainContent_PaperList_OrderByFilter_drpList_spSelectedText"></span>
+                </td>
+			<td class="dropdownlist-right">
+                </td>
+		</tr>
+	</table>
+	
+ </div>
+ <div id="ctl00_MainContent_PaperList_OrderByFilter_drpList_drpListContent" class="dropdownlist-content">
+
+ </div>
+ </div>
+    <span class="right">
+    Sort by:
+    </span>
+</div>
+<script type="text/javascript" language="javascript">
+    //<![CDATA[
+    var redirectUrlctl00_MainContent_PaperList_OrderByFilter = 'http://academic.research.microsoft.com/Detail?entitytype=8&searchtype=2&id=138';
+    $(function () {
+        //author
+        var data = { 'inputId': '#ctl00_MainContent_PaperList_OrderByFilter_drpList_drpList',
+            "hiddenId": '#ctl00_MainContent_PaperList_OrderByFilter_drpList_drp_hidden_focus',
+            'textId': '#ctl00_MainContent_PaperList_OrderByFilter_drpList_spSelectedText',
+            'tsId': '#ctl00_MainContent_PaperList_OrderByFilter_drpList_drpListContent',
+            'postAction': function () {   
+                var value = $(DropDown.tsId + ' .selected').eq(0).find(':hidden').text();
+                var url = window.location.href;             
+                
+                var regExp = /&orderBy=\d+/ig;
+                url = url.replace(regExp, "");                
+                var origin_value = url.match(RegExp);
+                if(value > 0 && typeof origin_value != "undefined" && jQuery.trim(origin_value) == jQuery.trim(value)){
+                    return;
+                }
+
+                regExp = /&start=\d+/ig;
+                url = url.replace(regExp, "");
+                regExp = /\?start=\d+/ig;
+                url = url.replace(regExp, "?");
+                regExp = /&end=\d+/ig;
+                url = url.replace(regExp, "");
+                regExp = /\?end=\d+/ig;
+                url = url.replace(regExp, "?");
+
+                if(redirectUrlctl00_MainContent_PaperList_OrderByFilter != '')
+                {
+                    //do not remain in the same page
+                    url = redirectUrlctl00_MainContent_PaperList_OrderByFilter;
+                }
+
+                if (value > 0) {
+                    url = url + "&orderBy=" + value;
+                    window.location = url;
+                }
+                else {
+                    window.location = url;
+                }
+            }
+        };
+        DropDown.Init(data);
+        var options = new Array();
+
+        options[0] = { "Text": "Year", "Value": "-1", "Selected": "true" };options[1] = { "Text": "Citation", "Value": "1" };options[2] = { "Text": "Rank", "Value": "2" };
+
+        DropDown.SetOptions(options);
+        var startYear = GetStartYear();
+        if (startYear && startYear != "") {
+            DropDown.SetDefaultValue(startYear);
+        }
+    })
+
+    function GetStartYear() {
+        var lastYearValue = decodeURI(request("orderBy"));
+        return lastYearValue;
+    }
+    //]]>
+</script>
+    
+<div class="title">
+    <h2>
+        <a id="ctl00_MainContent_PaperList_ctl00_HeaderLink" href="../Detail?entitytype=8&amp;searchtype=2&amp;id=138">Publications <span class="item-count">(32455)</span> </a>
+        
+        </h2>
+    
+    
+</div> 
+    <div id="ctl00_MainContent_PaperList_Catalog" class="list-tab">
+		
+        
+	</div>
+
+</div>
+
+<ul>
+    
+<div class="paper-item" onmouseover="bindsnippettooltip(this,event);" st="0">
+    
+    <div class="title-download">
+        <div id="ctl00_MainContent_PaperList_ctl01_divTitle" class="title-fullwidth">
+            <h3>
+                <a id="ctl00_MainContent_PaperList_ctl01_Title" onmousedown="try{return si(7,&#39;ctl00_MainContent_PaperList&#39;,&#39;1&#39;);}catch(ex){;}" o="1" href="../Publication/61430497/electronic-structure-and-electron-charge-density-in-the-interatomic-bonds-of-bisbr-and-bisebr">Electronic structure and electron charge density in the interatomic bonds of BiSBr and BiSeBr crystals</a>
+                </h3>
+        </div>
+        
+    </div>
+    <div class="content">
+        <a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/20095666/algirdas-audzijonis">Algirdas Audzijonis (A. Audzijonis)</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/20095669/raimundas-sereika">Raimundas Sereika</a>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="conference">
+        
+        </div>
+    <div class="conference">
+        <span id="ctl00_MainContent_PaperList_ctl01_txtJournal">Journal: </span><a id="ctl00_MainContent_PaperList_ctl01_HLJournal" class="conference-name" href="../Journal/8435/ijmpb-international-journal-of-modern-physics-b">International Journal of Modern Physics B - IJMPB</a>
+        <span id="ctl00_MainContent_PaperList_ctl01_YearJournal" class="year">, vol. 27, no. 23, 2013</span></div>
+    <div class="conference">
+        </div>
+</div>
+
+<div class="paper-item" onmouseover="bindsnippettooltip(this,event);" st="0">
+    
+    <div class="title-download">
+        <div id="ctl00_MainContent_PaperList_ctl02_divTitle" class="title-fullwidth">
+            <h3>
+                <a id="ctl00_MainContent_PaperList_ctl02_Title" onmousedown="try{return si(7,&#39;ctl00_MainContent_PaperList&#39;,&#39;2&#39;);}catch(ex){;}" o="1" href="../Publication/57880777/engineering-molecular-models-efficient-parameterization-procedure-and-cyclohexanol-as-case-study">Engineering Molecular Models&#58; Efficient Parameterization Procedure and Cyclohexanol as Case Study</a>
+                <span id="ctl00_MainContent_PaperList_ctl02_LbCitation" class="citation">(<a id="ctl00_MainContent_PaperList_ctl02_Citation" href="../Detail?entitytype=1&amp;searchtype=5&amp;id=57880777">Citations: 1</a>)</span></h3>
+        </div>
+        
+    </div>
+    <div class="content">
+        <a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/22731324/thorsten-merker">Thorsten Merker</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/48085730/jadran-vrabec">Jadran Vrabec</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/42251644/hans-hasse">Hans Hasse</a>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="conference">
+        
+        </div>
+    <div class="conference">
+        <span id="ctl00_MainContent_PaperList_ctl02_txtJournal">Journal: </span><a id="ctl00_MainContent_PaperList_ctl02_HLJournal" class="conference-name" href="../Journal/7001/soft-mater-soft-materials">Soft Materials - SOFT MATER</a>
+        <span id="ctl00_MainContent_PaperList_ctl02_YearJournal" class="year">, vol. 10, no. 1-3, pp. 3-25, 2012</span></div>
+    <div class="conference">
+        </div>
+</div>
+
+<div class="paper-item" onmouseover="bindsnippettooltip(this,event);" st="0">
+    
+    <div class="title-download">
+        <div id="ctl00_MainContent_PaperList_ctl03_divTitle" class="title-fullwidth">
+            <h3>
+                <a id="ctl00_MainContent_PaperList_ctl03_Title" onmousedown="try{return si(7,&#39;ctl00_MainContent_PaperList&#39;,&#39;3&#39;);}catch(ex){;}" o="1" href="../Publication/56583622/atom-specific-spin-mapping-and-buried-topological-states-in-a-homologous-series-of-topological">Atom-specific spin mapping and buried topological states in a homologous series of topological insulators</a>
+                </h3>
+        </div>
+        
+    </div>
+    <div class="content">
+        <a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/47816514/gabriel-landolt">Gabriel Landolt</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/19407903/tatiana-v-menshchikova">Tatiana V. Menshchikova</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/51800652/bartosz-slomski">Bartosz Slomski</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/46300843/yury-m-koroteev">Yury M. Koroteev</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/43971981/ziya-s-aliev">Ziya S. Aliev</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/20080231/mahammad-b-babanly">Mahammad B. Babanly</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/13137944/jurgen-henk">Jürgen Henk</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/12994037/arthur-ernst">Arthur Ernst</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/13312083/luc-patthey">Luc Patthey</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/19783478/andreas-eich">Andreas Eich</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/47932098/alexander-ako-khajetoorians">Alexander Ako Khajetoorians</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/49830104/julian-hagemeister">Julian Hagemeister</a><span class='span-to-expand'></span><span class='expand-authors'></span><span class='fold-author' onclick="FoldAuthors(this)"></span><span class='view-all-author' onclick="ViewAllAuthors(this)"></span><span class='view-all-link'>http://academic.research.microsoft.com/io.ashx?type=5&id=56583622&selfId1=138&selfId2=0&maxNumber=12&query=</span> 
+    </div>
+    <div class="clear">
+    </div>
+    <div class="conference">
+        
+        </div>
+    <div class="conference">
+        <span id="ctl00_MainContent_PaperList_ctl03_txtJournal">Journal: </span><a id="ctl00_MainContent_PaperList_ctl03_HLJournal" class="conference-name" href="../Journal/15318/nature-communications">Nature Communications</a>
+        <span id="ctl00_MainContent_PaperList_ctl03_YearJournal" class="year">, vol. 3, 2012</span></div>
+    <div class="conference">
+        </div>
+</div>
+
+<div class="paper-item" onmouseover="bindsnippettooltip(this,event);" st="0">
+    
+    <div class="title-download">
+        <div id="ctl00_MainContent_PaperList_ctl04_divTitle" class="title-fullwidth">
+            <h3>
+                <a id="ctl00_MainContent_PaperList_ctl04_Title" onmousedown="try{return si(7,&#39;ctl00_MainContent_PaperList&#39;,&#39;4&#39;);}catch(ex){;}" o="1" href="../Publication/57700601/icosahedral-order-in-cu-zr-amorphous-alloys-studied-by-means-of-x-ray-absorption-fine-structure-and">Icosahedral order in Cu-Zr amorphous alloys studied by means of X-ray absorption fine structure and molecular dynamics simulations</a>
+                </h3>
+        </div>
+        
+    </div>
+    <div class="content">
+        <a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/47142515/j-antonowicz">J. Antonowicz</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/47811191/a-pietnoczka">A. Pietnoczka</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/42108063/t-drobiazg">T. Drobiazg</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/42142357/g-a-almyras">G. A. Almyras</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/42321850/d-g-papageorgiou">D. G. Papageorgiou</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/42457896/g-a-evangelakis">G. A. Evangelakis</a>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="conference">
+        
+        </div>
+    <div class="conference">
+        <span id="ctl00_MainContent_PaperList_ctl04_txtJournal">Journal: </span><a id="ctl00_MainContent_PaperList_ctl04_HLJournal" class="conference-name" href="../Journal/6957/philos-mag-philosophical-magazine">Philosophical Magazine - PHILOS MAG</a>
+        <span id="ctl00_MainContent_PaperList_ctl04_YearJournal" class="year">, vol. ahead-of-p, no. ahead-of-p, pp. 1-11, 2012</span></div>
+    <div class="conference">
+        </div>
+</div>
+
+<div class="paper-item" onmouseover="bindsnippettooltip(this,event);" st="0">
+    
+    <div class="title-download">
+        <div id="ctl00_MainContent_PaperList_ctl05_divTitle" class="title-fullwidth">
+            <h3>
+                <a id="ctl00_MainContent_PaperList_ctl05_Title" onmousedown="try{return si(7,&#39;ctl00_MainContent_PaperList&#39;,&#39;5&#39;);}catch(ex){;}" o="1" href="../Publication/61425103/elastic-properties-of-face-centred-cubic-fe-mn-c-studied-by-nanoindentationand-ab-initio">Elastic properties of face-centred cubic Fe-Mn-C studied by nanoindentationand ab initio calculations</a>
+                </h3>
+        </div>
+        
+    </div>
+    <div class="content">
+        <a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/57177684/s-reeh">S. Reeh</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/34707952/terrance-w-gebhardt">T. Gebhardt</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/387236/marta-kasprzak">M. Kasprzak</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/57176158/t-japel">T. Japel</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/50540584/stefan-zaefferer">S. Zaefferer</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/13322310/dierk-raabe">D. Raabe</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/48961631/s-richter">S. Richter</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/20952588/alexander-schwedt">A. Schwedt</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/17898391/jorg-h-mayer">J. Mayer</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/57176331/b-wietbrock">B. Wietbrock</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/51442501/gene-hirt">G. Hirt</a><span class="span-break" >, </span><a class="author-name-tooltip" onmouseover='ViewAuthorTooltip(this,event)' onmouseout='HideAuthorTooltip(this);' href="http://academic.research.microsoft.com/Author/48417084/jonathan-schneider">J. M. Schneider</a>
+    </div>
+    <div class="clear">
+    </div>
+    <div class="conference">
+        
+        </div>
+    <div class="conference">
+        
+        </div>
+    <div class="conference">
+        <span id="ctl00_MainContent_PaperList_ctl05_lblYear">Published in 2012.</span></div>
+</div>
+
+</ul>
+
+<div class="clear"></div>
+
+
+    </div>
+
+                    
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="footer-searchbox">
+            <div id="ctl00_FooterSearchForm_searchBar" class="search-bar">
+	
+    <div id="ctl00_FooterSearchForm_divSearchBox" class="search-box" style="position:relative">
+        <input name="ctl00$FooterSearchForm$txtQuery" type="text" id="ctl00_FooterSearchForm_txtQuery" class="search-textbox" autocomplete="off" onkeypress="flagUserKeyDown =true ;if(event.keyCode==13){ document.getElementById(&#39;ctl00_FooterSearchForm_SearchButton&#39;).click(); return false;}" oninput="var obj=document.getElementById(&#39;ctl00_FooterSearchForm_txtQuery&#39;); if(obj.value.length>256){obj.value=obj.value.substring(0,256);};" onpropertychange="var obj=document.getElementById(&#39;ctl00_FooterSearchForm_txtQuery&#39;); if(obj.value.length>256){obj.value=obj.value.substring(0,256);};" style="width:450px;" />
+        
+    </div>
+    <input type="image" name="ctl00$FooterSearchForm$SearchButton" id="ctl00_FooterSearchForm_SearchButton" class="search-button" src="../Images/search_button_wide.png" alt="Search" onclick="try{return si(11,&#39;ctl00_FooterSearchForm&#39;,&#39;ctl00_FooterSearchForm_SearchButton&#39;);}catch(ex){;};" style="border-width:0px;" />
+    <div class="type-suggestion">
+        <div id="autoSuggest" class="typesuggest">
+        </div>
+    </div>
+    
+    <div class="searching-div">
+        <div class="loadImg" id="divLoadingIcon" >
+        </div>
+    </div>
+
+</div>
+<div id="advancedsearchDiv" class="modalpopup">
+    
+</div>
+<div class="modalpopup" style="display: block">
+    <div class="advanced-search" id="divDomainPanel" style="display: none">
+        <div class="domain-closelink">
+        </div>
+        <div class="small-btn">
+        </div>
+        <div class="domain-panel">
+            <div>
+                <input type="radio" value="1" name="AllDomainRadio" checked="checked" />
+                <span>Search in all fields of study</span>
+            </div>
+            <div>
+                <input type="radio" value="0" name="AllDomainRadio" />
+                <span>Limit my searches in the following fields of study</span>
+            </div>
+            <div style="padding-left: 10px;">
+                <div class='option'><input type='checkbox' value='16'/> <span>Agriculture Science</span></div><div class='option'><input type='checkbox' value='3'/> <span>Arts & Humanities</span></div><div class='option'><input type='checkbox' value='4'/> <span>Biology</span></div><div class='option'><input type='checkbox' value='5'/> <span>Chemistry</span></div><div class='option'><input type='checkbox' value='2'/> <span>Computer Science</span></div><div class='option'><input type='checkbox' value='7'/> <span>Economics & Business</span></div><div class='option'><input type='checkbox' value='8'/> <span>Engineering</span></div><div class='option'><input type='checkbox' value='9'/> <span>Environmental Sciences</span></div><div class='option'><input type='checkbox' value='10'/> <span>Geosciences</span></div><div class='option'><input type='checkbox' value='12'/> <span>Material Science</span></div><div class='option'><input type='checkbox' value='15'/> <span>Mathematics</span></div><div class='option'><input type='checkbox' value='6'/> <span>Medicine</span></div><div class='option'><input type='checkbox' value='19'/> <span>Physics</span></div><div class='option'><input type='checkbox' value='22'/> <span>Social Science</span></div><div class='option'><input type='checkbox' value='1'/> <span>Multidisciplinary</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+ <script type="text/javascript" language="javascript">
+    //<![CDATA[
+     $(function () {
+         $("#ctl00_FooterSearchForm_SearchButton").click(
+                function () {
+                    var query = $('#ctl00_FooterSearchForm_txtQuery')[0].value;
+                    $.ajax({
+                        url: "http://academic.research.microsoft.com/Images/logClick.gif?t=13&query=" + query + "&tm=" + new Date(),
+                        success: function () {
+                        }
+                    });
+                    $("#divLoadingIcon").show();
+                    var xPosition = 0;
+                    setInterval(function () {
+                        if (xPosition <= 0)
+                            xPosition = 160;
+                        xPosition = xPosition - 20;
+                        $('#divLoadingIcon').css('background-position', xPosition + 'px 0px');
+                    }, 125);
+
+                }
+            );
+
+            $("#ctl00_FooterSearchForm_advancedsearch").click(function () {
+                siUrl(this.location, 'ctl00_FooterSearchForm_advancedsearch');
+            });
+            $("#ctl00_FooterSearchForm_divSearchBox").click(function () {
+                siUrl(this.location, 'ctl00_FooterSearchForm_divSearchBox');
+            });
+     })
+    //]]>
+    </script>
+<input name="ctl00$FooterSearchForm$hdnSelectedDomain" type="hidden" id="ctl00_FooterSearchForm_hdnSelectedDomain" />
+
+            </div>
+        </div>
+        <div class="footer">
+            <div id="ctl00_Footer_divFooterWrapper" class="footer-wrapper" style="height:63px;">
+    <div class="footer-left">
+        <div class="footer-left-arrow">
+        </div>
+        
+        <a id="ctl00_Footer_hlHelp" href="../About/Help.htm" target="_blank">Help</a>
+        <span class="space">|</span>
+
+        <a id="ctl00_Footer_linkFeedback" href="http://social.microsoft.com/Forums/en-US/mas/threads" target="_blank">Feedback</a>
+        <span class="space">|</span>
+
+        <a id="ctl00_Footer_linkFollowUs" href="http://twitter.com/MSFTAcademic" target="_blank">Follow Us</a>
+        <span class="space">|</span>
+        
+        <a id="ctl00_Footer_linkTermofUse" href="http://explore.live.com/microsoft-service-agreement?ref=none" target="_blank">Terms of Use</a>
+        <span class="space">|</span>
+
+        <a id="ctl00_Footer_linkSpecTerms" href="../About/TermsofUseSpecEN.html" target="_blank">Specific Terms</a>
+        <span class="space">|</span>
+        
+        <a id="ctl00_Footer_linkTrademarks" href="http://go.microsoft.com/?linkid=4412893" target="_blank">Trademarks</a>
+        <span class="space">|</span>
+
+        <a id="ctl00_Footer_linkPrivacy" href="http://go.microsoft.com/?linkid=4412894" target="_blank">Privacy & Cookies</a>
+        <span class="space">|</span>
+
+        <a id="ctl00_Footer_HyperLink1" href="http://go.microsoft.com/fwlink/?LinkID=225021" target="_blank">Survey</a>
+    </div>
+    <div class="propupwidth">
+        <div class="footer-right">
+            <div class="footer-right-arrow">
+            </div>
+            <span id="ctl00_Footer_labCopyright" class="footer-copyright">©2013 Microsoft Corporation. All rights reserved.</span>
+            <a href="http://research.microsoft.com" target="_blank" class="footer-logo"></a>
+        </div>
+    </div>
+    
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("[id^='logclick']").each(
+            function (index) {
+                var thisID = $(this).attr("id");
+                $(this).click(function () { siUrl(document.location, thisID.split("_")[1]); });
+            }
+            );
+    });
+</script>
+</div>
+
+        </div>
+        <div class="footer-fixed">
+            
+<div class="footer-float">
+    <div class="right">
+    </div>
+    <div class="left">
+        <span>Share this on</span> <a id="ctl00_FooterFixed_hypFacebook" class="facebook" target="_blank" onmousedown="try{return si(10,&#39;facebook&#39;,&#39;footer&#39;);}catch(ex){;}">  </a> <a id="ctl00_FooterFixed_hypTwitter" class="twitter" target="_blank" onmousedown="try{return si(10,&#39;twitter&#39;,&#39;footer&#39;);}catch(ex){;}">  </a>   
+    </div>
+    <div class="clear">
+    </div>
+</div>
+<script type="text/javascript" language="javascript">
+    var facebookUrl = "http://www.facebook.com/sharer.php?u={0}&t={1}";
+    function ChangeShareLinkTitle(title) {
+        var location = window.location;
+        if (title.indexOf("u=") > 0) {
+            title = title.substring(0, title.indexOf("u="));
+        }
+
+        if (title.indexOf("u=") > 0) {
+            title = title.substring(0, title.indexOf("u="));
+        }
+
+        var facebookLink = $("#ctl00_FooterFixed_hypFacebook");
+        facebookLink.attr("href", "http://www.facebook.com/sharer.php?u=" + encodeURIComponent(location) + "&t=" + encodeURI(title));
+        var twitterLink = $("#ctl00_FooterFixed_hypTwitter");
+        twitterLink.attr("href", "http://twitter.com/share?url=" + encodeURIComponent(location) + "&text=" + encodeURI(title));
+
+    }
+    $(function () {
+        ChangeShareLinkTitle(document.title);
+    })
+   
+</script>
+        </div>
+        
+    </form>
+</body>
+</html>
