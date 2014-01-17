@@ -9,6 +9,8 @@ skill_list_finance_stackoverflow = ['options', 'volatility', 'time-series', 'equ
 
 skill_list_electrical_stackoverflow = ['arduino', 'microcontroller', 'power-supply', 'power', 'transistors', 'batteries', 'capacitor', 'pcb', 'usb', 'digital-logic','op-amp', 'circuit', 'current', 'fpga', 'resistors', 'mosfet', 'audio', 'voltage-regulator', 'motor', 'switches', 'amplifier', 'rf', 'serial', 'analog', 'integrated-circuit', 'wireless', 'ac', 'dc', 'transformer', 'verilog', 'diodes', 'c', 'vhdl', 'dc-motor', 'lcd', 'ethernet', 'bluetooth', 'raspberry-pi', 'radio', 'antenna', 'inductor', 'solar-cell', 'oscilloscope', 'electromagnetism', 'wifi', 'infrared', 'xilinx', 'microprocessor', 'pcb-fabrication', 'low-power']
 
+skill_list_job_description = ['css', 'linux', 'xml', 'json', 'j2ee', 'j2me', 'unix', 'mvc', 'spring', 'vmware', 'architecture', 'hibernate','ms-office', 'ms-excel', 'cisco', 'tcp', 'soap', 'rest', 'wcf', 'wpf','ssis', 'wan', 'lan', 'ldap', 'dns', 'dhcp', 'smtp', 'vpn', 'ssl', 'nas', 'olap', 'sharepoint', 'soa', 'erp', 'ssrs', 'hadoop', 'jira', 'git', 'svn', 'nosql', 'selenium', 'jenkins', 'flash', 'linq', 'sccm', 'cms', 'eclipse', 'netbeans', 'javabeans', 'xcode', 'cocoa', 'maven', 'jsf', 'hbase', 'gwt', 'drupal', 'cloud',  'photoshop', 'adobe-illustrator', 'ospf', 'extjs','cad','visualforce', 'ant', 'waterfall', 'agile', 'bootstrap', 'foundation', 'magento', 'dreamweaver', 'jee', 'ms-project', 'wordpress', 'unit-testing', 'firmware', 'acceptance-testing', 'wsdl', 'loadrunner', 'openstack', 'xsl', 'mongodb', 'routing', 'visio', 'qtp', 'xslt', 'cognos', 'oop', 'firewall', 'sybase', 'solaris', 'tfs', 'junit', 'windows-server', 'salesforce', 'sap', 'sas', 'crm', 'iis', 'tomcat', 'citrix', 'lamp', 'jboss', 'san', 'nas', 'itil',  'node.js', 'backbone.js', 'cgi', 'jms', 'wireless', 'etl', 'sdlc', 'jdbc', 'data-warehouse', 'design-patterns', 'chef', 'puppet', 'iso', 'informatica', 'testing', 'qa', 'team-foundation-server', 'embedded', 'business-intelligence']
+
 #import itertools
 #for comb in itertools.permutations(skill_list,2):
 #	if comb[0]==comb[1]:
@@ -22,6 +24,6 @@ skill_list_electrical_stackoverflow = ['arduino', 'microcontroller', 'power-supp
 #	if comb[0].replace('theory','').replace('-','')==comb[1].replace('theory','').replace('-','')+"s":
 #		print "Extra s " + comb[0] + " " + comb[1]
 
-skill_list = skill_list + skill_list_finance_stackoverflow + skill_list_dmoz_lang
+skill_list = skill_list + skill_list_finance_stackoverflow + skill_list_dmoz_lang + skill_list_job_description
 skill_list = list(set(map(lambda x: x.lower().replace(' ','-'), skill_list)))
 
