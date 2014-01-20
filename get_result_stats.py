@@ -32,20 +32,29 @@ def renameSkillList(skill_list):
 
         list_of_skills=[]
         for skill in skill_list:
-                list_of_skills.append(skill)
+                list_of_skills.append(camelCase(skill))
 
-        replacements = getData('manualreplacements.txt')
+        merge_replacements = {'Algorithms': 'Algorithm Theory', 'Statistics': 'Algorithm Theory'}
+	merge_replacements = getData('manualreplacements.txt')
 
-        for src, target in replacements.iteritems():
+        removekeys = merge_replacements.keys()
+        addkeys = []
+        for k in merge_replacements.values():
+                addkeys.append(k)
+
+        removekeys = list(set(removekeys))
+        addkeys = list(set(addkeys))
+
+        print removekeys
+        print addkeys
+        for k in removekeys:
 		try:
-			list_of_skills.remove(src.replace('"',''))
-		        list_of_skills.append(target.replace('"',''))
-		except:
-			print src
-			print target
-			raise
-
-        list_of_skills = map(lambda x: camelCase(x.strip()), list_of_skills)
+	                list_of_skills.remove(k)
+		except Exception as e:
+			print str(e)
+			pass
+        for k in addkeys:
+                list_of_skills.append(k)
 
         return list(set(list_of_skills))
 
@@ -161,9 +170,9 @@ print set(list2)-set(list1)
 print set(list1)-set(list2)
 list3 = list(set(list1+list2))
 list3.sort()
-#print list3
-#for s in list3:
-#	print s
+print list3
+for s in list3:
+	print s
 outfile = open('allskills.txt', 'w')
 for s in list3:
 	outfile.write(s)

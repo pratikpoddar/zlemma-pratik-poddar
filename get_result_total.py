@@ -42,41 +42,55 @@ def getDiff(pathnew, pathold, pathdiff):
 
 	return
 
-#renameSkillList(skill_list)
-def renameSkillList(skill_list):
-
-	list_of_skills=[]
-	for skill in skill_list:
-		list_of_skills.append(skill)
-
-	replacements = getData('manualreplacements.txt')
-
-	for src, target in replacements.iteritems():
-		list_of_skills.remove(src.replace('"',''))
-		list_of_skills.append(target.replace('"',''))
-
-	list_of_skills = map(lambda x: camelCase(x.strip()), list_of_skills)
-	
-	return list(set(list_of_skills))
-	
 def camelCase(word):
     return ' '.join(x[0].upper()+x[1:] for x in word.split('-'))
 
-def getRenamed(pathold, pathrenamed):
+def mergeSkills(pathold, pathnew):
+
+        merge_replacements = {'Algorithms': 'Algorithm Theory', 'Statistics': 'Algorithm Theory'}
+	merge_replacements = getData('manualreplacements.txt')
+
+	outputDict = getData(pathold)
+	newOutputDict = {}
+
+        for key1 in outputDict.keys():
+                for key2 in outputDict[key1].keys():
+			try:
+				merge_key1 = merge_replacements[key1]
+			except:
+				merge_key1 = key1
+
+			try:
+				merge_key2 = merge_replacements[key2]
+			except:
+				merge_key2 = key2
+
+			try:
+	                	newOutputDict[merge_key1][merge_key2] = outputDict[key1][key2]
+                        except:
+                                newOutputDict[merge_key1] = {}
+                                newOutputDict[merge_key1][merge_key2] = outputDict[key1][key2]
+
+        with open(pathnew, 'w') as infile:
+                infile.write(json.dumps(newOutputDict))
+
+        return
+
+def getCamelCased(pathold, pathrenamed):
 	
-	infile = open(pathold)
-	outfile = open(pathrenamed, 'w')
+	#infile = open(pathold)
+	#outfile = open(pathrenamed, 'w')
 
-	replacements = getData('manualreplacements.txt')
+	#replacements = getData('manualreplacements.txt')
 
-	for line in infile:
-	    for src, target in replacements.iteritems():
-	        line = line.replace(src, target)
-	    outfile.write(line)
-	infile.close()
-	outfile.close()
+	#for line in infile:
+	#    for src, target in replacements.iteritems():
+	#        line = line.replace(src, target)
+	#    outfile.write(line)
+	#infile.close()
+	#outfile.close()
 
-	outputDict = getData(pathrenamed)
+	outputDict = getData(pathold)
 	newOutputDict = {}
 
 	for key1 in outputDict.keys():
@@ -90,6 +104,11 @@ def getRenamed(pathold, pathrenamed):
         with open(pathrenamed, 'w') as infile:
                 infile.write(json.dumps(newOutputDict))
 
+	return
+
+def getRenamed(pathold, pathnew):
+	getCamelCased(pathold, pathnew)
+	mergeSkills(pathnew, pathnew)
 	return
 
 def modifyManualInput(dictionary):
