@@ -186,7 +186,7 @@ print skills2
 if sys.argv[1] == "downloaddata":
 	## Save all the files
 	pool = Pool(len(skills2))
-	jobs = [pool.spawn(getParentInfo , skill) for skill in skills2]
+	jobs = [pool.spawn(getSOhtml1 , skill) for skill in skills2]
 	pool.join()
 
 if sys.argv[1] == "saveresults":
