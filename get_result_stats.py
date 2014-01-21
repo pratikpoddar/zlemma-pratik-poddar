@@ -163,6 +163,22 @@ def identify_big_numbers(filename, threshold):
 				output.append((key1, key2))
 	return output
 
+def identify_big_suspicious_numbers(filename, threshold):
+
+        d = getData(filename)
+        keys = d.keys()
+
+        output = []
+        print "Suspicious Big Numbers on " + filename
+        for key1 in keys:
+                for key2 in keys:
+                        if (d[key1][key2] >= threshold) and (not (key1 == key2)):
+				if d[key2][key1] < 0.01:
+	                                print key1 + ", " + key2 + " " + str(d[key1][key2]) + " " + str(d[key2][key1])
+	                                output.append((key1, key2))
+        return output
+
+
 def identify_possible_clusters(filename, threshold):
 
         d = getData(filename)
@@ -286,6 +302,12 @@ print "----"
 print "Big Numbers"
 identify_big_numbers('renamedcomplete.txt', 0.8)
 print "----"
+
+print "----"
+print "Big Suspicious Numbers"
+identify_big_suspicious_numbers('renamedcomplete.txt', 0.8)
+print "----"
+
 
 print "----"
 print "Clusters 1"
