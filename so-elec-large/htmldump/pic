@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged pic" href="/feeds/tag/pic" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186680,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327919,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fpic" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fpic" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[pic]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fpic">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fpic">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[pic]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/pic/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/pic?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/pic?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/pic?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/pic?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/pic?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/pic?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/pic?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/pic?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/pic?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/pic?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,506 +257,7 @@ PIC is a brand of 8, 16, and 32 bit RISC microcontrollers manufactured by Microc
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92643">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="40 views">
-    40 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92643/strange-i2c-behaviour-on-pic-and-some-doubts" class="question-hyperlink">Strange I2C Behaviour on PIC and some doubts</a></h3>
-        <div class="excerpt">
-            I'm posting the Code here: 
-
-...
-        </div>          
-        <div class="tags t-pic t-i2c">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/i2c" class="post-tag" title="show questions tagged &#39;i2c&#39;" rel="tag">i2c</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-12-04 11:47:54Z" class="relativetime">8 hours ago</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31060/rookie91"><div><img src="https://www.gravatar.com/avatar/6503ab533ce439add3eeefdca9162d83?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31060/rookie91">Rookie91</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">66</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-92494">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="176 views">
-    176 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92494/counter-pulse-every-8-clocks" class="question-hyperlink">Counter: pulse every 8 clocks</a></h3>
-        <div class="excerpt">
-            I have a square signal (fixed but can be between 12MHz and up to 48MHz) and I would like to create every 8 clocks a pulse as brief as possible, no more than 1/4 of the period.
-
-
-
-First, a couple of ...
-        </div>          
-        <div class="tags t-pic t-clock t-atmel t-attiny t-counter">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/clock" class="post-tag" title="show questions tagged &#39;clock&#39;" rel="tag">clock</a> <a href="/questions/tagged/atmel" class="post-tag" title="show questions tagged &#39;atmel&#39;" rel="tag">atmel</a> <a href="/questions/tagged/attiny" class="post-tag" title="show questions tagged &#39;attiny&#39;" rel="tag">attiny</a> <a href="/questions/tagged/counter" class="post-tag" title="show questions tagged &#39;counter&#39;" rel="tag">counter</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-12-03 03:19:54Z" class="relativetime">yesterday</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/16399/gregoiregentil"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/kvnHz.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/16399/gregoiregentil">gregoiregentil</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">99</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-92423">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="46 views">
-    46 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92423/deepsleep-mode-data-saving-in-pic18" class="question-hyperlink">Deepsleep mode Data saving in PIC18</a></h3>
-        <div class="excerpt">
-            I am using a PIC 18F46J50 microcontroller and the C18 compiler.
-
-I want to retain some data when the controller exits deep sleep mode.  I found two registers <span class='tex2jax_ignore'>DSGPR0</span> ...
-        </div>          
-        <div class="tags t-pic t-sleep t-c18">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/sleep" class="post-tag" title="show questions tagged &#39;sleep&#39;" rel="tag">sleep</a> <a href="/questions/tagged/c18" class="post-tag" title="show questions tagged &#39;c18&#39;" rel="tag">c18</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-12-02 11:54:13Z" class="relativetime">2 days ago</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31060/rookie91"><div><img src="https://www.gravatar.com/avatar/6503ab533ce439add3eeefdca9162d83?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31060/rookie91">Rookie91</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">66</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-92405">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="25 views">
-    25 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92405/i2c-pic32-slave-with-two-address" class="question-hyperlink">I2C pic32 slave with two address [duplicate]</a></h3>
-        <div class="excerpt">
-            I'm developping for a pic32 plateform. My application consists to realise I²C communication between µC 8051 and PIC32. The 8051 is the master and the PIC32 is the slave. I have established a I²C ...
-        </div>          
-        <div class="tags t-microcontroller t-pic t-i2c t-microchip">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/i2c" class="post-tag" title="show questions tagged &#39;i2c&#39;" rel="tag">i2c</a> <a href="/questions/tagged/microchip" class="post-tag" title="show questions tagged &#39;microchip&#39;" rel="tag">microchip</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-12-02 08:57:55Z" class="relativetime">2 days ago</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32710/farouk225"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/cMZfZ.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32710/farouk225">farouk225</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">5</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-92393">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="24 views">
-    24 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92393/missing-spi1-in-output-selection-table" class="question-hyperlink">Missing SPI1 in Output Selection Table?</a></h3>
-        <div class="excerpt">
-            In Table 11-3, p180 of http://ww1.microchip.com/downloads/en/DeviceDoc/70000657H.pdf, there is no way to map any spi1 pins?!
-
-I've gotten spi2 pins to work, but I need two buses and the part was ...
-        </div>          
-        <div class="tags t-pic t-spi">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/spi" class="post-tag" title="show questions tagged &#39;spi&#39;" rel="tag">spi</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-12-02 02:41:03Z" class="relativetime">2 days ago</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/13393/tarabyte"><div><img src="https://www.gravatar.com/avatar/6741fb9dd6e6beb585c5022dcc84740a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/13393/tarabyte">tarabyte</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">342</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-92317">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="90 views">
-    90 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92317/what-does-this-lm393n-circuit-do" class="question-hyperlink">What does this LM393N circuit do?</a></h3>
-        <div class="excerpt">
-            I'm attempting to connect to Loconet(spec) to a PIC32, and I've found a circuit to connect to an Arduino, but I'm not sure what exactly it does:
-
-
-(source page)
-
-Specifically, I don't know what the ...
-        </div>          
-        <div class="tags t-pic t-voltage">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-12-01 02:21:57Z" class="relativetime">Dec 1 at 2:21</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33477/rm5248"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/45b9a462c675c3e1ea4fb2da84999770?s=128&d=identicon&r=PG" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33477/rm5248">rm5248</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">118</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-92211">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="101 views">
-    101 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92211/pic-32-two-ic-slave-address" class="question-hyperlink">PIC 32 two I&#178;C slave address</a></h3>
-        <div class="excerpt">
-            I'm developping for a pic32 plateform. My application consists to realise I²C communication between µC 8051 and PIC32. The 8051 is the master and the PIC32 is the slave. I have established a I²C ...
-        </div>          
-        <div class="tags t-microcontroller t-pic t-i2c t-slave">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/i2c" class="post-tag" title="show questions tagged &#39;i2c&#39;" rel="tag">i2c</a> <a href="/questions/tagged/slave" class="post-tag" title="show questions tagged &#39;slave&#39;" rel="tag">slave</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-29 16:05:52Z" class="relativetime">Nov 29 at 16:05</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32710/farouk225"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/cMZfZ.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32710/farouk225">farouk225</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">5</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-92097">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="47 views">
-    47 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92097/showing-real-values-on-uart-pc-softwares" class="question-hyperlink">Showing real values on uart-pc softwares</a></h3>
-        <div class="excerpt">
-            If we use a controller and wanted to send data via uart to pc. I trust serial data will be displayed on the software and is there any way you can display real values on the software apart from ...
-        </div>          
-        <div class="tags t-pic t-serial t-software">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/serial" class="post-tag" title="show questions tagged &#39;serial&#39;" rel="tag">serial</a> <a href="/questions/tagged/software" class="post-tag" title="show questions tagged &#39;software&#39;" rel="tag">software</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-28 05:21:01Z" class="relativetime">Nov 28 at 5:21</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31060/rookie91"><div><img src="https://www.gravatar.com/avatar/6503ab533ce439add3eeefdca9162d83?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31060/rookie91">Rookie91</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">66</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-92069">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="53 views">
-    53 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92069/how-to-debug-a-circuit-that-uses-charlieplexing-and-pwm-with-leds-under-isis" class="question-hyperlink">How to debug a circuit that uses Charlieplexing and PWM with LEDs under ISIS?</a></h3>
-        <div class="excerpt">
-            Using mikroC and Proteus ISIS, I have built a circuit that uses a PIC12F629 (link to datasheet PDF). It controls several LEDs using Charlieplexing technique (and additionally PWM them to change their ...
-        </div>          
-        <div class="tags t-led t-pic t-pwm t-simulation t-charlieplexing">
-            <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/pwm" class="post-tag" title="show questions tagged &#39;pwm&#39;" rel="tag">pwm</a> <a href="/questions/tagged/simulation" class="post-tag" title="show questions tagged &#39;simulation&#39;" rel="tag">simulation</a> <a href="/questions/tagged/charlieplexing" class="post-tag" title="show questions tagged &#39;charlieplexing&#39;" rel="tag">charlieplexing</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-27 22:43:01Z" class="relativetime">Nov 27 at 22:43</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/9865/tigrou"><div><img src="https://www.gravatar.com/avatar/93fa537cb535181c440f752815a244d8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/9865/tigrou">tigrou</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">203</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91984">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>4</strong>answers
-            </div>
-        </div>
-        <div class="views " title="104 views">
-    104 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91984/how-to-check-pic-system-clock-speed-mcu" class="question-hyperlink">How to check PIC system clock speed MCU?</a></h3>
-        <div class="excerpt">
-            The entire project depends on this, so I just want to make sure I have it right.  I'm using a 20MHz external resonator and putting that through the PLL in hopes of getting an F_SYS = 120MHz.  Without ...
-        </div>          
-        <div class="tags t-pic t-clock-speed t-mplabx">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/clock-speed" class="post-tag" title="show questions tagged &#39;clock-speed&#39;" rel="tag">clock-speed</a> <a href="/questions/tagged/mplabx" class="post-tag" title="show questions tagged &#39;mplabx&#39;" rel="tag">mplabx</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-27 02:53:48Z" class="relativetime">Nov 27 at 2:53</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/13393/tarabyte"><div><img src="https://www.gravatar.com/avatar/6741fb9dd6e6beb585c5022dcc84740a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/13393/tarabyte">tarabyte</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">342</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91926">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="30 views">
-    30 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91926/not-seeing-set-address-packet-using-usbtrace" class="question-hyperlink">Not seeing set_address packet using USBTrace</a></h3>
-        <div class="excerpt">
-            I'm currently exploring the wonderous world of the USB Stack. I'm using a PIC18F2550 and the USB IO example available at www.moty22.co.uk. The code works as expected, but when using USBTrace (or any ...
-        </div>          
-        <div class="tags t-pic t-usb t-analysis t-protocol t-setup">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/analysis" class="post-tag" title="show questions tagged &#39;analysis&#39;" rel="tag">analysis</a> <a href="/questions/tagged/protocol" class="post-tag" title="show questions tagged &#39;protocol&#39;" rel="tag">protocol</a> <a href="/questions/tagged/setup" class="post-tag" title="show questions tagged &#39;setup&#39;" rel="tag">setup</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-26 15:12:47Z" class="relativetime">Nov 26 at 15:12</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32626/user32626"><div><img src="https://www.gravatar.com/avatar/1a749cff6c117ac68fcbe0701ec9e712?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32626/user32626">user32626</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91890">
+<div class="question-summary" id="question-summary-97148">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -667,23 +267,26 @@ Specifically, I don't know what the ...
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
+            <div class="status answered">
+                <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="60 views">
-    60 views
+        <div class="views " title="23 views">
+    23 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91890/function-to-read-float-from-eeprom-devices-that-need-2-bytes-for-addressing" class="question-hyperlink">Function to read float from EEPROM devices that need 2 bytes for addressing</a></h3>
+        <h3><a href="/questions/97148/pic32-act-as-host-or-as-device" class="question-hyperlink">PIC32 act as Host or as Device [on hold]</a></h3>
         <div class="excerpt">
-            I am using PIC controllers and EEPROM chips that need two bytes for addressing with the C18 compiler. I have made use of a function that reads float data as posted here:
+            i have a board with a PIC32MX450F256L. Now i want to:
 
+
+Connect an USB Stick(as Device) to the PICs(as Host) USB Port(micro-B) 
+Connect a Laptop(as Host) to the PICs(as Device) USB Port(micro-B)
 ...
         </div>          
-        <div class="tags t-pic t-eeprom t-c18">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/eeprom" class="post-tag" title="show questions tagged &#39;eeprom&#39;" rel="tag">eeprom</a> <a href="/questions/tagged/c18" class="post-tag" title="show questions tagged &#39;c18&#39;" rel="tag">c18</a> 
+        <div class="tags t-pic t-usb t-usb-otg">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/usb-otg" class="post-tag" title="show questions tagged &#39;usb-otg&#39;" rel="tag">usb-otg</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -691,43 +294,43 @@ Specifically, I don't know what the ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-26 08:07:29Z" class="relativetime">Nov 26 at 8:07</span>
+        asked <span title="2014-01-21 12:34:10Z" class="relativetime">5 hours ago</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/31060/rookie91"><div><img src="https://www.gravatar.com/avatar/6503ab533ce439add3eeefdca9162d83?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+        <a href="/users/35883/mvollmer"><div><img src="https://www.gravatar.com/avatar/7762af9912b0fc298421cc88a098c564?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/31060/rookie91">Rookie91</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">66</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <a href="/users/35883/mvollmer">mvollmer</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-91828">
+</div><div class="question-summary" id="question-summary-97089">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
+                    <span class="vote-count-post "><strong>-1</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status answered">
-                <strong>2</strong>answers
+            <div class="status unanswered">
+                <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="50 views">
-    50 views
+        <div class="views " title="26 views">
+    26 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91828/pic-24f-vga-array-addressing-instructions" class="question-hyperlink">PIC 24F VGA array addressing instructions</a></h3>
+        <h3><a href="/questions/97089/a-noisy-interrupt-pin-on-pic-mcu" class="question-hyperlink">A noisy interrupt pin on pic mcu [on hold]</a></h3>
         <div class="excerpt">
-            In order to make a VGA driver for a PIC 24F microcontroller, I am generating an interrupt creating a VSYNC pulse, followed by a loop that puts data to the ports. HSYNC pulses are calculated after this ...
+            Using a <span class='tex2jax_ignore'>pic16f</span> micro controller , i have some software which is checking a pin with interrupt on change enabled. this pin has some sensor, and the sensor is very ...
         </div>          
-        <div class="tags t-pic t-c t-assembly">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/c" class="post-tag" title="show questions tagged &#39;c&#39;" rel="tag">c</a> <a href="/questions/tagged/assembly" class="post-tag" title="show questions tagged &#39;assembly&#39;" rel="tag">assembly</a> 
+        <div class="tags t-microcontroller t-pic t-interrupts">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/interrupts" class="post-tag" title="show questions tagged &#39;interrupts&#39;" rel="tag">interrupts</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -735,19 +338,19 @@ Specifically, I don't know what the ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-25 16:17:32Z" class="relativetime">Nov 25 at 16:17</span>
+        asked <span title="2014-01-20 20:59:02Z" class="relativetime">21 hours ago</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/33004/user33004"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/1128738122/picture?type=large" alt=""></div></a>
+        <a href="/users/29996/curnelious"><div><img src="https://www.gravatar.com/avatar/303693c2d0b28bc50509bf7b77eaedc8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/33004/user33004">user33004</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <a href="/users/29996/curnelious">Curnelious</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">147</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-91776">
+</div><div class="question-summary" id="question-summary-97032">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -761,17 +364,20 @@ Specifically, I don't know what the ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="75 views">
-    75 views
+        <div class="views " title="76 views">
+    76 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91776/i2c-delay-needed-and-c18" class="question-hyperlink">I2C delay needed and c18</a></h3>
+        <h3><a href="/questions/97032/pic18-microseconds-counter" class="question-hyperlink">PIC18 microseconds counter</a></h3>
         <div class="excerpt">
-            I am using I2C and I have earlier posted doubts about I2C here. I am using PIC controllers and using their compiler C18. I used their libraries to build a function to write data in EEPROM via I2C, and ...
+            I want to count microseconds between timer's ON/OFF. My FOSC is 48 MHz.
+I figured out timer1 would need to be initialized like (I'm programming in mplab):
+
+...
         </div>          
-        <div class="tags t-pic t-i2c t-eeprom t-c18">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/i2c" class="post-tag" title="show questions tagged &#39;i2c&#39;" rel="tag">i2c</a> <a href="/questions/tagged/eeprom" class="post-tag" title="show questions tagged &#39;eeprom&#39;" rel="tag">eeprom</a> <a href="/questions/tagged/c18" class="post-tag" title="show questions tagged &#39;c18&#39;" rel="tag">c18</a> 
+        <div class="tags t-pic t-timer t-counter">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/counter" class="post-tag" title="show questions tagged &#39;counter&#39;" rel="tag">counter</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -779,19 +385,118 @@ Specifically, I don't know what the ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-25 05:28:22Z" class="relativetime">Nov 25 at 5:28</span>
+        asked <span title="2014-01-20 10:43:45Z" class="relativetime">yesterday</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/31060/rookie91"><div><img src="https://www.gravatar.com/avatar/6503ab533ce439add3eeefdca9162d83?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+        <a href="/users/35819/c4rrt3r"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/2ff17c82ddda85ab112414beb46f27ce?s=128&d=identicon&r=PG" alt=""></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/31060/rookie91">Rookie91</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">66</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <a href="/users/35819/c4rrt3r">c4rrt3r</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-91656">
+</div><div class="question-summary" id="question-summary-96847">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="37 views">
+    37 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96847/pic-xc8-compiler-array-of-structs" class="question-hyperlink">PIC XC8 compiler array of structs?</a></h3>
+        <div class="excerpt">
+            I'm having trouble assigning variables to structs, particularly making an array of structs, with the XC8 compiler.
+
+Example code below:
+
+...
+        </div>          
+        <div class="tags t-pic t-mplab t-mplabx t-xc8">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/mplab" class="post-tag" title="show questions tagged &#39;mplab&#39;" rel="tag">mplab</a> <a href="/questions/tagged/mplabx" class="post-tag" title="show questions tagged &#39;mplabx&#39;" rel="tag">mplabx</a> <a href="/questions/tagged/xc8" class="post-tag" title="show questions tagged &#39;xc8&#39;" rel="tag">xc8</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-18 14:48:03Z" class="relativetime">Jan 18 at 14:48</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/4096/simonbarker"><div><img src="https://www.gravatar.com/avatar/059cb96fa05aed82ac2fa918149a31dc?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/4096/simonbarker">SimonBarker</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">795</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96628">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="69 views">
+    69 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96628/auto-ranging-voltmeter-circuit-with-pic-uc-adc" class="question-hyperlink">Auto-ranging voltmeter circuit with PIC uC ADC</a></h3>
+        <div class="excerpt">
+            I want to design an autoranging voltmeter with a PIC microcontroller and its ADC. 
+
+Requirements: 
+
+
+Measure voltages from +0.2v to +50v
+Protect against reverse inputs or slightly higher voltages
+...
+        </div>          
+        <div class="tags t-microcontroller t-pic t-op-amp t-adc">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/op-amp" class="post-tag" title="show questions tagged &#39;op-amp&#39;" rel="tag">op-amp</a> <a href="/questions/tagged/adc" class="post-tag" title="show questions tagged &#39;adc&#39;" rel="tag">adc</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-16 10:56:54Z" class="relativetime">Jan 16 at 10:56</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/4436/jodes"><div><img src="https://www.gravatar.com/avatar/6b5db5cb60482f1ba23f1fd769481eee?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/4436/jodes">Jodes</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">807</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96527">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -801,21 +506,21 @@ Specifically, I don't know what the ...
                     <div class="viewcount">vote</div>
                 </div>
             </div>
-            <div class="status answered-accepted">
+            <div class="status answered">
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="36 views">
-    36 views
+        <div class="views " title="61 views">
+    61 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91656/dspic33-spi-tx-as-master-woes" class="question-hyperlink">dsPIC33 SPI Tx as Master Woes</a></h3>
+        <h3><a href="/questions/96527/how-to-effectively-tackle-long-page-write-in-eeprom" class="question-hyperlink">How to effectively tackle long page write in EEPROM</a></h3>
         <div class="excerpt">
-            I'm using a dsPIC33 and want to just send basic SPI data out.  No Rx, only Tx for now to control a digipot.  Hardware does include slave at other end, and I'm sniffing the output with a logic ...
+            I'm using C18 compiler and 24LC256 EEPROM. I would like to know how to handle Rollover case in terms of large EEPROM write.I'm writing a Routine that writes 120 Bytes every half an hour and i would ...
         </div>          
-        <div class="tags t-pic t-spi">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/spi" class="post-tag" title="show questions tagged &#39;spi&#39;" rel="tag">spi</a> 
+        <div class="tags t-pic t-eeprom t-c18">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/eeprom" class="post-tag" title="show questions tagged &#39;eeprom&#39;" rel="tag">eeprom</a> <a href="/questions/tagged/c18" class="post-tag" title="show questions tagged &#39;c18&#39;" rel="tag">c18</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -823,14 +528,426 @@ Specifically, I don't know what the ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-23 20:12:32Z" class="relativetime">Nov 23 at 20:12</span>
+        asked <span title="2014-01-15 09:15:03Z" class="relativetime">Jan 15 at 9:15</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/13393/tarabyte"><div><img src="https://www.gravatar.com/avatar/6741fb9dd6e6beb585c5022dcc84740a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/31060/rookie91"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/iKFqA.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/13393/tarabyte">tarabyte</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">342</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        <a href="/users/31060/rookie91">Rookie91</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">174</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96205">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="98 views">
+    98 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96205/how-to-convert-volts-in-db-spl" class="question-hyperlink">How to convert Volts in dB SPL</a></h3>
+        <div class="excerpt">
+            I am taking input from an electret mic amplified using LM358 amplifier from my PIC16F877A's ADC unit. I am getting the readings in Volts from the ADC which ranges from 2.5V to 5V.
+How can I convert ...
+        </div>          
+        <div class="tags t-pic t-sound">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/sound" class="post-tag" title="show questions tagged &#39;sound&#39;" rel="tag">sound</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-12 13:09:12Z" class="relativetime">Jan 12 at 13:09</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35456/user35456"><div><img src="https://www.gravatar.com/avatar/c0bcefa9e8f6e1e3dd655191bc160c54?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35456/user35456">user35456</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">33</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95901">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="62 views">
+    62 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95901/boot-loader-for-updating-firmware" class="question-hyperlink">Boot loader for updating Firmware</a></h3>
+        <div class="excerpt">
+            I am using pic controller with USB HID boot loader which will do a firmware update via USB and i have tested it successfully.If i add a blue tooth device(UART) and tries for a firmware update I trust ...
+        </div>          
+        <div class="tags t-pic t-usb t-bluetooth t-bootloader t-firmware">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/bluetooth" class="post-tag" title="show questions tagged &#39;bluetooth&#39;" rel="tag">bluetooth</a> <a href="/questions/tagged/bootloader" class="post-tag" title="show questions tagged &#39;bootloader&#39;" rel="tag">bootloader</a> <a href="/questions/tagged/firmware" class="post-tag" title="show questions tagged &#39;firmware&#39;" rel="tag">firmware</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-09 10:23:39Z" class="relativetime">Jan 9 at 10:23</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/31060/rookie91"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/iKFqA.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/31060/rookie91">Rookie91</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">174</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95591">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="103 views">
+    103 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95591/how-to-execute-firmware-from-external-flash-memory-interface-to-pic-microcontrol" class="question-hyperlink">How to execute firmware from external flash memory interface to PIC microcontroller?</a></h3>
+        <div class="excerpt">
+            I have both PIC18 and PIC24 microcontrollers with 256KiB of flash memory.
+
+My code size is 400kB and cannot be stored in the flash memory of those MCUs anymore. So I'm thinking about using external ...
+        </div>          
+        <div class="tags t-microcontroller t-pic">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-06 10:39:09Z" class="relativetime">Jan 6 at 10:39</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/23841/shail-korat"><div><img src="https://www.gravatar.com/avatar/649adca335821feacbd54299440806f2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/23841/shail-korat">shail korat</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95477">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="74 views">
+    74 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95477/is-a-pic-16f877a-reprogrammable" class="question-hyperlink">Is a pic 16f877a reprogrammable</a></h3>
+        <div class="excerpt">
+            I have just finished a basic lesson in electronics, an i have become interested in micro-controller programming.  I have decided i would learn on the PIC micro-controller because it looks simple and ...
+        </div>          
+        <div class="tags t-microcontroller t-pic t-programmer">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/programmer" class="post-tag" title="show questions tagged &#39;programmer&#39;" rel="tag">programmer</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-05 01:11:56Z" class="relativetime">Jan 5 at 1:11</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35113/popgalop"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/69bb808ce71a42649bde87fc746f5d9e?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35113/popgalop">popgalop</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95471">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="31 views">
+    31 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95471/problem-when-connect-propic2-and-usb-to-parallel-port-adapter" class="question-hyperlink">Problem when connect ProPIC2 and USB to Parallel port adapter</a></h3>
+        <div class="excerpt">
+            I have a ProPIC 2 programmer which needs parallel port (DB25) to work but I don't have in my notebook that port (SO: Windows 8), so I'm using a USB-Parallel adapter.
+
+When I connect the device it ...
+        </div>          
+        <div class="tags t-pic t-driver t-programmer t-adapter">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/driver" class="post-tag" title="show questions tagged &#39;driver&#39;" rel="tag">driver</a> <a href="/questions/tagged/programmer" class="post-tag" title="show questions tagged &#39;programmer&#39;" rel="tag">programmer</a> <a href="/questions/tagged/adapter" class="post-tag" title="show questions tagged &#39;adapter&#39;" rel="tag">adapter</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-05 00:02:01Z" class="relativetime">Jan 5 at 0:02</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35109/matias"><div><img src="https://www.gravatar.com/avatar/6ddd5fae57668e8afef50850a74c88f9?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35109/matias">Matias</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95385">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>7</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="168 views">
+    168 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95385/what-can-the-dspic-do-which-the-humble-pic-microcontroller-cannot-do" class="question-hyperlink">What can the dsPIC do which the humble PIC microcontroller cannot do?</a></h3>
+        <div class="excerpt">
+            I have not used a DSP chip as of yet. All I know is that their architecture is such that they can carry out calculations quite fast, usually within a clock cycle, they have multiply-accumulate ...
+        </div>          
+        <div class="tags t-pic t-dsp">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/dsp" class="post-tag" title="show questions tagged &#39;dsp&#39;" rel="tag">dsp</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-04 03:21:55Z" class="relativetime">Jan 4 at 3:21</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/20711/quantum231"><div><img src="https://www.gravatar.com/avatar/c1503cf70823c67b54c197559cc08c63?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/20711/quantum231">quantum231</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">975</span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95295">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="77 views">
+    77 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95295/pic18f67j60-programming-errors-with-pickit-2" class="question-hyperlink">PIC18F67J60 programming errors with PicKit 2</a></h3>
+        <div class="excerpt">
+            I'm trying to program a PIC18F67J60 with a PicKit 2 but the device won't program.
+
+The output from MPLABX PicKit 2 log is:
+
+...
+        </div>          
+        <div class="tags t-pic t-pick18f t-pickkit-2">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/pick18f" class="post-tag" title="show questions tagged &#39;pick18f&#39;" rel="tag">pick18f</a> <a href="/questions/tagged/pickkit-2" class="post-tag" title="show questions tagged &#39;pickkit-2&#39;" rel="tag">pickkit-2</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-03 11:44:21Z" class="relativetime">Jan 3 at 11:44</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/4096/simonbarker"><div><img src="https://www.gravatar.com/avatar/059cb96fa05aed82ac2fa918149a31dc?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/4096/simonbarker">SimonBarker</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">795</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95278">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="79 views">
+    79 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95278/allocating-more-memory-space-in-controller" class="question-hyperlink">Allocating more memory Space in controller</a></h3>
+        <div class="excerpt">
+            Chip: PIC18f26j50
+Compiler: C18
+
+My objective is to store values in a table in the RAM memory using structures and feed in the values which are quite large.
+
+...
+        </div>          
+        <div class="tags t-pic t-c t-ram t-c18">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/c" class="post-tag" title="show questions tagged &#39;c&#39;" rel="tag">c</a> <a href="/questions/tagged/ram" class="post-tag" title="show questions tagged &#39;ram&#39;" rel="tag">ram</a> <a href="/questions/tagged/c18" class="post-tag" title="show questions tagged &#39;c18&#39;" rel="tag">c18</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-03 06:47:01Z" class="relativetime">Jan 3 at 6:47</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/31060/rookie91"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/iKFqA.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/31060/rookie91">Rookie91</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">174</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95251">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="33 views">
+    33 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95251/pic-programmer-driver-issue" class="question-hyperlink">PIC Programmer driver issue</a></h3>
+        <div class="excerpt">
+            I'm programming a PIC16F77 with ProPic 2 which communicates via serial port. As I don't have this port in my PC, I used serial to USB adapter. I'm using ICProg in Windows 8.
+
+I've proggrammed it ...
+        </div>          
+        <div class="tags t-microcontroller t-pic t-software t-adapter t-error">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/software" class="post-tag" title="show questions tagged &#39;software&#39;" rel="tag">software</a> <a href="/questions/tagged/adapter" class="post-tag" title="show questions tagged &#39;adapter&#39;" rel="tag">adapter</a> <a href="/questions/tagged/error" class="post-tag" title="show questions tagged &#39;error&#39;" rel="tag">error</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-02 22:57:26Z" class="relativetime">Jan 2 at 22:57</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35017/borghi10"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/559072944/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35017/borghi10">borghi10</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
@@ -849,28 +966,28 @@ Specifically, I don't know what the ...
         <a href="/questions/tagged/pic?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/pic?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/pic?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
- <span class="page-numbers dots">…</span>         <a href="/questions/tagged/pic?page=55&amp;sort=newest&amp;pagesize=15" title="go to page 55"> <span class="page-numbers">55</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/pic?page=58&amp;sort=newest&amp;pagesize=15" title="go to page 58"> <span class="page-numbers">58</span> </a> 
         <a href="/questions/tagged/pic?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/pic?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/pic?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/pic?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/pic?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/pic?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/pic?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=pic&amp;sort=newest" title="the 30 newest pic questions"><span class="feed-icon"></span>newest pic questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=pic&sort=newest" title="the 30 newest pic questions"><span class="feed-icon"></span>newest pic questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">821</div>
+            <div class="summarycount al">860</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> 
@@ -881,38 +998,279 @@ Specifically, I don't know what the ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/pic+microcontroller" class="post-tag" title="show questions tagged &#39;pic microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">232</span></span><br>
-            <a href="/questions/tagged/pic+microchip" class="post-tag" title="show questions tagged &#39;pic microchip&#39;" rel="tag">microchip</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">99</span></span><br>
-            <a href="/questions/tagged/pic+c" class="post-tag" title="show questions tagged &#39;pic c&#39;" rel="tag">c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">91</span></span><br>
-            <a href="/questions/tagged/pic+spi" class="post-tag" title="show questions tagged &#39;pic spi&#39;" rel="tag">spi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">40</span></span><br>
-            <a href="/questions/tagged/pic+mplab" class="post-tag" title="show questions tagged &#39;pic mplab&#39;" rel="tag">mplab</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">38</span></span><br>
-            <a href="/questions/tagged/pic+uart" class="post-tag" title="show questions tagged &#39;pic uart&#39;" rel="tag">uart</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">38</span></span><br>
-            <a href="/questions/tagged/pic+interrupts" class="post-tag" title="show questions tagged &#39;pic interrupts&#39;" rel="tag">interrupts</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">37</span></span><br>
-            <a href="/questions/tagged/pic+usb" class="post-tag" title="show questions tagged &#39;pic usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">34</span></span><br>
-            <a href="/questions/tagged/pic+programming" class="post-tag" title="show questions tagged &#39;pic programming&#39;" rel="tag">programming</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">34</span></span><br>
-            <a href="/questions/tagged/pic+serial" class="post-tag" title="show questions tagged &#39;pic serial&#39;" rel="tag">serial</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">29</span></span><br>
-            <a href="/questions/tagged/pic+oscillator" class="post-tag" title="show questions tagged &#39;pic oscillator&#39;" rel="tag">oscillator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">29</span></span><br>
-            <a href="/questions/tagged/pic+i2c" class="post-tag" title="show questions tagged &#39;pic i2c&#39;" rel="tag">i2c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">29</span></span><br>
-            <a href="/questions/tagged/pic+timer" class="post-tag" title="show questions tagged &#39;pic timer&#39;" rel="tag">timer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">25</span></span><br>
-            <a href="/questions/tagged/pic+assembly" class="post-tag" title="show questions tagged &#39;pic assembly&#39;" rel="tag">assembly</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">25</span></span><br>
-            <a href="/questions/tagged/pic+pickit" class="post-tag" title="show questions tagged &#39;pic pickit&#39;" rel="tag">pickit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">24</span></span><br>
-            <a href="/questions/tagged/pic+embedded" class="post-tag" title="show questions tagged &#39;pic embedded&#39;" rel="tag">embedded</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">21</span></span><br>
-            <a href="/questions/tagged/pic+adc" class="post-tag" title="show questions tagged &#39;pic adc&#39;" rel="tag">adc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">20</span></span><br>
-            <a href="/questions/tagged/pic+pwm" class="post-tag" title="show questions tagged &#39;pic pwm&#39;" rel="tag">pwm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span><br>
-            <a href="/questions/tagged/pic+programmer" class="post-tag" title="show questions tagged &#39;pic programmer&#39;" rel="tag">programmer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">18</span></span><br>
-            <a href="/questions/tagged/pic+arduino" class="post-tag" title="show questions tagged &#39;pic arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">18</span></span><br>
-            <a href="/questions/tagged/pic+led" class="post-tag" title="show questions tagged &#39;pic led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">18</span></span><br>
-            <a href="/questions/tagged/pic+compiler" class="post-tag" title="show questions tagged &#39;pic compiler&#39;" rel="tag">compiler</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span><br>
-            <a href="/questions/tagged/pic+avr" class="post-tag" title="show questions tagged &#39;pic avr&#39;" rel="tag">avr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span><br>
-            <a href="/questions/tagged/pic+communication" class="post-tag" title="show questions tagged &#39;pic communication&#39;" rel="tag">communication</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/pic+hi-tech-compiler" class="post-tag" title="show questions tagged &#39;pic hi-tech-compiler&#39;" rel="tag">hi-tech-compiler</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span><br>
+        <div>
+            <a href="/questions/tagged/pic+microcontroller" class="post-tag" title="show questions tagged &#39;pic microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">241</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/pic+microchip" class="post-tag" title="show questions tagged &#39;pic microchip&#39;" rel="tag">microchip</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">103</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/pic+c" class="post-tag" title="show questions tagged &#39;pic c&#39;" rel="tag">c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">93</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/pic+spi" class="post-tag" title="show questions tagged &#39;pic spi&#39;" rel="tag">spi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">41</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/pic+mplab" class="post-tag" title="show questions tagged &#39;pic mplab&#39;" rel="tag">mplab</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">40</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/pic+interrupts" class="post-tag" title="show questions tagged &#39;pic interrupts&#39;" rel="tag">interrupts</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">39</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/pic+uart" class="post-tag" title="show questions tagged &#39;pic uart&#39;" rel="tag">uart</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">38</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/pic+usb" class="post-tag" title="show questions tagged &#39;pic usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">37</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/pic+programming" class="post-tag" title="show questions tagged &#39;pic programming&#39;" rel="tag">programming</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">35</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/pic+i2c" class="post-tag" title="show questions tagged &#39;pic i2c&#39;" rel="tag">i2c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">32</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+oscillator" class="post-tag" title="show questions tagged &#39;pic oscillator&#39;" rel="tag">oscillator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">30</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+serial" class="post-tag" title="show questions tagged &#39;pic serial&#39;" rel="tag">serial</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">29</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+assembly" class="post-tag" title="show questions tagged &#39;pic assembly&#39;" rel="tag">assembly</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">27</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+timer" class="post-tag" title="show questions tagged &#39;pic timer&#39;" rel="tag">timer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">26</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+pickit" class="post-tag" title="show questions tagged &#39;pic pickit&#39;" rel="tag">pickit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">25</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+embedded" class="post-tag" title="show questions tagged &#39;pic embedded&#39;" rel="tag">embedded</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">23</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+adc" class="post-tag" title="show questions tagged &#39;pic adc&#39;" rel="tag">adc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">23</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+pwm" class="post-tag" title="show questions tagged &#39;pic pwm&#39;" rel="tag">pwm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">20</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+programmer" class="post-tag" title="show questions tagged &#39;pic programmer&#39;" rel="tag">programmer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">20</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+arduino" class="post-tag" title="show questions tagged &#39;pic arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+led" class="post-tag" title="show questions tagged &#39;pic led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+avr" class="post-tag" title="show questions tagged &#39;pic avr&#39;" rel="tag">avr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+compiler" class="post-tag" title="show questions tagged &#39;pic compiler&#39;" rel="tag">compiler</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+hi-tech-compiler" class="post-tag" title="show questions tagged &#39;pic hi-tech-compiler&#39;" rel="tag">hi-tech-compiler</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/pic+communication" class="post-tag" title="show questions tagged &#39;pic communication&#39;" rel="tag">communication</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -932,7 +1290,7 @@ Specifically, I don't know what the ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/pic")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1025,7 +1383,7 @@ Specifically, I don't know what the ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1052,14 +1410,11 @@ Specifically, I don't know what the ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1068,33 +1423,34 @@ Specifically, I don't know what the ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|pic|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|pic|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

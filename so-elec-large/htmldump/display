@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged display" href="/feeds/tag/display" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186714,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328667,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fdisplay" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fdisplay" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[display]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fdisplay">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fdisplay">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[display]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/display/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/display?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/display?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/display?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/display?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/display?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/display?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/display?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/display?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/display?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/display?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,101 @@ Questions about LCDs, 7-segment LEDs, E-ink displays, etc.                      
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-91566">
+<div class="question-summary" id="question-summary-94497">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="70 views">
+    70 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94497/why-displayport-cables-must-isolate-the-power-pin" class="question-hyperlink">Why DisplayPort cables must isolate the power pin?</a></h3>
+        <div class="excerpt">
+            I've been investigating why my 2560×1440 DisplayPort monitor and my mini-DisplayPort MacBook Air don't play along, and, it turns out, this is likely due to a wire in the cable that connects the two ...
+        </div>          
+        <div class="tags t-power t-cables t-display t-isolation t-pins">
+            <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/cables" class="post-tag" title="show questions tagged &#39;cables&#39;" rel="tag">cables</a> <a href="/questions/tagged/display" class="post-tag" title="show questions tagged &#39;display&#39;" rel="tag">display</a> <a href="/questions/tagged/isolation" class="post-tag" title="show questions tagged &#39;isolation&#39;" rel="tag">isolation</a> <a href="/questions/tagged/pins" class="post-tag" title="show questions tagged &#39;pins&#39;" rel="tag">pins</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-24 04:51:15Z" class="relativetime">Dec 24 '13 at 4:51</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/18187/cnst"><div><img src="https://www.gravatar.com/avatar/1ab0e19086582d27abe75b0635f57f43?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/18187/cnst">cnst</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">137</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93921">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="92 views">
+    92 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93921/help-identifying-this-lcd-module" class="question-hyperlink">Help identifying this LCD module</a></h3>
+        <div class="excerpt">
+            I am looking to identify the LCD module pictured below and find a datasheet for it, or otherwise determine the pinout and figure out how to properly drive it.
+
+Front
+
+
+
+The lines of text on the ribbon ...
+        </div>          
+        <div class="tags t-lcd t-identification t-display">
+            <a href="/questions/tagged/lcd" class="post-tag" title="show questions tagged &#39;lcd&#39;" rel="tag">lcd</a> <a href="/questions/tagged/identification" class="post-tag" title="show questions tagged &#39;identification&#39;" rel="tag">identification</a> <a href="/questions/tagged/display" class="post-tag" title="show questions tagged &#39;display&#39;" rel="tag">display</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-17 04:23:48Z" class="relativetime">Dec 17 '13 at 4:23</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/16867/luc"><div><img src="https://www.gravatar.com/avatar/cf584b7d7bdc248de796e7e60db8c0f1?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/16867/luc">Luc</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">326</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-91566">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +365,8 @@ Questions about LCDs, 7-segment LEDs, E-ink displays, etc.                      
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="42 views">
-    42 views
+        <div class="views " title="54 views">
+    54 views
 </div>
     </div>
     <div class="summary">
@@ -190,7 +383,7 @@ Questions about LCDs, 7-segment LEDs, E-ink displays, etc.                      
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-22 22:23:46Z" class="relativetime">Nov 22 at 22:23</span>
+        asked <span title="2013-11-22 22:23:46Z" class="relativetime">Nov 22 '13 at 22:23</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5434/lurscher"><div><img src="https://www.gravatar.com/avatar/91905dd1db3d96c1f93801072dfa68bf?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -198,53 +391,6 @@ Questions about LCDs, 7-segment LEDs, E-ink displays, etc.                      
     <div class="user-details">
         <a href="/users/5434/lurscher">lurscher</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">106</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90949">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="17 views">
-    17 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90949/1-screen-extended-to-3-on-a-notebook-with-ati-mobility-radeon-hd-4670-how" class="question-hyperlink">1 screen extended to 3 on a notebook with ATI Mobility Radeon HD 4670 - how? [migrated]</a></h3>
-        <div class="excerpt">
-            Not sure if a proper stackexchange forum, but couldn't find any more related.
-
-Is graphic card ATI Mobility Radeon HD 4670 able to handle 2 screens?
-If it does, what Multi-Display Adapters you ...
-        </div>          
-        <div class="tags t-display t-adapter t-vga t-hdmi">
-            <a href="/questions/tagged/display" class="post-tag" title="show questions tagged &#39;display&#39;" rel="tag">display</a> <a href="/questions/tagged/adapter" class="post-tag" title="show questions tagged &#39;adapter&#39;" rel="tag">adapter</a> <a href="/questions/tagged/vga" class="post-tag" title="show questions tagged &#39;vga&#39;" rel="tag">vga</a> <a href="/questions/tagged/hdmi" class="post-tag" title="show questions tagged &#39;hdmi&#39;" rel="tag">hdmi</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-17 19:03:50Z" class="relativetime">Nov 17 at 19:03</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32859/overdriven"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/de80faa4d5139906bc7ddcfbda774da6?s=128&d=identicon&r=PG" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32859/overdriven">overdriven</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
     </div>
 </div>
         </div>  
@@ -263,8 +409,8 @@ If it does, what Multi-Display Adapters you ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="79 views">
-    79 views
+        <div class="views " title="81 views">
+    81 views
 </div>
     </div>
     <div class="summary">
@@ -282,7 +428,7 @@ If it does, what Multi-Display Adapters you ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-13 12:17:30Z" class="relativetime">Nov 13 at 12:17</span>
+        asked <span title="2013-11-13 12:17:30Z" class="relativetime">Nov 13 '13 at 12:17</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/32658/user32658"><div><img src="https://www.gravatar.com/avatar/6243f14e928a3460f1801de188725e02?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -308,8 +454,8 @@ If it does, what Multi-Display Adapters you ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="65 views">
-    65 views
+        <div class="views " title="76 views">
+    76 views
 </div>
     </div>
     <div class="summary">
@@ -330,14 +476,14 @@ The display consists of two ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-08 13:51:13Z" class="relativetime">Nov 8 at 13:51</span>
+        asked <span title="2013-11-08 13:51:13Z" class="relativetime">Nov 8 '13 at 13:51</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/4748/hli"><div><img src="https://www.gravatar.com/avatar/e2f3ae75d2083f5583bd5a9f9c4a0b8c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/4748/hli">hli</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,626</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,646</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
     </div>
 </div>
         </div>  
@@ -356,8 +502,8 @@ The display consists of two ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="64 views">
-    64 views
+        <div class="views " title="185 views">
+    185 views
 </div>
     </div>
     <div class="summary">
@@ -376,14 +522,14 @@ Firstly, what would it entail to get the Marsboard A10 ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-06 14:05:04Z" class="relativetime">Nov 6 at 14:05</span>
+        asked <span title="2013-11-06 14:05:04Z" class="relativetime">Nov 6 '13 at 14:05</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26478/gerhman"><div><img src="https://www.gravatar.com/avatar/74400f4026900dc01126103ae4494612?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/26478/gerhman">Gerhman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">176</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -402,8 +548,8 @@ Firstly, what would it entail to get the Marsboard A10 ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="111 views">
-    111 views
+        <div class="views " title="314 views">
+    314 views
 </div>
     </div>
     <div class="summary">
@@ -420,14 +566,14 @@ Firstly, what would it entail to get the Marsboard A10 ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-06 12:07:59Z" class="relativetime">Nov 6 at 12:07</span>
+        asked <span title="2013-11-06 12:07:59Z" class="relativetime">Nov 6 '13 at 12:07</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26478/gerhman"><div><img src="https://www.gravatar.com/avatar/74400f4026900dc01126103ae4494612?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/26478/gerhman">Gerhman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">176</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -446,8 +592,8 @@ Firstly, what would it entail to get the Marsboard A10 ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="55 views">
-    55 views
+        <div class="views " title="113 views">
+    113 views
 </div>
     </div>
     <div class="summary">
@@ -464,14 +610,14 @@ Firstly, what would it entail to get the Marsboard A10 ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-05 16:28:05Z" class="relativetime">Nov 5 at 16:28</span>
+        asked <span title="2013-11-05 16:28:05Z" class="relativetime">Nov 5 '13 at 16:28</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26478/gerhman"><div><img src="https://www.gravatar.com/avatar/74400f4026900dc01126103ae4494612?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/26478/gerhman">Gerhman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">176</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -490,8 +636,8 @@ Firstly, what would it entail to get the Marsboard A10 ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="310 views">
-    310 views
+        <div class="views " title="414 views">
+    414 views
 </div>
     </div>
     <div class="summary">
@@ -512,7 +658,7 @@ I don't know how it happend, but on a parking I found this price tag in my baske
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-29 20:21:30Z" class="relativetime">Oct 29 at 20:21</span>
+        asked <span title="2013-10-29 20:21:30Z" class="relativetime">Oct 29 '13 at 20:21</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/31050/crooveck"><div><img src="https://www.gravatar.com/avatar/29c989519ea96eaf20c171a403ea005e?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -538,8 +684,8 @@ I don't know how it happend, but on a parking I found this price tag in my baske
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="103 views">
-    103 views
+        <div class="views " title="109 views">
+    109 views
 </div>
     </div>
     <div class="summary">
@@ -564,7 +710,7 @@ Red   ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-19 21:04:13Z" class="relativetime">Oct 19 at 21:04</span>
+        asked <span title="2013-10-19 21:04:13Z" class="relativetime">Oct 19 '13 at 21:04</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5666/jake-robinson"><div><img src="https://www.gravatar.com/avatar/b93faae8a5f1709e9a58f96da73ced7d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -590,8 +736,8 @@ Red   ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="238 views">
-    238 views
+        <div class="views " title="256 views">
+    256 views
 </div>
     </div>
     <div class="summary">
@@ -609,7 +755,7 @@ I have a CR2032 3V battery at around 230mA, my microprocessor is a 8051 (in a BL
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-11 09:05:39Z" class="relativetime">Oct 11 at 9:05</span>
+        asked <span title="2013-10-11 09:05:39Z" class="relativetime">Oct 11 '13 at 9:05</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/30317/hink"><div><img src="https://www.gravatar.com/avatar/8c43c2c39f3a3d8f3a33832c9c258c8c?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -635,8 +781,8 @@ I have a CR2032 3V battery at around 230mA, my microprocessor is a 8051 (in a BL
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="73 views">
-    73 views
+        <div class="views " title="92 views">
+    92 views
 </div>
     </div>
     <div class="summary">
@@ -653,7 +799,7 @@ I have a CR2032 3V battery at around 230mA, my microprocessor is a 8051 (in a BL
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-28 21:10:13Z" class="relativetime">Sep 28 at 21:10</span>
+        asked <span title="2013-09-28 21:10:13Z" class="relativetime">Sep 28 '13 at 21:10</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/29775/salain"><div><img src="https://www.gravatar.com/avatar/827fb1dcc1982c1e26322c9b48f241dd?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -679,8 +825,8 @@ I have a CR2032 3V battery at around 230mA, my microprocessor is a 8051 (in a BL
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="84 views">
-    84 views
+        <div class="views " title="120 views">
+    120 views
 </div>
     </div>
     <div class="summary">
@@ -697,14 +843,14 @@ I have a CR2032 3V battery at around 230mA, my microprocessor is a 8051 (in a BL
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-18 22:07:10Z" class="relativetime">Sep 18 at 22:07</span>
+        asked <span title="2013-09-18 22:07:10Z" class="relativetime">Sep 18 '13 at 22:07</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/27388/doov"><div><img src="https://www.gravatar.com/avatar/137806ba4eabab82342bc03a323d51c2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/27388/doov">Doov</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">365</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">402</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
@@ -723,8 +869,8 @@ I have a CR2032 3V battery at around 230mA, my microprocessor is a 8051 (in a BL
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="122 views">
-    122 views
+        <div class="views " title="255 views">
+    255 views
 </div>
     </div>
     <div class="summary">
@@ -743,7 +889,7 @@ Display is named SHARP LM167511 and its ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-15 08:18:54Z" class="relativetime">Sep 15 at 8:18</span>
+        asked <span title="2013-09-15 08:18:54Z" class="relativetime">Sep 15 '13 at 8:18</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/29062/alessandro-carminati"><div><img src="https://www.gravatar.com/avatar/861d9b64c5b7d42bebbdb280baf7f4bf?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -769,8 +915,8 @@ Display is named SHARP LM167511 and its ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="137 views">
-    137 views
+        <div class="views " title="154 views">
+    154 views
 </div>
     </div>
     <div class="summary">
@@ -789,7 +935,7 @@ Is it normal or there is something ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-11 15:03:30Z" class="relativetime">Sep 11 at 15:03</span>
+        asked <span title="2013-09-11 15:03:30Z" class="relativetime">Sep 11 '13 at 15:03</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26929/mailo"><div><img src="https://www.gravatar.com/avatar/81ffdc7467e20214e5cdce679a307eaf?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -797,50 +943,6 @@ Is it normal or there is something ...
     <div class="user-details">
         <a href="/users/26929/mailo">Mailo</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">128</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-81169">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="115 views">
-    115 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/81169/display-controller-chip-with-parallel-24-bit-rgb-input-for-video-rotation-scalin" class="question-hyperlink">Display controller chip with parallel 24-bit RGB input for video rotation/scaling</a></h3>
-        <div class="excerpt">
-            I am looking for a display controller chip that has digital video input (parallel 24-bit RGB888) and is capable of scaling and rotating video images to be displayed on a 10" TFT-LCD. I'm streaming ...
-        </div>          
-        <div class="tags t-integrated-circuit t-lcd t-video t-display t-rgb">
-            <a href="/questions/tagged/integrated-circuit" class="post-tag" title="show questions tagged &#39;integrated-circuit&#39;" rel="tag">integrated-circuit</a> <a href="/questions/tagged/lcd" class="post-tag" title="show questions tagged &#39;lcd&#39;" rel="tag">lcd</a> <a href="/questions/tagged/video" class="post-tag" title="show questions tagged &#39;video&#39;" rel="tag">video</a> <a href="/questions/tagged/display" class="post-tag" title="show questions tagged &#39;display&#39;" rel="tag">display</a> <a href="/questions/tagged/rgb" class="post-tag" title="show questions tagged &#39;rgb&#39;" rel="tag">rgb</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-03 20:14:13Z" class="relativetime">Sep 3 at 20:14</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/28445/nsxtasy"><div><img src="https://www.gravatar.com/avatar/c78a3e3c88f669381657c0cd94721214?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/28445/nsxtasy">nsxtasy</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
@@ -865,22 +967,22 @@ Is it normal or there is something ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/display?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/display?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/display?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/display?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/display?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/display?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=display&amp;sort=newest" title="the 30 newest display questions"><span class="feed-icon"></span>newest display questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=display&sort=newest" title="the 30 newest display questions"><span class="feed-icon"></span>newest display questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">93</div>
+            <div class="summarycount al">94</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/display" class="post-tag" title="show questions tagged &#39;display&#39;" rel="tag">display</a> 
@@ -891,38 +993,279 @@ Is it normal or there is something ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/display+lcd" class="post-tag" title="show questions tagged &#39;display lcd&#39;" rel="tag">lcd</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">28</span></span><br>
-            <a href="/questions/tagged/display+led" class="post-tag" title="show questions tagged &#39;display led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/display+tft" class="post-tag" title="show questions tagged &#39;display tft&#39;" rel="tag">tft</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/display+arduino" class="post-tag" title="show questions tagged &#39;display arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/display+e-ink" class="post-tag" title="show questions tagged &#39;display e-ink&#39;" rel="tag">e-ink</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/display+microcontroller" class="post-tag" title="show questions tagged &#39;display microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/display+7segmentdisplay" class="post-tag" title="show questions tagged &#39;display 7segmentdisplay&#39;" rel="tag">7segmentdisplay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/display+video" class="post-tag" title="show questions tagged &#39;display video&#39;" rel="tag">video</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/display+touchscreen" class="post-tag" title="show questions tagged &#39;display touchscreen&#39;" rel="tag">touchscreen</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/display+arm" class="post-tag" title="show questions tagged &#39;display arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/display+monitor" class="post-tag" title="show questions tagged &#39;display monitor&#39;" rel="tag">monitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/display+spi" class="post-tag" title="show questions tagged &#39;display spi&#39;" rel="tag">spi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/display+multiplexer" class="post-tag" title="show questions tagged &#39;display multiplexer&#39;" rel="tag">multiplexer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/display+datasheet" class="post-tag" title="show questions tagged &#39;display datasheet&#39;" rel="tag">datasheet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+rgb" class="post-tag" title="show questions tagged &#39;display rgb&#39;" rel="tag">rgb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+identification" class="post-tag" title="show questions tagged &#39;display identification&#39;" rel="tag">identification</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+hdmi" class="post-tag" title="show questions tagged &#39;display hdmi&#39;" rel="tag">hdmi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+components" class="post-tag" title="show questions tagged &#39;display components&#39;" rel="tag">components</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+converter" class="post-tag" title="show questions tagged &#39;display converter&#39;" rel="tag">converter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+adapter" class="post-tag" title="show questions tagged &#39;display adapter&#39;" rel="tag">adapter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+digital-logic" class="post-tag" title="show questions tagged &#39;display digital-logic&#39;" rel="tag">digital-logic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+oled" class="post-tag" title="show questions tagged &#39;display oled&#39;" rel="tag">oled</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+raspberry-pi" class="post-tag" title="show questions tagged &#39;display raspberry-pi&#39;" rel="tag">raspberry-pi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+i2c" class="post-tag" title="show questions tagged &#39;display i2c&#39;" rel="tag">i2c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/display+avr" class="post-tag" title="show questions tagged &#39;display avr&#39;" rel="tag">avr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
+        <div>
+            <a href="/questions/tagged/display+lcd" class="post-tag" title="show questions tagged &#39;display lcd&#39;" rel="tag">lcd</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">29</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/display+led" class="post-tag" title="show questions tagged &#39;display led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/display+tft" class="post-tag" title="show questions tagged &#39;display tft&#39;" rel="tag">tft</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/display+arduino" class="post-tag" title="show questions tagged &#39;display arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/display+e-ink" class="post-tag" title="show questions tagged &#39;display e-ink&#39;" rel="tag">e-ink</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/display+microcontroller" class="post-tag" title="show questions tagged &#39;display microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/display+7segmentdisplay" class="post-tag" title="show questions tagged &#39;display 7segmentdisplay&#39;" rel="tag">7segmentdisplay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/display+video" class="post-tag" title="show questions tagged &#39;display video&#39;" rel="tag">video</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/display+identification" class="post-tag" title="show questions tagged &#39;display identification&#39;" rel="tag">identification</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/display+arm" class="post-tag" title="show questions tagged &#39;display arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+touchscreen" class="post-tag" title="show questions tagged &#39;display touchscreen&#39;" rel="tag">touchscreen</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+monitor" class="post-tag" title="show questions tagged &#39;display monitor&#39;" rel="tag">monitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+spi" class="post-tag" title="show questions tagged &#39;display spi&#39;" rel="tag">spi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+multiplexer" class="post-tag" title="show questions tagged &#39;display multiplexer&#39;" rel="tag">multiplexer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+power" class="post-tag" title="show questions tagged &#39;display power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+avr" class="post-tag" title="show questions tagged &#39;display avr&#39;" rel="tag">avr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+linux" class="post-tag" title="show questions tagged &#39;display linux&#39;" rel="tag">linux</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+rgb" class="post-tag" title="show questions tagged &#39;display rgb&#39;" rel="tag">rgb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+cellphone" class="post-tag" title="show questions tagged &#39;display cellphone&#39;" rel="tag">cellphone</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+optoelectronics" class="post-tag" title="show questions tagged &#39;display optoelectronics&#39;" rel="tag">optoelectronics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+datasheet" class="post-tag" title="show questions tagged &#39;display datasheet&#39;" rel="tag">datasheet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+components" class="post-tag" title="show questions tagged &#39;display components&#39;" rel="tag">components</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+reverse-engineering" class="post-tag" title="show questions tagged &#39;display reverse-engineering&#39;" rel="tag">reverse-engineering</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+raspberry-pi" class="post-tag" title="show questions tagged &#39;display raspberry-pi&#39;" rel="tag">raspberry-pi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/display+i2c" class="post-tag" title="show questions tagged &#39;display i2c&#39;" rel="tag">i2c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -942,7 +1285,7 @@ Is it normal or there is something ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/display")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1035,7 +1378,7 @@ Is it normal or there is something ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1062,14 +1405,11 @@ Is it normal or there is something ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1078,33 +1418,34 @@ Is it normal or there is something ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|display|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|display|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

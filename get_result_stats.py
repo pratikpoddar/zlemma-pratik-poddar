@@ -262,27 +262,6 @@ print "Skills that appear twice in Manual Replacements Values are: " + str(set([
 
 print "----"
 
-solargedata = getData('so-large/result.txt')
-mathselargedata = getData('mathse-large/result.txt')
-soquantlargedata = getData('so-quant-large/result.txt')
-#soeleclargedata = getData('so-elec-large/result.txt')
-wikilangdata = getData('wikilang/result.txt')
-wiki_tfidfdata = getData('wiki_tfidf/result.txt')
-
-print "Binned Results for Different Algorithms"
-print("so")
-getBinnedResults(solargedata)
-print("math-se")
-getBinnedResults(mathselargedata)
-print("so-quant")
-getBinnedResults(soquantlargedata)
-#getBinnedResults(soeleclargedata)
-#print("wiki-lang")
-#getBinnedResults(wikilangdata)
-#print("wiki_tfidf")
-#getBinnedResults(wiki_tfidfdata)
-print "----"
-
 print "----"
 def tf(l):
 	high_values = len(filter(lambda x: x>=0.7, l))

@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=b0a5a51e797c">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged touchscreen" href="/feeds/tag/touchscreen" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386190955,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328264,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftouchscreen" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftouchscreen" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[touchscreen]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftouchscreen">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftouchscreen">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[touchscreen]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/touchscreen/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/touchscreen?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/touchscreen?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/touchscreen?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/touchscreen?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/touchscreen?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/touchscreen?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/touchscreen?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/touchscreen?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/touchscreen?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/touchscreen?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,283 @@ The <a href="/questions/tagged/touchscreen" class="post-tag" title="show questio
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-87978">
+<div class="question-summary" id="question-summary-97141">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-1</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="25 views">
+    25 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/97141/best-option-for-prototyping-with-touchscreen-and-wifi" class="question-hyperlink">Best option for prototyping with touchscreen and wifi [on hold]</a></h3>
+        <div class="excerpt">
+            I have been looking at the mikromedia prototyping boards. Particularly the STM32 http://www.mikroe.com/mikromedia/plus/stm32/
+
+I'm wanting it for the larger touchscreen and WiFi capabilities mainly.
+
+...
+        </div>          
+        <div class="tags t-arduino t-wifi t-prototyping t-touchscreen">
+            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/wifi" class="post-tag" title="show questions tagged &#39;wifi&#39;" rel="tag">wifi</a> <a href="/questions/tagged/prototyping" class="post-tag" title="show questions tagged &#39;prototyping&#39;" rel="tag">prototyping</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-21 11:11:11Z" class="relativetime">7 hours ago</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34966/mrbeanzy"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/93e7e06f688daec03c2af685a802c76f?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34966/mrbeanzy">MrBeanzy</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">99</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96774">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="22 views">
+    22 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96774/using-pic16f707-and-raspberry-pi-for-touchscreen-display" class="question-hyperlink">Using PIC16F707 and Raspberry Pi for Touchscreen display</a></h3>
+        <div class="excerpt">
+            I've been asked to make a static touch screen for a store display with a very low budget.
+Due to the cost limits and large number of 'buttons' required, I've considered the PIC16F707 since it has 32 ...
+        </div>          
+        <div class="tags t-microcontroller t-i2c t-raspberry-pi t-touchscreen t-touch-panel">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/i2c" class="post-tag" title="show questions tagged &#39;i2c&#39;" rel="tag">i2c</a> <a href="/questions/tagged/raspberry-pi" class="post-tag" title="show questions tagged &#39;raspberry-pi&#39;" rel="tag">raspberry-pi</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> <a href="/questions/tagged/touch-panel" class="post-tag" title="show questions tagged &#39;touch-panel&#39;" rel="tag">touch-panel</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-17 20:05:07Z" class="relativetime">Jan 17 at 20:05</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35707/ryan-park"><div><img src="https://www.gravatar.com/avatar/b0c0e6ed6a2f6aacebb32dbde0154184?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35707/ryan-park">Ryan Park</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95784">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="20 views">
+    20 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95784/signals-acquisition-of-xpt2046-resistive-touch-screen-controller" class="question-hyperlink">Signal&#39;s Acquisition of XPT2046 : Resistive Touch Screen Controller</a></h3>
+        <div class="excerpt">
+            I have some question about this controller with my LCD, have tried to search around but I didn't find any answer. Did anybody can explain to me how it work please.
+
+I'm working with a STM32 F4 ...
+        </div>          
+        <div class="tags t-microcontroller t-lcd t-stm32 t-touchscreen">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/lcd" class="post-tag" title="show questions tagged &#39;lcd&#39;" rel="tag">lcd</a> <a href="/questions/tagged/stm32" class="post-tag" title="show questions tagged &#39;stm32&#39;" rel="tag">stm32</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-08 08:49:46Z" class="relativetime">Jan 8 at 8:49</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/19209/user19209"><div><img src="https://www.gravatar.com/avatar/73228a150b525a8af83aa04627625913?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/19209/user19209">user19209</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94386">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="60 views">
+    60 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94386/what-kind-of-sensor-would-be-best-for-detecting-a-tap-or-touch-on-either-of-two" class="question-hyperlink">What kind of sensor would be best for detecting a tap or touch on either of two 0.2" panes of glass?</a></h3>
+        <div class="excerpt">
+            I'm building this really cool double paned glass door with contrasting frosting as a feature between the two panes. It's a sliding bathroom door. Being high tech and all, I want to set it up with a ...
+        </div>          
+        <div class="tags t-sensor t-touchscreen">
+            <a href="/questions/tagged/sensor" class="post-tag" title="show questions tagged &#39;sensor&#39;" rel="tag">sensor</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-22 18:53:32Z" class="relativetime">Dec 22 '13 at 18:53</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/3634/kavisiegel"><div><img src="https://www.gravatar.com/avatar/a092d1e322d87389277efaa1cd18e379?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/3634/kavisiegel">kavisiegel</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">157</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93640">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="46 views">
+    46 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93640/resistive-touchscreen-to-adc" class="question-hyperlink">Resistive touchscreen to ADC</a></h3>
+        <div class="excerpt">
+            I want to hook up a resistive touchscreen to an ADC.
+
+I'm new to electronics and experienced in developing software.
+My intention is to learn, I would much appreciate it if you could nudge me into the ...
+        </div>          
+        <div class="tags t-adc t-microprocessor t-touchscreen">
+            <a href="/questions/tagged/adc" class="post-tag" title="show questions tagged &#39;adc&#39;" rel="tag">adc</a> <a href="/questions/tagged/microprocessor" class="post-tag" title="show questions tagged &#39;microprocessor&#39;" rel="tag">microprocessor</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-13 21:48:58Z" class="relativetime">Dec 13 '13 at 21:48</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34109/duchamp"><div><img src="https://www.gravatar.com/avatar/9f6b77e9fc46247321099c688bc4ffd4?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34109/duchamp">Duchamp</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93106">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="25 views">
+    25 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93106/integrated-touchscreen-empowered-by-android-cellphone" class="question-hyperlink">Integrated touchscreen empowered by android cellphone</a></h3>
+        <div class="excerpt">
+            Not sure if this is the correct stack exchange platform for my question but I'm pretty sure you guys can help me out with my idea. 
+
+I was thinking about building a wall mounted touchscreen powered by ...
+        </div>          
+        <div class="tags t-usb t-android t-touchscreen">
+            <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/android" class="post-tag" title="show questions tagged &#39;android&#39;" rel="tag">android</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-09 14:11:54Z" class="relativetime">Dec 9 '13 at 14:11</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33878/codevour"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/7367d1d80d101f8756862bdd9e78db42?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33878/codevour">codevour</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">101</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-87978">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +547,8 @@ The <a href="/questions/tagged/touchscreen" class="post-tag" title="show questio
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="53 views">
-    53 views
+        <div class="views " title="58 views">
+    58 views
 </div>
     </div>
     <div class="summary">
@@ -192,7 +567,7 @@ We develop and test the software on a working laptop-based prototype which has a
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-08 13:11:47Z" class="relativetime">Nov 8 at 13:11</span>
+        asked <span title="2013-11-08 13:11:47Z" class="relativetime">Nov 8 '13 at 13:11</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5218/martin-lee"><div><img src="https://www.gravatar.com/avatar/2e35be1ee2bfe342f32c04d8246c5b37?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -218,8 +593,8 @@ We develop and test the software on a working laptop-based prototype which has a
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="64 views">
-    64 views
+        <div class="views " title="185 views">
+    185 views
 </div>
     </div>
     <div class="summary">
@@ -238,14 +613,14 @@ Firstly, what would it entail to get the Marsboard A10 ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-06 14:05:04Z" class="relativetime">Nov 6 at 14:05</span>
+        asked <span title="2013-11-06 14:05:04Z" class="relativetime">Nov 6 '13 at 14:05</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26478/gerhman"><div><img src="https://www.gravatar.com/avatar/74400f4026900dc01126103ae4494612?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/26478/gerhman">Gerhman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">176</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -264,8 +639,8 @@ Firstly, what would it entail to get the Marsboard A10 ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="55 views">
-    55 views
+        <div class="views " title="113 views">
+    113 views
 </div>
     </div>
     <div class="summary">
@@ -282,14 +657,14 @@ Firstly, what would it entail to get the Marsboard A10 ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-05 16:28:05Z" class="relativetime">Nov 5 at 16:28</span>
+        asked <span title="2013-11-05 16:28:05Z" class="relativetime">Nov 5 '13 at 16:28</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26478/gerhman"><div><img src="https://www.gravatar.com/avatar/74400f4026900dc01126103ae4494612?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/26478/gerhman">Gerhman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">176</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -308,8 +683,8 @@ Firstly, what would it entail to get the Marsboard A10 ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="18 views">
-    18 views
+        <div class="views " title="20 views">
+    20 views
 </div>
     </div>
     <div class="summary">
@@ -326,7 +701,7 @@ Firstly, what would it entail to get the Marsboard A10 ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-07 14:13:48Z" class="relativetime">Oct 7 at 14:13</span>
+        asked <span title="2013-10-07 14:13:48Z" class="relativetime">Oct 7 '13 at 14:13</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/29008/edwardashley"><div><img src="https://www.gravatar.com/avatar/0a278971eb81e819b38b46ffcdc0fd1e?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -352,8 +727,8 @@ Firstly, what would it entail to get the Marsboard A10 ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="44 views">
-    44 views
+        <div class="views " title="47 views">
+    47 views
 </div>
     </div>
     <div class="summary">
@@ -370,14 +745,14 @@ Firstly, what would it entail to get the Marsboard A10 ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-15 11:21:23Z" class="relativetime">Sep 15 at 11:21</span>
+        asked <span title="2013-09-15 11:21:23Z" class="relativetime">Sep 15 '13 at 11:21</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/28144/aug"><div><img src="https://www.gravatar.com/avatar/48afabfbd39ee660cdddf2038d4ad193?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/28144/aug">Aug</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">248</span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">255</span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
     </div>
 </div>
         </div>  
@@ -396,8 +771,8 @@ Firstly, what would it entail to get the Marsboard A10 ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="33 views">
-    33 views
+        <div class="views " title="39 views">
+    39 views
 </div>
     </div>
     <div class="summary">
@@ -415,14 +790,14 @@ I have seen a product which is a transparent ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-10 20:30:36Z" class="relativetime">Sep 10 at 20:30</span>
+        asked <span title="2013-09-10 20:30:36Z" class="relativetime">Sep 10 '13 at 20:30</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/28144/aug"><div><img src="https://www.gravatar.com/avatar/48afabfbd39ee660cdddf2038d4ad193?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/28144/aug">Aug</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">248</span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">255</span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
     </div>
 </div>
         </div>  
@@ -441,8 +816,8 @@ I have seen a product which is a transparent ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="84 views">
-    84 views
+        <div class="views " title="91 views">
+    91 views
 </div>
     </div>
     <div class="summary">
@@ -461,7 +836,7 @@ What I am trying to do is detect the position and uniqueness of an object (say a
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-12 01:41:41Z" class="relativetime">Aug 12 at 1:41</span>
+        asked <span title="2013-08-12 01:41:41Z" class="relativetime">Aug 12 '13 at 1:41</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/27250/rmaloney3"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/1422330195/picture?type=large" alt=""></div></a>
@@ -487,8 +862,8 @@ What I am trying to do is detect the position and uniqueness of an object (say a
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="183 views">
-    183 views
+        <div class="views " title="209 views">
+    209 views
 </div>
     </div>
     <div class="summary">
@@ -505,7 +880,7 @@ What I am trying to do is detect the position and uniqueness of an object (say a
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-04 03:40:21Z" class="relativetime">Aug 4 at 3:40</span>
+        asked <span title="2013-08-04 03:40:21Z" class="relativetime">Aug 4 '13 at 3:40</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/27085/j03m"><div><img src="https://www.gravatar.com/avatar/a16354f806a5e7cdf68128173ec06ec6?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -531,8 +906,8 @@ What I am trying to do is detect the position and uniqueness of an object (say a
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="204 views">
-    204 views
+        <div class="views " title="276 views">
+    276 views
 </div>
     </div>
     <div class="summary">
@@ -549,7 +924,7 @@ What I am trying to do is detect the position and uniqueness of an object (say a
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-01 22:07:45Z" class="relativetime">Aug 1 at 22:07</span>
+        asked <span title="2013-08-01 22:07:45Z" class="relativetime">Aug 1 '13 at 22:07</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/27002/trejder"><div><img src="https://www.gravatar.com/avatar/63e4f7c36cfb54861bc2c2518bdb7cf2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -557,274 +932,6 @@ What I am trying to do is detect the position and uniqueness of an object (say a
     <div class="user-details">
         <a href="/users/27002/trejder">trejder</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">140</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-75573">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="124 views">
-    124 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/75573/touch-screen-and-cold-dry-fingers" class="question-hyperlink">Touch screen and cold, dry fingers</a></h3>
-        <div class="excerpt">
-            I've noticed that when I pick up my smartphone first thing after waking up, the touch screen is not very accurate in picking up my "clicks" and gestures.  I'm speculating that it's got something to do ...
-        </div>          
-        <div class="tags t-cellphone t-touchscreen">
-            <a href="/questions/tagged/cellphone" class="post-tag" title="show questions tagged &#39;cellphone&#39;" rel="tag">cellphone</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-07-11 09:28:23Z" class="relativetime">Jul 11 at 9:28</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5932/shaul"><div><img src="https://www.gravatar.com/avatar/cfd36640b9346a2ec8b635214faedbed?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5932/shaul">Shaul</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">140</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-74519">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="81 views">
-    81 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/74519/touchscreen-interference-metal-frame" class="question-hyperlink">Touchscreen interference (metal frame)</a></h3>
-        <div class="excerpt">
-            I have one of these. It's connected to a raspberry pi. It's being mounted against a metal frame, but when it's mounted, i get interference on the touchscreen (the mouse jumps all over the place). How ...
-        </div>          
-        <div class="tags t-raspberry-pi t-touchscreen">
-            <a href="/questions/tagged/raspberry-pi" class="post-tag" title="show questions tagged &#39;raspberry-pi&#39;" rel="tag">raspberry-pi</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-30 14:58:46Z" class="relativetime">Jun 30 at 14:58</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/2354/chris-kooken"><div><img src="https://www.gravatar.com/avatar/790d711e06a77facb217d46fbb1400c3?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/2354/chris-kooken">Chris Kooken</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">161</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-72513">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>5</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="331 views">
-    331 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/72513/how-can-electromagnetic-interference-from-a-usb-charger-cause-a-capacitive-touch" class="question-hyperlink">How can electromagnetic interference from a USB charger cause a capacitive touchscreen to malfunction?</a></h3>
-        <div class="excerpt">
-            Electromagnetic interference from a USB charger can cause a touchscreen on a mobile device to malfunction, with symptoms such as reduced sensitivity or spurious touches. As an example, see ...
-        </div>          
-        <div class="tags t-usb t-emc t-touchscreen">
-            <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/emc" class="post-tag" title="show questions tagged &#39;emc&#39;" rel="tag">emc</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-12 14:57:23Z" class="relativetime">Jun 12 at 14:57</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/7403/dragonlord"><div class="gravatar-wrapper-32"><img src="http://www.gravatar.com/avatar/27f497f619785fb64129b9472c101a5a?s=128&d=identicon&r=PG" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/7403/dragonlord">DragonLord</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">197</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-70655">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="102 views">
-    102 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/70655/making-a-electrical-signal-detector-inputs-from-multiple-source" class="question-hyperlink">Making a electrical signal detector (Inputs from multiple source)</a></h3>
-        <div class="excerpt">
-            I am working on an electrical project that, actually works something like a touchscreen digitizer, where I have to generate multiple inputs from over 50-100 sources, and I need to check from which ...
-        </div>          
-        <div class="tags t-sensor t-touchscreen">
-            <a href="/questions/tagged/sensor" class="post-tag" title="show questions tagged &#39;sensor&#39;" rel="tag">sensor</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-27 09:35:43Z" class="relativetime">May 27 at 9:35</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/21953/cyberpks"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/bNqAX.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/21953/cyberpks">Cyberpks</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">31</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-69917">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>6</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="463 views">
-    463 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/69917/is-a-human-or-other-electrical-signal-absolutely-necessary-to-activate-a-capac" class="question-hyperlink">Is a human (or other) electrical signal absolutely necessary to activate a capacitive touchscreen?</a></h3>
-        <div class="excerpt">
-            I know this is the general wisdom, and that someone has asked a similar question here: How can a capacitive touch screen be triggered without human contact?
-
-However, I didn't quite understand the ...
-        </div>          
-        <div class="tags t-capacitance t-iphone t-touchscreen t-capsense">
-            <a href="/questions/tagged/capacitance" class="post-tag" title="show questions tagged &#39;capacitance&#39;" rel="tag">capacitance</a> <a href="/questions/tagged/iphone" class="post-tag" title="show questions tagged &#39;iphone&#39;" rel="tag">iphone</a> <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> <a href="/questions/tagged/capsense" class="post-tag" title="show questions tagged &#39;capsense&#39;" rel="tag">capsense</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-20 17:46:18Z" class="relativetime">May 20 at 17:46</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/24140/zakgottlieb"><div><img src="https://www.gravatar.com/avatar/38dfc2f8c09f6bb03d73fbbdf6b775a7?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/24140/zakgottlieb">zakgottlieb</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">31</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-69437">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="82 views">
-    82 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/69437/how-to-detect-sliding-motions-on-a-resistive-touchscreen-at-the-driver-microcon" class="question-hyperlink">How to detect sliding motions on a resistive touchscreen, at the driver/microcontroller level</a></h3>
-        <div class="excerpt">
-            Sort of a code question, sort of a hardware question. I'm working on some microcontroller projects involving a standard 4-wire resistive touchscreen.
-
-I roughly understand how touchscreen controllers ...
-        </div>          
-        <div class="tags t-touchscreen">
-            <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-16 03:48:46Z" class="relativetime">May 16 at 3:48</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/23963/tummychow"><div><img src="https://www.gravatar.com/avatar/d954dfa35b5251a31f7add1d7d6d12e8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/23963/tummychow">tummychow</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">126</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -847,76 +954,305 @@ I roughly understand how touchscreen controllers ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/touchscreen?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/touchscreen?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/touchscreen?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/touchscreen?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/touchscreen?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/touchscreen?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=touchscreen&amp;sort=newest" title="the 30 newest touchscreen questions"><span class="feed-icon"></span>newest touchscreen questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=touchscreen&sort=newest" title="the 30 newest touchscreen questions"><span class="feed-icon"></span>newest touchscreen questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">53</div>
+            <div class="summarycount al">59</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/touchscreen" class="post-tag" title="show questions tagged &#39;touchscreen&#39;" rel="tag">touchscreen</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/touchscreen/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-
-            <div class="spacer">
-                <div class="bulletin-item-type"><a href="http://blog.stackoverflow.com" class="event-date" target="_blank">blog</a></div>
-                <div class="bulletin-item-content">
-                    <a href="http://blog.stackoverflow.com/2013/12/a-new-top-bar-for-stack-exchange/" class="question-hyperlink" target="_blank">A New Top Bar for Stack Exchange</a>
-                </div>
-                <br class="cbt" />
-            </div>
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/touchscreen+touch-panel" class="post-tag" title="show questions tagged &#39;touchscreen touch-panel&#39;" rel="tag">touch-panel</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/touchscreen+capacitive" class="post-tag" title="show questions tagged &#39;touchscreen capacitive&#39;" rel="tag">capacitive</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/touchscreen+capsense" class="post-tag" title="show questions tagged &#39;touchscreen capsense&#39;" rel="tag">capsense</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/touchscreen+lcd" class="post-tag" title="show questions tagged &#39;touchscreen lcd&#39;" rel="tag">lcd</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/touchscreen+microcontroller" class="post-tag" title="show questions tagged &#39;touchscreen microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/touchscreen+arduino" class="post-tag" title="show questions tagged &#39;touchscreen arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/touchscreen+display" class="post-tag" title="show questions tagged &#39;touchscreen display&#39;" rel="tag">display</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/touchscreen+iphone" class="post-tag" title="show questions tagged &#39;touchscreen iphone&#39;" rel="tag">iphone</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/touchscreen+sensor" class="post-tag" title="show questions tagged &#39;touchscreen sensor&#39;" rel="tag">sensor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/touchscreen+capacitance" class="post-tag" title="show questions tagged &#39;touchscreen capacitance&#39;" rel="tag">capacitance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/touchscreen+glcd" class="post-tag" title="show questions tagged &#39;touchscreen glcd&#39;" rel="tag">glcd</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/touchscreen+android" class="post-tag" title="show questions tagged &#39;touchscreen android&#39;" rel="tag">android</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/touchscreen+raspberry-pi" class="post-tag" title="show questions tagged &#39;touchscreen raspberry-pi&#39;" rel="tag">raspberry-pi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/touchscreen+plastic" class="post-tag" title="show questions tagged &#39;touchscreen plastic&#39;" rel="tag">plastic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/touchscreen+arm" class="post-tag" title="show questions tagged &#39;touchscreen arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/touchscreen+capacitor" class="post-tag" title="show questions tagged &#39;touchscreen capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/touchscreen+led" class="post-tag" title="show questions tagged &#39;touchscreen led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/touchscreen+dc-motor" class="post-tag" title="show questions tagged &#39;touchscreen dc-motor&#39;" rel="tag">dc-motor</a>&nbsp;<br>
-            <a href="/questions/tagged/touchscreen+motor" class="post-tag" title="show questions tagged &#39;touchscreen motor&#39;" rel="tag">motor</a>&nbsp;<br>
-            <a href="/questions/tagged/touchscreen+infrared" class="post-tag" title="show questions tagged &#39;touchscreen infrared&#39;" rel="tag">infrared</a>&nbsp;<br>
-            <a href="/questions/tagged/touchscreen+trigger" class="post-tag" title="show questions tagged &#39;touchscreen trigger&#39;" rel="tag">trigger</a>&nbsp;<br>
-            <a href="/questions/tagged/touchscreen+drawing" class="post-tag" title="show questions tagged &#39;touchscreen drawing&#39;" rel="tag">drawing</a>&nbsp;<br>
-            <a href="/questions/tagged/touchscreen+repair" class="post-tag" title="show questions tagged &#39;touchscreen repair&#39;" rel="tag">repair</a>&nbsp;<br>
-            <a href="/questions/tagged/touchscreen+pcb" class="post-tag" title="show questions tagged &#39;touchscreen pcb&#39;" rel="tag">pcb</a>&nbsp;<br>
-            <a href="/questions/tagged/touchscreen+cables" class="post-tag" title="show questions tagged &#39;touchscreen cables&#39;" rel="tag">cables</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/touchscreen+touch-panel" class="post-tag" title="show questions tagged &#39;touchscreen touch-panel&#39;" rel="tag">touch-panel</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/touchscreen+capacitive" class="post-tag" title="show questions tagged &#39;touchscreen capacitive&#39;" rel="tag">capacitive</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/touchscreen+capsense" class="post-tag" title="show questions tagged &#39;touchscreen capsense&#39;" rel="tag">capsense</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/touchscreen+lcd" class="post-tag" title="show questions tagged &#39;touchscreen lcd&#39;" rel="tag">lcd</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/touchscreen+microcontroller" class="post-tag" title="show questions tagged &#39;touchscreen microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/touchscreen+arduino" class="post-tag" title="show questions tagged &#39;touchscreen arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/touchscreen+raspberry-pi" class="post-tag" title="show questions tagged &#39;touchscreen raspberry-pi&#39;" rel="tag">raspberry-pi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/touchscreen+display" class="post-tag" title="show questions tagged &#39;touchscreen display&#39;" rel="tag">display</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/touchscreen+sensor" class="post-tag" title="show questions tagged &#39;touchscreen sensor&#39;" rel="tag">sensor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/touchscreen+android" class="post-tag" title="show questions tagged &#39;touchscreen android&#39;" rel="tag">android</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+iphone" class="post-tag" title="show questions tagged &#39;touchscreen iphone&#39;" rel="tag">iphone</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+capacitance" class="post-tag" title="show questions tagged &#39;touchscreen capacitance&#39;" rel="tag">capacitance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+glcd" class="post-tag" title="show questions tagged &#39;touchscreen glcd&#39;" rel="tag">glcd</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+adc" class="post-tag" title="show questions tagged &#39;touchscreen adc&#39;" rel="tag">adc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+led" class="post-tag" title="show questions tagged &#39;touchscreen led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+plastic" class="post-tag" title="show questions tagged &#39;touchscreen plastic&#39;" rel="tag">plastic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+capacitor" class="post-tag" title="show questions tagged &#39;touchscreen capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+usb" class="post-tag" title="show questions tagged &#39;touchscreen usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+arm" class="post-tag" title="show questions tagged &#39;touchscreen arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+motor" class="post-tag" title="show questions tagged &#39;touchscreen motor&#39;" rel="tag">motor</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+drawing" class="post-tag" title="show questions tagged &#39;touchscreen drawing&#39;" rel="tag">drawing</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+trigger" class="post-tag" title="show questions tagged &#39;touchscreen trigger&#39;" rel="tag">trigger</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+infrared" class="post-tag" title="show questions tagged &#39;touchscreen infrared&#39;" rel="tag">infrared</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+interface" class="post-tag" title="show questions tagged &#39;touchscreen interface&#39;" rel="tag">interface</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/touchscreen+pcb" class="post-tag" title="show questions tagged &#39;touchscreen pcb&#39;" rel="tag">pcb</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -936,7 +1272,7 @@ I roughly understand how touchscreen controllers ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/touchscreen")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1029,7 +1365,7 @@ I roughly understand how touchscreen controllers ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1056,14 +1392,11 @@ I roughly understand how touchscreen controllers ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1197
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1072,33 +1405,34 @@ I roughly understand how touchscreen controllers ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|touchscreen|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|touchscreen|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

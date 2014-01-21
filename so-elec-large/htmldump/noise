@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged noise" href="/feeds/tag/noise" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186601,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327813,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fnoise" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fnoise" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[noise]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fnoise">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fnoise">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[noise]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/noise/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/noise?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/noise?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/noise?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/noise?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/noise?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/noise?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/noise?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/noise?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/noise?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/noise?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,509 @@ About issues caused by electrical noise, or improving the Signal/Noise ratio of 
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92640">
+<div class="question-summary" id="question-summary-96560">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="56 views">
+    56 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96560/noise-caused-by-square-wave-signal" class="question-hyperlink">noise caused by square wave signal</a></h3>
+        <div class="excerpt">
+            I am using electronic switches to create non-TTL square wave clocking. The oscilloscope graph demonstrates two measurements:
+
+
+
+Yellow signal: 0-8V
+Blue signal: 0-5V
+
+As you can see, yellow signal is ...
+        </div>          
+        <div class="tags t-noise t-ttl">
+            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/ttl" class="post-tag" title="show questions tagged &#39;ttl&#39;" rel="tag">ttl</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-15 15:31:15Z" class="relativetime">Jan 15 at 15:31</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35526/naz"><div><img src="https://www.gravatar.com/avatar/2d1fe6473d97822cf2e2773d377d3dc5?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35526/naz">Naz</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">58</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96485">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="58 views">
+    58 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96485/reduce-gear-box-and-dc-motor-noise" class="question-hyperlink">Reduce gear box and DC motor noise</a></h3>
+        <div class="excerpt">
+            I'm working on a project where I use DC motor and gearbox to reduce the speed and get a higher torque. 
+
+The problem is, when the project sit, for example on a table, the noise is amplified. (with ...
+        </div>          
+        <div class="tags t-dc-motor t-noise t-mechanical">
+            <a href="/questions/tagged/dc-motor" class="post-tag" title="show questions tagged &#39;dc-motor&#39;" rel="tag">dc-motor</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/mechanical" class="post-tag" title="show questions tagged &#39;mechanical&#39;" rel="tag">mechanical</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-14 21:08:19Z" class="relativetime">Jan 14 at 21:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/27489/emmanuel-istace"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/797302589/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/27489/emmanuel-istace">Emmanuel Istace</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">773</span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96376">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="99 views">
+    99 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96376/extremely-noisy-signal-after-voltage-follower-buffer" class="question-hyperlink">Extremely noisy signal after voltage follower/buffer [closed]</a></h3>
+        <div class="excerpt">
+            I am trying to create a voltage follower for my CCD linear array. When I measure the signal with oscilloscope directly from the CCD outptut - the signal is reasonably clean. However, when I measure if ...
+        </div>          
+        <div class="tags t-voltage t-noise t-buffer t-distortion">
+            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/buffer" class="post-tag" title="show questions tagged &#39;buffer&#39;" rel="tag">buffer</a> <a href="/questions/tagged/distortion" class="post-tag" title="show questions tagged &#39;distortion&#39;" rel="tag">distortion</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-13 22:31:30Z" class="relativetime">Jan 13 at 22:31</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35526/naz"><div><img src="https://www.gravatar.com/avatar/2d1fe6473d97822cf2e2773d377d3dc5?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35526/naz">Naz</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">58</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96275">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="152 views">
+    152 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96275/increasing-the-frequency-of-mutual-exclusion-circuit" class="question-hyperlink">Increasing the frequency of mutual exclusion circuit</a></h3>
+        <div class="excerpt">
+            Consider this circuit:  
+
+
+
+http://www.partsim.com/simulator/#15304
+
+Notice that, at almost all times in the transient analysis, there is exactly one diode with its anode's voltage above the voltage ...
+        </div>          
+        <div class="tags t-switches t-integrated-circuit t-noise t-high-frequency">
+            <a href="/questions/tagged/switches" class="post-tag" title="show questions tagged &#39;switches&#39;" rel="tag">switches</a> <a href="/questions/tagged/integrated-circuit" class="post-tag" title="show questions tagged &#39;integrated-circuit&#39;" rel="tag">integrated-circuit</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/high-frequency" class="post-tag" title="show questions tagged &#39;high-frequency&#39;" rel="tag">high-frequency</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info">
+    <div class="user-details">
+        <span class="community-wiki" title="This post is community owned as of Jan 16 at 9:07. Votes do not generate reputation, and it can be edited by users with 100 rep">
+            community wiki
+        </span>
+    </div><br>
+    <div class="user-details">
+        <a id="history-96275" href="/posts/96275/revisions" title="show revision history for this post">
+        15 revs<br><a href="/users/35447">James Bowery</a>
+        </a>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95925">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="129 views">
+    129 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95925/3-smps-in-one-board" class="question-hyperlink">3 SMPS in one board</a></h3>
+        <div class="excerpt">
+            I'm doing a PCB where there are 3 SMPS:
+one boost(12v to 48v, 1 amp max) and one buck converter(5v to 4v, 4 amps max) functioning at the same frequency(same timer in microcontroller).
+the other ...
+        </div>          
+        <div class="tags t-pcb t-switch-mode-power-supply t-noise t-grounding">
+            <a href="/questions/tagged/pcb" class="post-tag" title="show questions tagged &#39;pcb&#39;" rel="tag">pcb</a> <a href="/questions/tagged/switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/grounding" class="post-tag" title="show questions tagged &#39;grounding&#39;" rel="tag">grounding</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-09 15:30:21Z" class="relativetime">Jan 9 at 15:30</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35281/mib"><div><img src="https://www.gravatar.com/avatar/f6791749fbab91811ea3a8bff38dbb86?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35281/mib">MiB</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">20</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95815">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="62 views">
+    62 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95815/what-might-cause-coaxial-cable-noise" class="question-hyperlink">What might cause coaxial cable noise?</a></h3>
+        <div class="excerpt">
+            In my A level physics I recently did an experiment to find what the optimum frequency to send a digital signal through a RG58/U Coaxial Cable is. My results are available on Dropbox. What I found was ...
+        </div>          
+        <div class="tags t-noise t-frequency t-cables">
+            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/cables" class="post-tag" title="show questions tagged &#39;cables&#39;" rel="tag">cables</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-08 15:45:15Z" class="relativetime">Jan 8 at 15:45</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35193/samw"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/5c1e4e78c50546bbfb2ef7c64c50db2b?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35193/samw">SamW</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95122">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="50 views">
+    50 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95122/why-is-this-lpf-design-passing-frequencies-above-resonant-in-such-magnitudes" class="question-hyperlink">Why is this LPF design passing frequencies above resonant in such magnitudes?</a></h3>
+        <div class="excerpt">
+            It's been a while since I have worked with filtering so I decided to simulate a circuit to see what I had forgotten. I used MultiSim for my circuit simulations but will present the design using the ...
+        </div>          
+        <div class="tags t-noise t-low-pass">
+            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/low-pass" class="post-tag" title="show questions tagged &#39;low-pass&#39;" rel="tag">low-pass</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-01 16:03:53Z" class="relativetime">Jan 1 at 16:03</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/26864/sherrellbc"><div><img src="https://www.gravatar.com/avatar/3f590d99e58f1370b9846fcd29e0d43f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/26864/sherrellbc">sherrellbc</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">503</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94342">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="39 views">
+    39 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94342/the-origin-of-contact-noise" class="question-hyperlink">The origin of contact noise?</a></h3>
+        <div class="excerpt">
+            I was trying to measure the noise of a device with metal probes. I was not sure whether I should trust the results because I was told contact noise might contribute to some degree. I am a little ...
+        </div>          
+        <div class="tags t-noise">
+            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-22 02:04:42Z" class="relativetime">Dec 22 '13 at 2:04</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/11444/shva"><div><img src="https://www.gravatar.com/avatar/05198687700d8ed543a14f79815a729c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/11444/shva">shva</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">48</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94252">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="150 views">
+    150 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94252/usb-line-noise-in-aircraft-cockpit-recordings" class="question-hyperlink">USB line noise in aircraft cockpit recordings</a></h3>
+        <div class="excerpt">
+            I'm a pilot and we have a comm setup that I need some help with because of noise. We have a USB cable that supplies power to one of our GoPro cameras mounted in the cockpit. When this cable is plugged ...
+        </div>          
+        <div class="tags t-usb t-noise">
+            <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-20 15:44:28Z" class="relativetime">Dec 20 '13 at 15:44</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34446/agorski0489"><div><img src="https://www.gravatar.com/avatar/05e5622c88732d01ee06e231f5f4debd?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34446/agorski0489">agorski0489</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93315">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="88 views">
+    88 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93315/audible-noise-in-dc-dc-buck-converter" class="question-hyperlink">Audible noise in DC-DC buck converter</a></h3>
+        <div class="excerpt">
+            In my design, I have a +3.3V SMPS that provides power to digital circuits (microcontroller, EEPROM, etc.). The microcontroller allows applying a 100Hz PWM signal with variable duty cycle and with an ...
+        </div>          
+        <div class="tags t-pwm t-switch-mode-power-supply t-noise t-buck">
+            <a href="/questions/tagged/pwm" class="post-tag" title="show questions tagged &#39;pwm&#39;" rel="tag">pwm</a> <a href="/questions/tagged/switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-11 09:12:21Z" class="relativetime">Dec 11 '13 at 9:12</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/22628/johsey"><div><img src="https://www.gravatar.com/avatar/cc596859dfe9fa81f67540d3c21f0b3e?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/22628/johsey">johsey</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">123</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93008">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="69 views">
+    69 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93008/horrible-noise-after-plugins-power-to-my-laptop-plugged-into-effects-chain" class="question-hyperlink">Horrible noise after plugins power to my laptop plugged into effects chain [closed]</a></h3>
+        <div class="excerpt">
+            I'm using some stompbox effects with my guitar. I'm comparing them with my laptop where I have few VST effects.
+Everything sound clearly until I plugged power supply to the laptop. Then horrible noise ...
+        </div>          
+        <div class="tags t-noise t-troubleshooting">
+            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/troubleshooting" class="post-tag" title="show questions tagged &#39;troubleshooting&#39;" rel="tag">troubleshooting</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-08 08:39:29Z" class="relativetime">Dec 8 '13 at 8:39</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33834/dhpasta"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/100001289775623/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33834/dhpasta">dhpasta</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">19</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92640">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +773,8 @@ About issues caused by electrical noise, or improving the Signal/Noise ratio of 
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="38 views">
-    38 views
+        <div class="views " title="74 views">
+    74 views
 </div>
     </div>
     <div class="summary">
@@ -190,14 +791,14 @@ About issues caused by electrical noise, or improving the Signal/Noise ratio of 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-04 11:33:00Z" class="relativetime">8 hours ago</span>
+        asked <span title="2013-12-04 11:33:00Z" class="relativetime">Dec 4 '13 at 11:33</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33636/hochl"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/4296350a4653b1e62d2ee4d5659b3792?s=128&d=identicon&r=PG" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/33636/hochl">hochl</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">104</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">104</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -216,8 +817,8 @@ About issues caused by electrical noise, or improving the Signal/Noise ratio of 
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="116 views">
-    116 views
+        <div class="views " title="131 views">
+    131 views
 </div>
     </div>
     <div class="summary">
@@ -237,7 +838,7 @@ Ok, a few more ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-02 11:25:07Z" class="relativetime">2 days ago</span>
+        asked <span title="2013-12-02 11:25:07Z" class="relativetime">Dec 2 '13 at 11:25</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/22492/p3trus"><div><img src="https://www.gravatar.com/avatar/47a85725a4d2697f4072372fdc99bf44?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -259,12 +860,12 @@ Ok, a few more ...
                     <div class="viewcount">vote</div>
                 </div>
             </div>
-            <div class="status answered">
+            <div class="status answered-accepted">
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="60 views">
-    60 views
+        <div class="views " title="72 views">
+    72 views
 </div>
     </div>
     <div class="summary">
@@ -281,14 +882,14 @@ Ok, a few more ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-28 10:20:48Z" class="relativetime">Nov 28 at 10:20</span>
+        asked <span title="2013-11-28 10:20:48Z" class="relativetime">Nov 28 '13 at 10:20</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/8961/big-endian"><div><img src="https://www.gravatar.com/avatar/9f065c59c82897fc9f34bca5bab3c6b3?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/8961/big-endian">Big Endian</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">243</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">364</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -307,8 +908,8 @@ Ok, a few more ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="96 views">
-    96 views
+        <div class="views " title="115 views">
+    115 views
 </div>
     </div>
     <div class="summary">
@@ -325,7 +926,7 @@ Ok, a few more ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-27 10:30:11Z" class="relativetime">Nov 27 at 10:30</span>
+        asked <span title="2013-11-27 10:30:11Z" class="relativetime">Nov 27 '13 at 10:30</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/18555/joan"><div><img src="https://www.gravatar.com/avatar/83c8e1f1fe845893c8c0a37cdb215151?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -333,508 +934,6 @@ Ok, a few more ...
     <div class="user-details">
         <a href="/users/18555/joan">Joan</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">547</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91771">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="61 views">
-    61 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91771/noise-reduction-in-physiological-measurements-eeg-ecg" class="question-hyperlink">Noise reduction in physiological measurements (EEG/ECG) [duplicate]</a></h3>
-        <div class="excerpt">
-            I am building a hobby EEG and I am interested in quantifying how effective are the various noise reduction techniques.
-
-The basic circuit would be two electrodes going to an instrumentation amplifier. ...
-        </div>          
-        <div class="tags t-noise t-instrumentation-amplifier t-shielding t-common-mode t-biopotential">
-            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/instrumentation-amplifier" class="post-tag" title="show questions tagged &#39;instrumentation-amplifier&#39;" rel="tag">instrumentation-amplifier</a> <a href="/questions/tagged/shielding" class="post-tag" title="show questions tagged &#39;shielding&#39;" rel="tag">shielding</a> <a href="/questions/tagged/common-mode" class="post-tag" title="show questions tagged &#39;common-mode&#39;" rel="tag">common-mode</a> <a href="/questions/tagged/biopotential" class="post-tag" title="show questions tagged &#39;biopotential&#39;" rel="tag">biopotential</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-25 03:06:08Z" class="relativetime">Nov 25 at 3:06</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/24544/krastanov"><div><img src="https://www.gravatar.com/avatar/f078285bfd9090340d445e4fd69ec97f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/24544/krastanov">Krastanov</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">108</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91616">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="114 views">
-    114 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91616/strange-noise-on-dds" class="question-hyperlink">Strange noise on DDS</a></h3>
-        <div class="excerpt">
-            I have built an FPGA based DDS (fc=200MHz.  out: 0-50 or 0-80 MHz) . I have a decent DAC output  wave and now trying to build an appropriate filter for it ( Fig-1 ). The filter works rather fine but ...
-        </div>          
-        <div class="tags t-fpga t-filter t-noise t-dds">
-            <a href="/questions/tagged/fpga" class="post-tag" title="show questions tagged &#39;fpga&#39;" rel="tag">fpga</a> <a href="/questions/tagged/filter" class="post-tag" title="show questions tagged &#39;filter&#39;" rel="tag">filter</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/dds" class="post-tag" title="show questions tagged &#39;dds&#39;" rel="tag">dds</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-23 13:04:05Z" class="relativetime">Nov 23 at 13:04</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/28144/aug"><div><img src="https://www.gravatar.com/avatar/48afabfbd39ee660cdddf2038d4ad193?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/28144/aug">Aug</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">248</span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91197">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="55 views">
-    55 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91197/how-do-i-leave-electrical-connection-of-heat-sink-body" class="question-hyperlink">How do I leave electrical connection of heat-sink body?</a></h3>
-        <div class="excerpt">
-            I usually see that some heat-sinks have thick pins to solder on the PCB, and I'm going to use one of them. Since they are going to be soldered on the PCB, the question rises in my mind about their ...
-        </div>          
-        <div class="tags t-noise t-isolation t-heatsink">
-            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/isolation" class="post-tag" title="show questions tagged &#39;isolation&#39;" rel="tag">isolation</a> <a href="/questions/tagged/heatsink" class="post-tag" title="show questions tagged &#39;heatsink&#39;" rel="tag">heatsink</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-11-19 21:19:58Z" class="relativetime">Nov 19 at 21:19</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5542/hkbattousai"><div><img src="https://www.gravatar.com/avatar/b664c2c0e8d7c5259b06af265a4a0f51?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5542/hkbattousai">hkBattousai</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">2,204</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91109">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="94 views">
-    94 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91109/what-are-some-techniques-to-lower-noise-on-a-mixed-signal-analog-to-digital-conv" class="question-hyperlink">What are some techniques to lower noise on a mixed-signal analog-to-digital converter board?</a></h3>
-        <div class="excerpt">
-            I'm building a 24-bit ADC board for Arduino that can sense microvolts (biological signals). What are some good techniques to lower the noise that will negatively affect the ADC resolution?
-
-What I've ...
-        </div>          
-        <div class="tags t-arduino t-adc t-pcb-design t-noise t-biopotential">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/adc" class="post-tag" title="show questions tagged &#39;adc&#39;" rel="tag">adc</a> <a href="/questions/tagged/pcb-design" class="post-tag" title="show questions tagged &#39;pcb-design&#39;" rel="tag">pcb-design</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/biopotential" class="post-tag" title="show questions tagged &#39;biopotential&#39;" rel="tag">biopotential</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-19 04:34:32Z" class="relativetime">Nov 19 at 4:34</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/28301/adam"><div><img src="https://www.gravatar.com/avatar/83d6bc226d81c897d7e4380e18d528cb?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/28301/adam">Adam</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">43</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90788">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="105 views">
-    105 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90788/thick-waveform-in-oscope" class="question-hyperlink">thick waveform in oscope [closed]</a></h3>
-        <div class="excerpt">
-            I built an oscilliscope with ARM and internal ADC (Atmel), but my signal is very thick (noisy). It looks like this link, but sometimes worse! 
-
-Could the ADC be outputting noisy values?
-What could be ...
-        </div>          
-        <div class="tags t-noise t-oscilloscope t-waveform">
-            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/oscilloscope" class="post-tag" title="show questions tagged &#39;oscilloscope&#39;" rel="tag">oscilloscope</a> <a href="/questions/tagged/waveform" class="post-tag" title="show questions tagged &#39;waveform&#39;" rel="tag">waveform</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-15 20:30:40Z" class="relativetime">Nov 15 at 20:30</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/28386/firewhale"><div><img src="https://www.gravatar.com/avatar/63182abd9219cca3dd9aa988a4bfd95a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/28386/firewhale">firewhale</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-88074">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>4</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>4</strong>answers
-            </div>
-        </div>
-        <div class="views " title="81 views">
-    81 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/88074/adc-rms-noise-11nv4-7hz" class="question-hyperlink">ADC RMS Noise (11nv@4.7Hz)</a></h3>
-        <div class="excerpt">
-            What is ADC RMS noise? It would be helpful if someone could theoretically explain ADC RMS noise.Say a ADC has RMS noise of 11nV@4.7Hz.What does that mean? 
-
-        </div>          
-        <div class="tags t-adc t-noise">
-            <a href="/questions/tagged/adc" class="post-tag" title="show questions tagged &#39;adc&#39;" rel="tag">adc</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-09 09:52:17Z" class="relativetime">Nov 9 at 9:52</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31381/abhilash"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/5ZY4q.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31381/abhilash">abhilash</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">28</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87885">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="44 views">
-    44 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87885/using-adc-ad9057" class="question-hyperlink">Using ADC AD9057</a></h3>
-        <div class="excerpt">
-            I use AD9057 with fpga in my oscilloscope project. Here is the ADC pin-out 
-
-
-I use the following scheme to test ADC:
-VREF OUT connected to VREF IN, this gives internal reference voltage +2.5V
-
-Vd ...
-        </div>          
-        <div class="tags t-adc t-analog t-noise t-signal-processing">
-            <a href="/questions/tagged/adc" class="post-tag" title="show questions tagged &#39;adc&#39;" rel="tag">adc</a> <a href="/questions/tagged/analog" class="post-tag" title="show questions tagged &#39;analog&#39;" rel="tag">analog</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/signal-processing" class="post-tag" title="show questions tagged &#39;signal-processing&#39;" rel="tag">signal-processing</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-07 19:07:35Z" class="relativetime">Nov 7 at 19:07</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/22552/alex-hoppus"><div><img src="https://www.gravatar.com/avatar/490ffb63b0a1e3deb6b54f25896a9a93?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/22552/alex-hoppus">Alex Hoppus</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">118</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87798">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="61 views">
-    61 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87798/how-can-i-tell-what-type-of-capacitor-to-use-with-an-electric-motor-if-any" class="question-hyperlink">How can I tell what type of capacitor to use with an electric motor, if any?</a></h3>
-        <div class="excerpt">
-            I understand capacitors are used to reduce electronic noise from motors. I bought a little 4-motor car chass off of ebay and I wanted to know
-
-a) Does this motor already have a capacitor built in to ...
-        </div>          
-        <div class="tags t-capacitor t-motor t-noise">
-            <a href="/questions/tagged/capacitor" class="post-tag" title="show questions tagged &#39;capacitor&#39;" rel="tag">capacitor</a> <a href="/questions/tagged/motor" class="post-tag" title="show questions tagged &#39;motor&#39;" rel="tag">motor</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-07 02:03:42Z" class="relativetime">Nov 7 at 2:03</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/6855/stormist"><div><img src="https://www.gravatar.com/avatar/be248ab8fe8ab0678b09c9803633712b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/6855/stormist">stormist</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">276</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87490">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>4</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="112 views">
-    112 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87490/what-are-the-units-of-rssi-noise-and-snr-as-defined-by-ieee-802-11" class="question-hyperlink">What are the units of RSSI, noise and SNR as defined by IEEE 802.11?</a></h3>
-        <div class="excerpt">
-            I'm a CS graduate, but to my shame have very limited knowledge of electrical engineering and especially antenna theory.
-
-As far as I understand, RSSI determines quality of how measurer "hears" the ...
-        </div>          
-        <div class="tags t-noise t-wifi t-snr">
-            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/wifi" class="post-tag" title="show questions tagged &#39;wifi&#39;" rel="tag">wifi</a> <a href="/questions/tagged/snr" class="post-tag" title="show questions tagged &#39;snr&#39;" rel="tag">snr</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-04 17:46:15Z" class="relativetime">Nov 4 at 17:46</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31259/kentzo"><div><img src="https://www.gravatar.com/avatar/cc760e291a793b6b8e063c22d0306240?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31259/kentzo">Kentzo</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">123</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87288">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="44 views">
-    44 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87288/low-noise-high-current-regulator" class="question-hyperlink">Low noise High current regulator</a></h3>
-        <div class="excerpt">
-            I'm trying to convert 11-16 Vdc to 5 Vdc @ 3 A to run an array of low-impedance ratiometric sensors.  The outputs are going either directly into an ADC or amplified through an instrument amplifier.  ...
-        </div>          
-        <div class="tags t-voltage-regulator t-noise t-dc-dc-converter">
-            <a href="/questions/tagged/voltage-regulator" class="post-tag" title="show questions tagged &#39;voltage-regulator&#39;" rel="tag">voltage-regulator</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/dc-dc-converter" class="post-tag" title="show questions tagged &#39;dc-dc-converter&#39;" rel="tag">dc-dc-converter</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-02 23:47:12Z" class="relativetime">Nov 2 at 23:47</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/22614/user1816847"><div><img src="https://www.gravatar.com/avatar/c5aedd7bf37e402708c2a16f7fa419c2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/22614/user1816847">user1816847</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">47</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86924">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="55 views">
-    55 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86924/atmega32-using-porta-as-digital-io-has-digital-crosstalk" class="question-hyperlink">ATMega32, Using PORTA as digital io has digital &ldquo;crosstalk&rdquo;</a></h3>
-        <div class="excerpt">
-            I have multiple switches connected to portA on an atmega32. They are set as an input with internal pullups. There are no external pullups. The switches ground out the pins. I'm not debouncing the ...
-        </div>          
-        <div class="tags t-noise t-button t-crosstalk">
-            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/button" class="post-tag" title="show questions tagged &#39;button&#39;" rel="tag">button</a> <a href="/questions/tagged/crosstalk" class="post-tag" title="show questions tagged &#39;crosstalk&#39;" rel="tag">crosstalk</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-30 01:57:58Z" class="relativetime">Oct 30 at 1:57</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/3657/vilive"><div><img src="https://www.gravatar.com/avatar/781266e45ad828cfe419d578b19ce1bf?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/3657/vilive">vilive</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">105</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -853,28 +952,28 @@ As far as I understand, RSSI determines quality of how measurer "hears" the ...
         <a href="/questions/tagged/noise?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/noise?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/noise?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
- <span class="page-numbers dots">…</span>         <a href="/questions/tagged/noise?page=14&amp;sort=newest&amp;pagesize=15" title="go to page 14"> <span class="page-numbers">14</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/noise?page=15&amp;sort=newest&amp;pagesize=15" title="go to page 15"> <span class="page-numbers">15</span> </a> 
         <a href="/questions/tagged/noise?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/noise?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/noise?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/noise?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/noise?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/noise?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/noise?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=noise&amp;sort=newest" title="the 30 newest noise questions"><span class="feed-icon"></span>newest noise questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=noise&sort=newest" title="the 30 newest noise questions"><span class="feed-icon"></span>newest noise questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">205</div>
+            <div class="summarycount al">216</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> 
@@ -885,38 +984,279 @@ As far as I understand, RSSI determines quality of how measurer "hears" the ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/noise+power-supply" class="post-tag" title="show questions tagged &#39;noise power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span><br>
-            <a href="/questions/tagged/noise+audio" class="post-tag" title="show questions tagged &#39;noise audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span><br>
-            <a href="/questions/tagged/noise+adc" class="post-tag" title="show questions tagged &#39;noise adc&#39;" rel="tag">adc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span><br>
-            <a href="/questions/tagged/noise+signal" class="post-tag" title="show questions tagged &#39;noise signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span><br>
-            <a href="/questions/tagged/noise+op-amp" class="post-tag" title="show questions tagged &#39;noise op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span><br>
-            <a href="/questions/tagged/noise+amplifier" class="post-tag" title="show questions tagged &#39;noise amplifier&#39;" rel="tag">amplifier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/noise+arduino" class="post-tag" title="show questions tagged &#39;noise arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/noise+filter" class="post-tag" title="show questions tagged &#39;noise filter&#39;" rel="tag">filter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/noise+switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;noise switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/noise+power" class="post-tag" title="show questions tagged &#39;noise power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/noise+ground" class="post-tag" title="show questions tagged &#39;noise ground&#39;" rel="tag">ground</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/noise+rf" class="post-tag" title="show questions tagged &#39;noise rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/noise+resistors" class="post-tag" title="show questions tagged &#39;noise resistors&#39;" rel="tag">resistors</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/noise+voltage-regulator" class="post-tag" title="show questions tagged &#39;noise voltage-regulator&#39;" rel="tag">voltage-regulator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/noise+pcb" class="post-tag" title="show questions tagged &#39;noise pcb&#39;" rel="tag">pcb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/noise+i2c" class="post-tag" title="show questions tagged &#39;noise i2c&#39;" rel="tag">i2c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/noise+pcb-design" class="post-tag" title="show questions tagged &#39;noise pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/noise+emc" class="post-tag" title="show questions tagged &#39;noise emc&#39;" rel="tag">emc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/noise+microcontroller" class="post-tag" title="show questions tagged &#39;noise microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/noise+analog" class="post-tag" title="show questions tagged &#39;noise analog&#39;" rel="tag">analog</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/noise+stm32" class="post-tag" title="show questions tagged &#39;noise stm32&#39;" rel="tag">stm32</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/noise+fan" class="post-tag" title="show questions tagged &#39;noise fan&#39;" rel="tag">fan</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/noise+common-mode" class="post-tag" title="show questions tagged &#39;noise common-mode&#39;" rel="tag">common-mode</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/noise+voltage" class="post-tag" title="show questions tagged &#39;noise voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/noise+measurement" class="post-tag" title="show questions tagged &#39;noise measurement&#39;" rel="tag">measurement</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
+        <div>
+            <a href="/questions/tagged/noise+power-supply" class="post-tag" title="show questions tagged &#39;noise power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/noise+audio" class="post-tag" title="show questions tagged &#39;noise audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/noise+adc" class="post-tag" title="show questions tagged &#39;noise adc&#39;" rel="tag">adc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/noise+signal" class="post-tag" title="show questions tagged &#39;noise signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/noise+op-amp" class="post-tag" title="show questions tagged &#39;noise op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/noise+switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;noise switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/noise+arduino" class="post-tag" title="show questions tagged &#39;noise arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/noise+filter" class="post-tag" title="show questions tagged &#39;noise filter&#39;" rel="tag">filter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/noise+amplifier" class="post-tag" title="show questions tagged &#39;noise amplifier&#39;" rel="tag">amplifier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/noise+power" class="post-tag" title="show questions tagged &#39;noise power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+pcb" class="post-tag" title="show questions tagged &#39;noise pcb&#39;" rel="tag">pcb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+rf" class="post-tag" title="show questions tagged &#39;noise rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+ground" class="post-tag" title="show questions tagged &#39;noise ground&#39;" rel="tag">ground</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+voltage-regulator" class="post-tag" title="show questions tagged &#39;noise voltage-regulator&#39;" rel="tag">voltage-regulator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+resistors" class="post-tag" title="show questions tagged &#39;noise resistors&#39;" rel="tag">resistors</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+pcb-design" class="post-tag" title="show questions tagged &#39;noise pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+i2c" class="post-tag" title="show questions tagged &#39;noise i2c&#39;" rel="tag">i2c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+microcontroller" class="post-tag" title="show questions tagged &#39;noise microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+analog" class="post-tag" title="show questions tagged &#39;noise analog&#39;" rel="tag">analog</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+pwm" class="post-tag" title="show questions tagged &#39;noise pwm&#39;" rel="tag">pwm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+voltage" class="post-tag" title="show questions tagged &#39;noise voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+emc" class="post-tag" title="show questions tagged &#39;noise emc&#39;" rel="tag">emc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+buck" class="post-tag" title="show questions tagged &#39;noise buck&#39;" rel="tag">buck</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+biopotential" class="post-tag" title="show questions tagged &#39;noise biopotential&#39;" rel="tag">biopotential</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/noise+stm32" class="post-tag" title="show questions tagged &#39;noise stm32&#39;" rel="tag">stm32</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -936,7 +1276,7 @@ As far as I understand, RSSI determines quality of how measurer "hears" the ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/noise")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1029,7 +1369,7 @@ As far as I understand, RSSI determines quality of how measurer "hears" the ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1056,14 +1396,11 @@ As far as I understand, RSSI determines quality of how measurer "hears" the ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1072,33 +1409,34 @@ As far as I understand, RSSI determines quality of how measurer "hears" the ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|noise|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|noise|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

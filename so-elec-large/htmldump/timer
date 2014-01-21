@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged timer" href="/feeds/tag/timer" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186317,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328424,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftimer" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftimer" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[timer]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftimer">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftimer">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[timer]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/timer/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/timer?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/timer?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/timer?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/timer?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/timer?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/timer?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/timer?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/timer?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/timer?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/timer?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,470 @@ Circuit to generate a signal a specific time after a trigger event. The timing c
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92634">
+<div class="question-summary" id="question-summary-97172">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-6</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="29 views">
+    29 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/97172/how-to-made-a-4-way-traffic-signal-using-555-timer-with-a-countdown-circuit" class="question-hyperlink">how to made a 4 way traffic signal using 555 timer with a countdown circuit [on hold]</a></h3>
+        <div class="excerpt">
+            How to add countdown timer to 4 way traffic signal? I am using 555 timer and 4017 IC.
+
+        </div>          
+        <div class="tags t-timer t-555 t-counter">
+            <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/555" class="post-tag" title="show questions tagged &#39;555&#39;" rel="tag">555</a> <a href="/questions/tagged/counter" class="post-tag" title="show questions tagged &#39;counter&#39;" rel="tag">counter</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-21 14:56:11Z" class="relativetime">3 hours ago</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35891/user35891"><div><img src="https://www.gravatar.com/avatar/53e94a48cbe27e0ec00bb0906f15654e?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35891/user35891">user35891</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-97032">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-1</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="76 views">
+    76 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/97032/pic18-microseconds-counter" class="question-hyperlink">PIC18 microseconds counter</a></h3>
+        <div class="excerpt">
+            I want to count microseconds between timer's ON/OFF. My FOSC is 48 MHz.
+I figured out timer1 would need to be initialized like (I'm programming in mplab):
+
+...
+        </div>          
+        <div class="tags t-pic t-timer t-counter">
+            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/counter" class="post-tag" title="show questions tagged &#39;counter&#39;" rel="tag">counter</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-20 10:43:45Z" class="relativetime">yesterday</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35819/c4rrt3r"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/2ff17c82ddda85ab112414beb46f27ce?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35819/c4rrt3r">c4rrt3r</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96537">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="55 views">
+    55 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96537/deferred-callback-manager-software-timer-library-for-pic32" class="question-hyperlink">Deferred callback manager / software timer library for PIC32</a></h3>
+        <div class="excerpt">
+            I'm looking for a software timer library for embedded systems, especially PIC32, free or commercial. I'm NOT looking for a full-blown RTOS with threads, I/O, etc. - just for the software timer ...
+        </div>          
+        <div class="tags t-embedded t-timer">
+            <a href="/questions/tagged/embedded" class="post-tag" title="show questions tagged &#39;embedded&#39;" rel="tag">embedded</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-15 11:59:34Z" class="relativetime">Jan 15 at 11:59</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/11291/edgar-holleis"><div><img src="https://www.gravatar.com/avatar/322909928165a193e16c12fd6cfad8ce?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/11291/edgar-holleis">edgar.holleis</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">131</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95504">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="49 views">
+    49 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95504/how-does-this-synchronizing-edge-detector-logical-diagram-work" class="question-hyperlink">How does this synchronizing/edge detector logical diagram work?</a></h3>
+        <div class="excerpt">
+            
+
+This is the logic diagram for a MCU that allows for an external clock option via <span class='tex2jax_ignore'>Tn</span>. This clock can be used as the source for clocking an internal timer register. ...
+        </div>          
+        <div class="tags t-microcontroller t-timer t-edge">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/edge" class="post-tag" title="show questions tagged &#39;edge&#39;" rel="tag">edge</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-05 16:48:09Z" class="relativetime">Jan 5 at 16:48</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/26864/sherrellbc"><div><img src="https://www.gravatar.com/avatar/3f590d99e58f1370b9846fcd29e0d43f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/26864/sherrellbc">sherrellbc</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">503</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95168">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="61 views">
+    61 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95168/prescaled-timers-problem" class="question-hyperlink">Prescaled Timers Problem</a></h3>
+        <div class="excerpt">
+            I'm using a attiny2313a, and I'm having a lot of trouble figuring out what's going on with the timer. It's very simple, yet it simply refuses to work.
+
+I have a 16Mhz clock.
+When I put in a 1024 ...
+        </div>          
+        <div class="tags t-microcontroller t-avr t-timer">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/avr" class="post-tag" title="show questions tagged &#39;avr&#39;" rel="tag">avr</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-02 05:38:59Z" class="relativetime">Jan 2 at 5:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/23906/triplebig"><div><img src="https://www.gravatar.com/avatar/d9b07218b9c29128ca93251c175443aa?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/23906/triplebig">triplebig</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">71</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94872">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="127 views">
+    127 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94872/is-555-timer-good-to-generate-20mhz-clock" class="question-hyperlink">is 555 timer good to generate 20MHz clock?</a></h3>
+        <div class="excerpt">
+            I am looking for a way to generate 10 to 20MHz TTL-compatible clock signal. I used something like microchip unit to produce clock signal before in school but I didn't use any other way to generate ...
+        </div>          
+        <div class="tags t-clock t-timer">
+            <a href="/questions/tagged/clock" class="post-tag" title="show questions tagged &#39;clock&#39;" rel="tag">clock</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-29 01:51:13Z" class="relativetime">Dec 29 '13 at 1:51</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/17060/user1285419"><div><img src="https://www.gravatar.com/avatar/08ee68b20a4eceff26f7eee99b708c08?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/17060/user1285419">user1285419</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">217</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93804">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="91 views">
+    91 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93804/msp430-how-to-let-the-timer-isr-interrupt-the-serial-rx-isr" class="question-hyperlink">MSP430: how to let the timer ISR interrupt the Serial RX ISR?</a></h3>
+        <div class="excerpt">
+            I am working on a MSP430 connected to the PC via serial. The MSP430 also communicates with some other boards using a bit-banged serial interface. I'm using the timer peripheral to bit bang the serial, ...
+        </div>          
+        <div class="tags t-microcontroller t-serial t-timer t-msp430 t-interrupts">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/serial" class="post-tag" title="show questions tagged &#39;serial&#39;" rel="tag">serial</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/msp430" class="post-tag" title="show questions tagged &#39;msp430&#39;" rel="tag">msp430</a> <a href="/questions/tagged/interrupts" class="post-tag" title="show questions tagged &#39;interrupts&#39;" rel="tag">interrupts</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-15 21:33:47Z" class="relativetime">Dec 15 '13 at 21:33</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/8593/marcus10110"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/IoaPl.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/8593/marcus10110">Marcus10110</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">136</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93259">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="38 views">
+    38 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93259/holding-voltage-high-for-monostable-555-timer-pulse" class="question-hyperlink">Holding voltage high, for monostable 555 timer pulse</a></h3>
+        <div class="excerpt">
+            First I'll mention I am an amatuer in electronics and therefore I ask for easy to implement answers. Thanks.
+
+Straight forward to my question:
+I want to know if there is a simple (and cheap) way to ...
+        </div>          
+        <div class="tags t-timer t-servo t-555 t-pulse">
+            <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/servo" class="post-tag" title="show questions tagged &#39;servo&#39;" rel="tag">servo</a> <a href="/questions/tagged/555" class="post-tag" title="show questions tagged &#39;555&#39;" rel="tag">555</a> <a href="/questions/tagged/pulse" class="post-tag" title="show questions tagged &#39;pulse&#39;" rel="tag">pulse</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-10 21:32:00Z" class="relativetime">Dec 10 '13 at 21:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33953/nitzpo"><div><img src="https://www.gravatar.com/avatar/c0ca563f94fafcc592c15591e9134314?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33953/nitzpo">nitzpo</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93134">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="194 views">
+    194 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93134/how-to-understand-the-functions-of-a-therm-o-disc-12s20-h24v" class="question-hyperlink">How to understand the functions of a Therm-O-Disc 12S20 H24V?</a></h3>
+        <div class="excerpt">
+            I am an electrical novice and have a Therm-O-Disc 12S20 H24V (original image) relay that I'm attempting to understand.
+
+
+
+The only meaningful documentation I've been able to find is this, 12S, 14S, ...
+        </div>          
+        <div class="tags t-relay t-timer">
+            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-09 18:58:15Z" class="relativetime">Dec 9 '13 at 18:58</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33890/leastone"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/7f75dffa3592d21f88cef42821114186?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33890/leastone">LeastOne</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92889">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="46 views">
+    46 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/92889/interrupts-and-arduino-ethernetshield" class="question-hyperlink">Interrupts and Arduino EthernetShield</a></h3>
+        <div class="excerpt">
+            I'm in need of a little guidance in a project I'm working on.
+
+Basically, I'll be using two arduinos:
+
+The first one will have:
+
+
+1 RF Link Receiver (linke here: ...
+        </div>          
+        <div class="tags t-arduino t-ethernet t-timer t-interrupts">
+            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/ethernet" class="post-tag" title="show questions tagged &#39;ethernet&#39;" rel="tag">ethernet</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/interrupts" class="post-tag" title="show questions tagged &#39;interrupts&#39;" rel="tag">interrupts</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-06 16:50:58Z" class="relativetime">Dec 6 '13 at 16:50</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33762/rainier9"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/2cfdfe098207049432d8ee4c373fd1f2?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33762/rainier9">Rainier9</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">101</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92634">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +734,8 @@ Circuit to generate a signal a specific time after a trigger event. The timing c
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="26 views">
-    26 views
+        <div class="views " title="40 views">
+    40 views
 </div>
     </div>
     <div class="summary">
@@ -190,7 +752,7 @@ Circuit to generate a signal a specific time after a trigger event. The timing c
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-04 09:36:46Z" class="relativetime">10 hours ago</span>
+        asked <span title="2013-12-04 09:36:46Z" class="relativetime">Dec 4 '13 at 9:36</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33628/pufferfish"><div><img src="https://www.gravatar.com/avatar/2574d588607a537aaa6d61d8efb8d066?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -216,12 +778,12 @@ Circuit to generate a signal a specific time after a trigger event. The timing c
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="35 views">
-    35 views
+        <div class="views " title="120 views">
+    120 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92350/what-is-the-difference-between-tccr1a-and-tccr1b" class="question-hyperlink">What is the difference between TCCR1A and TCCR1B [on hold]</a></h3>
+        <h3><a href="/questions/92350/what-is-the-difference-between-tccr1a-and-tccr1b" class="question-hyperlink">What is the difference between TCCR1A and TCCR1B [closed]</a></h3>
         <div class="excerpt">
             I had an error in the configuration of PWM for the atmega8 because I didn't set my register properly. But I thought that Timer 1 is timer 1, no matter is TCCR1A or TCCR1B. Why can I set all the timer ...
         </div>          
@@ -234,7 +796,7 @@ Circuit to generate a signal a specific time after a trigger event. The timing c
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-01 14:24:27Z" class="relativetime">Dec 1 at 14:24</span>
+        asked <span title="2013-12-01 14:24:27Z" class="relativetime">Dec 1 '13 at 14:24</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/13542/conrad-c"><div><img src="https://www.gravatar.com/avatar/a449b9f9c82c29acbba6cd51e012caf9?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -260,8 +822,8 @@ Circuit to generate a signal a specific time after a trigger event. The timing c
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="55 views">
-    55 views
+        <div class="views " title="130 views">
+    130 views
 </div>
     </div>
     <div class="summary">
@@ -278,7 +840,7 @@ Circuit to generate a signal a specific time after a trigger event. The timing c
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-30 20:04:56Z" class="relativetime">Nov 30 at 20:04</span>
+        asked <span title="2013-11-30 20:04:56Z" class="relativetime">Nov 30 '13 at 20:04</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/28238/muayyad-alsadi"><div><img src="https://www.gravatar.com/avatar/22b3de0ed1d200ba1e747a066fe69280?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -304,8 +866,8 @@ Circuit to generate a signal a specific time after a trigger event. The timing c
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="45 views">
-    45 views
+        <div class="views " title="93 views">
+    93 views
 </div>
     </div>
     <div class="summary">
@@ -324,14 +886,14 @@ my function for delay ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-21 07:06:48Z" class="relativetime">Nov 21 at 7:06</span>
+        asked <span title="2013-11-21 07:06:48Z" class="relativetime">Nov 21 '13 at 7:06</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/23841/shail-korat"><div><img src="https://www.gravatar.com/avatar/649adca335821feacbd54299440806f2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/23841/shail-korat">shail korat</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">74</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
@@ -350,8 +912,8 @@ my function for delay ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="47 views">
-    47 views
+        <div class="views " title="86 views">
+    86 views
 </div>
     </div>
     <div class="summary">
@@ -368,464 +930,14 @@ my function for delay ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-20 10:46:10Z" class="relativetime">Nov 20 at 10:46</span>
+        asked <span title="2013-11-20 10:46:10Z" class="relativetime">Nov 20 '13 at 10:46</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26478/gerhman"><div><img src="https://www.gravatar.com/avatar/74400f4026900dc01126103ae4494612?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/26478/gerhman">Gerhman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91102">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="65 views">
-    65 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91102/555-temperature-controlled-pwm" class="question-hyperlink">555 Temperature Controlled PWM</a></h3>
-        <div class="excerpt">
-            I am trying to build a temperature controlled 555 circuit to drive a cpu fan (used for cooling my entertainment center)
-
-I built this using slightly different diodes and MOSFET, and it works great ...
-        </div>          
-        <div class="tags t-pwm t-temperature t-timer t-555 t-fan">
-            <a href="/questions/tagged/pwm" class="post-tag" title="show questions tagged &#39;pwm&#39;" rel="tag">pwm</a> <a href="/questions/tagged/temperature" class="post-tag" title="show questions tagged &#39;temperature&#39;" rel="tag">temperature</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/555" class="post-tag" title="show questions tagged &#39;555&#39;" rel="tag">555</a> <a href="/questions/tagged/fan" class="post-tag" title="show questions tagged &#39;fan&#39;" rel="tag">fan</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-19 02:06:36Z" class="relativetime">Nov 19 at 2:06</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/17177/lkrasner"><div><img src="https://www.gravatar.com/avatar/351716eea1a61f6b6137aec841c787f6?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/17177/lkrasner">lkrasner</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90778">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="83 views">
-    83 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90778/does-arduino-spi-use-up-a-timer" class="question-hyperlink">Does Arduino SPI use up a timer</a></h3>
-        <div class="excerpt">
-            I plan on using a barebones Atmega168 running an Arduino sketch to drive two stepper motors and a heater. To interface with the steppers and heater I want to use 4 PWM pins. I will also have an SPI ...
-        </div>          
-        <div class="tags t-arduino t-avr t-spi t-stepper-motor t-timer">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/avr" class="post-tag" title="show questions tagged &#39;avr&#39;" rel="tag">avr</a> <a href="/questions/tagged/spi" class="post-tag" title="show questions tagged &#39;spi&#39;" rel="tag">spi</a> <a href="/questions/tagged/stepper-motor" class="post-tag" title="show questions tagged &#39;stepper-motor&#39;" rel="tag">stepper-motor</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-15 17:24:00Z" class="relativetime">Nov 15 at 17:24</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/26478/gerhman"><div><img src="https://www.gravatar.com/avatar/74400f4026900dc01126103ae4494612?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/26478/gerhman">Gerhman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90760">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="41 views">
-    41 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90760/avr-timer-for-pwm-and-interrupt" class="question-hyperlink">AVR Timer for PWM and interrupt?</a></h3>
-        <div class="excerpt">
-            I am developing a system that needs to drive 4 stepper motors through 4 dual H-bridges, for each phase of movement the AVR will receive SPI messages stating how many steps each motor should do and ...
-        </div>          
-        <div class="tags t-avr t-pwm t-stepper-motor t-timer t-interrupts">
-            <a href="/questions/tagged/avr" class="post-tag" title="show questions tagged &#39;avr&#39;" rel="tag">avr</a> <a href="/questions/tagged/pwm" class="post-tag" title="show questions tagged &#39;pwm&#39;" rel="tag">pwm</a> <a href="/questions/tagged/stepper-motor" class="post-tag" title="show questions tagged &#39;stepper-motor&#39;" rel="tag">stepper-motor</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/interrupts" class="post-tag" title="show questions tagged &#39;interrupts&#39;" rel="tag">interrupts</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-15 15:09:34Z" class="relativetime">Nov 15 at 15:09</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/26478/gerhman"><div><img src="https://www.gravatar.com/avatar/74400f4026900dc01126103ae4494612?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/26478/gerhman">Gerhman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90617">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="21 views">
-    21 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90617/what-is-the-alternate-for-data-watchpoint-and-trace-unit-dwt-in-arm-cortex-a9" class="question-hyperlink">What is the alternate for Data Watchpoint and Trace Unit (DWT) in ARM Cortex A9 ?</a></h3>
-        <div class="excerpt">
-            I understand there is no Data Watchpoint and Trace Unit in an ARM Cortex A9 processor. So what is the substitute in A9? My intention of using it is to know how many cycles a specific function is ...
-        </div>          
-        <div class="tags t-arm t-timer">
-            <a href="/questions/tagged/arm" class="post-tag" title="show questions tagged &#39;arm&#39;" rel="tag">arm</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-14 06:59:39Z" class="relativetime">Nov 14 at 6:59</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/10724/gpuguy"><div><img src="https://www.gravatar.com/avatar/2f25900726215578f5c22fd73acd0e5f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/10724/gpuguy">gpuguy</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">308</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87386">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="122 views">
-    122 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87386/how-to-compute-timer1-period" class="question-hyperlink">How to compute Timer1 period?</a></h3>
-        <div class="excerpt">
-            I'm trying to configure Timer1 of a pic24h to 1ms per timer tick but don't seem to be able to get the math to match my results.
-
-I have a 20MHz external oscillator (with a 1M resistor in parallel for ...
-        </div>          
-        <div class="tags t-pic t-oscillator t-timer t-mplabx">
-            <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/oscillator" class="post-tag" title="show questions tagged &#39;oscillator&#39;" rel="tag">oscillator</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/mplabx" class="post-tag" title="show questions tagged &#39;mplabx&#39;" rel="tag">mplabx</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-04 03:57:44Z" class="relativetime">Nov 4 at 3:57</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/13393/tarabyte"><div><img src="https://www.gravatar.com/avatar/6741fb9dd6e6beb585c5022dcc84740a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/13393/tarabyte">tarabyte</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">342</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86085">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="95 views">
-    95 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86085/limit-number-of-pulses-from-555-or-similar" class="question-hyperlink">Limit Number Of Pulses From 555 Or Similar</a></h3>
-        <div class="excerpt">
-            I need as small a circuit as possible that can produce 2 pulses (say maybe 200 milliseconds long and apart) when I press a button.  My thought was to use a 555 timer and set it up for my desired pulse ...
-        </div>          
-        <div class="tags t-switches t-timer t-555 t-button t-pulse">
-            <a href="/questions/tagged/switches" class="post-tag" title="show questions tagged &#39;switches&#39;" rel="tag">switches</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/555" class="post-tag" title="show questions tagged &#39;555&#39;" rel="tag">555</a> <a href="/questions/tagged/button" class="post-tag" title="show questions tagged &#39;button&#39;" rel="tag">button</a> <a href="/questions/tagged/pulse" class="post-tag" title="show questions tagged &#39;pulse&#39;" rel="tag">pulse</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-21 17:32:52Z" class="relativetime">Oct 21 at 17:32</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/17177/lkrasner"><div><img src="https://www.gravatar.com/avatar/351716eea1a61f6b6137aec841c787f6?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/17177/lkrasner">lkrasner</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84776">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="165 views">
-    165 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84776/arduino-delaymicroseconds" class="question-hyperlink">arduino : delaymicroseconds()</a></h3>
-        <div class="excerpt">
-            How does the delayMicroseconds() function works. From what I understood the prescaler of timer0 is set to 64. For a 16MHz clock gives 4.0uS per count. I am a bit confused on the math to get to 1uS ...
-        </div>          
-        <div class="tags t-arduino t-timer">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-08 19:18:51Z" class="relativetime">Oct 8 at 19:18</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/29545/hawk-08"><div><img src="https://www.gravatar.com/avatar/004edfa57c8fcf61dd79a998a73196c3?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/29545/hawk-08">Hawk_08</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">30</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84275">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="88 views">
-    88 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84275/555-timer-triggering-too-easily" class="question-hyperlink">555 Timer Triggering Too Easily</a></h3>
-        <div class="excerpt">
-            I've got a 555 timer being powered by a 5v rail that is isolated from the 3v rail running a motor driver, which runs a motor. 
-
-The 555 is only supposed to fire when it gets the signal from a 38khz ...
-        </div>          
-        <div class="tags t-motor t-timer t-infrared t-555 t-trigger">
-            <a href="/questions/tagged/motor" class="post-tag" title="show questions tagged &#39;motor&#39;" rel="tag">motor</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/infrared" class="post-tag" title="show questions tagged &#39;infrared&#39;" rel="tag">infrared</a> <a href="/questions/tagged/555" class="post-tag" title="show questions tagged &#39;555&#39;" rel="tag">555</a> <a href="/questions/tagged/trigger" class="post-tag" title="show questions tagged &#39;trigger&#39;" rel="tag">trigger</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-04 02:32:44Z" class="relativetime">Oct 4 at 2:32</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/25707/modest-max"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/vWVIc.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/25707/modest-max">modest_max</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84164">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="261 views">
-    261 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84164/pic-how-to-set-timer0-to-give-an-interrupt-at-every-1-sec" class="question-hyperlink">PIC: how to set timer0 to give an interrupt at every 1 sec?</a></h3>
-        <div class="excerpt">
-            I am programming a PIC18F67K22 and I've set it to use a 16X4Mhz Internal RC oscillator with PLL enabled.
-
--High level interrupt on <span class='tex2jax_ignore'>TIMER0</span> overflow 
-
--I am using ...
-        </div>          
-        <div class="tags t-microcontroller t-pic t-timer t-interrupts">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/interrupts" class="post-tag" title="show questions tagged &#39;interrupts&#39;" rel="tag">interrupts</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-03 05:54:41Z" class="relativetime">Oct 3 at 5:54</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/23841/shail-korat"><div><img src="https://www.gravatar.com/avatar/649adca335821feacbd54299440806f2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/23841/shail-korat">shail korat</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">74</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-83872">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>5</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="284 views">
-    284 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/83872/pic-microcontrollers-ambiguous-quiz-questions" class="question-hyperlink">PIC Microcontrollers, ambiguous quiz questions</a></h3>
-        <div class="excerpt">
-            I am taking a course in micro-controllers (PIC). I recently took a quiz but i am having hard time convincing my teaching assistant that the quiz he made is ambiguous as hell. What would your choices ...
-        </div>          
-        <div class="tags t-microcontroller t-timer">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-30 15:06:52Z" class="relativetime">Sep 30 at 15:06</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/27349/haxan7"><div><img src="https://www.gravatar.com/avatar/485d8eb402b93c90db45ae8a43684b92?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/27349/haxan7">haxan7</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">156</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">176</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -850,22 +962,22 @@ The 555 is only supposed to fire when it gets the signal from a 38khz ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/timer?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/timer?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/timer?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/timer?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/timer?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/timer?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=timer&amp;sort=newest" title="the 30 newest timer questions"><span class="feed-icon"></span>newest timer questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=timer&sort=newest" title="the 30 newest timer questions"><span class="feed-icon"></span>newest timer questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">153</div>
+            <div class="summarycount al">163</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
@@ -876,38 +988,279 @@ The 555 is only supposed to fire when it gets the signal from a 38khz ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/timer+pic" class="post-tag" title="show questions tagged &#39;timer pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">25</span></span><br>
-            <a href="/questions/tagged/timer+microcontroller" class="post-tag" title="show questions tagged &#39;timer microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">21</span></span><br>
-            <a href="/questions/tagged/timer+avr" class="post-tag" title="show questions tagged &#39;timer avr&#39;" rel="tag">avr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">18</span></span><br>
-            <a href="/questions/tagged/timer+interrupts" class="post-tag" title="show questions tagged &#39;timer interrupts&#39;" rel="tag">interrupts</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span><br>
-            <a href="/questions/tagged/timer+555" class="post-tag" title="show questions tagged &#39;timer 555&#39;" rel="tag">555</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span><br>
-            <a href="/questions/tagged/timer+arduino" class="post-tag" title="show questions tagged &#39;timer arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/timer+c" class="post-tag" title="show questions tagged &#39;timer c&#39;" rel="tag">c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/timer+led" class="post-tag" title="show questions tagged &#39;timer led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/timer+delay" class="post-tag" title="show questions tagged &#39;timer delay&#39;" rel="tag">delay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/timer+relay" class="post-tag" title="show questions tagged &#39;timer relay&#39;" rel="tag">relay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/timer+switches" class="post-tag" title="show questions tagged &#39;timer switches&#39;" rel="tag">switches</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/timer+stm32" class="post-tag" title="show questions tagged &#39;timer stm32&#39;" rel="tag">stm32</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/timer+oscillator" class="post-tag" title="show questions tagged &#39;timer oscillator&#39;" rel="tag">oscillator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/timer+atmega" class="post-tag" title="show questions tagged &#39;timer atmega&#39;" rel="tag">atmega</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/timer+clock" class="post-tag" title="show questions tagged &#39;timer clock&#39;" rel="tag">clock</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/timer+capacitor" class="post-tag" title="show questions tagged &#39;timer capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/timer+integrated-circuit" class="post-tag" title="show questions tagged &#39;timer integrated-circuit&#39;" rel="tag">integrated-circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/timer+arm" class="post-tag" title="show questions tagged &#39;timer arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/timer+counter" class="post-tag" title="show questions tagged &#39;timer counter&#39;" rel="tag">counter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/timer+pwm" class="post-tag" title="show questions tagged &#39;timer pwm&#39;" rel="tag">pwm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/timer+attiny" class="post-tag" title="show questions tagged &#39;timer attiny&#39;" rel="tag">attiny</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/timer+assembly" class="post-tag" title="show questions tagged &#39;timer assembly&#39;" rel="tag">assembly</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/timer+motor" class="post-tag" title="show questions tagged &#39;timer motor&#39;" rel="tag">motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/timer+digital-logic" class="post-tag" title="show questions tagged &#39;timer digital-logic&#39;" rel="tag">digital-logic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/timer+stepper-motor" class="post-tag" title="show questions tagged &#39;timer stepper-motor&#39;" rel="tag">stepper-motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
+        <div>
+            <a href="/questions/tagged/timer+pic" class="post-tag" title="show questions tagged &#39;timer pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">26</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/timer+microcontroller" class="post-tag" title="show questions tagged &#39;timer microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">24</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/timer+555" class="post-tag" title="show questions tagged &#39;timer 555&#39;" rel="tag">555</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/timer+avr" class="post-tag" title="show questions tagged &#39;timer avr&#39;" rel="tag">avr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/timer+interrupts" class="post-tag" title="show questions tagged &#39;timer interrupts&#39;" rel="tag">interrupts</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/timer+arduino" class="post-tag" title="show questions tagged &#39;timer arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/timer+led" class="post-tag" title="show questions tagged &#39;timer led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/timer+c" class="post-tag" title="show questions tagged &#39;timer c&#39;" rel="tag">c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/timer+delay" class="post-tag" title="show questions tagged &#39;timer delay&#39;" rel="tag">delay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/timer+relay" class="post-tag" title="show questions tagged &#39;timer relay&#39;" rel="tag">relay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+oscillator" class="post-tag" title="show questions tagged &#39;timer oscillator&#39;" rel="tag">oscillator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+stm32" class="post-tag" title="show questions tagged &#39;timer stm32&#39;" rel="tag">stm32</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+counter" class="post-tag" title="show questions tagged &#39;timer counter&#39;" rel="tag">counter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+switches" class="post-tag" title="show questions tagged &#39;timer switches&#39;" rel="tag">switches</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+atmega" class="post-tag" title="show questions tagged &#39;timer atmega&#39;" rel="tag">atmega</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+clock" class="post-tag" title="show questions tagged &#39;timer clock&#39;" rel="tag">clock</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+arm" class="post-tag" title="show questions tagged &#39;timer arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+pwm" class="post-tag" title="show questions tagged &#39;timer pwm&#39;" rel="tag">pwm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+integrated-circuit" class="post-tag" title="show questions tagged &#39;timer integrated-circuit&#39;" rel="tag">integrated-circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+capacitor" class="post-tag" title="show questions tagged &#39;timer capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+assembly" class="post-tag" title="show questions tagged &#39;timer assembly&#39;" rel="tag">assembly</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+motor" class="post-tag" title="show questions tagged &#39;timer motor&#39;" rel="tag">motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+attiny" class="post-tag" title="show questions tagged &#39;timer attiny&#39;" rel="tag">attiny</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+stepper-motor" class="post-tag" title="show questions tagged &#39;timer stepper-motor&#39;" rel="tag">stepper-motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/timer+msp430" class="post-tag" title="show questions tagged &#39;timer msp430&#39;" rel="tag">msp430</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -927,7 +1280,7 @@ The 555 is only supposed to fire when it gets the signal from a 38khz ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/timer")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1020,7 +1373,7 @@ The 555 is only supposed to fire when it gets the signal from a 38khz ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1047,14 +1400,11 @@ The 555 is only supposed to fire when it gets the signal from a 38khz ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1063,33 +1413,34 @@ The 555 is only supposed to fire when it gets the signal from a 38khz ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|timer|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|timer|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged programming" href="/feeds/tag/programming" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186315,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327838,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fprogramming" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fprogramming" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[programming]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fprogramming">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fprogramming">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[programming]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/programming/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/programming?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/programming?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/programming?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/programming?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/programming?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/programming?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/programming?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/programming?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/programming?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/programming?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,640 @@ Questions about programming parts (FPGAs, Flash, etc.) Many software programming
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-91562">
+<div class="question-summary" id="question-summary-97034">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="90 views">
+    90 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/97034/should-i-define-default-register-values-in-start-up-code" class="question-hyperlink">Should I define default register values in start up code?</a></h3>
+        <div class="excerpt">
+            It has come to my attention that some ARM programmers set some CPU registers with values that are the same default values of the register on microcontroller reset.
+
+For example: the default value of ...
+        </div>          
+        <div class="tags t-microcontroller t-arm t-programming">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/arm" class="post-tag" title="show questions tagged &#39;arm&#39;" rel="tag">arm</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-20 13:54:52Z" class="relativetime">yesterday</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/1755/rhaguiuda"><div><img src="https://www.gravatar.com/avatar/8354639f2bcc5d0e0906bf59d0a23b44?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/1755/rhaguiuda">RHaguiuda</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">126</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96857">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="41 views">
+    41 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96857/a-program-to-add-6-bytes-of-data-and-store-sum-and-carry-in-8085-instruction-set" class="question-hyperlink">A program to add 6 bytes of data and store sum and carry in 8085 instruction set</a></h3>
+        <div class="excerpt">
+            I have a question on 8085 instruction set.
+A program to add 6 bytes of data stored in memory starting from 4500h. must use b register to save any carries and finally store the sum and carry at two ...
+        </div>          
+        <div class="tags t-programming t-memory t-register t-8085">
+            <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/memory" class="post-tag" title="show questions tagged &#39;memory&#39;" rel="tag">memory</a> <a href="/questions/tagged/register" class="post-tag" title="show questions tagged &#39;register&#39;" rel="tag">register</a> <a href="/questions/tagged/8085" class="post-tag" title="show questions tagged &#39;8085&#39;" rel="tag">8085</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-18 16:29:51Z" class="relativetime">Jan 18 at 16:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35083/bharath-yes"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/74142069795a3411cb0c51d5cc0687a3?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35083/bharath-yes">Bharath Yes</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">15</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96547">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="114 views">
+    114 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96547/controling-4-leds-with-5-pushbuttons-and-arduino" class="question-hyperlink">Controling 4 LEDs with 5 pushbuttons and Arduino</a></h3>
+        <div class="excerpt">
+            My code:
+
+...
+        </div>          
+        <div class="tags t-arduino t-microcontroller t-led t-c t-programming">
+            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/c" class="post-tag" title="show questions tagged &#39;c&#39;" rel="tag">c</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-15 13:42:31Z" class="relativetime">Jan 15 at 13:42</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34923/mate"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/XkpI8.png?s=128&g=1?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34923/mate">Mate</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96488">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="61 views">
+    61 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96488/control-of-electric-actuators" class="question-hyperlink">Control of electric actuators</a></h3>
+        <div class="excerpt">
+            I'm new to this forum and I am trying to find a solution to control three small electric linear actuators I have made for my rc controlled model aircraft, they have mini 6 volt geared brushed dc ...
+        </div>          
+        <div class="tags t-microcontroller t-voltage t-dc t-programming t-actuator">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/dc" class="post-tag" title="show questions tagged &#39;dc&#39;" rel="tag">dc</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/actuator" class="post-tag" title="show questions tagged &#39;actuator&#39;" rel="tag">actuator</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-14 21:48:41Z" class="relativetime">Jan 14 at 21:48</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35575/user35575"><div><img src="https://www.gravatar.com/avatar/bc441f718b5658375b8e412656b028d4?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35575/user35575">user35575</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96458">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="37 views">
+    37 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96458/spi-slave-flash-programming-with-two-masters-question" class="question-hyperlink">SPI Slave Flash programming with two masters question</a></h3>
+        <div class="excerpt">
+            I'm looking to make a system that can be upgraded by a customer in the field and I need to know some conceptual thing before I try implementing my current strategy.
+
+Say I have a USB to SPI bridge, ...
+        </div>          
+        <div class="tags t-spi t-programming t-flash">
+            <a href="/questions/tagged/spi" class="post-tag" title="show questions tagged &#39;spi&#39;" rel="tag">spi</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/flash" class="post-tag" title="show questions tagged &#39;flash&#39;" rel="tag">flash</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-14 17:31:02Z" class="relativetime">Jan 14 at 17:31</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/28592/shannon-strutz"><div><img src="https://www.gravatar.com/avatar/ad0b230ec5e10bb6126cea9b967f56ac?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/28592/shannon-strutz">Shannon Strutz</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">100</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96028">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="32 views">
+    32 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96028/at89c51re2-replaced-with-at89lp51rd2-isp-programming" class="question-hyperlink">AT89c51RE2 replaced with AT89LP51RD2, ISP programming</a></h3>
+        <div class="excerpt">
+            have a question I can't seem to figure out the answer to. We have existing boards running off the AT89c51RE2 processor. Works great because it supports In-System-Programming. This means we can use ...
+        </div>          
+        <div class="tags t-programming t-microprocessor t-atmel t-isp">
+            <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/microprocessor" class="post-tag" title="show questions tagged &#39;microprocessor&#39;" rel="tag">microprocessor</a> <a href="/questions/tagged/atmel" class="post-tag" title="show questions tagged &#39;atmel&#39;" rel="tag">atmel</a> <a href="/questions/tagged/isp" class="post-tag" title="show questions tagged &#39;isp&#39;" rel="tag">isp</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-10 15:42:06Z" class="relativetime">Jan 10 at 15:42</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/8834/while-e"><div><img src="https://www.gravatar.com/avatar/fdd49c2310be1ef3a4f7c1a61f579498?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/8834/while-e">While-E</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">148</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95954">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="175 views">
+    175 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95954/how-to-exit-from-the-if-statemet-which-is-inside-for-loop-and-go-back-to-the-voi" class="question-hyperlink">How to exit from the if statemet which is inside for loop and go back to the void loop in Arduino</a></h3>
+        <div class="excerpt">
+            My code:
+
+...
+        </div>          
+        <div class="tags t-c t-programming">
+            <a href="/questions/tagged/c" class="post-tag" title="show questions tagged &#39;c&#39;" rel="tag">c</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-09 22:09:59Z" class="relativetime">Jan 9 at 22:09</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34923/mate"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/XkpI8.png?s=128&g=1?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34923/mate">Mate</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95460">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="112 views">
+    112 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95460/how-to-make-arduino-duemilanove-atmega-168-store-instructions-and-act-acording-t" class="question-hyperlink">How to make Arduino Duemilanove Atmega 168 store instructions and act acording to them [closed]</a></h3>
+        <div class="excerpt">
+            I'm trying to make a small car with Arduino for kids. I have connected 2 DC motors at the end of chassis and one spinning wheel which is able to rotate for 360 degrees and L293NE IC with my Arduino ...
+        </div>          
+        <div class="tags t-arduino t-microcontroller t-c t-embedded t-programming">
+            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/c" class="post-tag" title="show questions tagged &#39;c&#39;" rel="tag">c</a> <a href="/questions/tagged/embedded" class="post-tag" title="show questions tagged &#39;embedded&#39;" rel="tag">embedded</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-04 21:26:35Z" class="relativetime">Jan 4 at 21:26</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34923/mate"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/XkpI8.png?s=128&g=1?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34923/mate">Mate</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95420">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="45 views">
+    45 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95420/can-i-program-a-msp430553-ic-using-the-tiva-c-development-board" class="question-hyperlink">Can I program a MSP430553 IC using the TIVA C development board?</a></h3>
+        <div class="excerpt">
+            I have a few MSP430G2553 ICs. Can TIVA C board (EK-TM4C123GXL) used to program the ICs as I need to buy it for a online class I am about to take ????
+If yes, please specify the method to be followed.
+
+        </div>          
+        <div class="tags t-microcontroller t-programming t-msp430 t-launchpad">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/msp430" class="post-tag" title="show questions tagged &#39;msp430&#39;" rel="tag">msp430</a> <a href="/questions/tagged/launchpad" class="post-tag" title="show questions tagged &#39;launchpad&#39;" rel="tag">launchpad</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-04 13:26:22Z" class="relativetime">Jan 4 at 13:26</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35083/bharath-yes"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/74142069795a3411cb0c51d5cc0687a3?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35083/bharath-yes">Bharath Yes</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">15</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94934">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="75 views">
+    75 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94934/getting-started-with-an-lpc1313-microcontroller" class="question-hyperlink">Getting started with an LPC1313 Microcontroller [closed]</a></h3>
+        <div class="excerpt">
+            I recently purchased this microcontroller along with an FTDI TTL-232R-3V3 cable. I want to program a blinking lights hello world application onto the microcontroller. I was told that I might be able ...
+        </div>          
+        <div class="tags t-microcontroller t-programming t-rs232 t-lpc">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/rs232" class="post-tag" title="show questions tagged &#39;rs232&#39;" rel="tag">rs232</a> <a href="/questions/tagged/lpc" class="post-tag" title="show questions tagged &#39;lpc&#39;" rel="tag">lpc</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-29 23:29:31Z" class="relativetime">Dec 29 '13 at 23:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34841/user3131007"><div><img src="https://www.gravatar.com/avatar/eae51cd7f0b63228c65d5c10943971f9?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34841/user3131007">user3131007</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">4</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94206">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="66 views">
+    66 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94206/programming-a-atmega328p-on-a-breadboard-programmer-cannot-connect" class="question-hyperlink">Programming a ATmega328P on a breadboard - programmer cannot connect</a></h3>
+        <div class="excerpt">
+            What I am trying to do is program the ATmega328P on a breadboard. I have followed the schematic by which the Duemilanove board was wired to no avail.
+
+I have a SparkFun AVR Pocket Programmer that ...
+        </div>          
+        <div class="tags t-avr t-programming t-avrdude">
+            <a href="/questions/tagged/avr" class="post-tag" title="show questions tagged &#39;avr&#39;" rel="tag">avr</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/avrdude" class="post-tag" title="show questions tagged &#39;avrdude&#39;" rel="tag">avrdude</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-20 02:40:20Z" class="relativetime">Dec 20 '13 at 2:40</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/26864/sherrellbc"><div><img src="https://www.gravatar.com/avatar/3f590d99e58f1370b9846fcd29e0d43f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/26864/sherrellbc">sherrellbc</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">503</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94009">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="119 views">
+    119 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94009/isp-circuit-for-avr-microcontrollers" class="question-hyperlink">ISP circuit for AVR microcontrollers</a></h3>
+        <div class="excerpt">
+            So I was doing a bit of research on the AVR controllers and came across this schematic for programming the chips. 
+
+
+
+After doing research on the 74 LS 254, I realized that either this design is ...
+        </div>          
+        <div class="tags t-avr t-programming t-isp t-parallel-port">
+            <a href="/questions/tagged/avr" class="post-tag" title="show questions tagged &#39;avr&#39;" rel="tag">avr</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/isp" class="post-tag" title="show questions tagged &#39;isp&#39;" rel="tag">isp</a> <a href="/questions/tagged/parallel-port" class="post-tag" title="show questions tagged &#39;parallel-port&#39;" rel="tag">parallel-port</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-18 03:51:46Z" class="relativetime">Dec 18 '13 at 3:51</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/26864/sherrellbc"><div><img src="https://www.gravatar.com/avatar/3f590d99e58f1370b9846fcd29e0d43f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/26864/sherrellbc">sherrellbc</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">503</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93491">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="106 views">
+    106 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93491/problem-reading-pic18f4550-input" class="question-hyperlink">Problem Reading PIC18F4550 Input</a></h3>
+        <div class="excerpt">
+            Hi I am facing some problem with Reading the input from a PIC18f4550 , for a simple arrangement where when a switch on (switch = 1), few led should glow., and on releasing the switch the led should go ...
+        </div>          
+        <div class="tags t-microcontroller t-pic t-embedded t-programming t-input">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/embedded" class="post-tag" title="show questions tagged &#39;embedded&#39;" rel="tag">embedded</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/input" class="post-tag" title="show questions tagged &#39;input&#39;" rel="tag">input</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-12 13:55:44Z" class="relativetime">Dec 12 '13 at 13:55</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/29168/sanju"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/CPtl2.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/29168/sanju">Sanju</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">35</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93239">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="39 views">
+    39 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93239/programming-cc430f5137-using-another-microcontroller" class="question-hyperlink">Programming CC430F5137 using another microcontroller</a></h3>
+        <div class="excerpt">
+            I have a CC430F5137 and the board schematic all ready for my application to that requires capturing data over bluetooth. I wish to program the CC430F5137 using another platform except the conventional ...
+        </div>          
+        <div class="tags t-programming t-msp430 t-hardware t-open-hardware">
+            <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/msp430" class="post-tag" title="show questions tagged &#39;msp430&#39;" rel="tag">msp430</a> <a href="/questions/tagged/hardware" class="post-tag" title="show questions tagged &#39;hardware&#39;" rel="tag">hardware</a> <a href="/questions/tagged/open-hardware" class="post-tag" title="show questions tagged &#39;open-hardware&#39;" rel="tag">open-hardware</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-10 18:19:37Z" class="relativetime">Dec 10 '13 at 18:19</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33944/user33944"><div><img src="https://www.gravatar.com/avatar/419742c0c85b8f9b7e82795ccb3d9876?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33944/user33944">user33944</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-91562">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +904,8 @@ Questions about programming parts (FPGAs, Flash, etc.) Many software programming
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="279 views">
-    279 views
+        <div class="views " title="318 views">
+    318 views
 </div>
     </div>
     <div class="summary">
@@ -193,654 +925,16 @@ The following comment was posted to another question:
                                                             </div>
         </div>
         <div class="started fr">
-            <div class="user-info ">
+            <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-11-22 21:38:58Z" class="relativetime">Nov 22 at 21:38</span>
+        asked <span title="2013-11-22 21:38:58Z" class="relativetime">Nov 22 '13 at 21:38</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/30062/david"><div><img src="https://www.gravatar.com/avatar/1124dd3e70d241248e0a7c1405bcf732?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/30062/david">David</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">806</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87370">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="91 views">
-    91 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87370/using-a-microcontroller-to-program-another-microcontroller-on-a-wireless-board" class="question-hyperlink">Using a microcontroller to program another microcontroller (on a wireless board)</a></h3>
-        <div class="excerpt">
-            I am working on a project in which I want to include the functionality of reprogramming the main microcontroller via wireless transmission. 
-
-First, I have figured there needs to be a dedicated ...
-        </div>          
-        <div class="tags t-microcontroller t-wireless t-programming">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/wireless" class="post-tag" title="show questions tagged &#39;wireless&#39;" rel="tag">wireless</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-03 21:54:19Z" class="relativetime">Nov 3 at 21:54</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/26864/sherrellbc"><div><img src="https://www.gravatar.com/avatar/3f590d99e58f1370b9846fcd29e0d43f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/26864/sherrellbc">sherrellbc</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">409</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86426">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="122 views">
-    122 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86426/how-to-set-all-flags-in-8085" class="question-hyperlink">How to set all flags in 8085?</a></h3>
-        <div class="excerpt">
-            My Microprocessor teacher of 8085 gave an assignment to set all flags ! I have written this little program to set all except Sign, Please help me out
-
-...
-        </div>          
-        <div class="tags t-programming t-microprocessor t-assembly t-8085">
-            <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/microprocessor" class="post-tag" title="show questions tagged &#39;microprocessor&#39;" rel="tag">microprocessor</a> <a href="/questions/tagged/assembly" class="post-tag" title="show questions tagged &#39;assembly&#39;" rel="tag">assembly</a> <a href="/questions/tagged/8085" class="post-tag" title="show questions tagged &#39;8085&#39;" rel="tag">8085</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-24 19:27:27Z" class="relativetime">Oct 24 at 19:27</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/17836/asad-irfan"><div><img src="https://www.gravatar.com/avatar/8d0195b4aa37bc5aaf8dd70898ba4df8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/17836/asad-irfan">Asad Irfan</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84829">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="108 views">
-    108 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84829/if-one-has-used-pic-uc-how-different-is-it-to-migrate-to-using-a-different-uc-l" class="question-hyperlink">If one has used PIC uC, how different is it to migrate to using a different uC like say Arduino or ARM?</a></h3>
-        <div class="excerpt">
-            There seem to be quite many vendors making uC and some uC are more popular than others say for example Arduino and PIC because of their low cost and abundant features and ARM because of its high ...
-        </div>          
-        <div class="tags t-arduino t-microcontroller t-pic t-arm t-programming">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/arm" class="post-tag" title="show questions tagged &#39;arm&#39;" rel="tag">arm</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-09 08:07:38Z" class="relativetime">Oct 9 at 8:07</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/20711/quantum231"><div><img src="https://www.gravatar.com/avatar/c1503cf70823c67b54c197559cc08c63?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/20711/quantum231">quantum231</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">790</span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84593">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="173 views">
-    173 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84593/how-different-is-the-arduino-language-than-atmel-studio-language" class="question-hyperlink">How different is the Arduino language than Atmel Studio language? [closed]</a></h3>
-        <div class="excerpt">
-            I see that on the official Arduino website, the reference page contains the functions and vales you would use specified to the Arduino compiler. 
-
-http://arduino.cc/en/Reference/HomePage
-
-What would ...
-        </div>          
-        <div class="tags t-arduino t-programming t-atmel t-compiler t-atmel-studio">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/atmel" class="post-tag" title="show questions tagged &#39;atmel&#39;" rel="tag">atmel</a> <a href="/questions/tagged/compiler" class="post-tag" title="show questions tagged &#39;compiler&#39;" rel="tag">compiler</a> <a href="/questions/tagged/atmel-studio" class="post-tag" title="show questions tagged &#39;atmel-studio&#39;" rel="tag">atmel-studio</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-07 04:05:49Z" class="relativetime">Oct 7 at 4:05</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/2143/aleatory"><div><img src="https://www.gravatar.com/avatar/3e78fa13940b49bb5bb1fa76ce6a2a70?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/2143/aleatory">Aleatory</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">132</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84422">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="92 views">
-    92 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84422/configuration-settings-of-18f4550-in-a-header-file" class="question-hyperlink">Configuration Settings of 18F4550 in a header file</a></h3>
-        <div class="excerpt">
-            Recently I was wondering if is there any option to move my Configuration bits to a header file?.
-right now I'm using the 18f4550 microcontroller,with mplabx IDE,and my developed code entirely is in ...
-        </div>          
-        <div class="tags t-programming t-microchip t-mplabx">
-            <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/microchip" class="post-tag" title="show questions tagged &#39;microchip&#39;" rel="tag">microchip</a> <a href="/questions/tagged/mplabx" class="post-tag" title="show questions tagged &#39;mplabx&#39;" rel="tag">mplabx</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-05 18:48:57Z" class="relativetime">Oct 5 at 18:48</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/11602/hector915"><div><img src="https://www.gravatar.com/avatar/b815541780fb0fc003dd4e8556fb6115?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/11602/hector915">hector915</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">26</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84185">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="76 views">
-    76 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84185/ltc2498-temperature-sensor-chip-code-via-spi" class="question-hyperlink">LTC2498 Temperature Sensor Chip Code via SPI</a></h3>
-        <div class="excerpt">
-            I would be very grateful for your tips for my present problem definition:
-
-I have a microcontroller ATmega128RFA1 with integrated Zigbee with UART-USB(TTL Converter) attached to the PC.
-
-From the ...
-        </div>          
-        <div class="tags t-microcontroller t-programming t-programmer t-power-electronics">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/programmer" class="post-tag" title="show questions tagged &#39;programmer&#39;" rel="tag">programmer</a> <a href="/questions/tagged/power-electronics" class="post-tag" title="show questions tagged &#39;power-electronics&#39;" rel="tag">power-electronics</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-03 11:02:27Z" class="relativetime">Oct 3 at 11:02</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/29530/ektor"><div><img src="https://www.gravatar.com/avatar/901c792a3e42a6ce1847c0135af43f3b?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/29530/ektor">Ektor</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-83881">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="75 views">
-    75 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/83881/can-i-program-a-quad-spi-chip-with-a-standard-spi-microcontroller" class="question-hyperlink">Can I program a QUAD SPI Chip with a standard SPI microcontroller?</a></h3>
-        <div class="excerpt">
-            I have to program a MX25L12835 Quad SPI chip. This is a Quad SPI serial flash. Is it possible to program this using an arduino? Can this be used as a simple 1 channel SPI or can quad SPI interface ...
-        </div>          
-        <div class="tags t-serial t-spi t-programming t-flash t-programmer">
-            <a href="/questions/tagged/serial" class="post-tag" title="show questions tagged &#39;serial&#39;" rel="tag">serial</a> <a href="/questions/tagged/spi" class="post-tag" title="show questions tagged &#39;spi&#39;" rel="tag">spi</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/flash" class="post-tag" title="show questions tagged &#39;flash&#39;" rel="tag">flash</a> <a href="/questions/tagged/programmer" class="post-tag" title="show questions tagged &#39;programmer&#39;" rel="tag">programmer</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-30 16:36:15Z" class="relativetime">Sep 30 at 16:36</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/4561/lord-loh"><div><img src="https://www.gravatar.com/avatar/497264ce9a02fdd795e3029e7302639d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/4561/lord-loh">Lord Loh.</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">414</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-82649">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="56 views">
-    56 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/82649/how-do-i-program-a-serial-eeprom-ic-using-a-raspberry-pi" class="question-hyperlink">How do I program a serial EEPROM IC using a raspberry Pi?</a></h3>
-        <div class="excerpt">
-            I am trying to program the 25L12835F Serial EEPROM with the firmware of the Pineapple WiFi router. I have the u-boot.bin file from Alfa. I have tried a programmer from eBay, but the software is unable ...
-        </div>          
-        <div class="tags t-spi t-programming t-raspberry-pi t-flash t-eeprom">
-            <a href="/questions/tagged/spi" class="post-tag" title="show questions tagged &#39;spi&#39;" rel="tag">spi</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/raspberry-pi" class="post-tag" title="show questions tagged &#39;raspberry-pi&#39;" rel="tag">raspberry-pi</a> <a href="/questions/tagged/flash" class="post-tag" title="show questions tagged &#39;flash&#39;" rel="tag">flash</a> <a href="/questions/tagged/eeprom" class="post-tag" title="show questions tagged &#39;eeprom&#39;" rel="tag">eeprom</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-17 23:15:52Z" class="relativetime">Sep 17 at 23:15</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/4561/lord-loh"><div><img src="https://www.gravatar.com/avatar/497264ce9a02fdd795e3029e7302639d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/4561/lord-loh">Lord Loh.</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">414</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-81831">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="80 views">
-    80 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/81831/electronics-circuits-simulator-framework" class="question-hyperlink">Electronics Circuits Simulator Framework?</a></h3>
-        <div class="excerpt">
-            Is there a framework for circuits simulation that I can use through easy APIs? and return me an array of results for each component?
-
-I want to build an android based simulator, so a java framework ...
-        </div>          
-        <div class="tags t-programming t-simulation t-library">
-            <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/simulation" class="post-tag" title="show questions tagged &#39;simulation&#39;" rel="tag">simulation</a> <a href="/questions/tagged/library" class="post-tag" title="show questions tagged &#39;library&#39;" rel="tag">library</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-10 09:42:30Z" class="relativetime">Sep 10 at 9:42</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/20337/simo"><div><img src="https://www.gravatar.com/avatar/37edb93ffb892ee7964e01d31fac4aed?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/20337/simo">simo</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">114</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-81670">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="138 views">
-    138 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/81670/high-voltage-input-and-output-microcontroller" class="question-hyperlink">High Voltage input and output microcontroller</a></h3>
-        <div class="excerpt">
-            I am new to this, but I am looking to regulate a few ballast controlled fluorescent lamps with a micro-controller.  Everything I look at has a low operating voltage and below 10 volt input/output ...
-        </div>          
-        <div class="tags t-microcontroller t-programming t-microchip t-high-voltage t-electronic-ballast">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/microchip" class="post-tag" title="show questions tagged &#39;microchip&#39;" rel="tag">microchip</a> <a href="/questions/tagged/high-voltage" class="post-tag" title="show questions tagged &#39;high-voltage&#39;" rel="tag">high-voltage</a> <a href="/questions/tagged/electronic-ballast" class="post-tag" title="show questions tagged &#39;electronic-ballast&#39;" rel="tag">electronic-ballast</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-08 18:20:34Z" class="relativetime">Sep 8 at 18:20</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/28699/user28699"><div><img src="https://www.gravatar.com/avatar/ae03e21638de086a14507f3951478c03?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/28699/user28699">user28699</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-80949">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>4</strong>answers
-            </div>
-        </div>
-        <div class="views " title="306 views">
-    306 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/80949/delay-function-in-arm-programming" class="question-hyperlink">Delay function in ARM programming</a></h3>
-        <div class="excerpt">
-            I have just started programming on ARM, I had some experience on AVR but not that much. The question is probably too trivial but the material about ARM is too little on the net... sorry anyways.
-
-I ...
-        </div>          
-        <div class="tags t-microcontroller t-arm t-programming t-timer t-delay">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/arm" class="post-tag" title="show questions tagged &#39;arm&#39;" rel="tag">arm</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> <a href="/questions/tagged/delay" class="post-tag" title="show questions tagged &#39;delay&#39;" rel="tag">delay</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-01 22:22:05Z" class="relativetime">Sep 1 at 22:22</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/28332/kasra5004"><div><img src="https://www.gravatar.com/avatar/6e92ea4bb09e48e2715b9a6591359246?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/28332/kasra5004">kasra5004</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-80699">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="50 views">
-    50 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/80699/how-to-debug-error-of-unknown-type-name-progmem" class="question-hyperlink">How to debug error of &ldquo;unknown type name __progmem__&rdquo;?</a></h3>
-        <div class="excerpt">
-            I'm using atmel studio 6.1 with a code containing   
-but on compilation conpiler gives error as mentioned above and after googling error,I found that this variable progmem has been depriciated,but no ...
-        </div>          
-        <div class="tags t-atmega t-programming">
-            <a href="/questions/tagged/atmega" class="post-tag" title="show questions tagged &#39;atmega&#39;" rel="tag">atmega</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-08-30 06:07:00Z" class="relativetime">Aug 30 at 6:07</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/25517/shafeeq"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/Jl2uG.png?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/25517/shafeeq">shafeeq</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">35</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-80107">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="134 views">
-    134 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/80107/how-do-i-determine-what-microcontroller-is-the-right-one-for-my-project" class="question-hyperlink">How do I determine what microcontroller is the right one for my project? [closed]</a></h3>
-        <div class="excerpt">
-            I have just started developing a tiny GPS trackingdevice that (eventually) will be able to log positioning-data on demand -  via SMS commands and/or via a smartphone-application.
-The device should be ...
-        </div>          
-        <div class="tags t-microcontroller t-programming t-eeprom">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> <a href="/questions/tagged/eeprom" class="post-tag" title="show questions tagged &#39;eeprom&#39;" rel="tag">eeprom</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-08-25 23:26:33Z" class="relativetime">Aug 25 at 23:26</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/15459/customcase"><div><img src="https://www.gravatar.com/avatar/8b071b5e6d55837441999c6633ec394f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/15459/customcase">CustomCase</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">7</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-79978">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="65 views">
-    65 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/79978/delay-ms-not-working-with-atmega-16-32" class="question-hyperlink">_delay_ms not working with ATmega 16/32</a></h3>
-        <div class="excerpt">
-            I had purchased an ATMEGA 16 microcontroller and chaged its fuse bits settings and used internal caliberated RC clock with 1000000.
-Changes done in make file and F_CPU. But it do nothing.
-
-Programme ...
-        </div>          
-        <div class="tags t-avr t-programming">
-            <a href="/questions/tagged/avr" class="post-tag" title="show questions tagged &#39;avr&#39;" rel="tag">avr</a> <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-08-24 13:45:50Z" class="relativetime">Aug 24 at 13:45</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/27933/divyansh"><div><img src="https://www.gravatar.com/avatar/e741c3045620c0f91422691f61c670e1?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/27933/divyansh">Divyansh</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,089</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
     </div>
 </div>
         </div>  
@@ -865,22 +959,22 @@ Programme ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/programming?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/programming?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/programming?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/programming?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/programming?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/programming?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=programming&amp;sort=newest" title="the 30 newest programming questions"><span class="feed-icon"></span>newest programming questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=programming&sort=newest" title="the 30 newest programming questions"><span class="feed-icon"></span>newest programming questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">196</div>
+            <div class="summarycount al">210</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/programming" class="post-tag" title="show questions tagged &#39;programming&#39;" rel="tag">programming</a> 
@@ -891,38 +985,279 @@ Programme ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/programming+microcontroller" class="post-tag" title="show questions tagged &#39;programming microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">71</span></span><br>
-            <a href="/questions/tagged/programming+pic" class="post-tag" title="show questions tagged &#39;programming pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">34</span></span><br>
-            <a href="/questions/tagged/programming+arduino" class="post-tag" title="show questions tagged &#39;programming arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">33</span></span><br>
-            <a href="/questions/tagged/programming+avr" class="post-tag" title="show questions tagged &#39;programming avr&#39;" rel="tag">avr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">20</span></span><br>
-            <a href="/questions/tagged/programming+c" class="post-tag" title="show questions tagged &#39;programming c&#39;" rel="tag">c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/programming+microchip" class="post-tag" title="show questions tagged &#39;programming microchip&#39;" rel="tag">microchip</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/programming+embedded" class="post-tag" title="show questions tagged &#39;programming embedded&#39;" rel="tag">embedded</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/programming+atmega" class="post-tag" title="show questions tagged &#39;programming atmega&#39;" rel="tag">atmega</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/programming%20c%2b%2b" class="post-tag" title="show questions tagged &#39;programming c++&#39;" rel="tag">c++</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/programming+programmer" class="post-tag" title="show questions tagged &#39;programming programmer&#39;" rel="tag">programmer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/programming+dsp" class="post-tag" title="show questions tagged &#39;programming dsp&#39;" rel="tag">dsp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/programming+usb" class="post-tag" title="show questions tagged &#39;programming usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/programming+arm" class="post-tag" title="show questions tagged &#39;programming arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/programming+flash" class="post-tag" title="show questions tagged &#39;programming flash&#39;" rel="tag">flash</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/programming+spi" class="post-tag" title="show questions tagged &#39;programming spi&#39;" rel="tag">spi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/programming+microprocessor" class="post-tag" title="show questions tagged &#39;programming microprocessor&#39;" rel="tag">microprocessor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/programming+atmel" class="post-tag" title="show questions tagged &#39;programming atmel&#39;" rel="tag">atmel</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/programming+pickit" class="post-tag" title="show questions tagged &#39;programming pickit&#39;" rel="tag">pickit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/programming+ezdsp" class="post-tag" title="show questions tagged &#39;programming ezdsp&#39;" rel="tag">ezdsp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/programming+attiny" class="post-tag" title="show questions tagged &#39;programming attiny&#39;" rel="tag">attiny</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/programming+sensor" class="post-tag" title="show questions tagged &#39;programming sensor&#39;" rel="tag">sensor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/programming+ti-ccstudio" class="post-tag" title="show questions tagged &#39;programming ti-ccstudio&#39;" rel="tag">ti-ccstudio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/programming+simulation" class="post-tag" title="show questions tagged &#39;programming simulation&#39;" rel="tag">simulation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/programming+led" class="post-tag" title="show questions tagged &#39;programming led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/programming+isp" class="post-tag" title="show questions tagged &#39;programming isp&#39;" rel="tag">isp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
+        <div>
+            <a href="/questions/tagged/programming+microcontroller" class="post-tag" title="show questions tagged &#39;programming microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">78</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/programming+pic" class="post-tag" title="show questions tagged &#39;programming pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">35</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/programming+arduino" class="post-tag" title="show questions tagged &#39;programming arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">35</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/programming+avr" class="post-tag" title="show questions tagged &#39;programming avr&#39;" rel="tag">avr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">22</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/programming+c" class="post-tag" title="show questions tagged &#39;programming c&#39;" rel="tag">c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/programming+microchip" class="post-tag" title="show questions tagged &#39;programming microchip&#39;" rel="tag">microchip</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/programming+embedded" class="post-tag" title="show questions tagged &#39;programming embedded&#39;" rel="tag">embedded</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/programming+atmega" class="post-tag" title="show questions tagged &#39;programming atmega&#39;" rel="tag">atmega</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/programming%20c%2b%2b" class="post-tag" title="show questions tagged &#39;programming c++&#39;" rel="tag">c++</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/programming+programmer" class="post-tag" title="show questions tagged &#39;programming programmer&#39;" rel="tag">programmer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+arm" class="post-tag" title="show questions tagged &#39;programming arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+dsp" class="post-tag" title="show questions tagged &#39;programming dsp&#39;" rel="tag">dsp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+flash" class="post-tag" title="show questions tagged &#39;programming flash&#39;" rel="tag">flash</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+usb" class="post-tag" title="show questions tagged &#39;programming usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+isp" class="post-tag" title="show questions tagged &#39;programming isp&#39;" rel="tag">isp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+spi" class="post-tag" title="show questions tagged &#39;programming spi&#39;" rel="tag">spi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+microprocessor" class="post-tag" title="show questions tagged &#39;programming microprocessor&#39;" rel="tag">microprocessor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+atmel" class="post-tag" title="show questions tagged &#39;programming atmel&#39;" rel="tag">atmel</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+led" class="post-tag" title="show questions tagged &#39;programming led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+jtag" class="post-tag" title="show questions tagged &#39;programming jtag&#39;" rel="tag">jtag</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+attiny" class="post-tag" title="show questions tagged &#39;programming attiny&#39;" rel="tag">attiny</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+sensor" class="post-tag" title="show questions tagged &#39;programming sensor&#39;" rel="tag">sensor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+pickit" class="post-tag" title="show questions tagged &#39;programming pickit&#39;" rel="tag">pickit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+simulation" class="post-tag" title="show questions tagged &#39;programming simulation&#39;" rel="tag">simulation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/programming+fpga" class="post-tag" title="show questions tagged &#39;programming fpga&#39;" rel="tag">fpga</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -942,7 +1277,7 @@ Programme ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/programming")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1035,7 +1370,7 @@ Programme ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1062,14 +1397,11 @@ Programme ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1078,33 +1410,34 @@ Programme ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|programming|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|programming|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

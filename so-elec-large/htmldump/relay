@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged relay" href="/feeds/tag/relay" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186188,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327822,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2frelay" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2frelay" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[relay]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2frelay">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2frelay">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[relay]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/relay/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/relay?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/relay?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/relay?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/relay?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/relay?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/relay?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/relay?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/relay?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/relay?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/relay?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,22 +257,651 @@ A relay is an electrically controlled switch. Electromechanical relays use an el
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92473">
+<div class="question-summary" id="question-summary-96821">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>4</strong></span>
+                    <span class="vote-count-post "><strong>-2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="50 views">
+    50 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96821/how-to-restrict-the-pick-and-drop-voltage-of-solid-state-relay" class="question-hyperlink">How to restrict the pick and drop voltage of solid state relay</a></h3>
+        <div class="excerpt">
+            I want to develop a electronic relay which will be fitted on the starter motor to switch on of the solenoid switch of starter motor carrying hold coil and pull coil.
+
+the current through the hold coil ...
+        </div>          
+        <div class="tags t-relay t-automotive t-solid-state-relay t-solenoid">
+            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/automotive" class="post-tag" title="show questions tagged &#39;automotive&#39;" rel="tag">automotive</a> <a href="/questions/tagged/solid-state-relay" class="post-tag" title="show questions tagged &#39;solid-state-relay&#39;" rel="tag">solid-state-relay</a> <a href="/questions/tagged/solenoid" class="post-tag" title="show questions tagged &#39;solenoid&#39;" rel="tag">solenoid</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-18 05:14:22Z" class="relativetime">Jan 18 at 5:14</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34708/yaashu"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/100001490827965/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34708/yaashu">Yaashu</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96430">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="60 views">
+    60 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96430/disconnecting-a-usb-device-without-unplugging-it" class="question-hyperlink">Disconnecting a USB device without unplugging it [migrated]</a></h3>
+        <div class="excerpt">
+            I'm modifying my desktop computer case and I want to plug everything into the USB ports in the back of it. However, the ports are not easy to reach and sometimes I have to unplug some devices because ...
+        </div>          
+        <div class="tags t-power t-usb t-relay">
+            <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-14 12:03:09Z" class="relativetime">Jan 14 at 12:03</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34968/dodo"><div><img src="https://www.gravatar.com/avatar/7b4677732437e4e4e4693f275e70fe88?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34968/dodo">dodo</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">24</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96361">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="25 views">
+    25 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96361/2001-ford-mustang-battery-or-electrical-issue" class="question-hyperlink">2001 Ford Mustang battery or electrical issue? [migrated]</a></h3>
+        <div class="excerpt">
+            2001 Ford Mustang V6. Bought brand new battery in Nov 2013. I tested the core of the alternator at the same time as buying the battery and it tested good. I also switched out a relay in the engine to ...
+        </div>          
+        <div class="tags t-relay t-battery-charging">
+            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/battery-charging" class="post-tag" title="show questions tagged &#39;battery-charging&#39;" rel="tag">battery-charging</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-13 19:25:25Z" class="relativetime">Jan 13 at 19:25</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35516/user35516"><div><img src="https://www.gravatar.com/avatar/954dfd6ed874d402e95c5aa563af80fc?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35516/user35516">user35516</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96267">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
             <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="48 views">
+    48 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96267/raspberry-pi-with-direct-relay" class="question-hyperlink">Raspberry pi with direct relay</a></h3>
+        <div class="excerpt">
+            I have a very back to basics question.
+I've been using a 5v relay with the raspberry pi. The relay trigger is connected directly to an output pin and the other side is connected to the ground of the ...
+        </div>          
+        <div class="tags t-relay t-raspberry-pi t-gpio">
+            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/raspberry-pi" class="post-tag" title="show questions tagged &#39;raspberry-pi&#39;" rel="tag">raspberry-pi</a> <a href="/questions/tagged/gpio" class="post-tag" title="show questions tagged &#39;gpio&#39;" rel="tag">gpio</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-13 00:01:37Z" class="relativetime">Jan 13 at 0:01</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/20299/tauseef-latif"><div><img src="https://www.gravatar.com/avatar/a8735f0e08d127b49fc61baead7d5cb5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/20299/tauseef-latif">Tauseef Latif</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">38</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96226">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="46 views">
+    46 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96226/what-is-the-simplest-way-to-toggle-a-relay-with-analog-feedback" class="question-hyperlink">What is the simplest way to toggle a relay with analog feedback?</a></h3>
+        <div class="excerpt">
+            I've been playing with electronics for a long time, but am fairly new to digital electronics, including using Fritzing, so apologizes in advance for that.
+
+I'm attempting a fairly basic ...
+        </div>          
+        <div class="tags t-digital-logic t-analog t-integrated-circuit t-relay t-thermistor">
+            <a href="/questions/tagged/digital-logic" class="post-tag" title="show questions tagged &#39;digital-logic&#39;" rel="tag">digital-logic</a> <a href="/questions/tagged/analog" class="post-tag" title="show questions tagged &#39;analog&#39;" rel="tag">analog</a> <a href="/questions/tagged/integrated-circuit" class="post-tag" title="show questions tagged &#39;integrated-circuit&#39;" rel="tag">integrated-circuit</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/thermistor" class="post-tag" title="show questions tagged &#39;thermistor&#39;" rel="tag">thermistor</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-12 18:00:24Z" class="relativetime">Jan 12 at 18:00</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34205/cwd"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/c0dd04beb96268a1d27e0e86366e5dba?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34205/cwd">cwd</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">108</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94790">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="12 views">
+    12 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94790/residual-current-relay-modeling" class="question-hyperlink">residual current relay modeling</a></h3>
+        <div class="excerpt">
+            I'm trying to model a residual current relay on simscape(MATLAB), but I'm having trouble finding related circuits on the internet. Can someone suggest some links or etc.? General residual current ...
+        </div>          
+        <div class="tags t-circuit t-relay t-model">
+            <a href="/questions/tagged/circuit" class="post-tag" title="show questions tagged &#39;circuit&#39;" rel="tag">circuit</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/model" class="post-tag" title="show questions tagged &#39;model&#39;" rel="tag">model</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-27 22:42:23Z" class="relativetime">Dec 27 '13 at 22:42</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34768/mertcan"><div><img src="https://www.gravatar.com/avatar/2fe47abc6e80824704d6bd660d6ee89b?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34768/mertcan">Mertcan</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94741">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="89 views">
+    89 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94741/on-off-circuit-with-an-avr-and-a-push-button" class="question-hyperlink">On/off Circuit with an AVR and a push button</a></h3>
+        <div class="excerpt">
+            Here is maybe a difficult question I mind asking but here we are, I need to do a Power On/Power Off switch with an attiny 2313 and a push button, the code is ok, but I want this "switch" to power on ...
+        </div>          
+        <div class="tags t-transistors t-avr t-switches t-relay">
+            <a href="/questions/tagged/transistors" class="post-tag" title="show questions tagged &#39;transistors&#39;" rel="tag">transistors</a> <a href="/questions/tagged/avr" class="post-tag" title="show questions tagged &#39;avr&#39;" rel="tag">avr</a> <a href="/questions/tagged/switches" class="post-tag" title="show questions tagged &#39;switches&#39;" rel="tag">switches</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-27 11:24:33Z" class="relativetime">Dec 27 '13 at 11:24</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34747/zilators"><div><img src="https://www.gravatar.com/avatar/2cd1276df18022939c2b6c7682426b88?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34747/zilators">Zilators</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">20</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94722">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="77 views">
+    77 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94722/arduino-powered-relay-behaving-oddly" class="question-hyperlink">Arduino powered relay behaving oddly</a></h3>
+        <div class="excerpt">
+            I bought a spark fun inventors kit in order to learn about arduino. I am attempting to complete circuit 13 http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Kits/SFE03-0012-SIK.Guide-300dpi-01.pdf  .
+It ...
+        </div>          
+        <div class="tags t-arduino t-led t-relay t-sparkfun">
+            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/sparkfun" class="post-tag" title="show questions tagged &#39;sparkfun&#39;" rel="tag">sparkfun</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-27 05:18:28Z" class="relativetime">Dec 27 '13 at 5:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34738/michellejs"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/xYyfW.jpg?s=128&g=1?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34738/michellejs">MichelleJS</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">113</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94529">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="70 views">
+    70 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94529/direct-connecting-5v-relay-interface-board-to-usb" class="question-hyperlink">Direct connecting 5v relay interface board to usb</a></h3>
+        <div class="excerpt">
+            I'm absolutely noob in electronics but I have this relay and I want to connect it to USB.
+When PC switches on usb VCC has +5v. Can I connect USB VCC to Relay Board "VCC" and "IN" wires to open relay ...
+        </div>          
+        <div class="tags t-usb t-relay">
+            <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-24 12:44:34Z" class="relativetime">Dec 24 '13 at 12:44</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/27836/komelgman"><div><img src="https://www.gravatar.com/avatar/2131a46020001ce269cb1bd650f85b48?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/27836/komelgman">komelgman</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">108</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94092">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>4</strong>answers
+            </div>
+        </div>
+        <div class="views " title="78 views">
+    78 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94092/check-if-electrical-current-exists-in-high-voltage" class="question-hyperlink">Check if electrical current exists in high voltage</a></h3>
+        <div class="excerpt">
+            I'm thinking about a simple home automation project, containing a Rasberry Pi, a Sainsmart SPDT Relay, I would like to switch the state of a ordinary bulb (ON , OFF) using both the relay and the old ...
+        </div>          
+        <div class="tags t-current t-relay t-raspberry-pi t-current-measurement">
+            <a href="/questions/tagged/current" class="post-tag" title="show questions tagged &#39;current&#39;" rel="tag">current</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/raspberry-pi" class="post-tag" title="show questions tagged &#39;raspberry-pi&#39;" rel="tag">raspberry-pi</a> <a href="/questions/tagged/current-measurement" class="post-tag" title="show questions tagged &#39;current-measurement&#39;" rel="tag">current-measurement</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-18 23:01:51Z" class="relativetime">Dec 18 '13 at 23:01</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/31455/geogeek"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/9373ed90d579d8b5668fbe3fdb1d9002?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/31455/geogeek">geogeek</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">103</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93694">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="33 views">
+    33 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93694/relays-for-logic-current-and-debouncing" class="question-hyperlink">Relays for Logic - Current and debouncing?</a></h3>
+        <div class="excerpt">
+            Im just doing a little project for fun using relays to build logic circuits, and just have a few "thinking outloud" type questions...
+
+1) Any contacts that can make a loop back to the power supply ...
+        </div>          
+        <div class="tags t-digital-logic t-current t-relay t-debounce">
+            <a href="/questions/tagged/digital-logic" class="post-tag" title="show questions tagged &#39;digital-logic&#39;" rel="tag">digital-logic</a> <a href="/questions/tagged/current" class="post-tag" title="show questions tagged &#39;current&#39;" rel="tag">current</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/debounce" class="post-tag" title="show questions tagged &#39;debounce&#39;" rel="tag">debounce</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-14 14:41:00Z" class="relativetime">Dec 14 '13 at 14:41</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/29710/binarysmacker"><div><img src="https://www.gravatar.com/avatar/510c1be7a2a7fa52e61a8a3794c79d9f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/29710/binarysmacker">binarysmacker</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">402</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93572">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="65 views">
+    65 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93572/is-lnk304-not-suitable-to-drive-a-12v-relay" class="question-hyperlink">Is LNK304 not suitable to drive a 12V relay?</a></h3>
+        <div class="excerpt">
+            I am designing the 12V/120mA DC power supply using LNK304 IC. Using that operate the 12V relay. Initially it was working. After that  ON and OFF certain time. Suddenly Relay was not working. Then  ...
+        </div>          
+        <div class="tags t-current t-relay t-coil">
+            <a href="/questions/tagged/current" class="post-tag" title="show questions tagged &#39;current&#39;" rel="tag">current</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/coil" class="post-tag" title="show questions tagged &#39;coil&#39;" rel="tag">coil</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-13 06:58:17Z" class="relativetime">Dec 13 '13 at 6:58</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/31332/kalis"><div><img src="https://www.gravatar.com/avatar/9d536fc0a4513fc4146a9b1a4571f37f?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/31332/kalis">kalis</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">41</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93134">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="194 views">
+    194 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93134/how-to-understand-the-functions-of-a-therm-o-disc-12s20-h24v" class="question-hyperlink">How to understand the functions of a Therm-O-Disc 12S20 H24V?</a></h3>
+        <div class="excerpt">
+            I am an electrical novice and have a Therm-O-Disc 12S20 H24V (original image) relay that I'm attempting to understand.
+
+
+
+The only meaningful documentation I've been able to find is this, 12S, 14S, ...
+        </div>          
+        <div class="tags t-relay t-timer">
+            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/timer" class="post-tag" title="show questions tagged &#39;timer&#39;" rel="tag">timer</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-09 18:58:15Z" class="relativetime">Dec 9 '13 at 18:58</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33890/leastone"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/7f75dffa3592d21f88cef42821114186?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33890/leastone">LeastOne</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92980">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="57 views">
+    57 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/92980/alternative-to-tpst-shift-registers" class="question-hyperlink">Alternative to TPST Shift Registers?</a></h3>
+        <div class="excerpt">
+            So I'm building a musical sequencer that uses a shift register to close relays and pass the discharge pins of three 555 timers through a manual switch and potentiometer (acting as a variable resistor) ...
+        </div>          
+        <div class="tags t-audio t-relay t-555 t-shift-register t-music">
+            <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged &#39;audio&#39;" rel="tag">audio</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/555" class="post-tag" title="show questions tagged &#39;555&#39;" rel="tag">555</a> <a href="/questions/tagged/shift-register" class="post-tag" title="show questions tagged &#39;shift-register&#39;" rel="tag">shift-register</a> <a href="/questions/tagged/music" class="post-tag" title="show questions tagged &#39;music&#39;" rel="tag">music</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-08 00:17:46Z" class="relativetime">Dec 8 '13 at 0:17</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33706/fruity-grebbles"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/oYwd7.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33706/fruity-grebbles">Fruity_Grebbles</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">20</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92473">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>5</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="105 views">
-    105 views
+        <div class="views " title="148 views">
+    148 views
 </div>
     </div>
     <div class="summary">
@@ -193,652 +921,14 @@ I've build a circuit which uses a USB-connected FTDI-UMFT240XA.
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-02 21:41:21Z" class="relativetime">yesterday</span>
+        asked <span title="2013-12-02 21:41:21Z" class="relativetime">Dec 2 '13 at 21:41</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33555/harvtronix"><div><img src="https://www.gravatar.com/avatar/e4b8142dfe51f51b9af2c69a07f2d420?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/33555/harvtronix">Harvtronix</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-92216">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="38 views">
-    38 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92216/microprocessor-power-relay" class="question-hyperlink">Microprocessor Power Relay</a></h3>
-        <div class="excerpt">
-            Beginning Electrical Engineering student here and had a basic question. I am researching microprocessor based relays and came upon the SEL-351 relay for differential over current. Looking at the spec ...
-        </div>          
-        <div class="tags t-power t-relay">
-            <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-29 17:23:28Z" class="relativetime">Nov 29 at 17:23</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33443/m-s"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/a30aa711a976de3f5571d7ced170a159?s=128&d=identicon&r=PG" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33443/m-s">M S</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91973">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="34 views">
-    34 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91973/recommended-voltage-current-for-dry-contact-input" class="question-hyperlink">Recommended voltage/current for dry contact input?</a></h3>
-        <div class="excerpt">
-            What would be a reasonable value for voltage and max current to used in conjunction with a remote dry contact output so that it can return to my MCU (through isolator)? I plan on using this input for ...
-        </div>          
-        <div class="tags t-digital-logic t-relay t-input">
-            <a href="/questions/tagged/digital-logic" class="post-tag" title="show questions tagged &#39;digital-logic&#39;" rel="tag">digital-logic</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/input" class="post-tag" title="show questions tagged &#39;input&#39;" rel="tag">input</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-26 23:13:36Z" class="relativetime">Nov 26 at 23:13</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/24836/pugz"><div><img src="https://www.gravatar.com/avatar/7077d829e70a69294a0f066ec22abb8c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/24836/pugz">Pugz</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">23</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91409">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="78 views">
-    78 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91409/will-the-relay-break-if-the-disconnected-end-voltage-is-too-high" class="question-hyperlink">Will the relay break if the disconnected end voltage is too high</a></h3>
-        <div class="excerpt">
-            I'm trying to create a simple overvoltage protection circuit.
-In brief, there are times when my mains voltage goes well over 250V (normally 220) and I want to switch off the whole thing connected to ...
-        </div>          
-        <div class="tags t-power t-relay t-protection t-mains">
-            <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/protection" class="post-tag" title="show questions tagged &#39;protection&#39;" rel="tag">protection</a> <a href="/questions/tagged/mains" class="post-tag" title="show questions tagged &#39;mains&#39;" rel="tag">mains</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-21 11:36:24Z" class="relativetime">Nov 21 at 11:36</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33059/pyxzure"><div><img src="https://www.gravatar.com/avatar/8aab62c4eca3fb8251a5d8ec40cfca85?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33059/pyxzure">Pyxzure</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91356">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="55 views">
-    55 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91356/connecting-a-switch-to-a-relay" class="question-hyperlink">Connecting a Switch to a Relay [closed]</a></h3>
-        <div class="excerpt">
-            I am trying to connect 2 motor boats with a relay to a switch. I received a drawing, but I am not understanding how the wires connect into the illuminated switch.
-
-Here is the switch and the drawing.
-
-...
-        </div>          
-        <div class="tags t-switches t-relay">
-            <a href="/questions/tagged/switches" class="post-tag" title="show questions tagged &#39;switches&#39;" rel="tag">switches</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-20 21:44:08Z" class="relativetime">Nov 20 at 21:44</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33028/daniel-marques"><div><img src="https://www.gravatar.com/avatar/d1481d88c135e88a857d7c4752f01e62?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33028/daniel-marques">Daniel Marques</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90908">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="54 views">
-    54 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90908/omron-g5v-2-relay-no-pins-not-working" class="question-hyperlink">Omron G5V-2 relay NO pins not working</a></h3>
-        <div class="excerpt">
-            I could swear that it was working for a while. I got back to my desk, tried it again, and it's no longer working. Could I have fried the NO pins on both sides? This is a DPDT relay. Everything works ...
-        </div>          
-        <div class="tags t-relay t-electronics t-troubleshooting">
-            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/electronics" class="post-tag" title="show questions tagged &#39;electronics&#39;" rel="tag">electronics</a> <a href="/questions/tagged/troubleshooting" class="post-tag" title="show questions tagged &#39;troubleshooting&#39;" rel="tag">troubleshooting</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-17 05:54:42Z" class="relativetime">Nov 17 at 5:54</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32640/puneet-lamba"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/3fdbfad699e3d0d9ca7d92512542512c?s=128&d=identicon&r=PG" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32640/puneet-lamba">Puneet Lamba</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90777">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="55 views">
-    55 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90777/4-channel-relay-module-set-to-low-activates-relay" class="question-hyperlink">4 Channel Relay Module Set to LOW activates relay?</a></h3>
-        <div class="excerpt">
-            I seems that my 4 channel relay module is acting the opposite of how I thought it should act. When I do use the Arduino "digitalWrite(relay, HIGH);" essentially turning power on to the relay, the ...
-        </div>          
-        <div class="tags t-arduino t-relay">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-15 17:13:23Z" class="relativetime">Nov 15 at 17:13</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32696/matthew-berman"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/88cfe5a91b7abf8c9c2a0c1a7ab199b8?s=128&d=identicon&r=PG" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32696/matthew-berman">Matthew Berman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">131</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90714">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="30 views">
-    30 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90714/solid-state-relay-voltage-ratings-how-to-choose" class="question-hyperlink">Solid state relay voltage ratings &mdash; how to choose?</a></h3>
-        <div class="excerpt">
-            I am trying to control mains power, which around here is 220VAC @50HZ. Should I be using a SSR that's rated for 24-280VAC (Load), or one that is rated for 48-480VAC? The reason I'm asking is because ...
-        </div>          
-        <div class="tags t-voltage t-relay t-ac t-solid-state-relay">
-            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/ac" class="post-tag" title="show questions tagged &#39;ac&#39;" rel="tag">ac</a> <a href="/questions/tagged/solid-state-relay" class="post-tag" title="show questions tagged &#39;solid-state-relay&#39;" rel="tag">solid-state-relay</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-15 04:50:38Z" class="relativetime">Nov 15 at 4:50</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32729/soyuz"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/2adc042d27072b2cadd85cede0312d35?s=128&d=identicon&r=PG" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32729/soyuz">Soyuz</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">106</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90606">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="87 views">
-    87 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90606/how-do-run-a-120vac-water-pump-using-arduino-starter-kit-supplies" class="question-hyperlink">How do run a 120Vac water pump using Arduino starter kit supplies</a></h3>
-        <div class="excerpt">
-            I'm very new to EE so forgive the simple question. I have a small water pump 120Vac that I want to turn on and off via my arduino. I have the arduino starter kit as well as a 12v relays. 
-
-I've tried ...
-        </div>          
-        <div class="tags t-arduino t-transistors t-relay">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/transistors" class="post-tag" title="show questions tagged &#39;transistors&#39;" rel="tag">transistors</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-14 04:18:25Z" class="relativetime">Nov 14 at 4:18</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32696/matthew-berman"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/88cfe5a91b7abf8c9c2a0c1a7ab199b8?s=128&d=identicon&r=PG" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32696/matthew-berman">Matthew Berman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">131</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90590">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="83 views">
-    83 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90590/reed-relay-driving-solenoid-sticks" class="question-hyperlink">Reed relay driving solenoid &ldquo;sticks&rdquo;</a></h3>
-        <div class="excerpt">
-            I have a transistor, driving a normally open reed relay (protecting transistor with flyback diode), driving a solenoid.  The solenoid is actuating at about 3 Hz.
-
-The relay is good for a few million ...
-        </div>          
-        <div class="tags t-relay t-reed">
-            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/reed" class="post-tag" title="show questions tagged &#39;reed&#39;" rel="tag">reed</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-11-13 23:47:08Z" class="relativetime">Nov 13 at 23:47</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/1278/ajs410"><div><img src="https://www.gravatar.com/avatar/e10ad83c7a36725c3d7f169c1c72cf6f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/1278/ajs410">ajs410</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">4,469</span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="21 bronze badges"><span class="badge3"></span><span class="badgecount">21</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90305">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="68 views">
-    68 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90305/safety-relay-toggle-time" class="question-hyperlink">Safety relay toggle time</a></h3>
-        <div class="excerpt">
-            I am currently working with software for a safety relay and during my work I started to think about how much time it takes for a relay to switch.
-
-The relay and it's data sheet I am using can be found ...
-        </div>          
-        <div class="tags t-relay t-solid-state-relay">
-            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/solid-state-relay" class="post-tag" title="show questions tagged &#39;solid-state-relay&#39;" rel="tag">solid-state-relay</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-11 14:16:50Z" class="relativetime">Nov 11 at 14:16</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/30130/amimo816"><div><img src="https://www.gravatar.com/avatar/beb99c8ad41a0c13d95b970f19e57b20?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/30130/amimo816">amimo816</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">18</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87874">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="78 views">
-    78 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87874/low-side-versus-high-side-relay-driving-concepts" class="question-hyperlink">Low-Side versus High-Side relay driving concepts</a></h3>
-        <div class="excerpt">
-            What are the pros and cons of Low-Side versus High-Side relay driving concepts in an automotive environment?
-
-The questions popped up when I was looking for an 8 channel relay driver IC for a ...
-        </div>          
-        <div class="tags t-relay t-automotive">
-            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/automotive" class="post-tag" title="show questions tagged &#39;automotive&#39;" rel="tag">automotive</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-07 17:38:07Z" class="relativetime">Nov 7 at 17:38</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/22758/sergej"><div><img src="https://www.gravatar.com/avatar/69f2bf661861141b9b8b73b71c4e46c9?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/22758/sergej">sergej</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">35</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87872">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="77 views">
-    77 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87872/do-i-have-a-bad-relay-module" class="question-hyperlink">Do I have a bad relay module?</a></h3>
-        <div class="excerpt">
-            I'm aware that there have been many questions about this series of relays, but I've read them and still can't get this working.
-
-I have this version, with 4 relays.
-
-I'm currently wiring:
-
-
-5v Arduino ...
-        </div>          
-        <div class="tags t-arduino t-relay">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-07 17:30:26Z" class="relativetime">Nov 7 at 17:30</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/17085/alfo"><div><img src="https://www.gravatar.com/avatar/c757293cea100034c52c39bf7603918a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/17085/alfo">Alfo</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">121</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87649">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>4</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>5</strong>answers
-            </div>
-        </div>
-        <div class="views " title="221 views">
-    221 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87649/what-is-the-most-economical-way-to-drive-an-array-of-single-coil-latching-relays" class="question-hyperlink">What is the most economical way to drive an array of single coil latching relays?</a></h3>
-        <div class="excerpt">
-            <span class='tex2jax_ignore'>Please read the question to the end.  The answer to this question may be non-trivial.</span>
-
-Replacing a number of 2-coil latching relays with single coil latching relays ...
-        </div>          
-        <div class="tags t-relay t-low-power t-circuit-analysis">
-            <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> <a href="/questions/tagged/low-power" class="post-tag" title="show questions tagged &#39;low-power&#39;" rel="tag">low-power</a> <a href="/questions/tagged/circuit-analysis" class="post-tag" title="show questions tagged &#39;circuit-analysis&#39;" rel="tag">circuit-analysis</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-05 22:23:20Z" class="relativetime">Nov 5 at 22:23</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/4642/mandomando"><div><img src="https://www.gravatar.com/avatar/9862854b42d8df7c3de1fccb28be9536?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/4642/mandomando">MandoMando</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,079</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87582">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="59 views">
-    59 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87582/where-should-i-mount-relays-on-an-electronic-circuit-board" class="question-hyperlink">Where should I mount relays on an electronic circuit board?</a></h3>
-        <div class="excerpt">
-            I'm designing a emergency circuit in which I'll open the circuit of two stepper motors and a three phase motor using an emergency button (or computer interface) and relays. My question is: How should ...
-        </div>          
-        <div class="tags t-pcb-design t-relay">
-            <a href="/questions/tagged/pcb-design" class="post-tag" title="show questions tagged &#39;pcb-design&#39;" rel="tag">pcb-design</a> <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-05 11:15:33Z" class="relativetime">Nov 5 at 11:15</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/26557/eduardo-moscatelli-de-souza"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/100000103832540/picture?type=large" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/26557/eduardo-moscatelli-de-souza">Eduardo Moscatelli de Souza</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">40</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">36</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -857,28 +947,28 @@ Replacing a number of 2-coil latching relays with single coil latching relays ..
         <a href="/questions/tagged/relay?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/relay?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/relay?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
- <span class="page-numbers dots">…</span>         <a href="/questions/tagged/relay?page=22&amp;sort=newest&amp;pagesize=15" title="go to page 22"> <span class="page-numbers">22</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/relay?page=23&amp;sort=newest&amp;pagesize=15" title="go to page 23"> <span class="page-numbers">23</span> </a> 
         <a href="/questions/tagged/relay?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/relay?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/relay?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/relay?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/relay?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/relay?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/relay?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=relay&amp;sort=newest" title="the 30 newest relay questions"><span class="feed-icon"></span>newest relay questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=relay&sort=newest" title="the 30 newest relay questions"><span class="feed-icon"></span>newest relay questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">320</div>
+            <div class="summarycount al">334</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/relay" class="post-tag" title="show questions tagged &#39;relay&#39;" rel="tag">relay</a> 
@@ -889,38 +979,279 @@ Replacing a number of 2-coil latching relays with single coil latching relays ..
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/relay+arduino" class="post-tag" title="show questions tagged &#39;relay arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">57</span></span><br>
-            <a href="/questions/tagged/relay+switches" class="post-tag" title="show questions tagged &#39;relay switches&#39;" rel="tag">switches</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">32</span></span><br>
-            <a href="/questions/tagged/relay+transistors" class="post-tag" title="show questions tagged &#39;relay transistors&#39;" rel="tag">transistors</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">30</span></span><br>
-            <a href="/questions/tagged/relay+solid-state-relay" class="post-tag" title="show questions tagged &#39;relay solid-state-relay&#39;" rel="tag">solid-state-relay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">28</span></span><br>
-            <a href="/questions/tagged/relay+microcontroller" class="post-tag" title="show questions tagged &#39;relay microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">26</span></span><br>
-            <a href="/questions/tagged/relay+power" class="post-tag" title="show questions tagged &#39;relay power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span><br>
-            <a href="/questions/tagged/relay+ac" class="post-tag" title="show questions tagged &#39;relay ac&#39;" rel="tag">ac</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span><br>
-            <a href="/questions/tagged/relay+mosfet" class="post-tag" title="show questions tagged &#39;relay mosfet&#39;" rel="tag">mosfet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/relay+raspberry-pi" class="post-tag" title="show questions tagged &#39;relay raspberry-pi&#39;" rel="tag">raspberry-pi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/relay+audio" class="post-tag" title="show questions tagged &#39;relay audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/relay+diodes" class="post-tag" title="show questions tagged &#39;relay diodes&#39;" rel="tag">diodes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/relay+capacitor" class="post-tag" title="show questions tagged &#39;relay capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/relay+led" class="post-tag" title="show questions tagged &#39;relay led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/relay+timer" class="post-tag" title="show questions tagged &#39;relay timer&#39;" rel="tag">timer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/relay+dc" class="post-tag" title="show questions tagged &#39;relay dc&#39;" rel="tag">dc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/relay+voltage" class="post-tag" title="show questions tagged &#39;relay voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/relay+mains" class="post-tag" title="show questions tagged &#39;relay mains&#39;" rel="tag">mains</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/relay+circuit" class="post-tag" title="show questions tagged &#39;relay circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/relay+current" class="post-tag" title="show questions tagged &#39;relay current&#39;" rel="tag">current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/relay+opto-isolator" class="post-tag" title="show questions tagged &#39;relay opto-isolator&#39;" rel="tag">opto-isolator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/relay+home-automation" class="post-tag" title="show questions tagged &#39;relay home-automation&#39;" rel="tag">home-automation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/relay+solenoid" class="post-tag" title="show questions tagged &#39;relay solenoid&#39;" rel="tag">solenoid</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/relay+batteries" class="post-tag" title="show questions tagged &#39;relay batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/relay+control" class="post-tag" title="show questions tagged &#39;relay control&#39;" rel="tag">control</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/relay+integrated-circuit" class="post-tag" title="show questions tagged &#39;relay integrated-circuit&#39;" rel="tag">integrated-circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
+        <div>
+            <a href="/questions/tagged/relay+arduino" class="post-tag" title="show questions tagged &#39;relay arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">58</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/relay+switches" class="post-tag" title="show questions tagged &#39;relay switches&#39;" rel="tag">switches</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">33</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/relay+transistors" class="post-tag" title="show questions tagged &#39;relay transistors&#39;" rel="tag">transistors</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">31</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/relay+solid-state-relay" class="post-tag" title="show questions tagged &#39;relay solid-state-relay&#39;" rel="tag">solid-state-relay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">29</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/relay+microcontroller" class="post-tag" title="show questions tagged &#39;relay microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">26</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/relay+power" class="post-tag" title="show questions tagged &#39;relay power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">20</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/relay+ac" class="post-tag" title="show questions tagged &#39;relay ac&#39;" rel="tag">ac</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/relay+raspberry-pi" class="post-tag" title="show questions tagged &#39;relay raspberry-pi&#39;" rel="tag">raspberry-pi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/relay+mosfet" class="post-tag" title="show questions tagged &#39;relay mosfet&#39;" rel="tag">mosfet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/relay+audio" class="post-tag" title="show questions tagged &#39;relay audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+current" class="post-tag" title="show questions tagged &#39;relay current&#39;" rel="tag">current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+timer" class="post-tag" title="show questions tagged &#39;relay timer&#39;" rel="tag">timer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+led" class="post-tag" title="show questions tagged &#39;relay led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+capacitor" class="post-tag" title="show questions tagged &#39;relay capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+digital-logic" class="post-tag" title="show questions tagged &#39;relay digital-logic&#39;" rel="tag">digital-logic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+diodes" class="post-tag" title="show questions tagged &#39;relay diodes&#39;" rel="tag">diodes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+circuit" class="post-tag" title="show questions tagged &#39;relay circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+dc" class="post-tag" title="show questions tagged &#39;relay dc&#39;" rel="tag">dc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+mains" class="post-tag" title="show questions tagged &#39;relay mains&#39;" rel="tag">mains</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+voltage" class="post-tag" title="show questions tagged &#39;relay voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+solenoid" class="post-tag" title="show questions tagged &#39;relay solenoid&#39;" rel="tag">solenoid</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+automotive" class="post-tag" title="show questions tagged &#39;relay automotive&#39;" rel="tag">automotive</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+home-automation" class="post-tag" title="show questions tagged &#39;relay home-automation&#39;" rel="tag">home-automation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+integrated-circuit" class="post-tag" title="show questions tagged &#39;relay integrated-circuit&#39;" rel="tag">integrated-circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/relay+opto-isolator" class="post-tag" title="show questions tagged &#39;relay opto-isolator&#39;" rel="tag">opto-isolator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -940,7 +1271,7 @@ Replacing a number of 2-coil latching relays with single coil latching relays ..
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/relay")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1033,7 +1364,7 @@ Replacing a number of 2-coil latching relays with single coil latching relays ..
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1060,14 +1391,11 @@ Replacing a number of 2-coil latching relays with single coil latching relays ..
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1076,33 +1404,34 @@ Replacing a number of 2-coil latching relays with single coil latching relays ..
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|relay|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|relay|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

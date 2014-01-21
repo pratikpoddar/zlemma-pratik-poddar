@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged ground" href="/feeds/tag/ground" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186401,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328114,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fground" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fground" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[ground]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fground">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fground">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[ground]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/ground/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/ground?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/ground?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/ground?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/ground?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/ground?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/ground?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/ground?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/ground?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/ground?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/ground?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,240 @@ Ground or earth is the reference point in an electrical circuit from which other
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92188">
+<div class="question-summary" id="question-summary-96224">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="46 views">
+    46 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96224/two-chip-antennas-same-ground-plane" class="question-hyperlink">Two chip antennas, same ground plane?</a></h3>
+        <div class="excerpt">
+            I would like to use a 430mhz RF antenna and a 1575mhz GPS antenna. Both antennas are chip and drive current in the ground plane to radiate. The RF antenna is only useful 1s every minute. The GPS has ...
+        </div>          
+        <div class="tags t-rf t-antenna t-ground t-gps t-ground-plane">
+            <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/antenna" class="post-tag" title="show questions tagged &#39;antenna&#39;" rel="tag">antenna</a> <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> <a href="/questions/tagged/gps" class="post-tag" title="show questions tagged &#39;gps&#39;" rel="tag">gps</a> <a href="/questions/tagged/ground-plane" class="post-tag" title="show questions tagged &#39;ground-plane&#39;" rel="tag">ground-plane</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-12 17:46:08Z" class="relativetime">Jan 12 at 17:46</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35282/user35282"><div><img src="https://www.gravatar.com/avatar/5ce42989b78a637f47ef9cb19246096c?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35282/user35282">user35282</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96200">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="55 views">
+    55 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96200/common-ground-computer-a-and-usb-powered-arduino-mcu-from-computer-b" class="question-hyperlink">Common ground : Computer A and USB powered Arduino ( MCU ) from Computer B</a></h3>
+        <div class="excerpt">
+            I have 1 computer, 1 laptop and usb powered arduino ( MCU ).
+
+Arduino is connected to laptop via USB cable. Laptop is connected to 220V wall or 
+runs from batteries.
+
+One PIN from arduino is connected ...
+        </div>          
+        <div class="tags t-power t-ground t-common">
+            <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> <a href="/questions/tagged/common" class="post-tag" title="show questions tagged &#39;common&#39;" rel="tag">common</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-12 12:29:01Z" class="relativetime">Jan 12 at 12:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/22074/michal-zahor"><div><img src="https://www.gravatar.com/avatar/25ae1b0cf39da0af6cc471684035127d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/22074/michal-zahor">Michal Zahor</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95396">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="94 views">
+    94 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95396/how-can-i-pump-1000-watts-in-the-ground" class="question-hyperlink">How can I pump 1000 watts in the ground</a></h3>
+        <div class="excerpt">
+            I have heard of using the ground for communication with extremely low frequency waves. They said 100 watts gives you a km and 1000 watts gives you 10 km. How can I go about pumping the waves into the ...
+        </div>          
+        <div class="tags t-ground">
+            <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2014-01-04 07:51:12Z" class="relativetime">Jan 4 at 7:51</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/10190/skyler"><div><img src="https://www.gravatar.com/avatar/6d8ec629e69040e77c0638218cf72d95?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/10190/skyler">skyler</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">2,783</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94324">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>4</strong>answers
+            </div>
+        </div>
+        <div class="views " title="82 views">
+    82 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94324/pull-up-circuit-current-flows" class="question-hyperlink">Pull up circuit current flows?</a></h3>
+        <div class="excerpt">
+            Im trying to understand how pull up/down circuits works . Let's consider this schematic : 
+ 
+
+I understand that there are two possible current flows :
+
+
+When the button is not pressed, the current ...
+        </div>          
+        <div class="tags t-circuit t-resistors t-ground t-pullup t-pulldown">
+            <a href="/questions/tagged/circuit" class="post-tag" title="show questions tagged &#39;circuit&#39;" rel="tag">circuit</a> <a href="/questions/tagged/resistors" class="post-tag" title="show questions tagged &#39;resistors&#39;" rel="tag">resistors</a> <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> <a href="/questions/tagged/pullup" class="post-tag" title="show questions tagged &#39;pullup&#39;" rel="tag">pullup</a> <a href="/questions/tagged/pulldown" class="post-tag" title="show questions tagged &#39;pulldown&#39;" rel="tag">pulldown</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-21 16:29:20Z" class="relativetime">Dec 21 '13 at 16:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34487/user346665"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/649dcb30c019511b97326085a200935b?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34487/user346665">user346665</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92703">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="65 views">
+    65 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/92703/3-pin-power-adapter-24v-grn-and-com" class="question-hyperlink">3 pin power adapter: 24V, GRN and COM</a></h3>
+        <div class="excerpt">
+            I'm trying to make a replacement power adapter (24V---3.75A) for a medical  monitor. There are 3 pin  connectors and the diagram on one side of the supply box reads: 1- 24V, 2- GRN and 3-COM.
+
+I ...
+        </div>          
+        <div class="tags t-power-supply t-power t-ground t-adapter">
+            <a href="/questions/tagged/power-supply" class="post-tag" title="show questions tagged &#39;power-supply&#39;" rel="tag">power-supply</a> <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> <a href="/questions/tagged/adapter" class="post-tag" title="show questions tagged &#39;adapter&#39;" rel="tag">adapter</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-04 22:14:26Z" class="relativetime">Dec 4 '13 at 22:14</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33669/user33669"><div><img src="https://www.gravatar.com/avatar/5119c38c2ba9ed9378c86aed1a6dd470?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33669/user33669">user33669</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92188">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +504,8 @@ Ground or earth is the reference point in an electrical circuit from which other
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="99 views">
-    99 views
+        <div class="views " title="108 views">
+    108 views
 </div>
     </div>
     <div class="summary">
@@ -190,14 +522,14 @@ Ground or earth is the reference point in an electrical circuit from which other
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-29 12:08:32Z" class="relativetime">Nov 29 at 12:08</span>
+        asked <span title="2013-11-29 12:08:32Z" class="relativetime">Nov 29 '13 at 12:08</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/15991/eduard-florinescu"><div><img src="https://www.gravatar.com/avatar/fed032e35890b7dd7ba469556c573e1d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/15991/eduard-florinescu">Eduard Florinescu</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">156</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">156</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
@@ -216,8 +548,8 @@ Ground or earth is the reference point in an electrical circuit from which other
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="96 views">
-    96 views
+        <div class="views " title="115 views">
+    115 views
 </div>
     </div>
     <div class="summary">
@@ -234,7 +566,7 @@ Ground or earth is the reference point in an electrical circuit from which other
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-27 10:30:11Z" class="relativetime">Nov 27 at 10:30</span>
+        asked <span title="2013-11-27 10:30:11Z" class="relativetime">Nov 27 '13 at 10:30</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/18555/joan"><div><img src="https://www.gravatar.com/avatar/83c8e1f1fe845893c8c0a37cdb215151?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -260,8 +592,8 @@ Ground or earth is the reference point in an electrical circuit from which other
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="264 views">
-    264 views
+        <div class="views " title="275 views">
+    275 views
 </div>
     </div>
     <div class="summary">
@@ -278,14 +610,14 @@ Ground or earth is the reference point in an electrical circuit from which other
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-24 10:59:43Z" class="relativetime">Nov 24 at 10:59</span>
+        asked <span title="2013-11-24 10:59:43Z" class="relativetime">Nov 24 '13 at 10:59</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/28144/aug"><div><img src="https://www.gravatar.com/avatar/48afabfbd39ee660cdddf2038d4ad193?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/28144/aug">Aug</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">248</span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">255</span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
     </div>
 </div>
         </div>  
@@ -304,8 +636,8 @@ Ground or earth is the reference point in an electrical circuit from which other
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="58 views">
-    58 views
+        <div class="views " title="67 views">
+    67 views
 </div>
     </div>
     <div class="summary">
@@ -327,14 +659,14 @@ Oscilloscope's negative lead ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-22 12:53:07Z" class="relativetime">Nov 22 at 12:53</span>
+        asked <span title="2013-11-22 12:53:07Z" class="relativetime">Nov 22 '13 at 12:53</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/16307/user16307"><div><img src="https://www.gravatar.com/avatar/96d98e1187016909673fa5edc6ac6e16?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/16307/user16307">user16307</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">632</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">700</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
     </div>
 </div>
         </div>  
@@ -353,8 +685,8 @@ Oscilloscope's negative lead ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="91 views">
-    91 views
+        <div class="views " title="108 views">
+    108 views
 </div>
     </div>
     <div class="summary">
@@ -373,14 +705,14 @@ As image shows, right-left commands are implemented by a 3-part conductive area.
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-17 23:12:00Z" class="relativetime">Nov 17 at 23:12</span>
+        asked <span title="2013-11-17 23:12:00Z" class="relativetime">Nov 17 '13 at 23:12</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/31176/dempap"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/UcAY9.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/31176/dempap">dempap</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">98</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
@@ -399,8 +731,8 @@ As image shows, right-left commands are implemented by a 3-part conductive area.
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="77 views">
-    77 views
+        <div class="views " title="87 views">
+    87 views
 </div>
     </div>
     <div class="summary">
@@ -421,14 +753,14 @@ How do you formulate an equation on a node with two voltage sources connected in
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-15 13:46:56Z" class="relativetime">Nov 15 at 13:46</span>
+        asked <span title="2013-11-15 13:46:56Z" class="relativetime">Nov 15 '13 at 13:46</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/31260/ellekaie"><div><img src="https://www.gravatar.com/avatar/e804971007a6fdf07d99b9f629610d73?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/31260/ellekaie">ellekaie</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -447,8 +779,8 @@ How do you formulate an equation on a node with two voltage sources connected in
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="66 views">
-    66 views
+        <div class="views " title="71 views">
+    71 views
 </div>
     </div>
     <div class="summary">
@@ -465,7 +797,7 @@ How do you formulate an equation on a node with two voltage sources connected in
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-15 12:51:33Z" class="relativetime">Nov 15 at 12:51</span>
+        asked <span title="2013-11-15 12:51:33Z" class="relativetime">Nov 15 '13 at 12:51</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/32763/user32763"><div><img src="https://www.gravatar.com/avatar/a35a79944bad33556d1e5c5e0aa4b8d9?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -491,8 +823,8 @@ How do you formulate an equation on a node with two voltage sources connected in
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="25 views">
-    25 views
+        <div class="views " title="30 views">
+    30 views
 </div>
     </div>
     <div class="summary">
@@ -511,14 +843,14 @@ On simulating control sources, ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-14 15:42:20Z" class="relativetime">Nov 14 at 15:42</span>
+        asked <span title="2013-11-14 15:42:20Z" class="relativetime">Nov 14 '13 at 15:42</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/31260/ellekaie"><div><img src="https://www.gravatar.com/avatar/e804971007a6fdf07d99b9f629610d73?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/31260/ellekaie">ellekaie</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -537,8 +869,8 @@ On simulating control sources, ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="107 views">
-    107 views
+        <div class="views " title="144 views">
+    144 views
 </div>
     </div>
     <div class="summary">
@@ -557,14 +889,14 @@ I'm reading a tutorial and it is showing how to control a DC motor with Arduino 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-13 21:53:18Z" class="relativetime">Nov 13 at 21:53</span>
+        asked <span title="2013-11-13 21:53:18Z" class="relativetime">Nov 13 '13 at 21:53</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/16307/user16307"><div><img src="https://www.gravatar.com/avatar/96d98e1187016909673fa5edc6ac6e16?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/16307/user16307">user16307</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">632</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">700</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
     </div>
 </div>
         </div>  
@@ -583,8 +915,8 @@ I'm reading a tutorial and it is showing how to control a DC motor with Arduino 
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="140 views">
-    140 views
+        <div class="views " title="161 views">
+    161 views
 </div>
     </div>
     <div class="summary">
@@ -601,248 +933,14 @@ I'm reading a tutorial and it is showing how to control a DC motor with Arduino 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-10 12:31:59Z" class="relativetime">Nov 10 at 12:31</span>
+        asked <span title="2013-11-10 12:31:59Z" class="relativetime">Nov 10 '13 at 12:31</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/16307/user16307"><div><img src="https://www.gravatar.com/avatar/96d98e1187016909673fa5edc6ac6e16?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/16307/user16307">user16307</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">632</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90121">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="61 views">
-    61 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90121/how-to-achieve-common-ground-for-a-single-ended-input" class="question-hyperlink">How to achieve common ground for a single ended input?</a></h3>
-        <div class="excerpt">
-            
-
-I'm using  a current loop transducer as in the set up picture I provided. The transmitter is regulating the current proportional to a physical quantity and regulating the current. It is a typical 4 ...
-        </div>          
-        <div class="tags t-ground t-common">
-            <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> <a href="/questions/tagged/common" class="post-tag" title="show questions tagged &#39;common&#39;" rel="tag">common</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-09 21:54:59Z" class="relativetime">Nov 9 at 21:54</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/16307/user16307"><div><img src="https://www.gravatar.com/avatar/96d98e1187016909673fa5edc6ac6e16?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/16307/user16307">user16307</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">632</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-85320">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="59 views">
-    59 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/85320/how-to-ground-pins-on-a-multilayer-board-with-a-ground-plane" class="question-hyperlink">How to ground pins on a multilayer board with a ground plane?</a></h3>
-        <div class="excerpt">
-            Let's say I have a multilayer board with a single dedicated ground plane. 
-
-Should I place all the grounds directly to the plane with a via as close as possible to the pin/pad or should I be looking ...
-        </div>          
-        <div class="tags t-pcb t-ground t-layout t-signal-integrity">
-            <a href="/questions/tagged/pcb" class="post-tag" title="show questions tagged &#39;pcb&#39;" rel="tag">pcb</a> <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> <a href="/questions/tagged/layout" class="post-tag" title="show questions tagged &#39;layout&#39;" rel="tag">layout</a> <a href="/questions/tagged/signal-integrity" class="post-tag" title="show questions tagged &#39;signal-integrity&#39;" rel="tag">signal-integrity</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-14 10:10:09Z" class="relativetime">Oct 14 at 10:10</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/9409/efox29"><div><img src="https://www.gravatar.com/avatar/dec6d93c74fd80dcaeb6a78aa1e55aaa?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/9409/efox29">efox29</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,105</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-85142">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="64 views">
-    64 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/85142/eagle-ground-plane-polygon" class="question-hyperlink">Eagle ground plane polygon</a></h3>
-        <div class="excerpt">
-            I have been struggling to get the ground plane to fill in Eagle. Basically I have a very simple schematic, it is just VCC, two LEDs and GND.
-
-
-
-
-
-Now I went into Eagle, selected draw polygon and drew ...
-        </div>          
-        <div class="tags t-ground t-eagle t-ground-plane">
-            <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> <a href="/questions/tagged/eagle" class="post-tag" title="show questions tagged &#39;eagle&#39;" rel="tag">eagle</a> <a href="/questions/tagged/ground-plane" class="post-tag" title="show questions tagged &#39;ground-plane&#39;" rel="tag">ground-plane</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-12 06:40:21Z" class="relativetime">Oct 12 at 6:40</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/15600/raaj"><div><img src="https://www.gravatar.com/avatar/ad82fc63a820c2970705dcd7e227c16c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/15600/raaj">Raaj</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">162</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84854">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>8</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="273 views">
-    273 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84854/what-is-mecca-ground" class="question-hyperlink">What is mecca ground?</a></h3>
-        <div class="excerpt">
-            I came across few different ground names (digital, analog, signal, power, mecca, EM, shield, etc). 
-
-I do understand most of them - but mecca is a new one for me. Can someone please explain me this ...
-        </div>          
-        <div class="tags t-signal t-ground t-grounding">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> <a href="/questions/tagged/grounding" class="post-tag" title="show questions tagged &#39;grounding&#39;" rel="tag">grounding</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-09 13:29:14Z" class="relativetime">Oct 9 at 13:29</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/26231/kingsinnersoul"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/DLTyD.png?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/26231/kingsinnersoul">KingsInnerSoul</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">193</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-83419">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>4</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="224 views">
-    224 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/83419/use-battery-negative-as-ground" class="question-hyperlink">Use battery negative as ground</a></h3>
-        <div class="excerpt">
-            Powering an arduino board using batteries via the the barrel connector, is it ok to use the negative terminal as ground wherever its needed?
-
-For example, I have a shield that takes +5 and Ground from ...
-        </div>          
-        <div class="tags t-arduino t-ground">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-25 18:20:09Z" class="relativetime">Sep 25 at 18:20</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/4662/zaf"><div><img src="https://www.gravatar.com/avatar/ca7f8c3ab0937427e864fb0e84cc1891?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/4662/zaf">zaf</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">243</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">700</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
     </div>
 </div>
         </div>  
@@ -861,28 +959,28 @@ For example, I have a shield that takes +5 and Ground from ...
         <a href="/questions/tagged/ground?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/ground?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/ground?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
- <span class="page-numbers dots">…</span>         <a href="/questions/tagged/ground?page=11&amp;sort=newest&amp;pagesize=15" title="go to page 11"> <span class="page-numbers">11</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/ground?page=12&amp;sort=newest&amp;pagesize=15" title="go to page 12"> <span class="page-numbers">12</span> </a> 
         <a href="/questions/tagged/ground?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/ground?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/ground?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/ground?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/ground?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/ground?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/ground?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=ground&amp;sort=newest" title="the 30 newest ground questions"><span class="feed-icon"></span>newest ground questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=ground&sort=newest" title="the 30 newest ground questions"><span class="feed-icon"></span>newest ground questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">163</div>
+            <div class="summarycount al">168</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> 
@@ -893,38 +991,279 @@ For example, I have a shield that takes +5 and Ground from ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/ground+power-supply" class="post-tag" title="show questions tagged &#39;ground power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">22</span></span><br>
-            <a href="/questions/tagged/ground+grounding" class="post-tag" title="show questions tagged &#39;ground grounding&#39;" rel="tag">grounding</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span><br>
-            <a href="/questions/tagged/ground+pcb" class="post-tag" title="show questions tagged &#39;ground pcb&#39;" rel="tag">pcb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/ground+voltage" class="post-tag" title="show questions tagged &#39;ground voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/ground+arduino" class="post-tag" title="show questions tagged &#39;ground arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/ground+power" class="post-tag" title="show questions tagged &#39;ground power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/ground+safety" class="post-tag" title="show questions tagged &#39;ground safety&#39;" rel="tag">safety</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/ground+layout" class="post-tag" title="show questions tagged &#39;ground layout&#39;" rel="tag">layout</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/ground+noise" class="post-tag" title="show questions tagged &#39;ground noise&#39;" rel="tag">noise</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/ground+pcb-design" class="post-tag" title="show questions tagged &#39;ground pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/ground+ac" class="post-tag" title="show questions tagged &#39;ground ac&#39;" rel="tag">ac</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/ground+usb" class="post-tag" title="show questions tagged &#39;ground usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/ground+oscilloscope" class="post-tag" title="show questions tagged &#39;ground oscilloscope&#39;" rel="tag">oscilloscope</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/ground+batteries" class="post-tag" title="show questions tagged &#39;ground batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/ground+audio" class="post-tag" title="show questions tagged &#39;ground audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/ground+analog" class="post-tag" title="show questions tagged &#39;ground analog&#39;" rel="tag">analog</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/ground+circuit" class="post-tag" title="show questions tagged &#39;ground circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/ground+current" class="post-tag" title="show questions tagged &#39;ground current&#39;" rel="tag">current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/ground+groundloops" class="post-tag" title="show questions tagged &#39;ground groundloops&#39;" rel="tag">groundloops</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/ground+signal" class="post-tag" title="show questions tagged &#39;ground signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/ground+shielding" class="post-tag" title="show questions tagged &#39;ground shielding&#39;" rel="tag">shielding</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/ground+earth" class="post-tag" title="show questions tagged &#39;ground earth&#39;" rel="tag">earth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/ground+breadboard" class="post-tag" title="show questions tagged &#39;ground breadboard&#39;" rel="tag">breadboard</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/ground+connector" class="post-tag" title="show questions tagged &#39;ground connector&#39;" rel="tag">connector</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/ground+adc" class="post-tag" title="show questions tagged &#39;ground adc&#39;" rel="tag">adc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
+        <div>
+            <a href="/questions/tagged/ground+power-supply" class="post-tag" title="show questions tagged &#39;ground power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">23</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/ground+grounding" class="post-tag" title="show questions tagged &#39;ground grounding&#39;" rel="tag">grounding</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">19</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/ground+pcb" class="post-tag" title="show questions tagged &#39;ground pcb&#39;" rel="tag">pcb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/ground+voltage" class="post-tag" title="show questions tagged &#39;ground voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/ground+power" class="post-tag" title="show questions tagged &#39;ground power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/ground+arduino" class="post-tag" title="show questions tagged &#39;ground arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/ground+layout" class="post-tag" title="show questions tagged &#39;ground layout&#39;" rel="tag">layout</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/ground+safety" class="post-tag" title="show questions tagged &#39;ground safety&#39;" rel="tag">safety</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/ground+noise" class="post-tag" title="show questions tagged &#39;ground noise&#39;" rel="tag">noise</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/ground+usb" class="post-tag" title="show questions tagged &#39;ground usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+pcb-design" class="post-tag" title="show questions tagged &#39;ground pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+ac" class="post-tag" title="show questions tagged &#39;ground ac&#39;" rel="tag">ac</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+circuit" class="post-tag" title="show questions tagged &#39;ground circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+current" class="post-tag" title="show questions tagged &#39;ground current&#39;" rel="tag">current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+groundloops" class="post-tag" title="show questions tagged &#39;ground groundloops&#39;" rel="tag">groundloops</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+audio" class="post-tag" title="show questions tagged &#39;ground audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+oscilloscope" class="post-tag" title="show questions tagged &#39;ground oscilloscope&#39;" rel="tag">oscilloscope</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+batteries" class="post-tag" title="show questions tagged &#39;ground batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+analog" class="post-tag" title="show questions tagged &#39;ground analog&#39;" rel="tag">analog</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+signal" class="post-tag" title="show questions tagged &#39;ground signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+shielding" class="post-tag" title="show questions tagged &#39;ground shielding&#39;" rel="tag">shielding</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+breadboard" class="post-tag" title="show questions tagged &#39;ground breadboard&#39;" rel="tag">breadboard</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+rf" class="post-tag" title="show questions tagged &#39;ground rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+antenna" class="post-tag" title="show questions tagged &#39;ground antenna&#39;" rel="tag">antenna</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/ground+earth" class="post-tag" title="show questions tagged &#39;ground earth&#39;" rel="tag">earth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -944,7 +1283,7 @@ For example, I have a shield that takes +5 and Ground from ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/ground")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1037,7 +1376,7 @@ For example, I have a shield that takes +5 and Ground from ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1064,14 +1403,11 @@ For example, I have a shield that takes +5 and Ground from ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1080,33 +1416,34 @@ For example, I have a shield that takes +5 and Ground from ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|ground|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|ground|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

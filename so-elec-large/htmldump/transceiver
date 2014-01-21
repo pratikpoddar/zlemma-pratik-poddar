@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=b0a5a51e797c">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged transceiver" href="/feeds/tag/transceiver" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386190748,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328201,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftransceiver" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftransceiver" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[transceiver]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftransceiver">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2ftransceiver">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[transceiver]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/transceiver/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/transceiver?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/transceiver?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/transceiver?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/transceiver?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/transceiver?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/transceiver?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/transceiver?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/transceiver?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/transceiver?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/transceiver?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,51 @@ The <a href="/questions/tagged/transceiver" class="post-tag" title="show questio
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92589">
+<div class="question-summary" id="question-summary-95910">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="45 views">
+    45 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95910/using-one-rf-transmitter-and-multiple-receivers" class="question-hyperlink">Using one RF transmitter and multiple receivers [closed]</a></h3>
+        <div class="excerpt">
+            I want to create a system where I can send an On/Off signal to one receiver, to say, tell them to turn on an Solenoid. The signal that I send is a list of numbers (max 20 char). I want to use a RF ...
+        </div>          
+        <div class="tags t-rf t-transceiver">
+            <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-09 12:01:33Z" class="relativetime">Jan 9 at 12:01</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35307/user35307"><div><img src="https://www.gravatar.com/avatar/fe2b031be0650dc6bb38dc1eb81487bc?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35307/user35307">user35307</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94296">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +315,188 @@ The <a href="/questions/tagged/transceiver" class="post-tag" title="show questio
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="29 views">
-    29 views
+        <div class="views " title="87 views">
+    87 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94296/using-a-toslink-eiaj-optical-module-as-both-a-transmitter-and-receiver-for-digit" class="question-hyperlink">Using a TOSLINK/EIAJ optical module as both a transmitter and receiver for digital audio?</a></h3>
+        <div class="excerpt">
+            Size and aesthetics are design constraints for me, so I'm trying to think of ways to reduce visible IO on my device. But I don't want to sacrifice functionality for form.
+
+One of my ideas is the reuse ...
+        </div>          
+        <div class="tags t-audio t-transceiver t-optoelectronics t-digital-communications t-toslink">
+            <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged &#39;audio&#39;" rel="tag">audio</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> <a href="/questions/tagged/optoelectronics" class="post-tag" title="show questions tagged &#39;optoelectronics&#39;" rel="tag">optoelectronics</a> <a href="/questions/tagged/digital-communications" class="post-tag" title="show questions tagged &#39;digital-communications&#39;" rel="tag">digital-communications</a> <a href="/questions/tagged/toslink" class="post-tag" title="show questions tagged &#39;toslink&#39;" rel="tag">toslink</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-21 07:14:09Z" class="relativetime">Dec 21 '13 at 7:14</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34470/bigmacattack"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/36b4154bba51d2b2bd8dedf1814ce1e2?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34470/bigmacattack">BigMacAttack</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">104</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94247">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="52 views">
+    52 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94247/does-a-table-that-shows-how-8b-10b-encoding-tries-to-ensure-running-disparity-on" class="question-hyperlink">Does a table that shows how 8b/10b encoding tries to ensure running disparity on a transmission line</a></h3>
+        <div class="excerpt">
+            In telecommunications, 8b/10b is a line code that maps 8-bit symbols to 10-bit symbols to achieve DC-balance and bounded disparity. In this case we take each 8 bit data and map it to a 10 bit symbol. ...
+        </div>          
+        <div class="tags t-communication t-data t-transceiver t-encoding">
+            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/data" class="post-tag" title="show questions tagged &#39;data&#39;" rel="tag">data</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> <a href="/questions/tagged/encoding" class="post-tag" title="show questions tagged &#39;encoding&#39;" rel="tag">encoding</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-20 15:00:21Z" class="relativetime">Dec 20 '13 at 15:00</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/20711/quantum231"><div><img src="https://www.gravatar.com/avatar/c1503cf70823c67b54c197559cc08c63?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/20711/quantum231">quantum231</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">975</span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93846">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="44 views">
+    44 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93846/ultrasonic-transducer-response-to-harmonics" class="question-hyperlink">Ultrasonic transducer response to harmonics?</a></h3>
+        <div class="excerpt">
+            Does anyone know offhand whether an ultrasonic transducer will respond efficiently to harmonics of the fundamental? For example, will a 40kHz transmitter also transmit with reasonable efficiency at ...
+        </div>          
+        <div class="tags t-ultrasound t-transceiver">
+            <a href="/questions/tagged/ultrasound" class="post-tag" title="show questions tagged &#39;ultrasound&#39;" rel="tag">ultrasound</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-16 11:07:18Z" class="relativetime">Dec 16 '13 at 11:07</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/32885/dirk-bruere"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/3a759bc92db59cceb380b42b7ba162c8?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/32885/dirk-bruere">Dirk Bruere</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">246</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93115">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="40 views">
+    40 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93115/calculating-the-voltage-generated-by-an-40khz-ultrasonic-tranceiver" class="question-hyperlink">Calculating the voltage generated by an 40KHZ Ultrasonic Tranceiver</a></h3>
+        <div class="excerpt">
+            In particular, this device: http://www.hexamite.com/hx40str.htm
+
+...
+        </div>          
+        <div class="tags t-transceiver t-decibel">
+            <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> <a href="/questions/tagged/decibel" class="post-tag" title="show questions tagged &#39;decibel&#39;" rel="tag">decibel</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2013-12-09 15:11:18Z" class="relativetime">Dec 9 '13 at 15:11</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/16047/stacey-anne"><div><img src="https://www.gravatar.com/avatar/533b3b7640e8988f82e17450e3fdd44d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/16047/stacey-anne">Stacey Anne</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">2,097</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92589">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="144 views">
+    144 views
 </div>
     </div>
     <div class="summary">
@@ -190,14 +513,14 @@ The <a href="/questions/tagged/transceiver" class="post-tag" title="show questio
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-03 22:50:50Z" class="relativetime">22 hours ago</span>
+        asked <span title="2013-12-03 22:50:50Z" class="relativetime">Dec 3 '13 at 22:50</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33610/user33610"><div><img src="https://www.gravatar.com/avatar/b2a8d2ad16149953bcae078019f634c9?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/33610/user33610">user33610</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
     </div>
 </div>
         </div>  
@@ -216,8 +539,8 @@ The <a href="/questions/tagged/transceiver" class="post-tag" title="show questio
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="108 views">
-    108 views
+        <div class="views " title="135 views">
+    135 views
 </div>
     </div>
     <div class="summary">
@@ -236,7 +559,7 @@ Is there a way to relate the frequency, data rate, power output, ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-21 21:44:28Z" class="relativetime">Sep 21 at 21:44</span>
+        asked <span title="2013-09-21 21:44:28Z" class="relativetime">Sep 21 '13 at 21:44</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/11862/youngmoney"><div><img src="https://www.gravatar.com/avatar/d253a59ca9d41509957700a5e277c93d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -262,8 +585,8 @@ Is there a way to relate the frequency, data rate, power output, ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="124 views">
-    124 views
+        <div class="views " title="141 views">
+    141 views
 </div>
     </div>
     <div class="summary">
@@ -280,7 +603,7 @@ Is there a way to relate the frequency, data rate, power output, ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-20 21:44:05Z" class="relativetime">Aug 20 at 21:44</span>
+        asked <span title="2013-08-20 21:44:05Z" class="relativetime">Aug 20 '13 at 21:44</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/27770/dingo-kinznerhook"><div><img src="https://www.gravatar.com/avatar/eb6491ffcea5853cb7c4e354b69e6334?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -306,8 +629,8 @@ Is there a way to relate the frequency, data rate, power output, ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="79 views">
-    79 views
+        <div class="views " title="96 views">
+    96 views
 </div>
     </div>
     <div class="summary">
@@ -324,7 +647,7 @@ Is there a way to relate the frequency, data rate, power output, ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-01 05:31:16Z" class="relativetime">Aug 1 at 5:31</span>
+        asked <span title="2013-08-01 05:31:16Z" class="relativetime">Aug 1 '13 at 5:31</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26946/karthi"><div><img src="https://www.gravatar.com/avatar/12b328b83dee288d88dc4d3e842f5480?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -350,8 +673,8 @@ Is there a way to relate the frequency, data rate, power output, ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="26 views">
-    26 views
+        <div class="views " title="28 views">
+    28 views
 </div>
     </div>
     <div class="summary">
@@ -370,14 +693,14 @@ I need to write a function similar to line 92 on this page.  This function (trx_
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-21 06:15:34Z" class="relativetime">Jul 21 at 6:15</span>
+        asked <span title="2013-07-21 06:15:34Z" class="relativetime">Jul 21 '13 at 6:15</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/15341/user1068636"><div><img src="https://www.gravatar.com/avatar/af6bfcf5de860549e5fe6bf1193e5c38?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/15341/user1068636">user1068636</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">311</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">316</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
     </div>
 </div>
         </div>  
@@ -396,8 +719,8 @@ I need to write a function similar to line 92 on this page.  This function (trx_
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="52 views">
-    52 views
+        <div class="views " title="55 views">
+    55 views
 </div>
     </div>
     <div class="summary">
@@ -418,14 +741,14 @@ Table 6.2 (SPI Command Byte Definition) on pg. 16 of the ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-01 22:19:28Z" class="relativetime">Jul 1 at 22:19</span>
+        asked <span title="2013-07-01 22:19:28Z" class="relativetime">Jul 1 '13 at 22:19</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/15341/user1068636"><div><img src="https://www.gravatar.com/avatar/af6bfcf5de860549e5fe6bf1193e5c38?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/15341/user1068636">user1068636</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">311</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">316</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
     </div>
 </div>
         </div>  
@@ -444,8 +767,8 @@ Table 6.2 (SPI Command Byte Definition) on pg. 16 of the ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="69 views">
-    69 views
+        <div class="views " title="76 views">
+    76 views
 </div>
     </div>
     <div class="summary">
@@ -470,14 +793,14 @@ Where can I find a circuit diagram ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-01 17:20:26Z" class="relativetime">Jul 1 at 17:20</span>
+        asked <span title="2013-07-01 17:20:26Z" class="relativetime">Jul 1 '13 at 17:20</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/20711/quantum231"><div><img src="https://www.gravatar.com/avatar/c1503cf70823c67b54c197559cc08c63?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/20711/quantum231">quantum231</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">790</span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">975</span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
     </div>
 </div>
         </div>  
@@ -496,8 +819,8 @@ Where can I find a circuit diagram ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="38 views">
-    38 views
+        <div class="views " title="46 views">
+    46 views
 </div>
     </div>
     <div class="summary">
@@ -514,7 +837,7 @@ Where can I find a circuit diagram ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-19 09:29:25Z" class="relativetime">Jun 19 at 9:29</span>
+        asked <span title="2013-06-19 09:29:25Z" class="relativetime">Jun 19 '13 at 9:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/25421/narcis-scirlatache"><div><img src="https://www.gravatar.com/avatar/b0c633c81224ade9c01ef251a965528d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -540,8 +863,8 @@ Where can I find a circuit diagram ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="108 views">
-    108 views
+        <div class="views " title="118 views">
+    118 views
 </div>
     </div>
     <div class="summary">
@@ -560,7 +883,7 @@ I want to build -- or have built -- a magnificent shoe that can convert taps (fr
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-17 15:48:24Z" class="relativetime">Jun 17 at 15:48</span>
+        asked <span title="2013-06-17 15:48:24Z" class="relativetime">Jun 17 '13 at 15:48</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/25341/sircumference"><div><img src="https://www.gravatar.com/avatar/05d148245e06b037a386f9a24f587bc0?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -586,8 +909,8 @@ I want to build -- or have built -- a magnificent shoe that can convert taps (fr
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="79 views">
-    79 views
+        <div class="views " title="85 views">
+    85 views
 </div>
     </div>
     <div class="summary">
@@ -604,247 +927,14 @@ I want to build -- or have built -- a magnificent shoe that can convert taps (fr
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-06 08:36:11Z" class="relativetime">Jun 6 at 8:36</span>
+        asked <span title="2013-06-06 08:36:11Z" class="relativetime">Jun 6 '13 at 8:36</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/24836/pugz"><div><img src="https://www.gravatar.com/avatar/7077d829e70a69294a0f066ec22abb8c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/24836/pugz">Pugz</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">23</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-71754">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="45 views">
-    45 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/71754/cant-send-message-from-coordinator-to-end-device" class="question-hyperlink">Can&#39;t send message from Coordinator to end device?</a></h3>
-        <div class="excerpt">
-            I am using MiWi Pro wireless networking protocol and I was running some tests with unicast function, but I encountered a problem.
-
-Unicast Main Issue:
-The end device doesn't receive the messages from ...
-        </div>          
-        <div class="tags t-microcontroller t-pic t-wireless t-xbee t-transceiver">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> <a href="/questions/tagged/wireless" class="post-tag" title="show questions tagged &#39;wireless&#39;" rel="tag">wireless</a> <a href="/questions/tagged/xbee" class="post-tag" title="show questions tagged &#39;xbee&#39;" rel="tag">xbee</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-06 02:22:39Z" class="relativetime">Jun 6 at 2:22</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/24826/ammar"><div><img src="https://www.gravatar.com/avatar/79b8fe48f2fdb7de706d69c26ec91869?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/24826/ammar">Ammar</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-71292">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="168 views">
-    168 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/71292/connecting-2-arduinos-with-bluetooth" class="question-hyperlink">Connecting 2 Arduinos with Bluetooth</a></h3>
-        <div class="excerpt">
-            I have been looking on Google for a project that involves 2 Arduinos communicating with Bluetooth. The only examples I can find are with an Arduino to an Android phone.
-
-Does anyone have links to let ...
-        </div>          
-        <div class="tags t-arduino t-communication t-bluetooth t-transceiver">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/bluetooth" class="post-tag" title="show questions tagged &#39;bluetooth&#39;" rel="tag">bluetooth</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-01 19:13:13Z" class="relativetime">Jun 1 at 19:13</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/11339/stealthrt"><div><img src="https://www.gravatar.com/avatar/6bb742f3b8fe9f056902867762d79e58?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/11339/stealthrt">StealthRT</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">217</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-69875">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="94 views">
-    94 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/69875/what-is-a-transceiver-reconfiguration-controller-on-fpga" class="question-hyperlink">what is a transceiver reconfiguration controller on FPGA</a></h3>
-        <div class="excerpt">
-            I have come across this on an (Altera) FPGAs that make use of high speed protocols but don't know what it does.
-
-        </div>          
-        <div class="tags t-fpga t-controller t-transceiver">
-            <a href="/questions/tagged/fpga" class="post-tag" title="show questions tagged &#39;fpga&#39;" rel="tag">fpga</a> <a href="/questions/tagged/controller" class="post-tag" title="show questions tagged &#39;controller&#39;" rel="tag">controller</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-20 09:32:50Z" class="relativetime">May 20 at 9:32</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/20711/quantum231"><div><img src="https://www.gravatar.com/avatar/c1503cf70823c67b54c197559cc08c63?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/20711/quantum231">quantum231</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">790</span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-68028">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="121 views">
-    121 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/68028/what-are-sma-connectors-and-what-are-they-used-for" class="question-hyperlink">What are SMA connectors and what are they used for?</a></h3>
-        <div class="excerpt">
-            I have come across these rather big connectors on Altera trasciever boards in particular. I was wondering what is special about them.
-
-        </div>          
-        <div class="tags t-rf t-connector t-transceiver">
-            <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-05-03 10:13:26Z" class="relativetime">May 3 at 10:13</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/20711/quantum231"><div><img src="https://www.gravatar.com/avatar/c1503cf70823c67b54c197559cc08c63?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/20711/quantum231">quantum231</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">790</span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-66678">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="74 views">
-    74 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/66678/what-is-wireless-blocking-immunity" class="question-hyperlink">What is wireless blocking immunity?</a></h3>
-        <div class="excerpt">
-            In a data sheet for a wireless transceiver I read 
-
-<span class='tex2jax_ignore'>100 dB blocking immunity
-</span>
-
-what does this actually mean? 
-
-        </div>          
-        <div class="tags t-wireless t-transceiver">
-            <a href="/questions/tagged/wireless" class="post-tag" title="show questions tagged &#39;wireless&#39;" rel="tag">wireless</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-04-23 14:31:19Z" class="relativetime">Apr 23 at 14:31</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/11709/wilhelmsen"><div><img src="https://www.gravatar.com/avatar/8ccf37c2a607b0af181853a550199098?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/11709/wilhelmsen">Wilhelmsen</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">520</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">33</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -866,76 +956,305 @@ what does this actually mean?
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/transceiver?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/transceiver?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/transceiver?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/transceiver?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/transceiver?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/transceiver?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=transceiver&amp;sort=newest" title="the 30 newest transceiver questions"><span class="feed-icon"></span>newest transceiver questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=transceiver&sort=newest" title="the 30 newest transceiver questions"><span class="feed-icon"></span>newest transceiver questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">33</div>
+            <div class="summarycount al">38</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/transceiver/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-
-            <div class="spacer">
-                <div class="bulletin-item-type"><a href="http://blog.stackoverflow.com" class="event-date" target="_blank">blog</a></div>
-                <div class="bulletin-item-content">
-                    <a href="http://blog.stackoverflow.com/2013/12/a-new-top-bar-for-stack-exchange/" class="question-hyperlink" target="_blank">A New Top Bar for Stack Exchange</a>
-                </div>
-                <br class="cbt" />
-            </div>
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/transceiver+wireless" class="post-tag" title="show questions tagged &#39;transceiver wireless&#39;" rel="tag">wireless</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/transceiver+rf" class="post-tag" title="show questions tagged &#39;transceiver rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/transceiver+microcontroller" class="post-tag" title="show questions tagged &#39;transceiver microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/transceiver+rs485" class="post-tag" title="show questions tagged &#39;transceiver rs485&#39;" rel="tag">rs485</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/transceiver+communication" class="post-tag" title="show questions tagged &#39;transceiver communication&#39;" rel="tag">communication</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/transceiver+bluetooth" class="post-tag" title="show questions tagged &#39;transceiver bluetooth&#39;" rel="tag">bluetooth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/transceiver+arduino" class="post-tag" title="show questions tagged &#39;transceiver arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/transceiver+pic" class="post-tag" title="show questions tagged &#39;transceiver pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/transceiver+low-power" class="post-tag" title="show questions tagged &#39;transceiver low-power&#39;" rel="tag">low-power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/transceiver+embedded" class="post-tag" title="show questions tagged &#39;transceiver embedded&#39;" rel="tag">embedded</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/transceiver+usb" class="post-tag" title="show questions tagged &#39;transceiver usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/transceiver+spi" class="post-tag" title="show questions tagged &#39;transceiver spi&#39;" rel="tag">spi</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+system-on-chip" class="post-tag" title="show questions tagged &#39;transceiver system-on-chip&#39;" rel="tag">system-on-chip</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+433mhz" class="post-tag" title="show questions tagged &#39;transceiver 433mhz&#39;" rel="tag">433mhz</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+remote-control" class="post-tag" title="show questions tagged &#39;transceiver remote-control&#39;" rel="tag">remote-control</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+receiver" class="post-tag" title="show questions tagged &#39;transceiver receiver&#39;" rel="tag">receiver</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+psoc" class="post-tag" title="show questions tagged &#39;transceiver psoc&#39;" rel="tag">psoc</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+led" class="post-tag" title="show questions tagged &#39;transceiver led&#39;" rel="tag">led</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+differential" class="post-tag" title="show questions tagged &#39;transceiver differential&#39;" rel="tag">differential</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+digital-modulation" class="post-tag" title="show questions tagged &#39;transceiver digital-modulation&#39;" rel="tag">digital-modulation</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+digital-communications" class="post-tag" title="show questions tagged &#39;transceiver digital-communications&#39;" rel="tag">digital-communications</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+ham-radio" class="post-tag" title="show questions tagged &#39;transceiver ham-radio&#39;" rel="tag">ham-radio</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+i2c" class="post-tag" title="show questions tagged &#39;transceiver i2c&#39;" rel="tag">i2c</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+fpga" class="post-tag" title="show questions tagged &#39;transceiver fpga&#39;" rel="tag">fpga</a>&nbsp;<br>
-            <a href="/questions/tagged/transceiver+connector" class="post-tag" title="show questions tagged &#39;transceiver connector&#39;" rel="tag">connector</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/transceiver+wireless" class="post-tag" title="show questions tagged &#39;transceiver wireless&#39;" rel="tag">wireless</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/transceiver+rf" class="post-tag" title="show questions tagged &#39;transceiver rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/transceiver+microcontroller" class="post-tag" title="show questions tagged &#39;transceiver microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/transceiver+communication" class="post-tag" title="show questions tagged &#39;transceiver communication&#39;" rel="tag">communication</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/transceiver+rs485" class="post-tag" title="show questions tagged &#39;transceiver rs485&#39;" rel="tag">rs485</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/transceiver+bluetooth" class="post-tag" title="show questions tagged &#39;transceiver bluetooth&#39;" rel="tag">bluetooth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/transceiver+embedded" class="post-tag" title="show questions tagged &#39;transceiver embedded&#39;" rel="tag">embedded</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/transceiver+pic" class="post-tag" title="show questions tagged &#39;transceiver pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/transceiver+low-power" class="post-tag" title="show questions tagged &#39;transceiver low-power&#39;" rel="tag">low-power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/transceiver+arduino" class="post-tag" title="show questions tagged &#39;transceiver arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+digital-communications" class="post-tag" title="show questions tagged &#39;transceiver digital-communications&#39;" rel="tag">digital-communications</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+usb" class="post-tag" title="show questions tagged &#39;transceiver usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+connector" class="post-tag" title="show questions tagged &#39;transceiver connector&#39;" rel="tag">connector</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+antenna" class="post-tag" title="show questions tagged &#39;transceiver antenna&#39;" rel="tag">antenna</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+433mhz" class="post-tag" title="show questions tagged &#39;transceiver 433mhz&#39;" rel="tag">433mhz</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+ham-radio" class="post-tag" title="show questions tagged &#39;transceiver ham-radio&#39;" rel="tag">ham-radio</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+digital-modulation" class="post-tag" title="show questions tagged &#39;transceiver digital-modulation&#39;" rel="tag">digital-modulation</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+spi" class="post-tag" title="show questions tagged &#39;transceiver spi&#39;" rel="tag">spi</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+i2c" class="post-tag" title="show questions tagged &#39;transceiver i2c&#39;" rel="tag">i2c</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+differential" class="post-tag" title="show questions tagged &#39;transceiver differential&#39;" rel="tag">differential</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+psoc" class="post-tag" title="show questions tagged &#39;transceiver psoc&#39;" rel="tag">psoc</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+controller" class="post-tag" title="show questions tagged &#39;transceiver controller&#39;" rel="tag">controller</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+remote-control" class="post-tag" title="show questions tagged &#39;transceiver remote-control&#39;" rel="tag">remote-control</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+system-on-chip" class="post-tag" title="show questions tagged &#39;transceiver system-on-chip&#39;" rel="tag">system-on-chip</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/transceiver+led" class="post-tag" title="show questions tagged &#39;transceiver led&#39;" rel="tag">led</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -955,7 +1274,7 @@ what does this actually mean?
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/transceiver")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1048,7 +1367,7 @@ what does this actually mean?
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1075,14 +1394,11 @@ what does this actually mean?
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1197
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1091,33 +1407,34 @@ what does this actually mean?
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|transceiver|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|transceiver|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

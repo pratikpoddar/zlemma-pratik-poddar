@@ -168,13 +168,13 @@ def prob_A_given_B(skill1, skill2):
 
     return retval
 
-if not len(sys.argv) == 2:
-	print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
-	sys.exit(1)
+#if not len(sys.argv) == 2:
+	#print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
+	#sys.exit(1)
 
-if sys.argv[1] not in ["downloaddata","saveresults"]:
-	print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
-	sys.exit(1)
+#if sys.argv[1] not in ["downloaddata","saveresults"]:
+#	print "Usage : python skill_graph_so.py [downloaddata | saveresults]"
+#	sys.exit(1)
 
 skills = ["Machine Learning", "Probability", "Statistics", "Data Mining", "NLP", "Hadoop", "Programming", "SQL", "Algorithm", "Artificial Intelligence", "Pattern Recognition", "Python", "Django", "C++", "Java", "Ruby", "Algebra", "Convex Optimization", "Optimization"]
 execfile("../skill_list.py")
@@ -186,7 +186,7 @@ print skills2
 if sys.argv[1] == "downloaddata":
 	## Save all the files
 	pool = Pool(len(skills2))
-	jobs = [pool.spawn(getParentInfo , skill) for skill in skills2]
+	jobs = [pool.spawn(getSOhtml1 , skill) for skill in skills2]
 	pool.join()
 
 if sys.argv[1] == "saveresults":
@@ -199,6 +199,9 @@ if sys.argv[1] == "saveresults":
 	for comb in itertools.permutations(skills2,2):
 		val = prob_A_given_B(comb[0], comb[1])
 		outputdict[comb[0]][comb[1]] = val
+
+        for skill in skills2:
+                outputdict[skill][skill] = val
 
 	print outputdict
 	printMatrix(skills, outputdict)

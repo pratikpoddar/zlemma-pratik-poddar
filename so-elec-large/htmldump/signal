@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged signal" href="/feeds/tag/signal" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186578,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327806,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fsignal" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fsignal" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[signal]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fsignal">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fsignal">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[signal]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/signal/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/signal?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/signal?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/signal?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/signal?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/signal?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/signal?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/signal?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/signal?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/signal?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/signal?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,13 +257,13 @@ A signal is a stream of information in the form of a varying quantity. Usually i
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92446">
+<div class="question-summary" id="question-summary-97093">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
+                    <span class="vote-count-post "><strong>-3</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -172,19 +271,17 @@ A signal is a stream of information in the form of a varying quantity. Usually i
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="31 views">
-    31 views
+        <div class="views " title="33 views">
+    33 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92446/signal-encoding-on-realtek-tx2-ic-part-2" class="question-hyperlink">Signal encoding on Realtek TX2 IC [part 2]</a></h3>
+        <h3><a href="/questions/97093/how-to-change-a-bluetooth-message-to-an-electrical-signal" class="question-hyperlink">How to change a Bluetooth message to an electrical signal [on hold]</a></h3>
         <div class="excerpt">
-            The image below shows IC Realtek TX2 encoder (pinouts and block diagram), which is part of an RC car transmitter circuit.
-
-Datasheet refers: "The frequency of pulse depends on the local oscillator ...
+            I'm doing a project at my school, and I had a problem while doing it. I am trying to send from an app on my cell a bluetooth msg to a microchip, but I don't know how to turn the bluetooth msg to an ...
         </div>          
-        <div class="tags t-integrated-circuit t-signal t-frequency t-encoder">
-            <a href="/questions/tagged/integrated-circuit" class="post-tag" title="show questions tagged &#39;integrated-circuit&#39;" rel="tag">integrated-circuit</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/encoder" class="post-tag" title="show questions tagged &#39;encoder&#39;" rel="tag">encoder</a> 
+        <div class="tags t-signal t-bluetooth t-microchip">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/bluetooth" class="post-tag" title="show questions tagged &#39;bluetooth&#39;" rel="tag">bluetooth</a> <a href="/questions/tagged/microchip" class="post-tag" title="show questions tagged &#39;microchip&#39;" rel="tag">microchip</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -192,19 +289,19 @@ Datasheet refers: "The frequency of pulse depends on the local oscillator ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-02 15:44:30Z" class="relativetime">2 days ago</span>
+        asked <span title="2014-01-20 21:06:31Z" class="relativetime">21 hours ago</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/31176/dempap"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/UcAY9.jpg?s=32&g=1" alt=""></div></a>
+        <a href="/users/35849/user35849"><div><img src="https://www.gravatar.com/avatar/3cc7f6bc4d53789c1db160c045c85755?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/31176/dempap">dempap</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <a href="/users/35849/user35849">user35849</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-92267">
+</div><div class="question-summary" id="question-summary-96571">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -214,21 +311,23 @@ Datasheet refers: "The frequency of pulse depends on the local oscillator ...
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
+            <div class="status answered">
+                <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="104 views">
-    104 views
+        <div class="views " title="14 views">
+    14 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92267/correct-way-to-convert-square-signal-to-sine-waveform" class="question-hyperlink">Correct way to convert square signal to sine waveform</a></h3>
+        <h3><a href="/questions/96571/how-to-find-amplitude-of-a-signal-in-simulink" class="question-hyperlink">How to find Amplitude of a Signal in Simulink</a></h3>
         <div class="excerpt">
-            I have a square form signal that can change frequency from 100kHz to 200kHz (more precisely, the '1' is coded by 200kHz part (2 oscillations) and '0' is coded by 100kHz). The amplitude is about 2.5V. ...
+            I have a com port object sampling at 0.01 seconds a stream of data. The 'data' is a signal from an accelerometer with a sinusoidal shape.
+
+I need to do math operations on the amplitude of this signal. ...
         </div>          
-        <div class="tags t-signal t-filter t-sine">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/filter" class="post-tag" title="show questions tagged &#39;filter&#39;" rel="tag">filter</a> <a href="/questions/tagged/sine" class="post-tag" title="show questions tagged &#39;sine&#39;" rel="tag">sine</a> 
+        <div class="tags t-signal t-processing">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/processing" class="post-tag" title="show questions tagged &#39;processing&#39;" rel="tag">processing</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -236,19 +335,111 @@ Datasheet refers: "The frequency of pulse depends on the local oscillator ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-30 11:39:48Z" class="relativetime">Nov 30 at 11:39</span>
+        asked <span title="2014-01-15 18:54:04Z" class="relativetime">Jan 15 at 18:54</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/18888/darkkey"><div><img src="https://www.gravatar.com/avatar/d6594293721d5254e31b718fee41e9a5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/35613/user35613"><div><img src="https://www.gravatar.com/avatar/201829e633f5f62f50c81829123c6b29?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/18888/darkkey">Darkkey</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">28</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        <a href="/users/35613/user35613">user35613</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-92099">
+</div><div class="question-summary" id="question-summary-96203">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="78 views">
+    78 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96203/clalculating-effective-value-of-square-waveform" class="question-hyperlink">Clalculating effective value of square waveform</a></h3>
+        <div class="excerpt">
+            I need to calculate the effective value of this signal:
+
+
+
+I dont know how to calculate this. Iknow how to calculate the effective value of well known waveforms like square, sin, ..., but this is a ...
+        </div>          
+        <div class="tags t-signal">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-12 12:39:30Z" class="relativetime">Jan 12 at 12:39</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/25686/depechesoul"><div><img src="https://www.gravatar.com/avatar/69345ce802bcf76035c11847d115197e?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/25686/depechesoul">depecheSoul</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">195</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95744">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="83 views">
+    83 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95744/sampling-theorem" class="question-hyperlink">Sampling Theorem</a></h3>
+        <div class="excerpt">
+            $$x(t) = \frac{sin(2000\pi t)}{\pi t}cos(1000\pi t)$$ is sampled with sampling period \$T_{s} = \frac{1}{8000}\$, to obtain the sampled signal \$x_{p}(t)=x(t)p(t)\$, where \$p(t)= \sum_{n = ...
+        </div>          
+        <div class="tags t-signal t-sampling t-signal-processing">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/sampling" class="post-tag" title="show questions tagged &#39;sampling&#39;" rel="tag">sampling</a> <a href="/questions/tagged/signal-processing" class="post-tag" title="show questions tagged &#39;signal-processing&#39;" rel="tag">signal-processing</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-07 18:56:14Z" class="relativetime">Jan 7 at 18:56</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35227/cecemelly"><div><img src="https://www.gravatar.com/avatar/e347f65f2722446113445a29c6cd4be5?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35227/cecemelly">cecemelly</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95731">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -259,22 +450,26 @@ Datasheet refers: "The frequency of pulse depends on the local oscillator ...
                 </div>
             </div>
             <div class="status answered">
-                <strong>2</strong>answers
+                <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="75 views">
-    75 views
+        <div class="views " title="232 views">
+    232 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92099/how-are-multiple-signals-propagated-in-a-coaxial-cable" class="question-hyperlink">How are multiple signals propagated in a coaxial cable?</a></h3>
+        <h3><a href="/questions/95731/how-to-calculate-the-average-of-a-square-wave" class="question-hyperlink">How to Calculate the average of a Square Wave?</a></h3>
         <div class="excerpt">
-            I am reading that coaxial cables can carry hundreds of MHz signals at How Stuff Works. How are these signals propagated and how are they deconstructed once they reach their destination?
+            I could not figure how to calculate the average of a square wave.
 
-One idea that ...
+Consider a square wave of +5V from time 0 to 6 sec and -3V from 6 to 10 sec.
+
+On integrating from time 0 to 6 the average: 3.0V
+
+On ...
         </div>          
-        <div class="tags t-signal t-transmission">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/transmission" class="post-tag" title="show questions tagged &#39;transmission&#39;" rel="tag">transmission</a> 
+        <div class="tags t-voltage t-signal t-waveform t-calculus">
+            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/waveform" class="post-tag" title="show questions tagged &#39;waveform&#39;" rel="tag">waveform</a> <a href="/questions/tagged/calculus" class="post-tag" title="show questions tagged &#39;calculus&#39;" rel="tag">calculus</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -282,19 +477,111 @@ One idea that ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-28 05:41:52Z" class="relativetime">Nov 28 at 5:41</span>
+        asked <span title="2014-01-07 16:50:21Z" class="relativetime">Jan 7 at 16:50</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/13345/user1084113"><div><img src="https://www.gravatar.com/avatar/2f69e913645c491704967d1e509a29bd?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/35219/user35219"><div><img src="https://www.gravatar.com/avatar/4ad720a61b32bee6cfd305f5abfe34fb?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/13345/user1084113">user1084113</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">95</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <a href="/users/35219/user35219">user35219</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-92063">
+</div><div class="question-summary" id="question-summary-95598">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="76 views">
+    76 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95598/what-component-to-use-for-audio-signal-switching" class="question-hyperlink">What component to use for audio signal switching?</a></h3>
+        <div class="excerpt">
+            I'm looking to build a guitar pedal switcher based on a Raspberry Pi or Arduino (have not yet decided, but I have an unused Raspberry around and I lean towards that). Anyway, digital logic.
+
+Now, I ...
+        </div>          
+        <div class="tags t-audio t-switches t-signal">
+            <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged &#39;audio&#39;" rel="tag">audio</a> <a href="/questions/tagged/switches" class="post-tag" title="show questions tagged &#39;switches&#39;" rel="tag">switches</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-06 12:32:54Z" class="relativetime">Jan 6 at 12:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35168/catalinm"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/32d968bdf8b70b1f944d455ae2c48c41?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35168/catalinm">CatalinM</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95356">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="88 views">
+    88 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95356/how-to-drive-a-video-signal-of-any-kind-to-a-crt-monitor-whats-the-protocol" class="question-hyperlink">How to drive a video signal (of any kind) to a CRT monitor? What&#39;s the protocol, interface, standard, convention, etc.? [closed]</a></h3>
+        <div class="excerpt">
+            Say I am going to develop a video displaying computer componenet (call it a TTL chip, GPU, whatever).
+
+There has to be some basics on how to communicate with the monitor, or how to make sure the data ...
+        </div>          
+        <div class="tags t-signal t-interface t-hardware t-crt">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/interface" class="post-tag" title="show questions tagged &#39;interface&#39;" rel="tag">interface</a> <a href="/questions/tagged/hardware" class="post-tag" title="show questions tagged &#39;hardware&#39;" rel="tag">hardware</a> <a href="/questions/tagged/crt" class="post-tag" title="show questions tagged &#39;crt&#39;" rel="tag">crt</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-03 21:36:39Z" class="relativetime">Jan 3 at 21:36</span>
+    </div>
+    <div class="user-gravatar32">
+        <span class="anonymous-gravatar"></span>
+    </div>
+    <div class="user-details">
+        user35059<br>
+        
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95074">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -304,21 +591,25 @@ One idea that ...
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status answered">
-                <strong>1</strong>answer
+            <div class="status answered-accepted">
+                <strong>4</strong>answers
             </div>
         </div>
-        <div class="views " title="35 views">
-    35 views
+        <div class="views " title="145 views">
+    145 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92063/transforming-240-vac-to-5v-gnd" class="question-hyperlink">Transforming 240 VAC to 5V/gnd</a></h3>
+        <h3><a href="/questions/95074/is-this-a-valid-sinusoid" class="question-hyperlink">Is this a valid sinusoid?</a></h3>
         <div class="excerpt">
-            My 240 VAC relay can be either on or off. I'd like to transform that to 1/0 signal for an input pin on my Arduino. I may be able to build something with a rectifier, a step-down and a couple of ...
+            The given image is from first edition of this book
+
+
+To me the first sinusoid seems valid, in sense that values can be computed at different points.
+However, in the case of second sinusoid I fail so ...
         </div>          
-        <div class="tags t-ac t-signal t-rectifier">
-            <a href="/questions/tagged/ac" class="post-tag" title="show questions tagged &#39;ac&#39;" rel="tag">ac</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/rectifier" class="post-tag" title="show questions tagged &#39;rectifier&#39;" rel="tag">rectifier</a> 
+        <div class="tags t-signal t-signal-processing">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/signal-processing" class="post-tag" title="show questions tagged &#39;signal-processing&#39;" rel="tag">signal-processing</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -326,25 +617,25 @@ One idea that ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-27 21:33:18Z" class="relativetime">Nov 27 at 21:33</span>
+        asked <span title="2013-12-31 20:24:24Z" class="relativetime">Dec 31 '13 at 20:24</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/33317/jonas-bystrom"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/abc7768058e25c1382df18414db72a10?s=128&d=identicon&r=PG" alt=""></div></a>
+        <a href="/users/24212/vvy"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/j43X7.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/33317/jonas-bystrom">Jonas Bystr&#246;m</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">111</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        <a href="/users/24212/vvy">vvy</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">197</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-91929">
+</div><div class="question-summary" id="question-summary-94768">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>-1</strong></span>
+                    <span class="vote-count-post "><strong>0</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -352,19 +643,17 @@ One idea that ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="51 views">
-    51 views
+        <div class="views " title="86 views">
+    86 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91929/signal-encoding-on-realtek-tx2-ic" class="question-hyperlink">Signal encoding on Realtek TX2 IC</a></h3>
+        <h3><a href="/questions/94768/connecting-phone-using-copper-power-wires" class="question-hyperlink">Connecting phone using copper power wires</a></h3>
         <div class="excerpt">
-            I 'm trying to figure out the way IC TX2 encodes different signals (RIGHT, LEFT, FORWARD, BACKWARD, TURBO).
-
-I can understand that presence of voltage means an appropriate signal to be transmitted. ...
+            I want to install a video door phone (intercom) in my home, for this I have done a pre-wiring of 4 individual copper wires (normally used for home electricity) and the total length of wires is about ...
         </div>          
-        <div class="tags t-integrated-circuit t-signal t-modulation t-encoder t-demodulation">
-            <a href="/questions/tagged/integrated-circuit" class="post-tag" title="show questions tagged &#39;integrated-circuit&#39;" rel="tag">integrated-circuit</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/modulation" class="post-tag" title="show questions tagged &#39;modulation&#39;" rel="tag">modulation</a> <a href="/questions/tagged/encoder" class="post-tag" title="show questions tagged &#39;encoder&#39;" rel="tag">encoder</a> <a href="/questions/tagged/demodulation" class="post-tag" title="show questions tagged &#39;demodulation&#39;" rel="tag">demodulation</a> 
+        <div class="tags t-signal t-communication t-wire t-telephone">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/wire" class="post-tag" title="show questions tagged &#39;wire&#39;" rel="tag">wire</a> <a href="/questions/tagged/telephone" class="post-tag" title="show questions tagged &#39;telephone&#39;" rel="tag">telephone</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -372,43 +661,87 @@ I can understand that presence of voltage means an appropriate signal to be tran
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-26 15:33:58Z" class="relativetime">Nov 26 at 15:33</span>
+        asked <span title="2013-12-27 18:32:14Z" class="relativetime">Dec 27 '13 at 18:32</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/31176/dempap"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/UcAY9.jpg?s=32&g=1" alt=""></div></a>
+        <a href="/users/34760/deepak"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/f86bc2759961b8056e0294e0f38aa023?s=128&d=identicon&r=PG" alt=""></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/31176/dempap">dempap</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <a href="/users/34760/deepak">Deepak</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-91908">
+</div><div class="question-summary" id="question-summary-94343">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
+                    <span class="vote-count-post "><strong>10</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="252 views">
+    252 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94343/help-with-or-hints-for-decoding-an-ir-protocol" class="question-hyperlink">Help with or hints for decoding an IR protocol</a></h3>
+        <div class="excerpt">
+            Some time ago I bought a simple and cheap little IR-controlled toy helicopter (same as this one - it's called "Diamond Gyro" or "Diamond Force"). For fun, I've been looking into controlling it via an ...
+        </div>          
+        <div class="tags t-signal t-infrared t-remote-control">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/infrared" class="post-tag" title="show questions tagged &#39;infrared&#39;" rel="tag">infrared</a> <a href="/questions/tagged/remote-control" class="post-tag" title="show questions tagged &#39;remote-control&#39;" rel="tag">remote-control</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info">
+    <div class="user-details">
+        <span class="community-wiki" title="This post is community owned as of Dec 28 &#39;13 at 8:06. Votes do not generate reputation, and it can be edited by users with 100 rep">
+            community wiki
+        </span>
+    </div><br>
+    <div class="user-details">
+        <a id="history-94343" href="/posts/94343/revisions" title="show revision history for this post">
+        16 revs<br><a href="/users/34490">Flambino</a>
+        </a>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94257">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-2</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
             <div class="status answered">
-                <strong>1</strong>answer
+                <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="69 views">
-    69 views
+        <div class="views " title="50 views">
+    50 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91908/electric-car-control" class="question-hyperlink">Electric car control</a></h3>
+        <h3><a href="/questions/94257/energy-of-a-signal" class="question-hyperlink">Energy of a signal [closed]</a></h3>
         <div class="excerpt">
-            I have a school project where I have to control the brake and accelerator of a electric car. These two are controlled by a signal and a potentiometer to vary the voltage. The problem I have is that I ...
+            In signal analysis we work out the energy of a signal. We get a number and thats the end of the story, but theres no explanation of what it means in practise. If it was just some abstract mathematical ...
         </div>          
-        <div class="tags t-signal t-automotive">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/automotive" class="post-tag" title="show questions tagged &#39;automotive&#39;" rel="tag">automotive</a> 
+        <div class="tags t-signal t-energy">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/energy" class="post-tag" title="show questions tagged &#39;energy&#39;" rel="tag">energy</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -416,19 +749,19 @@ I can understand that presence of voltage means an appropriate signal to be tran
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-26 12:05:17Z" class="relativetime">Nov 26 at 12:05</span>
+        asked <span title="2013-12-20 16:39:15Z" class="relativetime">Dec 20 '13 at 16:39</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/33309/user33309"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/1677018611/picture?type=large" alt=""></div></a>
+        <a href="/users/29710/binarysmacker"><div><img src="https://www.gravatar.com/avatar/510c1be7a2a7fa52e61a8a3794c79d9f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/33309/user33309">user33309</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        <a href="/users/29710/binarysmacker">binarysmacker</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">402</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-91204">
+</div><div class="question-summary" id="question-summary-93884">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -442,17 +775,23 @@ I can understand that presence of voltage means an appropriate signal to be tran
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="43 views">
-    43 views
+        <div class="views " title="57 views">
+    57 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91204/whats-the-best-shape-and-material-for-my-wi-fi-range-booster-dish" class="question-hyperlink">What&#39;s the best shape and material for my Wi-Fi range booster dish?</a></h3>
+        <h3><a href="/questions/93884/finding-the-amplitude-response-of-an-lti-system" class="question-hyperlink">Finding the amplitude response of an LTI system</a></h3>
         <div class="excerpt">
-            I want my wireless LAN to be available in an apartment that is 459 feet (140 m) across. I'm thinking about putting a router (bridge) that has an omnidirectional antenna on the roof of my apartment, ...
+            I'm asked to find the amplitude response of an LTI system described by the difference equation:
+
+$$
+    y[n] - ay[n-1] = x[n]
+$$
+
+After taking the Fourier transform of both sides and some math, I get ...
         </div>          
-        <div class="tags t-signal t-radio">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/radio" class="post-tag" title="show questions tagged &#39;radio&#39;" rel="tag">radio</a> 
+        <div class="tags t-signal t-system">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/system" class="post-tag" title="show questions tagged &#39;system&#39;" rel="tag">system</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -460,91 +799,45 @@ I can understand that presence of voltage means an appropriate signal to be tran
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-19 23:22:58Z" class="relativetime">Nov 19 at 23:22</span>
+        asked <span title="2013-12-16 18:37:29Z" class="relativetime">Dec 16 '13 at 18:37</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/32981/user34232"><div><img src="https://www.gravatar.com/avatar/d533c4389e5ffa989c59216c91210570?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+        <a href="/users/3619/maxmackie"><div><img src="https://www.gravatar.com/avatar/2ca46d1393e0337704ce3b91b1c0645a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/32981/user34232">user34232</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <a href="/users/3619/maxmackie">MaxMackie</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">352</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-90980">
+</div><div class="question-summary" id="question-summary-93657">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="91 views">
-    91 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90980/controlling-an-rc-car" class="question-hyperlink">Controlling an RC car</a></h3>
-        <div class="excerpt">
-            I 'm planning on controlling an RC car via ΒeagleBoard-xM. Pistol transmitter uses ic TX2 encoder.
-
-As image shows, right-left commands are implemented by a 3-part conductive area. Specifically, when ...
-        </div>          
-        <div class="tags t-voltage t-pcb t-signal t-ground">
-            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/pcb" class="post-tag" title="show questions tagged &#39;pcb&#39;" rel="tag">pcb</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/ground" class="post-tag" title="show questions tagged &#39;ground&#39;" rel="tag">ground</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-17 23:12:00Z" class="relativetime">Nov 17 at 23:12</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31176/dempap"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/UcAY9.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31176/dempap">dempap</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90880">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
                 </div>
             </div>
             <div class="status answered">
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="67 views">
-    67 views
+        <div class="views " title="81 views">
+    81 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/90880/how-do-coaxial-cables-carry-information-that-a-tv-can-intercept-and-display" class="question-hyperlink">How do coaxial cables carry information that a TV can intercept and display?</a></h3>
+        <h3><a href="/questions/93657/fft-filtering-sound-triggering-signal" class="question-hyperlink">FFT + filtering sound = triggering signal</a></h3>
         <div class="excerpt">
-            Is there a specification for this? Like, say, at the backside of a cable box there exists a singular coaxial cable that is meant to be plugged directly in the back of the TV.
-
-The TV must be set to a ...
+            I'm trying to FFT the live input sound and filter it to have only 350 to 500 HZ.
+So, my goal is to turn the LED light on only when some sound has frequency between 350-500.
+I looked at FFT codes, but ...
         </div>          
-        <div class="tags t-signal t-cables t-wire t-video-transmitter">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/cables" class="post-tag" title="show questions tagged &#39;cables&#39;" rel="tag">cables</a> <a href="/questions/tagged/wire" class="post-tag" title="show questions tagged &#39;wire&#39;" rel="tag">wire</a> <a href="/questions/tagged/video-transmitter" class="post-tag" title="show questions tagged &#39;video-transmitter&#39;" rel="tag">video-transmitter</a> 
+        <div class="tags t-signal t-filter t-sound t-output t-fft">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/filter" class="post-tag" title="show questions tagged &#39;filter&#39;" rel="tag">filter</a> <a href="/questions/tagged/sound" class="post-tag" title="show questions tagged &#39;sound&#39;" rel="tag">sound</a> <a href="/questions/tagged/output" class="post-tag" title="show questions tagged &#39;output&#39;" rel="tag">output</a> <a href="/questions/tagged/fft" class="post-tag" title="show questions tagged &#39;fft&#39;" rel="tag">fft</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -552,277 +845,51 @@ The TV must be set to a ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-16 22:41:25Z" class="relativetime">Nov 16 at 22:41</span>
+        asked <span title="2013-12-14 04:30:51Z" class="relativetime">Dec 14 '13 at 4:30</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/32822/clan-rockpants-person"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/6f9276ba2a805ebdc98260374af898dc?s=128&d=identicon&r=PG" alt=""></div></a>
+        <a href="/users/34118/bri"><div><img src="https://www.gravatar.com/avatar/5e538baaf6dcaf326a42b977d5dda2ab?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/32822/clan-rockpants-person">Clan RockPants Person</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <a href="/users/34118/bri">Bri</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-90464">
+</div><div class="question-summary" id="question-summary-93230">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="58 views">
-    58 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90464/how-to-apply-fourier-transform-to-0-5n-un" class="question-hyperlink">How to apply fourier transform to \$0.5^n u(n)\$</a></h3>
-        <div class="excerpt">
-            I'm working in a signals class for continuous signals, and we have this problem shown above. I have tried using this function \$f_1*f_2 = F_1 * F_2\$, where I'm assuming this means multiplication of ...
-        </div>          
-        <div class="tags t-signal t-fourier t-convolution">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/fourier" class="post-tag" title="show questions tagged &#39;fourier&#39;" rel="tag">fourier</a> <a href="/questions/tagged/convolution" class="post-tag" title="show questions tagged &#39;convolution&#39;" rel="tag">convolution</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-13 00:14:36Z" class="relativetime">Nov 13 at 0:14</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/10450/nathpilland"><div><img src="https://www.gravatar.com/avatar/2fa478ffc401a44d2c1ad7f032dce884?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/10450/nathpilland">nathpilland</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">110</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90429">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="55 views">
-    55 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90429/customizing-both-voltage-and-amperage-in-a-circuit" class="question-hyperlink">Customizing both voltage and amperage in a circuit</a></h3>
-        <div class="excerpt">
-            I intend to control a motor via H-bridge L6205N (PowerDIP20). H-bridge's logic input requirements are:
-
-
-High level logic input voltage: 2-7 V
-High level logic input current: 10 μΑ
-
-
-Motor's supply ...
-        </div>          
-        <div class="tags t-voltage t-op-amp t-resistors t-signal t-amperage">
-            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/op-amp" class="post-tag" title="show questions tagged &#39;op-amp&#39;" rel="tag">op-amp</a> <a href="/questions/tagged/resistors" class="post-tag" title="show questions tagged &#39;resistors&#39;" rel="tag">resistors</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/amperage" class="post-tag" title="show questions tagged &#39;amperage&#39;" rel="tag">amperage</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-12 17:21:38Z" class="relativetime">Nov 12 at 17:21</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31176/dempap"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/UcAY9.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31176/dempap">dempap</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90376">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="54 views">
-    54 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90376/is-ssb-single-sideband-linear-why" class="question-hyperlink">Is SSB (Single Sideband) linear, why? [closed]</a></h3>
-        <div class="excerpt">
-            How to derive it? I have been confused about this for a long time.
-
-        </div>          
-        <div class="tags t-signal t-control-system">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/control-system" class="post-tag" title="show questions tagged &#39;control-system&#39;" rel="tag">control-system</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-12 03:32:28Z" class="relativetime">Nov 12 at 3:32</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32578/arfar"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/712456847/picture?type=large" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32578/arfar">Arfar</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87408">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>4</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>4</strong>answers
-            </div>
-        </div>
-        <div class="views " title="110 views">
-    110 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87408/why-consider-linear-time-invariant-systems" class="question-hyperlink">Why consider Linear Time-Invariant systems?</a></h3>
-        <div class="excerpt">
-            Okay this could be a very silly question but I am asking it anyway.
-
-Why do we consider in most cases of signal processing that the system is Time-invariant?
-
-Is it because most signals are linear and ...
-        </div>          
-        <div class="tags t-signal t-linear t-signal-processing">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/linear" class="post-tag" title="show questions tagged &#39;linear&#39;" rel="tag">linear</a> <a href="/questions/tagged/signal-processing" class="post-tag" title="show questions tagged &#39;signal-processing&#39;" rel="tag">signal-processing</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-04 05:38:01Z" class="relativetime">Nov 4 at 5:38</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/29771/vineet-kaushik"><div><img src="https://www.gravatar.com/avatar/c8198375dbb66be88899da8d62228944?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/29771/vineet-kaushik">Vineet Kaushik</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">103</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87207">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="114 views">
-    114 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87207/circuit-design-for-dc-motor-control" class="question-hyperlink">Circuit design for DC motor control</a></h3>
-        <div class="excerpt">
-            I 'm planning to control a DC motor via certain signals. Motor requires 9 V, 700 mA of voltage approximately. The voltage will be provided by a Ni-Cd battery. However, the signals that are responsible ...
-        </div>          
-        <div class="tags t-voltage t-signal t-design t-dc-motor">
-            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/dc-motor" class="post-tag" title="show questions tagged &#39;dc-motor&#39;" rel="tag">dc-motor</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-01 23:07:11Z" class="relativetime">Nov 1 at 23:07</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31176/dempap"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/UcAY9.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31176/dempap">dempap</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87109">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
+                    <span class="vote-count-post "><strong>6</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
             <div class="status answered">
-                <strong>1</strong>answer
+                <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="79 views">
-    79 views
+        <div class="views " title="165 views">
+    165 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/87109/linear-time-invariant-system" class="question-hyperlink">Linear time-invariant system</a></h3>
+        <h3><a href="/questions/93230/why-do-we-not-care-about-matching-the-input-impedance-of-non-rf-amplifiers" class="question-hyperlink">Why do we not care about matching the input impedance of non-RF amplifiers?</a></h3>
         <div class="excerpt">
-            Hey all I have the following question and I am having trouble getting to the correct answer. Here is what I have: (sorry I do not understand how to format the question)
+            Talking about BJT topologies: A common base amplifier is always given as an example of an amplifier with very similar characteristics to the CE amplifier but with the low input impedance. 
 
-Consider a linear ...
+
+
+
+
+
+
+...
         </div>          
-        <div class="tags t-signal t-electronics t-system">
-            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/electronics" class="post-tag" title="show questions tagged &#39;electronics&#39;" rel="tag">electronics</a> <a href="/questions/tagged/system" class="post-tag" title="show questions tagged &#39;system&#39;" rel="tag">system</a> 
+        <div class="tags t-amplifier t-rf t-signal t-impedance-matching t-input-impedance">
+            <a href="/questions/tagged/amplifier" class="post-tag" title="show questions tagged &#39;amplifier&#39;" rel="tag">amplifier</a> <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/impedance-matching" class="post-tag" title="show questions tagged &#39;impedance-matching&#39;" rel="tag">impedance-matching</a> <a href="/questions/tagged/input-impedance" class="post-tag" title="show questions tagged &#39;input-impedance&#39;" rel="tag">input-impedance</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -830,14 +897,58 @@ Consider a linear ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-31 23:49:14Z" class="relativetime">Oct 31 at 23:49</span>
+        asked <span title="2013-12-10 17:34:39Z" class="relativetime">Dec 10 '13 at 17:34</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/24137/user081608"><div><img src="https://www.gravatar.com/avatar/ff73fdc2c4b7f1600823fb392a0ff36b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/24404/user1255592"><div><img src="https://www.gravatar.com/avatar/f57b21aba9aef99e098ae19d3fffbebb?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/24137/user081608">user081608</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">40</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <a href="/users/24404/user1255592">user1255592</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">195</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93189">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="80 views">
+    80 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93189/what-is-interpolation-in-encoder" class="question-hyperlink">What is interpolation in encoder?</a></h3>
+        <div class="excerpt">
+            I need to buy a servo motor and need high accuracy control. A sales engineer tells me that the servo motor has 1024 encoder, and its servo drive has interpolation technology which can make the ...
+        </div>          
+        <div class="tags t-motor t-signal">
+            <a href="/questions/tagged/motor" class="post-tag" title="show questions tagged &#39;motor&#39;" rel="tag">motor</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-10 06:28:31Z" class="relativetime">Dec 10 '13 at 6:28</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/6862/superhero"><div><img src="https://www.gravatar.com/avatar/1be6e25ebcdcfd2cc292e0f2fea3ae2a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/6862/superhero">Superhero</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">268</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -856,28 +967,28 @@ Consider a linear ...
         <a href="/questions/tagged/signal?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/signal?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/signal?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
- <span class="page-numbers dots">…</span>         <a href="/questions/tagged/signal?page=19&amp;sort=newest&amp;pagesize=15" title="go to page 19"> <span class="page-numbers">19</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/signal?page=20&amp;sort=newest&amp;pagesize=15" title="go to page 20"> <span class="page-numbers">20</span> </a> 
         <a href="/questions/tagged/signal?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/signal?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/signal?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/signal?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/signal?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/signal?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/signal?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=signal&amp;sort=newest" title="the 30 newest signal questions"><span class="feed-icon"></span>newest signal questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=signal&sort=newest" title="the 30 newest signal questions"><span class="feed-icon"></span>newest signal questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">281</div>
+            <div class="summarycount al">295</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> 
@@ -888,38 +999,279 @@ Consider a linear ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/signal+audio" class="post-tag" title="show questions tagged &#39;signal audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span><br>
-            <a href="/questions/tagged/signal+communication" class="post-tag" title="show questions tagged &#39;signal communication&#39;" rel="tag">communication</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span><br>
-            <a href="/questions/tagged/signal+filter" class="post-tag" title="show questions tagged &#39;signal filter&#39;" rel="tag">filter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span><br>
-            <a href="/questions/tagged/signal+noise" class="post-tag" title="show questions tagged &#39;signal noise&#39;" rel="tag">noise</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span><br>
-            <a href="/questions/tagged/signal+amplifier" class="post-tag" title="show questions tagged &#39;signal amplifier&#39;" rel="tag">amplifier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span><br>
-            <a href="/questions/tagged/signal+signal-processing" class="post-tag" title="show questions tagged &#39;signal signal-processing&#39;" rel="tag">signal-processing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span><br>
-            <a href="/questions/tagged/signal+frequency" class="post-tag" title="show questions tagged &#39;signal frequency&#39;" rel="tag">frequency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span><br>
-            <a href="/questions/tagged/signal+arduino" class="post-tag" title="show questions tagged &#39;signal arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span><br>
-            <a href="/questions/tagged/signal+op-amp" class="post-tag" title="show questions tagged &#39;signal op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/signal+fourier" class="post-tag" title="show questions tagged &#39;signal fourier&#39;" rel="tag">fourier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/signal+digital-logic" class="post-tag" title="show questions tagged &#39;signal digital-logic&#39;" rel="tag">digital-logic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/signal+rf" class="post-tag" title="show questions tagged &#39;signal rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/signal+analog" class="post-tag" title="show questions tagged &#39;signal analog&#39;" rel="tag">analog</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/signal+wave" class="post-tag" title="show questions tagged &#39;signal wave&#39;" rel="tag">wave</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/signal+microcontroller" class="post-tag" title="show questions tagged &#39;signal microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/signal+measurement" class="post-tag" title="show questions tagged &#39;signal measurement&#39;" rel="tag">measurement</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/signal+voltage" class="post-tag" title="show questions tagged &#39;signal voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/signal+dds" class="post-tag" title="show questions tagged &#39;signal dds&#39;" rel="tag">dds</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/signal+power" class="post-tag" title="show questions tagged &#39;signal power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/signal+radio" class="post-tag" title="show questions tagged &#39;signal radio&#39;" rel="tag">radio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/signal+design" class="post-tag" title="show questions tagged &#39;signal design&#39;" rel="tag">design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/signal+data" class="post-tag" title="show questions tagged &#39;signal data&#39;" rel="tag">data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/signal+adc" class="post-tag" title="show questions tagged &#39;signal adc&#39;" rel="tag">adc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/signal+matlab" class="post-tag" title="show questions tagged &#39;signal matlab&#39;" rel="tag">matlab</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/signal+signal-integrity" class="post-tag" title="show questions tagged &#39;signal signal-integrity&#39;" rel="tag">signal-integrity</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
+        <div>
+            <a href="/questions/tagged/signal+audio" class="post-tag" title="show questions tagged &#39;signal audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">18</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/signal+communication" class="post-tag" title="show questions tagged &#39;signal communication&#39;" rel="tag">communication</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/signal+signal-processing" class="post-tag" title="show questions tagged &#39;signal signal-processing&#39;" rel="tag">signal-processing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/signal+filter" class="post-tag" title="show questions tagged &#39;signal filter&#39;" rel="tag">filter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/signal+amplifier" class="post-tag" title="show questions tagged &#39;signal amplifier&#39;" rel="tag">amplifier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/signal+noise" class="post-tag" title="show questions tagged &#39;signal noise&#39;" rel="tag">noise</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/signal+arduino" class="post-tag" title="show questions tagged &#39;signal arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/signal+frequency" class="post-tag" title="show questions tagged &#39;signal frequency&#39;" rel="tag">frequency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/signal+rf" class="post-tag" title="show questions tagged &#39;signal rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/signal+op-amp" class="post-tag" title="show questions tagged &#39;signal op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+fourier" class="post-tag" title="show questions tagged &#39;signal fourier&#39;" rel="tag">fourier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+digital-logic" class="post-tag" title="show questions tagged &#39;signal digital-logic&#39;" rel="tag">digital-logic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+analog" class="post-tag" title="show questions tagged &#39;signal analog&#39;" rel="tag">analog</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+wave" class="post-tag" title="show questions tagged &#39;signal wave&#39;" rel="tag">wave</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+voltage" class="post-tag" title="show questions tagged &#39;signal voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+measurement" class="post-tag" title="show questions tagged &#39;signal measurement&#39;" rel="tag">measurement</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+microcontroller" class="post-tag" title="show questions tagged &#39;signal microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+power" class="post-tag" title="show questions tagged &#39;signal power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+dds" class="post-tag" title="show questions tagged &#39;signal dds&#39;" rel="tag">dds</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+radio" class="post-tag" title="show questions tagged &#39;signal radio&#39;" rel="tag">radio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+processing" class="post-tag" title="show questions tagged &#39;signal processing&#39;" rel="tag">processing</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+adc" class="post-tag" title="show questions tagged &#39;signal adc&#39;" rel="tag">adc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+design" class="post-tag" title="show questions tagged &#39;signal design&#39;" rel="tag">design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+data" class="post-tag" title="show questions tagged &#39;signal data&#39;" rel="tag">data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/signal+matlab" class="post-tag" title="show questions tagged &#39;signal matlab&#39;" rel="tag">matlab</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -939,7 +1291,7 @@ Consider a linear ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/signal")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1032,7 +1384,7 @@ Consider a linear ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1059,14 +1411,11 @@ Consider a linear ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1075,33 +1424,34 @@ Consider a linear ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|signal|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|signal|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=b0a5a51e797c">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged mobile" href="/feeds/tag/mobile" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386190580,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327864,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fmobile" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fmobile" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[mobile]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fmobile">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fmobile">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[mobile]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/mobile/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/mobile?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/mobile?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/mobile?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/mobile?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/mobile?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/mobile?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/mobile?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/mobile?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/mobile?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/mobile?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,13 +257,13 @@ The <a href="/questions/tagged/mobile" class="post-tag" title="show questions ta
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92130">
+<div class="question-summary" id="question-summary-97137">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>-1</strong></span>
+                    <span class="vote-count-post "><strong>-2</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -172,14 +271,193 @@ The <a href="/questions/tagged/mobile" class="post-tag" title="show questions ta
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="26 views">
-    26 views
+        <div class="views " title="17 views">
+    17 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92130/with-what-does-a-mobile-service-provider-identify-its-clients" class="question-hyperlink">With what does a mobile service provider identify it&#39;s clients? [closed]</a></h3>
+        <h3><a href="/questions/97137/gsm-and-gprs-frequencies-and-protocols" class="question-hyperlink">GSM AND GPRS Frequencies and Protocols [on hold]</a></h3>
         <div class="excerpt">
-            With what does a mobile service provider identify it's clients? With the phone number or IMEI or something else? 
+            GSM AND GPRS
+How can I tell what system I am connected to on my mobile?
+Can I decide whhich one to use? I have a 3rd Gen mobile?
+Do I understand correctly that each system uses a different frequency ...
+        </div>          
+        <div class="tags t-mobile">
+            <a href="/questions/tagged/mobile" class="post-tag" title="show questions tagged &#39;mobile&#39;" rel="tag">mobile</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-21 10:30:13Z" class="relativetime">7 hours ago</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35876/user291931"><div><img src="https://www.gravatar.com/avatar/ff4ef8791fafc363fa7e7cd5df21b046?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35876/user291931">user291931</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">4</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96248">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="42 views">
+    42 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96248/12v-socket-not-providing-enough-current-for-mobile-phone" class="question-hyperlink">12v socket not providing enough current for mobile phone? [closed]</a></h3>
+        <div class="excerpt">
+            I've just installed a 12v socket to my motorcycle. The socket has a sticker saying "12V - 1A", and the user manual says that "use is possible up to a power input rating of 12W". Taking that into ...
+        </div>          
+        <div class="tags t-gps t-android t-12v t-mobile">
+            <a href="/questions/tagged/gps" class="post-tag" title="show questions tagged &#39;gps&#39;" rel="tag">gps</a> <a href="/questions/tagged/android" class="post-tag" title="show questions tagged &#39;android&#39;" rel="tag">android</a> <a href="/questions/tagged/12v" class="post-tag" title="show questions tagged &#39;12v&#39;" rel="tag">12v</a> <a href="/questions/tagged/mobile" class="post-tag" title="show questions tagged &#39;mobile&#39;" rel="tag">mobile</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-12 21:53:47Z" class="relativetime">Jan 12 at 21:53</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/9220/jose-tomas-tocino"><div><img src="https://www.gravatar.com/avatar/604f3a3978d4d87d6b22f06293130556?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/9220/jose-tomas-tocino">Jos&#233; Tom&#225;s Tocino</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">106</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95575">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="79 views">
+    79 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95575/how-does-the-phone-detect-if-3-5-mm-jack-circuit-is-closed" class="question-hyperlink">How does the phone detect if 3.5 mm jack circuit is closed?</a></h3>
+        <div class="excerpt">
+            I have an android phone to which i have plugged an earphones. So at the top of the phone, I get the headphone symbol which indicates that the earphone is connected (In other words, the circuit at the ...
+        </div>          
+        <div class="tags t-audio t-cellphone t-mobile">
+            <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged &#39;audio&#39;" rel="tag">audio</a> <a href="/questions/tagged/cellphone" class="post-tag" title="show questions tagged &#39;cellphone&#39;" rel="tag">cellphone</a> <a href="/questions/tagged/mobile" class="post-tag" title="show questions tagged &#39;mobile&#39;" rel="tag">mobile</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-06 06:14:19Z" class="relativetime">Jan 6 at 6:14</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34709/gautham"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/MFKuw.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34709/gautham">Gautham</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">127</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94766">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="47 views">
+    47 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94766/where-can-i-buy-a-finished-mobile-camera-module" class="question-hyperlink">Where can I buy a finished mobile camera module? [closed]</a></h3>
+        <div class="excerpt">
+            I am interested in buying a really small camera module for one of my projects. I know I can buy some iPhone/Samsung camera replacements on Ebay. But I have no information on their connectors and ...
+        </div>          
+        <div class="tags t-camera t-mobile t-system-on-chip">
+            <a href="/questions/tagged/camera" class="post-tag" title="show questions tagged &#39;camera&#39;" rel="tag">camera</a> <a href="/questions/tagged/mobile" class="post-tag" title="show questions tagged &#39;mobile&#39;" rel="tag">mobile</a> <a href="/questions/tagged/system-on-chip" class="post-tag" title="show questions tagged &#39;system-on-chip&#39;" rel="tag">system-on-chip</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-27 18:18:48Z" class="relativetime">Dec 27 '13 at 18:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/26231/kingsinnersoul"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/DLTyD.png?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/26231/kingsinnersoul">KingsInnerSoul</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">301</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93068">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="64 views">
+    64 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93068/what-is-a-nokia-faid" class="question-hyperlink">What is a Nokia FAID? [closed]</a></h3>
+        <div class="excerpt">
+            Nokia is a mobile phone brand, but what is an FAID? I tried searching but no definition came up. I'm guessing it's a security feature checked by the hardware in order to function properly.
 
         </div>          
         <div class="tags t-mobile">
@@ -191,14 +469,14 @@ The <a href="/questions/tagged/mobile" class="post-tag" title="show questions ta
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-28 16:50:43Z" class="relativetime">Nov 28 at 16:50</span>
+        asked <span title="2013-12-09 03:10:16Z" class="relativetime">Dec 9 '13 at 3:10</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/29481/gasko-peter"><div><img src="https://www.gravatar.com/avatar/3a9cad6680becb2a392175df8dcbac3f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/33856/user33856"><div><img src="https://www.gravatar.com/avatar/a952d5189248eaea8b58ea1886060579?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/29481/gasko-peter">gasko peter</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">5</span>
+        <a href="/users/33856/user33856">user33856</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
@@ -217,8 +495,8 @@ The <a href="/questions/tagged/mobile" class="post-tag" title="show questions ta
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="41 views">
-    41 views
+        <div class="views " title="42 views">
+    42 views
 </div>
     </div>
     <div class="summary">
@@ -237,7 +515,7 @@ It now seems next to impossible to procure or use MobiText devices ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-08 15:11:30Z" class="relativetime">Oct 8 at 15:11</span>
+        asked <span title="2013-10-08 15:11:30Z" class="relativetime">Oct 8 '13 at 15:11</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2180/makerofthings7"><div><img src="https://www.gravatar.com/avatar/9cc3e3bb2ff2ef30810be80ca741de70?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -263,8 +541,8 @@ It now seems next to impossible to procure or use MobiText devices ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="34 views">
-    34 views
+        <div class="views " title="36 views">
+    36 views
 </div>
     </div>
     <div class="summary">
@@ -283,7 +561,7 @@ I am a bit confused that will the circuit ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-23 17:23:38Z" class="relativetime">Sep 23 at 17:23</span>
+        asked <span title="2013-09-23 17:23:38Z" class="relativetime">Sep 23 '13 at 17:23</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/29506/user29506"><div><img src="https://www.gravatar.com/avatar/a2cc6c89cc057f227116246c02b363e1?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -309,8 +587,8 @@ I am a bit confused that will the circuit ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="55 views">
-    55 views
+        <div class="views " title="58 views">
+    58 views
 </div>
     </div>
     <div class="summary">
@@ -327,7 +605,7 @@ I am a bit confused that will the circuit ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-01 16:57:06Z" class="relativetime">Sep 1 at 16:57</span>
+        asked <span title="2013-09-01 16:57:06Z" class="relativetime">Sep 1 '13 at 16:57</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/28325/user28325"><div><img src="https://www.gravatar.com/avatar/bdc5b8a81271529c151cbdc344917a8e?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -353,8 +631,8 @@ I am a bit confused that will the circuit ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="100 views">
-    100 views
+        <div class="views " title="116 views">
+    116 views
 </div>
     </div>
     <div class="summary">
@@ -371,14 +649,14 @@ I am a bit confused that will the circuit ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-14 16:47:21Z" class="relativetime">Aug 14 at 16:47</span>
+        asked <span title="2013-08-14 16:47:21Z" class="relativetime">Aug 14 '13 at 16:47</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/18035/anrieff"><div><img src="https://www.gravatar.com/avatar/04203cda62190584cb94163df1715d65?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/18035/anrieff">anrieff</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">28</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">65</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -397,8 +675,8 @@ I am a bit confused that will the circuit ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="450 views">
-    450 views
+        <div class="views " title="577 views">
+    577 views
 </div>
     </div>
     <div class="summary">
@@ -417,7 +695,7 @@ Basically i know how to use arduino and ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-21 20:19:38Z" class="relativetime">Jul 21 at 20:19</span>
+        asked <span title="2013-07-21 20:19:38Z" class="relativetime">Jul 21 '13 at 20:19</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26611/avinash-boddu"><div><img src="https://www.gravatar.com/avatar/cf8613c007c0e65aded0efb9d1589c01?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -443,8 +721,8 @@ Basically i know how to use arduino and ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="56 views">
-    56 views
+        <div class="views " title="65 views">
+    65 views
 </div>
     </div>
     <div class="summary">
@@ -461,7 +739,7 @@ Basically i know how to use arduino and ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-11 05:12:07Z" class="relativetime">Jul 11 at 5:12</span>
+        asked <span title="2013-07-11 05:12:07Z" class="relativetime">Jul 11 '13 at 5:12</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26236/jp-singh"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/1026296258/picture?type=large" alt=""></div></a>
@@ -487,8 +765,8 @@ Basically i know how to use arduino and ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="311 views">
-    311 views
+        <div class="views " title="393 views">
+    393 views
 </div>
     </div>
     <div class="summary">
@@ -505,7 +783,7 @@ Basically i know how to use arduino and ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-08 00:07:26Z" class="relativetime">Jul 8 at 0:07</span>
+        asked <span title="2013-07-08 00:07:26Z" class="relativetime">Jul 8 '13 at 0:07</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26120/patricko"><div><img src="https://www.gravatar.com/avatar/1601c093e6c68c5bb9a0dcb881339f48?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -531,8 +809,8 @@ Basically i know how to use arduino and ...
                 <strong>5</strong>answers
             </div>
         </div>
-        <div class="views " title="675 views">
-    675 views
+        <div class="views " title="689 views">
+    689 views
 </div>
     </div>
     <div class="summary">
@@ -551,7 +829,7 @@ Also for Windows 8, do they want ARM just for tablets and smartphones or is it a
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-18 16:26:04Z" class="relativetime">Jun 18 at 16:26</span>
+        asked <span title="2013-06-18 16:26:04Z" class="relativetime">Jun 18 '13 at 16:26</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/25391/4thspace"><div><img src="https://www.gravatar.com/avatar/750b9924757e5190d6b2af67b85483ff?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -600,7 +878,7 @@ Are there ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-03 10:25:04Z" class="relativetime">Jun 3 at 10:25</span>
+        asked <span title="2013-06-03 10:25:04Z" class="relativetime">Jun 3 '13 at 10:25</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/24722/arney"><div><img src="https://www.gravatar.com/avatar/a9bbca70ae91dd74d21fe0da1815c17b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -626,8 +904,8 @@ Are there ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="60 views">
-    60 views
+        <div class="views " title="62 views">
+    62 views
 </div>
     </div>
     <div class="summary">
@@ -650,7 +928,7 @@ but i would ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-04-29 07:52:30Z" class="relativetime">Apr 29 at 7:52</span>
+        asked <span title="2013-04-29 07:52:30Z" class="relativetime">Apr 29 '13 at 7:52</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/23202/user23202"><div><img src="https://www.gravatar.com/avatar/814cd93673204ac1c388f387c684e12c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -658,182 +936,6 @@ but i would ...
     <div class="user-details">
         <a href="/users/23202/user23202">user23202</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">2</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-66190">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="183 views">
-    183 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/66190/wireless-usb-cable-via-rf-3g" class="question-hyperlink">&ldquo;Wireless&rdquo; USB cable, via RF / 3G</a></h3>
-        <div class="excerpt">
-            I'm looking into the feasibility of a project to develop a USB-over-RF device for physical penetration testing engagements. The idea is that our tester could connect a device to a USB port on a ...
-        </div>          
-        <div class="tags t-usb t-wireless t-xbee t-mobile t-usb-host">
-            <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/wireless" class="post-tag" title="show questions tagged &#39;wireless&#39;" rel="tag">wireless</a> <a href="/questions/tagged/xbee" class="post-tag" title="show questions tagged &#39;xbee&#39;" rel="tag">xbee</a> <a href="/questions/tagged/mobile" class="post-tag" title="show questions tagged &#39;mobile&#39;" rel="tag">mobile</a> <a href="/questions/tagged/usb-host" class="post-tag" title="show questions tagged &#39;usb-host&#39;" rel="tag">usb-host</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-04-19 13:16:24Z" class="relativetime">Apr 19 at 13:16</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/6585/polynomial"><div><img src="https://www.gravatar.com/avatar/6fc641bdddde78a51c0db6b8527c54f7?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/6585/polynomial">Polynomial</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,306</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="21 bronze badges"><span class="badge3"></span><span class="badgecount">21</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-65208">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="141 views">
-    141 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/65208/does-living-near-a-cell-tower-decrease-your-overall-exposure-to-rf" class="question-hyperlink">Does living near a cell tower decrease your overall exposure to RF? [closed]</a></h3>
-        <div class="excerpt">
-            I understand that my mobile phone will increase its RF levels when it struggles to connect with a cell tower/base station due to distance. Also being nearer a cell tower will increase my exposure to ...
-        </div>          
-        <div class="tags t-radio t-electromagnetism t-cellphone t-mobile">
-            <a href="/questions/tagged/radio" class="post-tag" title="show questions tagged &#39;radio&#39;" rel="tag">radio</a> <a href="/questions/tagged/electromagnetism" class="post-tag" title="show questions tagged &#39;electromagnetism&#39;" rel="tag">electromagnetism</a> <a href="/questions/tagged/cellphone" class="post-tag" title="show questions tagged &#39;cellphone&#39;" rel="tag">cellphone</a> <a href="/questions/tagged/mobile" class="post-tag" title="show questions tagged &#39;mobile&#39;" rel="tag">mobile</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-04-11 00:38:22Z" class="relativetime">Apr 11 at 0:38</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/22447/nutcracker"><div><img src="https://www.gravatar.com/avatar/b96d988f3dfc508fb04ee7fc992be58b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/22447/nutcracker">nutcracker</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">120</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-64742">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="130 views">
-    130 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/64742/powering-android-phone-from-3-aa-battery-directly-not-usb" class="question-hyperlink">powering android phone from 3 AA battery directly (not USB!) [closed]</a></h3>
-        <div class="excerpt">
-            I have Sony Arc phone which was spoiled by me (story OutTopic) as it won't charge lion battery anymore. the phone itself works perfectly. I don't want to do the regular 3AA to USB charger way. Trying ...
-        </div>          
-        <div class="tags t-batteries t-android t-mobile t-nimh t-lithium-poly">
-            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/android" class="post-tag" title="show questions tagged &#39;android&#39;" rel="tag">android</a> <a href="/questions/tagged/mobile" class="post-tag" title="show questions tagged &#39;mobile&#39;" rel="tag">mobile</a> <a href="/questions/tagged/nimh" class="post-tag" title="show questions tagged &#39;nimh&#39;" rel="tag">nimh</a> <a href="/questions/tagged/lithium-poly" class="post-tag" title="show questions tagged &#39;lithium-poly&#39;" rel="tag">lithium-poly</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-04-07 07:21:43Z" class="relativetime">Apr 7 at 7:21</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5728/thevikas"><div><img src="https://www.gravatar.com/avatar/0ee9e73378cc090755664dffb2ea70f8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5728/thevikas">thevikas</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">133</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-55508">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>-2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="802 views">
-    802 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/55508/difference-between-voice-and-data-services" class="question-hyperlink">difference between voice and data services?</a></h3>
-        <div class="excerpt">
-            What is the difference between the voice and date services. I have read that for voice services T1/E1 frame is used and for data services a frame with a standard header and payload nd tail is used ...
-        </div>          
-        <div class="tags t-wireless t-gsm t-network-interface t-mobile">
-            <a href="/questions/tagged/wireless" class="post-tag" title="show questions tagged &#39;wireless&#39;" rel="tag">wireless</a> <a href="/questions/tagged/gsm" class="post-tag" title="show questions tagged &#39;gsm&#39;" rel="tag">gsm</a> <a href="/questions/tagged/network-interface" class="post-tag" title="show questions tagged &#39;network-interface&#39;" rel="tag">network-interface</a> <a href="/questions/tagged/mobile" class="post-tag" title="show questions tagged &#39;mobile&#39;" rel="tag">mobile</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-01-19 20:18:32Z" class="relativetime">Jan 19 at 20:18</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/16173/sk1"><div><img src="https://www.gravatar.com/avatar/e8e9916dd265cd9009a15ffb52cf2940?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/16173/sk1">sk1</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">121</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -850,81 +952,311 @@ but i would ...
 
  <span class="page-numbers current">1</span>         <a href="/questions/tagged/mobile?page=2&amp;sort=newest&amp;pagesize=15" title="go to page 2"> <span class="page-numbers">2</span> </a> 
         <a href="/questions/tagged/mobile?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
+        <a href="/questions/tagged/mobile?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/mobile?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/mobile?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/mobile?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/mobile?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/mobile?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/mobile?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/mobile?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=mobile&amp;sort=newest" title="the 30 newest mobile questions"><span class="feed-icon"></span>newest mobile questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=mobile&sort=newest" title="the 30 newest mobile questions"><span class="feed-icon"></span>newest mobile questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">42</div>
+            <div class="summarycount al">46</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/mobile" class="post-tag" title="show questions tagged &#39;mobile&#39;" rel="tag">mobile</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/mobile/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-
-            <div class="spacer">
-                <div class="bulletin-item-type"><a href="http://blog.stackoverflow.com" class="event-date" target="_blank">blog</a></div>
-                <div class="bulletin-item-content">
-                    <a href="http://blog.stackoverflow.com/2013/12/a-new-top-bar-for-stack-exchange/" class="question-hyperlink" target="_blank">A New Top Bar for Stack Exchange</a>
-                </div>
-                <br class="cbt" />
-            </div>
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/mobile+cellphone" class="post-tag" title="show questions tagged &#39;mobile cellphone&#39;" rel="tag">cellphone</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/mobile+radio" class="post-tag" title="show questions tagged &#39;mobile radio&#39;" rel="tag">radio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/mobile+usb" class="post-tag" title="show questions tagged &#39;mobile usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/mobile+charger" class="post-tag" title="show questions tagged &#39;mobile charger&#39;" rel="tag">charger</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/mobile+gsm" class="post-tag" title="show questions tagged &#39;mobile gsm&#39;" rel="tag">gsm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/mobile+arduino" class="post-tag" title="show questions tagged &#39;mobile arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/mobile+wireless" class="post-tag" title="show questions tagged &#39;mobile wireless&#39;" rel="tag">wireless</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/mobile+cables" class="post-tag" title="show questions tagged &#39;mobile cables&#39;" rel="tag">cables</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/mobile+battery-charging" class="post-tag" title="show questions tagged &#39;mobile battery-charging&#39;" rel="tag">battery-charging</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+android" class="post-tag" title="show questions tagged &#39;mobile android&#39;" rel="tag">android</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+gps" class="post-tag" title="show questions tagged &#39;mobile gps&#39;" rel="tag">gps</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+bluetooth" class="post-tag" title="show questions tagged &#39;mobile bluetooth&#39;" rel="tag">bluetooth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+arm" class="post-tag" title="show questions tagged &#39;mobile arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+usb-device" class="post-tag" title="show questions tagged &#39;mobile usb-device&#39;" rel="tag">usb-device</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+pinout" class="post-tag" title="show questions tagged &#39;mobile pinout&#39;" rel="tag">pinout</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+audio" class="post-tag" title="show questions tagged &#39;mobile audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+voltage" class="post-tag" title="show questions tagged &#39;mobile voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+batteries" class="post-tag" title="show questions tagged &#39;mobile batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/mobile+antenna" class="post-tag" title="show questions tagged &#39;mobile antenna&#39;" rel="tag">antenna</a>&nbsp;<br>
-            <a href="/questions/tagged/mobile+sim" class="post-tag" title="show questions tagged &#39;mobile sim&#39;" rel="tag">sim</a>&nbsp;<br>
-            <a href="/questions/tagged/mobile+connector" class="post-tag" title="show questions tagged &#39;mobile connector&#39;" rel="tag">connector</a>&nbsp;<br>
-            <a href="/questions/tagged/mobile+power-supply" class="post-tag" title="show questions tagged &#39;mobile power-supply&#39;" rel="tag">power-supply</a>&nbsp;<br>
-            <a href="/questions/tagged/mobile+pcb" class="post-tag" title="show questions tagged &#39;mobile pcb&#39;" rel="tag">pcb</a>&nbsp;<br>
-            <a href="/questions/tagged/mobile+device" class="post-tag" title="show questions tagged &#39;mobile device&#39;" rel="tag">device</a>&nbsp;<br>
-            <a href="/questions/tagged/mobile+rf" class="post-tag" title="show questions tagged &#39;mobile rf&#39;" rel="tag">rf</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/mobile+cellphone" class="post-tag" title="show questions tagged &#39;mobile cellphone&#39;" rel="tag">cellphone</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/mobile+usb" class="post-tag" title="show questions tagged &#39;mobile usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/mobile+radio" class="post-tag" title="show questions tagged &#39;mobile radio&#39;" rel="tag">radio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/mobile+gsm" class="post-tag" title="show questions tagged &#39;mobile gsm&#39;" rel="tag">gsm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/mobile+arduino" class="post-tag" title="show questions tagged &#39;mobile arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/mobile+charger" class="post-tag" title="show questions tagged &#39;mobile charger&#39;" rel="tag">charger</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/mobile+gps" class="post-tag" title="show questions tagged &#39;mobile gps&#39;" rel="tag">gps</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/mobile+cables" class="post-tag" title="show questions tagged &#39;mobile cables&#39;" rel="tag">cables</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/mobile+android" class="post-tag" title="show questions tagged &#39;mobile android&#39;" rel="tag">android</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/mobile+audio" class="post-tag" title="show questions tagged &#39;mobile audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+wireless" class="post-tag" title="show questions tagged &#39;mobile wireless&#39;" rel="tag">wireless</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+12v" class="post-tag" title="show questions tagged &#39;mobile 12v&#39;" rel="tag">12v</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+battery-charging" class="post-tag" title="show questions tagged &#39;mobile battery-charging&#39;" rel="tag">battery-charging</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+bluetooth" class="post-tag" title="show questions tagged &#39;mobile bluetooth&#39;" rel="tag">bluetooth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+usb-device" class="post-tag" title="show questions tagged &#39;mobile usb-device&#39;" rel="tag">usb-device</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+pinout" class="post-tag" title="show questions tagged &#39;mobile pinout&#39;" rel="tag">pinout</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+arm" class="post-tag" title="show questions tagged &#39;mobile arm&#39;" rel="tag">arm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+batteries" class="post-tag" title="show questions tagged &#39;mobile batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+voltage" class="post-tag" title="show questions tagged &#39;mobile voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+hdmi" class="post-tag" title="show questions tagged &#39;mobile hdmi&#39;" rel="tag">hdmi</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+antenna" class="post-tag" title="show questions tagged &#39;mobile antenna&#39;" rel="tag">antenna</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+sim" class="post-tag" title="show questions tagged &#39;mobile sim&#39;" rel="tag">sim</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+connector" class="post-tag" title="show questions tagged &#39;mobile connector&#39;" rel="tag">connector</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+power-supply" class="post-tag" title="show questions tagged &#39;mobile power-supply&#39;" rel="tag">power-supply</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/mobile+linux" class="post-tag" title="show questions tagged &#39;mobile linux&#39;" rel="tag">linux</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -944,7 +1276,7 @@ but i would ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/mobile")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1037,7 +1369,7 @@ but i would ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1064,14 +1396,11 @@ but i would ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1197
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1080,33 +1409,34 @@ but i would ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|mobile|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|mobile|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

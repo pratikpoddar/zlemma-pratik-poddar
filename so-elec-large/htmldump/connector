@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged connector" href="/feeds/tag/connector" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186180,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328007,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fconnector" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fconnector" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[connector]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fconnector">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fconnector">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[connector]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/connector/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/connector?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/connector?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/connector?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/connector?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/connector?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/connector?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/connector?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/connector?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/connector?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/connector?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,13 +257,13 @@ Mechanical part providing electrical contacts for a cable or electronic circuit 
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92344">
+<div class="question-summary" id="question-summary-96836">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>-3</strong></span>
+                    <span class="vote-count-post "><strong>-1</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -172,17 +271,18 @@ Mechanical part providing electrical contacts for a cable or electronic circuit 
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="45 views">
-    45 views
+        <div class="views " title="47 views">
+    47 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92344/what-is-molex-part-number-of-4-pin-pwm-fan-connector" class="question-hyperlink">What is MOLEX Part Number of 4-pin PWM fan connector [on hold]</a></h3>
+        <h3><a href="/questions/96836/is-it-possible-to-use-apple-lighting-socket-in-our-device" class="question-hyperlink">is it possible to use apple lighting socket in our device? [on hold]</a></h3>
         <div class="excerpt">
-            I'm making PCB for my own PWM controller, but I don't want "destroy" the connector of my fan. So I will put fan connector to the output, but I don't know it's original name for CAD software. PWM fan ...
+            We are developing iphone 5x accessory and would like to use the same lighting connector as iphone uses. of course we will apply to mfi program. but it is still unclear with two questions:
+1. is it ...
         </div>          
-        <div class="tags t-connector t-pwm t-fan">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/pwm" class="post-tag" title="show questions tagged &#39;pwm&#39;" rel="tag">pwm</a> <a href="/questions/tagged/fan" class="post-tag" title="show questions tagged &#39;fan&#39;" rel="tag">fan</a> 
+        <div class="tags t-connector t-iphone">
+            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/iphone" class="post-tag" title="show questions tagged &#39;iphone&#39;" rel="tag">iphone</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -190,14 +290,568 @@ Mechanical part providing electrical contacts for a cable or electronic circuit 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-01 10:17:22Z" class="relativetime">Dec 1 at 10:17</span>
+        asked <span title="2014-01-18 12:37:07Z" class="relativetime">Jan 18 at 12:37</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/33484/albru123"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/529bb091b0dfbcf08d002542eded7171?s=128&d=identicon&r=PG" alt=""></div></a>
+        <a href="/users/7832/upsa"><div><img src="https://www.gravatar.com/avatar/d3c3737f8a7f80190ed2a7a86cd06c39?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/33484/albru123">albru123</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        <a href="/users/7832/upsa">upsa</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">104</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96618">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="56 views">
+    56 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96618/audio-jack-schematic" class="question-hyperlink">Audio Jack Schematic</a></h3>
+        <div class="excerpt">
+            We are using this audio jack in our design. I am having trouble understand the schematic of this audio jack. My understanding is that
+
+
+Pin 5 and Pin 4 : Audio left and right 
+Pin 2 or Pin 3 : Ground ...
+        </div>          
+        <div class="tags t-audio t-connector">
+            <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged &#39;audio&#39;" rel="tag">audio</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-16 06:31:45Z" class="relativetime">Jan 16 at 6:31</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/14113/ash"><div><img src="https://www.gravatar.com/avatar/d0d761d3e127c21a3e57d4514e334112?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/14113/ash">Ash</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">38</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96388">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="76 views">
+    76 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96388/how-must-i-connect-a-usb-micro-b-connector-to-reach-5v" class="question-hyperlink">how must I connect a USB micro b connector to reach 5v?</a></h3>
+        <div class="excerpt">
+            I'm designing a circuit and want to power it through a USB Micro B connector. I have already installed the connector on my board, but after connecting the USB female connector of the wire to my ...
+        </div>          
+        <div class="tags t-usb t-connector">
+            <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-14 00:53:58Z" class="relativetime">Jan 14 at 0:53</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35533/user35533"><div><img src="https://www.gravatar.com/avatar/8a9503fd50c16e2b3a469181821693d9?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35533/user35533">user35533</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96002">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="62 views">
+    62 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96002/potting-connectors" class="question-hyperlink">Potting Connectors</a></h3>
+        <div class="excerpt">
+            I work for a company manufacturing electronics. We have a few products where we pot boards into enclosures. Where it is done the incoming connections are always soldered for fear of condensation ...
+        </div>          
+        <div class="tags t-connector t-reliability t-potting">
+            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/reliability" class="post-tag" title="show questions tagged &#39;reliability&#39;" rel="tag">reliability</a> <a href="/questions/tagged/potting" class="post-tag" title="show questions tagged &#39;potting&#39;" rel="tag">potting</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-10 10:24:22Z" class="relativetime">Jan 10 at 10:24</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/19220/steinar"><div><img src="https://www.gravatar.com/avatar/d6ac86a4e077d117da7edffe61e22cca?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/19220/steinar">Steinar</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">152</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95437">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="62 views">
+    62 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95437/crimp-connectors-making-process-review" class="question-hyperlink">Crimp connectors making process review</a></h3>
+        <div class="excerpt">
+            I'm actually working on a project with several "little" modules. They are all connected to the PSU and the MCU. So I've design interface for each, so I can easily wire everything together.
+
+For that ...
+        </div>          
+        <div class="tags t-connector t-cables t-wire">
+            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/cables" class="post-tag" title="show questions tagged &#39;cables&#39;" rel="tag">cables</a> <a href="/questions/tagged/wire" class="post-tag" title="show questions tagged &#39;wire&#39;" rel="tag">wire</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-04 15:42:17Z" class="relativetime">Jan 4 at 15:42</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/27489/emmanuel-istace"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/797302589/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/27489/emmanuel-istace">Emmanuel Istace</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">773</span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95353">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="66 views">
+    66 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95353/can-anyone-identify-this-tiny-2-4-5-8ghz-antenna-connector" class="question-hyperlink">Can anyone identify this tiny 2.4/5.8GHz antenna connector?</a></h3>
+        <div class="excerpt">
+            I'm looking to add a pigtail and larger antenna to small wireless video receiver. It came with a removable antenna with a connector I don't recognize. Sorry for the blurry pictures. If they're not ...
+        </div>          
+        <div class="tags t-rf t-connector t-antenna t-identification">
+            <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/antenna" class="post-tag" title="show questions tagged &#39;antenna&#39;" rel="tag">antenna</a> <a href="/questions/tagged/identification" class="post-tag" title="show questions tagged &#39;identification&#39;" rel="tag">identification</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-03 21:09:55Z" class="relativetime">Jan 3 at 21:09</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/20244/kbyrd"><div><img src="https://www.gravatar.com/avatar/f3dcb3cd5d4d7fdedffb81c6789b1f12?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/20244/kbyrd">kbyrd</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">113</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95186">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="44 views">
+    44 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95186/thin-headers-to-replace-ic-with-a-board" class="question-hyperlink">thin headers to replace IC with a board</a></h3>
+        <div class="excerpt">
+            I have an IC (PDIP) I would like to replace with a board and some smd parts. Normal 0.1" headers are too thick to fit in the holes of the desoldered IC pins. Do you know if there exists 0.1" pitch ...
+        </div>          
+        <div class="tags t-connector">
+            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-02 10:25:45Z" class="relativetime">Jan 2 at 10:25</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/16820/fabio-dalla-libera"><div><img src="https://www.gravatar.com/avatar/9cb96905d72d03110ef795d27f570e16?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/16820/fabio-dalla-libera">Fabio Dalla Libera</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">119</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94775">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="116 views">
+    116 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94775/connecting-a-dc-barrel-jack-to-a-pcb-board" class="question-hyperlink">Connecting a DC barrel jack to a PCB board</a></h3>
+        <div class="excerpt">
+            I am wondering how I can include a DC jack such as below in my PCB circuit:
+
+
+
+There are no such PCB packages in my library, so the first step, I presume, is to make a prototype with the exact ...
+        </div>          
+        <div class="tags t-pcb t-connector">
+            <a href="/questions/tagged/pcb" class="post-tag" title="show questions tagged &#39;pcb&#39;" rel="tag">pcb</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-27 20:02:26Z" class="relativetime">Dec 27 '13 at 20:02</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/23906/triplebig"><div><img src="https://www.gravatar.com/avatar/d9b07218b9c29128ca93251c175443aa?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/23906/triplebig">triplebig</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">71</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94244">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="121 views">
+    121 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94244/how-to-connect-a-printer-wifi-module-wires-to-an-arduino" class="question-hyperlink">How to connect a Printer WIFI module wires to an Arduino?</a></h3>
+        <div class="excerpt">
+            
+
++
+
+I’m a digital artist, found this HP printer on the street and wanted to use its components (motor etc.) on my projects.
+
+I was wondering if any of you know if I can use this WIFI module to ...
+        </div>          
+        <div class="tags t-arduino t-wireless t-connector t-wifi t-data">
+            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/wireless" class="post-tag" title="show questions tagged &#39;wireless&#39;" rel="tag">wireless</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/wifi" class="post-tag" title="show questions tagged &#39;wifi&#39;" rel="tag">wifi</a> <a href="/questions/tagged/data" class="post-tag" title="show questions tagged &#39;data&#39;" rel="tag">data</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-20 12:54:47Z" class="relativetime">Dec 20 '13 at 12:54</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34414/mim-armand"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/364a09a7a88446dda11f4fcdc6fe759a?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34414/mim-armand">Mim Armand</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94194">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="50 views">
+    50 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94194/power-wire-to-board-connector-identification" class="question-hyperlink">Power wire-to-board connector identification</a></h3>
+        <div class="excerpt">
+            I am laying out my PCB and I would like to include this power connector in the layout. I am unable to identify the connector based on the its locking ability and layout. It could even be a common one ...
+        </div>          
+        <div class="tags t-connector t-eagle">
+            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/eagle" class="post-tag" title="show questions tagged &#39;eagle&#39;" rel="tag">eagle</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-19 21:36:12Z" class="relativetime">Dec 19 '13 at 21:36</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34408/user651933"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/57feee0854c1932be935fc88c86980d9?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34408/user651933">user651933</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94014">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="53 views">
+    53 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94014/circular-dvi-connector" class="question-hyperlink">Circular DVI Connector</a></h3>
+        <div class="excerpt">
+            I am building a custom computer case into a 40mm grenade case however I am running into an issue with how to handle the DVI connections (need two of them). Ideally I would like to use a circular ...
+        </div>          
+        <div class="tags t-connector t-computers">
+            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/computers" class="post-tag" title="show questions tagged &#39;computers&#39;" rel="tag">computers</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-18 05:12:49Z" class="relativetime">Dec 18 '13 at 5:12</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34325/nate-strandberg"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/b74316641762ea526060388f68fdd8fb?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34325/nate-strandberg">Nate Strandberg</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93268">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="64 views">
+    64 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93268/board-to-board-connection-cable" class="question-hyperlink">Board to board connection cable</a></h3>
+        <div class="excerpt">
+            I have a project where there are 2 board to be connected inside of a metal shielded chassis:
+
+1) 2 layer power/analog/ext connector (usb/spdif/audio)
+
+2) 4 layer digital board (lcd+mpu+fpga)
+
+The ...
+        </div>          
+        <div class="tags t-pcb t-usb t-connector">
+            <a href="/questions/tagged/pcb" class="post-tag" title="show questions tagged &#39;pcb&#39;" rel="tag">pcb</a> <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-10 23:44:14Z" class="relativetime">Dec 10 '13 at 23:44</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33958/leo"><div><img src="https://www.gravatar.com/avatar/e2c6178d27161f7572b961667d24b6d9?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33958/leo">Leo</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">45</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93022">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="43 views">
+    43 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93022/correct-part-for-connect-an-two-pin-led-or-switch" class="question-hyperlink">Correct Part for Connect an Two-Pin LED or Switch</a></h3>
+        <div class="excerpt">
+            Quite simply what I'd like to know is, what is the technical information for the male connector that corresponds to the following plug:
+
+
+
+The male connectors (headers?) are commonly found on computer ...
+        </div>          
+        <div class="tags t-led t-connector t-wiring t-header">
+            <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/wiring" class="post-tag" title="show questions tagged &#39;wiring&#39;" rel="tag">wiring</a> <a href="/questions/tagged/header" class="post-tag" title="show questions tagged &#39;header&#39;" rel="tag">header</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-08 16:18:04Z" class="relativetime">Dec 8 '13 at 16:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33160/haravikk"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/32ed5b32826658f01df18fa220fa090e?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33160/haravikk">Haravikk</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">115</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -216,8 +870,8 @@ Mechanical part providing electrical contacts for a cable or electronic circuit 
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="76 views">
-    76 views
+        <div class="views " title="78 views">
+    78 views
 </div>
     </div>
     <div class="summary">
@@ -236,7 +890,7 @@ Are they somehow soldered to the board or do they wrap around it? Should I drill
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-29 13:12:56Z" class="relativetime">Nov 29 at 13:12</span>
+        asked <span title="2013-11-29 13:12:56Z" class="relativetime">Nov 29 '13 at 13:12</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33435/cscutcher"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/FjZA5.jpg?s=128&g=1?s=32&g=1" alt=""></div></a>
@@ -262,8 +916,8 @@ Are they somehow soldered to the board or do they wrap around it? Should I drill
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="57 views">
-    57 views
+        <div class="views " title="87 views">
+    87 views
 </div>
     </div>
     <div class="summary">
@@ -280,7 +934,7 @@ Are they somehow soldered to the board or do they wrap around it? Should I drill
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-27 14:03:25Z" class="relativetime">Nov 27 at 14:03</span>
+        asked <span title="2013-11-27 14:03:25Z" class="relativetime">Nov 27 '13 at 14:03</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33365/mattybrad"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/ac581f771ee81ce0158e29a2610da4db?s=128&d=identicon&r=PG" alt=""></div></a>
@@ -288,567 +942,6 @@ Are they somehow soldered to the board or do they wrap around it? Should I drill
     <div class="user-details">
         <a href="/users/33365/mattybrad">mattybrad</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91952">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="62 views">
-    62 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91952/how-should-i-detach-those-kinds-of-components-on-my-motherboard" class="question-hyperlink">How should I detach those kinds of components on my motherboard? [closed]</a></h3>
-        <div class="excerpt">
-            How should I detach both components linked by white, blue and red wires from the computer motherboard on the attached picture?
-
-Just pulling them?
-
-Indeed, I don't want to damage them.
-
-
-
-        </div>          
-        <div class="tags t-connector t-components t-motherboard">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/components" class="post-tag" title="show questions tagged &#39;components&#39;" rel="tag">components</a> <a href="/questions/tagged/motherboard" class="post-tag" title="show questions tagged &#39;motherboard&#39;" rel="tag">motherboard</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-26 20:02:18Z" class="relativetime">Nov 26 at 20:02</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33325/sivounette"><div><img src="https://www.gravatar.com/avatar/66ff8ec68e5ba906ea256957e82beea8?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33325/sivounette">sivounette</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91730">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="58 views">
-    58 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91730/what-type-of-2x4-connector-is-this" class="question-hyperlink">What type of 2x4 connector is this?</a></h3>
-        <div class="excerpt">
-            Each of the pins is a discrete channel/line and I would like to plug this into a breadboard - does anyone know what type of connector would let me split these out please? I know I could make a ...
-        </div>          
-        <div class="tags t-connector">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-24 16:31:12Z" class="relativetime">Nov 24 at 16:31</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/4096/simonbarker"><div><img src="https://www.gravatar.com/avatar/059cb96fa05aed82ac2fa918149a31dc?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/4096/simonbarker">SimonBarker</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">763</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91720">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="55 views">
-    55 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91720/mystery-18-pin-and-10-pin-molex-plugs" class="question-hyperlink">Mystery 18-pin and 10-pin Molex Plugs</a></h3>
-        <div class="excerpt">
-            I'm working with a system that has a pair of plugs that I'm not familiar with. They appear to be Molex Mini Fit Jr. style connectors (such as those used to provide power for PCIe devices that require ...
-        </div>          
-        <div class="tags t-connector t-plug">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/plug" class="post-tag" title="show questions tagged &#39;plug&#39;" rel="tag">plug</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-24 12:00:08Z" class="relativetime">Nov 24 at 12:00</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33160/haravikk"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/32ed5b32826658f01df18fa220fa090e?s=128&d=identicon&r=PG" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33160/haravikk">Haravikk</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">108</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91275">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="38 views">
-    38 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91275/help-with-obsolete-molex-pn-35143-0201" class="question-hyperlink">Help with obsolete Molex PN: 35143-0201</a></h3>
-        <div class="excerpt">
-            Molex no longer makes part number 35143-0201. I have been unsuccessful in locating an alternate cross manufacturer for this part...  Any ideas?  Thanks...  Dale
-Molex Spec 35143-0201
-
-
-
-Component ...
-        </div>          
-        <div class="tags t-connector">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-20 12:08:49Z" class="relativetime">Nov 20 at 12:08</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33003/dale"><div><img src="https://www.gravatar.com/avatar/4903d25fdc08043de57d22cba35b7731?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33003/dale">Dale</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">29</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90841">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="34 views">
-    34 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90841/how-do-i-find-a-matching-plug-header-pair" class="question-hyperlink">How do I find a matching plug &amp; header pair?</a></h3>
-        <div class="excerpt">
-            I'm browsing board to wire type connectors. My aim is to solder a header on my PCB, and use a plug to receive/transmit signals from it.
-
-As far as I see, the headers and plugs are sold separately, and ...
-        </div>          
-        <div class="tags t-connector t-component-selection">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/component-selection" class="post-tag" title="show questions tagged &#39;component-selection&#39;" rel="tag">component-selection</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-11-16 11:39:09Z" class="relativetime">Nov 16 at 11:39</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5542/hkbattousai"><div><img src="https://www.gravatar.com/avatar/b664c2c0e8d7c5259b06af265a4a0f51?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5542/hkbattousai">hkBattousai</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">2,204</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90529">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>9</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="187 views">
-    187 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90529/what-to-do-with-third-contact-in-dc-barrel-plug-with-only-two-input-contacts" class="question-hyperlink">What to do with third contact in DC barrel plug with only two input contacts</a></h3>
-        <div class="excerpt">
-            My AC-DC adapter gives output of 12V and GND. I tried to search for suitable DC barrel plugs
-and found that most of them have three terminals
-
-
-So, pin 1 is positive in my case.
-1. Which pin should I ...
-        </div>          
-        <div class="tags t-power-supply t-dc t-connector">
-            <a href="/questions/tagged/power-supply" class="post-tag" title="show questions tagged &#39;power-supply&#39;" rel="tag">power-supply</a> <a href="/questions/tagged/dc" class="post-tag" title="show questions tagged &#39;dc&#39;" rel="tag">dc</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-13 15:36:59Z" class="relativetime">Nov 13 at 15:36</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/23699/libuz"><div><img src="https://www.gravatar.com/avatar/7fa886c84aee552403d71ac46708d14b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/23699/libuz">libuz</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">127</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-88041">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>4</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="85 views">
-    85 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/88041/what-connector-is-similar-to-u-fl-but-has-no-pin" class="question-hyperlink">What connector is similar to U.FL but has no pin?</a></h3>
-        <div class="excerpt">
-            I am trying to identify this connector style:
-
-
-
-Look at the two RF micro-coax connectors on the left, just next to the PCB antennas.  They look identical to U.FL or IPEX but have no central pin.  ...
-        </div>          
-        <div class="tags t-rf t-connector t-identification t-wifi">
-            <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/identification" class="post-tag" title="show questions tagged &#39;identification&#39;" rel="tag">identification</a> <a href="/questions/tagged/wifi" class="post-tag" title="show questions tagged &#39;wifi&#39;" rel="tag">wifi</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-08 21:56:16Z" class="relativetime">Nov 8 at 21:56</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/26394/alex-i"><div><img src="https://www.gravatar.com/avatar/8877dd512c3d9b5063f270e2e75fd3d9?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/26394/alex-i">Alex I</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">200</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87638">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="53 views">
-    53 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87638/good-electrical-terminal-crimpers" class="question-hyperlink">good electrical terminal crimpers? [closed]</a></h3>
-        <div class="excerpt">
-            Anyone know of a good type of electrical terminal crimpers from a reputable manufacturer?
-
-The ones you find at Home Depot or Lowes are cheap, but they're simple lever systems for squishing the ...
-        </div>          
-        <div class="tags t-connector t-tools t-crimp">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/tools" class="post-tag" title="show questions tagged &#39;tools&#39;" rel="tag">tools</a> <a href="/questions/tagged/crimp" class="post-tag" title="show questions tagged &#39;crimp&#39;" rel="tag">crimp</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-05 20:07:21Z" class="relativetime">Nov 5 at 20:07</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/330/jason-s"><div><img src="https://www.gravatar.com/avatar/dd5a7ef1476fb01998a215b1642dfd07?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/330/jason-s">Jason S</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">9,729</span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="38 bronze badges"><span class="badge3"></span><span class="badgecount">38</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87053">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="93 views">
-    93 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87053/whats-the-name-of-this-pcie-power-connector" class="question-hyperlink">What&#39;s the name of this PCIE power connector?</a></h3>
-        <div class="excerpt">
-            I have a standard computer power supply unit pci-e power 8 pin connector like this one:
-
-
-
-I want to power my own PCB via a connector like this and I am having trouble find the name of the pcb socket ...
-        </div>          
-        <div class="tags t-connector t-identification">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/identification" class="post-tag" title="show questions tagged &#39;identification&#39;" rel="tag">identification</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-31 13:12:32Z" class="relativetime">Oct 31 at 13:12</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/22205/tomasz-wasiluk"><div><img src="https://www.gravatar.com/avatar/3509840b0438f29bc63b2bcf46c29c51?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/22205/tomasz-wasiluk">Tomasz Wasiluk</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">48</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87005">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="15 views">
-    15 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87005/extend-video-cable-on-wvc210-board" class="question-hyperlink">Extend Video Cable on WVC210 board?</a></h3>
-        <div class="excerpt">
-            I need to extend a cable on the board of a WVC210 Camera.  I have looked for 2 days trying to identify the connection type so I could order a longer cable, but have not found a match.  Does anyone ...
-        </div>          
-        <div class="tags t-connector">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-31 02:11:19Z" class="relativetime">Oct 31 at 2:11</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31106/user31106"><div><img src="https://www.gravatar.com/avatar/1289c0574dfbeecd23a5150bf29025f3?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31106/user31106">user31106</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86806">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="112 views">
-    112 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86806/soldering-a-2-5mm-female-stereo-jack" class="question-hyperlink">Soldering a 2.5mm female stereo jack</a></h3>
-        <div class="excerpt">
-            I am trying to make my own ti link/parallel, with a female stereo port, and parallel port on the other side. I don't know what I am to do with the jack. I have three wires: gold, white and red, which ...
-        </div>          
-        <div class="tags t-connector t-ti">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/ti" class="post-tag" title="show questions tagged &#39;ti&#39;" rel="tag">ti</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-28 22:27:47Z" class="relativetime">Oct 28 at 22:27</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31007/vinz243"><div><img src="https://www.gravatar.com/avatar/0b160c45be48cb8101c276590bd5c1eb?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31007/vinz243">vinz243</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86431">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="112 views">
-    112 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86431/what-do-you-call-the-connector-type-which-is-soldered-on-pcb-and-it-holds-cables" class="question-hyperlink">What do you call the connector type which is soldered on PCB and it holds cables by pressing on them by screws?</a></h3>
-        <div class="excerpt">
-            Here is a picture of two of them:
-
-
-
-I searched for these connectors in Digikey and Farnell for an hour, but couldn't find anything similar. Can you please name these connectors for me and/or give a ...
-        </div>          
-        <div class="tags t-connector t-identification">
-            <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/identification" class="post-tag" title="show questions tagged &#39;identification&#39;" rel="tag">identification</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-10-24 19:44:23Z" class="relativetime">Oct 24 at 19:44</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5542/hkbattousai"><div><img src="https://www.gravatar.com/avatar/b664c2c0e8d7c5259b06af265a4a0f51?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5542/hkbattousai">hkBattousai</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">2,204</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
     </div>
 </div>
         </div>  
@@ -867,28 +960,28 @@ I searched for these connectors in Digikey and Farnell for an hour, but couldn't
         <a href="/questions/tagged/connector?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/connector?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/connector?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
- <span class="page-numbers dots">…</span>         <a href="/questions/tagged/connector?page=18&amp;sort=newest&amp;pagesize=15" title="go to page 18"> <span class="page-numbers">18</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/connector?page=19&amp;sort=newest&amp;pagesize=15" title="go to page 19"> <span class="page-numbers">19</span> </a> 
         <a href="/questions/tagged/connector?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/connector?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/connector?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/connector?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/connector?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/connector?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/connector?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=connector&amp;sort=newest" title="the 30 newest connector questions"><span class="feed-icon"></span>newest connector questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=connector&sort=newest" title="the 30 newest connector questions"><span class="feed-icon"></span>newest connector questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">269</div>
+            <div class="summarycount al">281</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> 
@@ -899,38 +992,279 @@ I searched for these connectors in Digikey and Farnell for an hour, but couldn't
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/connector+identification" class="post-tag" title="show questions tagged &#39;connector identification&#39;" rel="tag">identification</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">48</span></span><br>
-            <a href="/questions/tagged/connector+pcb" class="post-tag" title="show questions tagged &#39;connector pcb&#39;" rel="tag">pcb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">30</span></span><br>
-            <a href="/questions/tagged/connector+usb" class="post-tag" title="show questions tagged &#39;connector usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/connector+cables" class="post-tag" title="show questions tagged &#39;connector cables&#39;" rel="tag">cables</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/connector+wire" class="post-tag" title="show questions tagged &#39;connector wire&#39;" rel="tag">wire</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/connector+soldering" class="post-tag" title="show questions tagged &#39;connector soldering&#39;" rel="tag">soldering</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/connector+power" class="post-tag" title="show questions tagged &#39;connector power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/connector+components" class="post-tag" title="show questions tagged &#39;connector components&#39;" rel="tag">components</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/connector+pcb-design" class="post-tag" title="show questions tagged &#39;connector pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/connector+power-supply" class="post-tag" title="show questions tagged &#39;connector power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/connector+arduino" class="post-tag" title="show questions tagged &#39;connector arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/connector+batteries" class="post-tag" title="show questions tagged &#39;connector batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/connector+ethernet" class="post-tag" title="show questions tagged &#39;connector ethernet&#39;" rel="tag">ethernet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/connector+automotive" class="post-tag" title="show questions tagged &#39;connector automotive&#39;" rel="tag">automotive</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/connector+dc" class="post-tag" title="show questions tagged &#39;connector dc&#39;" rel="tag">dc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/connector+header" class="post-tag" title="show questions tagged &#39;connector header&#39;" rel="tag">header</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/connector+audio" class="post-tag" title="show questions tagged &#39;connector audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/connector+lcd" class="post-tag" title="show questions tagged &#39;connector lcd&#39;" rel="tag">lcd</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/connector+ribbon-cable" class="post-tag" title="show questions tagged &#39;connector ribbon-cable&#39;" rel="tag">ribbon-cable</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/connector+wiring" class="post-tag" title="show questions tagged &#39;connector wiring&#39;" rel="tag">wiring</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/connector+cable-assemblies" class="post-tag" title="show questions tagged &#39;connector cable-assemblies&#39;" rel="tag">cable-assemblies</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/connector+adapter" class="post-tag" title="show questions tagged &#39;connector adapter&#39;" rel="tag">adapter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/connector+rf" class="post-tag" title="show questions tagged &#39;connector rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/connector+ffc" class="post-tag" title="show questions tagged &#39;connector ffc&#39;" rel="tag">ffc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/connector+low-power" class="post-tag" title="show questions tagged &#39;connector low-power&#39;" rel="tag">low-power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
+        <div>
+            <a href="/questions/tagged/connector+identification" class="post-tag" title="show questions tagged &#39;connector identification&#39;" rel="tag">identification</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">49</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/connector+pcb" class="post-tag" title="show questions tagged &#39;connector pcb&#39;" rel="tag">pcb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">32</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/connector+usb" class="post-tag" title="show questions tagged &#39;connector usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">18</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/connector+cables" class="post-tag" title="show questions tagged &#39;connector cables&#39;" rel="tag">cables</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/connector+wire" class="post-tag" title="show questions tagged &#39;connector wire&#39;" rel="tag">wire</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/connector+pcb-design" class="post-tag" title="show questions tagged &#39;connector pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/connector+soldering" class="post-tag" title="show questions tagged &#39;connector soldering&#39;" rel="tag">soldering</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/connector+components" class="post-tag" title="show questions tagged &#39;connector components&#39;" rel="tag">components</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/connector+power" class="post-tag" title="show questions tagged &#39;connector power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/connector+power-supply" class="post-tag" title="show questions tagged &#39;connector power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+arduino" class="post-tag" title="show questions tagged &#39;connector arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+audio" class="post-tag" title="show questions tagged &#39;connector audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+batteries" class="post-tag" title="show questions tagged &#39;connector batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+header" class="post-tag" title="show questions tagged &#39;connector header&#39;" rel="tag">header</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+wiring" class="post-tag" title="show questions tagged &#39;connector wiring&#39;" rel="tag">wiring</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+dc" class="post-tag" title="show questions tagged &#39;connector dc&#39;" rel="tag">dc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+ethernet" class="post-tag" title="show questions tagged &#39;connector ethernet&#39;" rel="tag">ethernet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+automotive" class="post-tag" title="show questions tagged &#39;connector automotive&#39;" rel="tag">automotive</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+rf" class="post-tag" title="show questions tagged &#39;connector rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+ribbon-cable" class="post-tag" title="show questions tagged &#39;connector ribbon-cable&#39;" rel="tag">ribbon-cable</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+cable-assemblies" class="post-tag" title="show questions tagged &#39;connector cable-assemblies&#39;" rel="tag">cable-assemblies</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+adapter" class="post-tag" title="show questions tagged &#39;connector adapter&#39;" rel="tag">adapter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+ffc" class="post-tag" title="show questions tagged &#39;connector ffc&#39;" rel="tag">ffc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+lcd" class="post-tag" title="show questions tagged &#39;connector lcd&#39;" rel="tag">lcd</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/connector+mechanical" class="post-tag" title="show questions tagged &#39;connector mechanical&#39;" rel="tag">mechanical</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -950,7 +1284,7 @@ I searched for these connectors in Digikey and Farnell for an hour, but couldn't
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/connector")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1043,7 +1377,7 @@ I searched for these connectors in Digikey and Farnell for an hour, but couldn't
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1070,14 +1404,11 @@ I searched for these connectors in Digikey and Farnell for an hour, but couldn't
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1086,33 +1417,34 @@ I searched for these connectors in Digikey and Farnell for an hour, but couldn't
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|connector|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|connector|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged communication" href="/feeds/tag/communication" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186628,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327860,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcommunication" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcommunication" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[communication]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcommunication">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcommunication">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[communication]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/communication/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/communication?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/communication?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/communication?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/communication?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/communication?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/communication?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/communication?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/communication?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/communication?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/communication?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,560 @@ Exchange of information between devices. Communication can be wired or wireless.
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92586">
+<div class="question-summary" id="question-summary-96139">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>5</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="584 views">
+    584 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96139/difference-between-a-bus-and-a-wire" class="question-hyperlink">Difference between a bus and a wire</a></h3>
+        <div class="excerpt">
+            I have been studying buses used in communication systems. From what I read at Wikipedia,
+
+
+  "In computer architecture, a bus (from the Latin omnibus, meaning "for
+  all") is a communication system ...
+        </div>          
+        <div class="tags t-communication t-bus t-digital-communications">
+            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/bus" class="post-tag" title="show questions tagged &#39;bus&#39;" rel="tag">bus</a> <a href="/questions/tagged/digital-communications" class="post-tag" title="show questions tagged &#39;digital-communications&#39;" rel="tag">digital-communications</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-11 20:33:44Z" class="relativetime">Jan 11 at 20:33</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/29336/sufiyan-ghori"><div><img src="https://www.gravatar.com/avatar/df66c02a85d0e03967d63b25d190c637?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/29336/sufiyan-ghori">Sufiyan Ghori</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">185</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96014">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-5</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="59 views">
+    59 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96014/is-it-possible-to-record-an-electric-signal-sent-from-a-pc-motherboard-to-the" class="question-hyperlink">Is it possible to &ldquo;record&rdquo; an electric signal sent from a PC motherboard to the old &ldquo;buzzer&rdquo;? [closed]</a></h3>
+        <div class="excerpt">
+            First of all, sorry if I use the wrong terminology.
+
+I would like to know if it's possible (and how) to record the signal that a motherboard sends to the buzzer (the internal speaker), so that I can ...
+        </div>          
+        <div class="tags t-communication t-components t-computers">
+            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/components" class="post-tag" title="show questions tagged &#39;components&#39;" rel="tag">components</a> <a href="/questions/tagged/computers" class="post-tag" title="show questions tagged &#39;computers&#39;" rel="tag">computers</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-10 13:03:23Z" class="relativetime">Jan 10 at 13:03</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35357/naraj"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/951ce7a4a455042d03033f6b3b672484?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35357/naraj">Naraj</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95009">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="16 views">
+    16 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95009/sending-data-with-cc2510" class="question-hyperlink">sending data with cc2510</a></h3>
+        <div class="excerpt">
+            Hy, I'm trying to send simple 1 Byte package with cc2510dk-mini. The idea is to press button on on device and the led on the other lights up. I'm stuck with the problem, when I try to send data, radio ...
+        </div>          
+        <div class="tags t-rf t-wireless t-communication t-radio t-protocol">
+            <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/wireless" class="post-tag" title="show questions tagged &#39;wireless&#39;" rel="tag">wireless</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/radio" class="post-tag" title="show questions tagged &#39;radio&#39;" rel="tag">radio</a> <a href="/questions/tagged/protocol" class="post-tag" title="show questions tagged &#39;protocol&#39;" rel="tag">protocol</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-30 23:08:05Z" class="relativetime">Dec 30 '13 at 23:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34886/user34886"><div><img src="https://www.gravatar.com/avatar/9fcf8b5d7854694e14b3de80073c346b?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34886/user34886">user34886</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94851">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="110 views">
+    110 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94851/implementing-control-commands-for-an-mcu-over-serial" class="question-hyperlink">Implementing Control Commands for an MCU over Serial</a></h3>
+        <div class="excerpt">
+            Im looking to integrate a command interface in a project that im making that will accept commands overs serial from a PC.
+
+The idea is that the device will do its thing but it gets sent a command, it ...
+        </div>          
+        <div class="tags t-microcontroller t-serial t-communication t-c">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/serial" class="post-tag" title="show questions tagged &#39;serial&#39;" rel="tag">serial</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/c" class="post-tag" title="show questions tagged &#39;c&#39;" rel="tag">c</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-28 19:16:45Z" class="relativetime">Dec 28 '13 at 19:16</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/29710/binarysmacker"><div><img src="https://www.gravatar.com/avatar/510c1be7a2a7fa52e61a8a3794c79d9f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/29710/binarysmacker">binarysmacker</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">402</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94822">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>5</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="128 views">
+    128 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94822/does-nyquist-rate-depend-on-the-sampling-rate" class="question-hyperlink">Does Nyquist rate depend on the sampling rate?</a></h3>
+        <div class="excerpt">
+            The book Computer Networks by Andrew S Tanenbaum mentions the following (paraphrased):
+
+
+  For a noiseless channel, Nyquist theorem states:
+    Maximum data rate = \$2H \space log_{2} V \$ bits/sec
+  
+...
+        </div>          
+        <div class="tags t-communication t-sampling">
+            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/sampling" class="post-tag" title="show questions tagged &#39;sampling&#39;" rel="tag">sampling</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-28 11:25:58Z" class="relativetime">Dec 28 '13 at 11:25</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34787/happy"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/RJp9X.jpg?s=128&g=1?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34787/happy">Happy</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">126</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94768">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="86 views">
+    86 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94768/connecting-phone-using-copper-power-wires" class="question-hyperlink">Connecting phone using copper power wires</a></h3>
+        <div class="excerpt">
+            I want to install a video door phone (intercom) in my home, for this I have done a pre-wiring of 4 individual copper wires (normally used for home electricity) and the total length of wires is about ...
+        </div>          
+        <div class="tags t-signal t-communication t-wire t-telephone">
+            <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/wire" class="post-tag" title="show questions tagged &#39;wire&#39;" rel="tag">wire</a> <a href="/questions/tagged/telephone" class="post-tag" title="show questions tagged &#39;telephone&#39;" rel="tag">telephone</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-27 18:32:14Z" class="relativetime">Dec 27 '13 at 18:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34760/deepak"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/f86bc2759961b8056e0294e0f38aa023?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34760/deepak">Deepak</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94330">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="160 views">
+    160 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94330/interface-of-xbee-module-with-atmega-168" class="question-hyperlink">Interface of XBee module with ATMEGA 168</a></h3>
+        <div class="excerpt">
+            I have configured 2 xbee series 1 modules such that one will receive serial data from any other module of same pan ID and the other will send data to the previous mentioned one.
+
+Now when I use a ...
+        </div>          
+        <div class="tags t-serial t-atmega t-communication t-xbee t-zigbee">
+            <a href="/questions/tagged/serial" class="post-tag" title="show questions tagged &#39;serial&#39;" rel="tag">serial</a> <a href="/questions/tagged/atmega" class="post-tag" title="show questions tagged &#39;atmega&#39;" rel="tag">atmega</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/xbee" class="post-tag" title="show questions tagged &#39;xbee&#39;" rel="tag">xbee</a> <a href="/questions/tagged/zigbee" class="post-tag" title="show questions tagged &#39;zigbee&#39;" rel="tag">zigbee</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-21 16:56:29Z" class="relativetime">Dec 21 '13 at 16:56</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/26734/rambo-partyush"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/jI3Zr.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/26734/rambo-partyush">Rambo partyush</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">49</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94282">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="61 views">
+    61 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94282/how-to-auto-disconnect-from-rs485-bus-when-power-off" class="question-hyperlink">How to &ldquo;auto-disconnect&rdquo; from rs485 bus when power off</a></h3>
+        <div class="excerpt">
+            I have many devices on a RS485 bus.
+
+When I disconnect power from one device,
+the rest of the (powered-on) devices seem to communicate with each other just fine.
+At least it seems to be working today.
+...
+        </div>          
+        <div class="tags t-communication t-design t-driver t-rs485">
+            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/driver" class="post-tag" title="show questions tagged &#39;driver&#39;" rel="tag">driver</a> <a href="/questions/tagged/rs485" class="post-tag" title="show questions tagged &#39;rs485&#39;" rel="tag">rs485</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2013-12-20 22:27:40Z" class="relativetime">Dec 20 '13 at 22:27</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/813/davidcary"><div><img src="https://www.gravatar.com/avatar/5bce51d2574911a41f6e7297ce7e2ae0?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/813/davidcary">davidcary</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">8,938</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="20 silver badges"><span class="badge2"></span><span class="badgecount">20</span></span><span title="48 bronze badges"><span class="badge3"></span><span class="badgecount">48</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94247">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="52 views">
+    52 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94247/does-a-table-that-shows-how-8b-10b-encoding-tries-to-ensure-running-disparity-on" class="question-hyperlink">Does a table that shows how 8b/10b encoding tries to ensure running disparity on a transmission line</a></h3>
+        <div class="excerpt">
+            In telecommunications, 8b/10b is a line code that maps 8-bit symbols to 10-bit symbols to achieve DC-balance and bounded disparity. In this case we take each 8 bit data and map it to a 10 bit symbol. ...
+        </div>          
+        <div class="tags t-communication t-data t-transceiver t-encoding">
+            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/data" class="post-tag" title="show questions tagged &#39;data&#39;" rel="tag">data</a> <a href="/questions/tagged/transceiver" class="post-tag" title="show questions tagged &#39;transceiver&#39;" rel="tag">transceiver</a> <a href="/questions/tagged/encoding" class="post-tag" title="show questions tagged &#39;encoding&#39;" rel="tag">encoding</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-20 15:00:21Z" class="relativetime">Dec 20 '13 at 15:00</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/20711/quantum231"><div><img src="https://www.gravatar.com/avatar/c1503cf70823c67b54c197559cc08c63?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/20711/quantum231">quantum231</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">975</span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93683">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="87 views">
+    87 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93683/correct-usb-to-rs-3-3-5-0-logic-level-cable" class="question-hyperlink">Correct USB to RS 3.3 / 5.0 logic level cable</a></h3>
+        <div class="excerpt">
+            I am starting with electronics / arduinos / atmegas here. For a couple of recent days I've played with USBasp programmer, atmega328P MCU as well as with 7805 and LM317 voltage regulators. Now my next ...
+        </div>          
+        <div class="tags t-arduino t-usb t-serial t-atmega t-communication">
+            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/serial" class="post-tag" title="show questions tagged &#39;serial&#39;" rel="tag">serial</a> <a href="/questions/tagged/atmega" class="post-tag" title="show questions tagged &#39;atmega&#39;" rel="tag">atmega</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-14 11:57:41Z" class="relativetime">Dec 14 '13 at 11:57</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/17686/qlf00n"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/emxKl.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/17686/qlf00n">qlf00n</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">113</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93297">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="43 views">
+    43 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93297/frame-size-and-function" class="question-hyperlink">Frame Size and Function</a></h3>
+        <div class="excerpt">
+            With regards to Ethernet frames, the typical maximum size is 1500 bytes. Jumbo frames brought this up to 9000 bytes, and there was even some Super Jumbo Frames of sizes larger than that.
+
+What factors ...
+        </div>          
+        <div class="tags t-communication t-ethernet t-tcp-ip">
+            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/ethernet" class="post-tag" title="show questions tagged &#39;ethernet&#39;" rel="tag">ethernet</a> <a href="/questions/tagged/tcp-ip" class="post-tag" title="show questions tagged &#39;tcp-ip&#39;" rel="tag">tcp-ip</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-11 05:32:38Z" class="relativetime">Dec 11 '13 at 5:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33970/user200124"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/312903d95d6460ed0d8f18e4eba18f91?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33970/user200124">user200124</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93039">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="75 views">
+    75 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93039/how-to-monitor-data-exchange-on-single-wire" class="question-hyperlink">How to monitor data exchange on single wire?</a></h3>
+        <div class="excerpt">
+            I have two modules that communicate over a single wire. Where would I even start about monitoring the data without introducing any kind of interference to both modules?
+
+One of the modules has to be ...
+        </div>          
+        <div class="tags t-communication t-data t-monitor">
+            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/data" class="post-tag" title="show questions tagged &#39;data&#39;" rel="tag">data</a> <a href="/questions/tagged/monitor" class="post-tag" title="show questions tagged &#39;monitor&#39;" rel="tag">monitor</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-08 18:56:44Z" class="relativetime">Dec 8 '13 at 18:56</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/4040/jm2-me"><div><img src="https://www.gravatar.com/avatar/bf9acb2b310a5a81b55cf2f563b5c75a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/4040/jm2-me">jM2.me</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">201</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92586">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +824,8 @@ Exchange of information between devices. Communication can be wired or wireless.
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="41 views">
-    41 views
+        <div class="views " title="57 views">
+    57 views
 </div>
     </div>
     <div class="summary">
@@ -194,14 +846,14 @@ Do you know any reference ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-03 22:44:34Z" class="relativetime">21 hours ago</span>
+        asked <span title="2013-12-03 22:44:34Z" class="relativetime">Dec 3 '13 at 22:44</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/27489/emmanuel-istace"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/w7Z5J.jpg?s=32&g=1" alt=""></div></a>
+        <a href="/users/27489/emmanuel-istace"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/797302589/picture?type=large" alt=""></div></a>
     </div>
     <div class="user-details">
         <a href="/users/27489/emmanuel-istace">Emmanuel Istace</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">163</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">773</span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
     </div>
 </div>
         </div>  
@@ -220,8 +872,8 @@ Do you know any reference ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="31 views">
-    31 views
+        <div class="views " title="32 views">
+    32 views
 </div>
     </div>
     <div class="summary">
@@ -238,7 +890,7 @@ Do you know any reference ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-24 15:21:21Z" class="relativetime">Nov 24 at 15:21</span>
+        asked <span title="2013-11-24 15:21:21Z" class="relativetime">Nov 24 '13 at 15:21</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33217/uriel"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/1680c555aca7b9760f6a278041836804?s=128&d=identicon&r=PG" alt=""></div></a>
@@ -264,8 +916,8 @@ Do you know any reference ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="73 views">
-    73 views
+        <div class="views " title="176 views">
+    176 views
 </div>
     </div>
     <div class="summary">
@@ -287,7 +939,7 @@ Do we have to program ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-21 12:03:21Z" class="relativetime">Nov 21 at 12:03</span>
+        asked <span title="2013-11-21 12:03:21Z" class="relativetime">Nov 21 '13 at 12:03</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33060/akshat"><div><img src="https://www.gravatar.com/avatar/48138bc9a8a9a983a6bdb2a2ac7e77ef?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -295,549 +947,6 @@ Do we have to program ...
     <div class="user-details">
         <a href="/users/33060/akshat">Akshat</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90640">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="59 views">
-    59 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90640/connecting-rs-485-devices-transparently" class="question-hyperlink">Connecting RS-485 devices transparently</a></h3>
-        <div class="excerpt">
-            I have a main computer that has a RS-485 board. It communicates with its sub systems via this comminication board. 
-I have also a test computer thas connected to main board via RS-485 channel. It will ...
-        </div>          
-        <div class="tags t-serial t-communication t-rs485 t-serial-bus">
-            <a href="/questions/tagged/serial" class="post-tag" title="show questions tagged &#39;serial&#39;" rel="tag">serial</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/rs485" class="post-tag" title="show questions tagged &#39;rs485&#39;" rel="tag">rs485</a> <a href="/questions/tagged/serial-bus" class="post-tag" title="show questions tagged &#39;serial-bus&#39;" rel="tag">serial-bus</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-14 12:07:00Z" class="relativetime">Nov 14 at 12:07</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31148/zontragon"><div><img src="https://www.gravatar.com/avatar/c120b058ce7599cc3d6317b31c559316?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31148/zontragon">zontragon</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">55</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90363">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="50 views">
-    50 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90363/translate-signals-amplitude-into-frequency" class="question-hyperlink">Translate signals amplitude into frequency</a></h3>
-        <div class="excerpt">
-            I have a sinusoidal signal at 50 Hz, that varies in amplitude, with no offset. The amplitude goes from 0 to 5 V (peak to peak), and the amplitude contains all the information I need. This signal will ...
-        </div>          
-        <div class="tags t-communication t-frequency t-fm">
-            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/fm" class="post-tag" title="show questions tagged &#39;fm&#39;" rel="tag">fm</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-11 23:12:55Z" class="relativetime">Nov 11 at 23:12</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32478/volotec"><div><img src="https://www.gravatar.com/avatar/f2b4f58ab59b37ed9b416e4a8c758317?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32478/volotec">volotec</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90281">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="23 views">
-    23 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90281/unable-to-ssh-in-beagle-bone-black" class="question-hyperlink">Unable to ssh in beagle bone black [migrated]</a></h3>
-        <div class="excerpt">
-            I wanted to install pip onto beagle bone black,and I tried this:
-
-...
-        </div>          
-        <div class="tags t-communication t-beaglebone-black t-ssh">
-            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/beaglebone-black" class="post-tag" title="show questions tagged &#39;beaglebone-black&#39;" rel="tag">beaglebone-black</a> <a href="/questions/tagged/ssh" class="post-tag" title="show questions tagged &#39;ssh&#39;" rel="tag">ssh</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-11 09:01:39Z" class="relativetime">Nov 11 at 9:01</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32547/user32547"><div><img src="https://www.gravatar.com/avatar/68dccd5b7afb685c30f6692aa2ab2499?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32547/user32547">user32547</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87990">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="58 views">
-    58 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87990/serial-port-terminal-transmitting-at-300-baudrate" class="question-hyperlink">Serial Port Terminal transmitting at 300 baudrate</a></h3>
-        <div class="excerpt">
-            I have been using Hercules SerialPort Terminal for a while now and its pretty cool. But now, I need to send data's at 300Baud, but Hercules stops at 9600baud. 
-
-I find TeraTerm which looks okay as ...
-        </div>          
-        <div class="tags t-serial t-communication t-rs232 t-terminal">
-            <a href="/questions/tagged/serial" class="post-tag" title="show questions tagged &#39;serial&#39;" rel="tag">serial</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/rs232" class="post-tag" title="show questions tagged &#39;rs232&#39;" rel="tag">rs232</a> <a href="/questions/tagged/terminal" class="post-tag" title="show questions tagged &#39;terminal&#39;" rel="tag">terminal</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-08 14:33:27Z" class="relativetime">Nov 8 at 14:33</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/3632/paul-a"><div><img src="https://www.gravatar.com/avatar/1a1429c2bcdf8e698f8f94a555956990?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/3632/paul-a">Paul A.</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">442</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87475">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="151 views">
-    151 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87475/rf-module-not-working" class="question-hyperlink">RF Module Not Working</a></h3>
-        <div class="excerpt">
-            I'm working on RF Module(433MHz ) for Communication between Robot and controller. So I want to test this first. 
-
-Here is the thing 
-I've used two Encoders Named HT12E and HT12D which are WORKING Fine ...
-        </div>          
-        <div class="tags t-rf t-communication t-encoder t-decoder">
-            <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/encoder" class="post-tag" title="show questions tagged &#39;encoder&#39;" rel="tag">encoder</a> <a href="/questions/tagged/decoder" class="post-tag" title="show questions tagged &#39;decoder&#39;" rel="tag">decoder</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-04 15:14:56Z" class="relativetime">Nov 4 at 15:14</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/26784/srinivas"><div><img src="https://www.gravatar.com/avatar/feb2b51440b07cf39caf0edf3702b8f3?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/26784/srinivas">Srinivas</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87015">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="36 views">
-    36 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87015/sfp-with-copper-nic" class="question-hyperlink">SFP with copper NIC</a></h3>
-        <div class="excerpt">
-            We are designing a gigabit copper NIC card. Can we use SFP connectors with copper, or SFP is used only with fiber?
-
-        </div>          
-        <div class="tags t-communication t-ethernet">
-            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/ethernet" class="post-tag" title="show questions tagged &#39;ethernet&#39;" rel="tag">ethernet</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-31 05:55:54Z" class="relativetime">Oct 31 at 5:55</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/25039/micromolvi"><div><img src="https://www.gravatar.com/avatar/92dd76e9708e50f299aa4e284787c775?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/25039/micromolvi">microMolvi</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">127</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86906">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="85 views">
-    85 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86906/easiest-way-to-detect-a-button-push" class="question-hyperlink">Easiest way to detect a button push</a></h3>
-        <div class="excerpt">
-            I have a button that when push turns on a little light (light blinks; like a counter) - is there an easy way to hijack this signal so that my windows box can also detect if the button is pushed?  I ...
-        </div>          
-        <div class="tags t-microcontroller t-communication t-rs232 t-computers t-adapter">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/rs232" class="post-tag" title="show questions tagged &#39;rs232&#39;" rel="tag">rs232</a> <a href="/questions/tagged/computers" class="post-tag" title="show questions tagged &#39;computers&#39;" rel="tag">computers</a> <a href="/questions/tagged/adapter" class="post-tag" title="show questions tagged &#39;adapter&#39;" rel="tag">adapter</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-29 22:19:24Z" class="relativetime">Oct 29 at 22:19</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31056/ahdee"><div><img src="https://www.gravatar.com/avatar/8e5fbf51ed249b017926f975b2999d2d?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31056/ahdee">Ahdee</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86582">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="181 views">
-    181 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86582/making-a-high-speed-usb-communication-from-stm32f4-and-java-on-linux-pc" class="question-hyperlink">Making a high speed USB communication from STM32F4 and Java on Linux PC</a></h3>
-        <div class="excerpt">
-            I have a STM32F4Discovery board and I try to communicate between a c program(with no OS)on the board and a Java program on ubuntu pc. I have found many tutorials like this about USB but they all try ...
-        </div>          
-        <div class="tags t-usb t-communication t-c t-stm32">
-            <a href="/questions/tagged/usb" class="post-tag" title="show questions tagged &#39;usb&#39;" rel="tag">usb</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/c" class="post-tag" title="show questions tagged &#39;c&#39;" rel="tag">c</a> <a href="/questions/tagged/stm32" class="post-tag" title="show questions tagged &#39;stm32&#39;" rel="tag">stm32</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-26 19:32:28Z" class="relativetime">Oct 26 at 19:32</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/30916/mehdi"><div><img src="https://www.gravatar.com/avatar/775ffd2b192480000336392accb13cd5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/30916/mehdi">Mehdi</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86169">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>-2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="61 views">
-    61 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86169/can-i-use-an-old-mobile-phone-as-a-fct" class="question-hyperlink">Can I use an old Mobile Phone as a FCT [closed]</a></h3>
-        <div class="excerpt">
-            I have a PSTN Home Alarm System and an old GSM cell phones lying around in the house.  Is it possible to use this old GSM cell phone as a FCT for my  alarm system?
-
-        </div>          
-        <div class="tags t-communication t-cellphone">
-            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/cellphone" class="post-tag" title="show questions tagged &#39;cellphone&#39;" rel="tag">cellphone</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-22 08:00:14Z" class="relativetime">Oct 22 at 8:00</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/30768/user30768"><div><img src="https://www.gravatar.com/avatar/b4a2cd39125fc474bd4e11fa0936ae8c?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/30768/user30768">user30768</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-85557">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="34 views">
-    34 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/85557/how-to-set-radio-register-of-cc2500-and-cc2511-to-maximum-data-rate-500-kbps" class="question-hyperlink">How to set radio register of cc2500 and cc2511 to maximum data rate (500 Kbps)?</a></h3>
-        <div class="excerpt">
-            -I am using cc2500 at target device and cc2511 at Host device.
-
--I want to transmit and receive data between this two device at 500 Kbps data rates.
-
--My X'tal freq for cc2500 is 27MHz  and for cc2511 ...
-        </div>          
-        <div class="tags t-rf t-communication">
-            <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-16 05:43:28Z" class="relativetime">Oct 16 at 5:43</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/23841/shail-korat"><div><img src="https://www.gravatar.com/avatar/649adca335821feacbd54299440806f2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/23841/shail-korat">shail korat</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">74</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86508">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="31 views">
-    31 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86508/communicating-between-two-pic-microcontrolers" class="question-hyperlink">communicating between two PIC microcontrolers [closed]</a></h3>
-        <div class="excerpt">
-            I need to communicate between two <span class='tex2jax_ignore'>PIC16F877A</span> MCUs. One MCU is connected to the PC. The same MCU should be connected to the other one using SPI or I2C or any ...
-        </div>          
-        <div class="tags t-communication t-pic">
-            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/pic" class="post-tag" title="show questions tagged &#39;pic&#39;" rel="tag">pic</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-15 18:43:26Z" class="relativetime">Oct 15 at 18:43</span>
-    </div>
-    <div class="user-gravatar32">
-        <span class="anonymous-gravatar"></span>
-    </div>
-    <div class="user-details">
-        Lakshan Perera<br>
-        
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-85160">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="43 views">
-    43 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/85160/voice-and-data-through-tdma-in-vhf-systems" class="question-hyperlink">Voice and data through TDMA in VHF systems</a></h3>
-        <div class="excerpt">
-            In a VHF radio system using TDMA can a time slot be used to carry both voice and data bits together or is it necessary that both be transmitted in two different time slots. 
-Also while reading an ...
-        </div>          
-        <div class="tags t-communication t-digital-communications t-vhf">
-            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/digital-communications" class="post-tag" title="show questions tagged &#39;digital-communications&#39;" rel="tag">digital-communications</a> <a href="/questions/tagged/vhf" class="post-tag" title="show questions tagged &#39;vhf&#39;" rel="tag">vhf</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-12 10:57:42Z" class="relativetime">Oct 12 at 10:57</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/16173/sk1"><div><img src="https://www.gravatar.com/avatar/e8e9916dd265cd9009a15ffb52cf2940?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/16173/sk1">sk1</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">121</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
     </div>
 </div>
         </div>  
@@ -856,28 +965,28 @@ Also while reading an ...
         <a href="/questions/tagged/communication?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/communication?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/communication?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
- <span class="page-numbers dots">…</span>         <a href="/questions/tagged/communication?page=19&amp;sort=newest&amp;pagesize=15" title="go to page 19"> <span class="page-numbers">19</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/communication?page=20&amp;sort=newest&amp;pagesize=15" title="go to page 20"> <span class="page-numbers">20</span> </a> 
         <a href="/questions/tagged/communication?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/communication?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/communication?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/communication?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/communication?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/communication?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/communication?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=communication&amp;sort=newest" title="the 30 newest communication questions"><span class="feed-icon"></span>newest communication questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=communication&sort=newest" title="the 30 newest communication questions"><span class="feed-icon"></span>newest communication questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">285</div>
+            <div class="summarycount al">291</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> 
@@ -888,38 +997,279 @@ Also while reading an ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/communication+microcontroller" class="post-tag" title="show questions tagged &#39;communication microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">37</span></span><br>
-            <a href="/questions/tagged/communication+wireless" class="post-tag" title="show questions tagged &#39;communication wireless&#39;" rel="tag">wireless</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">34</span></span><br>
-            <a href="/questions/tagged/communication+arduino" class="post-tag" title="show questions tagged &#39;communication arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">29</span></span><br>
-            <a href="/questions/tagged/communication+serial" class="post-tag" title="show questions tagged &#39;communication serial&#39;" rel="tag">serial</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">28</span></span><br>
-            <a href="/questions/tagged/communication+rf" class="post-tag" title="show questions tagged &#39;communication rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">24</span></span><br>
-            <a href="/questions/tagged/communication+pic" class="post-tag" title="show questions tagged &#39;communication pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/communication+signal" class="post-tag" title="show questions tagged &#39;communication signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span><br>
-            <a href="/questions/tagged/communication+i2c" class="post-tag" title="show questions tagged &#39;communication i2c&#39;" rel="tag">i2c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span><br>
-            <a href="/questions/tagged/communication+protocol" class="post-tag" title="show questions tagged &#39;communication protocol&#39;" rel="tag">protocol</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/communication+rs232" class="post-tag" title="show questions tagged &#39;communication rs232&#39;" rel="tag">rs232</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/communication+modulation" class="post-tag" title="show questions tagged &#39;communication modulation&#39;" rel="tag">modulation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/communication+digital-communications" class="post-tag" title="show questions tagged &#39;communication digital-communications&#39;" rel="tag">digital-communications</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/communication+power-line-communication" class="post-tag" title="show questions tagged &#39;communication power-line-communication&#39;" rel="tag">power-line-communication</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/communication+ethernet" class="post-tag" title="show questions tagged &#39;communication ethernet&#39;" rel="tag">ethernet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/communication+usb" class="post-tag" title="show questions tagged &#39;communication usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/communication+uart" class="post-tag" title="show questions tagged &#39;communication uart&#39;" rel="tag">uart</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/communication+xbee" class="post-tag" title="show questions tagged &#39;communication xbee&#39;" rel="tag">xbee</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/communication+telephone" class="post-tag" title="show questions tagged &#39;communication telephone&#39;" rel="tag">telephone</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/communication+transmitter" class="post-tag" title="show questions tagged &#39;communication transmitter&#39;" rel="tag">transmitter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/communication+bluetooth" class="post-tag" title="show questions tagged &#39;communication bluetooth&#39;" rel="tag">bluetooth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/communication+wifi" class="post-tag" title="show questions tagged &#39;communication wifi&#39;" rel="tag">wifi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/communication+data" class="post-tag" title="show questions tagged &#39;communication data&#39;" rel="tag">data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/communication+cables" class="post-tag" title="show questions tagged &#39;communication cables&#39;" rel="tag">cables</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/communication+spi" class="post-tag" title="show questions tagged &#39;communication spi&#39;" rel="tag">spi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/communication+network" class="post-tag" title="show questions tagged &#39;communication network&#39;" rel="tag">network</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
+        <div>
+            <a href="/questions/tagged/communication+microcontroller" class="post-tag" title="show questions tagged &#39;communication microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">38</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/communication+wireless" class="post-tag" title="show questions tagged &#39;communication wireless&#39;" rel="tag">wireless</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">35</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/communication+serial" class="post-tag" title="show questions tagged &#39;communication serial&#39;" rel="tag">serial</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">31</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/communication+arduino" class="post-tag" title="show questions tagged &#39;communication arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">30</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/communication+rf" class="post-tag" title="show questions tagged &#39;communication rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">25</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/communication+signal" class="post-tag" title="show questions tagged &#39;communication signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/communication+pic" class="post-tag" title="show questions tagged &#39;communication pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/communication+i2c" class="post-tag" title="show questions tagged &#39;communication i2c&#39;" rel="tag">i2c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/communication+digital-communications" class="post-tag" title="show questions tagged &#39;communication digital-communications&#39;" rel="tag">digital-communications</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/communication+protocol" class="post-tag" title="show questions tagged &#39;communication protocol&#39;" rel="tag">protocol</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+modulation" class="post-tag" title="show questions tagged &#39;communication modulation&#39;" rel="tag">modulation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+rs232" class="post-tag" title="show questions tagged &#39;communication rs232&#39;" rel="tag">rs232</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+ethernet" class="post-tag" title="show questions tagged &#39;communication ethernet&#39;" rel="tag">ethernet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+usb" class="post-tag" title="show questions tagged &#39;communication usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+xbee" class="post-tag" title="show questions tagged &#39;communication xbee&#39;" rel="tag">xbee</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+telephone" class="post-tag" title="show questions tagged &#39;communication telephone&#39;" rel="tag">telephone</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+uart" class="post-tag" title="show questions tagged &#39;communication uart&#39;" rel="tag">uart</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+data" class="post-tag" title="show questions tagged &#39;communication data&#39;" rel="tag">data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+power-line-communication" class="post-tag" title="show questions tagged &#39;communication power-line-communication&#39;" rel="tag">power-line-communication</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+bluetooth" class="post-tag" title="show questions tagged &#39;communication bluetooth&#39;" rel="tag">bluetooth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+cables" class="post-tag" title="show questions tagged &#39;communication cables&#39;" rel="tag">cables</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+c" class="post-tag" title="show questions tagged &#39;communication c&#39;" rel="tag">c</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+radio" class="post-tag" title="show questions tagged &#39;communication radio&#39;" rel="tag">radio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+transmitter" class="post-tag" title="show questions tagged &#39;communication transmitter&#39;" rel="tag">transmitter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/communication+spi" class="post-tag" title="show questions tagged &#39;communication spi&#39;" rel="tag">spi</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -939,7 +1289,7 @@ Also while reading an ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/communication")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1032,7 +1382,7 @@ Also while reading an ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1059,14 +1409,11 @@ Also while reading an ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1075,33 +1422,34 @@ Also while reading an ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|communication|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|communication|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

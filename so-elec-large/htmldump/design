@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged design" href="/feeds/tag/design" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186126,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327818,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fdesign" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fdesign" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[design]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fdesign">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fdesign">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[design]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/design/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/design?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/design?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/design?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/design?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/design?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/design?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/design?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/design?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/design?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/design?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,31 +257,31 @@ The process of creating electronic products, including components and end-user d
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92646">
+<div class="question-summary" id="question-summary-97092">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
+                    <span class="vote-count-post "><strong>3</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
+            <div class="status answered">
+                <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="41 views">
-    41 views
+        <div class="views " title="120 views">
+    120 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92646/who-to-approach-with-a-radically-new-engine-design" class="question-hyperlink">Who to approach with a radically new engine design? [migrated]</a></h3>
+        <h3><a href="/questions/97092/i-need-a-reasonability-check-for-the-safety-of-a-home-hacked-power-supply" class="question-hyperlink">I need a reasonability check for the safety of a home-hacked power supply</a></h3>
         <div class="excerpt">
-            this may not be the proper StackExchange site (flag if you think it should be moved elsewhere; I did not find a mechanical eng site) but I have an engineering-related question. My dad created a design ...
+            I am in the process of building myself a fancy schmancy Raspberry Pi "laptop", and am trying to power it with a single cord/power supply. My strategy is to put together a small project box with 120VAC ...
         </div>          
-        <div class="tags t-design t-mechanical">
-            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/mechanical" class="post-tag" title="show questions tagged &#39;mechanical&#39;" rel="tag">mechanical</a> 
+        <div class="tags t-power-supply t-design">
+            <a href="/questions/tagged/power-supply" class="post-tag" title="show questions tagged &#39;power-supply&#39;" rel="tag">power-supply</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -190,19 +289,19 @@ The process of creating electronic products, including components and end-user d
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-04 12:36:51Z" class="relativetime">7 hours ago</span>
+        asked <span title="2014-01-20 21:04:38Z" class="relativetime">21 hours ago</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/33630/mart1n"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/9cae5386b74db08372c2458298c7fd99?s=128&d=identicon&r=PG" alt=""></div></a>
+        <a href="/users/10660/dwwilson66"><div><img src="https://www.gravatar.com/avatar/64b4a03a67d7d69a4d64c0d1a7e8151a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/33630/mart1n">mart1n</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">104</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <a href="/users/10660/dwwilson66">dwwilson66</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">883</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="20 bronze badges"><span class="badge3"></span><span class="badgecount">20</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-92268">
+</div><div class="question-summary" id="question-summary-96927">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -212,21 +311,23 @@ The process of creating electronic products, including components and end-user d
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status answered-accepted">
+            <div class="status answered">
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="68 views">
-    68 views
+        <div class="views " title="102 views">
+    102 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92268/13-56mhz-rfid-antenna-design" class="question-hyperlink">13.56MHz RFID Antenna design</a></h3>
+        <h3><a href="/questions/96927/why-does-this-low-cost-battery-powered-device-use-ferrite-beads-on-the-power-inp" class="question-hyperlink">Why does this low-cost battery powered device use ferrite beads on the power input?</a></h3>
         <div class="excerpt">
-            I am currently in the process of building an RFID access system for my house + car. I've worked out the software side (I am using an arduino) but am having difficulty with the hardware side. I bought ...
+            I have just opened up a small, low-cost motion-activated (by PIR) LED light as I am planning on just using the casing for another project.
+
+The PCB inside is clearly designed to be very cheap. It uses ...
         </div>          
-        <div class="tags t-design t-antenna t-rfid">
-            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/antenna" class="post-tag" title="show questions tagged &#39;antenna&#39;" rel="tag">antenna</a> <a href="/questions/tagged/rfid" class="post-tag" title="show questions tagged &#39;rfid&#39;" rel="tag">rfid</a> 
+        <div class="tags t-design t-ferrite-bead">
+            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/ferrite-bead" class="post-tag" title="show questions tagged &#39;ferrite-bead&#39;" rel="tag">ferrite-bead</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -234,160 +335,25 @@ The process of creating electronic products, including components and end-user d
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-30 12:07:14Z" class="relativetime">Nov 30 at 12:07</span>
+        asked <span title="2014-01-19 12:54:05Z" class="relativetime">2 days ago</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/33459/user2975986"><div><img src="https://www.gravatar.com/avatar/80a80f9f10cd823dd9750c1ce36a7d97?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+        <a href="/users/2005/cybergibbons"><div><img src="https://www.gravatar.com/avatar/5651abbe05ed4c82d0ecd3242308583a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/33459/user2975986">user2975986</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">23</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        <a href="/users/2005/cybergibbons">Cybergibbons</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,088</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-92157">
+</div><div class="question-summary" id="question-summary-96122">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="43 views">
-    43 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92157/does-the-wifi-alliance-protect-the-protocol-documentation" class="question-hyperlink">Does the WiFi alliance protect the protocol documentation?</a></h3>
-        <div class="excerpt">
-            I was recently studying the IEEE 802.11 standards for WiFi (pretty dry stuff, huh?) and I was wondering this:
-
-Would it be theoretically possible for someone not in the WiFi alliance to develop a chip ...
-        </div>          
-        <div class="tags t-design t-wifi">
-            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/wifi" class="post-tag" title="show questions tagged &#39;wifi&#39;" rel="tag">wifi</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-11-29 03:20:13Z" class="relativetime">Nov 29 at 3:20</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/18442/annonomus-person"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/53Rif.png?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/18442/annonomus-person">Annonomus Person</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,195</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91916">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>9</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="392 views">
-    392 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91916/are-there-any-types-of-dc-motors-that-self-lock-themselves" class="question-hyperlink">Are there any types of DC motors that self-lock themselves?</a></h3>
-        <div class="excerpt">
-            I have a small DC gear motor which spools a plastic line. Once I've engaged the motor to tighten the line, I want to lock it in place so that the line doesn't unspool. I would then like it to remain ...
-        </div>          
-        <div class="tags t-microcontroller t-motor t-integrated-circuit t-design t-dc-motor">
-            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/motor" class="post-tag" title="show questions tagged &#39;motor&#39;" rel="tag">motor</a> <a href="/questions/tagged/integrated-circuit" class="post-tag" title="show questions tagged &#39;integrated-circuit&#39;" rel="tag">integrated-circuit</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/dc-motor" class="post-tag" title="show questions tagged &#39;dc-motor&#39;" rel="tag">dc-motor</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-26 13:17:21Z" class="relativetime">Nov 26 at 13:17</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33266/alexandru"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/1Agwv.png?s=128&g=1?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33266/alexandru">Alexandru</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">157</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91883">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="38 views">
-    38 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91883/why-should-i-not-connect-a-positive-edge-trigerrred-ff-to-negative-edge-trigerre" class="question-hyperlink">Why should I not connect a positive edge trigerrred FF to negative edge trigerred FF in scan design? [closed]</a></h3>
-        <div class="excerpt">
-            I've connected a positive edge trigerrred FF to negative edge trigerred FF in my scan stitching for the testing purpose.
-I came to know that it should not be stitched. can I know what is the reason ...
-        </div>          
-        <div class="tags t-design">
-            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-26 04:00:17Z" class="relativetime">Nov 26 at 4:00</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33294/user33294"><div><img src="https://www.gravatar.com/avatar/8058670b7ee570eeb74610cdf20e7572?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33294/user33294">user33294</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91802">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
+                    <span class="vote-count-post "><strong>-1</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -400,14 +366,12 @@ I came to know that it should not be stitched. can I know what is the reason ...
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91802/designing-a-simple-circuit-with-a-parallel-port-and-leds" class="question-hyperlink">Designing a simple circuit with a Parallel Port and Leds</a></h3>
+        <h3><a href="/questions/96122/what-is-microcoded-architecture-in-computer-architecture" class="question-hyperlink">what is microcoded architecture in computer architecture</a></h3>
         <div class="excerpt">
-            I am designing a simple circuit to control 80 LEDs using the parallel port.
-
-I am a software engineer and I barely remember the basics of hardware design. I already implemented the software to control ...
+            I want to know what is microcoded microarchitecture of an instruction set architecture (ISA) and why is it used? What is the difference between microcoded architecture and single cycle ...
         </div>          
-        <div class="tags t-circuit t-design">
-            <a href="/questions/tagged/circuit" class="post-tag" title="show questions tagged &#39;circuit&#39;" rel="tag">circuit</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
+        <div class="tags t-design t-microprocessor t-hardware t-computer-architecture">
+            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/microprocessor" class="post-tag" title="show questions tagged &#39;microprocessor&#39;" rel="tag">microprocessor</a> <a href="/questions/tagged/hardware" class="post-tag" title="show questions tagged &#39;hardware&#39;" rel="tag">hardware</a> <a href="/questions/tagged/computer-architecture" class="post-tag" title="show questions tagged &#39;computer-architecture&#39;" rel="tag">computer-architecture</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -415,45 +379,45 @@ I am a software engineer and I barely remember the basics of hardware design. I 
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-25 12:32:30Z" class="relativetime">Nov 25 at 12:32</span>
+        asked <span title="2014-01-11 19:03:18Z" class="relativetime">Jan 11 at 19:03</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/33252/tefa"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/74d66227c8f9a6be723b440e1448c328?s=128&d=identicon&r=PG" alt=""></div></a>
+        <a href="/users/35416/user2979872"><div><img src="https://www.gravatar.com/avatar/4f53dae485d6b73e75472bb3bfc08744?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/33252/tefa">TeFa</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <a href="/users/35416/user2979872">user2979872</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-91768">
+</div><div class="question-summary" id="question-summary-96047">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
                 </div>
             </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
+            <div class="status answered">
+                <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="35 views">
-    35 views
+        <div class="views " title="260 views">
+    260 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91768/virtual-memory-cache-and-tlbs" class="question-hyperlink">Virtual Memory, Cache, and TLB&#39;s</a></h3>
+        <h3><a href="/questions/96047/professor-said-my-embedded-system-design-is-incorrect-what-did-i-get-wrong" class="question-hyperlink">Professor said my embedded system design is incorrect, what did I get wrong?</a></h3>
         <div class="excerpt">
-            I recently asked this question over at stackoverflow, but I was told by a user that it was off-topic, so I am posting it here since it's more of a hardware question.
+            The problem:
 
-I'm trying to study for an exam ...
+Your embedded system has an 8-bit microprocessor, which has a 16-bit address bus. In addition, you have a 32-Kbyte FLASH chip, and a 8 KByte RAM chip. You want to locate the FLASH chip ...
         </div>          
-        <div class="tags t-design t-memory t-computer-architecture t-cache">
-            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/memory" class="post-tag" title="show questions tagged &#39;memory&#39;" rel="tag">memory</a> <a href="/questions/tagged/computer-architecture" class="post-tag" title="show questions tagged &#39;computer-architecture&#39;" rel="tag">computer-architecture</a> <a href="/questions/tagged/cache" class="post-tag" title="show questions tagged &#39;cache&#39;" rel="tag">cache</a> 
+        <div class="tags t-embedded t-design t-memory t-system">
+            <a href="/questions/tagged/embedded" class="post-tag" title="show questions tagged &#39;embedded&#39;" rel="tag">embedded</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/memory" class="post-tag" title="show questions tagged &#39;memory&#39;" rel="tag">memory</a> <a href="/questions/tagged/system" class="post-tag" title="show questions tagged &#39;system&#39;" rel="tag">system</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -461,19 +425,111 @@ I'm trying to study for an exam ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-25 01:45:36Z" class="relativetime">Nov 25 at 1:45</span>
+        asked <span title="2014-01-10 20:45:07Z" class="relativetime">Jan 10 at 20:45</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/15953/audifanatic"><div><img src="https://www.gravatar.com/avatar/b0255245395eb9c01ba086129a2b12ef?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/35372/user35372"><div><img src="https://www.gravatar.com/avatar/3b40f9b69031b66bf4a667c10898ddb0?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/15953/audifanatic">audiFanatic</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">45</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        <a href="/users/35372/user35372">user35372</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-91391">
+</div><div class="question-summary" id="question-summary-96033">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="75 views">
+    75 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96033/symmetric-power-sockets-design-considerations-in-electrical-devices" class="question-hyperlink">Symmetric power sockets – design considerations in electrical devices</a></h3>
+        <div class="excerpt">
+            There are various single-phase power socket standards in use. Some countries use plugs that can be plugged in the socket only in a specific orientation (for example, the United Kingdom) while other ...
+        </div>          
+        <div class="tags t-ac t-design t-mains">
+            <a href="/questions/tagged/ac" class="post-tag" title="show questions tagged &#39;ac&#39;" rel="tag">ac</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/mains" class="post-tag" title="show questions tagged &#39;mains&#39;" rel="tag">mains</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-10 17:25:06Z" class="relativetime">Jan 10 at 17:25</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35364/ntoskrnl"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/ca89cd2050b8c0c5c5cb8966dbe99b6e?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35364/ntoskrnl">ntoskrnl</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">118</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95929">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="67 views">
+    67 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95929/on-off-safe-implementation" class="question-hyperlink">ON/OFF safe implementation</a></h3>
+        <div class="excerpt">
+            I would like to know what you think about this. Here's a diagram presenting the main modules of the project. Red is 9V unregulated, green is 5V regulated, black is 5V logic exchanges.
+
+
+
+I want to ...
+        </div>          
+        <div class="tags t-switches t-design">
+            <a href="/questions/tagged/switches" class="post-tag" title="show questions tagged &#39;switches&#39;" rel="tag">switches</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-09 16:52:35Z" class="relativetime">Jan 9 at 16:52</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/27489/emmanuel-istace"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/797302589/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/27489/emmanuel-istace">Emmanuel Istace</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">773</span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95660">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -487,17 +543,19 @@ I'm trying to study for an exam ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="59 views">
-    59 views
+        <div class="views " title="49 views">
+    49 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91391/electronics-design-challenges-competitions" class="question-hyperlink">Electronics Design Challenges/Competitions [closed]</a></h3>
+        <h3><a href="/questions/95660/radios-and-power" class="question-hyperlink">Radios and Power [closed]</a></h3>
         <div class="excerpt">
-            Is anyone aware of some website that keeps an up to date list of running hardware, electronics or electrical design competitions/challenges/contests? I am looking for the types of things that a ...
+            RF newbie here.
+
+Lately I've been experimenting with RF. I built some simple oscillators, managing to get a tank circuit working as well as buffering the 1 megahertz output of a tin can oscillator. ...
         </div>          
-        <div class="tags t-design t-competitions t-contest t-challenge">
-            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/competitions" class="post-tag" title="show questions tagged &#39;competitions&#39;" rel="tag">competitions</a> <a href="/questions/tagged/contest" class="post-tag" title="show questions tagged &#39;contest&#39;" rel="tag">contest</a> <a href="/questions/tagged/challenge" class="post-tag" title="show questions tagged &#39;challenge&#39;" rel="tag">challenge</a> 
+        <div class="tags t-rf t-design t-radio t-theory">
+            <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/radio" class="post-tag" title="show questions tagged &#39;radio&#39;" rel="tag">radio</a> <a href="/questions/tagged/theory" class="post-tag" title="show questions tagged &#39;theory&#39;" rel="tag">theory</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -505,45 +563,45 @@ I'm trying to study for an exam ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-21 06:53:33Z" class="relativetime">Nov 21 at 6:53</span>
+        asked <span title="2014-01-07 00:57:01Z" class="relativetime">Jan 7 at 0:57</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/23669/gonzik"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/kAvbf.jpg?s=32&g=1" alt=""></div></a>
+        <a href="/users/9402/fuzzyhair2"><div><img src="https://www.gravatar.com/avatar/bc6c0e7b1843bd5eb5bb6eebc97884ca?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/23669/gonzik">Gonzik</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">889</span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        <a href="/users/9402/fuzzyhair2">fuzzyhair2</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">390</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-91217">
+</div><div class="question-summary" id="question-summary-95658">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
                 </div>
             </div>
             <div class="status unanswered">
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="23 views">
-    23 views
+        <div class="views " title="58 views">
+    58 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91217/high-gain-amplifier-design-to-meet-some-contraints" class="question-hyperlink">High gain Amplifier design to meet some contraints</a></h3>
+        <h3><a href="/questions/95658/good-modern-sources-on-arm-cortex-hardware-design" class="question-hyperlink">Good (modern) sources on ARM Cortex hardware design [closed]</a></h3>
         <div class="excerpt">
-            I have to design an amplifier with the following conditions. Since I am new in this, I need some help. Can you guide me on how to start on this?
+            I am looking for some good resources on getting started in embedded hardware design with the ARM Cortex series.  I'm primarily interested in the Cortex-M, Cortex-A, and Cortex-A50 series of chips.
 
 ...
         </div>          
-        <div class="tags t-amplifier t-analog t-design">
-            <a href="/questions/tagged/amplifier" class="post-tag" title="show questions tagged &#39;amplifier&#39;" rel="tag">amplifier</a> <a href="/questions/tagged/analog" class="post-tag" title="show questions tagged &#39;analog&#39;" rel="tag">analog</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
+        <div class="tags t-design t-arm t-cortex-m">
+            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/arm" class="post-tag" title="show questions tagged &#39;arm&#39;" rel="tag">arm</a> <a href="/questions/tagged/cortex-m" class="post-tag" title="show questions tagged &#39;cortex-m&#39;" rel="tag">cortex-m</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -551,19 +609,65 @@ I'm trying to study for an exam ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-20 00:29:56Z" class="relativetime">Nov 20 at 0:29</span>
+        asked <span title="2014-01-07 00:23:38Z" class="relativetime">Jan 7 at 0:23</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/32986/user32986"><div><img src="https://www.gravatar.com/avatar/e2e6036ab974f5ce3e55da62750067fb?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+        <a href="/users/35198/karma0"><div><img src="https://www.gravatar.com/avatar/48018adfdad2b2f0a4963cee852e5498?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/32986/user32986">user32986</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        <a href="/users/35198/karma0">karma0</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">7</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-90757">
+</div><div class="question-summary" id="question-summary-94763">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="57 views">
+    57 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94763/adding-a-15-15-v-chip-on-a-0-5-v-board" class="question-hyperlink">Adding a +15/-15 V chip on a 0-5 V board</a></h3>
+        <div class="excerpt">
+            General Question:
+
+I would like to integrate a specialized chip that requires symmetrical power +15, 0 and -15 V to operate on a 0 V (GND) / +5 V (VCC) board I designed. If possible, I would also like ...
+        </div>          
+        <div class="tags t-design">
+            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-27 17:34:58Z" class="relativetime">Dec 27 '13 at 17:34</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34757/peterg"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/4f7ffd26757834dd6bd1434796cbdcce?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34757/peterg">PeterG</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">30</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94755">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -573,23 +677,26 @@ I'm trying to study for an exam ...
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
+            <div class="status answered">
+                <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="63 views">
-    63 views
+        <div class="views " title="75 views">
+    75 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/90757/component-libraries-for-schematic-and-layout-design" class="question-hyperlink">Component libraries for schematic and layout design</a></h3>
+        <h3><a href="/questions/94755/construct-an-8k-x-32-rom-using-2k-x-8-rom-chips" class="question-hyperlink">Construct an 8k X 32 ROM using 2k X 8 ROM chips</a></h3>
         <div class="excerpt">
-            I've got much difficulties to find the footprint for the components I have in hand:
+            Construct an 8k X 32 ROM using 2k X 8 ROM chips and any additional 
+required components. 
+Show how the address and data lines of the constructed 8k X 32 ROM are 
+connected to the 2k X 8 chips.
 
-They don't have name (I buy them at somewhere similar to flea markets). Therefore, their proper footprints are ...
+I ...
         </div>          
-        <div class="tags t-design t-components t-schematics t-layout t-library">
-            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/components" class="post-tag" title="show questions tagged &#39;components&#39;" rel="tag">components</a> <a href="/questions/tagged/schematics" class="post-tag" title="show questions tagged &#39;schematics&#39;" rel="tag">schematics</a> <a href="/questions/tagged/layout" class="post-tag" title="show questions tagged &#39;layout&#39;" rel="tag">layout</a> <a href="/questions/tagged/library" class="post-tag" title="show questions tagged &#39;library&#39;" rel="tag">library</a> 
+        <div class="tags t-digital-logic t-design t-rom">
+            <a href="/questions/tagged/digital-logic" class="post-tag" title="show questions tagged &#39;digital-logic&#39;" rel="tag">digital-logic</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/rom" class="post-tag" title="show questions tagged &#39;rom&#39;" rel="tag">rom</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -597,19 +704,115 @@ They don't have name (I buy them at somewhere similar to flea markets). Therefor
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-15 14:42:50Z" class="relativetime">Nov 15 at 14:42</span>
+        asked <span title="2013-12-27 16:27:05Z" class="relativetime">Dec 27 '13 at 16:27</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/27049/shawn-le"><div><img src="https://www.gravatar.com/avatar/142b24ff3e4890c09f9b2897d9260c8b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/34755/user34755"><div><img src="https://www.gravatar.com/avatar/d80b8c49fb871631bb9b38b56e069da8?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/27049/shawn-le">Shawn Le</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">107</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <a href="/users/34755/user34755">user34755</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-87713">
+</div><div class="question-summary" id="question-summary-94282">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="61 views">
+    61 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94282/how-to-auto-disconnect-from-rs485-bus-when-power-off" class="question-hyperlink">How to &ldquo;auto-disconnect&rdquo; from rs485 bus when power off</a></h3>
+        <div class="excerpt">
+            I have many devices on a RS485 bus.
+
+When I disconnect power from one device,
+the rest of the (powered-on) devices seem to communicate with each other just fine.
+At least it seems to be working today.
+...
+        </div>          
+        <div class="tags t-communication t-design t-driver t-rs485">
+            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/driver" class="post-tag" title="show questions tagged &#39;driver&#39;" rel="tag">driver</a> <a href="/questions/tagged/rs485" class="post-tag" title="show questions tagged &#39;rs485&#39;" rel="tag">rs485</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2013-12-20 22:27:40Z" class="relativetime">Dec 20 '13 at 22:27</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/813/davidcary"><div><img src="https://www.gravatar.com/avatar/5bce51d2574911a41f6e7297ce7e2ae0?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/813/davidcary">davidcary</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">8,938</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="20 silver badges"><span class="badge2"></span><span class="badgecount">20</span></span><span title="48 bronze badges"><span class="badge3"></span><span class="badgecount">48</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93938">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="124 views">
+    124 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93938/designing-a-circuit-that-will-reset-the-proccessor" class="question-hyperlink">Designing a circuit that will reset the proccessor</a></h3>
+        <div class="excerpt">
+            In the book The Intel Microprocessors Family: Hardware and Software, Principles and Applications chapter 8, page 307, question 30:
+
+
+  design a circuit that will reset the processor if a NMI occurs ...
+        </div>          
+        <div class="tags t-digital-logic t-design t-microprocessor">
+            <a href="/questions/tagged/digital-logic" class="post-tag" title="show questions tagged &#39;digital-logic&#39;" rel="tag">digital-logic</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/microprocessor" class="post-tag" title="show questions tagged &#39;microprocessor&#39;" rel="tag">microprocessor</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-17 11:18:18Z" class="relativetime">Dec 17 '13 at 11:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/22813/ammarx"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/kAiVh.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/22813/ammarx">ammarx</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">41</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93859">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -620,152 +823,20 @@ They don't have name (I buy them at somewhere similar to flea markets). Therefor
                 </div>
             </div>
             <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="159 views">
-    159 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87713/driving-a-led-from-a-wide-ranging-input-voltage" class="question-hyperlink">Driving a LED from a wide ranging input voltage</a></h3>
-        <div class="excerpt">
-            I have been working on a small linear power supply, capable of regulated output between 2V to 30V, using the LM338 IC. For the most part it is a simple implementation taken straight from the ...
-        </div>          
-        <div class="tags t-power-supply t-led t-design">
-            <a href="/questions/tagged/power-supply" class="post-tag" title="show questions tagged &#39;power-supply&#39;" rel="tag">power-supply</a> <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-06 11:52:33Z" class="relativetime">Nov 6 at 11:52</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31299/j-roc"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/e5TNq.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31299/j-roc">j-roc</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">72</span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87517">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>-1</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="74 views">
-    74 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87517/how-is-it-possible-to-apply-electrical-engineering-knowledge-adequately-in-such" class="question-hyperlink">How is it possible to apply electrical engineering knowledge adequately in such different, variating devices? [closed]</a></h3>
-        <div class="excerpt">
-            I realize people do learn it somewhat linearly and progressively, but like the power of a human body in exercising, intelligence or knowledge is not 100% linear. To avoid making this a further ...
-        </div>          
-        <div class="tags t-integrated-circuit t-design">
-            <a href="/questions/tagged/integrated-circuit" class="post-tag" title="show questions tagged &#39;integrated-circuit&#39;" rel="tag">integrated-circuit</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-04 21:34:32Z" class="relativetime">Nov 4 at 21:34</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31273/user"><div><img src="https://www.gravatar.com/avatar/6c8af290c32fc8993b97f2eacb472ce6?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31273/user">USER</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87332">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="45 views">
-    45 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87332/design-general-purpose-cordic-processor-for-computing-sqaure-root" class="question-hyperlink">Design General Purpose CORDIC processor for computing sqaure root</a></h3>
-        <div class="excerpt">
-            My question is if you want to design a general purpose CORDIC processor for computing square root how would you begin with it i mean i know that with CORDIC you can compute angles and stuff but using ...
-        </div>          
-        <div class="tags t-fpga t-design t-processor t-cordic">
-            <a href="/questions/tagged/fpga" class="post-tag" title="show questions tagged &#39;fpga&#39;" rel="tag">fpga</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/processor" class="post-tag" title="show questions tagged &#39;processor&#39;" rel="tag">processor</a> <a href="/questions/tagged/cordic" class="post-tag" title="show questions tagged &#39;cordic&#39;" rel="tag">cordic</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-03 13:22:53Z" class="relativetime">Nov 3 at 13:22</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/30388/loraloper"><div><img src="https://www.gravatar.com/avatar/13dca6ebbb939694ce01badc71e30b42?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/30388/loraloper">Loraloper</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87207">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="114 views">
-    114 views
+        <div class="views " title="109 views">
+    109 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/87207/circuit-design-for-dc-motor-control" class="question-hyperlink">Circuit design for DC motor control</a></h3>
+        <h3><a href="/questions/93859/how-to-reliably-and-safely-recreate-a-blue-smoke-monster-for-a-workshop" class="question-hyperlink">How to reliably and safely recreate a blue smoke monster for a workshop?</a></h3>
         <div class="excerpt">
-            I 'm planning to control a DC motor via certain signals. Motor requires 9 V, 700 mA of voltage approximately. The voltage will be provided by a Ni-Cd battery. However, the signals that are responsible ...
+            First and foremost, I'm going to say that I do and plan to continue to follow all safety best practices for working with electronics. I'm also a relative newbie, so I don't have a lot of experience ...
         </div>          
-        <div class="tags t-voltage t-signal t-design t-dc-motor">
-            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/dc-motor" class="post-tag" title="show questions tagged &#39;dc-motor&#39;" rel="tag">dc-motor</a> 
+        <div class="tags t-design t-breadboard">
+            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/breadboard" class="post-tag" title="show questions tagged &#39;breadboard&#39;" rel="tag">breadboard</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -773,19 +844,19 @@ They don't have name (I buy them at somewhere similar to flea markets). Therefor
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-01 23:07:11Z" class="relativetime">Nov 1 at 23:07</span>
+        asked <span title="2013-12-16 13:28:13Z" class="relativetime">Dec 16 '13 at 13:28</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/31176/dempap"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/UcAY9.jpg?s=32&g=1" alt=""></div></a>
+        <a href="/users/10660/dwwilson66"><div><img src="https://www.gravatar.com/avatar/64b4a03a67d7d69a4d64c0d1a7e8151a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/31176/dempap">dempap</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <a href="/users/10660/dwwilson66">dwwilson66</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">883</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="20 bronze badges"><span class="badge3"></span><span class="badgecount">20</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-86974">
+</div><div class="question-summary" id="question-summary-93592">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -795,22 +866,23 @@ They don't have name (I buy them at somewhere similar to flea markets). Therefor
                     <div class="viewcount">vote</div>
                 </div>
             </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="44 views">
-    44 views
+        <div class="views " title="134 views">
+    134 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/86974/multiple-net-names-in-altium-designer" class="question-hyperlink">Multiple net names in Altium Designer</a></h3>
+        <h3><a href="/questions/93592/which-software-is-used-to-design-this-cirucit" class="question-hyperlink">Which software is used to design this Cirucit?</a></h3>
         <div class="excerpt">
-            We are currently designing a large PCB where multiple engineers are contributing to the
-schematic layouts in Altium Designer 13. We decided to use a hierarchical layout for our design so that each ...
+            Could you help me with the name of the software used to design the circuit below?
+
+I have used Eagle (Easily Applicable Graphical Layout Editor) but I want to design my circuits with looks something ...
         </div>          
-        <div class="tags t-design t-altium">
-            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/altium" class="post-tag" title="show questions tagged &#39;altium&#39;" rel="tag">altium</a> 
+        <div class="tags t-circuit t-pcb-design t-design">
+            <a href="/questions/tagged/circuit" class="post-tag" title="show questions tagged &#39;circuit&#39;" rel="tag">circuit</a> <a href="/questions/tagged/pcb-design" class="post-tag" title="show questions tagged &#39;pcb-design&#39;" rel="tag">pcb-design</a> <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -818,14 +890,60 @@ schematic layouts in Altium Designer 13. We decided to use a hierarchical layout
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-30 18:15:21Z" class="relativetime">Oct 30 at 18:15</span>
+        asked <span title="2013-12-13 13:27:34Z" class="relativetime">Dec 13 '13 at 13:27</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/24543/neville-bamshoe"><div><img src="https://www.gravatar.com/avatar/973d103c783d148c3244c362bdfbec00?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/29168/sanju"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/CPtl2.jpg?s=32&g=1" alt=""></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/24543/neville-bamshoe">Neville Bamshoe</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">50</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <a href="/users/29168/sanju">Sanju</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">35</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93033">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="51 views">
+    51 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93033/memory-problems" class="question-hyperlink">Memory Problems</a></h3>
+        <div class="excerpt">
+            I've been having some problems with memory ICs, specifically Flash and EEPROM.
+
+I've had some experience with the 7400 series for some time...logic gates are pretty straightforward. Input something, ...
+        </div>          
+        <div class="tags t-design t-flash t-programmer t-eeprom">
+            <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> <a href="/questions/tagged/flash" class="post-tag" title="show questions tagged &#39;flash&#39;" rel="tag">flash</a> <a href="/questions/tagged/programmer" class="post-tag" title="show questions tagged &#39;programmer&#39;" rel="tag">programmer</a> <a href="/questions/tagged/eeprom" class="post-tag" title="show questions tagged &#39;eeprom&#39;" rel="tag">eeprom</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-08 18:21:13Z" class="relativetime">Dec 8 '13 at 18:21</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/9402/fuzzyhair2"><div><img src="https://www.gravatar.com/avatar/bc6c0e7b1843bd5eb5bb6eebc97884ca?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/9402/fuzzyhair2">fuzzyhair2</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">390</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="13 bronze badges"><span class="badge3"></span><span class="badgecount">13</span></span>
     </div>
 </div>
         </div>  
@@ -844,28 +962,28 @@ schematic layouts in Altium Designer 13. We decided to use a hierarchical layout
         <a href="/questions/tagged/design?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/design?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/design?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
- <span class="page-numbers dots">…</span>         <a href="/questions/tagged/design?page=18&amp;sort=newest&amp;pagesize=15" title="go to page 18"> <span class="page-numbers">18</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/design?page=19&amp;sort=newest&amp;pagesize=15" title="go to page 19"> <span class="page-numbers">19</span> </a> 
         <a href="/questions/tagged/design?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/design?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/design?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/design?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/design?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/design?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/design?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=design&amp;sort=newest" title="the 30 newest design questions"><span class="feed-icon"></span>newest design questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=design&sort=newest" title="the 30 newest design questions"><span class="feed-icon"></span>newest design questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">265</div>
+            <div class="summarycount al">279</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/design" class="post-tag" title="show questions tagged &#39;design&#39;" rel="tag">design</a> 
@@ -876,38 +994,279 @@ schematic layouts in Altium Designer 13. We decided to use a hierarchical layout
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/design+digital-logic" class="post-tag" title="show questions tagged &#39;design digital-logic&#39;" rel="tag">digital-logic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">20</span></span><br>
-            <a href="/questions/tagged/design+circuit" class="post-tag" title="show questions tagged &#39;design circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">17</span></span><br>
-            <a href="/questions/tagged/design+pcb" class="post-tag" title="show questions tagged &#39;design pcb&#39;" rel="tag">pcb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/design+microcontroller" class="post-tag" title="show questions tagged &#39;design microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span><br>
-            <a href="/questions/tagged/design+power-supply" class="post-tag" title="show questions tagged &#39;design power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span><br>
-            <a href="/questions/tagged/design+rf" class="post-tag" title="show questions tagged &#39;design rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/design+pcb-design" class="post-tag" title="show questions tagged &#39;design pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/design+led" class="post-tag" title="show questions tagged &#39;design led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/design+power" class="post-tag" title="show questions tagged &#39;design power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/design+transistors" class="post-tag" title="show questions tagged &#39;design transistors&#39;" rel="tag">transistors</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/design+integrated-circuit" class="post-tag" title="show questions tagged &#39;design integrated-circuit&#39;" rel="tag">integrated-circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/design+amplifier" class="post-tag" title="show questions tagged &#39;design amplifier&#39;" rel="tag">amplifier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/design+analog" class="post-tag" title="show questions tagged &#39;design analog&#39;" rel="tag">analog</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/design+software" class="post-tag" title="show questions tagged &#39;design software&#39;" rel="tag">software</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/design+signal" class="post-tag" title="show questions tagged &#39;design signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/design+transformer" class="post-tag" title="show questions tagged &#39;design transformer&#39;" rel="tag">transformer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/design+components" class="post-tag" title="show questions tagged &#39;design components&#39;" rel="tag">components</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/design+fpga" class="post-tag" title="show questions tagged &#39;design fpga&#39;" rel="tag">fpga</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/design+op-amp" class="post-tag" title="show questions tagged &#39;design op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/design+vhdl" class="post-tag" title="show questions tagged &#39;design vhdl&#39;" rel="tag">vhdl</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/design+schematics" class="post-tag" title="show questions tagged &#39;design schematics&#39;" rel="tag">schematics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/design+batteries" class="post-tag" title="show questions tagged &#39;design batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/design+usb" class="post-tag" title="show questions tagged &#39;design usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/design+dc-motor" class="post-tag" title="show questions tagged &#39;design dc-motor&#39;" rel="tag">dc-motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/design+bjt" class="post-tag" title="show questions tagged &#39;design bjt&#39;" rel="tag">bjt</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
+        <div>
+            <a href="/questions/tagged/design+digital-logic" class="post-tag" title="show questions tagged &#39;design digital-logic&#39;" rel="tag">digital-logic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">22</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/design+circuit" class="post-tag" title="show questions tagged &#39;design circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">18</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/design+pcb" class="post-tag" title="show questions tagged &#39;design pcb&#39;" rel="tag">pcb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/design+power-supply" class="post-tag" title="show questions tagged &#39;design power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/design+microcontroller" class="post-tag" title="show questions tagged &#39;design microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/design+pcb-design" class="post-tag" title="show questions tagged &#39;design pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/design+rf" class="post-tag" title="show questions tagged &#39;design rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/design+led" class="post-tag" title="show questions tagged &#39;design led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/design+power" class="post-tag" title="show questions tagged &#39;design power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/design+transistors" class="post-tag" title="show questions tagged &#39;design transistors&#39;" rel="tag">transistors</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+integrated-circuit" class="post-tag" title="show questions tagged &#39;design integrated-circuit&#39;" rel="tag">integrated-circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+amplifier" class="post-tag" title="show questions tagged &#39;design amplifier&#39;" rel="tag">amplifier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+analog" class="post-tag" title="show questions tagged &#39;design analog&#39;" rel="tag">analog</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+signal" class="post-tag" title="show questions tagged &#39;design signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+transformer" class="post-tag" title="show questions tagged &#39;design transformer&#39;" rel="tag">transformer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+software" class="post-tag" title="show questions tagged &#39;design software&#39;" rel="tag">software</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+fpga" class="post-tag" title="show questions tagged &#39;design fpga&#39;" rel="tag">fpga</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+components" class="post-tag" title="show questions tagged &#39;design components&#39;" rel="tag">components</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+dc-motor" class="post-tag" title="show questions tagged &#39;design dc-motor&#39;" rel="tag">dc-motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+schematics" class="post-tag" title="show questions tagged &#39;design schematics&#39;" rel="tag">schematics</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+layout" class="post-tag" title="show questions tagged &#39;design layout&#39;" rel="tag">layout</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+op-amp" class="post-tag" title="show questions tagged &#39;design op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+vhdl" class="post-tag" title="show questions tagged &#39;design vhdl&#39;" rel="tag">vhdl</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+batteries" class="post-tag" title="show questions tagged &#39;design batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/design+usb" class="post-tag" title="show questions tagged &#39;design usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -927,7 +1286,7 @@ schematic layouts in Altium Designer 13. We decided to use a hierarchical layout
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/design")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1020,7 +1379,7 @@ schematic layouts in Altium Designer 13. We decided to use a hierarchical layout
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1047,14 +1406,11 @@ schematic layouts in Altium Designer 13. We decided to use a hierarchical layout
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1063,33 +1419,34 @@ schematic layouts in Altium Designer 13. We decided to use a hierarchical layout
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|design|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|design|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

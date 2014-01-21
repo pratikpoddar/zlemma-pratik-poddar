@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged frequency" href="/feeds/tag/frequency" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186285,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327858,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffrequency" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffrequency" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[frequency]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffrequency">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2ffrequency">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[frequency]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/frequency/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/frequency?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/frequency?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/frequency?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/frequency?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/frequency?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/frequency?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/frequency?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/frequency?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/frequency?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/frequency?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,13 +257,563 @@ How many times something happens per second, measured in Hz (Hertz).            
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92446">
+<div class="question-summary" id="question-summary-96510">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="81 views">
+    81 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96510/control-loop-frequency" class="question-hyperlink">Control Loop Frequency [closed]</a></h3>
+        <div class="excerpt">
+            I haven't started tuning/setting up my controller(s) yet, but already having trouble with the control loop frequency.
+
+This code shall later control the position of a X-Y stage.
+
+The code:
+
+...
+        </div>          
+        <div class="tags t-microcontroller t-motor t-frequency t-control t-encoder">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/motor" class="post-tag" title="show questions tagged &#39;motor&#39;" rel="tag">motor</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/control" class="post-tag" title="show questions tagged &#39;control&#39;" rel="tag">control</a> <a href="/questions/tagged/encoder" class="post-tag" title="show questions tagged &#39;encoder&#39;" rel="tag">encoder</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-15 01:41:05Z" class="relativetime">Jan 15 at 1:41</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/31121/user765269"><div><img src="https://www.gravatar.com/avatar/b4362ee0647d3fce783e64105587070b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/31121/user765269">user765269</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96494">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="47 views">
+    47 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96494/how-to-make-ac-signals-level-proper-for-mcu-input" class="question-hyperlink">How to make AC signal&#39;s level proper for MCU input?</a></h3>
+        <div class="excerpt">
+            I'm working on a frequency counter coursework, where I use MSP430 MCU. I have to measure
+signals with specifications: frequency from 0.1 Hz to 1 MHz and signal's amplitude from 0.1V to 10V. The ...
+        </div>          
+        <div class="tags t-voltage-regulator t-frequency t-microchip t-msp430 t-counter">
+            <a href="/questions/tagged/voltage-regulator" class="post-tag" title="show questions tagged &#39;voltage-regulator&#39;" rel="tag">voltage-regulator</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/microchip" class="post-tag" title="show questions tagged &#39;microchip&#39;" rel="tag">microchip</a> <a href="/questions/tagged/msp430" class="post-tag" title="show questions tagged &#39;msp430&#39;" rel="tag">msp430</a> <a href="/questions/tagged/counter" class="post-tag" title="show questions tagged &#39;counter&#39;" rel="tag">counter</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-14 22:46:49Z" class="relativetime">Jan 14 at 22:46</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35551/user35551"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/100000076827649/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35551/user35551">user35551</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">18</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96302">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="272 views">
+    272 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96302/different-microcontrollers-can-communicate" class="question-hyperlink">Different microcontrollers can communicate? [closed]</a></h3>
+        <div class="excerpt">
+            Can different microcontrollers communicate with each other? Are there any small chip that can communicate with 89C5131A-UM? And how do I know what frequency does the 89C5131A-UM communicate? I have ...
+        </div>          
+        <div class="tags t-microcontroller t-frequency">
+            <a href="/questions/tagged/microcontroller" class="post-tag" title="show questions tagged &#39;microcontroller&#39;" rel="tag">microcontroller</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-13 08:38:13Z" class="relativetime">Jan 13 at 8:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34845/weixiong"><div><img src="https://www.gravatar.com/avatar/da0d1faa38a0afe9afe00d7ebdbfb8e7?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34845/weixiong">WeiXionG</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">9</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96150">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="58 views">
+    58 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96150/recording-ultrasonic-frequencies" class="question-hyperlink">Recording Ultrasonic Frequencies [closed]</a></h3>
+        <div class="excerpt">
+            I'm doing this as a hobby and I'm not an electrical engineer, simply looking for some advice or guidance to help me plan this project. 
+
+I'm planning on creating a small (DSP) board, prototype using a ...
+        </div>          
+        <div class="tags t-arduino t-audio t-frequency">
+            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/audio" class="post-tag" title="show questions tagged &#39;audio&#39;" rel="tag">audio</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-11 22:43:00Z" class="relativetime">Jan 11 at 22:43</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35408/user1326876"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/d36eef32625367a43da63a9909ba716e?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35408/user1326876">user1326876</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">106</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96057">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="52 views">
+    52 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96057/how-is-the-gain-phase-vs-frequency-measured-for-opamps" class="question-hyperlink">How is the gain/phase vs frequency measured for opamps?</a></h3>
+        <div class="excerpt">
+            Opamp manufacturers post graphs like these in datasheets:
+
+ 
+
+How is the data for this graph measured? Is it calculated using the mathematical model of an opamp?
+
+        </div>          
+        <div class="tags t-op-amp t-frequency t-gain t-phase">
+            <a href="/questions/tagged/op-amp" class="post-tag" title="show questions tagged &#39;op-amp&#39;" rel="tag">op-amp</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/gain" class="post-tag" title="show questions tagged &#39;gain&#39;" rel="tag">gain</a> <a href="/questions/tagged/phase" class="post-tag" title="show questions tagged &#39;phase&#39;" rel="tag">phase</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2014-01-10 22:05:56Z" class="relativetime">Jan 10 at 22:05</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/9079/miceuz"><div><img src="https://www.gravatar.com/avatar/ab8338e823a9799e0cb66b2141cddd9c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/9079/miceuz">miceuz</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3,056</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95988">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
                     <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="62 views">
+    62 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95988/how-accurate-is-a-ripple-counter-using-d-flip-flop-in-measuring-the-frequency" class="question-hyperlink">How accurate is a ripple counter (using D flip-flop) in measuring the frequency of a signal?</a></h3>
+        <div class="excerpt">
+            I have two oscillating signals S1 and S2 whose periods are always different by a very tiny amount (~10-50ps). Can I use a D-flip-flop ripple-counter to measure S1 and S2 individually, and then ...
+        </div>          
+        <div class="tags t-frequency t-measurement t-counter t-frequency-measurement t-ripple-counter">
+            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/measurement" class="post-tag" title="show questions tagged &#39;measurement&#39;" rel="tag">measurement</a> <a href="/questions/tagged/counter" class="post-tag" title="show questions tagged &#39;counter&#39;" rel="tag">counter</a> <a href="/questions/tagged/frequency-measurement" class="post-tag" title="show questions tagged &#39;frequency-measurement&#39;" rel="tag">frequency-measurement</a> <a href="/questions/tagged/ripple-counter" class="post-tag" title="show questions tagged &#39;ripple-counter&#39;" rel="tag">ripple-counter</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-10 06:39:51Z" class="relativetime">Jan 10 at 6:39</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/31232/abc"><div><img src="https://www.gravatar.com/avatar/3f8ef71debdae55f7fc796625f34b916?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/31232/abc">abc</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">18</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95919">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="101 views">
+    101 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95919/consistency-of-the-mains-frequency-throughout-the-uk" class="question-hyperlink">Consistency of the mains frequency throughout the UK</a></h3>
+        <div class="excerpt">
+            I'm working with a number of frequency meters which are reading the mains frequency in the UK from different locations. The problem is that I haven't been able to find information on whether there are ...
+        </div>          
+        <div class="tags t-frequency t-mains">
+            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/mains" class="post-tag" title="show questions tagged &#39;mains&#39;" rel="tag">mains</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-09 14:18:41Z" class="relativetime">Jan 9 at 14:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35308/peadar-doyle"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/ba3d103f60c5fa51c695ad84928dd0b7?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35308/peadar-doyle">Peadar Doyle</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">123</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95870">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="118 views">
+    118 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95870/rc-filter-questions" class="question-hyperlink">RC Filter Questions</a></h3>
+        <div class="excerpt">
+            I am reading about RC circuits, and I have three questions, and since they are all related to RC circuit, I posted them together.
+
+First question:
+I read that with RC circuits we tend to use Current ...
+        </div>          
+        <div class="tags t-capacitor t-frequency t-circuit-analysis">
+            <a href="/questions/tagged/capacitor" class="post-tag" title="show questions tagged &#39;capacitor&#39;" rel="tag">capacitor</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/circuit-analysis" class="post-tag" title="show questions tagged &#39;circuit-analysis&#39;" rel="tag">circuit-analysis</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-09 01:38:31Z" class="relativetime">Jan 9 at 1:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33344/rudy01"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/75fccbaced706051298cc5d79846a623?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33344/rudy01">Rudy01</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">99</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95815">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="62 views">
+    62 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95815/what-might-cause-coaxial-cable-noise" class="question-hyperlink">What might cause coaxial cable noise?</a></h3>
+        <div class="excerpt">
+            In my A level physics I recently did an experiment to find what the optimum frequency to send a digital signal through a RG58/U Coaxial Cable is. My results are available on Dropbox. What I found was ...
+        </div>          
+        <div class="tags t-noise t-frequency t-cables">
+            <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/cables" class="post-tag" title="show questions tagged &#39;cables&#39;" rel="tag">cables</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-08 15:45:15Z" class="relativetime">Jan 8 at 15:45</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35193/samw"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/5c1e4e78c50546bbfb2ef7c64c50db2b?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35193/samw">SamW</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95635">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>5</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>4</strong>answers
+            </div>
+        </div>
+        <div class="views " title="223 views">
+    223 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95635/how-exactly-are-radio-waves-produced-from-a-current-in-a-circuit-itself" class="question-hyperlink">How exactly are radio waves produced from a current in a circuit itself?</a></h3>
+        <div class="excerpt">
+            I am 17, and I am new to electronics, and I've learned everything online and expect to continue to do so with all the resources. I have dug around and can't find concise answers on this question ... 
+
+...
+        </div>          
+        <div class="tags t-current t-rf t-frequency">
+            <a href="/questions/tagged/current" class="post-tag" title="show questions tagged &#39;current&#39;" rel="tag">current</a> <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-06 20:11:00Z" class="relativetime">Jan 6 at 20:11</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35192/gloria"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/l1DH0.jpg?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35192/gloria">Gloria</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">26</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95272">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="50 views">
+    50 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95272/understanding-crystal-resonator-symbols-which-one-is-24mhz" class="question-hyperlink">Understanding crystal resonator symbols - which one is 24Mhz?</a></h3>
+        <div class="excerpt">
+            So, I'm in need of a 24MHz crystal to drive an AVR microcontroller. I've got some crystals that I've desoldered off some old, useless equipment. I've found three crystals that have '24' on their ...
+        </div>          
+        <div class="tags t-frequency t-oscillator t-measurement t-crystal t-frequency-measurement">
+            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/oscillator" class="post-tag" title="show questions tagged &#39;oscillator&#39;" rel="tag">oscillator</a> <a href="/questions/tagged/measurement" class="post-tag" title="show questions tagged &#39;measurement&#39;" rel="tag">measurement</a> <a href="/questions/tagged/crystal" class="post-tag" title="show questions tagged &#39;crystal&#39;" rel="tag">crystal</a> <a href="/questions/tagged/frequency-measurement" class="post-tag" title="show questions tagged &#39;frequency-measurement&#39;" rel="tag">frequency-measurement</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-03 05:46:28Z" class="relativetime">Jan 3 at 5:46</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35023/user905747"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/4163004923358612536c3bf15941a54e?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35023/user905747">user905747</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">13</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94965">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="78 views">
+    78 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94965/being-above-resonance" class="question-hyperlink">Being Above Resonance</a></h3>
+        <div class="excerpt">
+            What does it mean being above resonance?
+Does it mean that our frequency is more than the resonance frequency?
+In an LC circuit, why is circuit more inductive when frequency is above resonance?
+
+        </div>          
+        <div class="tags t-frequency">
+            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-30 12:19:28Z" class="relativetime">Dec 30 '13 at 12:19</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34859/user34424"><div><img src="https://www.gravatar.com/avatar/6ef8268e6d00bc97cba939f009ddced6?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34859/user34424">user34424</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">18</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94717">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -177,14 +826,14 @@ How many times something happens per second, measured in Hz (Hertz).            
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92446/signal-encoding-on-realtek-tx2-ic-part-2" class="question-hyperlink">Signal encoding on Realtek TX2 IC [part 2]</a></h3>
+        <h3><a href="/questions/94717/frequency-domain-confusion" class="question-hyperlink">Frequency domain confusion [migrated]</a></h3>
         <div class="excerpt">
-            The image below shows IC Realtek TX2 encoder (pinouts and block diagram), which is part of an RC car transmitter circuit.
+            I'm a bit confused with some details about frequency domain or studying systems with Laplace and Fourier analysis.
 
-Datasheet refers: "The frequency of pulse depends on the local oscillator ...
+Let's say we have a system with a transfer function \$H(s)\$ with no poles and ...
         </div>          
-        <div class="tags t-integrated-circuit t-signal t-frequency t-encoder">
-            <a href="/questions/tagged/integrated-circuit" class="post-tag" title="show questions tagged &#39;integrated-circuit&#39;" rel="tag">integrated-circuit</a> <a href="/questions/tagged/signal" class="post-tag" title="show questions tagged &#39;signal&#39;" rel="tag">signal</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/encoder" class="post-tag" title="show questions tagged &#39;encoder&#39;" rel="tag">encoder</a> 
+        <div class="tags t-frequency t-fourier">
+            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/fourier" class="post-tag" title="show questions tagged &#39;fourier&#39;" rel="tag">fourier</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -192,19 +841,65 @@ Datasheet refers: "The frequency of pulse depends on the local oscillator ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-02 15:44:30Z" class="relativetime">2 days ago</span>
+        asked <span title="2013-12-27 02:16:51Z" class="relativetime">Dec 27 '13 at 2:16</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/31176/dempap"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/UcAY9.jpg?s=32&g=1" alt=""></div></a>
+        <a href="/users/25255/felipe-ribas"><div><img src="https://www.gravatar.com/avatar/de1d2ccfba8655ef79d0540fa7058cec?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/31176/dempap">dempap</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">94</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <a href="/users/25255/felipe-ribas">Felipe_Ribas</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">721</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
     </div>
 </div>
         </div>  
     </div>
-</div><div class="question-summary" id="question-summary-92379">
+</div><div class="question-summary" id="question-summary-94656">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="56 views">
+    56 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94656/read-out-tachometer-from-pc-fan-when-manually-turning-the-blades-driven-shaft" class="question-hyperlink">Read out tachometer from PC fan when manually turning the blades ( driven shaft )</a></h3>
+        <div class="excerpt">
+            I have a problem. I can read out the tachometer of a PC fan and convert it to frequency with just using a simple microcontroller and labview.
+
+Does anybody here have an idea how to read out the ...
+        </div>          
+        <div class="tags t-frequency t-fan t-tachometer">
+            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/fan" class="post-tag" title="show questions tagged &#39;fan&#39;" rel="tag">fan</a> <a href="/questions/tagged/tachometer" class="post-tag" title="show questions tagged &#39;tachometer&#39;" rel="tag">tachometer</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-26 15:20:24Z" class="relativetime">Dec 26 '13 at 15:20</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34715/jemas"><div><img src="https://www.gravatar.com/avatar/e296591af4e32aad4eebaeb4fb6f1a40?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34715/jemas">jemas</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93576">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -212,201 +907,25 @@ Datasheet refers: "The frequency of pulse depends on the local oscillator ...
                 <div class="votes">
                     <span class="vote-count-post "><strong>1</strong></span>
                     <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="71 views">
-    71 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/92379/50-hz-antena-for-monitoring-mains-frequency-fluctuations" class="question-hyperlink">50 Hz antena for monitoring mains frequency fluctuations</a></h3>
-        <div class="excerpt">
-            I would like to follow fluctuations of the mains frequency (50 Hz, yes, I know they are very low) in the lab without connection to the wall socket. I suppose it should be kind of antenna (capacitive ...
-        </div>          
-        <div class="tags t-frequency t-antenna t-mains">
-            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/antenna" class="post-tag" title="show questions tagged &#39;antenna&#39;" rel="tag">antenna</a> <a href="/questions/tagged/mains" class="post-tag" title="show questions tagged &#39;mains&#39;" rel="tag">mains</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-12-01 22:01:07Z" class="relativetime">2 days ago</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33510/user33510"><div><img src="https://www.gravatar.com/avatar/b7414e21896ed9be9806c30ab08bb645?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33510/user33510">user33510</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91868">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="68 views">
-    68 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91868/is-input-impedance-of-an-opamp-independent-from-its-inputs-frequency-components" class="question-hyperlink">Is input impedance of an opamp independent from its input&#39;s frequency components?</a></h3>
-        <div class="excerpt">
-            If input impedance of an op-amp is infinite (theoretically), does frequency of an input signal have any effect on input impedance of the op-amp?
-
-        </div>          
-        <div class="tags t-op-amp t-frequency">
-            <a href="/questions/tagged/op-amp" class="post-tag" title="show questions tagged &#39;op-amp&#39;" rel="tag">op-amp</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-25 22:30:47Z" class="relativetime">Nov 25 at 22:30</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/16307/user16307"><div><img src="https://www.gravatar.com/avatar/96d98e1187016909673fa5edc6ac6e16?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/16307/user16307">user16307</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">632</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91819">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>-5</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="138 views">
-    138 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91819/why-is-mains-voltage-frequency-60hz-in-usa-and-50hz-in-europe" class="question-hyperlink">Why is mains voltage frequency 60Hz in USA and 50Hz in Europe? [closed]</a></h3>
-        <div class="excerpt">
-            And what are the consequences in traffic light intensities or flickering?
-
-        </div>          
-        <div class="tags t-frequency">
-            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-25 14:35:39Z" class="relativetime">Nov 25 at 14:35</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/16307/user16307"><div><img src="https://www.gravatar.com/avatar/96d98e1187016909673fa5edc6ac6e16?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/16307/user16307">user16307</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">632</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91780">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="54 views">
-    54 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91780/nyquist-sampling-rate-with-real-and-imaginary-aliasing" class="question-hyperlink">Nyquist sampling rate with real and imaginary aliasing</a></h3>
-        <div class="excerpt">
-            I need to calculate the Nyquist sampling rate of the function \$x(t) = cos(6t)-sin(5t)\$. By definition the Nyquist sampling rate is the minimum value of \$\omega_s\$ that yields no aliasing ...
-        </div>          
-        <div class="tags t-frequency t-sampling t-fourier">
-            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/sampling" class="post-tag" title="show questions tagged &#39;sampling&#39;" rel="tag">sampling</a> <a href="/questions/tagged/fourier" class="post-tag" title="show questions tagged &#39;fourier&#39;" rel="tag">fourier</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-25 07:05:27Z" class="relativetime">Nov 25 at 7:05</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/10450/nathpilland"><div><img src="https://www.gravatar.com/avatar/2fa478ffc401a44d2c1ad7f032dce884?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/10450/nathpilland">nathpilland</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">110</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91773">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
                 </div>
             </div>
             <div class="status answered-accepted">
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="58 views">
-    58 views
+        <div class="views " title="41 views">
+    41 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/91773/what-is-the-bandwidth-of-an-imaginary-convolution" class="question-hyperlink">What is the bandwidth of an imaginary convolution?</a></h3>
+        <h3><a href="/questions/93576/send-a-frequency-impulse-when-switch-is-active" class="question-hyperlink">Send a frequency impulse when switch is active</a></h3>
         <div class="excerpt">
-            I am trying to figure out the bandwidth of \$f_1f_2\$, where \$f_1 = sinc^2(3t)\$ and \$f_2 = sin(100t)\$. So when I take the Fourier Transform, I can rewrite the equation as such: \$F(\omega) ...
+            I'm a newbie when it comes to electronics, so please forgive any glaring mistakes!
+
+I am trying to create a simple circuit that sends an audible frequency/tone to a line-in/mic input when the mercury ...
         </div>          
-        <div class="tags t-filter t-frequency t-bandwidth t-fourier t-convolution">
-            <a href="/questions/tagged/filter" class="post-tag" title="show questions tagged &#39;filter&#39;" rel="tag">filter</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/bandwidth" class="post-tag" title="show questions tagged &#39;bandwidth&#39;" rel="tag">bandwidth</a> <a href="/questions/tagged/fourier" class="post-tag" title="show questions tagged &#39;fourier&#39;" rel="tag">fourier</a> <a href="/questions/tagged/convolution" class="post-tag" title="show questions tagged &#39;convolution&#39;" rel="tag">convolution</a> 
+        <div class="tags t-switches t-frequency">
+            <a href="/questions/tagged/switches" class="post-tag" title="show questions tagged &#39;switches&#39;" rel="tag">switches</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -414,435 +933,14 @@ Datasheet refers: "The frequency of pulse depends on the local oscillator ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-25 04:40:36Z" class="relativetime">Nov 25 at 4:40</span>
+        asked <span title="2013-12-13 09:14:49Z" class="relativetime">Dec 13 '13 at 9:14</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/10450/nathpilland"><div><img src="https://www.gravatar.com/avatar/2fa478ffc401a44d2c1ad7f032dce884?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/34087/wellso"><div><img src="https://www.gravatar.com/avatar/ee7124af31d528464058d7e5033900f6?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/10450/nathpilland">nathpilland</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">110</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91647">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="115 views">
-    115 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91647/why-the-frequency-of-single-core-cpus-has-stopped-increasing" class="question-hyperlink">Why the frequency of single-core CPUs has stopped increasing? [duplicate]</a></h3>
-        <div class="excerpt">
-            I wonder why CPU vendors stopped producing CPU with frequencies above 3.0 - 3.6 Ghz and switched to using multi-core CPUs?
-
-What was the reason behind this step? Was there a physical constraint or the ...
-        </div>          
-        <div class="tags t-frequency t-cpu t-hardware">
-            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/cpu" class="post-tag" title="show questions tagged &#39;cpu&#39;" rel="tag">cpu</a> <a href="/questions/tagged/hardware" class="post-tag" title="show questions tagged &#39;hardware&#39;" rel="tag">hardware</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-23 19:35:27Z" class="relativetime">Nov 23 at 19:35</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/30874/wolfgang-kuehne"><div><img src="https://www.gravatar.com/avatar/4b42974416c02ce44327184c17987a5d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/30874/wolfgang-kuehne">Wolfgang Kuehne</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">11</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91502">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>-2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="49 views">
-    49 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91502/know-rfid-frequency" class="question-hyperlink">Know RFID Frequency [closed]</a></h3>
-        <div class="excerpt">
-            I have an RFID tag, and I want to know its operating frequency.
-
-I have found a similar question on the Information Security StackExchange, but its answer is the Proxmark 3, $299 for the board without ...
-        </div>          
-        <div class="tags t-frequency t-rfid">
-            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/rfid" class="post-tag" title="show questions tagged &#39;rfid&#39;" rel="tag">rfid</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-22 08:33:07Z" class="relativetime">Nov 22 at 8:33</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/26272/david-bensoussan"><div><img src="https://www.gravatar.com/avatar/9ec6521c74da922c4bf21a55918fb6f6?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/26272/david-bensoussan">David Bensoussan</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">5</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-91371">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="51 views">
-    51 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/91371/describe-qualitatively-the-amount-of-current-passing-through-resistor-if-the-sou" class="question-hyperlink">Describe qualitatively the amount of current passing through resistor if the source oscillated at low frequency?</a></h3>
-        <div class="excerpt">
-            I am stuck on lab question 3. I do not know how to determine the current crossing the resistor for oscillating current at varying frequencies. 
-
-Help is greatly appreciated
-
-
-
-        </div>          
-        <div class="tags t-current t-resistors t-frequency t-high-frequency">
-            <a href="/questions/tagged/current" class="post-tag" title="show questions tagged &#39;current&#39;" rel="tag">current</a> <a href="/questions/tagged/resistors" class="post-tag" title="show questions tagged &#39;resistors&#39;" rel="tag">resistors</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/high-frequency" class="post-tag" title="show questions tagged &#39;high-frequency&#39;" rel="tag">high-frequency</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-21 00:16:41Z" class="relativetime">Nov 21 at 0:16</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/33040/nik-brkic"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/100000053176648/picture?type=large" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/33040/nik-brkic">Nik Brkic</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-90363">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="50 views">
-    50 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/90363/translate-signals-amplitude-into-frequency" class="question-hyperlink">Translate signals amplitude into frequency</a></h3>
-        <div class="excerpt">
-            I have a sinusoidal signal at 50 Hz, that varies in amplitude, with no offset. The amplitude goes from 0 to 5 V (peak to peak), and the amplitude contains all the information I need. This signal will ...
-        </div>          
-        <div class="tags t-communication t-frequency t-fm">
-            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/fm" class="post-tag" title="show questions tagged &#39;fm&#39;" rel="tag">fm</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-11 23:12:55Z" class="relativetime">Nov 11 at 23:12</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/32478/volotec"><div><img src="https://www.gravatar.com/avatar/f2b4f58ab59b37ed9b416e4a8c758317?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/32478/volotec">volotec</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87908">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="113 views">
-    113 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87908/what-defines-a-frequency-in-electronics" class="question-hyperlink">What defines a frequency in electronics?</a></h3>
-        <div class="excerpt">
-            As Hertz is defined as one cycle per second, what are the requirements of an electric wave to have a certain frequency? What I mean is more lucid in a picture.
-
-The black wave has a frequency of about ...
-        </div>          
-        <div class="tags t-voltage t-frequency t-wave t-graph">
-            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/wave" class="post-tag" title="show questions tagged &#39;wave&#39;" rel="tag">wave</a> <a href="/questions/tagged/graph" class="post-tag" title="show questions tagged &#39;graph&#39;" rel="tag">graph</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-07 22:29:02Z" class="relativetime">Nov 7 at 22:29</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/16910/vicky"><div><img src="https://www.gravatar.com/avatar/0e02492a96d329307c8ded6f28b2addd?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/16910/vicky">Vicky</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">191</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87727">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="101 views">
-    101 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87727/what-is-the-meaning-of-speed-grade-marking-on-xilinx-fpgas" class="question-hyperlink">What is the meaning of speed grade marking on Xilinx FPGAs?</a></h3>
-        <div class="excerpt">
-            According to Xilinx FPGA product datasheets, the numbers on the 5th line as 4C or 5I stand for speed grade and temperature.I have a XC3S400 with 4C speed grade (4= standard speed, 5= High ...
-        </div>          
-        <div class="tags t-fpga t-frequency t-xilinx t-spartan t-markings">
-            <a href="/questions/tagged/fpga" class="post-tag" title="show questions tagged &#39;fpga&#39;" rel="tag">fpga</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/xilinx" class="post-tag" title="show questions tagged &#39;xilinx&#39;" rel="tag">xilinx</a> <a href="/questions/tagged/spartan" class="post-tag" title="show questions tagged &#39;spartan&#39;" rel="tag">spartan</a> <a href="/questions/tagged/markings" class="post-tag" title="show questions tagged &#39;markings&#39;" rel="tag">markings</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-06 13:46:13Z" class="relativetime">Nov 6 at 13:46</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/28144/aug"><div><img src="https://www.gravatar.com/avatar/48afabfbd39ee660cdddf2038d4ad193?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/28144/aug">Aug</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">248</span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-87489">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="114 views">
-    114 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/87489/frequency-of-astable-multivibrator-built-with-inverters-not-gates" class="question-hyperlink">Frequency of astable multivibrator built with inverters (NOT gates)</a></h3>
-        <div class="excerpt">
-            I've assembled the following astable multivibrator (a.k.a. astable oscillator) circuit:
-
-
-
-It generates a square wave (as expected), but the output frequency isn't predicted well by the formulae that ...
-        </div>          
-        <div class="tags t-frequency t-oscillator t-astable">
-            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/oscillator" class="post-tag" title="show questions tagged &#39;oscillator&#39;" rel="tag">oscillator</a> <a href="/questions/tagged/astable" class="post-tag" title="show questions tagged &#39;astable&#39;" rel="tag">astable</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-11-04 17:39:35Z" class="relativetime">Nov 4 at 17:39</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/31257/reign-of-error"><div><img src="https://www.gravatar.com/avatar/cf9d9c88d12f2507a398024605419d05?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/31257/reign-of-error">Reign of Error</a><br>
+        <a href="/users/34087/wellso">Wellso</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86712">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="68 views">
-    68 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86712/frequency-of-the-rotor-current" class="question-hyperlink">Frequency of the rotor current</a></h3>
-        <div class="excerpt">
-            This is induced motor question 
-
-Let's say a three-phase induction motor is rated 50HP, 480V, 60Hz and 1150 RPM.
-
-
-developed torque
-frequency of the rotor current 
-
-
-Is developed torque mean initial ...
-        </div>          
-        <div class="tags t-frequency t-induction-motor">
-            <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> <a href="/questions/tagged/induction-motor" class="post-tag" title="show questions tagged &#39;induction-motor&#39;" rel="tag">induction-motor</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-28 04:02:37Z" class="relativetime">Oct 28 at 4:02</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/30569/kimchi"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/100006532689304/picture?type=large" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/30569/kimchi">kimchi</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86602">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="76 views">
-    76 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86602/changing-the-frequency-of-an-ac-supply" class="question-hyperlink">Changing the frequency of an AC supply</a></h3>
-        <div class="excerpt">
-            I am using an AC Power supply, and the frequency of the wall plugs is around 50hz. Is there a way to increase this frequency keeping everything the same?
-
-        </div>          
-        <div class="tags t-ac t-frequency">
-            <a href="/questions/tagged/ac" class="post-tag" title="show questions tagged &#39;ac&#39;" rel="tag">ac</a> <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-26 23:54:27Z" class="relativetime">Oct 26 at 23:54</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/27975/sherby"><div><img src="https://www.gravatar.com/avatar/ab717ad7854d11ea5f017f8e33bd0bd8?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/27975/sherby">Sherby</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">654</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
@@ -861,28 +959,28 @@ Is developed torque mean initial ...
         <a href="/questions/tagged/frequency?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/frequency?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/frequency?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
- <span class="page-numbers dots">…</span>         <a href="/questions/tagged/frequency?page=13&amp;sort=newest&amp;pagesize=15" title="go to page 13"> <span class="page-numbers">13</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/frequency?page=14&amp;sort=newest&amp;pagesize=15" title="go to page 14"> <span class="page-numbers">14</span> </a> 
         <a href="/questions/tagged/frequency?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/frequency?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/frequency?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/frequency?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/frequency?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/frequency?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/frequency?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=frequency&amp;sort=newest" title="the 30 newest frequency questions"><span class="feed-icon"></span>newest frequency questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=frequency&sort=newest" title="the 30 newest frequency questions"><span class="feed-icon"></span>newest frequency questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">191</div>
+            <div class="summarycount al">207</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/frequency" class="post-tag" title="show questions tagged &#39;frequency&#39;" rel="tag">frequency</a> 
@@ -893,38 +991,279 @@ Is developed torque mean initial ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/frequency+signal" class="post-tag" title="show questions tagged &#39;frequency signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span><br>
-            <a href="/questions/tagged/frequency+bandwidth" class="post-tag" title="show questions tagged &#39;frequency bandwidth&#39;" rel="tag">bandwidth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span><br>
-            <a href="/questions/tagged/frequency+audio" class="post-tag" title="show questions tagged &#39;frequency audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/frequency+arduino" class="post-tag" title="show questions tagged &#39;frequency arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/frequency+modulation" class="post-tag" title="show questions tagged &#39;frequency modulation&#39;" rel="tag">modulation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/frequency+clock" class="post-tag" title="show questions tagged &#39;frequency clock&#39;" rel="tag">clock</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/frequency+radio" class="post-tag" title="show questions tagged &#39;frequency radio&#39;" rel="tag">radio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/frequency+filter" class="post-tag" title="show questions tagged &#39;frequency filter&#39;" rel="tag">filter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/frequency+pwm" class="post-tag" title="show questions tagged &#39;frequency pwm&#39;" rel="tag">pwm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/frequency+capacitor" class="post-tag" title="show questions tagged &#39;frequency capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/frequency+amplifier" class="post-tag" title="show questions tagged &#39;frequency amplifier&#39;" rel="tag">amplifier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/frequency+power" class="post-tag" title="show questions tagged &#39;frequency power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/frequency+oscillator" class="post-tag" title="show questions tagged &#39;frequency oscillator&#39;" rel="tag">oscillator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/frequency+data" class="post-tag" title="show questions tagged &#39;frequency data&#39;" rel="tag">data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/frequency+pic" class="post-tag" title="show questions tagged &#39;frequency pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/frequency+circuit" class="post-tag" title="show questions tagged &#39;frequency circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/frequency+digital-logic" class="post-tag" title="show questions tagged &#39;frequency digital-logic&#39;" rel="tag">digital-logic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/frequency+ac" class="post-tag" title="show questions tagged &#39;frequency ac&#39;" rel="tag">ac</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/frequency+wave" class="post-tag" title="show questions tagged &#39;frequency wave&#39;" rel="tag">wave</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/frequency+rf" class="post-tag" title="show questions tagged &#39;frequency rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/frequency+frequency-measurement" class="post-tag" title="show questions tagged &#39;frequency frequency-measurement&#39;" rel="tag">frequency-measurement</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/frequency+switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;frequency switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/frequency+op-amp" class="post-tag" title="show questions tagged &#39;frequency op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/frequency+fm" class="post-tag" title="show questions tagged &#39;frequency fm&#39;" rel="tag">fm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/frequency+generator" class="post-tag" title="show questions tagged &#39;frequency generator&#39;" rel="tag">generator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
+        <div>
+            <a href="/questions/tagged/frequency+signal" class="post-tag" title="show questions tagged &#39;frequency signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/frequency+bandwidth" class="post-tag" title="show questions tagged &#39;frequency bandwidth&#39;" rel="tag">bandwidth</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/frequency+audio" class="post-tag" title="show questions tagged &#39;frequency audio&#39;" rel="tag">audio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/frequency+arduino" class="post-tag" title="show questions tagged &#39;frequency arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/frequency+modulation" class="post-tag" title="show questions tagged &#39;frequency modulation&#39;" rel="tag">modulation</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/frequency+capacitor" class="post-tag" title="show questions tagged &#39;frequency capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/frequency+rf" class="post-tag" title="show questions tagged &#39;frequency rf&#39;" rel="tag">rf</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/frequency+clock" class="post-tag" title="show questions tagged &#39;frequency clock&#39;" rel="tag">clock</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/frequency+oscillator" class="post-tag" title="show questions tagged &#39;frequency oscillator&#39;" rel="tag">oscillator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/frequency+frequency-measurement" class="post-tag" title="show questions tagged &#39;frequency frequency-measurement&#39;" rel="tag">frequency-measurement</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+filter" class="post-tag" title="show questions tagged &#39;frequency filter&#39;" rel="tag">filter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+pwm" class="post-tag" title="show questions tagged &#39;frequency pwm&#39;" rel="tag">pwm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+radio" class="post-tag" title="show questions tagged &#39;frequency radio&#39;" rel="tag">radio</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+power" class="post-tag" title="show questions tagged &#39;frequency power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+amplifier" class="post-tag" title="show questions tagged &#39;frequency amplifier&#39;" rel="tag">amplifier</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+digital-logic" class="post-tag" title="show questions tagged &#39;frequency digital-logic&#39;" rel="tag">digital-logic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+data" class="post-tag" title="show questions tagged &#39;frequency data&#39;" rel="tag">data</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+ac" class="post-tag" title="show questions tagged &#39;frequency ac&#39;" rel="tag">ac</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+wave" class="post-tag" title="show questions tagged &#39;frequency wave&#39;" rel="tag">wave</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+pic" class="post-tag" title="show questions tagged &#39;frequency pic&#39;" rel="tag">pic</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+circuit" class="post-tag" title="show questions tagged &#39;frequency circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+microcontroller" class="post-tag" title="show questions tagged &#39;frequency microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+op-amp" class="post-tag" title="show questions tagged &#39;frequency op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+current" class="post-tag" title="show questions tagged &#39;frequency current&#39;" rel="tag">current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/frequency+fm" class="post-tag" title="show questions tagged &#39;frequency fm&#39;" rel="tag">fm</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -944,7 +1283,7 @@ Is developed torque mean initial ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/frequency")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1037,7 +1376,7 @@ Is developed torque mean initial ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1064,14 +1403,11 @@ Is developed torque mean initial ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1080,33 +1416,34 @@ Is developed torque mean initial ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|frequency|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|frequency|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

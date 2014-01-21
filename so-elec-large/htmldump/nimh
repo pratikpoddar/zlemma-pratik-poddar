@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=b0a5a51e797c">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged nimh" href="/feeds/tag/nimh" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386190937,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328637,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fnimh" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fnimh" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[nimh]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fnimh">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fnimh">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[nimh]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/nimh/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/nimh?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/nimh?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/nimh?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/nimh?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/nimh?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/nimh?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/nimh?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/nimh?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/nimh?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/nimh?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,97 @@ A nickel–metal hydride battery (NiMH) battery is a type of rechargeable batter
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-91552">
+<div class="question-summary" id="question-summary-97006">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="100 views">
+    100 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/97006/step-up-dc-dc-converter-for-powering-raspberry-pi-from-batteries" class="question-hyperlink">Step up DC-DC converter for powering Raspberry Pi from batteries</a></h3>
+        <div class="excerpt">
+            I will power a Raspberry PI with 4 NIMH batteries, but they quickly lose charge, and end up at 3V instead of the 5V needed. I was wondering about a DC-DC step up converter. 
+
+I want a converter that ...
+        </div>          
+        <div class="tags t-batteries t-battery-charging t-raspberry-pi t-nimh">
+            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/battery-charging" class="post-tag" title="show questions tagged &#39;battery-charging&#39;" rel="tag">battery-charging</a> <a href="/questions/tagged/raspberry-pi" class="post-tag" title="show questions tagged &#39;raspberry-pi&#39;" rel="tag">raspberry-pi</a> <a href="/questions/tagged/nimh" class="post-tag" title="show questions tagged &#39;nimh&#39;" rel="tag">nimh</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-20 00:46:25Z" class="relativetime">yesterday</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35807/hamoudy"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/7d42235e351e57f0f02e1aadb0cdbfcb?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35807/hamoudy">Hamoudy</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96052">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="47 views">
+    47 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96052/electric-toothbrush-charging-time" class="question-hyperlink">Electric toothbrush charging time [closed]</a></h3>
+        <div class="excerpt">
+            I replaced my old Ni-Cd 1.2 volt sub-c battery (1500 mah) from my electric toothbrush to a new Ni-MH battery 1.2 volt sub-c (3800 mah). I looked inside the toothbrush and it look like there is no ...
+        </div>          
+        <div class="tags t-batteries t-charging t-time t-nimh">
+            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/charging" class="post-tag" title="show questions tagged &#39;charging&#39;" rel="tag">charging</a> <a href="/questions/tagged/time" class="post-tag" title="show questions tagged &#39;time&#39;" rel="tag">time</a> <a href="/questions/tagged/nimh" class="post-tag" title="show questions tagged &#39;nimh&#39;" rel="tag">nimh</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-10 21:33:13Z" class="relativetime">Jan 10 at 21:33</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35374/user35374"><div><img src="https://www.gravatar.com/avatar/26e2f45d4128fc64a765c653e48f1b9e?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35374/user35374">user35374</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95970">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +361,53 @@ A nickel–metal hydride battery (NiMH) battery is a type of rechargeable batter
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="102 views">
-    102 views
+        <div class="views " title="58 views">
+    58 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95970/how-to-use-battery-charge-controller-bq2002n" class="question-hyperlink">How to use Battery Charge controller (BQ2002N)</a></h3>
+        <div class="excerpt">
+            I am working with an Arduino which I have a 12v power supply for, but also needs to be able to run off a NiMH/NiCAD battery pack when not connected, and recharge the battery pack when it is connected.
+...
+        </div>          
+        <div class="tags t-batteries t-12v t-nimh">
+            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/12v" class="post-tag" title="show questions tagged &#39;12v&#39;" rel="tag">12v</a> <a href="/questions/tagged/nimh" class="post-tag" title="show questions tagged &#39;nimh&#39;" rel="tag">nimh</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-09 23:43:35Z" class="relativetime">Jan 9 at 23:43</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/11573/matt"><div><img src="https://www.gravatar.com/avatar/2ff1a6372fad7c35afb5a4b7e03c76c2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/11573/matt">Matt</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">76</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-91552">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="122 views">
+    122 views
 </div>
     </div>
     <div class="summary">
@@ -195,14 +429,14 @@ needs to switch to battery power and still get 12v (dc power may start/stop at a
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-22 17:57:43Z" class="relativetime">Nov 22 at 17:57</span>
+        asked <span title="2013-11-22 17:57:43Z" class="relativetime">Nov 22 '13 at 17:57</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/11573/matt"><div><img src="https://www.gravatar.com/avatar/2ff1a6372fad7c35afb5a4b7e03c76c2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/11573/matt">Matt</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">66</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">76</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -221,8 +455,8 @@ needs to switch to battery power and still get 12v (dc power may start/stop at a
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="58 views">
-    58 views
+        <div class="views " title="61 views">
+    61 views
 </div>
     </div>
     <div class="summary">
@@ -239,7 +473,7 @@ needs to switch to battery power and still get 12v (dc power may start/stop at a
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-19 15:49:19Z" class="relativetime">Jul 19 at 15:49</span>
+        asked <span title="2013-07-19 15:49:19Z" class="relativetime">Jul 19 '13 at 15:49</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26265/john-doe"><div><img src="https://www.gravatar.com/avatar/49b3c4d39c0ac35b202e1bd61d225561?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -257,7 +491,7 @@ needs to switch to battery power and still get 12v (dc power may start/stop at a
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
+                    <span class="vote-count-post "><strong>4</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -265,8 +499,8 @@ needs to switch to battery power and still get 12v (dc power may start/stop at a
                 <strong>4</strong>answers
             </div>
         </div>
-        <div class="views " title="366 views">
-    366 views
+        <div class="views " title="506 views">
+    506 views
 </div>
     </div>
     <div class="summary">
@@ -287,14 +521,14 @@ My fear is that battery would explode (right in my face) because ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-06 11:06:32Z" class="relativetime">Jul 6 at 11:06</span>
+        asked <span title="2013-07-06 11:06:32Z" class="relativetime">Jul 6 '13 at 11:06</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/9865/tigrou"><div><img src="https://www.gravatar.com/avatar/93fa537cb535181c440f752815a244d8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/9865/tigrou">tigrou</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">203</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">213</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -313,8 +547,8 @@ My fear is that battery would explode (right in my face) because ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="143 views">
-    143 views
+        <div class="views " title="155 views">
+    155 views
 </div>
     </div>
     <div class="summary">
@@ -337,7 +571,7 @@ Charging Supply: 5V (USB Power Adapter / Wall Wart)
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-07-05 15:29:18Z" class="relativetime">Jul 5 at 15:29</span>
+        asked <span title="2013-07-05 15:29:18Z" class="relativetime">Jul 5 '13 at 15:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/26055/gabenix"><div><img src="https://www.gravatar.com/avatar/ab2a233ab45a817712997bebb61431f2?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -355,16 +589,16 @@ Charging Supply: 5V (USB Power Adapter / Wall Wart)
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
                 </div>
             </div>
             <div class="status answered">
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="310 views">
-    310 views
+        <div class="views " title="367 views">
+    367 views
 </div>
     </div>
     <div class="summary">
@@ -383,14 +617,14 @@ I'm hoping there are maybe single chip, or ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-06-06 21:22:48Z" class="relativetime">Jun 6 at 21:22</span>
+        asked <span title="2013-06-06 21:22:48Z" class="relativetime">Jun 6 '13 at 21:22</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/24866/user2012685"><div><img src="https://www.gravatar.com/avatar/f187c86bdbbb23c696b1ea2974e4fcbb?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/24866/user2012685">user2012685</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
     </div>
 </div>
         </div>  
@@ -401,7 +635,7 @@ I'm hoping there are maybe single chip, or ...
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
+                    <span class="vote-count-post "><strong>4</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
@@ -409,7 +643,7 @@ I'm hoping there are maybe single chip, or ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views warm" title="1,011 views">
+        <div class="views warm" title="1,358 views">
     1k views
 </div>
     </div>
@@ -427,14 +661,14 @@ I'm hoping there are maybe single chip, or ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-18 01:49:20Z" class="relativetime">May 18 at 1:49</span>
+        asked <span title="2013-05-18 01:49:20Z" class="relativetime">May 18 '13 at 1:49</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/23964/adam-dally"><div><img src="https://www.gravatar.com/avatar/591cb5d6cf43f9374f662545b18032cd?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/23964/adam-dally">Adam Dally</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">41</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">46</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -453,8 +687,8 @@ I'm hoping there are maybe single chip, or ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="90 views">
-    90 views
+        <div class="views " title="93 views">
+    93 views
 </div>
     </div>
     <div class="summary">
@@ -473,7 +707,7 @@ The board which is powered by AA batteries is : ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-09 01:24:13Z" class="relativetime">May 9 at 1:24</span>
+        asked <span title="2013-05-09 01:24:13Z" class="relativetime">May 9 '13 at 1:24</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/19717/sandesh"><div><img src="https://www.gravatar.com/avatar/43951052af208b92495a5d13dc6b4e75?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -499,8 +733,8 @@ The board which is powered by AA batteries is : ...
                 <strong>0</strong>answers
             </div>
         </div>
-        <div class="views " title="62 views">
-    62 views
+        <div class="views " title="68 views">
+    68 views
 </div>
     </div>
     <div class="summary">
@@ -517,7 +751,7 @@ The board which is powered by AA batteries is : ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-05-01 21:23:20Z" class="relativetime">May 1 at 21:23</span>
+        asked <span title="2013-05-01 21:23:20Z" class="relativetime">May 1 '13 at 21:23</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/11079/felice-pollano"><div><img src="https://www.gravatar.com/avatar/bf8ff77ca000b80a2b19d07dbb257645?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -543,8 +777,8 @@ The board which is powered by AA batteries is : ...
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="368 views">
-    368 views
+        <div class="views " title="402 views">
+    402 views
 </div>
     </div>
     <div class="summary">
@@ -561,14 +795,14 @@ The board which is powered by AA batteries is : ...
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-04-25 17:19:26Z" class="relativetime">Apr 25 at 17:19</span>
+        asked <span title="2013-04-25 17:19:26Z" class="relativetime">Apr 25 '13 at 17:19</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/2473/chris-laplante"><div><img src="https://www.gravatar.com/avatar/1ea77ac140410a95304e234165e40b05?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/2473/chris-laplante">Chris Laplante</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,337</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,362</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span><span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span>
     </div>
 </div>
         </div>  
@@ -587,8 +821,8 @@ The board which is powered by AA batteries is : ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="130 views">
-    130 views
+        <div class="views " title="139 views">
+    139 views
 </div>
     </div>
     <div class="summary">
@@ -605,7 +839,7 @@ The board which is powered by AA batteries is : ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-04-07 07:21:43Z" class="relativetime">Apr 7 at 7:21</span>
+        asked <span title="2013-04-07 07:21:43Z" class="relativetime">Apr 7 '13 at 7:21</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5728/thevikas"><div><img src="https://www.gravatar.com/avatar/0ee9e73378cc090755664dffb2ea70f8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -627,12 +861,12 @@ The board which is powered by AA batteries is : ...
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status answered">
+            <div class="status answered-accepted">
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="354 views">
-    354 views
+        <div class="views " title="413 views">
+    413 views
 </div>
     </div>
     <div class="summary">
@@ -652,14 +886,14 @@ I have the Fisher Price Shake n Go Xtreme car and track set.  The cars are probl
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-02-24 18:13:46Z" class="relativetime">Feb 24 at 18:13</span>
+        asked <span title="2013-02-24 18:13:46Z" class="relativetime">Feb 24 '13 at 18:13</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/19391/russellw"><div><img src="https://www.gravatar.com/avatar/39080fa17e758580eb4512aaa9a0d707?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/19391/russellw">RussellW</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">134</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">136</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -678,8 +912,8 @@ I have the Fisher Price Shake n Go Xtreme car and track set.  The cars are probl
                 <strong>5</strong>answers
             </div>
         </div>
-        <div class="views " title="174 views">
-    174 views
+        <div class="views " title="181 views">
+    181 views
 </div>
     </div>
     <div class="summary">
@@ -696,152 +930,14 @@ I have the Fisher Price Shake n Go Xtreme car and track set.  The cars are probl
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-02-16 01:44:27Z" class="relativetime">Feb 16 at 1:44</span>
+        asked <span title="2013-02-16 01:44:27Z" class="relativetime">Feb 16 '13 at 1:44</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/10917/capcom"><div><img src="https://www.gravatar.com/avatar/58d05eb69cac20e71812183ef43f921c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/10917/capcom">capcom</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,633</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="28 bronze badges"><span class="badge3"></span><span class="badgecount">28</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-57033">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>-3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="208 views">
-    208 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/57033/how-high-charging-temperature-causes-damage-to-aa-size-nimh-cell" class="question-hyperlink">How high charging temperature causes damage to AA size NiMH cell</a></h3>
-        <div class="excerpt">
-            I used a portable thermometer and put on top of a battery charger. I notice that the temperature reach 39 degree Celsius and I can feel the warmth when I put my hand on top of the charger &amp; the ...
-        </div>          
-        <div class="tags t-batteries t-battery-charging t-temperature t-charger t-nimh">
-            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/battery-charging" class="post-tag" title="show questions tagged &#39;battery-charging&#39;" rel="tag">battery-charging</a> <a href="/questions/tagged/temperature" class="post-tag" title="show questions tagged &#39;temperature&#39;" rel="tag">temperature</a> <a href="/questions/tagged/charger" class="post-tag" title="show questions tagged &#39;charger&#39;" rel="tag">charger</a> <a href="/questions/tagged/nimh" class="post-tag" title="show questions tagged &#39;nimh&#39;" rel="tag">nimh</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-02-04 09:25:39Z" class="relativetime">Feb 4 at 9:25</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/9584/jack"><div><img src="https://www.gravatar.com/avatar/69d2d42a80980b5b2730caf6b93ff23f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/9584/jack">Jack</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-56715">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="219 views">
-    219 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/56715/how-fast-may-i-trickle-charge-a-full-lsd-nimh-battery" class="question-hyperlink">How fast may I trickle charge a full LSD NiMH battery?</a></h3>
-        <div class="excerpt">
-            I've bought two packages of low-self-discharge nickel-metal hydride AA batteries, each made by a different well-known battery manufacturer.
-
-Sadly, the datasheets aren't very detailed:
-
-• One ...
-        </div>          
-        <div class="tags t-batteries t-battery-charging t-battery-chemistry t-nimh">
-            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/battery-charging" class="post-tag" title="show questions tagged &#39;battery-charging&#39;" rel="tag">battery-charging</a> <a href="/questions/tagged/battery-chemistry" class="post-tag" title="show questions tagged &#39;battery-chemistry&#39;" rel="tag">battery-chemistry</a> <a href="/questions/tagged/nimh" class="post-tag" title="show questions tagged &#39;nimh&#39;" rel="tag">nimh</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-01-31 20:47:03Z" class="relativetime">Jan 31 at 20:47</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/8682/unforgettableid"><div><img src="https://www.gravatar.com/avatar/5573eae48e1d1f344e1f63cd9f9b14df?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/8682/unforgettableid">unforgettableid</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">160</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-56411">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="118 views">
-    118 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/56411/lsd-nimh-cells-that-provide-reasonable-capacity-even-in-subfreezing-temperatures" class="question-hyperlink">LSD NiMH cells that provide reasonable capacity even in subfreezing temperatures</a></h3>
-        <div class="excerpt">
-            Sanyo claims that 2000 mAh Eneloop LSD AA NiMH batteries provide about 1400 mAh at -10 °C (-15 °F).
-
-I wonder if only Eneloops provide reasonable capacity in the cold, or if the competition does too. ...
-        </div>          
-        <div class="tags t-batteries t-temperature t-discharge t-capacity t-nimh">
-            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/temperature" class="post-tag" title="show questions tagged &#39;temperature&#39;" rel="tag">temperature</a> <a href="/questions/tagged/discharge" class="post-tag" title="show questions tagged &#39;discharge&#39;" rel="tag">discharge</a> <a href="/questions/tagged/capacity" class="post-tag" title="show questions tagged &#39;capacity&#39;" rel="tag">capacity</a> <a href="/questions/tagged/nimh" class="post-tag" title="show questions tagged &#39;nimh&#39;" rel="tag">nimh</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-01-29 07:37:08Z" class="relativetime">Jan 29 at 7:37</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/8682/unforgettableid"><div><img src="https://www.gravatar.com/avatar/5573eae48e1d1f344e1f63cd9f9b14df?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/8682/unforgettableid">unforgettableid</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">160</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,668</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="30 bronze badges"><span class="badge3"></span><span class="badgecount">30</span></span>
     </div>
 </div>
         </div>  
@@ -862,75 +958,305 @@ I wonder if only Eneloops provide reasonable capacity in the cold, or if the com
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/nimh?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/nimh?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/nimh?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/nimh?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/nimh?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/nimh?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=nimh&amp;sort=newest" title="the 30 newest nimh questions"><span class="feed-icon"></span>newest nimh questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=nimh&sort=newest" title="the 30 newest nimh questions"><span class="feed-icon"></span>newest nimh questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">17</div>
+            <div class="summarycount al">20</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/nimh" class="post-tag" title="show questions tagged &#39;nimh&#39;" rel="tag">nimh</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/nimh/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-
-            <div class="spacer">
-                <div class="bulletin-item-type"><a href="http://blog.stackoverflow.com" class="event-date" target="_blank">blog</a></div>
-                <div class="bulletin-item-content">
-                    <a href="http://blog.stackoverflow.com/2013/12/a-new-top-bar-for-stack-exchange/" class="question-hyperlink" target="_blank">A New Top Bar for Stack Exchange</a>
-                </div>
-                <br class="cbt" />
-            </div>
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/nimh+batteries" class="post-tag" title="show questions tagged &#39;nimh batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/nimh+battery-charging" class="post-tag" title="show questions tagged &#39;nimh battery-charging&#39;" rel="tag">battery-charging</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/nimh+charger" class="post-tag" title="show questions tagged &#39;nimh charger&#39;" rel="tag">charger</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/nimh+lipo" class="post-tag" title="show questions tagged &#39;nimh lipo&#39;" rel="tag">lipo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/nimh+discharge" class="post-tag" title="show questions tagged &#39;nimh discharge&#39;" rel="tag">discharge</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/nimh+temperature" class="post-tag" title="show questions tagged &#39;nimh temperature&#39;" rel="tag">temperature</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/nimh+capacity" class="post-tag" title="show questions tagged &#39;nimh capacity&#39;" rel="tag">capacity</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+battery-chemistry" class="post-tag" title="show questions tagged &#39;nimh battery-chemistry&#39;" rel="tag">battery-chemistry</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+servo" class="post-tag" title="show questions tagged &#39;nimh servo&#39;" rel="tag">servo</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+atmega" class="post-tag" title="show questions tagged &#39;nimh atmega&#39;" rel="tag">atmega</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+lithium-poly" class="post-tag" title="show questions tagged &#39;nimh lithium-poly&#39;" rel="tag">lithium-poly</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+mobile" class="post-tag" title="show questions tagged &#39;nimh mobile&#39;" rel="tag">mobile</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+android" class="post-tag" title="show questions tagged &#39;nimh android&#39;" rel="tag">android</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+lithium" class="post-tag" title="show questions tagged &#39;nimh lithium&#39;" rel="tag">lithium</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+arduino" class="post-tag" title="show questions tagged &#39;nimh arduino&#39;" rel="tag">arduino</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+circuit" class="post-tag" title="show questions tagged &#39;nimh circuit&#39;" rel="tag">circuit</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+power-supply" class="post-tag" title="show questions tagged &#39;nimh power-supply&#39;" rel="tag">power-supply</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+safety" class="post-tag" title="show questions tagged &#39;nimh safety&#39;" rel="tag">safety</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+soldering" class="post-tag" title="show questions tagged &#39;nimh soldering&#39;" rel="tag">soldering</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+energy-harvesting" class="post-tag" title="show questions tagged &#39;nimh energy-harvesting&#39;" rel="tag">energy-harvesting</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+12v" class="post-tag" title="show questions tagged &#39;nimh 12v&#39;" rel="tag">12v</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+dc" class="post-tag" title="show questions tagged &#39;nimh dc&#39;" rel="tag">dc</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+battery-operated" class="post-tag" title="show questions tagged &#39;nimh battery-operated&#39;" rel="tag">battery-operated</a>&nbsp;<br>
-            <a href="/questions/tagged/nimh+low-battery" class="post-tag" title="show questions tagged &#39;nimh low-battery&#39;" rel="tag">low-battery</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/nimh+batteries" class="post-tag" title="show questions tagged &#39;nimh batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/nimh+battery-charging" class="post-tag" title="show questions tagged &#39;nimh battery-charging&#39;" rel="tag">battery-charging</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/nimh+charger" class="post-tag" title="show questions tagged &#39;nimh charger&#39;" rel="tag">charger</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/nimh+lipo" class="post-tag" title="show questions tagged &#39;nimh lipo&#39;" rel="tag">lipo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/nimh+discharge" class="post-tag" title="show questions tagged &#39;nimh discharge&#39;" rel="tag">discharge</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/nimh+12v" class="post-tag" title="show questions tagged &#39;nimh 12v&#39;" rel="tag">12v</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/nimh+temperature" class="post-tag" title="show questions tagged &#39;nimh temperature&#39;" rel="tag">temperature</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/nimh+capacity" class="post-tag" title="show questions tagged &#39;nimh capacity&#39;" rel="tag">capacity</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/nimh+battery-chemistry" class="post-tag" title="show questions tagged &#39;nimh battery-chemistry&#39;" rel="tag">battery-chemistry</a>&nbsp;
+        </div>
+        <div>
+            <a href="/questions/tagged/nimh+servo" class="post-tag" title="show questions tagged &#39;nimh servo&#39;" rel="tag">servo</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+atmega" class="post-tag" title="show questions tagged &#39;nimh atmega&#39;" rel="tag">atmega</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+lithium-poly" class="post-tag" title="show questions tagged &#39;nimh lithium-poly&#39;" rel="tag">lithium-poly</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+mobile" class="post-tag" title="show questions tagged &#39;nimh mobile&#39;" rel="tag">mobile</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+android" class="post-tag" title="show questions tagged &#39;nimh android&#39;" rel="tag">android</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+arduino" class="post-tag" title="show questions tagged &#39;nimh arduino&#39;" rel="tag">arduino</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+battery-operated" class="post-tag" title="show questions tagged &#39;nimh battery-operated&#39;" rel="tag">battery-operated</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+circuit" class="post-tag" title="show questions tagged &#39;nimh circuit&#39;" rel="tag">circuit</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+power-supply" class="post-tag" title="show questions tagged &#39;nimh power-supply&#39;" rel="tag">power-supply</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+safety" class="post-tag" title="show questions tagged &#39;nimh safety&#39;" rel="tag">safety</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+soldering" class="post-tag" title="show questions tagged &#39;nimh soldering&#39;" rel="tag">soldering</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+energy-harvesting" class="post-tag" title="show questions tagged &#39;nimh energy-harvesting&#39;" rel="tag">energy-harvesting</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+dc" class="post-tag" title="show questions tagged &#39;nimh dc&#39;" rel="tag">dc</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+time" class="post-tag" title="show questions tagged &#39;nimh time&#39;" rel="tag">time</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+charging" class="post-tag" title="show questions tagged &#39;nimh charging&#39;" rel="tag">charging</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/nimh+raspberry-pi" class="post-tag" title="show questions tagged &#39;nimh raspberry-pi&#39;" rel="tag">raspberry-pi</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -950,7 +1276,7 @@ I wonder if only Eneloops provide reasonable capacity in the cold, or if the com
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/nimh")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1043,7 +1369,7 @@ I wonder if only Eneloops provide reasonable capacity in the cold, or if the com
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1070,14 +1396,11 @@ I wonder if only Eneloops provide reasonable capacity in the cold, or if the com
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1197
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1086,33 +1409,34 @@ I wonder if only Eneloops provide reasonable capacity in the cold, or if the com
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|nimh|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|nimh|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged light" href="/feeds/tag/light" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186747,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328069,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2flight" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2flight" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[light]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2flight">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2flight">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[light]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/light/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/light?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/light?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/light?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/light?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/light?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/light?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/light?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/light?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/light?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/light?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,509 @@ Light is a tag about anything generates photons in the visible spectrum         
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-91914">
+<div class="question-summary" id="question-summary-96868">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="36 views">
+    36 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96868/very-simple-10w-smd-shed-light-problem" class="question-hyperlink">Very simple 10w smd shed light problem [on hold]</a></h3>
+        <div class="excerpt">
+            Forgive my lack of knowledge my background is in computing but I have only started to research electronic circuits and decided to make a shed light. Heres what I have. A 12v golf cart battery which is ...
+        </div>          
+        <div class="tags t-batteries t-light t-12v">
+            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/12v" class="post-tag" title="show questions tagged &#39;12v&#39;" rel="tag">12v</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-18 18:50:15Z" class="relativetime">2 days ago</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35751/user35751"><div><img src="https://www.gravatar.com/avatar/07d1e25747009e6318e0d0823a591d55?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35751/user35751">user35751</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96589">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="28 views">
+    28 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96589/what-issues-are-there-in-designing-a-led-lighting-system-to-replace-halogen-g4-l" class="question-hyperlink">What issues are there in designing a LED lighting system to replace Halogen G4 lighting</a></h3>
+        <div class="excerpt">
+            I wish to design a lighting system using electronics and LEDs as required to replace existing G4 Halogen lamps in order to increase available light levels in the available space.
+
+Situatiuon: Kitchen ...
+        </div>          
+        <div class="tags t-light t-led-strip">
+            <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/led-strip" class="post-tag" title="show questions tagged &#39;led-strip&#39;" rel="tag">led-strip</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2014-01-15 22:42:15Z" class="relativetime">Jan 15 at 22:42</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/3288/russell-mcmahon"><div><img src="https://www.gravatar.com/avatar/e5c218c8db73eff4f8bb148cab6121f8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/3288/russell-mcmahon">Russell McMahon</a><br>
+        <span class="reputation-score" title="reputation score 63779" dir="ltr">63.8k</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="45 silver badges"><span class="badge2"></span><span class="badgecount">45</span></span><span title="118 bronze badges"><span class="badge3"></span><span class="badgecount">118</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96476">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-1</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="60 views">
+    60 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96476/looking-for-replacement-led" class="question-hyperlink">Looking for replacement LED [closed]</a></h3>
+        <div class="excerpt">
+            I'm looking for someone who can tell me what kind of LED this is
+
+
+(The barcode is: 5541475)
+
+It's the blue LED from this projector: Acer K135
+
+I'm trying to modify the beamer and replace the LED with ...
+        </div>          
+        <div class="tags t-led t-light t-hardware">
+            <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/hardware" class="post-tag" title="show questions tagged &#39;hardware&#39;" rel="tag">hardware</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-14 19:47:07Z" class="relativetime">Jan 14 at 19:47</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35578/daniel"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/68ab3f565819bfc57e45309b0763c225?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35578/daniel">Daniel</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">101</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96263">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>-1</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="16 views">
+    16 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96263/rh30wc60g-halogen-lights-issue" class="question-hyperlink">RH30WC60G Halogen Lights Issue [closed]</a></h3>
+        <div class="excerpt">
+            5 years ago I bought the range hood listed below and ever since I've owned it, it has constantly burned out halogen lights.  These lights usually last anywhere from a week to 5 weeks.  It is very ...
+        </div>          
+        <div class="tags t-transformer t-light t-short-circuit t-appliances">
+            <a href="/questions/tagged/transformer" class="post-tag" title="show questions tagged &#39;transformer&#39;" rel="tag">transformer</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/short-circuit" class="post-tag" title="show questions tagged &#39;short-circuit&#39;" rel="tag">short-circuit</a> <a href="/questions/tagged/appliances" class="post-tag" title="show questions tagged &#39;appliances&#39;" rel="tag">appliances</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-12 23:37:57Z" class="relativetime">Jan 12 at 23:37</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/17972/kyle-rogers"><div><img src="https://www.gravatar.com/avatar/1a77dffcb298f0420b7e83bf17076e71?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/17972/kyle-rogers">Kyle Rogers</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">107</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95673">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>3</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="71 views">
+    71 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95673/preamplifier-that-responds-to-10-khz" class="question-hyperlink">Preamplifier that responds to 10 kHz [closed]</a></h3>
+        <div class="excerpt">
+            I am having a problem of designing pre-amplifier that responds to light pulses of 10 kHz. I have designed the one below but I don't understand the scenario in which the output voltage builds up to a ...
+        </div>          
+        <div class="tags t-light">
+            <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-07 05:04:41Z" class="relativetime">Jan 7 at 5:04</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34347/francis-ignas"><div class="gravatar-wrapper-32"><img src="http://graph.facebook.com/100001909565187/picture?type=large" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34347/francis-ignas">Francis Ignas</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94727">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="58 views">
+    58 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94727/gpio-and-light-interrupter" class="question-hyperlink">GPIO and light interrupter</a></h3>
+        <div class="excerpt">
+            I have a GPIO board on hand like this:
+
+
+
+I am a beginner to GPIO board and wish to seek some suggestions.
+I would like to connect a light interrupter / photointerrupter to one of the four inputs, but ...
+        </div>          
+        <div class="tags t-light t-gpio">
+            <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/gpio" class="post-tag" title="show questions tagged &#39;gpio&#39;" rel="tag">gpio</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-27 06:48:35Z" class="relativetime">Dec 27 '13 at 6:48</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34743/tommy-chan"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/18bfbfbf0f237aebafcabec5c523458f?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34743/tommy-chan">Tommy Chan</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94107">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="80 views">
+    80 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94107/moc3010-bt136-with-arduino-as-trigger-to-power-ac-light" class="question-hyperlink">MOC3010 &amp; BT136 with Arduino as trigger to power AC light</a></h3>
+        <div class="excerpt">
+            I've spend days debugging this circuit and have exhausted all possible solutions.  I'm trying to use an Arduino PWM pin to light a 120V AC lightbulb.  In order to do this I'm using a MOC3010 ...
+        </div>          
+        <div class="tags t-arduino t-opto-isolator t-light t-triac">
+            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/opto-isolator" class="post-tag" title="show questions tagged &#39;opto-isolator&#39;" rel="tag">opto-isolator</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/triac" class="post-tag" title="show questions tagged &#39;triac&#39;" rel="tag">triac</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-19 04:39:56Z" class="relativetime">Dec 19 '13 at 4:39</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34365/user34365"><div><img src="https://www.gravatar.com/avatar/6cf736b941da98f155d2a98408dbaf89?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34365/user34365">user34365</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93647">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="69 views">
+    69 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93647/convert-plugin-christmas-decoration-to-a-battery-operated-light" class="question-hyperlink">Convert Plugin Christmas decoration to a battery operated light</a></h3>
+        <div class="excerpt">
+            I have an old ceramic Christmas tree that I would like to convert to a battery powered source in order to get rid of the cord. 
+
+Ideally I'd love to add a timer to it as well. 
+
+I'm not sure what ...
+        </div>          
+        <div class="tags t-light t-battery-operated">
+            <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/battery-operated" class="post-tag" title="show questions tagged &#39;battery-operated&#39;" rel="tag">battery-operated</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-14 00:29:04Z" class="relativetime">Dec 14 '13 at 0:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34103/christina-rule"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/e4e95493d9847cc1592c75a12069164f?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34103/christina-rule">Christina Rule</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93614">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="70 views">
+    70 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93614/have-pins-light-up-after-pushing-a-button-switch" class="question-hyperlink">Have Pins light up after pushing a button/switch</a></h3>
+        <div class="excerpt">
+            I'm trying to create a "Push Pin" map for a friend as a gift. My friend has traveled through out the world and I'd like to organize the pins by year. So a different color pin for each year he has ...
+        </div>          
+        <div class="tags t-light">
+            <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-13 17:08:42Z" class="relativetime">Dec 13 '13 at 17:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34103/christina-rule"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/e4e95493d9847cc1592c75a12069164f?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34103/christina-rule">Christina Rule</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93602">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="122 views">
+    122 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93602/how-to-receive-faint-am-light" class="question-hyperlink">How to receive faint AM light</a></h3>
+        <div class="excerpt">
+            I am going to be amplitude modulating a high power LED light from a peak on a mountain. I want to recieve this faint light as far as physically possible before the light fades out too much to recieve. ...
+        </div>          
+        <div class="tags t-wireless t-light t-am">
+            <a href="/questions/tagged/wireless" class="post-tag" title="show questions tagged &#39;wireless&#39;" rel="tag">wireless</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/am" class="post-tag" title="show questions tagged &#39;am&#39;" rel="tag">am</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2013-12-13 15:34:21Z" class="relativetime">Dec 13 '13 at 15:34</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/10190/skyler"><div><img src="https://www.gravatar.com/avatar/6d8ec629e69040e77c0638218cf72d95?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/10190/skyler">skyler</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">2,783</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92884">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="74 views">
+    74 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/92884/improvized-small-aquarium-lighting" class="question-hyperlink">Improvized small aquarium lighting</a></h3>
+        <div class="excerpt">
+            I have a small aquarium that has been illuminated so far by a 15W fluorescent lamp. The problem is that the ballast has broken (melted) after 2 years of use, and the only replacements I could find on ...
+        </div>          
+        <div class="tags t-led t-light t-fluorescent-lamp t-electronic-ballast t-compact-fluorescent-lamp">
+            <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/fluorescent-lamp" class="post-tag" title="show questions tagged &#39;fluorescent-lamp&#39;" rel="tag">fluorescent-lamp</a> <a href="/questions/tagged/electronic-ballast" class="post-tag" title="show questions tagged &#39;electronic-ballast&#39;" rel="tag">electronic-ballast</a> <a href="/questions/tagged/compact-fluorescent-lamp" class="post-tag" title="show questions tagged &#39;compact-fluorescent-lamp&#39;" rel="tag">compact-fluorescent-lamp</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-06 15:08:05Z" class="relativetime">Dec 6 '13 at 15:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33758/alexandermp"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/af6719cd193d806a2994c8057c48fe0a?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33758/alexandermp">AlexanderMP</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">111</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-91914">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +773,8 @@ Light is a tag about anything generates photons in the visible spectrum         
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="128 views">
-    128 views
+        <div class="views " title="299 views">
+    299 views
 </div>
     </div>
     <div class="summary">
@@ -198,7 +799,7 @@ simulate this circuit &ndash; Schematic ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-26 12:57:46Z" class="relativetime">Nov 26 at 12:57</span>
+        asked <span title="2013-11-26 12:57:46Z" class="relativetime">Nov 26 '13 at 12:57</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/11080/tester101"><div><img src="https://www.gravatar.com/avatar/0038a597da931baa88ec1dcbdc504a87?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -224,8 +825,8 @@ simulate this circuit &ndash; Schematic ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="140 views">
-    140 views
+        <div class="views " title="155 views">
+    155 views
 </div>
     </div>
     <div class="summary">
@@ -244,14 +845,14 @@ How to protect data lines ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-20 16:34:32Z" class="relativetime">Nov 20 at 16:34</span>
+        asked <span title="2013-11-20 16:34:32Z" class="relativetime">Nov 20 '13 at 16:34</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/23910/new-bie"><div><img src="https://www.gravatar.com/avatar/6a618ecbe4eebfd3ce5b81189f66c676?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/23910/new-bie">new bie</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">167</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">169</span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
     </div>
 </div>
         </div>  
@@ -270,8 +871,8 @@ How to protect data lines ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="59 views">
-    59 views
+        <div class="views " title="106 views">
+    106 views
 </div>
     </div>
     <div class="summary">
@@ -292,7 +893,7 @@ My idea is to send a packet via ethernet that ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-01 18:04:01Z" class="relativetime">Nov 1 at 18:04</span>
+        asked <span title="2013-11-01 18:04:01Z" class="relativetime">Nov 1 '13 at 18:04</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/31162/jorge"><div><img src="https://www.gravatar.com/avatar/f98526aa898553a64cc6bfb6c0815f4b?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -318,8 +919,8 @@ My idea is to send a packet via ethernet that ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="109 views">
-    109 views
+        <div class="views " title="139 views">
+    139 views
 </div>
     </div>
     <div class="summary">
@@ -338,7 +939,7 @@ I'm planning to use a transistor that will ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-21 03:35:44Z" class="relativetime">Oct 21 at 3:35</span>
+        asked <span title="2013-10-21 03:35:44Z" class="relativetime">Oct 21 '13 at 3:35</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/30709/user1952398"><div><img src="https://www.gravatar.com/avatar/f54108a71dbf31288f591e7ebf984204?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -346,502 +947,6 @@ I'm planning to use a transistor that will ...
     <div class="user-details">
         <a href="/users/30709/user1952398">user1952398</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-85662">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="98 views">
-    98 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/85662/waterproof-power-connections" class="question-hyperlink">Waterproof power connections</a></h3>
-        <div class="excerpt">
-            I need light up about 960 square feet of translucent flooring from below. It's an outdoor installation, so it needs to be waterproof.
-
-Further, it has to be done in a matter of just a few weeks, and, ...
-        </div>          
-        <div class="tags t-power t-connector t-light t-waterproof t-ip67">
-            <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/connector" class="post-tag" title="show questions tagged &#39;connector&#39;" rel="tag">connector</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/waterproof" class="post-tag" title="show questions tagged &#39;waterproof&#39;" rel="tag">waterproof</a> <a href="/questions/tagged/ip67" class="post-tag" title="show questions tagged &#39;ip67&#39;" rel="tag">ip67</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-10-17 00:59:06Z" class="relativetime">Oct 17 at 0:59</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/161/adam-davis"><div><img src="https://www.gravatar.com/avatar/51301603f62b97a6fecdeeb3a5d41eca?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/161/adam-davis">Adam Davis</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">7,517</span><span title="19 silver badges"><span class="badge2"></span><span class="badgecount">19</span></span><span title="39 bronze badges"><span class="badge3"></span><span class="badgecount">39</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84834">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>14</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="531 views">
-    531 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84834/how-does-a-fire-detector-distinguishes-between-smoke-particles-and-others" class="question-hyperlink">How does a fire detector distinguishes between smoke particles and others?</a></h3>
-        <div class="excerpt">
-            Many fire detectors are optic so that when smoke comes in the fire detector, it causes the light from LED reflect to the photodiode. 
-
-But the question is why don't they alarm when somebody takes a ...
-        </div>          
-        <div class="tags t-sensor t-light">
-            <a href="/questions/tagged/sensor" class="post-tag" title="show questions tagged &#39;sensor&#39;" rel="tag">sensor</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-09 08:55:36Z" class="relativetime">Oct 9 at 8:55</span>
-    </div>
-    <div class="user-gravatar32">
-        <span class="anonymous-gravatar"></span>
-    </div>
-    <div class="user-details">
-        user24478<br>
-        
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84264">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="221 views">
-    221 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84264/how-is-digital-information-encoded-decoded-in-light-or-radio-waves" class="question-hyperlink">How is digital information encoded/decoded in light or radio waves?</a></h3>
-        <div class="excerpt">
-            I know exactly how DAC and ADC works; that's not my concern.
-
-What I am asking is how the constituent state of matter (and the "states" represented by them) in a circuit can be transferred to a set of ...
-        </div>          
-        <div class="tags t-communication t-light t-modulation t-demodulation">
-            <a href="/questions/tagged/communication" class="post-tag" title="show questions tagged &#39;communication&#39;" rel="tag">communication</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/modulation" class="post-tag" title="show questions tagged &#39;modulation&#39;" rel="tag">modulation</a> <a href="/questions/tagged/demodulation" class="post-tag" title="show questions tagged &#39;demodulation&#39;" rel="tag">demodulation</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-10-03 21:49:37Z" class="relativetime">Oct 3 at 21:49</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/25469/vasiliy"><div><img src="https://www.gravatar.com/avatar/621c49b0d221044c03103c5ddbe43c51?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/25469/vasiliy">Vasiliy</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">3,923</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-83231">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="106 views">
-    106 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/83231/why-do-fluorescent-bulbs-hum-buzz" class="question-hyperlink">Why do fluorescent bulbs hum/buzz? [closed]</a></h3>
-        <div class="excerpt">
-            Why do fluorescent lamps buzz/hum? I have one above my desk right now and it is constantly humming/buzzing. Does the bulb need to be replaced? Do I have to take the light fixture apart and replace ...
-        </div>          
-        <div class="tags t-light">
-            <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-24 02:13:35Z" class="relativetime">Sep 24 at 2:13</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/29539/justin"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/kqIN2.jpg?s=128&g=1?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/29539/justin">Justin</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">111</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-82022">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="62 views">
-    62 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/82022/proximity-sensor" class="question-hyperlink">Proximity Sensor [closed]</a></h3>
-        <div class="excerpt">
-            I am trying to make a circuit that as an object moves closer to a proximity sensor it triggers a dimmer switch controlling a light and amplifier for loudspeakers.
-
-Basically as an object moves closer ...
-        </div>          
-        <div class="tags t-sensor t-circuit t-light t-sound">
-            <a href="/questions/tagged/sensor" class="post-tag" title="show questions tagged &#39;sensor&#39;" rel="tag">sensor</a> <a href="/questions/tagged/circuit" class="post-tag" title="show questions tagged &#39;circuit&#39;" rel="tag">circuit</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/sound" class="post-tag" title="show questions tagged &#39;sound&#39;" rel="tag">sound</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-11 14:55:24Z" class="relativetime">Sep 11 at 14:55</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/28794/user28794"><div><img src="https://www.gravatar.com/avatar/7f45690eaaf25436d09b7d8b053401d0?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/28794/user28794">user28794</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-81756">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="166 views">
-    166 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/81756/pwm-duty-cycle-vs-candelas-for-leds" class="question-hyperlink">PWM duty cycle vs candelas for LEDs</a></h3>
-        <div class="excerpt">
-            What is the functional relation between PWM duty cycle for LED and its luminous intensity (candelas)? Linear or not?
-
-        </div>          
-        <div class="tags t-led t-pwm t-light">
-            <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/pwm" class="post-tag" title="show questions tagged &#39;pwm&#39;" rel="tag">pwm</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-09 17:37:55Z" class="relativetime">Sep 9 at 17:37</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/9829/corvus"><div><img src="https://www.gravatar.com/avatar/1b7f9440db6c7ea93d5257ed6b13c39a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/9829/corvus">Corvus</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">611</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-81377">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="95 views">
-    95 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/81377/how-can-i-trigger-a-photography-strobe-from-a-iphone-led-flash" class="question-hyperlink">How can I trigger a photography strobe from a iPhone LED flash?</a></h3>
-        <div class="excerpt">
-            I would like to trigger a photography/studio strobe flash based on the flash of an iPhone camera's LED flash. I'm picturing a device that I could attach to the back of the iPhone temporarily when I ...
-        </div>          
-        <div class="tags t-arduino t-raspberry-pi t-light t-basic">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/raspberry-pi" class="post-tag" title="show questions tagged &#39;raspberry-pi&#39;" rel="tag">raspberry-pi</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/basic" class="post-tag" title="show questions tagged &#39;basic&#39;" rel="tag">basic</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-05 23:29:08Z" class="relativetime">Sep 5 at 23:29</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/28554/kyle-hayes"><div><img src="https://www.gravatar.com/avatar/8917a5a40802954ec33a7a63c3127fe9?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/28554/kyle-hayes">Kyle Hayes</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">101</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-79408">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>3</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="131 views">
-    131 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/79408/will-a-incandescent-burn-out-if-you-leave-them-on-forever" class="question-hyperlink">Will a incandescent burn out if you leave them on forever?</a></h3>
-        <div class="excerpt">
-            We've all had a time or too two that when you really needed light, and I mean need it immediately, and you flip on the switch, and with a pop and a bright flash, your incandescent is toast. However, I ...
-        </div>          
-        <div class="tags t-light t-incandescent">
-            <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/incandescent" class="post-tag" title="show questions tagged &#39;incandescent&#39;" rel="tag">incandescent</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-08-18 19:03:57Z" class="relativetime">Aug 18 at 19:03</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/18442/annonomus-person"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/53Rif.png?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/18442/annonomus-person">Annonomus Person</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,195</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-79393">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="111 views">
-    111 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/79393/alkaline-cells-vs-led-flashlight" class="question-hyperlink">Alkaline cells vs. LED flashlight</a></h3>
-        <div class="excerpt">
-            I have (had, actually) an El Cheapo pocket LED flashlight powered by 3 AAA cells. It was shipped with very low quality "salt" cells (regular, low weight - someone please suggest a proper English name ...
-        </div>          
-        <div class="tags t-led t-batteries t-light t-cell-battery t-battery-chemistry">
-            <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> <a href="/questions/tagged/cell-battery" class="post-tag" title="show questions tagged &#39;cell-battery&#39;" rel="tag">cell-battery</a> <a href="/questions/tagged/battery-chemistry" class="post-tag" title="show questions tagged &#39;battery-chemistry&#39;" rel="tag">battery-chemistry</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-08-18 15:31:01Z" class="relativetime">Aug 18 at 15:31</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/24481/user539484"><div><img src="https://www.gravatar.com/avatar/00329af1039782383fe7fdc9955c7ab8?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/24481/user539484">user539484</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">119</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-74529">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="62 views">
-    62 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/74529/led-lighting-forward-voltage-constant-current" class="question-hyperlink">LED Lighting Forward Voltage Constant Current</a></h3>
-        <div class="excerpt">
-            I have a qty of 6 7W led luminaires that would normally use individual 350mA drivers. 
-I am looking to use one driver to supply all 6.
-
-However, I understand that the forward voltage of 20V per ...
-        </div>          
-        <div class="tags t-led t-switch-mode-power-supply t-light">
-            <a href="/questions/tagged/led" class="post-tag" title="show questions tagged &#39;led&#39;" rel="tag">led</a> <a href="/questions/tagged/switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-30 17:57:47Z" class="relativetime">Jun 30 at 17:57</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/25882/user25882"><div><img src="https://www.gravatar.com/avatar/bc67e58fc61ba4b45fd2673797b9e9d5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/25882/user25882">user25882</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-71551">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="165 views">
-    165 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/71551/how-to-power-arduino-from-wall" class="question-hyperlink">How to power &ldquo;arduino&rdquo; from wall?</a></h3>
-        <div class="excerpt">
-            So I have a fake "arduino" that I put together (The main components on a breadboard, i.e. ATmega328, capacitors, ocilator, etc) and I am trying to use it to overide a light switch (When the light ...
-        </div>          
-        <div class="tags t-arduino t-atmega t-transformer t-light">
-            <a href="/questions/tagged/arduino" class="post-tag" title="show questions tagged &#39;arduino&#39;" rel="tag">arduino</a> <a href="/questions/tagged/atmega" class="post-tag" title="show questions tagged &#39;atmega&#39;" rel="tag">atmega</a> <a href="/questions/tagged/transformer" class="post-tag" title="show questions tagged &#39;transformer&#39;" rel="tag">transformer</a> <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-04 01:35:31Z" class="relativetime">Jun 4 at 1:35</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/17477/geekman"><div><img src="https://www.gravatar.com/avatar/657f699d7046fe4bc13253a25e70795a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/17477/geekman">geekman</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">42</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -866,22 +971,22 @@ However, I understand that the forward voltage of 20V per ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/light?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/light?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/light?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/light?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/light?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/light?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=light&amp;sort=newest" title="the 30 newest light questions"><span class="feed-icon"></span>newest light questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=light&sort=newest" title="the 30 newest light questions"><span class="feed-icon"></span>newest light questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">95</div>
+            <div class="summarycount al">105</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/light" class="post-tag" title="show questions tagged &#39;light&#39;" rel="tag">light</a> 
@@ -892,38 +997,279 @@ However, I understand that the forward voltage of 20V per ...
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/light+led" class="post-tag" title="show questions tagged &#39;light led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">27</span></span><br>
-            <a href="/questions/tagged/light+sensor" class="post-tag" title="show questions tagged &#39;light sensor&#39;" rel="tag">sensor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span><br>
-            <a href="/questions/tagged/light+arduino" class="post-tag" title="show questions tagged &#39;light arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/light+switches" class="post-tag" title="show questions tagged &#39;light switches&#39;" rel="tag">switches</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/light+lamp" class="post-tag" title="show questions tagged &#39;light lamp&#39;" rel="tag">lamp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/light+relay" class="post-tag" title="show questions tagged &#39;light relay&#39;" rel="tag">relay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/light+photodiode" class="post-tag" title="show questions tagged &#39;light photodiode&#39;" rel="tag">photodiode</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/light+power" class="post-tag" title="show questions tagged &#39;light power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/light+components" class="post-tag" title="show questions tagged &#39;light components&#39;" rel="tag">components</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/light+circuit" class="post-tag" title="show questions tagged &#39;light circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/light+phototransistor" class="post-tag" title="show questions tagged &#39;light phototransistor&#39;" rel="tag">phototransistor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/light+transformer" class="post-tag" title="show questions tagged &#39;light transformer&#39;" rel="tag">transformer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/light+microcontroller" class="post-tag" title="show questions tagged &#39;light microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/light+batteries" class="post-tag" title="show questions tagged &#39;light batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/light+dimming" class="post-tag" title="show questions tagged &#39;light dimming&#39;" rel="tag">dimming</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/light+power-supply" class="post-tag" title="show questions tagged &#39;light power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/light+spectrum" class="post-tag" title="show questions tagged &#39;light spectrum&#39;" rel="tag">spectrum</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/light+voltage" class="post-tag" title="show questions tagged &#39;light voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/light+low-power" class="post-tag" title="show questions tagged &#39;light low-power&#39;" rel="tag">low-power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/light+infrared" class="post-tag" title="show questions tagged &#39;light infrared&#39;" rel="tag">infrared</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/light+ldr" class="post-tag" title="show questions tagged &#39;light ldr&#39;" rel="tag">ldr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/light+photoresistor" class="post-tag" title="show questions tagged &#39;light photoresistor&#39;" rel="tag">photoresistor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/light+wire" class="post-tag" title="show questions tagged &#39;light wire&#39;" rel="tag">wire</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/light+el-wire" class="post-tag" title="show questions tagged &#39;light el-wire&#39;" rel="tag">el-wire</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/light+specifications" class="post-tag" title="show questions tagged &#39;light specifications&#39;" rel="tag">specifications</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
+        <div>
+            <a href="/questions/tagged/light+led" class="post-tag" title="show questions tagged &#39;light led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">28</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/light+sensor" class="post-tag" title="show questions tagged &#39;light sensor&#39;" rel="tag">sensor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/light+arduino" class="post-tag" title="show questions tagged &#39;light arduino&#39;" rel="tag">arduino</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/light+switches" class="post-tag" title="show questions tagged &#39;light switches&#39;" rel="tag">switches</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/light+batteries" class="post-tag" title="show questions tagged &#39;light batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/light+lamp" class="post-tag" title="show questions tagged &#39;light lamp&#39;" rel="tag">lamp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/light+relay" class="post-tag" title="show questions tagged &#39;light relay&#39;" rel="tag">relay</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/light+power" class="post-tag" title="show questions tagged &#39;light power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/light+transformer" class="post-tag" title="show questions tagged &#39;light transformer&#39;" rel="tag">transformer</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/light+photodiode" class="post-tag" title="show questions tagged &#39;light photodiode&#39;" rel="tag">photodiode</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+phototransistor" class="post-tag" title="show questions tagged &#39;light phototransistor&#39;" rel="tag">phototransistor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+circuit" class="post-tag" title="show questions tagged &#39;light circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+power-supply" class="post-tag" title="show questions tagged &#39;light power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+components" class="post-tag" title="show questions tagged &#39;light components&#39;" rel="tag">components</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+microcontroller" class="post-tag" title="show questions tagged &#39;light microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+dimming" class="post-tag" title="show questions tagged &#39;light dimming&#39;" rel="tag">dimming</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+ldr" class="post-tag" title="show questions tagged &#39;light ldr&#39;" rel="tag">ldr</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+infrared" class="post-tag" title="show questions tagged &#39;light infrared&#39;" rel="tag">infrared</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+low-power" class="post-tag" title="show questions tagged &#39;light low-power&#39;" rel="tag">low-power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+spectrum" class="post-tag" title="show questions tagged &#39;light spectrum&#39;" rel="tag">spectrum</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+voltage" class="post-tag" title="show questions tagged &#39;light voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+wire" class="post-tag" title="show questions tagged &#39;light wire&#39;" rel="tag">wire</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+incandescent" class="post-tag" title="show questions tagged &#39;light incandescent&#39;" rel="tag">incandescent</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+el-wire" class="post-tag" title="show questions tagged &#39;light el-wire&#39;" rel="tag">el-wire</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/light+detection" class="post-tag" title="show questions tagged &#39;light detection&#39;" rel="tag">detection</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -943,7 +1289,7 @@ However, I understand that the forward voltage of 20V per ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/light")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1036,7 +1382,7 @@ However, I understand that the forward voltage of 20V per ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1063,14 +1409,11 @@ However, I understand that the forward voltage of 20V per ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1079,33 +1422,34 @@ However, I understand that the forward voltage of 20V per ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|light|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|light|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

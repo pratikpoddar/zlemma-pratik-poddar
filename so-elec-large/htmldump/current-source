@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=b0a5a51e797c">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged current-source" href="/feeds/tag/current-source" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386190589,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390327910,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcurrent-source" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcurrent-source" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[current-source]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcurrent-source">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fcurrent-source">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[current-source]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/current-source/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/current-source?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/current-source?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/current-source?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/current-source?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/current-source?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/current-source?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/current-source?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/current-source?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/current-source?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/current-source?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,286 @@ An electronic component that sources current - if it sinks current it is called 
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92306">
+<div class="question-summary" id="question-summary-95515">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="41 views">
+    41 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95515/how-can-the-differential-pair-have-individual-common-mode-gain" class="question-hyperlink">How can the differential pair have individual common mode gain?</a></h3>
+        <div class="excerpt">
+            If you think of a better title, please do edit or let me know to edit, but this is how I thought I could word the question. 
+
+I am finding difficulty in understanding how a differential pair exactly ...
+        </div>          
+        <div class="tags t-current-source t-differential t-common-mode">
+            <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/differential" class="post-tag" title="show questions tagged &#39;differential&#39;" rel="tag">differential</a> <a href="/questions/tagged/common-mode" class="post-tag" title="show questions tagged &#39;common-mode&#39;" rel="tag">common-mode</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-05 18:51:20Z" class="relativetime">Jan 5 at 18:51</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/24404/user1255592"><div><img src="https://www.gravatar.com/avatar/f57b21aba9aef99e098ae19d3fffbebb?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/24404/user1255592">user1255592</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">195</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95371">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="93 views">
+    93 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95371/voltage-source-vs-current-source" class="question-hyperlink">voltage source vs. current source</a></h3>
+        <div class="excerpt">
+            I am just not sure that why in development labs, current sources are not as popular as voltage sources. 
+
+I have worked in different places, and they all have been using voltage sources.
+
+I just want ...
+        </div>          
+        <div class="tags t-voltage t-current-source">
+            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-03 23:32:21Z" class="relativetime">Jan 3 at 23:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33344/rudy01"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/75fccbaced706051298cc5d79846a623?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33344/rudy01">Rudy01</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">99</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93711">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="32 views">
+    32 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93711/finding-the-thevenin-resistance" class="question-hyperlink">Finding the thevenin resistance</a></h3>
+        <div class="excerpt">
+            The task is to find the thevenin equivalent (seen form terminals a and b) of the following circuit:
+
+
+I believe I have found the thevenin voltage by simply finding the voltage drop over the 5 ohm ...
+        </div>          
+        <div class="tags t-voltage t-current-source t-thevenin">
+            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/thevenin" class="post-tag" title="show questions tagged &#39;thevenin&#39;" rel="tag">thevenin</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-14 19:31:51Z" class="relativetime">Dec 14 '13 at 19:31</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33533/joey"><div><img src="https://www.gravatar.com/avatar/c2783f3a93d8fc25e37a680a1310ddbb?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33533/joey">Joey</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">10</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93169">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>4</strong>answers
+            </div>
+        </div>
+        <div class="views " title="152 views">
+    152 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93169/charging-phone-battery-with-a-high-current-source" class="question-hyperlink">Charging phone battery with a high current source</a></h3>
+        <div class="excerpt">
+            I am working on a project which the goal is using some android tablets to show pieces of video file to form a multiscreen. One electronic problem that I have faced is:
+
+The tablets should be always ...
+        </div>          
+        <div class="tags t-batteries t-current t-charger t-current-source">
+            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/current" class="post-tag" title="show questions tagged &#39;current&#39;" rel="tag">current</a> <a href="/questions/tagged/charger" class="post-tag" title="show questions tagged &#39;charger&#39;" rel="tag">charger</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-10 01:41:21Z" class="relativetime">Dec 10 '13 at 1:41</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/3757/sean87"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/iBXL3.png?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/3757/sean87">Sean87</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">886</span><span title="10 silver badges"><span class="badge2"></span><span class="badgecount">10</span></span><span title="23 bronze badges"><span class="badge3"></span><span class="badgecount">23</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92736">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="71 views">
+    71 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/92736/single-current-source-with-parallel-loads-for-many-rtd-sensors" class="question-hyperlink">Single current source with parallel loads for many RTD sensors</a></h3>
+        <div class="excerpt">
+            I'm trying to build a circuit that contains multiple 3-wire RTD PT100 sensors (12 of them). I have a microcontroller with plenty of ADC pins so I could potentially measure the RTD and the wire ...
+        </div>          
+        <div class="tags t-sensor t-adc t-current-source t-rtd">
+            <a href="/questions/tagged/sensor" class="post-tag" title="show questions tagged &#39;sensor&#39;" rel="tag">sensor</a> <a href="/questions/tagged/adc" class="post-tag" title="show questions tagged &#39;adc&#39;" rel="tag">adc</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/rtd" class="post-tag" title="show questions tagged &#39;rtd&#39;" rel="tag">rtd</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-05 05:38:42Z" class="relativetime">Dec 5 '13 at 5:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/4579/bob-baddeley"><div><img src="https://www.gravatar.com/avatar/a43e847e9d5bfb1adad80db62e0f3d30?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/4579/bob-baddeley">Bob Baddeley</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">293</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92700">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="155 views">
+    155 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/92700/how-do-you-drive-a-high-current-load-from-a-moderate-current-source" class="question-hyperlink">How do you drive a high current load from a moderate current source?</a></h3>
+        <div class="excerpt">
+            If I have a power supply that can supply 5A @ 12V and I need to be able to supply an inductive load with 20+A @ 12V, how would I go about this?
+
+I need a burst of current for about 2-5 seconds.
+
+Will ...
+        </div>          
+        <div class="tags t-capacitor t-current t-current-source t-load">
+            <a href="/questions/tagged/capacitor" class="post-tag" title="show questions tagged &#39;capacitor&#39;" rel="tag">capacitor</a> <a href="/questions/tagged/current" class="post-tag" title="show questions tagged &#39;current&#39;" rel="tag">current</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/load" class="post-tag" title="show questions tagged &#39;load&#39;" rel="tag">load</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-04 21:54:37Z" class="relativetime">Dec 4 '13 at 21:54</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/8240/hair-of-the-dog"><div><img src="https://www.gravatar.com/avatar/4da9dcc8078995f3f8c0cf06c0c76221?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/8240/hair-of-the-dog">Hair_of_the_Dog</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">537</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92306">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -172,8 +550,8 @@ An electronic component that sources current - if it sinks current it is called 
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="67 views">
-    67 views
+        <div class="views " title="83 views">
+    83 views
 </div>
     </div>
     <div class="summary">
@@ -192,7 +570,7 @@ I learned in school that the generators (source powers) are defined by their vol
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-12-01 00:27:14Z" class="relativetime">Dec 1 at 0:27</span>
+        asked <span title="2013-12-01 00:27:14Z" class="relativetime">Dec 1 '13 at 0:27</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33475/luan-nico"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/9d5b9a79ef0f88807303db67594b5d06?s=128&d=identicon&r=PG" alt=""></div></a>
@@ -218,8 +596,8 @@ I learned in school that the generators (source powers) are defined by their vol
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="83 views">
-    83 views
+        <div class="views " title="98 views">
+    98 views
 </div>
     </div>
     <div class="summary">
@@ -236,7 +614,7 @@ I learned in school that the generators (source powers) are defined by their vol
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-22 22:29:43Z" class="relativetime">Nov 22 at 22:29</span>
+        asked <span title="2013-11-22 22:29:43Z" class="relativetime">Nov 22 '13 at 22:29</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/22496/fgrieu"><div><img src="https://www.gravatar.com/avatar/3d2a3bdfce4372530b43f3d196407459?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -262,8 +640,8 @@ I learned in school that the generators (source powers) are defined by their vol
                 <strong>3</strong>answers
             </div>
         </div>
-        <div class="views " title="72 views">
-    72 views
+        <div class="views " title="117 views">
+    117 views
 </div>
     </div>
     <div class="summary">
@@ -271,8 +649,8 @@ I learned in school that the generators (source powers) are defined by their vol
         <div class="excerpt">
             I'm trying to figure out the reason why in the following circuit, at steady state, the current ix is zero. My best guess is that because there is a parallel branch which by KCL should equal 100ix and ...
         </div>          
-        <div class="tags t-capacitor t-inductor t-circuit-analysis t-current-source t-rlc">
-            <a href="/questions/tagged/capacitor" class="post-tag" title="show questions tagged &#39;capacitor&#39;" rel="tag">capacitor</a> <a href="/questions/tagged/inductor" class="post-tag" title="show questions tagged &#39;inductor&#39;" rel="tag">inductor</a> <a href="/questions/tagged/circuit-analysis" class="post-tag" title="show questions tagged &#39;circuit-analysis&#39;" rel="tag">circuit-analysis</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/rlc" class="post-tag" title="show questions tagged &#39;rlc&#39;" rel="tag">rlc</a> 
+        <div class="tags t-capacitor t-inductor t-circuit-analysis t-current-source t-passive-networks">
+            <a href="/questions/tagged/capacitor" class="post-tag" title="show questions tagged &#39;capacitor&#39;" rel="tag">capacitor</a> <a href="/questions/tagged/inductor" class="post-tag" title="show questions tagged &#39;inductor&#39;" rel="tag">inductor</a> <a href="/questions/tagged/circuit-analysis" class="post-tag" title="show questions tagged &#39;circuit-analysis&#39;" rel="tag">circuit-analysis</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/passive-networks" class="post-tag" title="show questions tagged &#39;passive-networks&#39;" rel="tag">passive-networks</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -280,7 +658,7 @@ I learned in school that the generators (source powers) are defined by their vol
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-22 13:56:36Z" class="relativetime">Nov 22 at 13:56</span>
+        asked <span title="2013-11-22 13:56:36Z" class="relativetime">Nov 22 '13 at 13:56</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/33121/user2009114"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/ecbe6723650090dedb341b9d6e381047?s=128&d=identicon&r=PG" alt=""></div></a>
@@ -306,8 +684,8 @@ I learned in school that the generators (source powers) are defined by their vol
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="67 views">
-    67 views
+        <div class="views " title="87 views">
+    87 views
 </div>
     </div>
     <div class="summary">
@@ -324,14 +702,14 @@ I learned in school that the generators (source powers) are defined by their vol
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-16 04:14:23Z" class="relativetime">Nov 16 at 4:14</span>
+        asked <span title="2013-11-16 04:14:23Z" class="relativetime">Nov 16 '13 at 4:14</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/17082/ryan-tuck"><div><img src="https://www.gravatar.com/avatar/57bb887b039eb0ca9f976210fe821a2a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/17082/ryan-tuck">Ryan Tuck</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">134</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">139</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
     </div>
 </div>
         </div>  
@@ -350,8 +728,8 @@ I learned in school that the generators (source powers) are defined by their vol
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="77 views">
-    77 views
+        <div class="views " title="97 views">
+    97 views
 </div>
     </div>
     <div class="summary">
@@ -370,14 +748,14 @@ The speech ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-13 16:28:53Z" class="relativetime">Nov 13 at 16:28</span>
+        asked <span title="2013-11-13 16:28:53Z" class="relativetime">Nov 13 '13 at 16:28</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/29710/binarysmacker"><div><img src="https://www.gravatar.com/avatar/510c1be7a2a7fa52e61a8a3794c79d9f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/29710/binarysmacker">binarysmacker</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">147</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">402</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
     </div>
 </div>
         </div>  
@@ -396,8 +774,8 @@ The speech ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="54 views">
-    54 views
+        <div class="views " title="66 views">
+    66 views
 </div>
     </div>
     <div class="summary">
@@ -414,14 +792,14 @@ The speech ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-12 16:08:35Z" class="relativetime">Nov 12 at 16:08</span>
+        asked <span title="2013-11-12 16:08:35Z" class="relativetime">Nov 12 '13 at 16:08</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/24584/techno"><div><img src="https://www.gravatar.com/avatar/130b2f72d80b97887b1ee7501ad1d4e6?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/24584/techno">techno</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">113</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">115</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -436,12 +814,12 @@ The speech ...
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status answered">
+            <div class="status answered-accepted">
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="60 views">
-    60 views
+        <div class="views " title="79 views">
+    79 views
 </div>
     </div>
     <div class="summary">
@@ -466,14 +844,14 @@ simulate this circuit ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-03 13:05:36Z" class="relativetime">Nov 3 at 13:05</span>
+        asked <span title="2013-11-03 13:05:36Z" class="relativetime">Nov 3 '13 at 13:05</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/30955/paul23"><div><img src="https://www.gravatar.com/avatar/1f73e4b9767a731da47c3b5a2c3fc575?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/30955/paul23">paul23</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">123</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">160</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -492,8 +870,8 @@ simulate this circuit ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="60 views">
-    60 views
+        <div class="views " title="62 views">
+    62 views
 </div>
     </div>
     <div class="summary">
@@ -512,7 +890,7 @@ I would like to connect an XBee ZigBee module (3.3 V) to a microcontroller (PIC,
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-31 21:59:22Z" class="relativetime">Oct 31 at 21:59</span>
+        asked <span title="2013-10-31 21:59:22Z" class="relativetime">Oct 31 '13 at 21:59</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/19388/toms"><div><img src="https://www.gravatar.com/avatar/7464e56c7c8c0eb1e000f1f184f1a510?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -538,8 +916,8 @@ I would like to connect an XBee ZigBee module (3.3 V) to a microcontroller (PIC,
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="94 views">
-    94 views
+        <div class="views " title="118 views">
+    118 views
 </div>
     </div>
     <div class="summary">
@@ -560,294 +938,14 @@ I can see that the transistors are there to ...
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-10-29 21:52:41Z" class="relativetime">Oct 29 at 21:52</span>
+        asked <span title="2013-10-29 21:52:41Z" class="relativetime">Oct 29 '13 at 21:52</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/3966/saad"><div><img src="https://www.gravatar.com/avatar/b2e046e9b81c68501df4f82027168ee6?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/3966/saad">Saad</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1,572</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="28 bronze badges"><span class="badge3"></span><span class="badgecount">28</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86770">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="56 views">
-    56 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86770/current-and-voltage-sources" class="question-hyperlink">Current and voltage sources</a></h3>
-        <div class="excerpt">
-            What happens when a current source is connected in series with a voltage source? I mean to ask, what will the current be through the series combination and voltage across it?
-
-Is it allowed to make ...
-        </div>          
-        <div class="tags t-current-source t-source">
-            <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/source" class="post-tag" title="show questions tagged &#39;source&#39;" rel="tag">source</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-28 17:35:41Z" class="relativetime">Oct 28 at 17:35</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/18488/vasa"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/sJdoQ.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/18488/vasa">vasa</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">16</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-85884">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="77 views">
-    77 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/85884/very-simple-discrete-current-source" class="question-hyperlink">Very Simple Discrete Current Source</a></h3>
-        <div class="excerpt">
-            I'm trying to work out why someone would choose the right circuit over the left one.  The only thing I can think of is, that one on the right can be made an adjustable current source by making \$R1\$ ...
-        </div>          
-        <div class="tags t-bjt t-current-source t-electronics">
-            <a href="/questions/tagged/bjt" class="post-tag" title="show questions tagged &#39;bjt&#39;" rel="tag">bjt</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/electronics" class="post-tag" title="show questions tagged &#39;electronics&#39;" rel="tag">electronics</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-19 07:19:07Z" class="relativetime">Oct 19 at 7:19</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/8805/user968243"><div><img src="https://www.gravatar.com/avatar/7604e415a7f8dc8124bc462e7b7ed4f7?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/8805/user968243">user968243</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">419</span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84816">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="89 views">
-    89 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84816/source-transformation-of-dependent-sources" class="question-hyperlink">Source Transformation of dependent sources</a></h3>
-        <div class="excerpt">
-            Would it be correct to use use source transformation on a dependent source. For example, would it be legal to turn a voltage dependent voltage source in series with a resistor, into a voltage ...
-        </div>          
-        <div class="tags t-voltage t-current-source">
-            <a href="/questions/tagged/voltage" class="post-tag" title="show questions tagged &#39;voltage&#39;" rel="tag">voltage</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-09 05:31:33Z" class="relativetime">Oct 9 at 5:31</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/29668/golvok"><div><img src="https://www.gravatar.com/avatar/9ec54239029c72dcb26fef910ad8d58e?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/29668/golvok">golvok</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84447">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
-            </div>
-        </div>
-        <div class="views " title="54 views">
-    54 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84447/equivalent-resistance" class="question-hyperlink">Equivalent Resistance</a></h3>
-        <div class="excerpt">
-            I'm working on the following homework problem. (Yes, this is homework. :p ) I'm supposed to find the current through L1 as a function of time. 
-
-
-
-
-
-
-
-simulate this circuit &ndash; Schematic created ...
-        </div>          
-        <div class="tags t-resistors t-current-source t-inductance">
-            <a href="/questions/tagged/resistors" class="post-tag" title="show questions tagged &#39;resistors&#39;" rel="tag">resistors</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/inductance" class="post-tag" title="show questions tagged &#39;inductance&#39;" rel="tag">inductance</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-06 02:43:16Z" class="relativetime">Oct 6 at 2:43</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/16840/codedude"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/21EZw.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/16840/codedude">codedude</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">166</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84387">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="111 views">
-    111 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84387/does-current-source-affect-flow-of-current-in-circuit-with-a-variable-resistor" class="question-hyperlink">Does current source affect flow of current in circuit with a variable resistor?</a></h3>
-        <div class="excerpt">
-            Suppose you have a current source in series with a resistor R the current through the R resistor would be the current generated by the current source. How would the current through the circuit change ...
-        </div>          
-        <div class="tags t-current t-circuit t-resistors t-current-source t-ohms-law">
-            <a href="/questions/tagged/current" class="post-tag" title="show questions tagged &#39;current&#39;" rel="tag">current</a> <a href="/questions/tagged/circuit" class="post-tag" title="show questions tagged &#39;circuit&#39;" rel="tag">circuit</a> <a href="/questions/tagged/resistors" class="post-tag" title="show questions tagged &#39;resistors&#39;" rel="tag">resistors</a> <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> <a href="/questions/tagged/ohms-law" class="post-tag" title="show questions tagged &#39;ohms-law&#39;" rel="tag">ohms-law</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-05 04:17:04Z" class="relativetime">Oct 5 at 4:17</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/11121/pyler"><div><img src="https://www.gravatar.com/avatar/a8d086d1d530142ac7999708ae56b9a5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/11121/pyler">pyler</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">95</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-83467">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>3</strong>answers
-            </div>
-        </div>
-        <div class="views " title="218 views">
-    218 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/83467/are-there-any-way-to-get-75v-1a-output-from-78v-input" class="question-hyperlink">Are there any way to get (75V 1A) output from 78V input</a></h3>
-        <div class="excerpt">
-            Is there any way to get 75 V 1 A output from 78 V input?
-
-I found the TL783 high voltage adjustable regulator. But this can supply only 700mA output current.
-
-I had forgot to tell the details.
-
-Main ...
-        </div>          
-        <div class="tags t-current-source">
-            <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-09-26 06:46:05Z" class="relativetime">Sep 26 at 6:46</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/20334/user2170124"><div><img src="https://www.gravatar.com/avatar/f5bc60a6142dff975d2031f233c412e7?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/20334/user2170124">user2170124</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">41</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,674</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="31 bronze badges"><span class="badge3"></span><span class="badgecount">31</span></span>
     </div>
 </div>
         </div>  
@@ -866,82 +964,311 @@ Main ...
         <a href="/questions/tagged/current-source?page=3&amp;sort=newest&amp;pagesize=15" title="go to page 3"> <span class="page-numbers">3</span> </a> 
         <a href="/questions/tagged/current-source?page=4&amp;sort=newest&amp;pagesize=15" title="go to page 4"> <span class="page-numbers">4</span> </a> 
         <a href="/questions/tagged/current-source?page=5&amp;sort=newest&amp;pagesize=15" title="go to page 5"> <span class="page-numbers">5</span> </a> 
-        <a href="/questions/tagged/current-source?page=6&amp;sort=newest&amp;pagesize=15" title="go to page 6"> <span class="page-numbers">6</span> </a> 
+ <span class="page-numbers dots">…</span>         <a href="/questions/tagged/current-source?page=7&amp;sort=newest&amp;pagesize=15" title="go to page 7"> <span class="page-numbers">7</span> </a> 
         <a href="/questions/tagged/current-source?page=2&amp;sort=newest&amp;pagesize=15" rel="next" title="go to page 2"> <span class="page-numbers next"> next</span> </a> 
 
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/current-source?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/current-source?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/current-source?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/current-source?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/current-source?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/current-source?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=current-source&amp;sort=newest" title="the 30 newest current-source questions"><span class="feed-icon"></span>newest current-source questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=current-source&sort=newest" title="the 30 newest current-source questions"><span class="feed-icon"></span>newest current-source questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">86</div>
+            <div class="summarycount al">91</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/current-source" class="post-tag" title="show questions tagged &#39;current-source&#39;" rel="tag">current-source</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/current-source/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-
-            <div class="spacer">
-                <div class="bulletin-item-type"><a href="http://blog.stackoverflow.com" class="event-date" target="_blank">blog</a></div>
-                <div class="bulletin-item-content">
-                    <a href="http://blog.stackoverflow.com/2013/12/a-new-top-bar-for-stack-exchange/" class="question-hyperlink" target="_blank">A New Top Bar for Stack Exchange</a>
-                </div>
-                <br class="cbt" />
-            </div>
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/current-source+led" class="post-tag" title="show questions tagged &#39;current-source led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span><br>
-            <a href="/questions/tagged/current-source+current" class="post-tag" title="show questions tagged &#39;current-source current&#39;" rel="tag">current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/current-source+voltage" class="post-tag" title="show questions tagged &#39;current-source voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/current-source+constant-current" class="post-tag" title="show questions tagged &#39;current-source constant-current&#39;" rel="tag">constant-current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/current-source+circuit-analysis" class="post-tag" title="show questions tagged &#39;current-source circuit-analysis&#39;" rel="tag">circuit-analysis</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/current-source+op-amp" class="post-tag" title="show questions tagged &#39;current-source op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/current-source+resistors" class="post-tag" title="show questions tagged &#39;current-source resistors&#39;" rel="tag">resistors</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/current-source+current-sink" class="post-tag" title="show questions tagged &#39;current-source current-sink&#39;" rel="tag">current-sink</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/current-source+analysis" class="post-tag" title="show questions tagged &#39;current-source analysis&#39;" rel="tag">analysis</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/current-source+dc" class="post-tag" title="show questions tagged &#39;current-source dc&#39;" rel="tag">dc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/current-source+circuit" class="post-tag" title="show questions tagged &#39;current-source circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/current-source+driver" class="post-tag" title="show questions tagged &#39;current-source driver&#39;" rel="tag">driver</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/current-source+microcontroller" class="post-tag" title="show questions tagged &#39;current-source microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/current-source+diodes" class="post-tag" title="show questions tagged &#39;current-source diodes&#39;" rel="tag">diodes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/current-source+lm317" class="post-tag" title="show questions tagged &#39;current-source lm317&#39;" rel="tag">lm317</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/current-source+voltage-regulator" class="post-tag" title="show questions tagged &#39;current-source voltage-regulator&#39;" rel="tag">voltage-regulator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/current-source+bjt" class="post-tag" title="show questions tagged &#39;current-source bjt&#39;" rel="tag">bjt</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/current-source+mosfet" class="post-tag" title="show questions tagged &#39;current-source mosfet&#39;" rel="tag">mosfet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/current-source+usb" class="post-tag" title="show questions tagged &#39;current-source usb&#39;" rel="tag">usb</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/current-source+inductor" class="post-tag" title="show questions tagged &#39;current-source inductor&#39;" rel="tag">inductor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/current-source+capacitor" class="post-tag" title="show questions tagged &#39;current-source capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/current-source+impedance" class="post-tag" title="show questions tagged &#39;current-source impedance&#39;" rel="tag">impedance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/current-source+led-strip" class="post-tag" title="show questions tagged &#39;current-source led-strip&#39;" rel="tag">led-strip</a>&nbsp;<br>
-            <a href="/questions/tagged/current-source+load" class="post-tag" title="show questions tagged &#39;current-source load&#39;" rel="tag">load</a>&nbsp;<br>
-            <a href="/questions/tagged/current-source+series" class="post-tag" title="show questions tagged &#39;current-source series&#39;" rel="tag">series</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/current-source+current" class="post-tag" title="show questions tagged &#39;current-source current&#39;" rel="tag">current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">14</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/current-source+led" class="post-tag" title="show questions tagged &#39;current-source led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/current-source+voltage" class="post-tag" title="show questions tagged &#39;current-source voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/current-source+constant-current" class="post-tag" title="show questions tagged &#39;current-source constant-current&#39;" rel="tag">constant-current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/current-source+circuit-analysis" class="post-tag" title="show questions tagged &#39;current-source circuit-analysis&#39;" rel="tag">circuit-analysis</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/current-source+resistors" class="post-tag" title="show questions tagged &#39;current-source resistors&#39;" rel="tag">resistors</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/current-source+current-sink" class="post-tag" title="show questions tagged &#39;current-source current-sink&#39;" rel="tag">current-sink</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/current-source+analysis" class="post-tag" title="show questions tagged &#39;current-source analysis&#39;" rel="tag">analysis</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/current-source+op-amp" class="post-tag" title="show questions tagged &#39;current-source op-amp&#39;" rel="tag">op-amp</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/current-source+dc" class="post-tag" title="show questions tagged &#39;current-source dc&#39;" rel="tag">dc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+circuit" class="post-tag" title="show questions tagged &#39;current-source circuit&#39;" rel="tag">circuit</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+capacitor" class="post-tag" title="show questions tagged &#39;current-source capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+driver" class="post-tag" title="show questions tagged &#39;current-source driver&#39;" rel="tag">driver</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+microcontroller" class="post-tag" title="show questions tagged &#39;current-source microcontroller&#39;" rel="tag">microcontroller</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+adc" class="post-tag" title="show questions tagged &#39;current-source adc&#39;" rel="tag">adc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+bjt" class="post-tag" title="show questions tagged &#39;current-source bjt&#39;" rel="tag">bjt</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+diodes" class="post-tag" title="show questions tagged &#39;current-source diodes&#39;" rel="tag">diodes</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+batteries" class="post-tag" title="show questions tagged &#39;current-source batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+impedance" class="post-tag" title="show questions tagged &#39;current-source impedance&#39;" rel="tag">impedance</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+mosfet" class="post-tag" title="show questions tagged &#39;current-source mosfet&#39;" rel="tag">mosfet</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+lm317" class="post-tag" title="show questions tagged &#39;current-source lm317&#39;" rel="tag">lm317</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+sensor" class="post-tag" title="show questions tagged &#39;current-source sensor&#39;" rel="tag">sensor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+voltage-regulator" class="post-tag" title="show questions tagged &#39;current-source voltage-regulator&#39;" rel="tag">voltage-regulator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+passive-networks" class="post-tag" title="show questions tagged &#39;current-source passive-networks&#39;" rel="tag">passive-networks</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/current-source+inductor" class="post-tag" title="show questions tagged &#39;current-source inductor&#39;" rel="tag">inductor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -961,7 +1288,7 @@ Main ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/current-source")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1054,7 +1381,7 @@ Main ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1081,14 +1408,11 @@ Main ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1197
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1097,33 +1421,34 @@ Main ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|current-source|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|current-source|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

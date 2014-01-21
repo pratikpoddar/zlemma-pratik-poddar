@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=7b7467eef158">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged buck" href="/feeds/tag/buck" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386186713,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328310,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fbuck" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fbuck" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[buck]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fbuck">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fbuck">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[buck]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/buck/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/buck?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/buck?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/buck?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/buck?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/buck?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/buck?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/buck?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/buck?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/buck?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/buck?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,7 +257,99 @@ A non-isolated DC-DC converter topology which outputs voltage less than or equal
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-91347">
+<div class="question-summary" id="question-summary-96763">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="41 views">
+    41 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96763/synchronous-buck-ls-fet-switching-losses-and-dead-time-minimization" class="question-hyperlink">synchronous buck ls-FET switching losses and dead time minimization</a></h3>
+        <div class="excerpt">
+            I'm designing a Synchronous buck converter. I'm having doubts regarding the following:
+
+
+In the rectifying period of the converter, using a Schottky diode in parallel with the low side MOSFET will ...
+        </div>          
+        <div class="tags t-switch-mode-power-supply t-buck t-synchronous t-switching-losses">
+            <a href="/questions/tagged/switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> <a href="/questions/tagged/synchronous" class="post-tag" title="show questions tagged &#39;synchronous&#39;" rel="tag">synchronous</a> <a href="/questions/tagged/switching-losses" class="post-tag" title="show questions tagged &#39;switching-losses&#39;" rel="tag">switching-losses</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-17 18:48:21Z" class="relativetime">Jan 17 at 18:48</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35281/mib"><div><img src="https://www.gravatar.com/avatar/f6791749fbab91811ea3a8bff38dbb86?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35281/mib">MiB</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">20</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96633">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="34 views">
+    34 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96633/buck-boost-sepic-ic-out-3-3v-and-min-500ma-0-1-packaging" class="question-hyperlink">buck-boost, SEPIC IC out 3.3V and min 500mA 0.1" packaging</a></h3>
+        <div class="excerpt">
+            I am building some sort of navigation device for a logisitics project in my company.
+The whole thing is going to be battery (6V) powered, so I'm looking for every possible way to avoid losses to heat ...
+        </div>          
+        <div class="tags t-voltage-regulator t-integrated-circuit t-buck t-boost t-pinout">
+            <a href="/questions/tagged/voltage-regulator" class="post-tag" title="show questions tagged &#39;voltage-regulator&#39;" rel="tag">voltage-regulator</a> <a href="/questions/tagged/integrated-circuit" class="post-tag" title="show questions tagged &#39;integrated-circuit&#39;" rel="tag">integrated-circuit</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> <a href="/questions/tagged/boost" class="post-tag" title="show questions tagged &#39;boost&#39;" rel="tag">boost</a> <a href="/questions/tagged/pinout" class="post-tag" title="show questions tagged &#39;pinout&#39;" rel="tag">pinout</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-16 13:06:11Z" class="relativetime">Jan 16 at 13:06</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35490/mark"><div><img src="https://www.gravatar.com/avatar/6ce4a1c17e04607469d98eb2d22cce3d?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35490/mark">Mark</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">106</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-96583">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
@@ -168,12 +359,241 @@ A non-isolated DC-DC converter topology which outputs voltage less than or equal
                     <div class="viewcount">votes</div>
                 </div>
             </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="55 views">
+    55 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/96583/how-to-gauge-resistance-on-parallel-circuit-with-step-down-buck-regulator" class="question-hyperlink">How to gauge resistance on parallel circuit with step down buck regulator</a></h3>
+        <div class="excerpt">
+            I'm trying to create a circuit with two loads in parallel ( essentially piggy backing one circuit on the power supply of the other ). Circuit 1, the main circuit requires ~900ma at 12v. Circuit 2, ...
+        </div>          
+        <div class="tags t-voltage-regulator t-parallel t-buck">
+            <a href="/questions/tagged/voltage-regulator" class="post-tag" title="show questions tagged &#39;voltage-regulator&#39;" rel="tag">voltage-regulator</a> <a href="/questions/tagged/parallel" class="post-tag" title="show questions tagged &#39;parallel&#39;" rel="tag">parallel</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-15 21:35:03Z" class="relativetime">Jan 15 at 21:35</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/35616/user35616"><div><img src="https://www.gravatar.com/avatar/0bddef300a6a9b9aec990af3b395bebb?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/35616/user35616">user35616</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-95229">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="94 views">
+    94 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/95229/correctly-wire-up-a-switching-regulator" class="question-hyperlink">Correctly wire up a Switching Regulator</a></h3>
+        <div class="excerpt">
+            I am looking to use a Texas Instruments MC33063 Buck/Boost regulator. I have never used a switching regulator before so this may be a conceptual issue.
+
+My input voltage will probably be anywhere from ...
+        </div>          
+        <div class="tags t-voltage-regulator t-buck">
+            <a href="/questions/tagged/voltage-regulator" class="post-tag" title="show questions tagged &#39;voltage-regulator&#39;" rel="tag">voltage-regulator</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-01-02 18:23:05Z" class="relativetime">Jan 2 at 18:23</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/16948/nick-williams"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/pQ1l1.png?s=32&g=1" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/16948/nick-williams">Nick Williams</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">801</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93408">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status unanswered">
+                <strong>0</strong>answers
+            </div>
+        </div>
+        <div class="views " title="37 views">
+    37 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93408/tis-bypass-mode-step-down-converters" class="question-hyperlink">TI&#39;s bypass mode step-down converters</a></h3>
+        <div class="excerpt">
+            Texas Instruments encourages the use of the TPS62730 step-down converter with bypass mode along its RF devices. Does this mean :
+
+
+its noise is low enough not to affect RF ? Thus being a more ...
+        </div>          
+        <div class="tags t-voltage-regulator t-rf t-buck t-converter t-ldo">
+            <a href="/questions/tagged/voltage-regulator" class="post-tag" title="show questions tagged &#39;voltage-regulator&#39;" rel="tag">voltage-regulator</a> <a href="/questions/tagged/rf" class="post-tag" title="show questions tagged &#39;rf&#39;" rel="tag">rf</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> <a href="/questions/tagged/converter" class="post-tag" title="show questions tagged &#39;converter&#39;" rel="tag">converter</a> <a href="/questions/tagged/ldo" class="post-tag" title="show questions tagged &#39;ldo&#39;" rel="tag">ldo</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-12 00:15:57Z" class="relativetime">Dec 12 '13 at 0:15</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/33910/davew"><div><img src="https://www.gravatar.com/avatar/45df3bb17241479236639af765f5f15e?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/33910/davew">davew</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">15</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93315">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>2</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
             <div class="status answered">
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="61 views">
-    61 views
+        <div class="views " title="88 views">
+    88 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93315/audible-noise-in-dc-dc-buck-converter" class="question-hyperlink">Audible noise in DC-DC buck converter</a></h3>
+        <div class="excerpt">
+            In my design, I have a +3.3V SMPS that provides power to digital circuits (microcontroller, EEPROM, etc.). The microcontroller allows applying a 100Hz PWM signal with variable duty cycle and with an ...
+        </div>          
+        <div class="tags t-pwm t-switch-mode-power-supply t-noise t-buck">
+            <a href="/questions/tagged/pwm" class="post-tag" title="show questions tagged &#39;pwm&#39;" rel="tag">pwm</a> <a href="/questions/tagged/switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a> <a href="/questions/tagged/noise" class="post-tag" title="show questions tagged &#39;noise&#39;" rel="tag">noise</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-11 09:12:21Z" class="relativetime">Dec 11 '13 at 9:12</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/22628/johsey"><div><img src="https://www.gravatar.com/avatar/cc596859dfe9fa81f67540d3c21f0b3e?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/22628/johsey">johsey</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">123</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-92995">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>4</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>2</strong>answers
+            </div>
+        </div>
+        <div class="views " title="128 views">
+    128 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/92995/can-i-use-digital-pots-for-my-feedback-resistors-to-a-buck-boost-regulator" class="question-hyperlink">Can I use digital pots for my feedback resistors to a buck-boost regulator?</a></h3>
+        <div class="excerpt">
+            I'm working on a design, and this will be my first attempt at a buck-boost regulator.
+
+I need the output to be variable because my application calls for different voltages under certain conditions.
+
+...
+        </div>          
+        <div class="tags t-power-supply t-pcb-design t-buck t-boost t-digital-potentiometer">
+            <a href="/questions/tagged/power-supply" class="post-tag" title="show questions tagged &#39;power-supply&#39;" rel="tag">power-supply</a> <a href="/questions/tagged/pcb-design" class="post-tag" title="show questions tagged &#39;pcb-design&#39;" rel="tag">pcb-design</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> <a href="/questions/tagged/boost" class="post-tag" title="show questions tagged &#39;boost&#39;" rel="tag">boost</a> <a href="/questions/tagged/digital-potentiometer" class="post-tag" title="show questions tagged &#39;digital-potentiometer&#39;" rel="tag">digital-potentiometer</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-08 04:38:04Z" class="relativetime">Dec 8 '13 at 4:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/9409/efox29"><div><img src="https://www.gravatar.com/avatar/dec6d93c74fd80dcaeb6a78aa1e55aaa?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/9409/efox29">efox29</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,135</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-91347">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="99 views">
+    99 views
 </div>
     </div>
     <div class="summary">
@@ -190,14 +610,14 @@ A non-isolated DC-DC converter topology which outputs voltage less than or equal
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-20 20:30:13Z" class="relativetime">Nov 20 at 20:30</span>
+        asked <span title="2013-11-20 20:30:13Z" class="relativetime">Nov 20 '13 at 20:30</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/30947/user30947"><div><img src="https://www.gravatar.com/avatar/f7caf79a2e14b41badeec1bf5a7cfd88?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/30947/user30947">user30947</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">2</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">12</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
     </div>
 </div>
         </div>  
@@ -216,8 +636,8 @@ A non-isolated DC-DC converter topology which outputs voltage less than or equal
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="137 views">
-    137 views
+        <div class="views " title="185 views">
+    185 views
 </div>
     </div>
     <div class="summary">
@@ -234,7 +654,7 @@ A non-isolated DC-DC converter topology which outputs voltage less than or equal
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-19 13:09:11Z" class="relativetime">Nov 19 at 13:09</span>
+        asked <span title="2013-11-19 13:09:11Z" class="relativetime">Nov 19 '13 at 13:09</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/32952/n1000"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/cf9c95fa3ebf012003a0efd4b4fbc51a?s=128&d=identicon&r=PG" alt=""></div></a>
@@ -260,8 +680,8 @@ A non-isolated DC-DC converter topology which outputs voltage less than or equal
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="122 views">
-    122 views
+        <div class="views " title="137 views">
+    137 views
 </div>
     </div>
     <div class="summary">
@@ -281,14 +701,14 @@ We usually take 40% buffer on the calculated minimum inductance value(so, that i
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-14 06:52:11Z" class="relativetime">Nov 14 at 6:52</span>
+        asked <span title="2013-11-14 06:52:11Z" class="relativetime">Nov 14 '13 at 6:52</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/19579/user19579"><div><img src="https://www.gravatar.com/avatar/1e03614454e1ab2a02488edc6fdda9d3?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/19579/user19579">user19579</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">341</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">441</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -307,8 +727,8 @@ We usually take 40% buffer on the calculated minimum inductance value(so, that i
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="58 views">
-    58 views
+        <div class="views " title="62 views">
+    62 views
 </div>
     </div>
     <div class="summary">
@@ -325,7 +745,7 @@ We usually take 40% buffer on the calculated minimum inductance value(so, that i
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-06 16:14:10Z" class="relativetime">Nov 6 at 16:14</span>
+        asked <span title="2013-11-06 16:14:10Z" class="relativetime">Nov 6 '13 at 16:14</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/17790/alevins"><div><img src="https://www.gravatar.com/avatar/8abc62651d1b605ff3a0f70375e7bd25?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -351,8 +771,8 @@ We usually take 40% buffer on the calculated minimum inductance value(so, that i
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="65 views">
-    65 views
+        <div class="views " title="90 views">
+    90 views
 </div>
     </div>
     <div class="summary">
@@ -369,14 +789,14 @@ We usually take 40% buffer on the calculated minimum inductance value(so, that i
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-31 23:21:31Z" class="relativetime">Oct 31 at 23:21</span>
+        asked <span title="2013-10-31 23:21:31Z" class="relativetime">Oct 31 '13 at 23:21</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/16970/dzarda"><div><img src="https://www.gravatar.com/avatar/82d47fdc13344ab0229293da28d7310f?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/16970/dzarda">Dzarda</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">189</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">334</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
@@ -395,8 +815,8 @@ We usually take 40% buffer on the calculated minimum inductance value(so, that i
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="71 views">
-    71 views
+        <div class="views " title="81 views">
+    81 views
 </div>
     </div>
     <div class="summary">
@@ -413,14 +833,14 @@ We usually take 40% buffer on the calculated minimum inductance value(so, that i
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-28 15:15:16Z" class="relativetime">Oct 28 at 15:15</span>
+        asked <span title="2013-10-28 15:15:16Z" class="relativetime">Oct 28 '13 at 15:15</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/29771/vineet-kaushik"><div><img src="https://www.gravatar.com/avatar/c8198375dbb66be88899da8d62228944?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/29771/vineet-kaushik">Vineet Kaushik</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">103</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">108</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
     </div>
 </div>
         </div>  
@@ -439,8 +859,8 @@ We usually take 40% buffer on the calculated minimum inductance value(so, that i
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="56 views">
-    56 views
+        <div class="views " title="75 views">
+    75 views
 </div>
     </div>
     <div class="summary">
@@ -461,14 +881,14 @@ datasheets consider, say in a transient event, loop will be ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-28 09:41:58Z" class="relativetime">Oct 28 at 9:41</span>
+        asked <span title="2013-10-28 09:41:58Z" class="relativetime">Oct 28 '13 at 9:41</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/19579/user19579"><div><img src="https://www.gravatar.com/avatar/1e03614454e1ab2a02488edc6fdda9d3?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/19579/user19579">user19579</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">341</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">441</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -487,8 +907,8 @@ datasheets consider, say in a transient event, loop will be ...
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="49 views">
-    49 views
+        <div class="views " title="59 views">
+    59 views
 </div>
     </div>
     <div class="summary">
@@ -507,331 +927,14 @@ I know that a standard Buck converter requires DC voltage as input. But if your 
         <div class="started fr">
             <div class="user-info user-hover">
     <div class="user-action-time">
-        asked <span title="2013-10-26 17:11:32Z" class="relativetime">Oct 26 at 17:11</span>
+        asked <span title="2013-10-26 17:11:32Z" class="relativetime">Oct 26 '13 at 17:11</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5542/hkbattousai"><div><img src="https://www.gravatar.com/avatar/b664c2c0e8d7c5259b06af265a4a0f51?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/5542/hkbattousai">hkBattousai</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">2,204</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86280">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="67 views">
-    67 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86280/what-kind-of-capacitor-should-i-use-in-buck-topology-if-the-load-is-a-lead-acid" class="question-hyperlink">What kind of capacitor should I use in Buck topology if the load is a lead-acid battery?</a></h3>
-        <div class="excerpt">
-            
-
-I'm using BQ2031 to charge lead-acid batteries. BQ2031 takes battery voltage as feed back and controls the switching element according to it. Now the load is not a passive element, instead it is a ...
-        </div>          
-        <div class="tags t-capacitor t-battery-charging t-buck t-component-selection t-lead-acid">
-            <a href="/questions/tagged/capacitor" class="post-tag" title="show questions tagged &#39;capacitor&#39;" rel="tag">capacitor</a> <a href="/questions/tagged/battery-charging" class="post-tag" title="show questions tagged &#39;battery-charging&#39;" rel="tag">battery-charging</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> <a href="/questions/tagged/component-selection" class="post-tag" title="show questions tagged &#39;component-selection&#39;" rel="tag">component-selection</a> <a href="/questions/tagged/lead-acid" class="post-tag" title="show questions tagged &#39;lead-acid&#39;" rel="tag">lead-acid</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-10-23 12:25:44Z" class="relativetime">Oct 23 at 12:25</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5542/hkbattousai"><div><img src="https://www.gravatar.com/avatar/b664c2c0e8d7c5259b06af265a4a0f51?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5542/hkbattousai">hkBattousai</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">2,204</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-86036">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>4</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="105 views">
-    105 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/86036/are-buck-converters-conceptually-same-in-low-high-power-applications" class="question-hyperlink">Are Buck converters conceptually same in low/high power applications?</a></h3>
-        <div class="excerpt">
-            I am new to power supply circuits. I am studying datasheet of  buck regulator LM22676 which generate 5V/3.3V dc for micro-controller supply in one of my system.The datasheet says it has a N-channel ...
-        </div>          
-        <div class="tags t-power t-buck t-dc-dc-converter">
-            <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> <a href="/questions/tagged/dc-dc-converter" class="post-tag" title="show questions tagged &#39;dc-dc-converter&#39;" rel="tag">dc-dc-converter</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-21 09:57:26Z" class="relativetime">Oct 21 at 9:57</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/29233/gopi"><div><img src="https://www.gravatar.com/avatar/9e1b5f1aca9181afcfe1f812c9de7607?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/29233/gopi">Gopi</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">66</span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-85809">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="135 views">
-    135 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/85809/building-a-low-power-solar-wind-buck-boost-converter" class="question-hyperlink">Building a low-power solar/wind buck-boost converter</a></h3>
-        <div class="excerpt">
-            Using a 18V(max) solar panel, I'd like to charge a 12V lead-acid battery. I'm working from the basic inverting buck-boost circuit. My main question is, being a relatively low-power circuit, can I ...
-        </div>          
-        <div class="tags t-batteries t-solar-cell t-dc-dc-converter t-buck t-boost">
-            <a href="/questions/tagged/batteries" class="post-tag" title="show questions tagged &#39;batteries&#39;" rel="tag">batteries</a> <a href="/questions/tagged/solar-cell" class="post-tag" title="show questions tagged &#39;solar-cell&#39;" rel="tag">solar-cell</a> <a href="/questions/tagged/dc-dc-converter" class="post-tag" title="show questions tagged &#39;dc-dc-converter&#39;" rel="tag">dc-dc-converter</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> <a href="/questions/tagged/boost" class="post-tag" title="show questions tagged &#39;boost&#39;" rel="tag">boost</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-18 11:24:18Z" class="relativetime">Oct 18 at 11:24</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/23266/boloar"><div class="gravatar-wrapper-32"><img src="http://i.stack.imgur.com/XwHqX.jpg?s=32&g=1" alt=""></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/23266/boloar">Boloar</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">6</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-85234">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>-1</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="58 views">
-    58 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/85234/effect-of-duty-ratio-on-buck-converter-with-battery-load" class="question-hyperlink">Effect of duty ratio on buck converter with battery load</a></h3>
-        <div class="excerpt">
-            Will the battery charging circuit be able to supply charging current if the duty ratio is adjusted to 0.1?
-
-        </div>          
-        <div class="tags t-buck">
-            <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-13 10:53:44Z" class="relativetime">Oct 13 at 10:53</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/20415/anusha"><div><img src="https://www.gravatar.com/avatar/8940a0a1a516a399f15610b92143110c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/20415/anusha">Anusha</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">27</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-85225">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="87 views">
-    87 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/85225/effect-on-output-voltage-for-buck-converter-in-discontinuous-mode" class="question-hyperlink">Effect on output voltage for buck converter in discontinuous mode</a></h3>
-        <div class="excerpt">
-            In a dc-dc switch mode buck converter, why the output voltage is different from the desired value when the inductor current is discontinuous? How can the voltage be adjusted to the required value?
-...
-        </div>          
-        <div class="tags t-buck">
-            <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-13 07:07:28Z" class="relativetime">Oct 13 at 7:07</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/20415/anusha"><div><img src="https://www.gravatar.com/avatar/8940a0a1a516a399f15610b92143110c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/20415/anusha">Anusha</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">27</span><span title="5 bronze badges"><span class="badge3"></span><span class="badgecount">5</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-84210">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>1</strong></span>
-                    <div class="viewcount">vote</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="82 views">
-    82 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/84210/resonant-frequency-of-lc-circuit-in-switching-converter" class="question-hyperlink">Resonant Frequency of LC Circuit in Switching Converter</a></h3>
-        <div class="excerpt">
-            Why do we set resonant frequency of LC circuit in a buck converter to be less than 10% of Fsw?
-For example, if Fsw is 300 kHz, why should resonant frequency be around 30KHZ.
-I am guessing it is due to ...
-        </div>          
-        <div class="tags t-buck">
-            <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-10-03 15:22:19Z" class="relativetime">Oct 3 at 15:22</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/27975/sherby"><div><img src="https://www.gravatar.com/avatar/ab717ad7854d11ea5f017f8e33bd0bd8?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/27975/sherby">Sherby</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">654</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-83944">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>9</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="217 views">
-    217 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/83944/what-is-the-purpose-of-using-mosfet-instead-of-free-wheeling-diode-in-buck-topol" class="question-hyperlink">What is the purpose of using MOSFET instead of free-wheeling diode in Buck topology?</a></h3>
-        <div class="excerpt">
-            
-(Source)
-
-I usually see Buck circuit models in which a MOSFET is used instead of a free-wheeling diode. What I understand from the Buck topology is, when the upper MOSFET is off, it doesn't matter ...
-        </div>          
-        <div class="tags t-mosfet t-switch-mode-power-supply t-buck">
-            <a href="/questions/tagged/mosfet" class="post-tag" title="show questions tagged &#39;mosfet&#39;" rel="tag">mosfet</a> <a href="/questions/tagged/switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a> <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info user-hover">
-    <div class="user-action-time">
-        asked <span title="2013-10-01 09:19:22Z" class="relativetime">Oct 1 at 9:19</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/5542/hkbattousai"><div><img src="https://www.gravatar.com/avatar/b664c2c0e8d7c5259b06af265a4a0f51?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/5542/hkbattousai">hkBattousai</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">2,204</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">2,561</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="13 silver badges"><span class="badge2"></span><span class="badgecount">13</span></span><span title="37 bronze badges"><span class="badge3"></span><span class="badgecount">37</span></span>
     </div>
 </div>
         </div>  
@@ -856,22 +959,22 @@ I usually see Buck circuit models in which a MOSFET is used instead of a free-wh
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/buck?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/buck?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/buck?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/buck?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/buck?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/buck?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=buck&amp;sort=newest" title="the 30 newest buck questions"><span class="feed-icon"></span>newest buck questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=buck&sort=newest" title="the 30 newest buck questions"><span class="feed-icon"></span>newest buck questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">77</div>
+            <div class="summarycount al">83</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/buck" class="post-tag" title="show questions tagged &#39;buck&#39;" rel="tag">buck</a> 
@@ -882,38 +985,279 @@ I usually see Buck circuit models in which a MOSFET is used instead of a free-wh
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/buck+switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;buck switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">21</span></span><br>
-            <a href="/questions/tagged/buck+dc-dc-converter" class="post-tag" title="show questions tagged &#39;buck dc-dc-converter&#39;" rel="tag">dc-dc-converter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span><br>
-            <a href="/questions/tagged/buck+boost" class="post-tag" title="show questions tagged &#39;buck boost&#39;" rel="tag">boost</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span><br>
-            <a href="/questions/tagged/buck+voltage-regulator" class="post-tag" title="show questions tagged &#39;buck voltage-regulator&#39;" rel="tag">voltage-regulator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/buck+power-supply" class="post-tag" title="show questions tagged &#39;buck power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">10</span></span><br>
-            <a href="/questions/tagged/buck+converter" class="post-tag" title="show questions tagged &#39;buck converter&#39;" rel="tag">converter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/buck+inductor" class="post-tag" title="show questions tagged &#39;buck inductor&#39;" rel="tag">inductor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/buck+ldo" class="post-tag" title="show questions tagged &#39;buck ldo&#39;" rel="tag">ldo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/buck+solar-cell" class="post-tag" title="show questions tagged &#39;buck solar-cell&#39;" rel="tag">solar-cell</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/buck+transient" class="post-tag" title="show questions tagged &#39;buck transient&#39;" rel="tag">transient</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/buck+led" class="post-tag" title="show questions tagged &#39;buck led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/buck+noise" class="post-tag" title="show questions tagged &#39;buck noise&#39;" rel="tag">noise</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/buck+power" class="post-tag" title="show questions tagged &#39;buck power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/buck+efficiency" class="post-tag" title="show questions tagged &#39;buck efficiency&#39;" rel="tag">efficiency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/buck+lipo" class="post-tag" title="show questions tagged &#39;buck lipo&#39;" rel="tag">lipo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/buck+frequency" class="post-tag" title="show questions tagged &#39;buck frequency&#39;" rel="tag">frequency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/buck+voltage" class="post-tag" title="show questions tagged &#39;buck voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/buck+design" class="post-tag" title="show questions tagged &#39;buck design&#39;" rel="tag">design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/buck+pcb-design" class="post-tag" title="show questions tagged &#39;buck pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/buck+batteries" class="post-tag" title="show questions tagged &#39;buck batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/buck+battery-charging" class="post-tag" title="show questions tagged &#39;buck battery-charging&#39;" rel="tag">battery-charging</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/buck+lead-acid" class="post-tag" title="show questions tagged &#39;buck lead-acid&#39;" rel="tag">lead-acid</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/buck+beaglebone-black" class="post-tag" title="show questions tagged &#39;buck beaglebone-black&#39;" rel="tag">beaglebone-black</a>&nbsp;<br>
-            <a href="/questions/tagged/buck+bidirectional" class="post-tag" title="show questions tagged &#39;buck bidirectional&#39;" rel="tag">bidirectional</a>&nbsp;<br>
-            <a href="/questions/tagged/buck+low-power" class="post-tag" title="show questions tagged &#39;buck low-power&#39;" rel="tag">low-power</a>&nbsp;<br>
+        <div>
+            <a href="/questions/tagged/buck+switch-mode-power-supply" class="post-tag" title="show questions tagged &#39;buck switch-mode-power-supply&#39;" rel="tag">switch-mode-power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">23</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/buck+voltage-regulator" class="post-tag" title="show questions tagged &#39;buck voltage-regulator&#39;" rel="tag">voltage-regulator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">16</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/buck+dc-dc-converter" class="post-tag" title="show questions tagged &#39;buck dc-dc-converter&#39;" rel="tag">dc-dc-converter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/buck+boost" class="post-tag" title="show questions tagged &#39;buck boost&#39;" rel="tag">boost</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">15</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/buck+power-supply" class="post-tag" title="show questions tagged &#39;buck power-supply&#39;" rel="tag">power-supply</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">11</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/buck+converter" class="post-tag" title="show questions tagged &#39;buck converter&#39;" rel="tag">converter</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/buck+ldo" class="post-tag" title="show questions tagged &#39;buck ldo&#39;" rel="tag">ldo</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/buck+inductor" class="post-tag" title="show questions tagged &#39;buck inductor&#39;" rel="tag">inductor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/buck+solar-cell" class="post-tag" title="show questions tagged &#39;buck solar-cell&#39;" rel="tag">solar-cell</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/buck+noise" class="post-tag" title="show questions tagged &#39;buck noise&#39;" rel="tag">noise</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+led" class="post-tag" title="show questions tagged &#39;buck led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+transient" class="post-tag" title="show questions tagged &#39;buck transient&#39;" rel="tag">transient</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+power" class="post-tag" title="show questions tagged &#39;buck power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+efficiency" class="post-tag" title="show questions tagged &#39;buck efficiency&#39;" rel="tag">efficiency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+pcb-design" class="post-tag" title="show questions tagged &#39;buck pcb-design&#39;" rel="tag">pcb-design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+frequency" class="post-tag" title="show questions tagged &#39;buck frequency&#39;" rel="tag">frequency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+battery-charging" class="post-tag" title="show questions tagged &#39;buck battery-charging&#39;" rel="tag">battery-charging</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+voltage" class="post-tag" title="show questions tagged &#39;buck voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+design" class="post-tag" title="show questions tagged &#39;buck design&#39;" rel="tag">design</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+batteries" class="post-tag" title="show questions tagged &#39;buck batteries&#39;" rel="tag">batteries</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+lead-acid" class="post-tag" title="show questions tagged &#39;buck lead-acid&#39;" rel="tag">lead-acid</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+synchronous" class="post-tag" title="show questions tagged &#39;buck synchronous&#39;" rel="tag">synchronous</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+switching-losses" class="post-tag" title="show questions tagged &#39;buck switching-losses&#39;" rel="tag">switching-losses</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+schematics" class="post-tag" title="show questions tagged &#39;buck schematics&#39;" rel="tag">schematics</a>&nbsp;
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/buck+bidirectional" class="post-tag" title="show questions tagged &#39;buck bidirectional&#39;" rel="tag">bidirectional</a>&nbsp;
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -933,7 +1277,7 @@ I usually see Buck circuit models in which a MOSFET is used instead of a free-wh
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/buck")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1026,7 +1370,7 @@ I usually see Buck circuit models in which a MOSFET is used instead of a free-wh
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1053,14 +1397,11 @@ I usually see Buck circuit models in which a MOSFET is used instead of a free-wh
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1196
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1069,33 +1410,34 @@ I usually see Buck circuit models in which a MOSFET is used instead of a free-wh
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|buck|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|buck|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>

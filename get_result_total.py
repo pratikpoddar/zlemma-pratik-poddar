@@ -179,7 +179,12 @@ if sys.argv[1] == "mergeresults":
 	solargedata = getData('so-large/result.txt')
 	mathselargedata = getData('mathse-large/result.txt')
 	soquantlargedata = getData('so-quant-large/result.txt')
-	#soeleclargedata = getData('so-elec-large/result.txt')
+	soeleclargedata = getData('so-elec-large/result.txt')
+	socslargedata = getData('so-cs-large/result.txt')
+	socrossvalidatedlargedata  = getData('so-crossvalidated-large/result.txt')
+	sodbalargedata = getData('so-dba-large/result.txt')
+	soserverfaultlargedata = getData('so-serverfault-large/result.txt')
+	
 	#wikilangdata = getData('wikilang/result.txt')
 	#wiki_tfidfdata = getData('wiki_tfidf/result.txt')
 	
@@ -203,10 +208,31 @@ if sys.argv[1] == "mergeresults":
                 except:
                         pass
 
-                #try:
-                #        return soeleclargedata[skill1][skill2]
-                #except:
-                #        pass
+                try:
+                        return soeleclargedata[skill1][skill2]
+                except:
+                        pass
+		
+                try:
+                        return socslargedata[skill1][skill2]
+                except:
+                        pass
+
+                try:
+                        return socrossvalidatedlargedata[skill1][skill2]
+                except:
+                        pass
+
+                try:
+                        return sodbalargedata[skill1][skill2]
+                except:
+                        pass
+
+		try:
+			return soserverfaultlargedata[skill1][skill2]
+		except:
+			pass
+
 
 		#try:
 		#	return wikilangdata[skill1][skill2]
@@ -223,7 +249,7 @@ if sys.argv[1] == "mergeresults":
 	#skill_total = list(set(solargedata.keys() + mathselargedata.keys() + wikilangdata.keys() + wiki_tfidfdata.keys() + soquantlargedata.keys() + soeleclargedata.keys()))
 	#skill_total = list(set(solargedata.keys() + mathselargedata.keys() + wikilangdata.keys() + wiki_tfidfdata.keys() + soquantlargedata.keys()))
 
-        skill_total = list(set(solargedata.keys() + mathselargedata.keys() + soquantlargedata.keys()))
+        skill_total = list(set(solargedata.keys() + mathselargedata.keys() + soquantlargedata.keys() + soeleclargedata.keys() + socslargedata.keys() + socrossvalidatedlargedata.keys() + sodbalargedata.keys() + soserverfaultlargedata.keys()))
 
 	execfile("skill_list.py")
 	skill_total = filter(lambda x: x in skill_list, skill_total)
@@ -263,7 +289,11 @@ if sys.argv[1] == "diffresults":
 	getDiff('so-large/result.txt', 'so-large/resultold.txt', 'so-large/diff.txt')
 	getDiff('mathse-large/result.txt', 'mathse-large/resultold.txt', 'mathse-large/diff.txt')
 	getDiff('so-quant-large/result.txt', 'so-quant-large/resultold.txt', 'so-quant-large/diff.txt')
-	#getDiff('so-elec-large/result.txt', 'so-elec-large/resultold.txt', 'so-elec-large/diff.txt')
+	getDiff('so-elec-large/result.txt', 'so-elec-large/resultold.txt', 'so-quant-large/diff.txt')
+	getDiff('so-cs-large/result.txt', 'so-cs-large/resultold.txt', 'so-cs-large/diff.txt')
+	getDiff('so-crossvalidated-large/result.txt', 'so-crossvalidated-large/resultold.txt', 'so-crossvalidated-large/diff.txt')
+	getDiff('so-dba-large/result.txt', 'so-dba-large/resultold.txt', 'so-dba-large/diff.txt')
+	getDiff('so-serverfault-large/result.txt', 'so-serverfault-large/resultold.txt', 'so-serverfault-large/diff.txt')
 	#getDiff('wikilang/result.txt', 'wikilang/resultold.txt', 'wikilang/diff.txt')
 	#getDiff('wiki_tfidf/result.txt', 'wiki_tfidf/resultold.txt', 'wiki_tfidf/diff.txt')
 	getDiff('result.txt', 'resultold.txt', 'diff.txt')
@@ -272,7 +302,11 @@ if sys.argv[1] == "getrenamedresults":
 	getRenamed('so-large/result.txt', 'so-large/renamedresult.txt')
 	getRenamed('mathse-large/result.txt', 'mathse-large/renamedresult.txt')
 	getRenamed('so-quant-large/result.txt', 'so-quant-large/renamedresult.txt')
-	#getRenamed('so-elec-large/result.txt', 'so-elec-large/renamedresult.txt')
+	getRenamed('so-elec-large/result.txt', 'so-elec-large/renamedresult.txt')
+	getRenamed('so-cs-large/result.txt', 'so-cs-large/renamedresult.txt')
+	getRenamed('so-crossvalidated-large/result.txt', 'so-crossvalidated-large/renamedresult.txt')
+	getRenamed('so-dba-large/result.txt', 'so-dba-large/renamedresult.txt')
+	getRenamed('so-serverfault-large/result.txt', 'so-serverfault-large/renamedresult.txt')
 	#getRenamed('wikilang/result.txt', 'wikilang/renamedresult.txt')
 	#getRenamed('wiki_tfidf/result.txt', 'wiki_tfidf/renamedresult.txt')
 	getRenamed('result.txt', 'renamedresult.txt')

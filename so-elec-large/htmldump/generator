@@ -18,8 +18,8 @@
     
     
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="//cdn.sstatic.net/Js/stub.en.js?v=0c501610f52c" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=b0a5a51e797c">
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=73eaaa48300e" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/electronics/all.css?v=867dee7de669">
     
         <link rel="alternate" type="application/atom+xml" title="Feed of questions tagged generator" href="/feeds/tag/generator" />
         <script type="text/javascript">
@@ -43,11 +43,12 @@
             StackExchange.realtime.init('wss://qa.sockets.stackexchange.com,ws://qa.sockets.stackexchange.com');
             StackExchange.realtime.subscribeToInboxNotifications();
                     StackExchange.realtime.subscribeToReputationNotifications('135');
-                        });
+                            StackExchange.realtime.subscribeToTopBarNotifications('135');
+        });
     </script>
     <script type="text/javascript">
-        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1386190744,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","enableSocialMediaInSharePopup":true},"user":{"fkey":"77912b5d6cd08bb8c6bcb337a8d0a08f","isAnonymous":true}});
-        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"1a411fd265fe","js/full-anon.en.js":"661ce6881ef6","js/full.en.js":"bbf650189e28","js/wmd.en.js":"bd9234d44a40","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"d1d834ef85d2","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"111b781cf314","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"b44cee8b2b0b","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"d92fbd81d9fd","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1390328232,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Electrical Engineering Stack Exchange","description":"Q&A for electronics and electrical engineering professionals, students, and enthusiasts","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableSocialMediaInSharePopup":true},"user":{"fkey":"a9c564d4210fe1ba7301c5fe7b54351e","isAnonymous":true,"ab":{"welcome_email":{"v":"c","g":2},"anonymoushero":{"v":"bias2","g":1}}}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"e0bbd4760e83","js/moderator.en.js":"f24049d774be","js/full-anon.en.js":"a913da37f9a7","js/full.en.js":"081ed757f4bd","js/wmd.en.js":"849f408083f3","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"6db6f78458f8","js/help.en.js":"d3cc74d8a93a","js/tageditor.en.js":"6d51a5f8d7f3","js/tageditornew.en.js":"5761dfb80bd0","js/inline-tag-editing.en.js":"f951bd09dc69","js/revisions.en.js":"33fd38144303","js/review.en.js":"44c8a0044283","js/tagsuggestions.en.js":"e4e7b952fcc7","js/post-validation.en.js":"c275fe37d674","js/explore-qlist.en.js":"73825bd006fc","js/events.en.js":"c3218f63807f","js/mathjax-editing.en.js":"a09844f7b738","js/external-editor.en.js":"b3abe8227765"});
         StackExchange.using("gps", function() {
              StackExchange.gps.init(true);
         });
@@ -64,36 +65,134 @@
             });
         </script>
 </head>
-<body class="tagged-questions-page">
+<body class="tagged-questions-page new-topbar">
     <noscript><div id="noscript-padding"></div></noscript>
     <div id="notify-container"></div>
     <div id="overlay-header"></div>
     <div id="custom-header"></div>
-    <div class="container">
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">Explore our sites</a></h3>
+    </div>
+    <div class="modal-content">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+                    <a href="http://blog.stackexchange.com"     data-gps-track="site_switcher.click({ item_type:7 })"
+>blog</a>
+            </div>
+    <a href="//electronics.stackexchange.com" 
+       class="current-site-link site-link js-gps-track"
+            data-gps-track="site_switcher.click({ item_type:3 })"
+>
+        <div class="site-icon favicon favicon-electronics" title="Electrical Engineering"></div>
+        Electrical Engineering
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <a href="//meta.electronics.stackexchange.com" 
+       class="site-link js-gps-track"
+            data-gps-track="site.switch({ target_site:137, item_type:3 });site_switcher.click({ item_type:4 })"
+>
+        <div class="site-icon favicon favicon-electronicsmeta" title="Electrical Engineering Meta"></div>
+        Electrical Engineering Meta
+    </a>
+
+                </li>
+                    </ul>
+        
+
+
+        
+            <div class="child-content"></div>
+
+    </div>
+</div>        </div>
+
+        <div class="network-items">
+            
+            <a href="//stackexchange.com" 
+               class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+               data-gps-track="site_switcher.show"
+               title="A list of all 114 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgenerator" class="login-link">sign up</a>    
+                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgenerator" class="login-link">log in</a>
+                        <a href="/tour">tour</a>
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                <li>
+                    <a href="/tour"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })"
+>
+                        Tour
+                        <span class="item-summary">
+                            Start here for a quick overview of the site
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })"
+>
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="//meta.electronics.stackexchange.com"     class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })"
+>
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="[generator]" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+<script>
+    StackExchange.ready(function () {
+        //topbar.init();
+        StackExchange.topbar.init();
+    });
+</script>    <div class="container">
         <div id="header" class=headeranon>
-            <div id="portalLink">
-                <a class="genu" href="http://stackexchange.com" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
-            </div>
-            <div id="topbar">
-                <div id="hlinks">
-                    <span id="hlinks-user"></span>
-<span id="hlinks-nav">                        <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgenerator">sign up</a>
-
- <span class="lsep">|</span>
-                    <a href="/users/login?returnurl=%2fquestions%2ftagged%2fgenerator">log in</a>
-
- <span class="lsep">|</span>
-</span>
-<span id="hlinks-custom"></span>
-                </div>
-                <div id="hsearch">
-                    <form id="search" action="/search" method="get" autocomplete="off">
-                        <div>
-                            <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="[generator]">
-                        </div>
-                    </form>
-                </div>
-            </div>
             <br class="cbt">
             <div id="hlogo">
                 <a href="/">
@@ -132,11 +231,11 @@
 
 <div id="tabs">
         <a href="/tags/generator/info" title="information about this tag">info</a>
-        <a class="youarehere" href="/questions/tagged/generator?sort=newest&amp;pageSize=15" title="The most recently asked questions">newest</a>
-        <a href="/questions/tagged/generator?sort=frequent&amp;pageSize=15" title="Questions with the most links">frequent</a>
-        <a href="/questions/tagged/generator?sort=votes&amp;pageSize=15" title="Questions with the most votes">votes</a>
-        <a href="/questions/tagged/generator?sort=active&amp;pageSize=15" title="Questions that have recent activity">active</a>
-        <a href="/questions/tagged/generator?sort=unanswered&amp;pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
+        <a class="youarehere" href="/questions/tagged/generator?sort=newest&pageSize=15" title="The most recently asked questions">newest</a>
+        <a href="/questions/tagged/generator?sort=frequent&pageSize=15" title="Questions with the most links">frequent</a>
+        <a href="/questions/tagged/generator?sort=votes&pageSize=15" title="Questions with the most votes">votes</a>
+        <a href="/questions/tagged/generator?sort=active&pageSize=15" title="Questions that have recent activity">active</a>
+        <a href="/questions/tagged/generator?sort=unanswered&pageSize=15" title="Questions that have no upvoted answers">unanswered</a>
 </div>
         </div>
         <div class="question">
@@ -158,32 +257,36 @@ A generator is a device that generates electricity from mechanical energy via di
 
         </div>
         <div id="questions" class="content-padding">
-<div class="question-summary" id="question-summary-92254">
+<div class="question-summary" id="question-summary-96051">
     <div class="statscontainer">
         <div class="statsarrow"></div>
         <div class="stats">
             <div class="vote">
                 <div class="votes">
-                    <span class="vote-count-post "><strong>-1</strong></span>
+                    <span class="vote-count-post "><strong>3</strong></span>
                     <div class="viewcount">votes</div>
                 </div>
             </div>
-            <div class="status unanswered">
-                <strong>0</strong>answers
+            <div class="status answered">
+                <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="24 views">
-    24 views
+        <div class="views " title="107 views">
+    107 views
 </div>
     </div>
     <div class="summary">
-        <h3><a href="/questions/92254/books-to-study-electrical-synchronous-machines" class="question-hyperlink">Books to study electrical Synchronous Machines [on hold]</a></h3>
+        <h3><a href="/questions/96051/what-makes-automotive-alternators-so-inneficient-relative-to-other-applications" class="question-hyperlink">What makes automotive alternators so inneficient relative to other applications?</a></h3>
         <div class="excerpt">
-            Can anyone suggest a good book to study Electrical Synchronous Machines i.e. Synchronous Motors and Generators ??
-Also please suggest some resources where I can get some good problems to solve related ...
+            Automotive and some marine alternators typically have an efficiency curve with a peak of 60%.
+
+
+Image from http://www.intechopen.com
+
+Whereas alternators to other types of applications reach 96% of ...
         </div>          
-        <div class="tags t-motor t-generator t-electric-machine">
-            <a href="/questions/tagged/motor" class="post-tag" title="show questions tagged &#39;motor&#39;" rel="tag">motor</a> <a href="/questions/tagged/generator" class="post-tag" title="show questions tagged &#39;generator&#39;" rel="tag">generator</a> <a href="/questions/tagged/electric-machine" class="post-tag" title="show questions tagged &#39;electric-machine&#39;" rel="tag">electric-machine</a> 
+        <div class="tags t-generator t-efficiency">
+            <a href="/questions/tagged/generator" class="post-tag" title="show questions tagged &#39;generator&#39;" rel="tag">generator</a> <a href="/questions/tagged/efficiency" class="post-tag" title="show questions tagged &#39;efficiency&#39;" rel="tag">efficiency</a> 
 
             <div class="post-menu">
                                                             </div>
@@ -191,14 +294,148 @@ Also please suggest some resources where I can get some good problems to solve r
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-30 07:05:38Z" class="relativetime">Nov 30 at 7:05</span>
+        asked <span title="2014-01-10 21:22:28Z" class="relativetime">Jan 10 at 21:22</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/33456/michaelb"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/9aef6bdd6afa8ba3ca01966ab2e3914e?s=128&d=identicon&r=PG" alt=""></div></a>
+        <a href="/users/27501/diego-c-nascimento"><div><img src="https://www.gravatar.com/avatar/15f5eb5bbbd3279e97ed61c6574af9f5?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
-        <a href="/users/33456/michaelb">MichaelB</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">1</span>
+        <a href="/users/27501/diego-c-nascimento">Diego C Nascimento</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">311</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94510">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>0</strong></span>
+                    <div class="viewcount">votes</div>
+                </div>
+            </div>
+            <div class="status answered">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="94 views">
+    94 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94510/dc-motor-as-a-generator-characteristics" class="question-hyperlink">Dc motor as a generator-Characteristics</a></h3>
+        <div class="excerpt">
+            I am using a DC motor as a generator for my small toy/experiment. The problem is that the motor/generator can not provide enough counter EMF or torque or whatever the correct word is. So the rotor on ...
+        </div>          
+        <div class="tags t-dc t-generator">
+            <a href="/questions/tagged/dc" class="post-tag" title="show questions tagged &#39;dc&#39;" rel="tag">dc</a> <a href="/questions/tagged/generator" class="post-tag" title="show questions tagged &#39;generator&#39;" rel="tag">generator</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-24 09:40:41Z" class="relativetime">Dec 24 '13 at 9:40</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/34636/user2375049"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/af2a31146eb90fe35310c1480dbd912b?s=128&d=identicon&r=PG" alt=""></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/34636/user2375049">user2375049</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-94476">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>1</strong>answer
+            </div>
+        </div>
+        <div class="views " title="57 views">
+    57 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/94476/is-it-possible-to-use-coolers-fans-as-wind-powered-generators" class="question-hyperlink">Is it possible to use coolers/fans as wind powered generators?</a></h3>
+        <div class="excerpt">
+            Is there a way to make a fan/cooler generate electricity by rotating its blades using the forces of nature?
+
+I just tried rotating different coolers and fans I have at home with a 2 volt pocket ...
+        </div>          
+        <div class="tags t-generator">
+            <a href="/questions/tagged/generator" class="post-tag" title="show questions tagged &#39;generator&#39;" rel="tag">generator</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-23 22:21:16Z" class="relativetime">Dec 23 '13 at 22:21</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/9243/user1306322"><div><img src="https://www.gravatar.com/avatar/dea471d8167cc25b4124898455312798?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/9243/user1306322">user1306322</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">409</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
+    </div>
+</div>
+        </div>  
+    </div>
+</div><div class="question-summary" id="question-summary-93873">
+    <div class="statscontainer">
+        <div class="statsarrow"></div>
+        <div class="stats">
+            <div class="vote">
+                <div class="votes">
+                    <span class="vote-count-post "><strong>1</strong></span>
+                    <div class="viewcount">vote</div>
+                </div>
+            </div>
+            <div class="status answered-accepted">
+                <strong>3</strong>answers
+            </div>
+        </div>
+        <div class="views " title="148 views">
+    148 views
+</div>
+    </div>
+    <div class="summary">
+        <h3><a href="/questions/93873/how-does-one-estimate-the-electrical-power-of-a-power-plant" class="question-hyperlink">How does one estimate the electrical power of a power plant?</a></h3>
+        <div class="excerpt">
+            I've asked several people how a power plant creates power (i.e. currents and voltages) and I found that they were unsure. In addition, I’ve done several searches to get more information, and I was not ...
+        </div>          
+        <div class="tags t-power t-generator">
+            <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/generator" class="post-tag" title="show questions tagged &#39;generator&#39;" rel="tag">generator</a> 
+
+            <div class="post-menu">
+                                                            </div>
+        </div>
+        <div class="started fr">
+            <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-12-16 17:00:52Z" class="relativetime">Dec 16 '13 at 17:00</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/31316/jesus"><div><img src="https://www.gravatar.com/avatar/032df3fc467b2da9f58c2173187efbf9?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/31316/jesus">Jesus</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">20</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
     </div>
 </div>
         </div>  
@@ -217,8 +454,8 @@ Also please suggest some resources where I can get some good problems to solve r
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="102 views">
-    102 views
+        <div class="views " title="110 views">
+    110 views
 </div>
     </div>
     <div class="summary">
@@ -235,7 +472,7 @@ Also please suggest some resources where I can get some good problems to solve r
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-17 07:51:05Z" class="relativetime">Nov 17 at 7:51</span>
+        asked <span title="2013-11-17 07:51:05Z" class="relativetime">Nov 17 '13 at 7:51</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/8695/kartik-anand"><div><img src="https://www.gravatar.com/avatar/e0949e7e3d919534f6c1bc2fd36c7fc5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -261,8 +498,8 @@ Also please suggest some resources where I can get some good problems to solve r
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="66 views">
-    66 views
+        <div class="views " title="79 views">
+    79 views
 </div>
     </div>
     <div class="summary">
@@ -279,7 +516,7 @@ Also please suggest some resources where I can get some good problems to solve r
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-11-03 01:42:57Z" class="relativetime">Nov 3 at 1:42</span>
+        asked <span title="2013-11-03 01:42:57Z" class="relativetime">Nov 3 '13 at 1:42</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/31204/user31204"><div><img src="https://www.gravatar.com/avatar/4d7d3188cf31de66b6de699536ed8fd7?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -305,8 +542,8 @@ Also please suggest some resources where I can get some good problems to solve r
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="55 views">
-    55 views
+        <div class="views " title="78 views">
+    78 views
 </div>
     </div>
     <div class="summary">
@@ -325,14 +562,14 @@ Datasheet: ...
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-27 15:48:27Z" class="relativetime">Oct 27 at 15:48</span>
+        asked <span title="2013-10-27 15:48:27Z" class="relativetime">Oct 27 '13 at 15:48</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/27466/wwj"><div><img src="https://www.gravatar.com/avatar/bbf567fe82ca4df0dfd8921c4f70f6f8?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/27466/wwj">WWJ</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">3</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -351,8 +588,8 @@ Datasheet: ...
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="63 views">
-    63 views
+        <div class="views " title="80 views">
+    80 views
 </div>
     </div>
     <div class="summary">
@@ -371,7 +608,7 @@ I have built a regulator/filter/rectifier, using a rectifier bridge, a 6800 uF e
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-10-19 15:00:12Z" class="relativetime">Oct 19 at 15:00</span>
+        asked <span title="2013-10-19 15:00:12Z" class="relativetime">Oct 19 '13 at 15:00</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/5814/heltonbiker"><div><img src="https://www.gravatar.com/avatar/ea104f2947e580667d15b7403829b1ec?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -397,8 +634,8 @@ I have built a regulator/filter/rectifier, using a rectifier bridge, a 6800 uF e
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="204 views">
-    204 views
+        <div class="views " title="218 views">
+    218 views
 </div>
     </div>
     <div class="summary">
@@ -420,10 +657,10 @@ There are several possible answers in my mind listed below:
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-22 19:14:15Z" class="relativetime">Sep 22 at 19:14</span>
+        asked <span title="2013-09-22 19:14:15Z" class="relativetime">Sep 22 '13 at 19:14</span>
     </div>
     <div class="user-gravatar32">
-        <a href="/users/29468/user2654176"><div><img src="https://www.gravatar.com/avatar/ed655cd2c5dcab17898a0cea7d317b32?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
+        <a href="/users/29468/user2654176"><div><img src="https://www.gravatar.com/avatar/e9052c1118611d39e504219e36080213?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
     </div>
     <div class="user-details">
         <a href="/users/29468/user2654176">user2654176</a><br>
@@ -446,8 +683,8 @@ There are several possible answers in my mind listed below:
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="156 views">
-    156 views
+        <div class="views " title="187 views">
+    187 views
 </div>
     </div>
     <div class="summary">
@@ -464,7 +701,7 @@ There are several possible answers in my mind listed below:
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-17 05:21:29Z" class="relativetime">Sep 17 at 5:21</span>
+        asked <span title="2013-09-17 05:21:29Z" class="relativetime">Sep 17 '13 at 5:21</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/29152/user29152"><div><img src="https://www.gravatar.com/avatar/3791a10e8b20c9f0cbe6e7d73cf78c63?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -490,8 +727,8 @@ There are several possible answers in my mind listed below:
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="133 views">
-    133 views
+        <div class="views " title="147 views">
+    147 views
 </div>
     </div>
     <div class="summary">
@@ -508,7 +745,7 @@ There are several possible answers in my mind listed below:
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-12 18:45:04Z" class="relativetime">Sep 12 at 18:45</span>
+        asked <span title="2013-09-12 18:45:04Z" class="relativetime">Sep 12 '13 at 18:45</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/28961/cross"><div><img src="https://www.gravatar.com/avatar/727177831877729b02692a7eb2284e9c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -534,8 +771,8 @@ There are several possible answers in my mind listed below:
                 <strong>7</strong>answers
             </div>
         </div>
-        <div class="views " title="161 views">
-    161 views
+        <div class="views " title="163 views">
+    163 views
 </div>
     </div>
     <div class="summary">
@@ -553,7 +790,7 @@ There are several possible answers in my mind listed below:
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-12 12:34:47Z" class="relativetime">Sep 12 at 12:34</span>
+        asked <span title="2013-09-12 12:34:47Z" class="relativetime">Sep 12 '13 at 12:34</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/28953/akkatracker"><div><img src="https://www.gravatar.com/avatar/25364685944e43b96f2fcdefc2b23e2d?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -579,8 +816,8 @@ There are several possible answers in my mind listed below:
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="91 views">
-    91 views
+        <div class="views " title="95 views">
+    95 views
 </div>
     </div>
     <div class="summary">
@@ -598,7 +835,7 @@ A gas generator rated at 700 watts and 120V puts out about 5.8 amps. Is it possi
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-07 06:16:56Z" class="relativetime">Sep 7 at 6:16</span>
+        asked <span title="2013-09-07 06:16:56Z" class="relativetime">Sep 7 '13 at 6:16</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/28620/q-q"><div><img src="https://www.gravatar.com/avatar/1c3477b986ebd54ac950ecffb23bf2d3?s=32&d=identicon&r=PG&f=1" alt="" width="32" height="32"></div></a>
@@ -624,8 +861,8 @@ A gas generator rated at 700 watts and 120V puts out about 5.8 amps. Is it possi
                 <strong>1</strong>answer
             </div>
         </div>
-        <div class="views " title="138 views">
-    138 views
+        <div class="views " title="150 views">
+    150 views
 </div>
     </div>
     <div class="summary">
@@ -642,7 +879,7 @@ A gas generator rated at 700 watts and 120V puts out about 5.8 amps. Is it possi
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-09-02 16:42:21Z" class="relativetime">Sep 2 at 16:42</span>
+        asked <span title="2013-09-02 16:42:21Z" class="relativetime">Sep 2 '13 at 16:42</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/22980/calin"><div><img src="https://www.gravatar.com/avatar/6f8d5b69238607b85c6c4a981d2dbbf5?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -668,8 +905,8 @@ A gas generator rated at 700 watts and 120V puts out about 5.8 amps. Is it possi
                 <strong>2</strong>answers
             </div>
         </div>
-        <div class="views " title="202 views">
-    202 views
+        <div class="views " title="229 views">
+    229 views
 </div>
     </div>
     <div class="summary">
@@ -686,7 +923,7 @@ A gas generator rated at 700 watts and 120V puts out about 5.8 amps. Is it possi
         <div class="started fr">
             <div class="user-info ">
     <div class="user-action-time">
-        asked <span title="2013-08-04 00:08:28Z" class="relativetime">Aug 4 at 0:08</span>
+        asked <span title="2013-08-04 00:08:28Z" class="relativetime">Aug 4 '13 at 0:08</span>
     </div>
     <div class="user-gravatar32">
         <a href="/users/27079/federico"><div><img src="https://www.gravatar.com/avatar/1da4e11b7066bcde7d821a6218ef538a?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
@@ -694,142 +931,6 @@ A gas generator rated at 700 watts and 120V puts out about 5.8 amps. Is it possi
     <div class="user-details">
         <a href="/users/27079/federico">Federico</a><br>
         <span class="reputation-score" title="reputation score " dir="ltr">33</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-74051">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>2</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="64 views">
-    64 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/74051/where-are-the-losses-in-an-inverter-type-portable-generator" class="question-hyperlink">Where are the losses in an inverter-type portable generator?</a></h3>
-        <div class="excerpt">
-            I have an inverter-type portable gasoline generator that is rated at 3kW / 3.3kW surge.
-In the service manual, the engine's power output is said to be 4kW. (The engine's displacement is 269cc).
-I am ...
-        </div>          
-        <div class="tags t-power t-generator t-inverter">
-            <a href="/questions/tagged/power" class="post-tag" title="show questions tagged &#39;power&#39;" rel="tag">power</a> <a href="/questions/tagged/generator" class="post-tag" title="show questions tagged &#39;generator&#39;" rel="tag">generator</a> <a href="/questions/tagged/inverter" class="post-tag" title="show questions tagged &#39;inverter&#39;" rel="tag">inverter</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-25 20:55:30Z" class="relativetime">Jun 25 at 20:55</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/24169/luke"><div><img src="https://www.gravatar.com/avatar/a137743bf18c4dad495beec0ac42ea8c?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/24169/luke">Luke</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">59</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-73598">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>8</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered">
-                <strong>1</strong>answer
-            </div>
-        </div>
-        <div class="views " title="289 views">
-    289 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/73598/what-is-load-in-percentage" class="question-hyperlink">What is &#39;load&#39; in percentage?</a></h3>
-        <div class="excerpt">
-            Aircraft Airbus 320 has two 110/220v 400 hz 90 kva generators, run by two engines. There is an electronic display in the aircraft that also shows the parameters of the electrical system. One of the ...
-        </div>          
-        <div class="tags t-generator">
-            <a href="/questions/tagged/generator" class="post-tag" title="show questions tagged &#39;generator&#39;" rel="tag">generator</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-21 13:08:25Z" class="relativetime">Jun 21 at 13:08</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/25530/saurabh"><div><img src="https://www.gravatar.com/avatar/a6b74011bd5a14abdfea04b9552aa071?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/25530/saurabh">Saurabh</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">183</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
-    </div>
-</div>
-        </div>  
-    </div>
-</div><div class="question-summary" id="question-summary-71683">
-    <div class="statscontainer">
-        <div class="statsarrow"></div>
-        <div class="stats">
-            <div class="vote">
-                <div class="votes">
-                    <span class="vote-count-post "><strong>0</strong></span>
-                    <div class="viewcount">votes</div>
-                </div>
-            </div>
-            <div class="status answered-accepted">
-                <strong>2</strong>answers
-            </div>
-        </div>
-        <div class="views " title="265 views">
-    265 views
-</div>
-    </div>
-    <div class="summary">
-        <h3><a href="/questions/71683/what-happens-in-a-seperately-excited-dc-generator-when-load-increased" class="question-hyperlink">what happens in a seperately excited DC generator when load increased</a></h3>
-        <div class="excerpt">
-            A book about electrical machines states as below
-
-...
-        </div>          
-        <div class="tags t-dc-motor t-electromagnetism t-generator t-electric-machine">
-            <a href="/questions/tagged/dc-motor" class="post-tag" title="show questions tagged &#39;dc-motor&#39;" rel="tag">dc-motor</a> <a href="/questions/tagged/electromagnetism" class="post-tag" title="show questions tagged &#39;electromagnetism&#39;" rel="tag">electromagnetism</a> <a href="/questions/tagged/generator" class="post-tag" title="show questions tagged &#39;generator&#39;" rel="tag">generator</a> <a href="/questions/tagged/electric-machine" class="post-tag" title="show questions tagged &#39;electric-machine&#39;" rel="tag">electric-machine</a> 
-
-            <div class="post-menu">
-                                                            </div>
-        </div>
-        <div class="started fr">
-            <div class="user-info ">
-    <div class="user-action-time">
-        asked <span title="2013-06-05 13:39:08Z" class="relativetime">Jun 5 at 13:39</span>
-    </div>
-    <div class="user-gravatar32">
-        <a href="/users/22844/desireprg"><div><img src="https://www.gravatar.com/avatar/7a3de1da6166e93765a1adb98b6fedba?s=32&d=identicon&r=PG" alt="" width="32" height="32"></div></a>
-    </div>
-    <div class="user-details">
-        <a href="/users/22844/desireprg">DesirePRG</a><br>
-        <span class="reputation-score" title="reputation score " dir="ltr">22</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
     </div>
 </div>
         </div>  
@@ -854,76 +955,305 @@ I am ...
     </div>
 
 <div class="page-sizer fr">
-            <a href="/questions/tagged/generator?sort=newest&amp;pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
-            <a href="/questions/tagged/generator?sort=newest&amp;pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
-            <a href="/questions/tagged/generator?sort=newest&amp;pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
+            <a href="/questions/tagged/generator?sort=newest&pagesize=15" title="show 15 items per page" class="page-numbers current">15</a>
+            <a href="/questions/tagged/generator?sort=newest&pagesize=30" title="show 30 items per page" class="page-numbers ">30</a>
+            <a href="/questions/tagged/generator?sort=newest&pagesize=50" title="show 50 items per page" class="page-numbers ">50</a>
         <span class="page-numbers desc">per page</span>
     </div>
         
 
 <div id="feed-link">
-    <div id="feed-link-text"><a href="/feeds/tag?tagnames=generator&amp;sort=newest" title="the 30 newest generator questions"><span class="feed-icon"></span>newest generator questions feed</a></div>
+    <div id="feed-link-text"><a href="/feeds/tag?tagnames=generator&sort=newest" title="the 30 newest generator questions"><span class="feed-icon"></span>newest generator questions feed</a></div>
 </div>
 
 
     </div>
     <div id="sidebar">
         <div class="module">
-            <div class="summarycount al">80</div>
+            <div class="summarycount al">84</div>
             <p>questions tagged</p>
             <div class="tagged">
                 <a href="/questions/tagged/generator" class="post-tag" title="show questions tagged &#39;generator&#39;" rel="tag">generator</a> 
 <a style='margin-left:10px;' title='tag wiki, stats and faq' href='/tags/generator/info'>about&nbsp;&raquo;</a>            </div>
         </div>
 
-<div class="module community-bulletin" data-tracker="cb=1">
-    <h4>Community Bulletin</h4>
-    <div class="related">
-
-            <div class="spacer">
-                <div class="bulletin-item-type"><a href="http://blog.stackoverflow.com" class="event-date" target="_blank">blog</a></div>
-                <div class="bulletin-item-content">
-                    <a href="http://blog.stackoverflow.com/2013/12/a-new-top-bar-for-stack-exchange/" class="question-hyperlink" target="_blank">A New Top Bar for Stack Exchange</a>
-                </div>
-                <br class="cbt" />
-            </div>
-    </div>
-</div>        
+        
         
         
 
-            <div class="module">
+            <div class="module js-gps-related-tags">
                 
 <h4 id="h-related-tags">Related Tags</h4>
-            <a href="/questions/tagged/generator+power" class="post-tag" title="show questions tagged &#39;generator power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">12</span></span><br>
-            <a href="/questions/tagged/generator+ac" class="post-tag" title="show questions tagged &#39;generator ac&#39;" rel="tag">ac</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span><br>
-            <a href="/questions/tagged/generator+motor" class="post-tag" title="show questions tagged &#39;generator motor&#39;" rel="tag">motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span><br>
-            <a href="/questions/tagged/generator+dc" class="post-tag" title="show questions tagged &#39;generator dc&#39;" rel="tag">dc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span><br>
-            <a href="/questions/tagged/generator+electromagnetism" class="post-tag" title="show questions tagged &#39;generator electromagnetism&#39;" rel="tag">electromagnetism</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/generator+electric-machine" class="post-tag" title="show questions tagged &#39;generator electric-machine&#39;" rel="tag">electric-machine</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span><br>
-            <a href="/questions/tagged/generator+frequency" class="post-tag" title="show questions tagged &#39;generator frequency&#39;" rel="tag">frequency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span><br>
-            <a href="/questions/tagged/generator+energy-harvesting" class="post-tag" title="show questions tagged &#39;generator energy-harvesting&#39;" rel="tag">energy-harvesting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/generator+dc-motor" class="post-tag" title="show questions tagged &#39;generator dc-motor&#39;" rel="tag">dc-motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/generator+wave" class="post-tag" title="show questions tagged &#39;generator wave&#39;" rel="tag">wave</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/generator+energy" class="post-tag" title="show questions tagged &#39;generator energy&#39;" rel="tag">energy</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/generator+voltage-regulator" class="post-tag" title="show questions tagged &#39;generator voltage-regulator&#39;" rel="tag">voltage-regulator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span><br>
-            <a href="/questions/tagged/generator+signal" class="post-tag" title="show questions tagged &#39;generator signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/generator+capacitor" class="post-tag" title="show questions tagged &#39;generator capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/generator+led" class="post-tag" title="show questions tagged &#39;generator led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span><br>
-            <a href="/questions/tagged/generator+high-voltage" class="post-tag" title="show questions tagged &#39;generator high-voltage&#39;" rel="tag">high-voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/generator+discharge" class="post-tag" title="show questions tagged &#39;generator discharge&#39;" rel="tag">discharge</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/generator+power-distribution" class="post-tag" title="show questions tagged &#39;generator power-distribution&#39;" rel="tag">power-distribution</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/generator+rotor" class="post-tag" title="show questions tagged &#39;generator rotor&#39;" rel="tag">rotor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/generator+crystal" class="post-tag" title="show questions tagged &#39;generator crystal&#39;" rel="tag">crystal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/generator+load" class="post-tag" title="show questions tagged &#39;generator load&#39;" rel="tag">load</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/generator+voltage" class="post-tag" title="show questions tagged &#39;generator voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/generator+automotive" class="post-tag" title="show questions tagged &#39;generator automotive&#39;" rel="tag">automotive</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/generator+solar-cell" class="post-tag" title="show questions tagged &#39;generator solar-cell&#39;" rel="tag">solar-cell</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
-            <a href="/questions/tagged/generator+current" class="post-tag" title="show questions tagged &#39;generator current&#39;" rel="tag">current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span><br>
+        <div>
+            <a href="/questions/tagged/generator+power" class="post-tag" title="show questions tagged &#39;generator power&#39;" rel="tag">power</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">13</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/generator+ac" class="post-tag" title="show questions tagged &#39;generator ac&#39;" rel="tag">ac</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">9</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/generator+dc" class="post-tag" title="show questions tagged &#39;generator dc&#39;" rel="tag">dc</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">8</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/generator+motor" class="post-tag" title="show questions tagged &#39;generator motor&#39;" rel="tag">motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">7</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/generator+electromagnetism" class="post-tag" title="show questions tagged &#39;generator electromagnetism&#39;" rel="tag">electromagnetism</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">6</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/generator+electric-machine" class="post-tag" title="show questions tagged &#39;generator electric-machine&#39;" rel="tag">electric-machine</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/generator+frequency" class="post-tag" title="show questions tagged &#39;generator frequency&#39;" rel="tag">frequency</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">5</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/generator+dc-motor" class="post-tag" title="show questions tagged &#39;generator dc-motor&#39;" rel="tag">dc-motor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/generator+energy-harvesting" class="post-tag" title="show questions tagged &#39;generator energy-harvesting&#39;" rel="tag">energy-harvesting</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div>
+            <a href="/questions/tagged/generator+voltage-regulator" class="post-tag" title="show questions tagged &#39;generator voltage-regulator&#39;" rel="tag">voltage-regulator</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+energy" class="post-tag" title="show questions tagged &#39;generator energy&#39;" rel="tag">energy</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+wave" class="post-tag" title="show questions tagged &#39;generator wave&#39;" rel="tag">wave</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">4</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+signal" class="post-tag" title="show questions tagged &#39;generator signal&#39;" rel="tag">signal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+capacitor" class="post-tag" title="show questions tagged &#39;generator capacitor&#39;" rel="tag">capacitor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+led" class="post-tag" title="show questions tagged &#39;generator led&#39;" rel="tag">led</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">3</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+rotor" class="post-tag" title="show questions tagged &#39;generator rotor&#39;" rel="tag">rotor</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+discharge" class="post-tag" title="show questions tagged &#39;generator discharge&#39;" rel="tag">discharge</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+automotive" class="post-tag" title="show questions tagged &#39;generator automotive&#39;" rel="tag">automotive</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+voltage" class="post-tag" title="show questions tagged &#39;generator voltage&#39;" rel="tag">voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+high-voltage" class="post-tag" title="show questions tagged &#39;generator high-voltage&#39;" rel="tag">high-voltage</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+load" class="post-tag" title="show questions tagged &#39;generator load&#39;" rel="tag">load</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+crystal" class="post-tag" title="show questions tagged &#39;generator crystal&#39;" rel="tag">crystal</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+solar-cell" class="post-tag" title="show questions tagged &#39;generator solar-cell&#39;" rel="tag">solar-cell</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+current" class="post-tag" title="show questions tagged &#39;generator current&#39;" rel="tag">current</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <div class="dno js-hidden">
+            <a href="/questions/tagged/generator+power-distribution" class="post-tag" title="show questions tagged &#39;generator power-distribution&#39;" rel="tag">power-distribution</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">&times;</span>&nbsp;<span class="item-multiplier-count">2</span></span>
+        </div>
+        <a href="#"
+           class="show-more js-show-more js-gps-track"
+           data-gps-track="related_tags.click({ item_type:2 })">
+            more related tags
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#h-related-tags').parent();
+                $div.find('.js-show-more').click(function () {
+                    $div.find('.js-hidden').show();
+                    $(this).remove();
+                    return false;
+                });
+            });
+        </script>
 
             </div>
 
+        
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:9 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/18986/draw-the-olympic-games-logo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:200 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Draw the Olympic Games logo
+                </a>
 
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/704218/why-there-is-such-a-big-difference-between-size-and-size-on-disk" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:3 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why there is such a big difference between &quot;Size&quot; and &quot;Size on disk&quot;?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18362/is-it-ethical-to-write-answers-to-work-relevant-stack-exchange-questions-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is it ethical to write answers to work-relevant Stack Exchange questions on the clock?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/94471/how-do-i-explain-to-a-6-year-old-why-people-on-the-other-side-of-the-earth-dont" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:151 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I explain to a 6 year old why people on the other side of the earth don&#39;t fall off?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155194/tufte-like-axis-with-pgfplots" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Tufte like axis with pgfplots
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/21256252/force-compiler-to-ignore-some-lines-in-the-program" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:1 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Force compiler to ignore some lines in the program
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/110256/cant-apply-chmod-to-a-file" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:106 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can&#39;t apply chmod to a file
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18413/how-do-you-handle-an-interview-for-a-candidate-who-is-performing-poorly" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do you handle an interview for a candidate who is performing poorly?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155087/the-spiral-of-roots-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    The Spiral of Roots in TikZ
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646238/how-do-i-convince-my-students-that-the-choice-of-variable-of-integration-is-irre" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I convince my students that the choice of variable of integration is irrelevant?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/151703/is-eve-online-turn-based-behind-the-scenes" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:41 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is EVE Online turn-based behind the scenes?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    What is the difference between a point and a vector
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18406/how-do-i-promote-a-game-in-the-office" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    How do I promote a game in the office?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155255/why-study-cm-abelian-varieties" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Why study CM abelian varieties?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/1189/raising-the-flaps-right-after-touchdown-good-or-bad" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:528 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Raising the flaps right after touchdown. Good or bad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/646068/integration-by-substitution-fail" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:69 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    integration by substitution fail
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/49991/should-yes-delete-it-be-red-or-green" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:102 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Should &quot;Yes, delete it&quot; be red or green?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/16007/is-the-phrase-we-can-see-that-appropriate-in-research-papers" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:415 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Is the phrase &quot;We can see that ...&quot; appropriate in research papers?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/39720/temperature-conversion-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:196 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Temperature conversion in C
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/568627/can-a-program-tell-it-is-being-run-under-sudo" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:2 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Can a program tell it is being run under sudo?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathoverflow" title="MathOverflow"></div><a href="http://mathoverflow.net/questions/155258/projective-embedding-in-families-of-curves" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:504 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Projective embedding in families of curves
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="http://salesforce.stackexchange.com/questions/24748/as-an-system-administrator-how-can-i-view-other-user-profiles-from-their-perspe" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:459 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    As an system administrator, how can i view other user profiles from their perspective?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/155234/align-matrices-problem" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:85 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Align matrices problem
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/18324/cheating-in-a-phone-interview" class="js-gps-track" data-gps-track="site.switch({ item_type:9, target_site:423 }); posts_hot_network.click({ item_type:2, location:9 })">
+                    Cheating in a phone interview
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:9 })">
+            more hot questions
+        </a>
+        <script>
+            StackExchange.ready(function () {
+                var $div = $('#hot-network-questions'),
+                    $more = $div.find('.js-show-more'),
+                    $hidden = $div.find('.js-hidden');
+
+                $more.click(function () {
+                    $hidden.show();
+                    $more.remove();
+                    return false;
+                });
+
+            
+            });
+        </script>
+</div>
     </div>
 
         </div>
@@ -943,7 +1273,7 @@ I am ...
                     <a href="http://stackexchange.com/about/hiring">jobs</a>
                     <a href="http://stackexchange.com/about/contact">advertising info</a>
 
-                    <a onclick='StackExchange.switchMobile("on", "/questions/tagged/generator")'>mobile</a>
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
                     <b><a href="/contact">contact us</a></b>
                         <b><a href="http://meta.electronics.stackexchange.com">feedback</a></b>
                     
@@ -1036,7 +1366,7 @@ I am ...
             <td>
                 <ol>
                         <li><a href="http://math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
-                        <li><a href="http://stats.stackexchange.com" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+                        <li><a href="http://stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
                         <li><a href="http://cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
                         <li><a href="http://physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
                         <li><a href="http://mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
@@ -1063,14 +1393,11 @@ I am ...
             </div>
 
             <div id="copyright">
-                site design / logo &#169; 2013 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
- with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
-            </div>
-            <div id="footer-flair">
-                <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                site design / logo &#169; 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
             </div>
             <div id="svnrev">
-                rev 2013.12.4.1197
+                rev 2014.1.21.1318
             </div>
             
         </div>
@@ -1079,33 +1406,34 @@ I am ...
         <div id="noscript-warning">Electrical Engineering Stack Exchange works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
     </noscript>
 
-    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-24']);
-        _gaq.push(['_setDomainName','.stackexchange.com']);
-        _gaq.push(['_setCustomVar', 1, 'tags', '|generator|']); 
-_gaq.push(['_trackPageview']);
-    var _qevents = _qevents || [];
-    var _comscore = _comscore || [];
-    (function () {
-        var ssl='https:'==document.location.protocol,
-            s=document.getElementsByTagName('script')[0],
-            ga=document.createElement('script');
-        ga.type='text/javascript';
-        ga.async=true;
-        ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(ga,s);
-        var sc=document.createElement('script');
-        sc.type='text/javascript';
-        sc.async=true;
-        sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
-        s.parentNode.insertBefore(sc, s);
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-24', '.stackexchange.com');
         
-        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-        el.parentNode.insertBefore(s, el);
         
-    })();
-    _comscore.push({ c1: "2", c2: "17440561" });
-    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
-    </script>            
+        ga('set', 'dimension2', '|generator|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.type='text/javascript';
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>
+            
 </body>
 </html>
