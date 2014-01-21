@@ -204,6 +204,9 @@ if sys.argv[1] == "saveresults":
 		val = prob_A_given_B(comb[0], comb[1])
 		outputdict[comb[0]][comb[1]] = val
 
+        for skill in skills2:
+                outputdict[skill][skill] = val
+
 	print outputdict
 	printMatrix(skills, outputdict)
 	with open('result.txt', 'w') as infile:

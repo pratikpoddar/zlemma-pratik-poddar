@@ -2,6 +2,8 @@ import math
 import json
 import numpy as np
 from cluster import *
+import networkx as nx
+import operator
 
 bins = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 print(bins)
@@ -27,6 +29,20 @@ def getBinnedResults(dictionary):
 	print map(lambda x: int(x*10000.0/sum(hist))/100.0, hist)
 	return hist
 
+def getStatisticalChecks():
+	def tf(vec):
+		return 1
+	
+	mean_error_vecs = []
+	d = getData('renamedcomplete.txt')
+	keys = d.keys()
+	for k in keys:
+		v = filter(lambda x: 0.001 < x < 0.999, d[k].values())
+		if v:
+			if np.mean(v)>0.3:
+				mean_error_vecs.append(k)
+	return {'meanerror': mean_error_vecs}
+
 #renameSkillList(skill_list)
 def renameSkillList(skill_list):
 
@@ -45,8 +61,6 @@ def renameSkillList(skill_list):
         removekeys = list(set(removekeys))
         addkeys = list(set(addkeys))
 
-        print removekeys
-        print addkeys
         for k in removekeys:
 		try:
 	                list_of_skills.remove(k)
@@ -86,32 +100,54 @@ def identifyWeakNodes(filename, threshold_func):
 
 	return {'o': outbound_pain, 'i': inbound_pain }
 
-def identify_clusters(filename):
+def identify_non_reciprocative_pairs(filename, threshold_value):
+	
+	d = getData(filename)
+	ks = d.keys()
+		
+	error_pairs = []
+	for key1 in ks:
+		for key2 in ks:
+			if d[key1][key2]-d[key2][key1] > threshold_value:
+				error_pairs.append((key1, key2))
+	return error_pairs
+
+def identify_non_transitive_triplets(filename):
+
+	d = getData(filename)
+	ks = d.keys()
+	
+	error_triplets = []
+	for key1 in ks:
+		for key2 in ks:
+			if d[key1][key2] > 0.7:
+				for key3 in ks:
+					if d[key2][key3] > 0.7 and d[key1][key3]<0.7:
+						error_triplets.append([key1, key2, key3])
+	return error_triplets
+	
+def identify_clusters(filename, threshold):
 
 	d = getData(filename)
 	keys = d.keys()
 	
-	print "Hierarchical Clustering on " + filename
-	cl = HierarchicalClustering(keys, lambda x,y: 0-math.log(max(d[x][y],d[y][x],0.0001)))
-	for c in cl.getlevel(1):
-		print c
-
-	return cl.getlevel(1)
-
-	#nparray = []
-	#for key1 in keys:
-	#	nparray2 = []
-	#	for key2 in keys:
-	#		nparray2.append(max(d[key1][key2], d[key2][key1]))
-	#	nparray.append(nparray2)
+	nparray = []
+	for key1 in keys:
+		nparray2 = []
+		for key2 in keys:
+			if max(d[key1][key2], d[key2][key1]) > threshold:
+				nparray2.append(1)
+			else:
+				nparray2.append(0)
+		nparray.append(nparray2)
 	
-	#A = np.array(nparray)
+	A = np.array(nparray)
 
-	#G = nx.from_numpy_matrix(A, create_using=nx.DiGraph())
-	#for subg in nx.strongly_connected_component_subgraphs(G):
-	#    print map(lambda x: keys[x], subg.nodes())
+	G = nx.from_numpy_matrix(A, create_using=nx.DiGraph())
+	for subg in nx.strongly_connected_component_subgraphs(G):
+	    print map(lambda x: keys[x], subg.nodes())
 
-	#return map(lambda subg: map(lambda x: keys[x], subg.nodes()), nx.strongly_connected_component_subgraphs(G))
+	return map(lambda subg: map(lambda x: keys[x], subg.nodes()), nx.strongly_connected_component_subgraphs(G))
 
 def identify_big_numbers(filename, threshold):
 
@@ -123,7 +159,7 @@ def identify_big_numbers(filename, threshold):
 	for key1 in keys:
 		for key2 in keys:
 			if (d[key1][key2] >= threshold) and (not (key1 == key2)):
-				print key1 + " " + key2 + " " + str(d[key1][key2])
+				print key1 + ", " + key2 + " " + str(d[key1][key2]) + " (other side) " + str(d[key2][key1])
 				output.append((key1, key2))
 	return output
 
@@ -160,19 +196,33 @@ def identify_possible_clusters(filename, threshold):
         return list_of_clusters
 
 
+def investigateSkill(filename, skill):
+
+	d = getData(filename)
+	n = transpose_dict_of_dicts(d)
+
+	best_outgoing = dict(sorted(d[skill].iteritems(), key=operator.itemgetter(1), reverse=True)[:5]).keys()
+	best_incoming = dict(sorted(n[skill].iteritems(), key=operator.itemgetter(1), reverse=True)[:5]).keys()
+	nearest_neighbours = []
+	for k in best_outgoing + best_incoming:
+		nearest_neighbours.extend(dict(sorted(d[k].iteritems(), key=operator.itemgetter(1), reverse=True)[:3]).keys()+dict(sorted(n[k].iteritems(), key=operator.itemgetter(1), reverse=True)[:3]).keys())
+		nearest_neighbours = list(set(nearest_neighbours))
+	
+	return {'best_outgoing': best_outgoing, 'best_incoming': best_incoming, 'nearest_neighbours': nearest_neighbours}
+
 print "----"
 execfile("skill_list.py")
 list1 = renameSkillList(skill_list)
 list2 = getData('renamedcomplete.txt').keys()
-print len(list1)
-print len(list2)
-print set(list2)-set(list1)
-print set(list1)-set(list2)
+print "Number of Skills in Input File: " + str(len(list1))
+print "Number of Skills in Output File: " + str(len(list2))
+print "Skils in Output File not in Input File: " + str(set(list2)-set(list1))
+print "Skils in Input File not in Input File: " + str(set(list1)-set(list2))
 list3 = list(set(list1+list2))
 list3.sort()
-print list3
-for s in list3:
-	print s
+print "All Skills: " + str(list3)
+#for s in list3:
+#	print s
 outfile = open('allskills.txt', 'w')
 for s in list3:
 	outfile.write(s)
@@ -188,6 +238,7 @@ soquantlargedata = getData('so-quant-large/result.txt')
 wikilangdata = getData('wikilang/result.txt')
 wiki_tfidfdata = getData('wiki_tfidf/result.txt')
 
+print "Binned Results for Different Algorithms"
 print("so")
 getBinnedResults(solargedata)
 print("math-se")
@@ -195,20 +246,10 @@ getBinnedResults(mathselargedata)
 print("so-quant")
 getBinnedResults(soquantlargedata)
 #getBinnedResults(soeleclargedata)
-print("wiki-lang")
-getBinnedResults(wikilangdata)
-print("wiki_tfidf")
-getBinnedResults(wiki_tfidfdata)
-print "----"
-
-print "----"
-s1 = getData('manual_overridden_renamedresult.txt').keys()
-with open('allskills.txt') as f:
-        s2 = map(lambda x : x.replace('\n',''), f.readlines())
-print set(s1)-set(s2)
-print set(s2)-set(s1)
-print len(s1)
-print len(s2)
+#print("wiki-lang")
+#getBinnedResults(wikilangdata)
+#print("wiki_tfidf")
+#getBinnedResults(wiki_tfidfdata)
 print "----"
 
 print "----"
@@ -222,30 +263,66 @@ def tf(l):
 	return True
 
 weaknodes = identifyWeakNodes('renamedcomplete.txt', tf)
+print "Weak Nodes"
 print weaknodes
 print "----"
-	
+
+non_reciprocative_pairs = identify_non_reciprocative_pairs('manual_overridden_renamedresult.txt', 0.4)
+print "Non Reciprocative Pairs on Manual_Overridden_Renamed_Result"
+print non_reciprocative_pairs
 print "----"
-identify_big_numbers('renamedcomplete.txt', 0.7)
+
+#non_reciprocative_pairs = identify_non_reciprocative_pairs('renamedcomplete.txt', 0.4)
+#print "Non Reciprocative Pairs on Renamed_Complete"
+#print non_reciprocative_pairs
+print "----"
+
+non_transitive_triplets = identify_non_transitive_triplets('manual_overridden_renamedresult.txt')
+print "Non Transitive Triplets on Manual_Overridden_Renamed_Result"
+print non_transitive_triplets
 print "----"
 
 print "----"
-identify_possible_clusters('renamedcomplete.txt', 0.6)
+print "Big Numbers"
+identify_big_numbers('renamedcomplete.txt', 0.8)
 print "----"
 
 print "----"
+print "Clusters 1"
+identify_possible_clusters('manual_overridden_renamedresult.txt', 0.8)
+print "----"
+
+print "----"
+print "Clusters 2"
 identify_possible_clusters('renamedcomplete.txt', 0.8)
 print "----"
 
 print "----"
+print "Clusters 3"
 identify_possible_clusters('renamedcomplete.txt', 0.9)
 print "----"
 
+print "----"
+print "Cluster 4"
+identify_clusters('renamedcomplete.txt', 0.7)
+print "----"
+
+print "----"
+print "Cluster 5"
+identify_clusters('renamedcomplete.txt', 0.6)
+print "----"
+
+
+print "----"
+print "Statistical Checks: Mean Error"
+print getStatisticalChecks()['meanerror']
+print "----"
 
 print "xxx"
-	
 
-
+print "----"
+print "Investigating Algorithms Skill"	
+print investigateSkill('renamedcomplete.txt', 'Algorithms')
 
 
 

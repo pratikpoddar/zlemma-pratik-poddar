@@ -54,7 +54,7 @@ def mergeSkills(pathold, pathnew):
 	newOutputDict = {}
 
         for key1 in outputDict.keys():
-                for key2 in outputDict[key1].keys():
+                for key2 in outputDict.keys():
 			try:
 				merge_key1 = merge_replacements[key1]
 			except:
@@ -64,12 +64,12 @@ def mergeSkills(pathold, pathnew):
 				merge_key2 = merge_replacements[key2]
 			except:
 				merge_key2 = key2
-
-			try:
-	                	newOutputDict[merge_key1][merge_key2] = outputDict[key1][key2]
-                        except:
+			
+			if merge_key1 in newOutputDict.keys():
+		               	newOutputDict[merge_key1][merge_key2] = outputDict[key1][key2]
+                       	else:
                                 newOutputDict[merge_key1] = {}
-                                newOutputDict[merge_key1][merge_key2] = outputDict[key1][key2]
+	                        newOutputDict[merge_key1][merge_key2] = outputDict[key1][key2]
 
         with open(pathnew, 'w') as infile:
                 infile.write(json.dumps(newOutputDict))
@@ -232,8 +232,9 @@ if sys.argv[1] == "mergeresults":
         for skill in skill_total:
                 outputdict[skill] = {}
 
-	for comb in itertools.permutations(skill_total,2):
-                outputdict[comb[0]][comb[1]] = getMerged(comb[0], comb[1])
+	for key1 in skill_total:
+		for key2 in skill_total:
+			outputdict[key1][key2] = getMerged(key1, key2)
 
         print outputdict
         with open('result.txt', 'w') as infile:
