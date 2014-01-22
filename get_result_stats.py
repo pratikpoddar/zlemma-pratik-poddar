@@ -244,8 +244,12 @@ for s in list3:
 	outfile.write('\n')
 outfile.close()
 list4 = getData('manualdepartmentmapping.txt').keys()
-print "Skills in Department Mapping not in All Skills: " + str(set(list4)-set(list3))
-print "Skills in All Skills not in Department Mapping: " + str(set(list3)-set(list4))
+print "Skills in Department Mapping not in All Skills: "
+for k in list((set(list4)-set(list3))):
+	print k
+print "Skills in All Skills not in Department Mapping: "
+for k in list((set(list3)-set(list4))):
+        print k
 print "----"
 
 k21 = getData('manualforcedinput.txt')
@@ -259,9 +263,15 @@ for k in k21.keys():
 	keys_in_manual_input += k21[k].keys()
 for k in k22.keys():
         keys_in_manual_input += k22[k].keys()
-print "Skills in Manual Input but not in Skill List: " + str(set(filter(lambda x: x not in skill_list, keys_in_manual_input)))
-print "Skills in Manual Replacements but not in Skill List: " + str(filter(lambda x: x not in map(lambda x: camelCase(x), skill_list), keys_in_manual_replacements))
-print "Skills that appear twice in Manual Replacements Values are: " + str(set([x for x in k3.values() if k3.values().count(x) > 1]))
+print "Skills in Manual Input but not in Skill List: "
+for k in list(set(filter(lambda x: x not in skill_list, keys_in_manual_input))):
+        print k
+print "Skills in Manual Replacements but not in Skill List: "
+for k in list(set(filter(lambda x: x not in map(lambda x: camelCase(x), skill_list), keys_in_manual_replacements))):
+	print k
+print "Skills that appear twice in Manual Replacements Values are: "
+for k in list((set([x for x in k3.values() if k3.values().count(x) > 1]))):
+	print k
 
 print "----"
 
