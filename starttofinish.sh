@@ -1,4 +1,4 @@
-python createmanualinput.py
+#python createmanualinput.py
 ./downloadAllData.sh
 ./saveAllResults.sh
 python get_result_total.py mergeresults
