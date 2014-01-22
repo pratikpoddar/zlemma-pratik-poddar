@@ -243,6 +243,9 @@ for s in list3:
 	outfile.write(s)
 	outfile.write('\n')
 outfile.close()
+list4 = getData('manualdepartmentmapping.txt').keys()
+print "Skills in Department Mapping not in All Skills: " + str(set(list4)-set(list3))
+print "Skills in All Skills not in Department Mapping: " + str(set(list3)-set(list4))
 print "----"
 
 k21 = getData('manualforcedinput.txt')

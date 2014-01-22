@@ -64,3 +64,17 @@ with open('manualforcedinput.txt', 'w') as infile:
                 infile.write(json.dumps(output))
 
 
+d = json.load(urllib2.urlopen('https://spreadsheets.google.com/feeds/list/0AjPfOfZ0QaixdGEzZ2djdHJRVFgtR3pZejhVQlZnSEE/od6/public/basic?hl=en_US&alt=json'))
+output = {}
+
+for entry in d['feed']['entry']:
+	try:
+		output[entry['title']['$t']] = entry['content']['$t']
+	except:
+		pass
+print "Department Mapping of Skills: "
+print output
+with open('manualdepartmentmapping.txt', 'w') as infile:
+                infile.write(json.dumps(output))
+
+
