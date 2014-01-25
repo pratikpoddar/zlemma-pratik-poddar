@@ -66,7 +66,10 @@ def mergeSkills(pathold, pathnew):
 				merge_key2 = key2
 			
 			if merge_key1 in newOutputDict.keys():
-		               	newOutputDict[merge_key1][merge_key2] = outputDict[key1][key2]
+				if merge_key2 in newOutputDict[merge_key1].keys():
+			               	newOutputDict[merge_key1][merge_key2] = max(outputDict[key1][key2],newOutputDict[merge_key1][merge_key2])
+				else:
+					newOutputDict[merge_key1][merge_key2] = outputDict[key1][key2]
                        	else:
                                 newOutputDict[merge_key1] = {}
 	                        newOutputDict[merge_key1][merge_key2] = outputDict[key1][key2]

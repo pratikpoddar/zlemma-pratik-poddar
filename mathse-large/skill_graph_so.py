@@ -183,6 +183,9 @@ skills = map(lambda x: slugify(x), skills)
 skills2 = filter(lambda x: check_skill_so(x), skills)
 print skills2
 
+not_to_be_included_skills = ['kernel-programming']
+skills2 = filter(lambda x: x not in not_to_be_included_skills, skills2)
+
 if sys.argv[1] == "downloaddata":
 	## Save all the files
 	pool = Pool(len(skills2))
