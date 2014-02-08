@@ -4,6 +4,9 @@ import re
 
 output = {}
 
+def strip_tags(text):
+	return re.sub('<[^<]+?>', '', text)
+
 def getCourseContents(link, name):
 	html = urllib2.urlopen(link).read()
 	bs = BeautifulSoup(html)
@@ -15,10 +18,14 @@ def getCourseContents(link, name):
                         for x in rows:
                                 try:
                                         o.append(str(x))
-                                except:
+                                except Exception as e:
                                         pass
                         if o:
-                                output[name] = o
+				#print o
+				try:
+	                                output[name] = map(lambda x: strip_tags(str(x)), o)
+				except Exception as e:
+					print e
         except:
                 pass
 
@@ -29,16 +36,17 @@ def getCourseContents(link, name):
 			for x in rows:
 				try:
 					o.append(x.find_all('td')[1])
-				except:
+				except Exception as e:
 					pass
 			if o:
-				output[name] = o
+				#print o
+				try:
+					output[name] = map(lambda x: strip_tags(str(x)), o)
+				except Exception as e:
+					print e
 	except:
 		pass
 
-	print name
-	print output[name]
-	print "--"
 	return
 
 	
@@ -49,7 +57,8 @@ getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-05
 getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-06-principles-of-automatic-control-fall-2003/calendar/", "Principles of Automatic Control")
 getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/calendar/", "Dynamics")
 getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-100-aerodynamics-fall-2005/calendar/", "Aerodynamics")
-
+getCourseContents("http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2012/calendar/", "Design and Analysis of Algorithms")
+getCourseContents("http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-elements-of-software-construction-fall-2011/calendar/", "Elements of Software Construction")
 
 
 
