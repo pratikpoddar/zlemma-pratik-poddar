@@ -63,6 +63,7 @@ print output
 with open('manualforcedinput.txt', 'w') as infile:
                 infile.write(json.dumps(output))
 
+# Edit at location https://docs.google.com/a/zlemma.com/spreadsheet/ccc?key=0AjPfOfZ0QaixdGEzZ2djdHJRVFgtR3pZejhVQlZnSEE#gid=0
 
 d = json.load(urllib2.urlopen('https://spreadsheets.google.com/feeds/list/0AjPfOfZ0QaixdGEzZ2djdHJRVFgtR3pZejhVQlZnSEE/od6/public/basic?hl=en_US&alt=json'))
 output = {}

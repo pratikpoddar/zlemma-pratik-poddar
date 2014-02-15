@@ -6,23 +6,16 @@ import json
 
 output = {}
 
+blocked_wiki = [ '/en/hot_r_b_hip_hop_songs', '/en/gain', '/en/u_s_open', '/en/first-class_cricket', '/en/workers_compensation', '/en/news', '/en/design', '/en/engineering_ethics', '/en/dell_xps' ]
+
 def get_Freebase_Meaning(term):
 
         try:
                 url = "https://www.googleapis.com/freebase/v1/search?key=AIzaSyCIeO8t4Su2hM0hm8t3aGCgiApBLu7MvGE&query=" + urllib.quote_plus(term)
                 jsonResult = json.loads(urllib2.urlopen(url).read())['result']
                 if jsonResult:
-                        if jsonResult[0]['score']>50:
-                                try:
-                                        return {'parentnode': jsonResult[0]['notable']['name'], 'wikilink': jsonResult[0]['id']}
-                                except:
-                                        try:
-                                                return {'parentnode': '', 'wikilink': jsonResult[0]['id']}
-                                        except:
-                                                try:
-                                                        return {'parentnode': jsonResult[0]['notable']['name'], 'wikilink': ''}
-                                                except:
-                                                        return None
+                        if jsonResult[0]['score']>150:
+                        	return {'node': jsonResult[0]['name'], 'wikilink': jsonResult[0]['id']}
                         else:
                                 return None
                 else:
@@ -35,6 +28,7 @@ def cleantext(text):
 	text1 = text.lower()
 	text1 = text1.replace('introduction to', '')
 	text1 = text1.replace('fundamentals of', '')
+	text1 = re.sub(r'lec #\d+:', ' ', text1)
 	elems = text1.split('\n')
 	elems2 = []
 	for elem in elems:
@@ -48,21 +42,23 @@ def cleantext(text):
 	wikielems = []
 	if text2:
 		#print text2
-		elems = re.split(r'[;,]', text2)
+		elems = re.split(r'[;,]|and', text2)
 		for elem in elems:
 			try:
-				wikielem =  get_Freebase_Meaning(elem)['wikilink']
+				wikielem =  get_Freebase_Meaning(elem)
 				#print wikielem
-				if wikielem:
-					if wikielem.find('/en/') > -1:
-						wikielems.append(wikielem)
+				if wikielem['wikilink']:
+					if wikielem['wikilink'].find('/en/') > -1:
+						if wikielem['wikilink'] not in blocked_wiki:
+							wikielems.append((wikielem['wikilink'], wikielem['node']))
+						
 			except:
 				pass
 	if wikielems:
 		print "wikielems:"
-		print ', '.join(wikielems)
+		print ', '.join(map(lambda x: x[0]+";;"+x[1], wikielems))
 		print "---"
-		return ', '.join(wikielems)
+		return ', '.join(map(lambda x: x[0]+";;"+x[1], wikielems))
 	else:
 		print "---"
 		return None
@@ -70,12 +66,12 @@ def cleantext(text):
 def strip_tags(text):
 	return re.sub('<[^<]+?>', '', text)
 
-def getCourseContents(link, name):
+def getCourseContents(link):
 	html = urllib2.urlopen(link).read()
 	bs = BeautifulSoup(html)
 
         try:
-                if name not in output.keys():
+                if link not in output.keys():
                         rows = bs.find_all('td', attrs = {'headers': 'col4'})
                         o = []
                         for x in rows:
@@ -86,14 +82,14 @@ def getCourseContents(link, name):
                         if o:
 				#print o
 				try:
-	                                output[name] = map(lambda x: cleantext(strip_tags(str(x))), o)
+	                                output[link] = map(lambda x: cleantext(strip_tags(str(x))), o)
 				except Exception as e:
 					print e
         except:
                 pass
 
 	try:
-		if name not in output.keys():
+		if link not in output.keys():
 			rows = bs.find_all('tr', attrs = {'class':re.compile(r'^row$|^alt-row$')})
 			o = []
 			for x in rows:
@@ -104,7 +100,7 @@ def getCourseContents(link, name):
 			if o:
 				#print o
 				try:
-					output[name] = map(lambda x: cleantext(strip_tags(str(x))), o)
+					output[link] = map(lambda x: cleantext(strip_tags(str(x))), o)
 				except Exception as e:
 					print e
 	except:
@@ -113,15 +109,16 @@ def getCourseContents(link, name):
 	return
 
 	
-getCourseContents("http://ocw.mit.edu/courses/physics/8-02-physics-ii-electricity-and-magnetism-spring-2007/class-topics/", "Physics II: Electricity and Magnetism")
-getCourseContents("http://ocw.mit.edu/courses/mechanical-engineering/2-00aj-exploring-sea-space-earth-fundamentals-of-engineering-design-spring-2009/study-materials/", "Exploring Sea, Space, & Earth: Fundamentals of Engineering Design")
-getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-00-introduction-to-aerospace-engineering-and-design-spring-2003/calendar/", "Introduction to Aerospace Engineering and Design")
-getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-050-thermal-energy-fall-2002/calendar/", "Thermal Energy")
-getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-06-principles-of-automatic-control-fall-2003/calendar/", "Principles of Automatic Control")
-getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/calendar/", "Dynamics")
-getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-100-aerodynamics-fall-2005/calendar/", "Aerodynamics")
-getCourseContents("http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2012/calendar/", "Design and Analysis of Algorithms")
-getCourseContents("http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-elements-of-software-construction-fall-2011/calendar/", "Elements of Software Construction")
+
+getCourseContents("http://ocw.mit.edu/courses/physics/8-02-physics-ii-electricity-and-magnetism-spring-2007/class-topics/")
+getCourseContents("http://ocw.mit.edu/courses/mechanical-engineering/2-00aj-exploring-sea-space-earth-fundamentals-of-engineering-design-spring-2009/study-materials/")
+getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-00-introduction-to-aerospace-engineering-and-design-spring-2003/calendar/")
+getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-050-thermal-energy-fall-2002/calendar/")
+getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-06-principles-of-automatic-control-fall-2003/calendar/")
+getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-07-dynamics-fall-2009/calendar/")
+getCourseContents("http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-100-aerodynamics-fall-2005/calendar/")
+getCourseContents("http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2012/calendar/")
+getCourseContents("http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-005-elements-of-software-construction-fall-2011/calendar/")
 
 import pickle
 with open('bubnaocwdump2.pickle', 'w') as f:
