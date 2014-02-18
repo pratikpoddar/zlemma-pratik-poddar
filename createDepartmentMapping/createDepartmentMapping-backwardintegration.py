@@ -20,7 +20,9 @@ def getSkillsFromDepartmentMappingLink(googledocid, outputfile='manualdepartment
 
 	for entry in d['feed']['entry']:
         	try:
-                	output[entry['title']['$t']] = entry['content']['$t']
+			s = entry['content']['$t']
+			a = map(lambda x: x.strip().split(':')[1].strip(), s.split(','))
+                	output[entry['title']['$t']] = [tuple(a[i:i+2]) for i in range(0, len(a), 2)]
 	        except:
         	        pass
 
