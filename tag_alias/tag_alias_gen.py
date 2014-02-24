@@ -174,11 +174,13 @@ for pair in sooutput.items():
 		file = open('stackoverflowtagalias.txt', 'w')
 		pickle.dump(sooutput, file)
 		file.close()
+		print "stackoverflowtagalias.txt file saved - counter " + str(counter)
 
 file = open('stackoverflowtagalias.txt', 'w')
 pickle.dump(sooutput, file)
 file.close()
 
+print "stackoverflowtagalias.txt file saved - finally "
 
 soclosesttag = {}
 for alias in sooutput.keys():
