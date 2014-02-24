@@ -81,6 +81,7 @@ def getAllTags():
 		file = open('stackoverflowalltags.txt', 'r')
 		alltags = pickle.load(file)
 		file.close()
+		alltags = list(set(alltags))
 		if alltags:
 			print "All Tags file already exisits"
 			print len(alltags)
@@ -93,9 +94,11 @@ def getAllTags():
 		print "All Tags file does not exist"
 		for i in range(1055):
 			alltags += map(lambda x: x.text, BeautifulSoup(requests.get("http://stackoverflow.com/tags?page="+str(i)+"&tab=name").text).find_all('',{'class':'post-tag'}))
+		alltags = list(set(alltags))
 		file = open('stackoverflowalltags.txt', 'w')
 		pickle.dump(alltags, file)
 		file.close()
+		alltags = list(set(alltags))
 		print len(alltags)
 		return alltags
 
@@ -184,7 +187,7 @@ print "stackoverflowtagalias.txt file saved - finally "
 
 soclosesttag = {}
 for alias in sooutput.keys():
-	soclosesttag[alias] = findClosestTag(sooutput, alltags, alias)
+	soclosesttag[alias] = findClosestTag(sooutput, allsotags, alias)
 
 file = open('stackoverflowtagaliasfinal.txt', 'w')
 pickle.dump(soclosesttag, file)
