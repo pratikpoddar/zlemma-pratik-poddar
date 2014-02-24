@@ -127,6 +127,27 @@ def initializeClosestMapDictionary(allsotags):
                 return sooutput
 
 
+def findClosestTag(sooutput, alltags, alias):
+
+	output = sooutput[alias]
+	counter = 0
+	while 1:
+		counter+=1
+		if output in alltags:
+			return output
+		if output == alias:
+			return None
+		if output == None:
+			return None
+		if output == '':
+			return None
+		if counter == 50:
+			print "findClosestTag failed for " + alias
+			return None
+		output = sooutput[output]
+
+	return None
+
 #terms = getData('renamedcomplete.txt').keys()
 #output = []
 #for term in terms:
@@ -157,5 +178,16 @@ for pair in sooutput.items():
 file = open('stackoverflowtagalias.txt', 'w')
 pickle.dump(sooutput, file)
 file.close()
+
+
+soclosesttag = {}
+for alias in sooutput.keys():
+	soclosesttag[alias] = findClosestTag(sooutput, alltags, alias)
+
+file = open('stackoverflowtagaliasfinal.txt', 'w')
+pickle.dump(soclosesttag, file)
+file.close()
+
+
 
 
