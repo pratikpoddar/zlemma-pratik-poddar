@@ -76,7 +76,12 @@ def getCourseContents(link):
 	print link
 
 	bs = BeautifulSoup(html)
-
+	
+	try:
+		title = cleantext(strip_tags(str(bs.find('', {"id": "breadcrumb"}).find_all('a')[-1].text)))
+	except:
+		title = ''
+	
         try:
                 if link not in output.keys():
                         rows = bs.find_all('td', attrs = {'headers': 'col4'})
@@ -89,7 +94,7 @@ def getCourseContents(link):
                         if o:
 				#print o
 				try:
-	                                output[link] = map(lambda x: cleantext(strip_tags(str(x))), o)
+	                                output[link] = {'title': title, 'course': map(lambda x: cleantext(strip_tags(str(x))), o)}
 				except Exception as e:
 					print e
         except:
@@ -107,7 +112,7 @@ def getCourseContents(link):
 			if o:
 				#print o
 				try:
-					output[link] = map(lambda x: cleantext(strip_tags(str(x))), o)
+					output[link] = {'title': title, 'course': map(lambda x: cleantext(strip_tags(str(x))), o)}
 				except Exception as e:
 					print e
 	except:
