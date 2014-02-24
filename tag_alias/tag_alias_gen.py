@@ -13,14 +13,16 @@ import pickle
 def removeNonAscii(s): return "".join(i for i in s if ord(i)<128)
 
 def get_closest_stackoverflow_tag(word):
-	try:
-		#bs = BeautifulSoup(requests.get('http://www.stackoverflow.com/questions/tagged/' + word).text)
-		#rt = BeautifulSoup(bs.find_all('', {'class': 'js-gps-related-tags'})[0].text())
-		#return rt.find_all('', {'class':'post-tag'})[0].text()
-
-		return requests.get('https://api.stackexchange.com/2.2/tags/'+word+'/related?site=stackoverflow&key=820vG6UjV1aqh8wdyEUNeA((').json()['items'][0]['name']
-	except:
-		return None
+    try:
+        key = "820vG6UjV1aqh8wdyEUNeA(("
+        key = "vHvj2R02fxUEltGA6veX1g%28%28"
+        return requests.get('https://api.stackexchange.com/2.2/tags/'+word+'/related?site=stackoverflow&key='+key).json()['items'][0]['name']
+    except Exception as e:
+        print e
+        print requests.get('https://api.stackexchange.com/2.2/tags/'+word+'/related?site=stackoverflow&key='+key).json()
+        print "Shutting system down"
+        sys.exit(0)
+        return None
 
 def get_semantic_link_related(word):
 	return map(lambda x: x['v'], requests.get("http://www.semantic-link.com/related.php?word="+word).json()[:5])
@@ -29,7 +31,9 @@ def get_freebase_related(term):
 	def get_Freebase_Meaning(term):
 
         	try:
-                	url = "https://www.googleapis.com/freebase/v1/search?key=AIzaSyCIeO8t4Su2hM0hm8t3aGCgiApBLu7MvGE&query=" + urllib.quote_plus(term)
+        	        key = "vHvj2R02fxUEltGA6veX1g%28%28"
+        	        key = "AIzaSyCIeO8t4Su2hM0hm8t3aGCgiApBLu7MvGE"
+                	url = "https://www.googleapis.com/freebase/v1/search?key="+key+"&query=" + urllib.quote_plus(term)
 	                jsonResult = json.loads(urllib2.urlopen(url).read())['result']
 	                if jsonResult:
         	                if jsonResult[0]['score']>10:
@@ -167,27 +171,28 @@ def findClosestTag(sooutput, alltags, alias):
 allsotags = list(set(getAllTags()))
 sooutput = initializeClosestMapDictionary(allsotags)
 
+"""
 counter = 0
 for pair in sooutput.items():
-	counter += 1
-	if pair[1] == None or pair[1] == '':
-		sooutput[pair[0]] = get_closest_stackoverflow_tag(pair[0])
-	if counter==500:
-		counter = 0
+    counter += 1
+    if ((pair[1] == None) or (pair[1] == '')):
+        sooutput[pair[0]] = get_closest_stackoverflow_tag(pair[0])
+	if counter%500 == 0:
 		file = open('stackoverflowtagalias.txt', 'w')
 		pickle.dump(sooutput, file)
 		file.close()
 		print "stackoverflowtagalias.txt file saved - counter " + str(counter)
 
-file = open('stackoverflowtagalias.txt', 'w')
-pickle.dump(sooutput, file)
-file.close()
+#file = open('stackoverflowtagalias.txt', 'w')
+#pickle.dump(sooutput, file)
+#file.close()
 
-print "stackoverflowtagalias.txt file saved - finally "
-
+#print "stackoverflowtagalias.txt file saved - finally "
+"""
 soclosesttag = {}
+mappedterms = filter(lambda x: x in allsotags, getData('complete.txt').keys())
 for alias in sooutput.keys():
-	soclosesttag[alias] = findClosestTag(sooutput, allsotags, alias)
+	soclosesttag[alias] = findClosestTag(sooutput, mappedterms, alias)
 
 file = open('stackoverflowtagaliasfinal.txt', 'w')
 pickle.dump(soclosesttag, file)
