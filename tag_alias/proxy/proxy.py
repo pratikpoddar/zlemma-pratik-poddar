@@ -20,7 +20,7 @@ class Scraper(object):
 
     def get_soup(self, url):
         try:
-            print "Trying : " + self.proxy + ", " + str(url)
+            #print "Trying : " + self.proxy + ", " + str(url)
             request = grequests.get(url)
             responses = grequests.map([request])
             response = responses[0].text
@@ -100,6 +100,12 @@ class MultiThreadedScraper(object):
                 if failed_url not in output_map:
                     output_map[failed_url] = failed_url
         return output_map
+
+def getrequesturl(url):
+    scraper = MultiThreadedScraper(proxy_servers)
+    urls = [url]
+    outputmap = scraper.scrape(urls)
+    return outputmap.values()[0]
 
 if __name__ == "__main__":
     scraper = MultiThreadedScraper(proxy_servers)
