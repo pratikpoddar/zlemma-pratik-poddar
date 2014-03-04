@@ -15,13 +15,11 @@ def removeNonAscii(s): return "".join(i for i in s if ord(i)<128)
 def get_closest_stackoverflow_tag(word):
     try:
         key = "820vG6UjV1aqh8wdyEUNeA(("
-        key = "vHvj2R02fxUEltGA6veX1g%28%28"
+        #key = "vHvj2R02fxUEltGA6veX1g%28%28"
         return requests.get('https://api.stackexchange.com/2.2/tags/'+word+'/related?site=stackoverflow&key='+key).json()['items'][0]['name']
     except Exception as e:
         print e
         print requests.get('https://api.stackexchange.com/2.2/tags/'+word+'/related?site=stackoverflow&key='+key).json()
-        print "Shutting system down"
-        sys.exit(0)
         return None
 
 def get_semantic_link_related(word):
@@ -31,7 +29,6 @@ def get_freebase_related(term):
 	def get_Freebase_Meaning(term):
 
         	try:
-        	        key = "vHvj2R02fxUEltGA6veX1g%28%28"
         	        key = "AIzaSyCIeO8t4Su2hM0hm8t3aGCgiApBLu7MvGE"
                 	url = "https://www.googleapis.com/freebase/v1/search?key="+key+"&query=" + urllib.quote_plus(term)
 	                jsonResult = json.loads(urllib2.urlopen(url).read())['result']
@@ -96,8 +93,8 @@ def getAllTags():
 	except:
 		alltags = []
 		print "All Tags file does not exist"
-		for i in range(1055):
-			alltags += map(lambda x: x.text, BeautifulSoup(requests.get("http://stackoverflow.com/tags?page="+str(i)+"&tab=name").text).find_all('',{'class':'post-tag'}))
+		for i in range(160):
+			alltags += map(lambda x: x.text, BeautifulSoup(requests.get("http://stackoverflow.com/tags?page="+str(i)+"&tab=popular").text).find_all('',{'class':'post-tag'}))
 		alltags = list(set(alltags))
 		file = open('stackoverflowalltags.txt', 'w')
 		pickle.dump(alltags, file)
@@ -135,25 +132,29 @@ def initializeClosestMapDictionary(allsotags):
 
 
 def findClosestTag(sooutput, alltags, alias):
-
-	output = sooutput[alias]
-	counter = 0
-	while 1:
-		counter+=1
-		if output in alltags:
-			return output
-		if output == alias:
-			return None
-		if output == None:
-			return None
-		if output == '':
-			return None
-		if counter == 50:
-			print "findClosestTag failed for " + alias
-			return None
-		output = sooutput[output]
-
-	return None
+    if alias in alltags:
+        return alias
+        
+    output = sooutput[alias]
+    counter = 0
+    while 1:
+        counter+=1
+        if output in alltags:
+            return output
+        if output == alias:
+            return None
+        if output == None:
+            return None
+        if output == '':
+            return None
+        if counter == 100:
+            print "findClosestTag failed for " + alias
+            return None
+        try:
+            output = sooutput[output]
+        except:
+            return None
+    return None
 
 #terms = getData('renamedcomplete.txt').keys()
 #output = []
@@ -170,7 +171,6 @@ def findClosestTag(sooutput, alltags, alias):
 
 allsotags = list(set(getAllTags()))
 sooutput = initializeClosestMapDictionary(allsotags)
-
 """
 counter = 0
 for pair in sooutput.items():
@@ -183,11 +183,11 @@ for pair in sooutput.items():
 		file.close()
 		print "stackoverflowtagalias.txt file saved - counter " + str(counter)
 
-#file = open('stackoverflowtagalias.txt', 'w')
-#pickle.dump(sooutput, file)
-#file.close()
+file = open('stackoverflowtagalias.txt', 'w')
+pickle.dump(sooutput, file)
+file.close()
 
-#print "stackoverflowtagalias.txt file saved - finally "
+print "stackoverflowtagalias.txt file saved - finally "
 """
 soclosesttag = {}
 mappedterms = filter(lambda x: x in allsotags, getData('complete.txt').keys())
@@ -198,6 +198,9 @@ file = open('stackoverflowtagaliasfinal.txt', 'w')
 pickle.dump(soclosesttag, file)
 file.close()
 
+with open('stackoverflowtagaliasfinal.json', 'w') as infile:
+    infile.write(json.dumps(soclosesttag))
 
-
+import renamefinal
+renamefinal.getRenamed('stackoverflowtagaliasfinal.json', 'stackoverflowtagaliasfinalrenamed.json')
 
