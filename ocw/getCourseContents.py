@@ -25,8 +25,13 @@ def get_Freebase_Meaning(term):
         except Exception as e:
                 return None
 
-def cleantext(text):
+def cleantext(text, title=''):
+	if title==None:
+		title=''
 	text1 = text.lower()
+	text1 = text1.replace('introduction to course and to the', '')
+	text1 = text1.replace('introduction to course and', '')
+	text1 = text1.replace('introduction to course', '')
 	text1 = text1.replace('introduction to', '')
 	text1 = text1.replace('fundamentals of', '')
 	text1 = re.sub(r'lec #\d+:', ' ', text1)
@@ -46,15 +51,24 @@ def cleantext(text):
 		elems = re.split(r'[;,]|and', text2)
 		for elem in elems:
 			try:
-				wikielem =  get_Freebase_Meaning(elem)
+				wikielem =  get_Freebase_Meaning(elem+' '+title)
+				added = 0
 				#print wikielem
 				if wikielem['wikilink']:
 					if wikielem['wikilink'].find('/en/') > -1:
 						if wikielem['wikilink'] not in blocked_wiki:
 							wikielems.append((wikielem['wikilink'], wikielem['node']))
-						
+							added = 1
+				if added == 0:
+					wikielem =  get_Freebase_Meaning(elem)
+                	                #print wikielem
+                        	        if wikielem['wikilink']:
+                                	        if wikielem['wikilink'].find('/en/') > -1:
+                                        	        if wikielem['wikilink'] not in blocked_wiki:
+                                                	        wikielems.append((wikielem['wikilink'], wikielem['node']))
 			except:
 				pass
+
 	if wikielems:
 		#print "wikielems:"
 		#print ', '.join(map(lambda x: x[0]+";;"+x[1], wikielems))
@@ -94,7 +108,7 @@ def getCourseContents(link):
                         if o:
 				#print o
 				try:
-	                                output[link] = {'title': title, 'course': map(lambda x: cleantext(strip_tags(str(x))), o)}
+	                                output[link] = {'title': title, 'course': map(lambda x: cleantext(strip_tags(str(x)), title), o)}
 				except Exception as e:
 					print e
         except:
@@ -112,7 +126,7 @@ def getCourseContents(link):
 			if o:
 				#print o
 				try:
-					output[link] = {'title': title, 'course': map(lambda x: cleantext(strip_tags(str(x))), o)}
+					output[link] = {'title': title, 'course': map(lambda x: cleantext(strip_tags(str(x)), title), o)}
 				except Exception as e:
 					print e
 	except:
@@ -166,7 +180,7 @@ import pickle
 with open('ocwdump_aero.pickle', 'w') as f:
     pickle.dump(output, f)
 with open('ocwdump_aero_small.pickle', 'w') as f:
-    pickle.dump(map(lambda x: filter(lambda y: y, x), output.values()), f)
+    pickle.dump(map(lambda x: filter(lambda y: y, x['course']), output.values()), f)
 
 output = {}
 for course in courses_physics:
@@ -179,6 +193,6 @@ import pickle
 with open('ocwdump_phys.pickle', 'w') as f:
     pickle.dump(output, f)
 with open('ocwdump_phys_small.pickle', 'w') as f:
-    pickle.dump(map(lambda x: filter(lambda y: y, x), output.values()), f)
+    pickle.dump(map(lambda x: filter(lambda y: y, x['course']), output.values()), f)
 
 

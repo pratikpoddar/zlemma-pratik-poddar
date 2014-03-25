@@ -41,14 +41,6 @@ def createDepMapping(skillfiletocheck, googledocidtocheck):
 		print i
 	return
 
-createDepMapping('V1.0_tag_graph_data.txt', '0Ang7Vqp7FIPSdEFMN0UxbU1EWkdrbG1nbThnRU5jd3c')
-createDepMapping('V2.0_tag_graph_data.txt', '0Ang7Vqp7FIPSdFJnR2hKeXBXRmowX0hveDk3cWxYZXc')
-createDepMapping('V3.0_tag_graph_data.txt', '0AjPfOfZ0QaixdGEzZ2djdHJRVFgtR3pZejhVQlZnSEE')
+createDepMapping('V4.0_tag_graph_data.txt', '0AjPfOfZ0QaixdGEzZ2djdHJRVFgtR3pZejhVQlZnSEE')
 
-l1 = sorted(getSkillsfromTagGraph('V1.0_tag_graph_data.txt')) 
-l2 = sorted(getSkillsfromTagGraph('V2.0_tag_graph_data.txt'))
-l3 = sorted(getSkillsfromTagGraph('V3.0_tag_graph_data.txt'))
-p1 = sorted(getSkillsfromDepartmentMapping('V1.0_tag_graph_data.txt-manualdepartmentmapping.txt'))
-p2 = sorted(getSkillsfromDepartmentMapping('V2.0_tag_graph_data.txt-manualdepartmentmapping.txt'))
-p3 = sorted(getSkillsfromDepartmentMapping('V3.0_tag_graph_data.txt-manualdepartmentmapping.txt'))
 
