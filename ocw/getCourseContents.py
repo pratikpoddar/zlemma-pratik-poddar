@@ -6,7 +6,7 @@ import json
 
 output = {}
 
-blocked_wiki = [ '/en/hot_r_b_hip_hop_songs', '/en/gain', '/en/u_s_open', '/en/first-class_cricket', '/en/workers_compensation', '/en/news', '/en/design', '/en/engineering_ethics', '/en/dell_xps' ]
+blocked_wiki = [ '/en/hot_r_b_hip_hop_songs', '/en/gain', '/en/u_s_open', '/en/first-class_cricket', '/en/workers_compensation', '/en/news', '/en/design', '/en/engineering_ethics', '/en/dell_xps', '/en/computer', '/en/connecticut', '/en/educational_aims_and_objectives', '/en/nasa' ]
 
 def removeNonAscii(s): return "".join(filter(lambda x: ord(x)<128, s))
 
@@ -95,6 +95,11 @@ def getCourseContents(link):
 		title = cleantext(strip_tags(str(bs.find('', {"id": "breadcrumb"}).find_all('a')[-1].text)))
 	except:
 		title = ''
+
+	rows = bs.find_all('th', attrs = {'scope': 'col'})
+	for x in rows:
+		if x.text.lower()=='speakers':
+			return
 	
         try:
                 if link not in output.keys():
@@ -180,7 +185,7 @@ import pickle
 with open('ocwdump_aero.pickle', 'w') as f:
     pickle.dump(output, f)
 with open('ocwdump_aero_small.pickle', 'w') as f:
-    pickle.dump(map(lambda x: filter(lambda y: y, x['course']), output.values()), f)
+    pickle.dump(filter(lambda z: len(z)>1, map(lambda x: filter(lambda y: y, x['course']), output.values())), f)
 
 output = {}
 for course in courses_physics:
@@ -193,6 +198,5 @@ import pickle
 with open('ocwdump_phys.pickle', 'w') as f:
     pickle.dump(output, f)
 with open('ocwdump_phys_small.pickle', 'w') as f:
-    pickle.dump(map(lambda x: filter(lambda y: y, x['course']), output.values()), f)
-
+    pickle.dump(filter(lambda z: len(z)>1, map(lambda x: filter(lambda y: y, x['course']), output.values())), f)
 
